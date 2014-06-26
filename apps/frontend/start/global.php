@@ -53,7 +53,7 @@ App::error(function(Exception $exception, $code) {
 Event::listen('APL.core.load', function() {
 
     ClassLoader::addDirectories(array(
-        app_path() . '/core/APL/'
+        base_path() . '/core/APL/'
     ));
 
     $APLExtensions = array(

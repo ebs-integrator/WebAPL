@@ -51,6 +51,45 @@ App::error(function(Exception $exception, $code)
 	Log::error($exception);
 });
 
+
+Event::listen('APL.core.load', function() {
+
+    ClassLoader::addDirectories(array(
+        base_path() . '/core/APL/'
+    ));
+
+    $APLExtensions = array(
+        'Modules', 'Actions', 'ModelController', 'Templates'
+    );
+    
+    foreach ($APLExtensions as $Extension) {
+        ClassLoader::load($Extension);
+    }
+    
+    class_alias('Core\APL\Modules', 'Modules');
+    class_alias('Core\APL\Actions', 'Actions');
+});
+
+
+Event::listen('APL.modules.load', function() {
+
+    Event::fire('APL.core.load');
+
+    ClassLoader::addDirectories(array(
+        app_path() . '/modules/'
+    ));
+
+    Module::where('enabled', '1')->get()->each(function($module) {
+        ClassLoader::load($module->extension);
+        Modules::addInstance($module->extension);
+    });
+});
+
+
+App::before(function() {
+    Event::fire('APL.modules.load');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Maintenance Mode Handler
