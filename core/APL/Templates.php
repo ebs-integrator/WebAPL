@@ -14,4 +14,7 @@ class Templates {
         self::$template = $template;
     }
     
+    public static function path($path = '') {
+        return "/apps/" . APP_FOLDER . "/views/templates/" . self::$template . "/" . $path;
+    }
 }

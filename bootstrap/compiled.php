@@ -472,7 +472,7 @@ class Application extends Container implements HttpKernelInterface, TerminableIn
     public function bindInstallPaths(array $paths)
     {
         $this->instance('path', realpath($paths['app']));
-        foreach (array_except($paths, array('app')) as $key => $value) {
+        foreach (array_except($paths, array()) as $key => $value) {
             $this->instance("path.{$key}", realpath($value));
         }
     }

@@ -13,7 +13,7 @@ class Mymodule extends \Core\APL\ModelController {
     }
     
     public function mycontr($id = 0) {
-        echo Shortcodes::execute("wqerqw [ext_name id='1']  erqew r");
+       echo 'Tralala';
     }
     
 

@@ -485,6 +485,22 @@ if ( ! function_exists('asset'))
 	}
 }
 
+if ( ! function_exists('res'))
+{
+	/**
+	 * Generate an template path for the template.
+	 *
+	 * @param  string  $path
+	 * @param  bool    $secure
+	 * @return string
+	 */
+	function res($path)
+	{
+            
+		return (\Core\APL\Templates::path($path));
+	}
+}
+
 if ( ! function_exists('base_path'))
 {
 	/**
