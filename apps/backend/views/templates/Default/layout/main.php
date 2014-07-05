@@ -127,7 +127,7 @@
                 <ul id="menu" class="bg-blue dker">
                     <li class="nav-header">Menu</li>
                     <li class="nav-divider"></li>
-                    <li><a href="dashboard.html"><i class="fa fa-dashboard"></i><span class="link-title">&nbsp;Dashboard</span></a></li>
+                    <li><a href="dashboard.html"><i class="fa fa-dashboard"></i><span class="link-title">&nbsp;Extensions</span></a></li>
                     <li><a href="dashboard.html"><i class="fa fa-dashboard"></i><span class="link-title">&nbsp;Dashboard</span></a></li>
                     <li><a href="dashboard.html"><i class="fa fa-dashboard"></i><span class="link-title">&nbsp;Dashboard</span></a></li>
                     <li><a href="dashboard.html"><i class="fa fa-dashboard"></i><span class="link-title">&nbsp;Dashboard</span></a></li>

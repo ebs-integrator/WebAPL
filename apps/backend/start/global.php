@@ -54,32 +54,28 @@ App::error(function(Exception $exception, $code)
 
 Event::listen('APL.core.load', function() {
 
-    ClassLoader::addDirectories(array(
-        base_path() . '/core/APL/'
-    ));
+    ClassLoader::addDirectories(base_path() . '/core/APL/');
 
     $APLExtensions = array(
-        'Modules', 'Actions', 'ModelController', 'Templates'
+        'Modules', 'Actions', 'Shortcodes', 'ModelController', 'Template'
     );
-    
+
     foreach ($APLExtensions as $Extension) {
         ClassLoader::load($Extension);
     }
-    
+
     class_alias('Core\APL\Modules', 'Modules');
     class_alias('Core\APL\Actions', 'Actions');
+    class_alias('Core\APL\Shortcodes', 'Shortcodes');
+    class_alias('Core\APL\Template', 'Template');
 });
 
 
 Event::listen('APL.modules.load', function() {
-
     Event::fire('APL.core.load');
 
-    ClassLoader::addDirectories(array(
-        app_path() . '/modules/'
-    ));
-
     Module::where('enabled', '1')->get()->each(function($module) {
+        ClassLoader::addDirectories(app_path() . '/modules/' . $module->extension . '/');
         ClassLoader::load($module->extension);
         Modules::addInstance($module->extension);
     });

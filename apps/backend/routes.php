@@ -17,3 +17,4 @@ Route::get('/', 'HomeController@showDashboard');
 Route::get('page', 'HomeController@showPage');
 
 Route::controller('auth', 'AuthController');
+Route::controller('module', 'ModuleController');

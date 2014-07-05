@@ -132,12 +132,12 @@ class FileViewFinder implements ViewFinderInterface {
 	 */
 	protected function findInPaths($name, $paths)
 	{
-                $template = \Core\APL\Templates::getCurrent();
-		foreach ((array) $paths as $path)
+                $paths = \Core\APL\Template::preparePaths($paths);
+		foreach ($paths as $path)
 		{
 			foreach ($this->getPossibleViewFiles($name) as $file)
 			{
-				if ($this->files->exists($viewPath = $path.'/' . $template .'/'.$file))
+				if ($this->files->exists($viewPath = $path.'/'.$file))
 				{
 					return $viewPath;
 				}

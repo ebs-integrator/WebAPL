@@ -497,7 +497,7 @@ if ( ! function_exists('res'))
 	function res($path)
 	{
             
-		return (\Core\APL\Templates::path($path));
+		return (\Core\APL\Template::path($path));
 	}
 }
 
