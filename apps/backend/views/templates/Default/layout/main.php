@@ -11,13 +11,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="<?=res('assets/lib/bootstrap/css/bootstrap.min.css');?>">
+        <link rel="stylesheet" href="<?= res('assets/lib/bootstrap/css/bootstrap.min.css'); ?>">
 
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="<?=res('assets/lib/font-awesome/css/font-awesome.min.css');?>">
+        <link rel="stylesheet" href="<?= res('assets/lib/font-awesome/css/font-awesome.min.css'); ?>">
 
         <!-- Metis core stylesheet -->
-        <link rel="stylesheet" href="<?=res('assets/css/main.css');?>">
+        <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">
 
         <!-- Metis Theme stylesheet -->
 
@@ -26,8 +26,8 @@
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 
         <!--[if lt IE 9]>
-          <script src="<?=res('assets/lib/html5shiv/html5shiv.js');?>"></script>
-          <script src="<?=res('assets/lib/respond/respond.min.js');?>"></script>
+          <script src="<?= res('assets/lib/html5shiv/html5shiv.js'); ?>"></script>
+          <script src="<?= res('assets/lib/respond/respond.min.js'); ?>"></script>
         <![endif]-->
 
         <style>
@@ -53,9 +53,15 @@
                 background-color: #303030 !important;
             }
         </style>
-        
+
         <!--Modernizr 2.8.2-->
-        <script src="<?=res('assets/lib/modernizr/modernizr.min.js');?>"></script>
+        <script src="<?= res('assets/lib/modernizr/modernizr.min.js'); ?>"></script>
+
+        <!--jQuery -->
+        <script src="<?= res('assets/lib/jquery/jquery.min.js'); ?>"></script>
+        <script>
+        var base_url = '<?=url('/');?>';
+        </script>
     </head>
     <body class="  ">
         <div class="bg-dark dk" id="wrap">
@@ -74,7 +80,7 @@
                                 <span class="icon-bar"></span> 
                             </button>
                             <a href="index.html" class="navbar-brand">
-                                <img src="<?=res('assets/img/logo.png');?>" alt="">
+                                <img src="<?= res('assets/img/logo.png'); ?>" alt="">
                             </a> 
                         </header>
                         <div class="topnav">
@@ -93,7 +99,7 @@
                                 </a> 
                             </div>
                             <div class="btn-group">
-                                <a href="<?=url('auth/logout');?>" data-toggle="tooltip" data-original-title="Logout" data-placement="bottom" class="btn btn-metis-1 btn-sm">
+                                <a href="<?= url('auth/logout'); ?>" data-toggle="tooltip" data-original-title="Logout" data-placement="bottom" class="btn btn-metis-1 btn-sm">
                                     <i class="fa fa-power-off"></i>
                                 </a> 
                             </div>
@@ -118,7 +124,7 @@
                     </div>
                     <div class="user-wrapper bg-dark">
                         <div class="media-body">
-                            <h5 class="media-heading">Hello, <b><?=Auth::user()->username;?></b></h5><br>
+                            <h5 class="media-heading">Hello, <b><?= Auth::user()->username; ?></b></h5><br>
                         </div>
                     </div>
                 </div>
@@ -137,7 +143,7 @@
                 <div>
                     <div class="inner bg-light lter">
                         <div class="col-lg-12">
-                            <?=$content;?>
+                            <?= $content; ?>
                         </div>
                     </div><!-- /.inner -->
                 </div><!-- /.outer -->
@@ -168,20 +174,21 @@
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal --><!-- /#helpModal -->
 
-        <!--jQuery 2.1.1 -->
-        <script src="<?=res('assets/lib/jquery/jquery.min.js');?>"></script>
-
+        <!-- file module -->
+        <script src="<?= res('assets/lib/jquery-form/jquery.form.js'); ?>"></script>
+        <script src="<?= res('assets/js/inc/widget.file.js'); ?>"></script>
+        
         <!--Bootstrap -->
-        <script src="<?=res('assets/lib/bootstrap/js/bootstrap.min.js');?>"></script>
+        <script src="<?= res('assets/lib/bootstrap/js/bootstrap.min.js'); ?>"></script>
 
         <!-- Screenfull -->
-        <script src="<?=res('assets/lib/screenfull/screenfull.js');?>"></script>
+        <script src="<?= res('assets/lib/screenfull/screenfull.js'); ?>"></script>
 
         <!-- Metis core scripts -->
-        <script src="<?=res('assets/js/core.min.js');?>"></script>
+        <script src="<?= res('assets/js/core.min.js'); ?>"></script>
 
         <!-- Metis demo scripts -->
-        <script src="<?=res('assets/js/app.min.js');?>"></script>
-        <script src="<?=res('assets/js/style-switcher.min.js');?>"></script>
+        <script src="<?= res('assets/js/app.min.js'); ?>"></script>
+        <script src="<?= res('assets/js/style-switcher.min.js'); ?>"></script>
     </body>
 </html>
