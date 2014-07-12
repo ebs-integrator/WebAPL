@@ -5,7 +5,6 @@ class AuthController extends BaseController {
     protected $layout = 'layout/login';
 
     public function getIndex() {
-        //var_dump(Hash::make(Input::get('admin')));
     }
 
     public function postTake() {
