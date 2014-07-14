@@ -16,6 +16,8 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="<?= res('assets/lib/font-awesome/css/font-awesome.min.css'); ?>">
 
+        <link rel="stylesheet" href="<?= res('assets/lib/switch/css/bootstrap3/bootstrap-switch.min.css'); ?>">
+        
         <!-- Metis core stylesheet -->
         <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">
 
@@ -177,7 +179,8 @@
         <!-- file module -->
         <script src="<?= res('assets/lib/jquery-form/jquery.form.js'); ?>"></script>
         <script src="<?= res('assets/js/inc/widget.file.js'); ?>"></script>
-        
+        <script src="<?= res('assets/lib/switch/js/bootstrap-switch.min.js'); ?>"></script>
+
         <!--Bootstrap -->
         <script src="<?= res('assets/lib/bootstrap/js/bootstrap.min.js'); ?>"></script>
 
@@ -187,8 +190,6 @@
         <!-- Metis core scripts -->
         <script src="<?= res('assets/js/core.min.js'); ?>"></script>
 
-        <!-- Metis demo scripts -->
-        <script src="<?= res('assets/js/app.min.js'); ?>"></script>
-        <script src="<?= res('assets/js/style-switcher.min.js'); ?>"></script>
+        <script src="<?= res('assets/js/main.js'); ?>"></script>
     </body>
 </html>

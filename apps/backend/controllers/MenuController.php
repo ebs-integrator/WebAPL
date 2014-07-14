@@ -19,9 +19,11 @@ class MenuController extends BaseController {
         $this->layout->content = View::make('sections.menu.list')->with($this->data);
     }
     
-    public function getItem($id = 0) {
+    public function getOpen($id = 0) {
         $this->data['menu'] = Menu::find($id);
-        $this->layout->content = View::make('sections.menu.form')->with($this->data);
+        
+        View::share($this->data);
+        $this->layout->content = View::make('sections.menu.form');
     }
 
     public function getAdd() {
@@ -29,7 +31,18 @@ class MenuController extends BaseController {
     }
 
     public function postSave() {
+        $id = Input::get('id');
         
+        $menu = Input::get('menu');
+        $menu['enabled'] = isset($menu['enabled']) ? 1 : 0;
+        
+        if ($id) {
+            Menu::updateArray($menu, $id);
+        } else {
+            Menu::insertArray($menu);
+        }
+        
+        return Redirect::to('menu');
     }
 
 }

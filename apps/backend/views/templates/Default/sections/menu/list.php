@@ -1,3 +1,5 @@
+<h3>Menu list</h3>
+
 <table class="table table-bordered table-hovered">
     
     <tr>
@@ -9,7 +11,7 @@
     <?php foreach ($items as $item) { ?>
     <tr>
         <td><?=$item->name;?></td>
-        <td><?=$item->enabled;?>
+        <td>
             <?php if ($item->enabled) { ?>
             <span class="label label-success">Enabled</span>
             <?php } else { ?>
@@ -17,7 +19,7 @@
             <?php } ?>
         </td>
         <td>
-            <a href="<?=url('manu/open/'.$item->id);?>" class="btn btn-success">Edit</a>
+            <a href="<?=url('menu/open/'.$item->id);?>" class="btn btn-success">Edit</a>
         </td>
         
     </tr>
