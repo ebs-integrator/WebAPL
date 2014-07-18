@@ -6,6 +6,10 @@ class Shortcodes {
 
     protected static $shortcode_tags = array();
 
+    public static function __init() {
+        
+    }
+
     public static function register($tag, $function) {
         if (is_callable($function)) {
             self::$shortcode_tags[$tag] = $function;
@@ -72,7 +76,7 @@ class Shortcodes {
 
         $tag = $m[2];
         $attr = self::parse_atts($m[3]);
-        
+
         if (isset($m[5])) {
             return $m[1] . call_user_func(self::$shortcode_tags[$tag], $attr, $m[5], $tag) . $m[6];
         } else {

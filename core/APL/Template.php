@@ -7,6 +7,10 @@ class Template {
     protected static $template = 'Default';
     protected static $module = null;
 
+    public static function __init() {
+        
+    }
+
     public static function getCurrent() {
         return self::$template;
     }
@@ -41,10 +45,9 @@ class Template {
         self::$module = null;
         return $data;
     }
-    
+
     public static function mainLayout() {
         return \View::make('layout.main');
     }
-    
 
 }

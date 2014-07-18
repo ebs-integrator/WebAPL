@@ -25,3 +25,4 @@ Route::post('uploader/delete', 'UploaderController@delete');
 
 Route::controller('home', 'HomeController');
 Route::controller('menu', 'MenuController');
+Route::controller('page', 'PageController');

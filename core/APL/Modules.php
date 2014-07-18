@@ -6,6 +6,10 @@ class Modules {
 
     protected static $instances = array();
 
+    public static function __init() {
+        
+    }
+
     public static function addInstance($tag) {
         $realName = self::getRealModuleName($tag);
         if (class_exists($realName)) {

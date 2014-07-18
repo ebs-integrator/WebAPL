@@ -17,6 +17,9 @@ body {
 /*********************************************************/
 /*                 Template Layout                       */
 /*********************************************************/
+a {
+    color: #777;
+}
 #wrap:before,
 #top:before,
 .head:before,
@@ -1783,9 +1786,9 @@ fieldset[disabled] .btn-line.btn-metis-6.active {
 }
 @media (min-width: 768px) {
   .pricing-table > li.active {
-    -webkit-transform: scale(1.03, );
+/*    -webkit-transform: scale(1.03, );
     -ms-transform: scale(1.03, );
-    transform: scale(1.03, );
+    transform: scale(1.03, );*/
   }
 }
 .pricing-table > li.active.primary {
@@ -2568,3 +2571,13 @@ body.error .logo h1 {
   border-radius: 0;
 }
 /* END LOGIN PAGE STYLES */
+
+
+.c10 {
+    clear: both;
+    margin-top: 10px;
+}
+.c20 {
+    clear: both;
+    margin-top: 20px;
+}

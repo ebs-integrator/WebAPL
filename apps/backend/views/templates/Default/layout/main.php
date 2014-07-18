@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="<?= res('assets/lib/font-awesome/css/font-awesome.min.css'); ?>">
 
         <link rel="stylesheet" href="<?= res('assets/lib/switch/css/bootstrap3/bootstrap-switch.min.css'); ?>">
+        <link rel="stylesheet" href="<?= res('assets/lib/treeview/jquery.treeview.css'); ?>">
         
         <!-- Metis core stylesheet -->
         <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">
@@ -135,10 +136,10 @@
                 <ul id="menu" class="bg-blue dker">
                     <li class="nav-header">Menu</li>
                     <li class="nav-divider"></li>
-                    <li><a href="dashboard.html"><i class="fa fa-dashboard"></i><span class="link-title">&nbsp;Extensions</span></a></li>
-                    <li><a href="dashboard.html"><i class="fa fa-dashboard"></i><span class="link-title">&nbsp;Dashboard</span></a></li>
-                    <li><a href="dashboard.html"><i class="fa fa-dashboard"></i><span class="link-title">&nbsp;Dashboard</span></a></li>
-                    <li><a href="dashboard.html"><i class="fa fa-dashboard"></i><span class="link-title">&nbsp;Dashboard</span></a></li>
+                    <li><a href="<?=url('module');?>"><i class="fa"></i><span class="link-title">&nbsp;Extensions</span></a></li>
+                    <li><a href="<?=url('home/languages');?>"><i class="fa"></i><span class="link-title">&nbsp;Languages</span></a></li>
+                    <li><a href="<?=url('menu');?>"><i class="fa"></i><span class="link-title">&nbsp;Menu</span></a></li>
+                    <li><a href="<?=url('page');?>"><i class="fa"></i><span class="link-title">&nbsp;Pages</span></a></li>
                 </ul><!-- /#menu -->
             </div><!-- /#left -->
             <div id="content">
@@ -180,6 +181,8 @@
         <script src="<?= res('assets/lib/jquery-form/jquery.form.js'); ?>"></script>
         <script src="<?= res('assets/js/inc/widget.file.js'); ?>"></script>
         <script src="<?= res('assets/lib/switch/js/bootstrap-switch.min.js'); ?>"></script>
+        <script src="<?= res('assets/lib/treeview/jquery.cookie.js'); ?>"></script>
+        <script src="<?= res('assets/lib/treeview/jquery.treeview.js'); ?>"></script>
 
         <!--Bootstrap -->
         <script src="<?= res('assets/lib/bootstrap/js/bootstrap.min.js'); ?>"></script>

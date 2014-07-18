@@ -1,5 +1,5 @@
 ;
-jQuery(document).ready(function ($){
+jQuery(document).ready(function($) {
     /*----------- BEGIN toggleButtons CODE -------------------------*/
     $('.make-switch').each(function() {
         $(this).bootstrapSwitch({
@@ -12,4 +12,11 @@ jQuery(document).ready(function ($){
         });
     });
     /*----------- END toggleButtons CODE -------------------------*/
+
+    $(".treeview").treeview({
+        animated: "fast",
+        collapsed: true,
+       // unique: true,
+        persist: "cookie"
+    });
 });
