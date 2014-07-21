@@ -1,4 +1,4 @@
-<form action='<?= url('page/save'); ?>' method='post'>
+<form class="ajax-auto-submit" action='<?= url('page/save'); ?>' method='post'>
     <input type='hidden' name='id' value='<?= isset($page['id']) ? $page['id'] : 0; ?>' />
 
     <table class="table table-bordered">
@@ -19,8 +19,6 @@
         </tr>
     </table>
 
-
-    <input type='submit' value='Save' class='btn btn-success pull-right' />
     <?php if (isset($menu['id'])) { ?>
         <button type="button" id="delete-menu" class="btn btn-danger pull-right">Delete</button>
     <?php } ?>

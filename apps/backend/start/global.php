@@ -57,15 +57,20 @@ Event::listen('APL.core.load', function() {
     ClassLoader::addDirectories(base_path() . '/core/APL/');
 
     $APLExtensions = array(
-        'Modules', 'Actions', 'Shortcodes', 'ModelController', 'Template', 'Language'
+        'Modules', 'Actions', 'Shortcodes', 'Template', 'Language', 'ExtensionController'
     );
 
     foreach ($APLExtensions as $Extension) {
-        ClassLoader::load($Extension);
+        if (!ClassLoader::load($Extension)) {
+            throw new Exception("'{$Extension}' load failed!");
+        }
+        
         $full_class = "Core\APL\\".$Extension;
         $full_class::__init();
     }
-
+    
+    //var_dump(get_declared_classes());
+    
     class_alias('Core\APL\Modules', 'Modules');
     class_alias('Core\APL\Actions', 'Actions');
     class_alias('Core\APL\Shortcodes', 'Shortcodes');

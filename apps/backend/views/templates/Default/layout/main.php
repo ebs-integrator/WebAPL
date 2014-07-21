@@ -18,7 +18,7 @@
 
         <link rel="stylesheet" href="<?= res('assets/lib/switch/css/bootstrap3/bootstrap-switch.min.css'); ?>">
         <link rel="stylesheet" href="<?= res('assets/lib/treeview/jquery.treeview.css'); ?>">
-        
+
         <!-- Metis core stylesheet -->
         <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">
 
@@ -63,7 +63,7 @@
         <!--jQuery -->
         <script src="<?= res('assets/lib/jquery/jquery.min.js'); ?>"></script>
         <script>
-        var base_url = '<?=url('/');?>';
+            var base_url = '<?= url('/'); ?>';
         </script>
     </head>
     <body class="  ">
@@ -114,7 +114,8 @@
                                 <li> <a href="dashboard.html">item</a></li>
                                 <li> <a href="dashboard.html">item</a></li>
                                 <li> <a href="dashboard.html">item</a></li>
-                                <li> <a href="dashboard.html">item</a></li>
+
+                                <li><img id="loading" style="display: none;margin-top: 14px;" src="<?= res('assets/img/ajax-loader.gif'); ?>" /></li>
                             </ul><!-- /.nav -->
                         </div>
                     </div><!-- /.container-fluid -->
@@ -136,10 +137,11 @@
                 <ul id="menu" class="bg-blue dker">
                     <li class="nav-header">Menu</li>
                     <li class="nav-divider"></li>
-                    <li><a href="<?=url('module');?>"><i class="fa"></i><span class="link-title">&nbsp;Extensions</span></a></li>
-                    <li><a href="<?=url('home/languages');?>"><i class="fa"></i><span class="link-title">&nbsp;Languages</span></a></li>
-                    <li><a href="<?=url('menu');?>"><i class="fa"></i><span class="link-title">&nbsp;Menu</span></a></li>
-                    <li><a href="<?=url('page');?>"><i class="fa"></i><span class="link-title">&nbsp;Pages</span></a></li>
+                    <li><a href="<?= url('module'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Extensions</span></a></li>
+                    <li><a href="<?= url('home/languages'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Languages</span></a></li>
+                    <li><a href="<?= url('menu'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Menu</span></a></li>
+                    <li><a href="<?= url('page'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Pages</span></a></li>
+                    <?=Actions::call('construct_left_menu');?>
                 </ul><!-- /#menu -->
             </div><!-- /#left -->
             <div id="content">

@@ -55,7 +55,7 @@ Event::listen('APL.core.load', function() {
     ClassLoader::addDirectories(base_path() . '/core/APL/');
 
     $APLExtensions = array(
-        'Modules', 'Actions', 'Shortcodes', 'ModelController', 'Template'
+        'Modules', 'Actions', 'Shortcodes', 'ExtensionController', 'Template'
     );
 
     foreach ($APLExtensions as $Extension) {

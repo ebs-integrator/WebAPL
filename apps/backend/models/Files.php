@@ -58,14 +58,25 @@ class Files extends Eloquent {
         return $file->id;
     }
 
+    public static function dropFile($path) {
+            if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/' . $path)) {
+                unlink($_SERVER['DOCUMENT_ROOT'] . '/' . $path);
+            }
+    }
+    
     public static function drop($id) {
         $file = Files::find($id);
         if ($file) {
-            if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/' . $file->path)) {
-                unlink($_SERVER['DOCUMENT_ROOT'] . '/' . $file->path);
-            }
+            Files::dropFile($file->path);
         }
         return Files::destroy($id);
+    }
+    
+    public static function dropMultiple($module_name, $module_id) {
+        foreach (Files::file_list($module_name, $module_id) as $file) {
+            Files::dropFile($file->path);
+            Files::destroy($file->id);
+        }
     }
 
 }

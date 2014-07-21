@@ -39,9 +39,9 @@ class Template {
         return "/apps/" . APP_FOLDER . "/views/templates/" . self::$template . "/" . $path;
     }
 
-    public static function moduleView($module, $view) {
+    public static function moduleView($module, $view, $data = array()) {
         self::$module = $module;
-        $data = \View::make($view);
+        $data = \View::make($view, $data);
         self::$module = null;
         return $data;
     }

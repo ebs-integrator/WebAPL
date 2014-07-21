@@ -16,7 +16,30 @@ jQuery(document).ready(function($) {
     $(".treeview").treeview({
         animated: "fast",
         collapsed: true,
-       // unique: true,
+        // unique: true,
         persist: "cookie"
+    });
+
+    /*--------Ajax-auto-save---------*/
+    function ajax_auto_save() {
+
+        var options = {
+            success: function(data) {
+                console.log(data);
+            },
+            dataType: 'json'
+        };
+
+        $(this).closest('form').ajaxForm(options).submit();
+
+    }
+    $("body").on("change", "form.ajax-auto-submit input, form.ajax-auto-submit select, form.ajax-auto-submit textarea", ajax_auto_save);
+    $("body").on("switchChange.bootstrapSwitch", "form.ajax-auto-submit input, form.ajax-auto-submit select, form.ajax-auto-submit textarea", ajax_auto_save);
+
+
+    $(document).bind("ajaxSend", function() {
+        $("#loading").show(200);
+    }).bind("ajaxComplete", function() {
+        $("#loading").hide(200);
     });
 });

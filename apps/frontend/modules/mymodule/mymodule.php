@@ -8,7 +8,7 @@ use Core\APL\Template;
 
 require_once 'incfile.php';
 
-class Mymodule extends \Core\APL\ModelController {
+class Mymodule extends \Core\APL\ExtensionController {
 
     public function __construct() {
         parent::__construct();

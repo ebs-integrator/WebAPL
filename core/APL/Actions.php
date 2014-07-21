@@ -19,10 +19,10 @@ class Actions {
     public static function call($tag) {
         $arguments = func_get_args();
         unset($arguments[0]);
-
+        
         if (self::check($tag)) {
             $actions = self::$actions[$tag];
-
+            
             foreach ($actions as $action) {
                 foreach ($action as $function) {
                     call_user_func_array($function, $arguments);

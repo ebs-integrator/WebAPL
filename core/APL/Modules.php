@@ -35,5 +35,5 @@ class Modules {
     protected static function getRealModuleName($tag) {
         return "Core\APL\Modules\\{$tag}";
     }
-
+    
 }

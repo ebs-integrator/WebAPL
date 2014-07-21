@@ -5,7 +5,7 @@ namespace Core\APL\Modules;
 use Core\APL\Actions;
 use Core\APL\Template;
 
-class Mymodule extends \Core\APL\ModelController {
+class Mymodule extends \Core\APL\ExtensionController {
 
     public function __construct() {
         parent::__construct();
