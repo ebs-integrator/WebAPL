@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 18, 2014 at 05:28 PM
+-- Generation Time: Jul 28, 2014 at 11:24 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -50,7 +50,17 @@ CREATE TABLE IF NOT EXISTS `apl_feed` (
   `order_by` int(11) NOT NULL DEFAULT '0' COMMENT 'feed_field_id',
   `order_type` enum('asc','desc','rand()','none') NOT NULL DEFAULT 'none' COMMENT 'none - disable order',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `apl_feed`
+--
+
+INSERT INTO `apl_feed` (`id`, `name`, `enabled`, `limit_value`, `limit_type`, `order_by`, `order_type`) VALUES
+(1, 'werwerwer 2 dsfasdfasd dsfdsfs dfdsfdsfds', 1, 2342, 1, 1, 'rand()'),
+(2, 'feed nou', 1, 10, 1, 1, 'asc'),
+(3, 'feed nou', 1, 10, 1, 0, 'asc'),
+(4, '', 1, 0, 0, 0, 'none');
 
 -- --------------------------------------------------------
 
@@ -61,21 +71,22 @@ CREATE TABLE IF NOT EXISTS `apl_feed` (
 CREATE TABLE IF NOT EXISTS `apl_feed_field` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(300) NOT NULL,
-  `type` int(11) NOT NULL COMMENT 'feed_field_type',
+  `fkey` varchar(50) NOT NULL,
+  `field_html` text CHARACTER SET utf8 NOT NULL,
+  `lang_dependent` int(1) NOT NULL DEFAULT '0',
+  `value_filter` varchar(200) NOT NULL,
+  `check_filter` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
--- Table structure for table `apl_feed_field_type`
+-- Dumping data for table `apl_feed_field`
 --
 
-CREATE TABLE IF NOT EXISTS `apl_feed_field_type` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(250) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+INSERT INTO `apl_feed_field` (`id`, `title`, `fkey`, `field_html`, `lang_dependent`, `value_filter`, `check_filter`) VALUES
+(1, 'End date', 'end_date', '<input type="text" value="{value}" class="{class}" name="{name}" /> ', 0, '', ''),
+(2, 'Test text', 'test_text', '<textarea name="{name}" class="{class}">\r\n{value}\r\n</textarea>', 0, '', ''),
+(3, 'Test Checkbox', 'check_check', '<input type="checkbox" name="{name}" class="make-switch" {value} />', 0, 'valueCheckbox', 'checkCheckbox');
 
 -- --------------------------------------------------------
 
@@ -85,8 +96,8 @@ CREATE TABLE IF NOT EXISTS `apl_feed_field_type` (
 
 CREATE TABLE IF NOT EXISTS `apl_feed_field_value` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `post_lang_id` int(11) NOT NULL,
-  `feed_field_type_id` int(11) NOT NULL,
+  `lang_id` int(11) NOT NULL DEFAULT '0',
+  `feed_field_id` int(11) NOT NULL,
   `value` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
@@ -102,7 +113,50 @@ CREATE TABLE IF NOT EXISTS `apl_feed_post` (
   `feed_id` int(11) NOT NULL,
   `post_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=40 ;
+
+--
+-- Dumping data for table `apl_feed_post`
+--
+
+INSERT INTO `apl_feed_post` (`id`, `feed_id`, `post_id`) VALUES
+(1, 1, 19),
+(2, 1, 20),
+(3, 1, 21),
+(17, 1, 22),
+(18, 2, 22),
+(19, 3, 22),
+(23, 1, 23),
+(24, 2, 23),
+(25, 3, 23),
+(36, 1, 24),
+(37, 2, 24),
+(38, 3, 24),
+(39, 4, 24);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `apl_feed_rel`
+--
+
+CREATE TABLE IF NOT EXISTS `apl_feed_rel` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `feed_id` int(11) NOT NULL,
+  `feed_field_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `apl_feed_rel`
+--
+
+INSERT INTO `apl_feed_rel` (`id`, `feed_id`, `feed_field_id`) VALUES
+(1, 1, 1),
+(2, 3, 1),
+(3, 4, 1),
+(4, 4, 2),
+(5, 4, 3);
 
 -- --------------------------------------------------------
 
@@ -121,7 +175,7 @@ CREATE TABLE IF NOT EXISTS `apl_file` (
   `module_name` varchar(20) NOT NULL,
   `module_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=80 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=82 ;
 
 --
 -- Dumping data for table `apl_file`
@@ -132,7 +186,27 @@ INSERT INTO `apl_file` (`id`, `name`, `path`, `type`, `extension`, `size`, `date
 (75, 'metis-tile.png', 'upload/53bd636adcff2_689146877ce1dffa6e2b2fa0ad274d09.png', 'image', 'png', '5194.00', '2014-07-09 15:44:42', 'test', 1),
 (77, 'user.gif', 'upload/53bd637e19f73_54b9352428c145c962dd452e9a927122.gif', 'image', 'gif', '239.00', '2014-07-09 15:45:02', 'rewwe', 1),
 (78, 'user.gif', 'upload/53c134ddc015e_54b9352428c145c962dd452e9a927122.gif', 'image', 'gif', '239.00', '2014-07-12 13:15:09', 'test', 1),
-(79, 'image.jpg', 'upload/53c934bf0d8f4_0d5b1c4c7f720f698946c7f6ab08f687.jpg', 'image', 'jpg', '53058.00', '2014-07-18 14:52:47', 'page', 12);
+(79, 'image.jpg', 'upload/53c934bf0d8f4_0d5b1c4c7f720f698946c7f6ab08f687.jpg', 'image', 'jpg', '53058.00', '2014-07-18 14:52:47', 'page', 12),
+(81, '53cb90c0e28e2_26d1c2c946f83a115a680df4a69f2f5f.png', 'upload/53cec7eb72c50_90cd3318d570ca2a0dbeb67abdbf909e.png', 'image', 'png', '576952.00', '2014-07-22 20:22:03', 'page', 18);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `apl_gallery`
+--
+
+CREATE TABLE IF NOT EXISTS `apl_gallery` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `apl_gallery`
+--
+
+INSERT INTO `apl_gallery` (`id`, `name`) VALUES
+(1, 'dfsdfsdf');
 
 -- --------------------------------------------------------
 
@@ -146,14 +220,15 @@ CREATE TABLE IF NOT EXISTS `apl_lang` (
   `ext` varchar(2) NOT NULL,
   `enabled` int(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `apl_lang`
 --
 
 INSERT INTO `apl_lang` (`id`, `name`, `ext`, `enabled`) VALUES
-(1, 'Romanian', 'ro', 1);
+(1, 'Romanian', 'ro', 1),
+(2, 'Russian', 'ru', 1);
 
 -- --------------------------------------------------------
 
@@ -166,14 +241,15 @@ CREATE TABLE IF NOT EXISTS `apl_menu` (
   `name` varchar(250) NOT NULL,
   `enabled` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `apl_menu`
 --
 
 INSERT INTO `apl_menu` (`id`, `name`, `enabled`) VALUES
-(5, 'dffasfasdfasdf', 1);
+(5, 'dffasfasdfasdf', 1),
+(6, 'dsfasdfasdf', 1);
 
 -- --------------------------------------------------------
 
@@ -188,14 +264,16 @@ CREATE TABLE IF NOT EXISTS `apl_menu_item` (
   `parent` int(11) NOT NULL DEFAULT '0',
   `ord` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
 
 --
 -- Dumping data for table `apl_menu_item`
 --
 
 INSERT INTO `apl_menu_item` (`id`, `menu_id`, `enabled`, `parent`, `ord`) VALUES
-(14, 5, 1, 0, 0);
+(14, 5, 1, 0, 0),
+(16, 5, 1, 0, 0),
+(17, 6, 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -210,14 +288,18 @@ CREATE TABLE IF NOT EXISTS `apl_menu_item_lang` (
   `title` text NOT NULL,
   `href` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 --
 -- Dumping data for table `apl_menu_item_lang`
 --
 
 INSERT INTO `apl_menu_item_lang` (`id`, `menu_item_id`, `lang_id`, `title`, `href`) VALUES
-(14, 14, 1, 'fadsfasd fdasf', 'ads fdasf asdf as');
+(14, 14, 1, 'fadsfasd fdasf', 'ads fdasf asdf as'),
+(15, 15, 1, 'qweqdsadasd', 'asdasdasdasd'),
+(16, 16, 1, 'qweqqwe', 'sdafsdfasdf'),
+(17, 17, 1, 'sdfsdf', 'asdfasdfasd'),
+(18, 17, 2, 'fasdfasd', 'fsadfsdf');
 
 -- --------------------------------------------------------
 
@@ -232,14 +314,15 @@ CREATE TABLE IF NOT EXISTS `apl_module` (
   `settings_page` varchar(255) NOT NULL,
   `enabled` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `apl_module`
 --
 
 INSERT INTO `apl_module` (`id`, `name`, `extension`, `settings_page`, `enabled`) VALUES
-(1, 'First Module', 'mymodule', 'mymodule/settings', 1);
+(1, 'First Module', 'mymodule', 'mymodule/settings', 1),
+(2, 'Gallery', 'gallery', 'gallery/settings', 1);
 
 -- --------------------------------------------------------
 
@@ -249,29 +332,28 @@ INSERT INTO `apl_module` (`id`, `name`, `extension`, `settings_page`, `enabled`)
 
 CREATE TABLE IF NOT EXISTS `apl_post` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `date_create` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `date_update` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `author_id` int(11) DEFAULT NULL,
   `taxonomy_id` int(11) DEFAULT NULL,
+  `views` int(11) NOT NULL DEFAULT '0',
   `parent` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
 
 --
 -- Dumping data for table `apl_post`
 --
 
-INSERT INTO `apl_post` (`id`, `date_create`, `date_update`, `author_id`, `taxonomy_id`, `parent`) VALUES
-(5, '2014-07-18 17:02:07', '2014-07-18 17:02:07', 1, NULL, 0),
-(6, '2014-07-18 17:03:07', '2014-07-18 17:03:07', 1, NULL, 0),
-(7, '2014-07-18 17:03:43', '2014-07-18 17:03:43', 1, NULL, 5),
-(8, '2014-07-18 17:12:58', '2014-07-18 17:12:58', 1, NULL, 5),
-(9, '2014-07-18 17:13:05', '2014-07-18 17:13:05', 1, NULL, 5),
-(10, '2014-07-18 17:13:16', '2014-07-18 17:13:16', 1, NULL, 8),
-(11, '2014-07-18 17:13:21', '2014-07-18 17:13:21', 1, NULL, 8),
-(12, '2014-07-18 17:13:57', '2014-07-18 17:13:57', 1, NULL, 10),
-(13, '2014-07-18 17:32:27', '2014-07-18 17:32:27', 1, NULL, 12),
-(14, '2014-07-19 17:56:10', '2014-07-18 18:25:30', 1, NULL, 9);
+INSERT INTO `apl_post` (`id`, `created_at`, `updated_at`, `author_id`, `taxonomy_id`, `views`, `parent`) VALUES
+(17, '2014-07-20 17:33:52', '2014-07-20 17:33:52', 1, 1, 0, 0),
+(18, '2014-07-20 17:34:30', '2014-07-20 17:34:30', 1, 1, 0, 17),
+(19, '2014-07-23 00:21:14', '2014-07-23 00:21:14', 1, 2, 0, 0),
+(20, '2014-07-23 00:21:24', '2014-07-23 09:40:42', 1, 2, 0, 0),
+(21, '2014-08-23 00:25:00', '2014-07-23 10:12:43', 1, 2, 0, 0),
+(22, '2014-07-23 11:28:50', '2014-07-23 12:06:45', 1, 2, 0, 0),
+(23, '2014-07-23 12:11:39', '2014-07-23 12:11:39', 1, 2, 0, 0),
+(24, '2014-07-25 07:40:12', '2014-07-25 07:40:12', 1, 2, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -301,23 +383,25 @@ CREATE TABLE IF NOT EXISTS `apl_post_lang` (
   `lang_id` int(11) NOT NULL,
   `enabled` int(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=30 ;
 
 --
 -- Dumping data for table `apl_post_lang`
 --
 
 INSERT INTO `apl_post_lang` (`id`, `title`, `text`, `uri`, `post_id`, `lang_id`, `enabled`) VALUES
-(4, '', '', '', 5, 1, 1),
-(5, '', '', '', 6, 1, 1),
-(6, '', '', '', 7, 1, 1),
-(7, '', '', '', 8, 1, 1),
-(8, '', '', '', 9, 1, 1),
-(9, '', '', '', 10, 1, 1),
-(10, '', '', '', 11, 1, 1),
-(11, '', '', '', 12, 1, 1),
-(12, '', '', '', 13, 1, 1),
-(13, '', '', '', 14, 1, 1);
+(18, 'wqeqweqw', 'qweqweqweqweqw', 'eqweqwe', 17, 1, 1),
+(19, 'qweqw', 'eqqweqwe', 'eqwewqeqwe', 17, 2, 1),
+(20, 'dfsf gdfgdfg', ' fdgsdf gsdfgdf gdfgdfg dfg dfg dfgs df', 'dfsdf fdgsdfg sdfgdvevfev', 18, 1, 0),
+(21, 'dsfsdffsdfsdfs', 'dss gsfdgsdfg sdfgdfgsdf s gfds', 'dsfsdffsdfsdfs', 18, 2, 1),
+(22, 'dadsfsdfasdfasdxcvxcvzxc', '', '', 21, 1, 1),
+(23, 'sdfsdfsdf ds fsdfsd fs', '', '', 21, 2, 1),
+(24, 'zxcZXczXCZXczxczxCZX', 'dfsdfsadfadsfs\ndfasdsafasdfasdfasdf', '', 22, 1, 1),
+(25, 'dfgsdgdsfgdsfg', 'fdg sdfgdfgdsfg sdfgfgdfg dfgsdf gd', '', 22, 2, 1),
+(26, 'qweqweqwe', '', '', 23, 1, 1),
+(27, 'qweqweqweqwqwe', '', '', 23, 2, 1),
+(28, '', '', '', 24, 1, 1),
+(29, '', '', '', 24, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -340,8 +424,17 @@ CREATE TABLE IF NOT EXISTS `apl_setting` (
 CREATE TABLE IF NOT EXISTS `apl_taxonomy` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(250) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `apl_taxonomy`
+--
+
+INSERT INTO `apl_taxonomy` (`id`, `name`) VALUES
+(2, 'article'),
+(1, 'page');
 
 -- --------------------------------------------------------
 
