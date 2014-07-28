@@ -14,7 +14,7 @@
         <tr>
             <th>Date: </th>
             <td>
-                <input type="text" name="page[date_create]" class='form-control' value='<?= isset($page->date_create) ? $page->date_create : ''; ?>' />
+                <input type="text" name="page[created_at]" class='form-control' value='<?= isset($page->created_at) ? $page->created_at : ''; ?>' />
             </td>
         </tr>
     </table>

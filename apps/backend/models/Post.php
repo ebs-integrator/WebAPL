@@ -3,7 +3,8 @@
 class Post extends Eloquent {
 
     protected $table = 'apl_post';
-    public $timestamps = false;
+    public static $ftable = 'apl_post'; // public table name
+    public $timestamps = true;
 
     public function langs() {
         return $this->hasMany('PostLang', 'post_id', 'id');
@@ -22,6 +23,14 @@ class Post extends Eloquent {
 
     public static function findTax($id, $taxonomy_id) {
         return Post::where('id', $id)->where('taxonomy_id', $taxonomy_id)->first();
+    }
+
+    public static function feedsID($post_id) {
+        $ids = array();
+        foreach (FeedPost::where('post_id', $post_id)->get() as $record) {
+            $ids[] = $record->feed_id;
+        }
+        return $ids;
     }
 
 }

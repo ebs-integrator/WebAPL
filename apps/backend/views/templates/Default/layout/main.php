@@ -18,6 +18,7 @@
 
         <link rel="stylesheet" href="<?= res('assets/lib/switch/css/bootstrap3/bootstrap-switch.min.css'); ?>">
         <link rel="stylesheet" href="<?= res('assets/lib/treeview/jquery.treeview.css'); ?>">
+        <link rel="stylesheet" href="<?= res('assets/lib/chosen/chosen.css'); ?>">
 
         <!-- Metis core stylesheet -->
         <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">
@@ -185,6 +186,7 @@
         <script src="<?= res('assets/lib/switch/js/bootstrap-switch.min.js'); ?>"></script>
         <script src="<?= res('assets/lib/treeview/jquery.cookie.js'); ?>"></script>
         <script src="<?= res('assets/lib/treeview/jquery.treeview.js'); ?>"></script>
+        <script src="<?= res('assets/lib/chosen/chosen.jquery.js'); ?>"></script>
 
         <!--Bootstrap -->
         <script src="<?= res('assets/lib/bootstrap/js/bootstrap.min.js'); ?>"></script>

@@ -246,8 +246,8 @@ if (!function_exists('array_flatten')) {
         $return = array();
 
         array_walk_recursive($array, function($x) use (&$return) {
-            $return[] = $x;
-        });
+                    $return[] = $x;
+                });
 
         return $return;
     }
@@ -597,8 +597,8 @@ if (!function_exists('dd')) {
      */
     function dd() {
         array_map(function($x) {
-            var_dump($x);
-        }, func_get_args());
+                    var_dump($x);
+                }, func_get_args());
         die;
     }
 
@@ -768,8 +768,8 @@ if (!function_exists('preg_replace_sub')) {
      */
     function preg_replace_sub($pattern, &$replacements, $subject) {
         return preg_replace_callback($pattern, function($match) use (&$replacements) {
-            return array_shift($replacements);
-        }, $subject);
+                    return array_shift($replacements);
+                }, $subject);
     }
 
 }
@@ -1111,3 +1111,39 @@ if (!function_exists('humanFileSize')) {
 }
 
 
+if (!function_exists('areplace')) {
+
+    /**
+     * Return the given object. Useful for chaining.
+     *
+     * @param  mixed  $object
+     * @return mixed
+     */
+    function areplace($array, $string, &$count = 0) {
+        foreach ($array as $find => $replace) {
+            $string = str_replace($find, $replace, $string, $q);
+            $count+=$q;
+        }
+        return $string;
+    }
+
+}
+
+
+if (!function_exists('dinamic_field')) {
+
+    /**
+     * Return the given object. Useful for chaining.
+     *
+     * @param  mixed  $object
+     * @return mixed
+     */
+    function dinamic_field($field, $points = array()) {
+        if (isset($points['{value}']) && $field->value_filter) {
+            if (method_exists('DinamicFields', $field->value_filter))
+                $points['{value}'] = forward_static_call(array('DinamicFields', $field->value_filter), $points['{value}']);
+        }
+        return areplace($points, $field->field_html);
+    }
+
+}

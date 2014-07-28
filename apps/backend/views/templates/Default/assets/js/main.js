@@ -42,4 +42,11 @@ jQuery(document).ready(function($) {
     }).bind("ajaxComplete", function() {
         $("#loading").hide(200);
     });
+    
+    $(".chzn-select").chosen();
+    $(".chzn-select-deselect").chosen({
+        allow_single_deselect: true
+    });
+    
+    $(".lter").css('min-height', $(window).height() - 90);
 });

@@ -57,8 +57,8 @@ class PageController extends BaseController {
 
         $post = Post::find($page_id);
         if ($post && $page) {
-            $post->date_create = $page['date_create'];
-            $post->date_update = DB::raw('CURRENT_TIMESTAMP');
+            $post->created_at = $page['created_at'];
+            $post->updated_at = DB::raw('CURRENT_TIMESTAMP');
             if ($post->parent != $post->id) {
                 $post->parent = $page['parent'];
             }

@@ -10,6 +10,13 @@ class jQgrid {
     protected $table = '';
     protected $pk = '';
     
+    /**
+     * TRUE - use populate select for count
+     * FALSE - use table count
+     * @var bool 
+     */
+    public $use_populate_count = false;
+    
     public function __construct($table, $pk = 'id') {
         $this->table = $table;
         $this->pk = $pk;
@@ -132,7 +139,12 @@ class jQgrid {
         $sord = Input::get('sord');
         $sidx = Input::get('sidx');
         
-        $count = $this->getCount();
+        if ($this->use_populate_count) {
+            $count = count($query(null, null, $sord, $sidx));
+        } else {
+            $count = $this->getCount();
+        }
+        
         $start = $this->start($count, $page, $limit);
         
         $list = $query($start, $limit, $sord, $sidx);
