@@ -13,13 +13,19 @@ class ExtensionController extends \BaseController {
     }
 
     public function loadClass($model, $module_name = '') {
-        $defined_module_name = isset($this->module_name) ? $this->module_name : '';
-        $module_name = $module_name ? $module_name : $defined_module_name;
-        $module_path = '/modules/' . $module_name . '/models/';
-        
-        \ClassLoader::addDirectories(app_path($module_path));
-        if (!\ClassLoader::load($model)) {
-            throw new \Exception("Class '{$model}' not found in '{$module_path}'");
+        if (is_array($model)) {
+            foreach ($model as $mod) {
+                $this->loadClass($mod, $module_name);
+            }
+        } else {
+            $defined_module_name = isset($this->module_name) ? $this->module_name : '';
+            $module_name = $module_name ? $module_name : $defined_module_name;
+            $module_path = '/modules/' . $module_name . '/models/';
+
+            \ClassLoader::addDirectories(app_path($module_path));
+            if (!\ClassLoader::load($model)) {
+                throw new \Exception("Class '{$model}' not found in '{$module_path}'");
+            }
         }
     }
 

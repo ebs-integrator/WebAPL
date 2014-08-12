@@ -4,7 +4,8 @@
         <li><a href="#lang<?= $plang->id; ?>" role="tab" data-toggle="tab">Language <?= Language::getItem($plang->lang_id)->name; ?></a></li>
     <?php } ?>
     <li><a href="#files" role="tab" data-toggle="tab">Files</a></li>
-    <li><a href="#actelocale" role="tab" data-toggle="tab">Acte Locale</a></li>
+    <!--<li><a href="#actelocale" role="tab" data-toggle="tab">Acte Locale</a></li>-->
+    <li><a href="#attachment" role="tab" data-toggle="tab">Attachment</a></li>
 </ul>
 
 
@@ -14,7 +15,7 @@
     </div>
     <?php foreach ($page_langs as $plang) { ?>
         <div class="tab-pane" id="lang<?= $plang->id; ?>">
-            <?= View::make('sections.page.tab-lang', array('plang'=>$plang)); ?>
+            <?= View::make('sections.page.tab-lang', array('plang' => $plang)); ?>
         </div>
     <?php } ?>
     <div class="tab-pane" id="files">
@@ -23,6 +24,11 @@
     </div>
     <div class="tab-pane" id="actelocale">
         <?= View::make('sections.page.tab-actelocale'); ?>
+    </div>
+    <div class="tab-pane" id="attachment">
+        <table class="table table-bordered">
+            <?=Actions::call('page_attachment', $page);?>
+        </table>
     </div>
 </div>
 

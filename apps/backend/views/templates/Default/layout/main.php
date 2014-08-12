@@ -142,6 +142,7 @@
                     <li><a href="<?= url('home/languages'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Languages</span></a></li>
                     <li><a href="<?= url('menu'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Menu</span></a></li>
                     <li><a href="<?= url('page'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Pages</span></a></li>
+                    <li><a href="<?= url('feed'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Feeds</span></a></li>
                     <?=Actions::call('construct_left_menu');?>
                 </ul><!-- /#menu -->
             </div><!-- /#left -->

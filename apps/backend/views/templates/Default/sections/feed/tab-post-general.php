@@ -26,7 +26,7 @@
             <tr>
                 <th><?=$field->title;?>: </th>
                 <td>
-                    <?=dinamic_field($field, array('{name}'=>"dinamic_post[{$field->fkey}]", '{value}' => $field->value, '{class}' => 'form-control'));?>
+                    <?=dinamic_field($field, array('{name}'=>"dinamic_post[{$field->id}]", '{value}' => $field->value, '{class}' => 'form-control'));?>
                 </td>
             </tr>
         <?php } ?>

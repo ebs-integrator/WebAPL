@@ -19,7 +19,7 @@
         if (isset($post_langs[$lang->id])) {
             ?>
             <div class="tab-pane" id="lang<?= $lang->id; ?>">
-            <?= View::make('sections.feed.tab-post-lang')->with('post_lang', $post_langs[$lang->id]); ?>
+            <?= View::make('sections.feed.tab-post-lang')->with('post_lang', $post_langs[$lang->id])->with('post', $general['post']); ?>
             </div>
     <?php } ?>
 </div>

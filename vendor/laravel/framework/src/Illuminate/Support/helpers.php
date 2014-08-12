@@ -1141,7 +1141,7 @@ if (!function_exists('dinamic_field')) {
     function dinamic_field($field, $points = array()) {
         if (isset($points['{value}']) && $field->value_filter) {
             if (method_exists('DinamicFields', $field->value_filter))
-                $points['{value}'] = forward_static_call(array('DinamicFields', $field->value_filter), $points['{value}']);
+                $points['{value}'] = call_user_func(array('DinamicFields', $field->value_filter), $points['{value}']);
         }
         return areplace($points, $field->field_html);
     }
