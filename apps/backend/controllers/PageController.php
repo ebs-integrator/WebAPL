@@ -10,8 +10,15 @@ class PageController extends BaseController {
                         return Redirect::to('auth');
                     }
                 });
-        
+
         $this->taxonomy = Taxonomy::get('page');
+
+        Actions::register('page_attachment', function ($page) {
+                    echo View::make('sections.feed.attachment-page', array(
+                        'post' => $page->toArray(),
+                        'list' => Feed::all()
+                    ));
+                });
     }
 
     protected $taxonomy;
@@ -64,7 +71,7 @@ class PageController extends BaseController {
             }
             $post->save();
         }
-        
+
         if ($page_lang) {
             foreach ($page_lang as $page_lang_id => $page_lang) {
                 $post_lang = PostLang::find($page_lang_id);

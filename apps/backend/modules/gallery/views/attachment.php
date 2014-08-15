@@ -9,7 +9,7 @@
             <?php } ?>
         </select>
         <br>
-        <a href="<?= url('gallery/list'); ?>" target="_blank">Create new gallery</a>
+        <a href="<?= url('gallery/list'); ?>" class="btn btn-info" target="_blank">Create new gallery</a>
 
         <script>
             jQuery(document).ready(function($) {

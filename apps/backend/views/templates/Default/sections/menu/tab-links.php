@@ -7,9 +7,7 @@
 
 <div class="col-sm-6">
     <h3>Order links:</h3>
-    <div class="dd">
-        <?= View::make('sections.menu.block-treeview', array('items' => $menuItems)); ?>
-    </div>
+    <div class="dd"></div>
 </div>
 
 
@@ -37,18 +35,18 @@
 
     function menu_tree_update() {
         $.post('<?= url('menu/gettree'); ?>', {menu_id: <?= $menu->id; ?>}, function(data) {
-            $(".dd").html(data).nestable({});
+            $(".dd").html(data);
+            $(".dd").nestable().on('change', function(e) {
+                $.post('<?= url('menu/savetree'); ?>', {tree: $('.dd').nestable('serialize')}, function() {
+
+                }, 'json');
+            });
         }, 'html');
     }
 
     jQuery(document).ready(function($) {
-        $('.dd').nestable({});
 
-        $('budy').on('change', '.dd', function() {
-            $.post('<?= url('menu/savetree'); ?>', {tree: $('.dd').nestable('serialize')}, function() {
-
-            }, 'json');
-        });
+        menu_tree_update();
 
         $("body").on('click', '.remove-tree-node', function() {
             if (confirm("Delete this node?")) {
@@ -64,7 +62,7 @@
                 $('#editnode-dialog').modal();
             }, 'html');
         });
-        
+
         $("body").on('click', '#save-menu-node', function() {
             $.post('<?= url('menu/savenode'); ?>', $("#menu-node-form").serialize(), function(data) {
                 $('#editnode-dialog').modal('hide');

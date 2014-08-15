@@ -22,8 +22,9 @@ class Menu extends Eloquent {
 
     public static function treeItems($menuId, $parent = 0) {
         $items = MenuItem::where('menu_id', $menuId)
+                ->select(MenuItem::$ftable . ".id", MenuItemLang::$ftable . ".title", MenuItemLang::$ftable . ".href")
                 ->where('parent', $parent)
-                ->join(MenuItemLang::$ftable, MenuItemLang::$ftable.'.menu_item_id', '=', MenuItem::$ftable.'.id')
+                ->join(MenuItemLang::$ftable, MenuItemLang::$ftable . '.menu_item_id', '=', MenuItem::$ftable . '.id')
                 ->where('lang_id', Language::getId())
                 ->orderBy('ord')
                 ->get();
@@ -32,7 +33,7 @@ class Menu extends Eloquent {
         }
         return $items;
     }
-    
+
     public static function updateTree($tree, $parent = 0) {
         $ord = 0;
         foreach ($tree as $item) {
@@ -41,13 +42,13 @@ class Menu extends Eloquent {
             $itm->parent = $parent;
             $itm->ord = $ord;
             $itm->save();
-            
+
             if (isset($item['children'])) {
                 Menu::updateTree($item['children'], $item['id']);
             }
         }
     }
-    
+
     public static function drop($id) {
         $menu = Menu::find($id);
         foreach (MenuItem::where('menu_id', $id)->get() as &$item) {

@@ -9,14 +9,14 @@ class jQgrid {
 
     protected $table = '';
     protected $pk = '';
-    
+
     /**
      * TRUE - use populate select for count
      * FALSE - use table count
      * @var bool 
      */
     public $use_populate_count = false;
-    
+
     public function __construct($table, $pk = 'id') {
         $this->table = $table;
         $this->pk = $pk;
@@ -73,7 +73,7 @@ class jQgrid {
     public function operation($params) {
         $id = Input::get('id');
         $oper = Input::get('oper');
-        
+
         switch ($oper) {
             case 'add' : {
                     $result = $this->insert($params);
@@ -119,13 +119,10 @@ class jQgrid {
         return $start;
     }
 
-
-    
     public function getCount() {
         return DB::table($this->table)->count();
     }
-    
-    
+
     /**
      * json for jqgrid
      * @param array $list
@@ -138,17 +135,17 @@ class jQgrid {
         $limit = Input::get('rows');
         $sord = Input::get('sord');
         $sidx = Input::get('sidx');
-        
+
         if ($this->use_populate_count) {
             $count = count($query(null, null, $sord, $sidx));
         } else {
             $count = $this->getCount();
         }
-        
+
         $start = $this->start($count, $page, $limit);
-        
+
         $list = $query($start, $limit, $sord, $sidx);
-        
+
         $responce = new stdClass();
 
         if ($count == 0) {
@@ -165,7 +162,16 @@ class jQgrid {
             $responce->rows = array();
             foreach ($list as $row) {
                 $responce->rows[$i]['id'] = $row->{$this->pk};
-                $responce->rows[$i]['cell'] = array_values((array)$row);
+
+                if (is_a($row, 'stdClass')) {
+                    $cell = (array) $row;
+                } elseif (is_array($row)) {
+                    $cell = $row;
+                } else {
+                    $cell = $row->toArray();
+                }
+                
+                $responce->rows[$i]['cell'] = array_values($cell);
                 $i++;
             }
         }

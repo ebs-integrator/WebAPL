@@ -77,7 +77,7 @@ class Gallery extends \Core\APL\ExtensionController {
     }
 
     public function left_menu_item() {
-        echo Template::moduleView($this->module_name, 'views.left-menu-item');
+        echo Template::moduleView($this->module_name, 'views.gallery-left-menu');
     }
 
     public function page_attachment($page) {

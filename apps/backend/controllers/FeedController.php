@@ -278,4 +278,10 @@ class FeedController extends BaseController {
         $this->layout = null;
     }
 
+    public function postPostattach() {
+        $post = Post::find(Input::get('post_id'));
+        $post->feed_id = Input::get('id');
+        $post->save();
+    }
+
 }

@@ -27,3 +27,4 @@ Route::controller('home', 'HomeController');
 Route::controller('menu', 'MenuController');
 Route::controller('page', 'PageController');
 Route::controller('feed', 'FeedController');
+Route::controller('log', 'LogController');

@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="<?= res('assets/lib/switch/css/bootstrap3/bootstrap-switch.min.css'); ?>">
         <link rel="stylesheet" href="<?= res('assets/lib/treeview/jquery.treeview.css'); ?>">
         <link rel="stylesheet" href="<?= res('assets/lib/chosen/chosen.css'); ?>">
+        <link rel="stylesheet" href="<?= res('assets/lib/treeview/jquery.treeview.css'); ?>">
 
         <!-- Metis core stylesheet -->
         <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">
@@ -112,9 +113,7 @@
 
                             <!-- .nav -->
                             <ul class="nav navbar-nav">
-                                <li> <a href="dashboard.html">item</a></li>
-                                <li> <a href="dashboard.html">item</a></li>
-                                <li> <a href="dashboard.html">item</a></li>
+                                <li> <a href="<?=url('log');?>">Log</a></li>
 
                                 <li><img id="loading" style="display: none;margin-top: 14px;" src="<?= res('assets/img/ajax-loader.gif'); ?>" /></li>
                             </ul><!-- /.nav -->
@@ -181,13 +180,14 @@
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal --><!-- /#helpModal -->
 
-        <!-- file module -->
+        <!-- module -->
         <script src="<?= res('assets/lib/jquery-form/jquery.form.js'); ?>"></script>
         <script src="<?= res('assets/js/inc/widget.file.js'); ?>"></script>
         <script src="<?= res('assets/lib/switch/js/bootstrap-switch.min.js'); ?>"></script>
         <script src="<?= res('assets/lib/treeview/jquery.cookie.js'); ?>"></script>
         <script src="<?= res('assets/lib/treeview/jquery.treeview.js'); ?>"></script>
         <script src="<?= res('assets/lib/chosen/chosen.jquery.js'); ?>"></script>
+        <script src="<?= res('assets/lib/ckeditor/ckeditor.js'); ?>"></script>
 
         <!--Bootstrap -->
         <script src="<?= res('assets/lib/bootstrap/js/bootstrap.min.js'); ?>"></script>

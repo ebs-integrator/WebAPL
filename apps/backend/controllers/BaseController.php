@@ -3,9 +3,9 @@
 class BaseController extends Controller {
 
     protected $data = array();
-            
+
     function __construct() {
-        
+
     }
 
     protected function setupLayout() {

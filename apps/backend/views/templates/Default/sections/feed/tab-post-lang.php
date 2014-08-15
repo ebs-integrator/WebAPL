@@ -12,7 +12,7 @@
         <tr>
             <th>Text: </th>
             <td>
-                <textarea name="postlang[<?= $post_lang->id; ?>][text]" class='form-control'><?= isset($post_lang->text) ? $post_lang->text : ''; ?></textarea>
+                <textarea name="postlang[<?= $post_lang->id; ?>][text]" class='ckeditor'><?= isset($post_lang->text) ? $post_lang->text : ''; ?></textarea>
             </td>
         </tr>
         <tr>

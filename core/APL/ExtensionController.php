@@ -2,10 +2,25 @@
 
 namespace Core\APL;
 
+use Log,
+    DB,
+    Auth,
+    Request;
+
 class ExtensionController extends \BaseController {
 
     public static function __init() {
-        
+
+        Log::listen(function($level, $message, $context) {
+                    $user = Auth::user();
+                    DB::table('apl_logs')->insert(array(
+                        'level' => $level,
+                        'message' => $message,
+                        'user_id' => $user ? $user->id : 0,
+                        'ip' => Request::getClientIp(),
+                        'url' => Request::url()
+                    ));
+                });
     }
 
     public static function edit() {

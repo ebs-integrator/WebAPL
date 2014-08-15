@@ -2581,3 +2581,32 @@ body.error .logo h1 {
     clear: both;
     margin-top: 20px;
 }
+
+.btnestable {
+    margin-top: -35px;
+}
+
+.nestable-controls {
+    float: right;
+    margin-top: -35px;
+}
+
+.log-info {
+    color: #fff;
+    background-color: #5bc0de;
+}
+
+.log-notice {
+    color: #fff;
+    background-color: #428bca;
+}
+
+.log-warning, .log-alert {
+    color: #fff;
+    background-color: #f0ad4e;
+}
+
+.log-error, .log-critical {
+    color: #fff;
+    background-color: #d9534f;
+}
