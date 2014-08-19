@@ -1,8 +1,10 @@
+<?php
+    $uniq_id = uniqid();
+?>
+
 <!-- jqgrid -->
-<script src="<?= res('assets/lib/jquery-ui/jquery-ui.min.js'); ?>" type="text/javascript"></script>    
 <script src="<?= res('assets/lib/jqgrid/src/i18n/grid.locale-en.js'); ?>" type="text/javascript"></script>   
 <script src="<?= res('assets/lib/jqgrid/js/jquery.jqGrid.src.js'); ?>" type="text/javascript"></script>    
-<link rel="stylesheet" type="text/css" media="screen" href="<?= res('assets/lib/jquery-ui/jquery-ui.css') ?>" />
 <link rel="stylesheet" type="text/css" media="screen" href="<?= res('assets/lib/jqgrid/css/ui.jqgrid.css') ?>" />   
 <!-- end  jqgrid --> 
 
@@ -10,9 +12,11 @@
 
     $(document).ready(function() {
 
-        jQuery("#list").jqGrid(<?= $options; ?>);
+        <?= $options; ?>.pager = '#pager-<?=$uniq_id;?>';
 
-        jQuery("#list").jqGrid('navGrid', '#pager', {search: false},
+        jQuery("#list-<?=$uniq_id;?>").jqGrid(<?= $options; ?>);
+
+        jQuery("#list-<?=$uniq_id;?>").jqGrid('navGrid', '#pager-<?=$uniq_id;?>', {search: false},
         {width: 400, reloadAfterSubmit: true, closeOnEscape: true, closeAfterEdit: true,
             beforeShowForm: function() {
             },
@@ -35,8 +39,8 @@
 
         $(".center_content .ui-jqgrid-titlebar").remove();
     });
-</script>   
+</script>
 
 
-<table id="list" ></table>
-<div id="pager"></div>           
+<table id="list-<?=$uniq_id;?>" ></table>
+<div id="pager-<?=$uniq_id;?>"></div>           

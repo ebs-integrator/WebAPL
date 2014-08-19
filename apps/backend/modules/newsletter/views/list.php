@@ -19,7 +19,7 @@
         rowNum: 15,
         multiselect: true,
         rowList: [15, 30, 45],
-        pager: '#pager',
+        pager: '',
         altRows: true,
         sortname: 'id',
         viewrecords: true,

@@ -143,13 +143,18 @@ class FeedController extends BaseController {
         $general = Input::get('general');
 
         $feed = Feed::find($id);
-        $feed->name = $general['name'];
-        $feed->enabled = isset($general['enabled']) ? 1 : 0;
-        $feed->limit_type = $general['limit_type'];
-        $feed->limit_value = $general['limit_value'];
-        $feed->order_type = $general['order_type'];
-        $feed->order_by = $general['order_by'];
-        $feed->save();
+        if ($feed) {
+            $feed->name = $general['name'];
+            $feed->enabled = isset($general['enabled']) ? 1 : 0;
+            $feed->limit_type = $general['limit_type'];
+            $feed->limit_value = $general['limit_value'];
+            $feed->order_type = $general['order_type'];
+            $feed->order_by = $general['order_by'];
+            $feed->save();
+        } else {
+            throw new Exception("Undefined Feed #{$id} DATA: " . serialize($general));
+        }
+
 
         return array();
     }
@@ -222,10 +227,14 @@ class FeedController extends BaseController {
 
             foreach ($postlang as $plang_id => $plang) {
                 $post_lang = PostLang::find($plang_id);
-                $post_lang->title = $plang['title'];
-                $post_lang->text = $plang['text'];
-                $post_lang->enabled = isset($plang['enabled']) ? 1 : 0;
-                $post_lang->save();
+                if ($post_lang) {
+                    $post_lang->title = $plang['title'];
+                    $post_lang->text = $plang['text'];
+                    $post_lang->enabled = isset($plang['enabled']) ? 1 : 0;
+                    $post_lang->save();
+                } else {
+                    throw new Exception("Undefined PostLang #{$plang_id} DATA: " . serialize($plang));
+                }
             }
         }
 

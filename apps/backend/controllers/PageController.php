@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * 
+ *
+ * @author     Godina Nicolae <ngodina@ebs.md>
+ * @copyright  2014 Enterprise Business Solutions SRL
+ * @link       http://ebs.md/
+ */
+
+
 class PageController extends BaseController {
 
     function __construct() {
@@ -24,6 +33,10 @@ class PageController extends BaseController {
     protected $taxonomy;
     protected $layout = 'layout.main';
 
+    /**
+     * Page form
+     * @param int $page_id
+     */
     public function getIndex($page_id = 0) {
         if ($page_id) {
             $this->data['page'] = Post::findTax($page_id, $this->taxonomy->id);
@@ -38,6 +51,10 @@ class PageController extends BaseController {
         $this->layout->content = View::make('sections.page.layout');
     }
 
+    /**
+     * Create new page
+     * @return Redirect
+     */
     public function postCreate() {
         $parent = Input::get('parent');
 
@@ -57,6 +74,10 @@ class PageController extends BaseController {
         return Redirect::to('page/index/' . $page->id);
     }
 
+    /**
+     * Save page changes
+     * @return type
+     */
     public function postSave() {
         $page_id = Input::get('id');
         $page = Input::get('page');

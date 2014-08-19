@@ -17,7 +17,7 @@
         <tr>
             <th>Text: </th>
             <td>
-                <textarea name="lang[<?= $plang->id; ?>][text]" class='form-control'><?= isset($plang->text) ? $plang->text : ''; ?></textarea>
+                <textarea name="lang[<?= $plang->id; ?>][text]" class='ckeditor'><?= isset($plang->text) ? $plang->text : ''; ?></textarea>
             </td>
         </tr>
         <tr>

@@ -15,7 +15,7 @@
         rowNum: 15,
         multiselect: false,
         rowList: [15, 30, 45],
-        pager: '#pager',
+        pager: '',
         altRows: true,
         //sortname: 'id',
         viewrecords: false,

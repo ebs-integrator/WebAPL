@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+define('APP_FOLDER', 'frontend');
+
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader
@@ -13,7 +15,7 @@
 |
 */
 
-require __DIR__.'/bootstrap/autoload.php';
+require __DIR__.'/apps/frontend/bootstrap/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +29,7 @@ require __DIR__.'/bootstrap/autoload.php';
 |
 */
 
-$app = require_once __DIR__.'/bootstrap/start.php';
+$app = require_once __DIR__.'/apps/frontend/bootstrap/start.php';
 
 /*
 |--------------------------------------------------------------------------

@@ -14,7 +14,6 @@ class HomeController extends BaseController {
 
     protected $layout = 'layout.main';
 
-
     public function postLangs() {
         $jqgrid = new jQgrid('apl_lang');
         echo $jqgrid->populate(function ($start, $limit) {
@@ -35,11 +34,6 @@ class HomeController extends BaseController {
     }
     
     public function showDashboard() {
-        
-        $jqgrid = new jQgrid('apl_lang');
-        
-        
-        
         $this->layout->content = View::make('hello');
     }
     

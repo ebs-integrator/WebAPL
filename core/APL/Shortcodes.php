@@ -1,39 +1,78 @@
 <?php
 
+/**
+ * 
+ *
+ * @author     Godina Nicolae <ngodina@ebs.md>
+ * @copyright  2014 Enterprise Business Solutions SRL
+ * @link       http://ebs.md/
+ */
+
 namespace Core\APL;
 
 class Shortcodes {
 
     protected static $shortcode_tags = array();
 
+    /**
+     * Initialize module
+     * This function is called on bootstrap
+     */
     public static function __init() {
         
     }
 
+    /**
+     * Register new shortcode function
+     * @param string $tag
+     * @param mixed $function
+     */
     public static function register($tag, $function) {
         if (is_callable($function)) {
             self::$shortcode_tags[$tag] = $function;
         }
     }
 
+    /**
+     * Remove sortcode function
+     * @param string $tag
+     */
     public static function remove($tag) {
         unset(self::$shortcode_tags[$tag]);
     }
 
+    /**
+     * Verify if exist shortcode
+     * @param string $tag
+     * @return boolean
+     */
     public static function check($tag) {
         return isset(self::$shortcode_tags[$tag]);
     }
 
+    /**
+     * Delete all shortcodes
+     */
     public static function clear() {
         self::$shortcode_tags = array();
     }
 
+    /**
+     * Get regular expression
+     * @return type
+     */
     protected static function regex() {
         $tagregex = join('|', array_map('preg_quote', array_keys(self::$shortcode_tags)));
 
         return '\\[(\\[?)(' . $tagregex . ')(?![\\w-])([^\\]\\/]*(?:\\/(?!\\])[^\\]\\/]*)*?)(?:(\\/)\\]|\\](?:([^\\[]*+(?:\\[(?!\\/\\2\\])[^\\[]*+)*+)\\[\\/\\2\\])?)(\\]?)';
     }
 
+    /**
+     * verify if content has shortcode
+     * @param text $content
+     * @param string $tag
+     * @return boolean
+     */
     public static function has($content, $tag) {
         if (false === strpos($content, '[')) {
             return false;
@@ -55,6 +94,11 @@ class Shortcodes {
         return false;
     }
 
+    /**
+     * Execute shortcodes
+     * @param text $content
+     * @return text
+     */
     public static function execute($content) {
         if (false === strpos($content, '[')) {
             return $content;
@@ -65,10 +109,15 @@ class Shortcodes {
         }
 
         return preg_replace_callback("/" . self::regex() . "/s", function ($m) {
-            return self::exec_tag($m);
-        }, $content);
+                    return self::exec_tag($m);
+                }, $content);
     }
 
+    /**
+     * 
+     * @param mixed $m
+     * @return string
+     */
     public static function exec_tag($m) {
         if ($m[1] == '[' && $m[6] == ']') {
             return substr($m[0], 1, -1);
@@ -84,6 +133,11 @@ class Shortcodes {
         }
     }
 
+    /**
+     * Parse attributes
+     * @param text $text
+     * @return mixed
+     */
     protected static function parse_atts($text) {
         $atts = array();
         $pattern = '/(\w+)\s*=\s*"([^"]*)"(?:\s|$)|(\w+)\s*=\s*\'([^\']*)\'(?:\s|$)|(\w+)\s*=\s*([^\s\'"]+)(?:\s|$)|"([^"]*)"(?:\s|$)|(\S+)(?:\s|$)/';
@@ -108,6 +162,13 @@ class Shortcodes {
         return $atts;
     }
 
+    /**
+     * Get attributes
+     * @param mixed $pairs
+     * @param mixed $atts
+     * @param string $shortcode
+     * @return type
+     */
     protected static function atts($pairs, $atts, $shortcode = '') {
         $atts = (array) $atts;
         $out = array();

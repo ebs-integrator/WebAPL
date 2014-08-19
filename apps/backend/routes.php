@@ -12,7 +12,6 @@
  */
 
 
-Route::get('/', 'HomeController@showDashboard');
 
 Route::get('page', 'HomeController@showPage');
 
@@ -28,3 +27,7 @@ Route::controller('menu', 'MenuController');
 Route::controller('page', 'PageController');
 Route::controller('feed', 'FeedController');
 Route::controller('log', 'LogController');
+
+Route::get('/', 'HomeController@showDashboard');
+
+

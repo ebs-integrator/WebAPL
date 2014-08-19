@@ -1,23 +1,47 @@
 <?php
+/**
+ * 
+ *
+ * @author     Godina Nicolae <ngodina@ebs.md>
+ * @copyright  2014 Enterprise Business Solutions SRL
+ * @link       http://ebs.md/
+ */
 
 namespace Core\APL;
+
+use Route;
 
 class Actions {
 
     static protected $actions = array();
 
+    /**
+     * Initialize module
+     * This function is called on bootstrap
+     */
     public static function __init() {
         
     }
 
+    /**
+     * Register new action
+     * @param string $tag
+     * @param object $function
+     * @param int $priority
+     */
     public static function register($tag, $function, $priority = 1) {
         self::$actions[$tag][$priority][] = $function;
 
         ksort(self::$actions[$tag]);
     }
 
+    /**
+     * Call all actions with $tag name
+     * @param string $tag
+     */
     public static function call($tag) {
         $arguments = func_get_args();
+        // drop parameter $tag
         unset($arguments[0]);
         
         if (self::check($tag)) {
@@ -31,18 +55,31 @@ class Actions {
         }
     }
 
+    /**
+     * Verify if exist actions with $tag name
+     * @param string $tag
+     * @return bool
+     */
     public static function check($tag) {
         return isset(self::$actions[$tag]);
     }
 
-    // create get route for action
+    /**
+     * 
+     * @param string $tag
+     * @param object $function
+     */
     public static function get($tag, $function) {
-        \Route::get($tag, $function);
+        Route::get($tag, $function);
     }
 
-    // create post route for action
+    /**
+     * 
+     * @param string $tag
+     * @param object $function
+     */
     public static function post($tag, $function) {
-        \Route::post($tag, $function);
+        Route::post($tag, $function);
     }
 
 }

@@ -3,7 +3,6 @@
 class BaseController extends Controller {
 
     function __construct() {
-
     }
 
     protected function setupLayout() {

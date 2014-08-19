@@ -20,7 +20,8 @@
         <link rel="stylesheet" href="<?= res('assets/lib/treeview/jquery.treeview.css'); ?>">
         <link rel="stylesheet" href="<?= res('assets/lib/chosen/chosen.css'); ?>">
         <link rel="stylesheet" href="<?= res('assets/lib/treeview/jquery.treeview.css'); ?>">
-
+        <link rel="stylesheet" type="text/css" media="screen" href="<?= res('assets/lib/jquery-ui/jquery-ui.css') ?>" />
+ 
         <!-- Metis core stylesheet -->
         <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">
 
@@ -181,6 +182,7 @@
         </div><!-- /.modal --><!-- /#helpModal -->
 
         <!-- module -->
+        <script src="<?= res('assets/lib/jquery-ui/jquery-ui.min.js'); ?>" type="text/javascript"></script>   
         <script src="<?= res('assets/lib/jquery-form/jquery.form.js'); ?>"></script>
         <script src="<?= res('assets/js/inc/widget.file.js'); ?>"></script>
         <script src="<?= res('assets/lib/switch/js/bootstrap-switch.min.js'); ?>"></script>

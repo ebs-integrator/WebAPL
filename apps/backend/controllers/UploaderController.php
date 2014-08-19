@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * 
+ *
+ * @author     Godina Nicolae <ngodina@ebs.md>
+ * @copyright  2014 Enterprise Business Solutions SRL
+ * @link       http://ebs.md/
+ */
+
+
 class UploaderController extends BaseController {
 
     function __construct() {
@@ -12,6 +21,9 @@ class UploaderController extends BaseController {
         });
     }
 
+    /**
+     * Get filelist
+     */
     public function filelist() {
         $files = Files::file_list(Input::get('module_name'), Input::get('module_id'));
 
@@ -26,6 +38,10 @@ class UploaderController extends BaseController {
         return $data;
     }
 
+    /**
+     * Upload file
+     * @return array
+     */
     public function start() {
         $data = array(
             'module_id' => Input::get('module_id'),
@@ -58,6 +74,10 @@ class UploaderController extends BaseController {
         return $data;
     }
 
+    /**
+     * Ajax delete file
+     * @return array
+     */
     public function delete() {
         $id = Input::get('id');
         $data = array(
