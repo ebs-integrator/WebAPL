@@ -1,5 +1,5 @@
 <?php
-    $uniq_id = uniqid();
+    $uniq_id = isset($id) ? $id : uniqid();
 ?>
 
 <!-- jqgrid -->

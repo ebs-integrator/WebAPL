@@ -16,37 +16,120 @@ jQuery(document).ready(function($) {
     $(".treeview").treeview({
         animated: "fast",
         collapsed: true,
-        // unique: true,
         persist: "cookie"
     });
 
-    /*--------Ajax-auto-save---------*/
-    function ajax_auto_save() {
 
-        var options = {
-            success: function(data) {
-                console.log(data);
-            },
-            dataType: 'json'
+    window.lock_window = function() {
+        window.onbeforeunload = function() {
+            
+            return "ATENTIE !!! \nAcum se petrece salvarea datelor, va rugam sa nu parasiti acum ca riscati sa pierdeti date.";
         };
-
-        $(this).closest('form').ajaxForm(options).submit();
-
     }
+
+    window.unlock_window = function() {
+        window.onbeforeunload = null;
+    }
+
+    /*--------Ajax-auto-save---------*/
+    // list of ajax submit form
+    var auto_save_tasks = [];
+    // execution flag
+    var auto_save_execution = false;
+    // force stop execution flag
+    var auto_save_stop = false;
+
+    /**
+     * Execute list of function
+     * @returns {undefined}
+     */
+    function execute_auto_save() {
+        // if functions exists and process not force stoped
+        if (auto_save_tasks.length > 0 && !auto_save_stop) {
+            lock_window();
+            auto_save_execution = true;
+            // execute function
+            auto_save_tasks[0]();
+            // delete executed function
+            auto_save_tasks.splice(0, 1);
+        } else {
+            auto_save_execution = false;
+            unlock_window();
+        }
+    }
+
+    /**
+     * Add new task
+     * @returns {undefined}
+     */
+    function ajax_auto_save() {
+        var form = $(this).closest('form');
+        // ad new task to list
+        auto_save_tasks.push(function() {
+            form.ajaxForm({
+                success: function(data) {
+                    if (typeof data.redirect_to != 'undefined') {
+                        window.location.href = data.redirect_to;
+                        auto_save_stop = true;
+                    }
+                },
+                // call next function
+                complete: execute_auto_save,
+                dataType: 'json'
+            }).submit();
+        });
+
+        // start process
+        if (!auto_save_execution) {
+            execute_auto_save();
+        }
+    }
+
+    // Event listeners
     $("body").on("change", "form.ajax-auto-submit input, form.ajax-auto-submit select, form.ajax-auto-submit textarea", ajax_auto_save);
-    $("body").on("switchChange.bootstrapSwitch", "form.ajax-auto-submit input, form.ajax-auto-submit select, form.ajax-auto-submit textarea", ajax_auto_save);
-
-
+    $("body").on("switchChange.bootstrapSwitch", "form.ajax-auto-submit input", ajax_auto_save);
+    
+    // Save interval for focused elements
+    setInterval(function () {
+        // Simple inputs
+        $("form.ajax-auto-submit input:focus, form.ajax-auto-submit select:focus, form.ajax-auto-submit textarea:focus").change();
+        
+        // ckeditor
+        if (CKEDITOR.currentInstance !== null && typeof CKEDITOR.currentInstance != 'undefined') {
+            CKEDITOR.currentInstance.updateElement();
+            $(CKEDITOR.currentInstance.element.$).trigger('change');
+        }
+    }, 60000);
+    
+    // Ajax process indicator
     $(document).bind("ajaxSend", function() {
         $("#loading").show(200);
     }).bind("ajaxComplete", function() {
         $("#loading").hide(200);
     });
-    
+
+    // Initialize chosen selects
     $(".chzn-select").chosen();
     $(".chzn-select-deselect").chosen({
         allow_single_deselect: true
     });
-    
+
     $(".lter").css('min-height', $(window).height() - 90);
+
+
+    $(".ckeditor-run").ckeditor();
+    function updateCkeditorElement(obj) {
+        lock_window();
+        obj.editor.updateElement();
+        $(obj.editor.element.$).trigger('change');
+    };
+    for (var i in CKEDITOR.instances) {
+        CKEDITOR.instances[i].on('blur', updateCkeditorElement);
+        CKEDITOR.instances[i].on('focus', lock_window);
+        CKEDITOR.instances[i].on('change', function (obj) {
+            obj.editor.updateElement();
+        });
+    }
+
+
 });

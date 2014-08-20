@@ -1,14 +1,18 @@
 <?php
-
 /**
  * jqgrid model
  * analog codeigniter gpanel model
  * https://github.com/ngodina/GPanel/blob/master/application/backend/models/jqgrid_model.php
  */
+
+
 class jQgrid {
 
     protected $table = '';
     protected $pk = '';
+    
+    public $row_id = 0;
+    public $where = array();
 
     /**
      * TRUE - use populate select for count
@@ -37,7 +41,7 @@ class jQgrid {
      * @return int
      */
     public function insert($params) {
-        return DB::table($this->table)->insert($params);
+        return DB::table($this->table)->insertGetId($params);
     }
 
     /**
@@ -48,7 +52,7 @@ class jQgrid {
      */
     public function update($params, $id) {
         return DB::table($this->table)
-                        ->where($this->pk, $id)
+                        ->where($this->where)
                         ->update($params);
     }
 
@@ -56,11 +60,8 @@ class jQgrid {
      * jqgrid delete
      * @param str $id
      */
-    public function delete($id) {
-        $idx = explode(",", $id);
-        foreach ($idx as $id) {
-            DB::table($this->table)->where($this->pk, $id)->delete();
-        }
+    public function delete() {
+        DB::table($this->table)->where($this->where)->delete();
     }
 
     /**
@@ -71,7 +72,17 @@ class jQgrid {
      * @return mixed
      */
     public function operation($params) {
-        $id = Input::get('id');
+        // if defined custom id
+        if ($this->row_id) {
+            $id = $this->row_id;
+        } else {
+            $id = Input::get('id');
+        }
+        
+        if (empty($this->where)) {
+            $this->where = array($this->pk => $id);
+        }
+        
         $oper = Input::get('oper');
 
         switch ($oper) {
@@ -81,12 +92,12 @@ class jQgrid {
                 break;
 
             case 'edit' : {
-                    $result = $this->update($params, $id);
+                    $result = $this->update($params);
                 }
                 break;
 
             case 'del' : {
-                    $result = $this->delete($id);
+                    $result = $this->delete();
                 }
                 break;
         }
@@ -136,14 +147,17 @@ class jQgrid {
         $sord = Input::get('sord');
         $sidx = Input::get('sidx');
 
+        // get total count
         if ($this->use_populate_count) {
             $count = count($query(null, null, $sord, $sidx));
         } else {
             $count = $this->getCount();
         }
 
+        // get offset
         $start = $this->start($count, $page, $limit);
 
+        // get list
         $list = $query($start, $limit, $sord, $sidx);
 
         $responce = new stdClass();
@@ -159,10 +173,12 @@ class jQgrid {
             $responce->total = $total_pages;
             $responce->records = $count;
             $i = 0;
+            
             $responce->rows = array();
             foreach ($list as $row) {
-                $responce->rows[$i]['id'] = $row->{$this->pk};
+                $responce->rows[$i]['id'] = is_array($row) ? $row[$this->pk] : $row->{$this->pk};
 
+                // convert row to simple array
                 if (is_a($row, 'stdClass')) {
                     $cell = (array) $row;
                 } elseif (is_array($row)) {

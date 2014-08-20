@@ -9,6 +9,10 @@ use Core\APL\Actions,
     Language,
     PersonModel,
     PersonLangModel,
+    PersonGroup,
+    PersonGroupLang,
+    DB,
+    Redirect,
     Exception;
 
 class Person extends \Core\APL\ExtensionController {
@@ -27,6 +31,10 @@ class Person extends \Core\APL\ExtensionController {
         // Set others routes
         Actions::get('person/list', array('before' => 'auth', array($this, 'list_persons')));
         Actions::post('person/getlist', array('before' => 'auth', array($this, 'getlist')));
+
+        Actions::post('person/getgroups', array('before' => 'auth', array($this, 'list_groups')));
+        Actions::get('person/editgroup/{id}', array('before' => 'auth', array($this, 'edit_group')));
+        Actions::post('person/savegroup', array('before' => 'auth', array($this, 'save_group')));
 
         Actions::get('person/form', array('before' => 'auth', array($this, 'form')));
         Actions::get('person/form/{id}', array('before' => 'auth', array($this, 'form')));
@@ -64,7 +72,11 @@ class Person extends \Core\APL\ExtensionController {
      * @return layout
      */
     public function list_persons() {
-        $this->layout->content = Template::moduleView($this->module_name, 'views.list');
+        $data = array(
+            'module' => $this->module_name
+        );
+
+        $this->layout->content = Template::moduleView($this->module_name, 'views.list', $data);
 
         return $this->layout;
     }
@@ -74,7 +86,7 @@ class Person extends \Core\APL\ExtensionController {
      * @return json
      */
     public function getlist() {
-        $jqgrid = new jQgrid('apl_person');
+        $jqgrid = new jQgrid('apl_person', 'person_id');
         echo $jqgrid->populate(function ($start, $limit) {
                     return PersonLangModel::select('person_id', 'first_name', 'last_name')
                                     ->where('lang_id', Language::getId())
@@ -82,6 +94,100 @@ class Person extends \Core\APL\ExtensionController {
                                     ->take($limit)
                                     ->get();
                 });
+    }
+
+    /**
+     * Get groups list for jqgrid
+     * @return json
+     */
+    public function list_groups() {
+        $jqgrid = new jQgrid('apl_person_group', 'id');
+        echo $jqgrid->populate(function ($start, $limit) {
+                    return DB::table('apl_person_group')
+                                    ->select('apl_person_group.id', 'apl_person_group_lang.name')
+                                    ->leftJoin('apl_person_group_lang', 'apl_person_group_lang.group_id', '=', 'apl_person_group.id')
+                                    ->where('apl_person_group_lang.lang_id', Language::getId())
+                                    ->skip($start)
+                                    ->take($limit)
+                                    ->get();
+                });
+    }
+
+    /**
+     * Edit form group
+     * @param type $group_id
+     * @return type
+     */
+    public function edit_group($group_id = 0) {
+        $data = array(
+            'group' => PersonGroup::find($group_id),
+            'group_lang' => array()
+        );
+
+        if ($data['group']) {
+            $group_lang = PersonGroupLang::where('group_id', $group_id)->get();
+            foreach ($group_lang as $glang) {
+                $data['group_lang'][$glang->lang_id] = $glang;
+            }
+
+            $this->layout->content = Template::moduleView($this->module_name, 'views.group-edit', $data);
+            return $this->layout;
+        } else {
+            \App::abort(404);
+        }
+    }
+
+    /**
+     * Save group changes
+     * @return Redirect / null
+     * @throws Exception
+     */
+    public function save_group() {
+        $id = Input::get('id');
+        $langs = Input::get('lang');
+        $glang_id = Input::get('glang_id');
+        $lang_id = Input::get('lang_id');
+
+        if ($id) {
+            // if group exist
+            if ($glang_id) {
+                // if groupLang exist, update it
+                $personGroupLang = PersonGroupLang::find($glang_id);
+                if ($personGroupLang) {
+                    $personGroupLang->name = $langs['name'];
+                    $personGroupLang->save();
+                } else {
+                    throw new Exception("PersonGroupLang not found #{$glang_id}, DATA: " . serialize($langs));
+                }
+            } else {
+                // if groupLang to exist, create new
+                $personGroupLang = new PersonGroupLang;
+                $personGroupLang->name = $langs['name'];
+                $personGroupLang->lang_id = $lang_id;
+                $personGroupLang->group_id = $id;
+                $personGroupLang->save();
+            }
+        } else {
+            // if group not exist
+            $personGroup = new PersonGroup;
+            $personGroup->date_created = date('Y-m-d H:i:s');
+            $personGroup->save();
+            $id = $personGroup->id;
+
+            foreach ($langs as $lang_id => $lang) {
+                PersonGroupLang::insert(array(
+                    'name' => $lang['name'],
+                    'lang_id' => $lang_id,
+                    'group_id' => $id
+                ));
+                $personGroupLang = new PersonGroupLang;
+                $personGroupLang->name = $lang['name'];
+                $personGroupLang->lang_id = $lang_id;
+                $personGroupLang->group_id = $id;
+                $personGroupLang->save();
+            }
+            return Redirect::to('person/editgroup/' . $id);
+        }
     }
 
     /**
@@ -148,6 +254,8 @@ class Person extends \Core\APL\ExtensionController {
         $person_lang_id = Input::get('person_lang_id');
         $new_person_id = 0;
 
+        $redirect_to = '';
+
         if ($person_lang_id) {
             // if the person-lang exist, find
             $person_lang = PersonLangModel::find($person_lang_id);
@@ -157,10 +265,12 @@ class Person extends \Core\APL\ExtensionController {
                 $person = new PersonModel;
                 $person->save();
                 $new_person_id = $person->id;
+                $redirect_to = url('person/form/' . $new_person_id);
             }
 
             // if the person-lang does not exist, create new
             $person_lang = new PersonLangModel;
+            $redirect_to = url('person/form/' . $person_id);
         }
 
         $person_lang->person_id = $person_id ? $person_id : $new_person_id;
@@ -174,10 +284,10 @@ class Person extends \Core\APL\ExtensionController {
         $person_lang->motto = Input::get('motto');
         $person_lang->save();
 
-        if ($new_person_id) {
+        if ($redirect_to) {
             // if person has been created, refresh page
             return array(
-                'redirect_to' => url('person/form/' . $new_person_id)
+                'redirect_to' => $redirect_to
             );
         }
     }
@@ -203,8 +313,11 @@ class Person extends \Core\APL\ExtensionController {
             $ri++;
         }
 
-        unset($rows[count($rows) - 1]);
+        // unset last rows
+        if ($rows)
+            unset($rows[count($rows) - 1]);
 
+        // Update rows
         $person = PersonModel::find($person_id);
         if ($person) {
             $person->dynamic_fields = serialize($rows);

@@ -1,4 +1,4 @@
-<h3>Person form</h3>
+<h3><a href="<?=url('person/list');?>">Persons</a> / Person form</h3>
 
 <ul class="nav nav-tabs" role="tablist" id="form-tabs">
     <li class="active"><a href="#general" role="tab" data-toggle="tab">General</a></li>

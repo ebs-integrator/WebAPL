@@ -190,6 +190,7 @@
         <script src="<?= res('assets/lib/treeview/jquery.treeview.js'); ?>"></script>
         <script src="<?= res('assets/lib/chosen/chosen.jquery.js'); ?>"></script>
         <script src="<?= res('assets/lib/ckeditor/ckeditor.js'); ?>"></script>
+        <script src="<?= res('assets/lib/ckeditor/adapters/jquery.js'); ?>"></script>
 
         <!--Bootstrap -->
         <script src="<?= res('assets/lib/bootstrap/js/bootstrap.min.js'); ?>"></script>

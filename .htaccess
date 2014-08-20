@@ -11,5 +11,11 @@
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.php [L]
+    # RewriteRule ^ index.php [L]
+    RewriteRule ^([A-Za-z]{2,2})\/(.*)$ index.php/$2?lang=$1 [L]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php/$1?lang=ro [L]
 </IfModule>

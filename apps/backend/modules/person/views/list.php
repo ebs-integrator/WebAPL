@@ -1,35 +1,16 @@
-<script>
-    var person_options = {
-        url: '<?= url('person/getlist') ?>',
-        datatype: "json",
-        mtype: 'POST',
-        autoencode: true,
-        loadonce: false,
-        colNames: ['ID', 'First Name', 'Last Name'],
-        colModel: [
-            {name: 'person_id', index: 'person_id', editable: false, editoptions: {readonly: true, size: 10}},
-            {name: 'first_name', index: 'first_name', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
-            {name: 'last_name', index: 'last_name', resizable: true, align: "left", sorttype: "text", editable: false, edittype: "text"},
-        ],
-        rowNum: 15,
-        multiselect: true,
-        rowList: [15, 30, 45],
-        pager: '',
-        altRows: true,
-        sortname: 'id',
-        viewrecords: true,
-        sortorder: "asc",
-        height: $(window).height() * 0.7,
-        width: $('#content').width() - 70,
-        caption: "",
-        editurl: '',
-        loadComplete: function() {
-            $("#add_list, #edit_list, #del_list").hide();
-        },
-        onSelectRow: function(rowid) {
-            window.location.href = '<?= url('person/edit') ?>/'+rowid;
-        }
-    };
-</script>
+<h2>Persons</h2>
 
-<?= View::make('sections/jqgrid/form')->with('options', 'person_options'); ?>
+<ul class="nav nav-tabs" role="tablist" id="form-tabs">
+    <li class="active"><a href="#plist" role="tab" data-toggle="tab">Persons</a></li>
+    <li><a href="#pgroups" role="tab" data-toggle="tab">Person Groups</a></li>
+</ul>
+
+
+<div class="tab-content">
+    <div class="tab-pane active" id="plist">
+        <?= Template::moduleView($module, 'views.tab-person-list'); ?>
+    </div>
+    <div class="tab-pane" id="pgroups">
+        <?= Template::moduleView($module, 'views.tab-group-list'); ?>
+    </div>
+</div>
