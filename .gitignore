@@ -72,3 +72,4 @@ com_crashlytics_export_strings.xml
 
 # KDE directory preferences
 .directory
+!/vendor/maximebf/debugbar/src/DebugBar/Resources/vendor/jquery/dist/
