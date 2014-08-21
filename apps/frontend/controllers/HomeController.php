@@ -19,6 +19,8 @@ class HomeController extends BaseController {
     public function showWelcome() {
         $this->layout->content = View::make('pages/hello');
         $this->layout->testvar = 'asd';
+        echo url('/myurl');
+        //return Redirect::to('user/1');
         
     }
 
