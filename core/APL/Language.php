@@ -55,9 +55,8 @@ class Language {
         } else {
             throw new Exception("Available language not found");
         }
-
-//        Config::set('app.url', 'http://en.google.com/ro/');
-//        App::setRequestForConsoleEnvironment();
+        //Config::set('app.url', 'http://en.google.com/ro/');
+        //App::setRequestForConsoleEnvironment();
     }
 
     /**

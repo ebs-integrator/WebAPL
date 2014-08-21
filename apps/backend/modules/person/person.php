@@ -224,6 +224,9 @@ class Person extends \Core\APL\ExtensionController {
         if ($id) {
             // if the person exist, find
             $person = PersonModel::find($id);
+            if (!$person) {
+                throw new Exception('Person not found #' . $id);
+            }
         } else {
             // if the person does not exist, create new
             $person = new PersonModel;

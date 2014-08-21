@@ -21,7 +21,7 @@ class HomeController extends BaseController {
         $this->layout->testvar = 'asd';
         echo url('/myurl');
         //return Redirect::to('user/1');
-        
+        $this->layout = null;
     }
 
     public function showProfile($id) {

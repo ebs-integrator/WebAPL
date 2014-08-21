@@ -13,4 +13,12 @@
 
 Route::get('/', 'HomeController@showWelcome');
 
+
+
+Route::group(array('prefix' => 'en'), function() {
+    Route::get('home', function () {
+        echo 'super';
+    });
+});
+
 Route::get('user/{id}', 'HomeController@showProfile');
