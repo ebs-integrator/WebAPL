@@ -101,7 +101,6 @@ class Template {
         return View::make('layout.main');
     }
 
-    
     /**
      * 
      * 
@@ -112,7 +111,7 @@ class Template {
      * 
      * 
      */
-    
+
     /**
      * Register new method
      * @param string $section
@@ -167,8 +166,20 @@ class Template {
             throw new Exception("Undefined view method '{$tag}' in '{$section}'");
         }
     }
-    
-    
+
+    /**
+     * get list of section methods
+     * @param string $section
+     * @return array
+     */
+    public static function getViewMethodList($section) {
+        if (isset(self::$view_mods[$section])) {
+            return self::$view_mods[$section];
+        } else {
+            return array();
+        }
+    }
+
     /**
      * 
      * 
@@ -176,5 +187,4 @@ class Template {
      * 
      * 
      */
-
 }
