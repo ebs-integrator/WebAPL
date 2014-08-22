@@ -24,6 +24,8 @@ class Template {
             )
         )
     );
+    
+    protected static $breadcrumbs = array();
 
     /**
      * Initialize module
@@ -187,4 +189,23 @@ class Template {
      * 
      * 
      */
+    
+    
+    
+    /**
+     * 
+     *   Breadcrumb
+     * 
+     */
+    
+    public static function addBreadCrumb($url, $name) {
+        self::$breadcrumbs[] = array(
+            'name' => $name,
+            'url' => $url
+        );
+    }
+    
+    public static function getBreadCrumbs() {
+        return self::$breadcrumbs;
+    }
 }
