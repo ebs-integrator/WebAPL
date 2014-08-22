@@ -50,7 +50,7 @@ class jQgrid {
      * @param int $id
      * @return int
      */
-    public function update($params, $id) {
+    public function update($params) {
         return DB::table($this->table)
                         ->where($this->where)
                         ->update($params);
