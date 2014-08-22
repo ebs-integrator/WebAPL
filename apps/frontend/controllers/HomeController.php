@@ -24,8 +24,10 @@ class HomeController extends BaseController {
         $this->layout = null;
     }
 
-    public function showProfile($id) {
-        var_dump('prof', $id);
+    public function markup($view) {
+        $this->layout->content = View::make('markup/' . $view);
+
+        return $this->layout;
     }
 
 }

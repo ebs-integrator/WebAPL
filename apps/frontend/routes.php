@@ -11,14 +11,19 @@
 |
 */
 
-Route::get('/', 'HomeController@showWelcome');
+Event::fire('APL.modules.load');
 
-
-
-Route::group(array('prefix' => 'en'), function() {
-    Route::get('home', function () {
-        echo 'super';
-    });
+Route::get('/', function () {
+    return Redirect::to(Core\APL\Language::ext());
 });
 
-Route::get('user/{id}', 'HomeController@showProfile');
+Route::group(array('prefix' => Core\APL\Language::ext()), function() {
+   
+    Route::get('/', 'HomeController@showWelcome');
+    
+    Route::get('page/{furi}', 'PageController@route')->where(array('furi' => '[A-Za-z0-9-\/]+'));
+});
+
+
+Route::get('page/markup/{uri}', 'PageController@markup')->where(array('uri' => '[A-Za-z0-9-]+'));
+Route::get('home/markup/{uri}', 'HomeController@markup')->where(array('uri' => '[A-Za-z0-9-]+'));
