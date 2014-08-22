@@ -41,6 +41,7 @@ class PageController extends BaseController {
         if ($page_id) {
             $this->data['page'] = Post::findTax($page_id, $this->taxonomy->id);
             if ($this->data['page']) {
+                $this->data['view_mods'] = Template::getViewMethodList('page');
                 $this->data['page_langs'] = $this->data['page']->langs()->get();
             }
         }
@@ -82,14 +83,15 @@ class PageController extends BaseController {
         $page_id = Input::get('id');
         $page = Input::get('page');
         $page_lang = Input::get('lang');
-
+        
         $post = Post::find($page_id);
         if ($post && $page) {
             $post->created_at = $page['created_at'];
-            $post->updated_at = DB::raw('CURRENT_TIMESTAMP');
+            $post->updated_at = date('Y-m-d G:i:s');
             if ($post->parent != $post->id) {
                 $post->parent = $page['parent'];
             }
+            $post->view_mod = $page['view_mod'];
             $post->save();
         }
 

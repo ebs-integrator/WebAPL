@@ -48,8 +48,6 @@ App::error(function(Exception $exception, $code) {
     Log::error($exception);
 });
 
-
-
 Event::listen('APL.core.load', function() {
 
     ClassLoader::addDirectories(base_path() . '/core/APL/');
@@ -88,8 +86,10 @@ Event::listen('APL.modules.load', function() {
 });
 
 
-App::before(function() {
-    Event::fire('APL.modules.load');
+App::before(function($request)
+{
+    Config::set('app.locale', Core\APL\Language::ext());
+    App::setLocale(Core\APL\Language::ext());
 });
 
 /*

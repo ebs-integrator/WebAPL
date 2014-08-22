@@ -13,24 +13,6 @@
 
 
 
-App::before(function($request)
-{
-//    $uri = $request->server->get('REQUEST_URI');
-//    $new_uri = str_replace('/' . Core\APL\Language::ext() . '/', '', $uri);
-//    $request->server->set('REQUEST_URI', $new_uri);
-//    var_dump($uri, $new_uri);
-//    foreach(Config::get('app.languages') as $language){
-//        if(preg_match('/^\/'.$language.'(\/|\z|\?.*|#(.*))/', $uri)){
-//            Config::set('app.locale', $language);
-//            $newUri = '/'.substr($uri, 3);
-//            $request->server->set('REQUEST_URI', $newUri);
-//        }
-//    }
-    Config::set('app.locale', Core\APL\Language::ext());
-    App::setLocale(Core\APL\Language::ext());
-});
-
-
 App::after(function($request, $response)
 {
 	//

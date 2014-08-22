@@ -16,6 +16,16 @@ class Template {
 
     protected static $template = 'Default';
     protected static $module = null;
+    protected static $view_mods = array(
+        'page' => array(
+            'posturi_vacante' => array(
+                'name' => 'Lista de posturi vacante',
+                'function' => array('PageView', 'posturiVacante')
+            )
+        )
+    );
+    
+    protected static $breadcrumbs = array();
 
     /**
      * Initialize module
@@ -93,4 +103,109 @@ class Template {
         return View::make('layout.main');
     }
 
+    /**
+     * 
+     * 
+     * 
+     *   VIEW METHODS
+     *   functions like Actions component
+     * 
+     * 
+     * 
+     */
+
+    /**
+     * Register new method
+     * @param string $section
+     * @param string $tag
+     * @param string $name
+     * @param mixed $function
+     * @param boolean $override
+     * @throws Exception
+     */
+    public static function registerViewMethod($section, $tag, $name, $function, $override = false) {
+        if (self::checkViewMethod($section, $tag) && !$override) {
+            throw new Exception("Override view method '{$tag}' from '{$section}'");
+        } else {
+            self::$view_mods[$section][$tag] = array(
+                'name' => $name,
+                'function' => $function
+            );
+        }
+    }
+
+    /**
+     * delete view method
+     * @param string $fromSection
+     * @param string $tag
+     */
+    public static function dropViewMethod($fromSection, $tag) {
+        unset(self::$view_mods[$fromSection][$tag]);
+    }
+
+    /**
+     * Verify if exist view method
+     * @param string $section
+     * @param string $tag
+     * @return boolean
+     */
+    public static function checkViewMethod($section, $tag) {
+        return isset(self::$view_mods[$section][$tag]) && $tag && $section;
+    }
+
+    /**
+     * Call view Method
+     * @param string $section
+     * @param string $tag
+     * @param string $parameters
+     * @return mixed
+     * @throws Exception
+     */
+    public static function callViewMethod($section, $tag, $parameters = array()) {
+        if (self::checkViewMethod($section, $tag)) {
+            return call_user_func_array(self::$view_mods[$section][$tag]['function'], $parameters);
+        } else {
+            throw new Exception("Undefined view method '{$tag}' in '{$section}'");
+        }
+    }
+
+    /**
+     * get list of section methods
+     * @param string $section
+     * @return array
+     */
+    public static function getViewMethodList($section) {
+        if (isset(self::$view_mods[$section])) {
+            return self::$view_mods[$section];
+        } else {
+            return array();
+        }
+    }
+
+    /**
+     * 
+     * 
+     *   END VIEW METHODS
+     * 
+     * 
+     */
+    
+    
+    
+    /**
+     * 
+     *   Breadcrumb
+     * 
+     */
+    
+    public static function addBreadCrumb($url, $name) {
+        self::$breadcrumbs[] = array(
+            'name' => $name,
+            'url' => $url
+        );
+    }
+    
+    public static function getBreadCrumbs() {
+        return self::$breadcrumbs;
+    }
 }
