@@ -47,10 +47,18 @@ class Post extends Eloquent {
         return $row->where($where)->get()->first();
     }
 
+    public static $cache_posts = array();
     public static function findID($id, $enabled = 0) {
-        return Post::findRow(
-                        array(Post::$ftable . ".id" => $id), $enabled
-        );
+        if (isset(self::$cache_posts[$id]) && self::$cache_posts[$id]) {
+            $item = self::$cache_posts[$id];
+        } else {
+            $item = Post::findRow(
+                            array(Post::$ftable . ".id" => $id), $enabled
+            );
+            self::$cache_posts[$id] = $item;
+        }
+
+        return $item;
     }
 
     public static function findURI($uri, $enabled = 0) {
@@ -58,6 +66,8 @@ class Post extends Eloquent {
                         array(PostLang::$ftable . ".uri" => $uri), $enabled
         );
     }
+
+    
 
     public static function getParents($parent_id) {
         $list = array();
@@ -72,5 +82,15 @@ class Post extends Eloquent {
         }
         return $list;
     }
+    
+    public static function getFullURI($id) {
+        $parents = Post::getParents($id);
+        $uri_segments = array('page');
+        foreach (array_reverse($parents) as $parent) {
+            $uri_segments[] = $parent['uri'];
+        }
+        return Core\APL\Language::url(implode('/', $uri_segments));
+    }
 
 }
+

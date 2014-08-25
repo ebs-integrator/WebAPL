@@ -1,7 +1,7 @@
 <?php
 
 /**
- * 
+ *
  *
  * @author     Godina Nicolae <ngodina@ebs.md>
  * @copyright  2014 Enterprise Business Solutions SRL
@@ -12,9 +12,7 @@ namespace Core\APL;
 
 use DB,
     Exception,
-    Config,
-    App,
-    Redirect,
+    Session,
     Input;
 
 class Language {
@@ -36,8 +34,16 @@ class Language {
         self::_init_language();
     }
 
+    /**
+     * Init current language
+     * @throws Exception
+     */
     private static function _init_language() {
         $lang = Input::get('lang');
+
+        if (!$lang) {
+            $lang = Session::get('lang');
+        }
 
         $language = DB::table('apl_lang')->where('ext', $lang)->first();
         if (!$language) {
@@ -47,16 +53,10 @@ class Language {
         if ($language) {
             self::$language = $language;
             self::$id = $language->id;
-
-
-//            if ($lang != $language->ext) {
-//                //return Redirect::refresh();
-//            }
+            Session::put('lang', self::ext());
         } else {
             throw new Exception("Available language not found");
         }
-        //Config::set('app.url', 'http://en.google.com/ro/');
-        //App::setRequestForConsoleEnvironment();
     }
 
     /**
@@ -90,6 +90,10 @@ class Language {
         }
     }
 
+    /**
+     * Get current language extension
+     * @return string[2]
+     */
     public static function ext() {
         if (isset(self::$language->ext)) {
             return self::$language->ext;
@@ -97,6 +101,15 @@ class Language {
             self::_init_language();
             return self::ext();
         }
+    }
+
+    /**
+     * Get url with language extension
+     * @param string $path
+     * @return string
+     */
+    public static function url($path = '') {
+        return url(self::ext() . '/' . $path);
     }
 
 }

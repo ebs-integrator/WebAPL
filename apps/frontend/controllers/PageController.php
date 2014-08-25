@@ -2,6 +2,8 @@
 
 class PageController extends BaseController {
 
+    protected $layout = 'layout/page';
+    
     public function route($query = '') {
         $parts = explode('/', $query);
         if ($parts) {
@@ -30,11 +32,17 @@ class PageController extends BaseController {
         }
     }
 
+    
+    
     public function loadPage() {
-        echo 'page loaded';
+        var_dump(Post::getFullURI($this->data['page']['id']));
+        
+        $this->layout->content = View::make('markup.testpage');
+
+        return $this->layout;
     }
 
-    protected $layout = 'layout/page';
+    
 
     public function markup($view) {
         $this->layout->content = View::make('markup/' . $view);
