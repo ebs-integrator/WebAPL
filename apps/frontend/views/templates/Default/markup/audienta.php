@@ -1,3 +1,28 @@
+<div class="dop">
+    <div class="left">
+        <p class="title"> Discută on-line cu primarul </p>
+        <div class="details">
+            <div class="left">
+                <img src="<?= res('assets/img/small_p.png'); ?>">
+            </div>
+            <div class="right">
+                <span>nume</span>
+                <span>prenume</span>
+                <p class="online active">Online</p>
+            </div>
+        </div>
+        <div class="quote">
+            Strășeni înseamnă copilăria, adolescenţa şi familia mea. M-am născut, am copilărit şi am crescut pe străzile din acest oraş!
+
+            care a fost, cândva, micul Paris şi care, treptat, se reîntoarce la normalitate.
+        </div>
+        <hr>
+    </div>
+    <div class="right">
+
+    </div>
+</div>
+
 <section>
     <div class="dirs_menu">
         <div class="wrap">
@@ -13,7 +38,7 @@
             <p>Pentru programarea audiențelor vă rugăm să transmiteți o scurtă prezentare a problemei ce urmează a fi discutată, precum și datele dvs. de contact la adresa de e-mail: relpubl@casan.ro.</p>
             <p> Totodată, puteți să vă adresați telefonic Biroului de Relații cu Asigurații la nr. de telefon: 0372.309.236.</p>
             <p> Confirmarea programării audienței va fi facută telefonic la numărul de telefon indicat de dvs. 
-o       Receptionarea documentelor, care urmeaza a fi examinate în termen de – 1 ora, 24 ore, 5 zile si 15 zile, se va realize fara programare prealabila.</p>
+                o       Receptionarea documentelor, care urmeaza a fi examinate în termen de – 1 ora, 24 ore, 5 zile si 15 zile, se va realize fara programare prealabila.</p>
 
             <div class="av green">
                 <p><span>ATENTIE ! </span>Pentru a solicita o audiență la unul din functionar vă rugăm să completați formularul de cerere, iar noi vă vom comunica prin e-mail data și ora audienței programate.</p>
@@ -36,7 +61,7 @@ o       Receptionarea documentelor, care urmeaza a fi examinate în termen de �
                         <input type="text" >    
                         <label>Cod de verificare*</label>
                         <input class="code" type="text">
-                        <img src="<?=res('assets/img/code.png');?>">
+                        <img src="<?= res('assets/img/code.png'); ?>">
                         <input type="submit" value="trimite">
                         <div class="clearfix"></div>
                     </div>

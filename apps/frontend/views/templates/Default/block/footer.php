@@ -36,6 +36,12 @@
 </footer>
 
 
+<script>
+    var res_url = "<?=res('');?>";
+    var base_url = '<?=url(); ?>';
+
+</script>
+
 <script src="<?=res('assets/js/plugins.js');?>"></script>
 <script src="<?=res('assets/js/jquery-2.1.1.js');?>"></script>
 <script src="<?=res('assets/js/icheck.js');?>"></script>

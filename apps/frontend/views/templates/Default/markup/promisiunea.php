@@ -8,7 +8,7 @@
             <a href="javascript:;"> Construire a 2 școli noi </a>
         </div>
     </div>
-    <div class="wrap prom_u">
+    <div class="wrap">
         <p class="c_title">Primarul</p>
 
         <div class='left'>
