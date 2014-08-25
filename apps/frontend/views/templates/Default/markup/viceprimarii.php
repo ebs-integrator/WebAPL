@@ -14,46 +14,62 @@
             <ul>
                 <li>
                     <div class="img">
-                        <img src="<?=res('assets/img/b_pers.png');?>">
+                        <img src="<?= res('assets/img/b_pers.png'); ?>">
                     </div>
                     <div class="left">
                         <p class="name">Nume</p>
                         <p class="p_name">Prenume</p>
                         <p class="tel">022- 01-02-03</p>
                         <p class="email"><a href="mailto:pnume.primaria@gmail.com" target="_blank">pnume.primaria@gmail.com</a></p>
+                        <button class="chat_button">
+                            <span class="green">Chat</span><span class="violet">-online</span>
+                            <span class="g_dot"></span>
+                        </button>
                     </div>
                 </li>
                 <li>
                     <div class="img">
-                        <img src="<?=res('assets/img/b_pers.png');?>">
+                        <img src="<?= res('assets/img/b_pers.png'); ?>">
                     </div>
                     <div class="left">
                         <p class="name">Nume</p>
                         <p class="p_name">Prenume</p>
                         <p class="tel">022- 01-02-03</p>
                         <p class="email"><a href="mailto:pnume.primaria@gmail.com" target="_blank">pnume.primaria@gmail.com</a></p>
+                        <button class="chat_button">
+                            <span class="green">Chat</span><span class="violet">-online</span>
+                            <span class="g_dot"></span>
+                        </button>
                     </div>
                 </li>
                 <li>
                     <div class="img">
-                        <img src="<?=res('assets/img/b_pers.png');?>">
+                        <img src="<?= res('assets/img/b_pers.png'); ?>">
                     </div>
                     <div class="left">
                         <p class="name">Nume</p>
                         <p class="p_name">Prenume</p>
                         <p class="tel">022- 01-02-03</p>
                         <p class="email"><a href="mailto:pnume.primaria@gmail.com" target="_blank">pnume.primaria@gmail.com</a></p>
+                        <button class="chat_button">
+                            <span class="green">Chat</span><span class="violet">-online</span>
+                            <span class="g_dot"></span>
+                        </button>
                     </div>
                 </li>
                 <li>
                     <div class="img">
-                        <img src="<?=res('assets/img/b_pers.png');?>">
+                        <img src="<?= res('assets/img/b_pers.png'); ?>">
                     </div>
                     <div class="left">
                         <p class="name">Nume</p>
                         <p class="p_name">Prenume</p>
                         <p class="tel">022- 01-02-03</p>
                         <p class="email"><a href="mailto:pnume.primaria@gmail.com" target="_blank">pnume.primaria@gmail.com</a></p>
+                        <button class="chat_button">
+                            <span class="green">Chat</span><span class="violet">-online</span>
+                            <span class="g_dot"></span>
+                        </button>
                     </div>
                 </li>
             </ul>

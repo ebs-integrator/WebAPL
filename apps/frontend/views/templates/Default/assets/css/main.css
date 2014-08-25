@@ -416,7 +416,7 @@ textarea {
         height:83px;
         line-height: 81px;
     }
-    header button.chat{
+    header button.chat,button.chat_button{
         width:221px;
         height:46px;
         background:url('../img/chat_g.png') no-repeat 15px center #f9f9f9;
@@ -427,7 +427,11 @@ textarea {
         text-align:left;
         font:20px 'open_sansbold';
     }
-    header button.chat span.g_dot{
+    button.chat_button{
+        margin-left:0px;
+        margin-top:5px;
+    }
+    header button.chat span.g_dot,button.chat_button span.g_dot{
         display:inline-block;
         width:18px;
         height:18px;
@@ -436,13 +440,13 @@ textarea {
         margin-left: 10px;
         vertical-align: middle;
     }
-    header button.chat span.g_dot.active{
+    header button.chat span.g_dot.active,button.chat_button span.g_dot.active{
         background:url('../img/a_dot.png');
     }
-    header button.chat .green{
+    header button.chat .green ,button.chat_button .green{
         color:#b5c57e;
     }
-    header button.chat .violet{
+    header button.chat .violet ,button.chat_button .violet{
         color:#7c4d7c;
     }
     header .contact .tel{
@@ -979,7 +983,7 @@ textarea {
         color:#434343;
         font:20px 'open_sanssemibold';
     }
-    section  > .wrap > .left  > article .more,section  > .wrap > .right > article .more,.wrap.m_a > .left .a_box .more,section > .wrap.prom > .left ul li a,section > .wrap > .inl > article .more{
+    section  > .wrap > .left  > article .more,section  > .wrap > .right > article .more,.wrap.m_a > .left .a_box .more,section > .wrap .prom > .left ul li a,section > .wrap > .inl > article .more{
         width: 30px;
         height: 20px;
         background: url('../img/more.png')no-repeat center;
@@ -1179,7 +1183,7 @@ textarea {
         font:24px 'open_sanssemibold';
         color:#7c4d7c;
     }
-    section .wrap p{
+    p{
         font:17px 'open_sanssemibold';
         margin-bottom: 20px;
     }
@@ -1234,7 +1238,7 @@ textarea {
         background: url('../img/right.png')25px center no-repeat;
         padding-right:15px;
     }
-    .right_menu li a{
+    .right_menu li a,.wrap.emrg.cda > .right ul li a{
         font: 20px 'open_sanssemibold';
         color: #595959;
         display: table-cell;
@@ -1242,16 +1246,34 @@ textarea {
         vertical-align: middle;
         line-height: 20px;
     }
+    .wrap.emrg.cda > .right ul li{
+        margin:0px;
+    }
+    .wrap.emrg.cda > .right ul li a{
+        border:0px;
+        padding:0px;
+    }
+    .wrap.emrg.cda > .right ul li a:before{
+        border:0px;
+    }
     .right_menu li.active,.right_menu li.active:hover {
         background:url('../img/right_active.png')25px center no-repeat #f8f8f8;
     }
     .right_menu li:hover {
         background:url('../img/right.png')25px center no-repeat #f8f8f8;
     }
-    .right_menu li.active a{
+    .right_menu li.active a,.wrap.emrg.cda .right_menu li.active a{
         font:20px 'open_sansbold';
         color:#000000;
         line-height: 20px;
+    }
+    section .wrap.pda > .left p{
+        color:#4b4b4b;
+        font:17px 'open_sanssemibold';
+    }
+    section .wrap.pda > .left p.sub_title{
+        color:#000;
+        font:24px 'open_sanssemibold';
     }
     div[data-cont]{
         display: none;
@@ -1449,11 +1471,10 @@ textarea {
     .wrap.contact > .left.chat {
         width:360px;
         margin-top:65px;
-        height:328px;
         border:2px solid #e6e6e6;
-        padding:13px 16px 40px;
+        padding:13px 16px 27px;
     }
-    .wrap.contact > .left.chat img{
+    .wrap.contact > .left.chat img.mn{
         float:left;
     }
     .wrap.contact > .left.chat .chat_dot{
@@ -1483,13 +1504,15 @@ textarea {
         height:3px;
         width:100%;
         border-top:0px;
-        margin-top: 8px;
-        margin-bottom: 15px;
+        margin:8px 0 10px 0;
     }
     .wrap.contact > .left.chat .center{
         color:#7a7a7a;
         font:13px 'open_sanssemibold_italic';
         text-align:center;
+        padding-bottom: 11px;
+        border-bottom: 1px solid #e6e6e6;
+        margin-bottom:35px;
     }
     .wrap.contact > .left.chat textarea{
         width:100%;
@@ -1501,7 +1524,7 @@ textarea {
         color:#959595;
     }
     .wrap.contact > .left.chat input[type="submit"]{
-        width:100%;
+        width:280px;
         height:35px;
         background-color:#7c4d7c;
         border-bottom: 2px solid #673167;
@@ -1509,6 +1532,10 @@ textarea {
         font:14px 'open_sansbold';
         color:#fff;
         text-transform: uppercase;
+    }
+    .wrap.contact > .left.chat .cont{
+        margin:0 auto;
+        width:280px;
     }
     .wrap.contact > .right.form{
         border-bottom:1px solid #e6e6e6;
@@ -1545,7 +1572,7 @@ textarea {
     }
     .wrap.contact > .right.form .ftb{
         font:24px 'open_sansbold';
-        padding:25px 60px 0px;
+        padding:10px 60px 0px;
         margin-bottom:0px;
         text-transform: uppercase;    
     }
@@ -1560,7 +1587,7 @@ textarea {
         padding:0px 90px 40px 60px;
         position: relative;
     }
-    .wrap.contact > .right.form .content input[type=text],.wrap.compl > .left .form .content input[type=text],.wrap.compl > .left .form .content select{
+    .wrap.contact > .right.form .content input[type=text],.wrap.compl > .left .form .content input[type=text],.wrap.compl > .left .form .content select,.wrap.contact .chat input[type=text]{
         margin-bottom:20px;
         font:13px 'open_sanssemibold_italic';
         color:#4c4c4c;
@@ -1568,6 +1595,9 @@ textarea {
         height:33px;
         border:1px solid #d9d9d9;
         border-left:3px solid #d9d9d9;
+    }
+    .wrap.compl .green input[type=text],.wrap.contact .chat input[type=text]{
+        width:280px;
     }
     .wrap .form .nmpm{
         width:245px;
@@ -1578,7 +1608,7 @@ textarea {
         width:100%;
     }
 
-    .wrap .form .nmpm input,.wrap .form .apt input{
+    .wrap .form .nmpm input[type=text],.wrap .form .apt input[type=text]{
         width:100%;
     }
     .wrap .form .apt{
@@ -1601,11 +1631,15 @@ textarea {
     .wrap.compl > .left .form .content textarea{
         height: 135px;
     }
-    .wrap.compl > .left .form .content label{
+    .wrap.compl > .left .form .content label,.wrap.contact .form label,.wrap.contact .chat label{
         font:13px 'open_sanssemibold';
         color:#4c4c4c;
         margin-bottom: 3px;
         display: block;
+    }
+    .wrap.contact .form label.code_lbl{
+        display:inline-block;
+        margin-right:8px;
     }
     .wrap.compl > .left .form .content .radio_b label{
         display:inline-block;        
@@ -1637,10 +1671,10 @@ textarea {
     section > .wrap.ncd > .left > p > span{
         display:block;
     }
-    .wrap.contact > .right.form .content input[type=text].code{
+    .wrap.contact > .right.form .content input[type=text].code,.wrap.contact .chat input[type=text].code{
         width:85px;
         height:30px;
-        margin:0 8px;
+        margin-right:8px;
         padding:5px;
         border:1px solid #d9d9d9;
     }
@@ -1667,6 +1701,7 @@ textarea {
         background:#74b45a;
         border-bottom:2px solid #579240;
         display: block;
+        width:280px;
     }
     .socials{
         margin-top:30px;
@@ -1678,9 +1713,6 @@ textarea {
         padding:25px 30px;
         position: relative;
         margin-bottom: 55px;
-    }
-    .wrap.contact > .right.form .content input[type=submit]{
-        margin-top:30px;
     }
     .wrap.m_a > .left .a_box:before, .wrap.u_a > .left .a_box:before{
         content:'';
@@ -2177,6 +2209,12 @@ textarea {
         background:#efefef;
         line-height: 33px;
     }
+
+    section > .wrap.cda > .left .ul_title{
+        text-transform: uppercase;
+        font:14px 'open_sansbold';
+        line-height:33px;
+    }
     section > .wrap.mda > .left > ul > li ,section > .wrap.dcr  .dcr_box > ul > li,section > .wrap.atz > .left > ul > li{
         padding-left:55px;
         height:40px;
@@ -2193,7 +2231,7 @@ textarea {
         border-top: 2px solid #f7f7f7;
         padding:12px 0;
     }
-    section > .wrap.contact > .left ul.date_contact,section > .wrap.vice > .left > ul,section > .wrap.rpt > .left > ul,section > .wrap.prom > .left > ul,section > .wrap.ldm > .left > ul,section > .wrap.dcr > .left > ul,section > .wrap.compl > .left > ul,section > .wrap.emrg > .left > ul,section > .wrap.culture > .left > ul,section > .wrap.faq > .left > ul{
+    section > .wrap.contact > .left ul.date_contact,section > .wrap.vice > .left > ul,section > .wrap.rpt > .left > ul,section > .wrap .prom > .left > ul,section > .wrap.ldm > .left > ul,section > .wrap.dcr > .left > ul,section > .wrap.compl > .left > ul,section > .wrap.emrg > .left > ul,section > .wrap.culture > .left > ul,section > .wrap.faq > .left > ul{
         border:0px;
         padding:0px;
 
@@ -2203,7 +2241,7 @@ textarea {
         margin-top:50px;
     }
     .wrap.contact > .right.form .content{
-        padding:30px 90px 28px 60px;
+        padding:20px 90px 28px 60px;
     }
     .wrap.contact > .right.form .left{
         width:241px;
@@ -2313,7 +2351,10 @@ textarea {
     }
     section > .wrap.emrg > .left .ul_title .right{
         width:550px;
-    }      
+    }    
+    section > .wrap.emrg.cda > .left .ul_title .right{
+        width:120px;
+    }
     section > .wrap.emrg > .left ul{
         margin-bottom: 80px;
     }
@@ -2325,10 +2366,25 @@ textarea {
         vertical-align: middle;        
         padding-bottom: 8px;
     }
+    section > .wrap.emrg.cda > .left ul li .left{
+        width:inherit;
+        max-width:75%;
+    }
+    section > .wrap.emrg.cda > .left ul li .left p{
+        color:#000;
+        margin: 0px;
+    }
+    section > .wrap.emrg.cda > .left ul li .left p.green a{
+        color:#5f9a47;
+        font:14px 'open_sanssemibold';
+    }
     section > .wrap.emrg > .left ul li .right{
         width: 66%;
         font:17px 'open_sanssemibold';
         color:#4c4c4c;
+    }
+    section > .wrap.emrg.cda > .left ul li .right{
+        width:120px;
     }
     section > .wrap.emrg > .left ul li:after{        
         content:'';
@@ -2342,7 +2398,11 @@ textarea {
         padding-left:35px;
         background:url('../img/g_phone.png') no-repeat left 3px;
     }
-    section > .wrap.com > .left .com_box{
+    section > .wrap.emrg.cda > .left ul li{
+        background:url('../img/cadru.png') no-repeat left 9px;
+        margin-top:15px;
+    }
+    .com_box{
         width:100%;
         border:2px solid #f7f7f7; 
         border-left:0;
@@ -2350,7 +2410,7 @@ textarea {
         margin-bottom:38px;
         position: relative;
     }
-    section > .wrap.com > .left .com_box:before{
+    .com_box:before{
         content:'';
         position:absolute;
         display:block;
@@ -2362,57 +2422,57 @@ textarea {
     section > .wrap.atz > .left > ul > li a:hover,section > .wrap.mda > .left > ul > li > a:hover{
         background:url('../img/a_active.png') no-repeat;
     }
-    section > .wrap.com > .left .com_box .title{
+    .com_box .title{
         text-transform: uppercase;
         font:24px 'open_sansbold';
         color:#b6c57e;
         border-bottom:1px solid #efefef;
         padding-bottom: 5px;        
     }
-    section > .wrap.com > .left .com_box .subtitle{
+    .com_box .subtitle{
         font:17px 'open_sanssemibold';
         color:#673167;
         line-height: 1.176;
     }
-    section > .wrap.com > .left .com_box .ul_title span{
+    .com_box .ul_title span{
         text-transform: uppercase;
         font:12px 'open_sansbold';
         line-height: 33px;
     }
-    section > .wrap.com > .left .com_box span{        
+    .com_box span{        
         float:left;        
     }
-    section > .wrap.com > .left .com_box  span.nr{
+   .com_box  span.nr{
         width:7%;
     }
-    section > .wrap.com > .left .com_box  span.name{
+    .com_box  span.name{
         width:35%;
     }
-    section > .wrap.com > .left .com_box  span.fun{
+    .com_box  span.fun{
         width:35%;
     }
-    section > .wrap.com > .left .com_box  span.soc{
+    .com_box  span.soc{
         text-align: center;
         width:23%;
     }
-    section > .wrap.com > .left .com_box ul li:after{
+    .com_box ul li:after{
         content:'';
         display:block;
         clear: both;
     }
-    section > .wrap.com > .left .com_box ul{
+    .com_box ul{
         padding-left:18px;
     }
-    section > .wrap.com > .left .com_box ul li span{        
+    .com_box ul li span{        
         font:14px 'open_sanssemibold';
         color:#343434;
     }
 
-    section > .wrap.com > .left .com_box ul li span.name{
+    .com_box ul li span.name{
         font:14px 'open_sansbold';
         color:#343434;
     }
-    section > .wrap.com > .left .com_box  ul li{
+    .com_box  ul li{
         height:30px;
     }
     section > .wrap.vice > .left ul li .name{        
@@ -2453,7 +2513,11 @@ textarea {
     section > .wrap.vice > .left ul li{
         margin-bottom:60px;
     }
-    section > .wrap.prom > .left ul li{
+    
+    ul.prom{
+        border:0px !important;
+    }
+     ul.prom li{
         width:37%;
         height:190px;
         border:2px solid #f7f7f7;
@@ -2463,7 +2527,7 @@ textarea {
         padding:25px 33px;
         position:relative;
     }
-    section > .wrap.prom > .left ul li:before{
+    ul.prom li:before{
         content:'';
         position:absolute;
         display:block;
@@ -2472,10 +2536,10 @@ textarea {
         bottom:-1px;
         border-left:3px solid #8068b1;
     }
-    section > .wrap.prom > .left ul li:nth-child(2n){
+    ul.prom li:nth-child(2n){
         margin-left:35px;
     }
-    section > .wrap.prom > .left ul li .ttl{
+     ul.prom li .ttl{
         font:24px 'open_sansbold';
         color:#232323;
         line-height:30px;
@@ -2483,16 +2547,16 @@ textarea {
         margin-bottom:10px;
         overflow:hidden;
     }
-    section > .wrap.prom > .left ul li .info{
+    ul.prom li .info{
         font:14px 'open_sanssemibold';
         color:#8068b1;
         height:38px;
         overflow:hidden;
     }
-    section > .wrap.prom_u > .left .real{
+    .real{
         width: 73%;
     }
-    section > .wrap.prom_u > .left .real p{
+    .real p{
         font:24px 'open_sanssemibold';
         color:#8068b1;
         text-transform: uppercase;
@@ -2500,18 +2564,21 @@ textarea {
         margin-top:40px;
         border-bottom:2px solid #f7f7f7;
     }
-    section > .wrap.prom_u > .left .real ul li{
+    .real ul li{
         list-style: square;
         color:#8068b1;
     }
-    section > .wrap.prom_u > .left .real ul li span{
+    .real ul li span{
         color:#1c1c1c;
         font:17px 'open_sanssemibold';
         padding-left:5px;
     }
-    section > .wrap.prom_u > .left .real ul{
+    .real ul{
         padding-left: 20px;
         margin-top:30px;
+    }
+    .slider{
+        margin-top:20px;
     }
     .slider .bx-wrapper img{
         height:493px;        
@@ -2533,9 +2600,6 @@ textarea {
         clear: both
     }
 
-    section > .wrap.prom_u  .slider{
-        margin-top:55px;
-    }
     section > .wrap.rpt > .left > ul > li{
         width:100%;
         border-bottom:2px solid #f7f7f7;
@@ -2563,10 +2627,31 @@ textarea {
         clear:both;
         height:50px;
     }
+    .clearfix100{
+        clear:both;
+        height:100px;
+    }
     section > .wrap.dcr > .left > ul > li .dcr_box{
         display:none;
         width:73%;
         margin-top:20px;
+    }
+    section > .wrap.pda .left ul{
+        margin:0px;
+        border:0px;
+    }
+    section > .wrap.pda .left ul li{
+        padding-left:40px;
+        height: 60px;
+        line-height: 60px;
+        border-bottom:2px solid #efefef;
+    }
+    section > .wrap.pda .left ul li a{
+        color:#000;
+        font:17px 'open_sanssemibold';
+        height:60px;
+        display: table-cell;
+        vertical-align: middle;
     }
     section > .wrap.dcr > .left > ul  > li .dcr_box .ul_title,section > .wrap.dcr > .left > ul  > li .dcr_box .ul_title span {
         text-transform: uppercase;
@@ -2635,7 +2720,12 @@ textarea {
         content: url('../img/q_t.png');
         margin-left:-33px;
     }
-    section > .wrap.bgr > .left > .quote:after{
+    .dop .quote:before{
+        content: url('../img/q_t.png');
+        margin-left: -23px;
+        margin-right: -10px;
+    }
+    section > .wrap.bgr > .left > .quote:after,.dop .quote:after{
         content: url('../img/q_b.png');
     }
     section > .wrap.bgr > .left > .info > ul > li{
@@ -2813,7 +2903,7 @@ textarea {
     #vk_like{
         display:none;
     }
-    
+
     .dop{
         position: fixed;
         bottom:0px;
@@ -2855,17 +2945,38 @@ textarea {
     }
     .dop > .left > .details > .right{
         width:120px;
+        margin-top: 15px;
+        margin-right: 20px;
     }
     .dop > .left > .details > .right > span{
         font:24px 'open_sanssemibold';
         color:#acbe6b;
         text-transform: uppercase;
     }
-    .dop > .left > .details > .right > p.online.active{
-        padding-left:28px;
+    .dop > .left > .details > .right > p.online.active{        
         background:url('../img/on.png') no-repeat left center;
+    }
+    .dop > .left > .details > .right > p.online{
+        background:url('../img/off.png') no-repeat left center;
+        margin-top:15px;
+        padding-left:28px;        
         color:#fff;
         font:16px 'open_sanssemibold';
+    }
+    .dop .quote{
+        width:255px;
+        margin:0 auto;
+        font:15px 'open_sanssemibold_italic';
+        color:#bea2be;
+        margin-top:35px;
+    }
+    .dop hr{
+        height:1px;
+        width:90%;
+        border-top:0px;
+        margin:0 auto;
+        background: #a07aa0;
+        margin-top:50px;
     }
 }
 @media only screen and (max-width : 1350px) {

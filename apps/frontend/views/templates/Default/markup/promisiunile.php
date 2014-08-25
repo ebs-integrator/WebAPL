@@ -7,11 +7,11 @@
             <a href="javascript:;">Promisiunile primarului </a>
         </div>
     </div>
-    <div class="wrap prom">
+    <div class="wrap ">
         <p class="c_title">Primarul</p>
 
         <div class='left'>
-            <ul>
+            <ul class="prom">
                 <li>
                     <p class="ttl">Construirea a 2 școli noi</p>
                     <p class="info">Promit să construiesc 2 școli noi, una secundare, si alta primara.</p>

@@ -26,17 +26,17 @@ $(document).ready(function() {
         }
     });
 
-    $(".wrap.dcr .left ul li").click(function() {
+    $(".wrap.dcr .left ul li a").click(function() {
         $(".wrap.dcr .left ul  li.active").removeClass('active');
-        if ($(this).find('.dcr_box').hasClass('active')) {
+        if ($(this).parent().find('.dcr_box').hasClass('active')) {
             $(".wrap.dcr .left ul li .dcr_box.active").slideToggle();
             $(".wrap.dcr .left ul li .dcr_box.active").removeClass('active');
         }
         else {
             $(".wrap.dcr .left ul li .dcr_box.active").slideToggle();
             $(".wrap.dcr .left ul li .dcr_box.active").removeClass('active');
-            $(this).find('.dcr_box').addClass('active').slideToggle();
-            $(this).addClass('active');
+            $(this).parent().find('.dcr_box').addClass('active').slideToggle();
+            $(this).parent().addClass('active');
         }
     });
     $('.upload').click(function() {
@@ -83,7 +83,7 @@ function initialize() {
     var big_map = document.getElementById("map-canvas2");
     var small_map = document.getElementById("map-canvas");
 
-    var iconBase = "../img/marker.png";
+    var iconBase = res_url+"assets/img/marker.png";
     var myLatlng = new google.maps.LatLng(47.148306, 28.617051);
 
     var center = new google.maps.LatLng(47.151994, 28.610020);
