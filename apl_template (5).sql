@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 26, 2014 at 09:07 AM
+-- Generation Time: Aug 26, 2014 at 01:39 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -280,7 +280,7 @@ INSERT INTO `apl_lang` (`id`, `name`, `ext`, `enabled`) VALUES
 
 CREATE TABLE IF NOT EXISTS `apl_logs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `event_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `event_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `level` varchar(10) NOT NULL,
   `message` text NOT NULL,
   `url` varchar(500) NOT NULL,
@@ -1145,7 +1145,7 @@ CREATE TABLE IF NOT EXISTS `apl_newsletter` (
   `email` varchar(100) NOT NULL,
   `enabled` int(1) NOT NULL DEFAULT '1',
   `hash` varchar(50) NOT NULL,
-  `subscribe_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `subscribe_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
@@ -1188,7 +1188,7 @@ INSERT INTO `apl_person` (`id`, `phone`, `email`, `date_birth`, `dynamic_fields`
 
 CREATE TABLE IF NOT EXISTS `apl_person_group` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `date_created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
@@ -1269,8 +1269,8 @@ INSERT INTO `apl_person_lang` (`id`, `lang_id`, `person_id`, `first_name`, `last
 
 CREATE TABLE IF NOT EXISTS `apl_post` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` TIMESTAMP NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `author_id` int(11) DEFAULT NULL,
   `taxonomy_id` int(11) DEFAULT NULL,
   `feed_id` int(11) NOT NULL DEFAULT '0',
@@ -1397,8 +1397,8 @@ CREATE TABLE IF NOT EXISTS `apl_user` (
   `password` varchar(100) NOT NULL,
   `remember_token` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `register_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` TIMESTAMP NOT NULL,
+  `register_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
