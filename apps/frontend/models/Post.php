@@ -5,6 +5,8 @@ class Post extends Eloquent {
     protected $table = 'apl_post';
     public static $ftable = 'apl_post'; // public table name
     public $timestamps = true;
+    
+    public static $taxonomy = 1;
 
     public function langs() {
         return $this->hasMany('PostLang', 'post_id', 'id');
@@ -33,12 +35,16 @@ class Post extends Eloquent {
         return $ids;
     }
 
+    protected static function prepareQuery() {
+        return Post::join(PostLang::$ftable, PostLang::$ftable . ".post_id", '=', Post::$ftable . ".id")
+                        ->select(
+                                Post::$ftable . ".*", PostLang::$ftable . ".text", PostLang::$ftable . ".title", PostLang::$ftable . ".enabled", PostLang::$ftable . ".lang_id", PostLang::$ftable . ".uri"
+                        )
+                        ->where(PostLang::$ftable . ".lang_id", Language::getId())->where('taxonomy_id', self::$taxonomy);
+    }
+
     public static function findRow($where = array(), $enabled = 0) {
-        $row = Post::join(PostLang::$ftable, PostLang::$ftable . ".post_id", '=', Post::$ftable . ".id")
-                ->select(
-                        Post::$ftable . ".*", PostLang::$ftable . ".text", PostLang::$ftable . ".title", PostLang::$ftable . ".enabled", PostLang::$ftable . ".lang_id", PostLang::$ftable . ".uri"
-                )
-                ->where(PostLang::$ftable . ".lang_id", Language::getId());
+        $row = Post::prepareQuery();
 
         if ($enabled) {
             $row = $row->where(PostLang::$ftable . ".enabled", 1);
@@ -47,7 +53,21 @@ class Post extends Eloquent {
         return $row->where($where)->get()->first();
     }
 
+    public static function findWithParent($parent_id) {
+        $query = Post::prepareQuery();
+        $list = $query->where(array(
+                    'parent' => $parent_id
+                ))->get();
+        
+        foreach ($list as &$item) {
+            $item['url'] = Post::getFullURI($item['id']);
+        }
+        
+        return $list;
+    }
+
     public static $cache_posts = array();
+
     public static function findID($id, $enabled = 0) {
         if (isset(self::$cache_posts[$id]) && self::$cache_posts[$id]) {
             $item = self::$cache_posts[$id];
@@ -67,8 +87,6 @@ class Post extends Eloquent {
         );
     }
 
-    
-
     public static function getParents($parent_id) {
         $list = array();
         while ($parent_id) {
@@ -82,15 +100,27 @@ class Post extends Eloquent {
         }
         return $list;
     }
-    
+
     public static function getFullURI($id) {
         $parents = Post::getParents($id);
-        $uri_segments = array('page');
+        $uri_segments = array();
         foreach (array_reverse($parents) as $parent) {
             $uri_segments[] = $parent['uri'];
         }
-        return Core\APL\Language::url(implode('/', $uri_segments));
+        return Post::getURL(implode('/', $uri_segments));
+    }
+    
+    public static function getURL($uri) {
+        return Core\APL\Language::url("page/".$uri);
     }
 
+    public static function oneView($id) {
+        $post = Post::find($id);
+        if ($post) {
+            $post->views = $post->views + 1;
+            $post->save();
+        }
+    }
+    
 }
 

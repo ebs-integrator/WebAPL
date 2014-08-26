@@ -21,6 +21,10 @@ class Template {
             'posturi_vacante' => array(
                 'name' => 'Lista de posturi vacante',
                 'function' => array('PageView', 'posturiVacante')
+            ),
+            'promisiuni_primar' => array(
+                'name' => 'Lista de promisiuni a primarului',
+                'function' => array('PageView', 'promisesMod')
             )
         )
     );
@@ -60,7 +64,6 @@ class Template {
                 $path = $path . '/' . self::$template . '/';
             }
         }
-
         return $paths;
     }
 
