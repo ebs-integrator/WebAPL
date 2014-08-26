@@ -34,8 +34,8 @@
         </div>
     </section>
     <section>
-        <div class="wrap global">
-            <div class="left">            
+        <div class="wrap ">
+            <div class="left global">            
                 <article>
                     <p class="ttl"> <a href="javascript:;">Informații publice</a></p>
                     <ul>
@@ -88,7 +88,7 @@
                     <a href="javascript:;" class="more"></a>
                 </article>
             </div>
-            <div class="right">   
+            <div class="right global">   
                 <article class="doc">
                     <p class="ttl"><img src="<?=res('assets/img/doc.png');?>"><a href="javascript:;">Toate actele locale</a></p>
                     <div class="hr"></div>

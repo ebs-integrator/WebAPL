@@ -7,16 +7,16 @@
             <a href="javascript:;">Certificat de urbanism pentru proiectare</a>
         </div>
     </div>
-    <div class="wrap crt">
+    <div class="wrap">
         <p class="c_title">Certificate</p>
 
-        <div class='left'>                
+        <div class='left crt'>                
             <p><span>Certificat de urbanism de proiectare–</span>act cu caracter reglementator. Se eliberează de către Primărie pentru a duce la cunoştinţă solicitantului prescripţiile şi elementele ce caracterizează regimul juridic, economic, tehnic şi arhitectural-urbanistic al terenului de construcţie.</p>
             <p>Altfel spus, certificatul de urbanism esre un act, care permite elaborarea documentaţiei de proiect.</p>
             <p></p>
             <p class="sub">Depunerea documentelor pentru obţinerea certificatului de urbanism pentru proiectare</p>
             <p>Certificatul de urbanism pentru proiectare se elaborează şi se emite în baza cererii, la care se anexează, în original şi în copii, următoarele documente:</p>
-            <ul>
+            <ul class="crt">
                 <li>Extrasul din registrul bunurilor imobile, eliberat de către oficiul cadastral teritorial, însoţit de planul cadastral şi/sau planul imobilului;; </li>
                 <li>Buletinul de identitate (pentru persoană fizică) sau certificatul de înregistrare (pentru persoană juridică);;</li>
                 <li>Raportul de expertiză tehnică, în caz de reconstruire, restaurare, modificare sau consolidare a imobilului existent, elaborat de către experţi tehnici atestaţi;</li>
@@ -26,7 +26,7 @@
             <p>Solicitarea altor documente decît cele prevăzute mai sus nu se admite.</p>
             <p>În cazul în care nu au fost anexate toate documentele prevăzute (originale şi copii), emitentul va refuza primirea setului de documente la momentul depunerii cererii. După verificarea copiilor de pe documentele, originalele se restituie solicitantului (beneficiarului).</p>
             <p>Dovada privind achitarea plăţii se prezintă în momentul eliberării certificatului de urbanism pentru proiectare.</p>
-            <hr>
+            <hr class="crt">
         </div>
 
         <div class='right'>

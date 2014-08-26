@@ -33,7 +33,7 @@
         </div>
     </section>
     <section>
-        <div class="wrap  global">
+        <div class="wrap">
             <div class="left">            
                 <article>
                     <p class="ttl"><a href="javascript:;"> Primarul</a></p>

@@ -31,7 +31,7 @@
             <a href="javascript:;">Depune o plângere</a>
         </div>
     </div>
-    <div class="wrap compl">
+    <div class="wrap">
         <p class="c_title">Audierea cetățenilor</p>
 
         <div class='left'>                

@@ -675,7 +675,7 @@ textarea {
         font:14px 'open_sansbold';
         margin-top:10px;
     }
-    section .menu{
+     .menu{
         width:100%;
         min-height:346px;
         margin-top:15px;
@@ -685,7 +685,7 @@ textarea {
         position: relative;
         overflow: hidden;
     }
-    section .menu img.backg{
+     .menu img.backg{
         position:absolute;
         z-index: -1;
         top:-330px;
@@ -693,7 +693,7 @@ textarea {
         right:0px;
         bottom:0px;
     }
-    section .menu .box{
+     .menu .box{
         width:260px;
         min-height:225px;
         background-color:#fff;
@@ -701,23 +701,23 @@ textarea {
         margin-right:75px;
         display: inline-block;
     }
-    section .menu .box:last-child{
+     .menu .box:last-child{
         margin-right:0px;
     }
-    section .menu .box .menu_img{
+     .menu .box .menu_img{
         height:154px;
         border-bottom: 5px solid #673268;
         line-height: 154px;
         text-align: center;
     }
-    section .menu .box .menu_title{
+     .menu .box .menu_title{
         text-transform: uppercase;
         height:71px;
         text-align: center;
         border-bottom: 9px solid #fbfbfb;
         margin-bottom: 0px;
     }
-    section .menu .box .menu_title a{
+     .menu .box .menu_title a{
         color:#01374c;
         font:24px 'open_sansbold';
         text-decoration: none;
@@ -726,14 +726,14 @@ textarea {
         padding: 5px 24px;
         display: block;
     }
-    section .menu  .box .menu_title.active {
+     .menu  .box .menu_title.active {
         background-color:#673268;
         border-bottom: 9px solid #673268;
     }
-    section .menu  .box .menu_title.active a{
+     .menu  .box .menu_title.active a{
         color:#fff;
     }
-    section .menu .wrap{
+    .menu .wrap{
         max-width: 1280px;
         text-align: center;
         margin:0 auto;
@@ -742,7 +742,7 @@ textarea {
         max-width: 1280px;
         margin:0 auto;
     }
-    section > .wrap > .left > article,section > .wrap > .inl > article{
+    .left > article{
         width:383px;
         height:229px;
         border:2px solid #f7f7f7;      
@@ -752,7 +752,7 @@ textarea {
         position: relative;
         border-left:0px;
     }
-    section > .wrap > .left > article:before,section > .wrap > .inl > article:before{
+     .left > article:before{
         content:'';
         position:absolute;
         display:block;
@@ -762,11 +762,11 @@ textarea {
         border-left:3px solid #cebfed;
     }
 
-    section > .wrap > .left > article:hover:before,section > .wrap > .inl > article:hover:before{
+     .left > article:hover:before{
         border-left:3px solid #cfd7a6;
     }
 
-    section > .wrap.global > .right > article.atn{
+    .right > article.atn{
         width: 383px;
         height: 229px;
         border: 2px solid #f7f7f7;
@@ -775,26 +775,26 @@ textarea {
         background-color: #fcfcfc;
 
     }
-    section > .wrap.global > .right > article.atn .bx-wrapper .bx-viewport{
+     .right > article.atn .bx-wrapper .bx-viewport{
         height:140px!important;
     }
-    section > .wrap.global > .right > article.atn li{
+     .right > article.atn li{
         position: relative;
         background: none;
         padding: 0px;        
         height: 148px;
     }
-    section > .wrap.global > .right > article.atn .more{
+    article.atn .more{
         right:-2px;
     }
-    section > .wrap.global > .right > article.atn .data{
+    .right > article.atn .data{
         height:21px;
         background: #8e588e;
         line-height: 21px;
         margin-top:15px;
         margin-bottom: 20px;
     }
-    section > .wrap.global > .right > article.atn .data p{
+     .right > article.atn .data p{
         display: inline-block;
         background: #673167;
         color:#fff;
@@ -804,57 +804,45 @@ textarea {
         padding:0 5px;
         line-height: 21px;
     }
-    section > .wrap.global > .right > article.atn .data span:before{
+     .right > article.atn .data span:before{
         content:url('../img/v_arrow.png');
         float:left;
     }
-    section > .wrap.global > .right > article.atn .data span{
+    .right > article.atn .data span{
         color:#fff;
         font:14px 'open_sansbold';
         padding-left: 7px;
     }
-    section > .wrap.global > .right > article.atn p{
+    .right > article.atn p{
         margin:0px;
     }
-    section > .wrap.global > .right > article.atn p.info{
+     .right > article.atn p.info{
         font:13px 'open_sanssemibold_italic';
         height: 80px;
         overflow: hidden;
     }
 
-    section > .wrap.global > .right > article.atn .ttl{
+    .right > article.atn .ttl{
         background:url('../img/a_icon.png') no-repeat left center;
         padding-left:30px;
     }
-    section > .wrap > .inl > article{
-        margin-right:60px;
-    }
-    section > .wrap > .inl > article:nth-child(3n+6){
-        margin-right:0px;
-        float:right;
-    }
-    section > .wrap > .inl:after {
-        content: "";
-        width: 100%;
-        display: inline-block;
-    }
-    section > .wrap article {
+    article {
         position:relative;
     }
 
-    section > .wrap > .left > article:nth-child(2n){
+     .left > article:nth-child(2n){
         margin-left: 60px;
     }
-    section > .wrap.global >.left{
+    .global.left{
         width: 65%;
     }
-    section > .wrap.global > .right{
+    .global.right{
         width: 30%;
     }
     section > .wrap > .left{
         width: 68%;
     }
-    section  > .wrap > .right > article{
+    .right > article{
         width:383px;
         height:229px;
         border:2px solid #f7f7f7;
@@ -863,7 +851,7 @@ textarea {
         background-color:#fcfcfc;
         border-left:0px;
     }
-    section  > .wrap > .right > article:before{        
+    .right > article:before{        
         border-left:3px solid #cfd7a6;
         content:'';
         position:absolute;
@@ -873,24 +861,24 @@ textarea {
         bottom:-1px;
 
     }
-    section  > .wrap .left article .ttl,section > .wrap > .inl > article .ttl{
+    .left article .ttl{
         font:26px 'open_sansbold';
         padding:30px 0px 0px 22px;
         float: left;
         margin: 0px;
     }
-    section  > .wrap .left article .ttl a,section > .wrap > .inl > article .ttl a{        
+    .left article .ttl a{        
         color:#7c4d7c;
     }
-    section  > .wrap .left article ul,section > .wrap > .inl > article ul{
+    .left article ul{
         clear:both;
         padding-left: 23px;
         padding-top:20px;
     }
-    section  > .wrap .right article{
+    .right article{
         padding:23px 19px 20px 27px;
     }
-    section > .wrap .right article.news:before{
+    .right article.news:before{
         border-left:3px solid #a4ca94;
         content:'';
         position:absolute;
@@ -899,14 +887,14 @@ textarea {
         top:-1px;
         bottom:-1px;
     }
-    section > .wrap .right article.news li{
+    .right article.news li{
         background:none;
         margin-bottom: 20px;
     }
-    section > .wrap .right article.news .ttl img,section > .wrap .right article.doc .ttl img{
+    .right article.news .ttl img,.right article.doc .ttl img{
         margin-right:10px;
     }
-    section > .wrap .right article.news li span{
+    .right article.news li span{
         color:#fff;
         font:10px 'open_sanssemibold_italic';
         background-color:#74b45a;
@@ -920,7 +908,7 @@ textarea {
         float:left;
         margin-top: 6px;
     }
-    section > .wrap .right article.news li a{
+    .right article.news li a{
         float: left;
         width: 245px;
         font:14px 'open_sanssemibold';
@@ -929,61 +917,61 @@ textarea {
     }
 
 
-    section > .wrap > .right > article.news li span img{
+    .right > article.news li span img{
         position:absolute;
         right:-9px;
     }
-    section > .wrap > .right > article.news ul li{
+    .right > article.news ul li{
         padding:0px;
     }
-    section > .wrap > .right > article.news .hr{
+    .right > article.news .hr{
         border-color:#74b45a;
     }
-    section  > .wrap > .right > article .ttl{        
+     .right > article .ttl{        
         padding-right:20px;
         margin-bottom: 0px;
         font:26px 'open_sansbold';
     }
-    section  > .wrap > .right > article .ttl a{
+    .right > article .ttl a{
         color:#000000;
     }
-    section  > .wrap .left article ul li,section > .wrap > .inl > article ul li{
+    .left article ul li{
         background:url('../img/li.png') no-repeat left 12px;
         padding-left: 20px;
     }
-    section  > .wrap .right article ul li {
+    .right article ul li {
         background:url('../img/li_g.png') no-repeat left 12px;
         padding-left: 20px;
     }
-    section  > .wrap > .right > article.doc ul li{
+    .right > article.doc ul li{
         background: none;
         padding:0px;
     }
-    section > .wrap > .right > article.doc table tr td{
+    .right > article.doc table tr td{
         padding:17px 0;
     }
-    section > .wrap > .right > article.doc table tr td:first-child{
+    .right > article.doc table tr td:first-child{
         width:106px;
         vertical-align: top;
         font:14px 'open_sanssemibold';
         color:#2b2b2b;
     }
-    section > .wrap > .right > article.doc table tr:last-child{
+     .right > article.doc table tr:last-child{
         border:none;
     }
-    section > .wrap > .right > article.doc table tr td:last-child{
+    .right > article.doc table tr td:last-child{
         color:#000000;
         font:14px 'open_sansbold';
     }
-    section > .wrap > .right > article.doc table tr{
+    .right > article.doc table tr{
         border-bottom:2px solid #e7e7e7;
     }
-    section  > .wrap > .left > article ul li a,section  > .wrap > .right article ul li a,section > .wrap > .inl > article ul li a{
+    .left > article ul li a, .right article ul li a{
         text-decoration: none;
         color:#434343;
         font:20px 'open_sanssemibold';
     }
-    section  > .wrap > .left  > article .more,section  > .wrap > .right > article .more,.wrap.m_a > .left .a_box .more,section > .wrap .prom > .left ul li a,section > .wrap > .inl > article .more{
+    article .more,.a_box .more,section > .wrap .prom > .left ul li a{
         width: 30px;
         height: 20px;
         background: url('../img/more.png')no-repeat center;
@@ -991,7 +979,7 @@ textarea {
         bottom: 8px;
         right: 20px;
     }
-    section  > .wrap > .right > article .hr{
+    .right > article .hr{
         height:3px;
         width:100%;
         border-top:1px solid #dfdfdf;
@@ -1174,7 +1162,7 @@ textarea {
     .top_menu a.active{
         color:#141414;
     }
-    section .wrap .c_title{
+    .c_title{
         font:39px 'open_sansbold';
         text-transform: uppercase;
         margin:20px 0;
@@ -1186,6 +1174,7 @@ textarea {
     p{
         font:17px 'open_sanssemibold';
         margin-bottom: 20px;
+        color: #4c4c4c;
     }
     section .wrap p.sub_title_s{
         color:#7c4d7c;
@@ -1238,7 +1227,7 @@ textarea {
         background: url('../img/right.png')25px center no-repeat;
         padding-right:15px;
     }
-    .right_menu li a,.wrap.emrg.cda > .right ul li a{
+    .right_menu li a{
         font: 20px 'open_sanssemibold';
         color: #595959;
         display: table-cell;
@@ -1246,14 +1235,14 @@ textarea {
         vertical-align: middle;
         line-height: 20px;
     }
-    .wrap.emrg.cda > .right ul li{
+    .cda > .right ul li{
         margin:0px;
     }
-    .wrap.emrg.cda > .right ul li a{
+    .cda > .right ul li a{
         border:0px;
         padding:0px;
     }
-    .wrap.emrg.cda > .right ul li a:before{
+    .cda  ul li a:before{
         border:0px;
     }
     .right_menu li.active,.right_menu li.active:hover {
@@ -1262,7 +1251,7 @@ textarea {
     .right_menu li:hover {
         background:url('../img/right.png')25px center no-repeat #f8f8f8;
     }
-    .right_menu li.active a,.wrap.emrg.cda .right_menu li.active a{
+    .right_menu li.active a,.cda .right_menu li.active a{
         font:20px 'open_sansbold';
         color:#000000;
         line-height: 20px;
@@ -1551,14 +1540,14 @@ textarea {
         bottom:-1px;
         border-left:3px solid #74b45a;
     }
-    .wrap.compl > .left .form{
+    .form{
         border-bottom:1px solid #e6e6e6;
         border-left:0;
         margin-top:65px;
         margin-bottom: 60px;
         position: relative;
     }
-    .wrap.compl > .left .form:before{
+    .form:before{
         content:'';
         position:absolute;
         display:block;
@@ -1567,7 +1556,7 @@ textarea {
         bottom:-1px;
         border-left:3px solid #7c4d7c;
     }
-    .wrap.compl > .left .form.green:before{
+    .form.green:before{
         border-left:3px solid #74b45a;
     }
     .wrap.contact > .right.form .ftb{
@@ -1583,11 +1572,11 @@ textarea {
         position: absolute;
         left: 60px;
     }
-    .wrap.compl > .left .form form{
+    .form form{
         padding:0px 90px 40px 60px;
         position: relative;
     }
-    .wrap.contact > .right.form .content input[type=text],.wrap.compl > .left .form .content input[type=text],.wrap.compl > .left .form .content select,.wrap.contact .chat input[type=text]{
+    .content input[type=text],.chat input[type=text]{
         margin-bottom:20px;
         font:13px 'open_sanssemibold_italic';
         color:#4c4c4c;
@@ -1596,7 +1585,7 @@ textarea {
         border:1px solid #d9d9d9;
         border-left:3px solid #d9d9d9;
     }
-    .wrap.compl .green input[type=text],.wrap.contact .chat input[type=text]{
+    .green input[type=text],.chat input[type=text]{
         width:280px;
     }
     .wrap .form .nmpm{
@@ -1631,7 +1620,7 @@ textarea {
     .wrap.compl > .left .form .content textarea{
         height: 135px;
     }
-    .wrap.compl > .left .form .content label,.wrap.contact .form label,.wrap.contact .chat label{
+    .form label{
         font:13px 'open_sanssemibold';
         color:#4c4c4c;
         margin-bottom: 3px;
@@ -1678,7 +1667,7 @@ textarea {
         padding:5px;
         border:1px solid #d9d9d9;
     }
-    .wrap.compl > .left .form .content input[type=text].code{
+    .green input[type=text].code{
         height:30px;
         max-width: 135px;
         border:1px solid #d9d9d9;
@@ -1687,7 +1676,7 @@ textarea {
     .wrap.compl > .left .form .right{
         margin-right: 120px;
     }
-    .wrap.compl > .left .form .content input[type=submit],.wrap.contact > .right.form .content input[type=submit]{
+    .form  input[type=submit]{
         height:33px;
         width:246px;
         color:#fff;
@@ -1697,7 +1686,7 @@ textarea {
         font:14px 'open_sansbold';
         margin-top:10px;
     }
-    .wrap.compl > .left .form.green .content input[type=submit],.wrap.contact > .right.form .content input[type=submit]{
+    .green input[type=submit]{
         background:#74b45a;
         border-bottom:2px solid #579240;
         display: block;
@@ -1706,7 +1695,7 @@ textarea {
     .socials{
         margin-top:30px;
     }
-    .wrap.m_a > .left .a_box, .wrap.u_a > .left .a_box{
+    .a_box{
         width:100%;
         border:2px solid #f7f7f7;
         border-left:0;
@@ -1714,7 +1703,7 @@ textarea {
         position: relative;
         margin-bottom: 55px;
     }
-    .wrap.m_a > .left .a_box:before, .wrap.u_a > .left .a_box:before{
+    .a_box:before{
         content:'';
         position:absolute;
         display:block;
@@ -1723,19 +1712,19 @@ textarea {
         bottom:-1px;
         border-left:3px solid #b6c57e;
     }
-    .wrap.m_a > .left .a_box .title,.wrap.u_a > .left .a_box .title{
+    .a_box .title{
         font:24px 'open_sansbold';
         color:#242424;
         text-transform: uppercase;
         margin-bottom: 28px;
     }
-    .wrap.m_a > .left .a_box .hr_dbl,.wrap.u_a > .left .a_box .hr_dbl,.wrap.u_a > .left  .hr_dbl{
+    .a_box .hr_dbl{
         height:3px;
         border-top:1px solid #efefef;
         border-bottom:1px solid #efefef;
         margin-bottom:15px;
     }
-    .wrap.m_a > .right .n_title{
+    .n_title{
         font:24px 'open_sansbold';
         color:#74b45a;
         text-transform: uppercase;
@@ -1746,53 +1735,50 @@ textarea {
         line-height: 60px;
         padding-left:30px;
     }
-    .wrap.u_a > .left .a_box .hr_dbl{
-        margin-bottom: 30px;
-    }
-    .wrap.m_a > .left .a_box .left{
+/*    .a_box .left{
         max-width:350px;
-    }
-    .wrap.m_a > .left .a_box .info,.wrap.u_a > .left .a_box .info{
+    }*/
+    .a_box .info{
         font:17px 'open_sanssemibold';
         color:#343434;
         margin-top:-5px;
         margin-bottom: 0px;
     }
-    .wrap.m_a > .left .a_box .details,.wrap.u_a > .left .a_box .details,section > .wrap.u_a.u_s .left .details {
+    .a_box .details{
         height:21px;
         width:100%;
         background:#8e588e;
         color:#fff;
         line-height:31px;
     }
-    .wrap.m_a > .left .a_box .details p,.wrap.u_a > .left .a_box .details p,section > .wrap.u_a.u_s .left .details p{
+    .a_box .details p{
         margin:0px;
         padding:2px 10px 0 7px; 
         height:21px;
     }
 
-    .wrap.m_a > .left .a_box .details p.data,.wrap.u_a > .left .a_box .details p.data,section > .wrap.u_a.u_s .left .details p.data{
+    .a_box .details p.data{
         float:left;
         font:12px 'open_sanssemibold';
         background-color: #673167;
         position:relative;
     }
-    .wrap.m_a > .left .a_box .details p.data .arrow,.wrap.u_a > .left .a_box .details p.data .arrow,section > .wrap.u_a.u_s .left .details p.data .arrow{
+    .a_box .details p.data .arrow{
         position: absolute;
         top: 0;
         right: -8px;
     }
-    .wrap.m_a > .left .a_box .details p.cont,.wrap.u_a > .left .a_box .details p.cont{
+    .a_box .details p.cont{
         float:right;
         font:12px 'open_sansregular';
     }
-    .wrap.m_a > .left .list ul.a_n li a{
+    ul.a_n li a{
         width:100%;
         display:block;
         height:50px;
         border-bottom:2px solid #f7f7f7;
     }
-    .wrap.m_a > .left .list ul.a_n li a span{
+    ul.a_n li a span{
         color: #fff;
         font: 12px 'open_sanssemibold_italic';
         background-color: #74b45a;
@@ -1805,13 +1791,13 @@ textarea {
         padding:0px 4px 0px 10px;
         margin-top:15px;
     }
-    .wrap.m_a > .left .list ul.a_n li a span img{
+    ul.a_n li a span img{
         position: absolute;
         right: -9px;
         top:0px;
     }
 
-    .wrap.m_a > .left .list ul.a_n li a p{
+    ul.a_n li a p{
         font:17px 'open_sanssemibold';
         color:#232323;
         padding-left:20px;
@@ -1821,14 +1807,14 @@ textarea {
         height: 50px;
         line-height: 18px;
     }
-    .wrap > .left .pag{
+    .pag{
         margin-top:25px;
     }
-    .wrap > .left .pag .w_p{
+    .pag .w_p{
         font:13px 'open_sanssemibold';
         color:#4b4b4b;
     }
-    .wrap > .left  .pag .p_n a,.wrap > .left  .pag .n_p a{
+    .pag .p_n a,.pag .n_p a{
         font:12px 'open_sansbold';
         color:#74b45a;
         text-transform: capitalize;
@@ -1836,21 +1822,21 @@ textarea {
         padding: 0px 10px;
         border:1px solid #74b45a;
     }
-    .wrap > .left  .pag .p_n a, .wrap > .left .pag .p_n a{
+    .pag .p_n a{
         background:url('../img/p_arrow.png') no-repeat 7px center;
         padding-left:18px;
     }
-    .wrap > .left  .pag .n_p a, .wrap > .left .pag .n_p a{
+    .pag .n_p a{
         background:url('../img/n_arrow.png') no-repeat 93% center;
         padding-right:18px;
     }
-    .wrap > .left  .pag ul li,.wrap > .left  .pag ul{
+    .pag ul li,.pag ul{
         display: inline;
     }
-    .wrap > .left .pag ul li:last-child a{
+    .pag ul li:last-child a{
         border:0px;
     }
-    .wrap > .left  .pag ul li a{
+    .pag ul li a{
         width:20px;
         border-right:1px solid #d0d0d0;
         display: inline-block;
@@ -1859,7 +1845,7 @@ textarea {
         padding-right: 4px;
         color:#74b45a;
     }
-    .wrap > .left  .pag ul li.active a{
+    .pag ul li.active a{
         color:#4b4b4b;
         pointer-events: none;
         cursor: default;
@@ -1884,10 +1870,10 @@ textarea {
         margin-right: 22px;
 
     }
-    .wrap.u_a > .right ul li,.wrap.emrg > .right ul li{
+    ul.detail li{
         margin-bottom:3px;
     }
-    .wrap.u_a > .right ul li a,.wrap.emrg > .right ul li a{
+    ul.detail li a{
         width:352px;
         height:48px;
         border: 1px solid #f7f7f7;
@@ -1899,7 +1885,7 @@ textarea {
         padding-left:75px;
         position: relative;
     }
-    .wrap.u_a > .right ul li a:before,.wrap.emrg > .right ul li a:before{
+    ul.detail li a:before{
         content: '';
         position: absolute;
         display: block;
@@ -1908,16 +1894,16 @@ textarea {
         bottom: -1px;
         border-left: 3px solid #74b45a;
     }
-    .wrap.u_a > .right ul li.email a,.wrap.emrg > .right ul li.email a{
+    ul.detail li.email a{
         background:url('../img/email.png') no-repeat 25px center;
     }
-    .wrap.u_a > .right ul li.fax a,.wrap.emrg > .right ul li.fax a{
+    ul.detail li.fax a{
         background:url('../img/fax.png') no-repeat 23px center;
     }
-    .wrap.u_a > .right ul li.chat a,.wrap.emrg > .right ul li.chat a{
+    ul.detail li.chat a{
         background:url('../img/rec.png') no-repeat 23px center;
     }
-    .wrap.u_a > .right ul li.location a,.wrap.emrg > .right ul li.location a{
+    ul.detail li.location a{
         background:url('../img/find.png') no-repeat 22px center;
     }
     .wrap.m_a.news > .left .a_box .title{
@@ -2048,28 +2034,28 @@ textarea {
         padding: 0px 4px 0px 10px;
         margin-top: 15px;
     }
-    section .wrap.compl > .left .av{
+    .av{
         margin-top:70px;
         border-top:1px solid #f0f0f0;
         border-bottom:1px solid #f0f0f0;
     }
-    section .wrap.compl > .left .av p{
+    .av p{
         font:15px 'open_sanssemibold_italic';
         color:#1c1c1c;
         margin: 7px 0;
     }
-    section .wrap.compl > .left .av p span{
+    .av p span{
         font:15px 'open_sansbold_italic';
         color:#7c4d7c;
         text-transform: uppercase;
     }
-    section .wrap.compl > .left .av.green p span{
+    .av.green p span{
         color:#74b45a;
     }
-    section .wrap.compl > .left .form{
+    .form.green{
         width:100%;
     }
-    section .wrap.compl > .left .form .ftb{
+    .form .ftb{
         font: 24px 'open_sansbold';
         color:#7c4d7c;
         text-transform: uppercase;
@@ -2077,7 +2063,7 @@ textarea {
         line-height: 28px;
         margin-bottom: 10px;
     }
-    section .wrap.compl > .left .form.green .ftb{
+    .form.green .ftb{
         color:#74b45a;
         width:320px;
     }
@@ -2143,7 +2129,7 @@ textarea {
         padding-top:8px;
         padding-left:15px;
     }
-    section > .wrap.mda .search input[type=text]{
+    .search input[type=text]{
         width:263px;
         height:33px;
         border:1px solid #e3e3e3;
@@ -2151,7 +2137,7 @@ textarea {
         font:13px 'open_sanssemibold_italic';
         color:#b0b0b0;
     }
-    section > .wrap.mda .search input[type=submit]{
+    .search input[type=submit]{
         width:118px;
         height:33px;
         font:15px 'open_sansbold';
@@ -2161,82 +2147,85 @@ textarea {
         color:#fff;
         margin-left:20px;
     }
-    section > .wrap.mda .search{
+    .search{
         margin-bottom:16px;
     }
-    section > .wrap.mda .search input{
+    .search input{
         float:left;
     }
-    section > .wrap .left .right{
+/*    section > .wrap  .left .right{
         width: 82%;
-    }
+    }*/
     section > .wrap.culture .left ul li .right .box p,section > .wrap.culture .left ul li .right .box p a{
         font:14px 'open_sanssemibold';
         color:#673167;
         margin-bottom: 0px;
     }
-    section > .wrap.crt > .left p,section > .wrap.crt > .left ul li{
+    ul.crt li{
         font:17px 'open_sanssemibold';
         color:#4c4c4c;
     }
     section > .wrap.crt > .left ul{
         margin-bottom:35px;
     }
-    section > .wrap.crt > .left ul li{
+     ul.crt li{
         background: url('../img/li_g.png') no-repeat left 8px;
         padding-left:30px;        
         margin-bottom: 25px;
     }
-    section > .wrap.crt > .left p span,section > .wrap.crt > .left p.sub{
+    .crt p span,p.sub{
         color:#673167;
     }
-    section > .wrap.crt > .left p.sub{
+    p.sub{
         margin-top:70px;
     }
-    section > .wrap.crt > .left hr{
+    hr.crt{
         background: #f7f7f7;
         height:2px;
         border-top:0px;
     }
-    section > .wrap.crt .files img{
+    .files img{
         margin-right:15px;
         margin-bottom: 70px;
     }
-    section > .wrap > .left .ul_title{
+/*    .ul_title{
         height:33px;
         font:18px 'open_sansbold';
         padding-left:18px;
         background:#efefef;
         line-height: 33px;
-    }
+    }*/
 
-    section > .wrap.cda > .left .ul_title{
+    .ul_title{
         text-transform: uppercase;
         font:14px 'open_sansbold';
         line-height:33px;
+        padding-left:18px;
+        background:#efefef;
+        height:33px;
     }
-    section > .wrap.mda > .left > ul > li ,section > .wrap.dcr  .dcr_box > ul > li,section > .wrap.atz > .left > ul > li{
+     ul.mda > li ,section > .wrap.dcr  .dcr_box > ul > li,ul.atz  > li{
         padding-left:55px;
         height:40px;
         line-height: 40px;
     }
-    section > .wrap > .left  ul > li.word{
+    ul > li.word{
         background:url('../img/word.png') no-repeat 3px center;
     }
-    section > .wrap > .left  ul > li.pdf{
+    ul > li.pdf{
         background:url('../img/pdf.png') no-repeat 3px center;
     }
-    section > .wrap > .left > ul{
+    ul.mda{
         border-bottom: 2px solid #f7f7f7;
         border-top: 2px solid #f7f7f7;
         padding:12px 0;
     }
-    section > .wrap.contact > .left ul.date_contact,section > .wrap.vice > .left > ul,section > .wrap.rpt > .left > ul,section > .wrap .prom > .left > ul,section > .wrap.ldm > .left > ul,section > .wrap.dcr > .left > ul,section > .wrap.compl > .left > ul,section > .wrap.emrg > .left > ul,section > .wrap.culture > .left > ul,section > .wrap.faq > .left > ul{
+    ul{
         border:0px;
         padding:0px;
 
     }
-    section > .wrap.atz > .left > ul{
+    ul.atz  {
         border-bottom:0px;
         margin-top:50px;
     }
@@ -2246,43 +2235,43 @@ textarea {
     .wrap.contact > .right.form .left{
         width:241px;
     }
-    section > .wrap.atz table,section > .wrap.atz table td{
+    table.atz ,table.atz  td{
         border:1px solid #e3e3e3;
         vertical-align: top;
         padding:30px 25px;
         font:17px 'open_sansregular';
         color:#4c4c4c;
     }
-    section > .wrap.atz table tr td:first-child{
+    table.atz  tr td:first-child{
         background: #fbfbfb;
         width:7%;
     }
-    section > .wrap.atz table tr td:last-child{
+    table.atz  tr td:last-child{
         width:58%;
     }
-    section > .wrap.atz table tr td:nth-child(2){
+    table.atz tr td:nth-child(2){
         font:16px 'open_sansbold';
         color:#000;
     }
-    section > .wrap.atz table tr td p,section > .wrap.atz table tr td ul li span{
+    table.atz  tr td p,table.atz  tr td ul li span{
         margin:0px;
         font:17px 'open_sansregular';
         color:#4c4c4c;
     }
-    section > .wrap.atz table tr td a{
+    table.atz  tr td a{
         font:17px 'open_sansregular';
         color:#7c4d7c;
     }
-    section > .wrap.atz table tr td ul li a{
+    table.atz tr td ul li a{
         text-decoration: underline;
     }
-    section > .wrap.atz table tr td ul li{
+    table.atz tr td ul li{
         list-style: decimal;
         padding-left: 20px;
         font:17px 'open_sanssemibold';
         color:#4c4c4c;
     }
-    section > .wrap.atz table tr td ul{
+    table.atz tr td ul{
         padding-left:25px;
     }
     section > .wrap > .left > ul > li > span{
@@ -2334,7 +2323,7 @@ textarea {
     section > .wrap.taxe > .left table tbody tr:nth-child(2n-1){
         background: #fbfbfb;
     }
-    section > .wrap.mda > .left > ul > li > a,section > .wrap.atz > .left > ul > li a{
+    ul.mda > li > a,ul.atz  > li a{
         background:url('../img/a_dis.png') no-repeat;
         width:19px;
         height:19px;
@@ -2343,19 +2332,19 @@ textarea {
         margin-top:10px;
     }
 
-    section > .wrap .left .a_box .right{
+    .a_box .right{
         max-width:390px;
     }
-    section > .wrap.emrg > .left .ul_title .left{
+    section > .wrap.emrg > .left .ul_title .left,.cda .ul_title .left {
         width:300px;
     }
     section > .wrap.emrg > .left .ul_title .right{
         width:550px;
     }    
-    section > .wrap.emrg.cda > .left .ul_title .right{
+    .cda .ul_title .right{
         width:120px;
     }
-    section > .wrap.emrg > .left ul{
+    section > .wrap.emrg > .left ul,.cda ul{
         margin-bottom: 80px;
     }
     section > .wrap.emrg > .left ul li .left{
@@ -2366,27 +2355,27 @@ textarea {
         vertical-align: middle;        
         padding-bottom: 8px;
     }
-    section > .wrap.emrg.cda > .left ul li .left{
+    .cda ul li .left{
         width:inherit;
         max-width:75%;
     }
-    section > .wrap.emrg.cda > .left ul li .left p{
+    cda  ul li .left p{
         color:#000;
         margin: 0px;
     }
-    section > .wrap.emrg.cda > .left ul li .left p.green a{
+   .cda  ul li .left p.green a{
         color:#5f9a47;
         font:14px 'open_sanssemibold';
     }
-    section > .wrap.emrg > .left ul li .right{
+    section > .wrap.emrg > .left ul li .right,.cda ul li .right{
         width: 66%;
         font:17px 'open_sanssemibold';
         color:#4c4c4c;
     }
-    section > .wrap.emrg.cda > .left ul li .right{
+    .cda  ul li .right{
         width:120px;
     }
-    section > .wrap.emrg > .left ul li:after{        
+    section > .wrap.emrg > .left ul li:after,.cda ul li:after{        
         content:'';
         display:block;
         clear: both;
@@ -2398,9 +2387,16 @@ textarea {
         padding-left:35px;
         background:url('../img/g_phone.png') no-repeat left 3px;
     }
-    section > .wrap.emrg.cda > .left ul li{
+   .cda ul li{
         background:url('../img/cadru.png') no-repeat left 9px;
-        margin-top:15px;
+        margin-top:12px;
+        padding-bottom:12px;
+        min-height:33px;
+        border-bottom:2px solid #efefef;
+        padding-left:35px;
+    }
+    .cda p{
+        margin:0px;
     }
     .com_box{
         width:100%;
@@ -2419,7 +2415,7 @@ textarea {
         bottom:-2px;
         border-left:3px solid #cdcdcd;
     }
-    section > .wrap.atz > .left > ul > li a:hover,section > .wrap.mda > .left > ul > li > a:hover{
+    table.atz  ul > li a:hover,ul.mda > li > a:hover{
         background:url('../img/a_active.png') no-repeat;
     }
     .com_box .title{
@@ -2682,7 +2678,7 @@ textarea {
         content:'';
         display: block;                                                              
     }
-    section > .wrap.bgr > .left > .img {
+    .bgr .img {
         width:400px;
         height:505px;
         overflow:hidden;
@@ -2690,7 +2686,7 @@ textarea {
         float:left;
         margin-right:75px;
     }
-    section > .wrap.bgr  .nm_prim{
+    .bgr  .nm_prim{
         position:absolute;
         font:25px 'open_sanssemibold';
         color:#fff;
@@ -2699,7 +2695,7 @@ textarea {
         width:100%;
     }
 
-    section > .wrap.bgr > .left > .img::before {   
+    .bgr .img::before {   
         content: "";
         position: absolute;
         top: 0;
@@ -2710,13 +2706,13 @@ textarea {
         -moz-box-shadow: inset 0 0 0 10px rgba(251,251,251,.20);
         -webkit-box-shadow: inset 0 0 0 10px rgba(251,251,251,.20);
     }
-    section > .wrap.bgr > .left > .quote{
+    .bgr .quote{
         font:20px 'open_sanssemibold_italic';
         color:#4c4c4c;
         display: inline-block;
         width:360px;
     }
-    section > .wrap.bgr > .left > .quote:before{
+    .bgr .quote:before{
         content: url('../img/q_t.png');
         margin-left:-33px;
     }
@@ -2725,15 +2721,15 @@ textarea {
         margin-left: -23px;
         margin-right: -10px;
     }
-    section > .wrap.bgr > .left > .quote:after,.dop .quote:after{
+    .bgr .quote:after,.dop .quote:after{
         content: url('../img/q_b.png');
     }
-    section > .wrap.bgr > .left > .info > ul > li{
+    .bgr .info > ul > li{
         min-height: 33px;
         border-bottom: 2px solid #efefef;
         margin-top: 33px;
     }
-    section > .wrap.bgr > .left > .info > ul > li .left{
+    .bgr .info > ul > li .left{
         width: 30%;
         font: 18px 'open_sansbold';
         color: #7c4d7c;
@@ -2741,24 +2737,24 @@ textarea {
         vertical-align: middle;
         padding-bottom: 8px;
     }
-    section > .wrap.bgr > .left > .info > ul > li .right{
+    .bgr .info > ul > li .right{
         width: 70%;
         font: 17px 'open_sanssemibold';
         color: #4c4c4c;
     }
 
-    section > .wrap.bgr > .left > .info > ul > li:after {
+    .bgr .info > ul > li:after {
         content: '';
         display: block;
         clear: both;
     }
-    section > .wrap.bgr > .left > .info > ul {
+    .bgr .info > ul {
         margin-bottom: 60px;
     }
-    section > .wrap.bgr > .left > .info > ul > li .right.list{
+    .bgr .info > ul > li .right.list{
         position:relative;
     }
-    section > .wrap.bgr > .left > .info > ul > li .right.list:before{
+    .bgr .info > ul > li .right.list:before{
         content:url('../img/li.png');
         position:absolute;
         left:-15px;
