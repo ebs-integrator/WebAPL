@@ -22,6 +22,7 @@ Route::group(array('prefix' => Core\APL\Language::ext()), function() {
     Route::get('/', 'HomeController@showWelcome');
     
     Route::get('page/{furi}', 'PageController@route')->where(array('furi' => '[A-Za-z0-9-\/]+'));
+    Route::get('home/{furi}', 'PageController@route')->where(array('furi' => '[A-Za-z0-9-]+'));
 });
 
 
