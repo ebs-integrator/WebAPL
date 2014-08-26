@@ -3,23 +3,36 @@
 class PageController extends BaseController {
 
     protected $layout = 'layout/page';
-    
+
     public function route($query = '') {
         $parts = explode('/', $query);
         if ($parts) {
             $uri = end($parts);
             $this->data['page'] = Post::findURI($uri);
             if ($this->data['page']) {
-                $reversed_uris = array_slice(array_reverse($parts), 1, count($parts)-1);
-                
-                $this->data['parrents'] = Post::getParents($this->data['page']['parent']);
 
-                $matchAll = true;
-                foreach ($this->data['parrents'] as $k => $parrent) {
-                    $matchAll = $matchAll && (isset($reversed_uris[$k]) && $reversed_uris[$k] == $parrent['uri']);
+                Post::oneView($this->data['page']['id']);
+                
+                $this->data['parents'] = Post::getParents($this->data['page']['parent']);
+                $this->data['parent'] = Post::findID($this->data['page']['parent'], 1);
+                $this->data['colevels'] = Post::findWithParent($this->data['page']['parent']);
+                
+                if ($this->data['parent']) {
+                    $this->data['top_title'] = $this->data['parent']['title'];
+                } else {
+                    $this->data['top_title'] = $this->data['page']['title'];
                 }
 
-                if ($matchAll) {
+                $segments = array();
+                foreach (array_reverse($this->data['parents']) as $parrent) {
+                    $segments[] = $parrent['uri'];
+                    Template::addBreadCrumb(Post::getURL(implode('/', $segments)), $parrent['title']);
+                }
+                $segments[] = $this->data['page']['uri'];
+                Template::addBreadCrumb($this->data['page']['url'], $this->data['page']['title']);
+
+                $realURI = implode('/', $segments);
+                if ($realURI === $query) {
                     $this->loadPage();
                 } else {
                     throw new Exception("Query '{$query}' is not valid");
@@ -32,17 +45,11 @@ class PageController extends BaseController {
         }
     }
 
-    
-    
     public function loadPage() {
-        var_dump(Post::getFullURI($this->data['page']['id']));
-        
-        $this->layout->content = View::make('markup.testpage');
+        $this->layout->content = View::make('sections.pages.default')->with($this->data);
 
         return $this->layout;
     }
-
-    
 
     public function markup($view) {
         $this->layout->content = View::make('markup/' . $view);
