@@ -59,7 +59,7 @@ class Template {
     public static function preparePaths($paths = array()) {
         $paths = (array) $paths;
 
-        if (isset(self::$module)) {
+        if (isset(self::$module) && self::$module) {
             $paths = array(
                 app_path() . '/modules/' . self::$module . '/'
             );
