@@ -7,75 +7,78 @@
             <a href="javascript:;">Biografia primarului</a>
         </div>
     </div>
-    <div class="wrap bgr">
+    <div class="wrap">
         <p class="c_title">Primarul</p>
 
         <div class='left'>
-            <div class="img">
-                <img src='<?=res("assets/img/primar.png");?>'/>
-                <p class="nm_prim">Nume Prenume</p>
+            <div class="bgr">
+                <div class="img">
+                    <img src='<?= res("assets/img/primar.png"); ?>'/>
+                    <p class="nm_prim">Nume Prenume</p>
+                </div>
+                <span class='quote'>
+                    Strășeni înseamnă copilăria, adolescenţa şi familia mea. M-am născut, am copilărit şi am crescut pe străzile din acest oraş!
+                </span>
+                <div class='clearfix'></div>
             </div>
-            <span class='quote'>
-                Strășeni înseamnă copilăria, adolescenţa şi familia mea. M-am născut, am copilărit şi am crescut pe străzile din acest oraş!
-            </span>
-            <div class='clearfix'></div>
-            <div class='info'> 
-                <ul>
-                    <li>
-                        <div class="left">Data nasterii:</div>
-                        <div class="right">03.09.1966</div>
-                    </li>
-                    <li>
-                        <div class="left">Starea civila:</div>
-                        <div class="right">Casatorit, un copil</div>
-                    </li>
-                    <li>
-                        <div class="left">Studii:</div>
-                        <div class="right">Universtatea Tehnica</div>
-                    </li>
-                    <li>
-                        <div class="left">Activitate politica</div>
-                        <div class="right">Activitate politica	</div>
-                    </li>
-                    <li>
-                        <div class="left">2014 - </div>
-                        <div class="right list">Membru PD, Presedinte al Organizatiei de Tineret</div>
-                    </li>
-                    <li>
-                        <div class="left">2013 - </div>
-                        <div class="right list">Presedinte al Organizatiei Judetene de Tineret.
-                            Vicepresedinte al Organizatiei Nationale de Tineret</div>
-                    </li>
-                    <li>
-                        <div class="left">2012 - </div>
-                        <div class="right list">Presedinte APR Brasov</div>
-                    </li>
-                    <li>
-                        <div class="left">2010  - </div>
-                        <div class="right list">Presedinte al Organizatiei Judetene PD Brasov
-                            Vicepresedinte PD</div>
-                    </li>
-                    <li>
-                        <div class="left">2009 -</div>
-                        <div class="right list">Presedinte al Organizatiei Judetene PD-L Brasov
-                            Vicepresedinte PD-L</div>
-                    </li>
-                    <li>
-                        <div class="left">2008  - </div>
-                        <div class="right list">Consilier local - Primaria Brasov</div>
-                    </li>
-                    <li>
-                        <div class="left">2007  - </div>
-                        <div class="right list">Viceprimar, Primaria Municipiului Brasov</div>
-                    </li>
-                    <li>
-                        <div class="left">2006  - </div>
-                        <div class="right list">Prezent - Primar, Primaria Municipiului Brasov</div>
-                    </li>
-                </ul>
+            <div class="bgr">
+                <div class='info'> 
+                    <ul>
+                        <li>
+                            <div class="left">Data nasterii:</div>
+                            <div class="right">03.09.1966</div>
+                        </li>
+                        <li>
+                            <div class="left">Starea civila:</div>
+                            <div class="right">Casatorit, un copil</div>
+                        </li>
+                        <li>
+                            <div class="left">Studii:</div>
+                            <div class="right">Universtatea Tehnica</div>
+                        </li>
+                        <li>
+                            <div class="left">Activitate politica</div>
+                            <div class="right">Activitate politica	</div>
+                        </li>
+                        <li>
+                            <div class="left">2014 - </div>
+                            <div class="right list">Membru PD, Presedinte al Organizatiei de Tineret</div>
+                        </li>
+                        <li>
+                            <div class="left">2013 - </div>
+                            <div class="right list">Presedinte al Organizatiei Judetene de Tineret.
+                                Vicepresedinte al Organizatiei Nationale de Tineret</div>
+                        </li>
+                        <li>
+                            <div class="left">2012 - </div>
+                            <div class="right list">Presedinte APR Brasov</div>
+                        </li>
+                        <li>
+                            <div class="left">2010  - </div>
+                            <div class="right list">Presedinte al Organizatiei Judetene PD Brasov
+                                Vicepresedinte PD</div>
+                        </li>
+                        <li>
+                            <div class="left">2009 -</div>
+                            <div class="right list">Presedinte al Organizatiei Judetene PD-L Brasov
+                                Vicepresedinte PD-L</div>
+                        </li>
+                        <li>
+                            <div class="left">2008  - </div>
+                            <div class="right list">Consilier local - Primaria Brasov</div>
+                        </li>
+                        <li>
+                            <div class="left">2007  - </div>
+                            <div class="right list">Viceprimar, Primaria Municipiului Brasov</div>
+                        </li>
+                        <li>
+                            <div class="left">2006  - </div>
+                            <div class="right list">Prezent - Primar, Primaria Municipiului Brasov</div>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
-
-
         </div>
 
         <div class='right'>

@@ -6,7 +6,7 @@
             <a href="javascript:;">Detalii anunt</a>
         </div>
     </div>
-    <div class="wrap u_a">
+    <div class="wrap">
         <p class="c_title">anunțuri</p>
         <div class="left">
             <div class="a_box">

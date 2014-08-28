@@ -33,8 +33,8 @@
         </div>
     </section>
     <section>
-        <div class="wrap global">
-            <div class="left">            
+        <div class="wrap">
+            <div class="left global">            
                 <article>
                     <p class="ttl"><a href="javascript:;">Consiliul și funcționalități</a></p>
                     <ul>
@@ -83,7 +83,7 @@
                     <a href="javascript:;" class="more"></a>
                 </article>
             </div>
-            <div class="right">   
+            <div class="right global">   
                 <article>
                     <p class="ttl"><a href="javascript:;">Transparență Decizională</a></p>
                     <div class="hr"></div>

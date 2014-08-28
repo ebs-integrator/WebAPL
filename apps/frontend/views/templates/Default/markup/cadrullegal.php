@@ -7,92 +7,95 @@
             <a href="javascript:;">Cadrul legal al APL</a>
         </div>
     </div>
-    <div class="wrap emrg cda">
+    <div class="wrap">
         <p class="c_title">Rapoarte și documente </p>
         <div class="left">
-            <p class="ul_title">
-                <span class="left">denumire / link	</span>
-                <span class="right">Actualizat</span>
-            </p>
-            <ul>
-                <li>
-                    <div class="left">
-                        <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
-                        <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
-                    </div>
-                    <div class="right">02/06/2014</div>
-                </li>
-                <li>
-                    <div class="left">
-                        <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
-                        <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
-                    </div>
-                    <div class="right">02/06/2014</div>
-                </li>
-                <li>
-                    <div class="left">
-                        <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
-                        <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
-                    </div>
-                    <div class="right">02/06/2014</div>
-                </li>
-                <li>
-                    <div class="left">
-                        <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
-                        <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
-                    </div>
-                    <div class="right">02/06/2014</div>
-                </li>
-                <li>
-                    <div class="left">
-                        <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
-                        <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
-                    </div>
-                    <div class="right">02/06/2014</div>
-                </li>
-                <li>
-                    <div class="left">
-                        <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
-                        <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
-                    </div>
-                    <div class="right">02/06/2014</div>
-                </li>
-                <li>
-                    <div class="left">
-                        <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
-                        <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
-                    </div>
-                    <div class="right">02/06/2014</div>
-                </li>
-                <li>
-                    <div class="left">
-                        <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
-                        <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
-                    </div>
-                    <div class="right">02/06/2014</div>
-                </li>
-                <li>
-                    <div class="left">
-                        <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
-                        <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
-                    </div>
-                    <div class="right">02/06/2014</div>
-                </li>
-                <li>
-                    <div class="left">
-                        <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
-                        <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
-                    </div>
-                    <div class="right">02/06/2014</div>
-                </li>
-                <li>
-                    <div class="left">
-                        <p>Cadrul legal al administratiei publice locale  legal al administratiei publice locale din Republica Moldova</p>
-                        <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
-                    </div>
-                    <div class="right">02/06/2014</div>
-                </li>
-            </ul>
+            <div class="cda">
+                <p class="ul_title">
+                    <span class="left">denumire / link	</span>
+                    <span class="right">Actualizat</span>
+                </p>
+                <ul>
+                    <li>
+                        <div class="left">
+                            <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
+                            <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
+                        </div>
+                        <div class="right">02/06/2014</div>
+                    </li>
+                    <li>
+                        <div class="left">
+                            <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
+                            <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
+                        </div>
+                        <div class="right">02/06/2014</div>
+                    </li>
+                    <li>
+                        <div class="left">
+                            <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
+                            <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
+                        </div>
+                        <div class="right">02/06/2014</div>
+                    </li>
+                    <li>
+                        <div class="left">
+                            <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
+                            <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
+                        </div>
+                        <div class="right">02/06/2014</div>
+                    </li>
+                    <li>
+                        <div class="left">
+                            <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
+                            <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
+                        </div>
+                        <div class="right">02/06/2014</div>
+                    </li>
+                    <li>
+                        <div class="left">
+                            <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
+                            <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
+                        </div>
+                        <div class="right">02/06/2014</div>
+                    </li>
+                    <li>
+                        <div class="left">
+                            <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
+                            <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
+                        </div>
+                        <div class="right">02/06/2014</div>
+                    </li>
+                    <li>
+                        <div class="left">
+                            <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
+                            <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
+                        </div>
+                        <div class="right">02/06/2014</div>
+                    </li>
+                    <li>
+                        <div class="left">
+                            <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
+                            <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
+                        </div>
+                        <div class="right">02/06/2014</div>
+                    </li>
+                    <li>
+                        <div class="left">
+                            <p>Cadrul legal al administratiei publice locale din Republica Moldova</p>
+                            <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
+                        </div>
+                        <div class="right">02/06/2014</div>
+                    </li>
+                    <li>
+                        <div class="left">
+                            <p>Cadrul legal al administratiei publice locale  legal al administratiei publice locale din Republica Moldova</p>
+                            <p class="green"><a href="javascript:;">http://www.templatemonster.com/demo/50613.html</a> </p>
+                        </div>
+                        <div class="right">02/06/2014</div>
+                    </li>
+                </ul>
+            </div>
+
         </div>
         <div class="right">
             <ul class="right_menu">

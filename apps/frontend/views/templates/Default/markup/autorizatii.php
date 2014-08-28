@@ -7,11 +7,11 @@
             <a href="javascript:;">Formulare de cereri</a>
         </div>
     </div>
-    <div class="wrap atz">
+    <div class="wrap">
         <p class="c_title">Autorizații</p>
 
         <div class='left'>        
-            <table>
+            <table class="atz">
                 <tbody>
                     <tr><td>1.</td><td>Scopul serviciului public</td><td>Autorizaţia de funcționare este un act administrativ individual ce atestă dreptul titularului autorizaţiei de a desfăşura activitatea în unitatea comercială şi/sau de prestări servicii în locul (terenul, localul, incinta) stabilit, pentru o perioadă stabilită, cu respectarea obligatorie a condiţiilor de autorizare prevăzute de legislaţie. </td></tr>
                     <tr><td>2.</td><td>Organul emitent. Subdiviziunea organului emitent responsabilă de prestarea serviciului. Datele de contact si programul de lucru. </td><td>
@@ -39,7 +39,7 @@
                 </tbody>
             </table>
             
-            <ul>
+            <ul class="atz">
                 <li class="pdf">
                     <span>Cerere eliberare acord de functionare </span><a href="javascript:;" class="active"></a>
                 </li>      

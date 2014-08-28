@@ -5,7 +5,7 @@
                 <a href="javascript:;">Anunțuri</a>
             </div>
         </div>
-        <div class="wrap m_a">
+        <div class="wrap">
             <p class="c_title">anunțuri</p>
             <div class="left">
                 <div class="a_box">

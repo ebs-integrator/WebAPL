@@ -33,76 +33,8 @@
         </div>
     </section>
     <section>
-        <div class="wrap global">
-            <div class="right">   
-                <article class="atn">
-                    <p class="ttl"><a href="javascript:;">Anunțuri</a></p>
-                    <div class="hr"></div>
-                    <ul class="bxslider2">
-                        <li>
-                            <div class="data">
-                                <p>18 Iul 2014</p>
-                                <span>Urgent apartament in or.Straseni!</span>
-                            </div>
-                            <div class="clearfix"></div>
-                            <p class="info">Apartament cu 3 odai, etajul 7/9, seria 143, 2 balcoane,reparatie recenta, incalzire autonoma, telefon/internet/televiziune digitala, ferestre termopan. Pret negociabil!!!!!</p>
-
-                            <a href="javascript:;" class="more"></a>
-                        </li>
-                         <li>
-                            <div class="data">
-                                <p>18 Iul 2014</p>
-                                <span>Urgent apartament in or.Straseni!</span>
-                            </div>
-                            <div class="clearfix"></div>
-                            <p class="info">Apartament cu 3 odai, etajul 7/9, seria 143, 2 balcoane,reparatie recenta, incalzire autonoma, telefon/internet/televiziune digitala, ferestre termopan. Pret negociabil!!!!!</p>
-
-                            <a href="javascript:;" class="more"></a>
-                        </li>
-                         <li>
-                            <div class="data">
-                                <p>18 Iul 2014</p>
-                                <span>Urgent apartament in or.Straseni!</span>
-                            </div>
-                            <div class="clearfix"></div>
-                            <p class="info">Apartament cu 3 odai, etajul 7/9, seria 143, 2 balcoane,reparatie recenta, incalzire autonoma, telefon/internet/televiziune digitala, ferestre termopan. Pret negociabil!!!!!</p>
-
-                            <a href="javascript:;" class="more"></a>
-                        </li>
-                         <li>
-                            <div class="data">
-                                <p>18 Iul 2014</p>
-                                <span>Urgent apartament in or.Straseni!</span>
-                            </div>
-                            <div class="clearfix"></div>
-                            <p class="info">Apartament cu 3 odai, etajul 7/9, seria 143, 2 balcoane,reparatie recenta, incalzire autonoma, telefon/internet/televiziune digitala, ferestre termopan. Pret negociabil!!!!!</p>
-
-                            <a href="javascript:;" class="more"></a>
-                        </li>
-                    </ul>
-                </article>
-                <article class="news">
-                    <p class="ttl"><img src="<?=res('assets/img/stiri.png');?>"><a href="javascript:;">Știri</a></p>
-                    <div class="hr"></div>
-                    <ul>
-                        <li>
-                            <span>18 Iul 2014
-                                <img src="<?=res('assets/img/d_arrow.png');?>">
-                            </span>
-                            <a href="javascript:;">„Priveşti şi câştigi”: Norocul a dat peste o familie din Străşeni</a>
-                        </li>
-                        <li>
-                            <span>18 Iul 2014
-                                <img src="<?=res('assets/img/d_arrow.png');?>">
-                            </span>
-                            <a href="javascript:;">Persoanele îmbolnăvite de hepatită virală A la Drăgușeni sunt copii. Ce spun epidemiologii </a>
-                        </li>
-                    </ul>
-                    <a href="javascript:;" class="more"></a>
-                </article>
-
-            </div>
-            <div class="inl">   
+        <div class="wrap">            
+            <div class="left global">   
 
                 <article>
                     <p class="ttl"><a href="javascript:;">Autorizații</a></p>
@@ -256,7 +188,74 @@
                 </article>
 
             </div>
+            <div class="right global">   
+                <article class="atn">
+                    <p class="ttl"><a href="javascript:;">Anunțuri</a></p>
+                    <div class="hr"></div>
+                    <ul class="bxslider2">
+                        <li>
+                            <div class="data">
+                                <p>18 Iul 2014</p>
+                                <span>Urgent apartament in or.Straseni!</span>
+                            </div>
+                            <div class="clearfix"></div>
+                            <p class="info">Apartament cu 3 odai, etajul 7/9, seria 143, 2 balcoane,reparatie recenta, incalzire autonoma, telefon/internet/televiziune digitala, ferestre termopan. Pret negociabil!!!!!</p>
 
+                            <a href="javascript:;" class="more"></a>
+                        </li>
+                         <li>
+                            <div class="data">
+                                <p>18 Iul 2014</p>
+                                <span>Urgent apartament in or.Straseni!</span>
+                            </div>
+                            <div class="clearfix"></div>
+                            <p class="info">Apartament cu 3 odai, etajul 7/9, seria 143, 2 balcoane,reparatie recenta, incalzire autonoma, telefon/internet/televiziune digitala, ferestre termopan. Pret negociabil!!!!!</p>
+
+                            <a href="javascript:;" class="more"></a>
+                        </li>
+                         <li>
+                            <div class="data">
+                                <p>18 Iul 2014</p>
+                                <span>Urgent apartament in or.Straseni!</span>
+                            </div>
+                            <div class="clearfix"></div>
+                            <p class="info">Apartament cu 3 odai, etajul 7/9, seria 143, 2 balcoane,reparatie recenta, incalzire autonoma, telefon/internet/televiziune digitala, ferestre termopan. Pret negociabil!!!!!</p>
+
+                            <a href="javascript:;" class="more"></a>
+                        </li>
+                         <li>
+                            <div class="data">
+                                <p>18 Iul 2014</p>
+                                <span>Urgent apartament in or.Straseni!</span>
+                            </div>
+                            <div class="clearfix"></div>
+                            <p class="info">Apartament cu 3 odai, etajul 7/9, seria 143, 2 balcoane,reparatie recenta, incalzire autonoma, telefon/internet/televiziune digitala, ferestre termopan. Pret negociabil!!!!!</p>
+
+                            <a href="javascript:;" class="more"></a>
+                        </li>
+                    </ul>
+                </article>
+                <article class="news">
+                    <p class="ttl"><img src="<?=res('assets/img/stiri.png');?>"><a href="javascript:;">Știri</a></p>
+                    <div class="hr"></div>
+                    <ul>
+                        <li>
+                            <span>18 Iul 2014
+                                <img src="<?=res('assets/img/d_arrow.png');?>">
+                            </span>
+                            <a href="javascript:;">„Priveşti şi câştigi”: Norocul a dat peste o familie din Străşeni</a>
+                        </li>
+                        <li>
+                            <span>18 Iul 2014
+                                <img src="<?=res('assets/img/d_arrow.png');?>">
+                            </span>
+                            <a href="javascript:;">Persoanele îmbolnăvite de hepatită virală A la Drăgușeni sunt copii. Ce spun epidemiologii </a>
+                        </li>
+                    </ul>
+                    <a href="javascript:;" class="more"></a>
+                </article>
+
+            </div>
         </div>
         <div class="clearfix"></div>
     </section>

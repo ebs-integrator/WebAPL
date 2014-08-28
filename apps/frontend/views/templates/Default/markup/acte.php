@@ -7,7 +7,7 @@
             <a href="javascript:;">Formulare de cereri</a>
         </div>
     </div>
-    <div class="wrap mda">
+    <div class="wrap">
         <p class="c_title">Modele de acte / formulare</p>
 
         <div class='left'>        
@@ -16,7 +16,7 @@
                 <input type="submit" value="Caută">
                 <div class="clearfix"></div>
             </div>
-            <ul>
+            <ul class="mda">
                 <li class="word">
                     <span>Cerere eliberare acord de functionare </span><a href="javascript:;" class="active"></a>
                 </li>
