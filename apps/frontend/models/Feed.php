@@ -8,5 +8,5 @@ class Feed extends Eloquent {
     public function rposts() {
         return $this->hasMany('FeedPost', 'feed_id', 'id');
     }
-    
+
 }

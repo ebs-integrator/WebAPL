@@ -33,4 +33,15 @@ class Post extends Eloquent {
         return $ids;
     }
 
+    public static function prepareAll($with_feed = false) {
+        $query = DB::table(Post::$ftable)
+                ->join(PostLang::$ftable, Post::$ftable . ".id", '=', PostLang::$ftable . '.post_id')
+                ->where(PostLang::$ftable . '.lang_id', Language::getId())
+                ->orderBy(Post::$ftable . '.created_at', 'desc');
+        if ($with_feed) {
+            $query = $query->join(FeedPost::$ftable, FeedPost::$ftable . ".post_id", '=', Post::$ftable . ".id");
+        }
+        return $query;
+    }
+
 }

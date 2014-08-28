@@ -46,8 +46,8 @@ class PageController extends BaseController {
     }
 
     public function loadPage() {
-        $this->layout->content = View::make('sections.pages.default')->with($this->data);
-
+        $this->layout->content = PageView::run($this->data);
+ 
         return $this->layout;
     }
 

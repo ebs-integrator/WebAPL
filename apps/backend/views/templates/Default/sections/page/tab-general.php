@@ -17,7 +17,7 @@
                 <select name="page[view_mod]" class='form-control'>
                     <option value="">Default</option>
                     <?php foreach ($view_mods as $view_key => $view_mod) { ?>
-                    <option value="<?=$view_key;?>" <?= isset($page->view_mod) && $page->view_mod ? 'selected' : ''; ?>><?=$view_mod['name'];?></option>
+                    <option value="<?=$view_key;?>" <?= isset($page->view_mod) && $page->view_mod == $view_key ? 'selected' : ''; ?>><?=$view_mod['name'];?></option>
                     <?php } ?>
                 </select>
             </td>
