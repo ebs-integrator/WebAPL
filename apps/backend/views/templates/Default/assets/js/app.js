@@ -408,7 +408,7 @@
 
     /*----------- BEGIN chosen CODE -------------------------*/
 
-    $(".chzn-select").chosen();
+    $(".chzn-select").chosen({ width: '100%' });
     $(".chzn-select-deselect").chosen({
         allow_single_deselect: true
     });

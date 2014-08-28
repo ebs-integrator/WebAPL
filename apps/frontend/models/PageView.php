@@ -35,7 +35,7 @@ class PageView {
         }
         return static::defaultView($data);
     }
-
+    
     public static function defaultView($data) {
         return View::make('sections.pages.default')->with($data);
     }
