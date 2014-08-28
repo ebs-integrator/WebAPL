@@ -1352,14 +1352,14 @@ textarea {
         color:#27ae60;
         font:14px 'open_sansregular';
     }
-    .wrap.contact > .left{
+     .wrap .left.contact{
         width:360px;
     }
-    .wrap.contact > .right{
+    .right.contact{
         max-width:828px;
         width:80%;
     }
-    .wrap.contact > .left .subt,.wrap.contact > .right .subt{
+    .contact .subt{
         font:24px 'open_sansbold';
         color:#232323;
         height:57px;
@@ -1371,7 +1371,7 @@ textarea {
         position: relative;
     }
 
-    .wrap.contact > .left .subt:before,.wrap.contact > .right .subt:before{
+    .contact .subt:before{
         content:'';
         position:absolute;
         display:block;
@@ -1380,7 +1380,7 @@ textarea {
         bottom:-2px;
         border-left:3px solid #74b45a;
     }
-    .wrap.contact > .left .date_contact li{
+    .left.contact .date_contact li{
         border-bottom: 1px solid #f3f3f3;
         border-left: 0;
         line-height: 1.533;
@@ -1390,7 +1390,7 @@ textarea {
         height:46px;
         position: relative;
     }
-    .wrap.contact > .left .date_contact li:before{
+    .left.contact .date_contact li:before{
         content:'';
         position:absolute;
         display:block;
@@ -1399,34 +1399,34 @@ textarea {
         bottom:-1px;
         border-left: 3px solid #7c4d7c;
     }
-    .wrap.contact > .left .date_contact li p{
+     .left.contact .date_contact li p{
         margin:0px;
     }
-    .wrap.contact > .left .date_contact li p:first-child{
+    .left.contact .date_contact li p:first-child{
         font:15px 'open_sanssemibold';
         color:#484848;
         float: left;
         margin-top: -2px;
     }
-    .wrap.contact > .left .date_contact li p:last-child{
+     .left.contact .date_contact li p:last-child{
         font:17px 'open_sanssemibold';
         color:#484848;
         clear:both;
     }
-    .wrap.contact > .left .prp {
+    .left.contact .prp {
         width: 100%;
         border: 2px solid #dad6e2;
         height: 44px;
         margin-top: 6px;
         padding: 0px 19px;
     }
-    .wrap.contact > .left .prp a {
+    .left.contact .prp a {
         font: 15px 'open_sansbold';
         line-height: 40px;
         color: #8e7fab;
         padding-left :12px;
     }
-    .wrap.contact > .right .map_info {
+    .right.contact .map_info {
         display: inline-block;
         padding-right: 12px;
         border-bottom: 1px solid #f3f3f3;
@@ -1437,7 +1437,7 @@ textarea {
         position: relative;
     }
 
-    .wrap.contact > .right .map_info:before{
+    .right.contact .map_info:before{
         content:'';
         position:absolute;
         display:block;
@@ -1446,27 +1446,28 @@ textarea {
         bottom:-1px;
         border-left: 3px solid #7c4d7c;
     }
-    .wrap.contact > .right .map_info p{
+    .right.contact .map_info p{
         margin-bottom:0px;
     }
-    .wrap.contact > .right .map_info p:first-child{
+    .right.contact .map_info p:first-child{
         color:#484848;
         font:15px 'open_sansbold';
     }
-    .wrap.contact > .right .map_info p:last-child{
+    .right.contact .map_info p:last-child{
         color:#484848;
         font:15px 'open_sanssemibold';
     }
-    .wrap.contact > .left.chat {
+    .wrap .left.chat {
+        height:540px;
         width:360px;
         margin-top:65px;
         border:2px solid #e6e6e6;
         padding:13px 16px 27px;
     }
-    .wrap.contact > .left.chat img.mn{
+    .left.chat img.mn{
         float:left;
     }
-    .wrap.contact > .left.chat .chat_dot{
+    .left.chat .chat_dot{
         width:18px;
         height:61px;
         display: block;
@@ -1474,36 +1475,36 @@ textarea {
         background:url('../img/chat_dot.png') no-repeat center;
         margin-left:4px;
     }
-    .wrap.contact > .left.chat .chat_dot.active{
+   .left.chat .chat_dot.active{
         background:url('../img/chat_dot_active.png') no-repeat center;
     }
-    .wrap.contact > .left.chat .green{
+    .left.chat .green{
         font:33px 'open_sansbold';
         color:#b5c57e;
         line-height: 61px;
         margin-left:10px;
     }
-    .wrap.contact > .left.chat .violet{
+    .left.chat .violet{
         font:33px 'open_sansbold';
         color:#7c4d7c;
         line-height: 61px;
     }
-    .wrap.contact > .left.chat hr{
+    .left.chat hr{
         background: #e6e6e6;
         height:3px;
         width:100%;
         border-top:0px;
         margin:8px 0 10px 0;
     }
-    .wrap.contact > .left.chat .center{
+    .left.chat .center{
         color:#7a7a7a;
         font:13px 'open_sanssemibold_italic';
         text-align:center;
         padding-bottom: 11px;
         border-bottom: 1px solid #e6e6e6;
-        margin-bottom:35px;
+        margin-bottom:25px;
     }
-    .wrap.contact > .left.chat textarea{
+    .left.chat textarea{
         width:100%;
         height:100px;
         border: 1px solid #d9d9d9;
@@ -1512,7 +1513,7 @@ textarea {
         font:13px 'open_sanssemibold_italic';
         color:#959595;
     }
-    .wrap.contact > .left.chat input[type="submit"]{
+    .left.chat input[type="submit"]{
         width:280px;
         height:35px;
         background-color:#7c4d7c;
@@ -1522,16 +1523,16 @@ textarea {
         color:#fff;
         text-transform: uppercase;
     }
-    .wrap.contact > .left.chat .cont{
+    .left.chat .cont{
         margin:0 auto;
         width:280px;
     }
-    .wrap.contact > .right.form{
+    .contact.right.form{
         border-bottom:1px solid #e6e6e6;
         margin-top:65px;
         position: relative;
     }
-    .wrap.contact > .right.form:before{
+    .contact.right.form:before{
         content:'';
         position:absolute;
         display:block;
@@ -1559,10 +1560,11 @@ textarea {
     .form.green:before{
         border-left:3px solid #74b45a;
     }
-    .wrap.contact > .right.form .ftb{
+    .contact.right.form .ftb{
         font:24px 'open_sansbold';
-        padding:10px 60px 0px;
-        margin-bottom:0px;
+        margin-bottom:20px;
+        width:100%;
+        color:#000;
         text-transform: uppercase;    
     }
     .relative{
@@ -1575,6 +1577,7 @@ textarea {
     .form form{
         padding:0px 90px 40px 60px;
         position: relative;
+        height:540px;
     }
     .content input[type=text],.chat input[type=text]{
         margin-bottom:20px;
@@ -1606,7 +1609,7 @@ textarea {
     .wrap.compl > .left .form .content .left input[type=text],.wrap.compl > .left .form .content .right input[type=text]{
         margin-bottom:27px;
     }
-    .wrap.contact > .right.form .content textarea,.wrap.compl > .left .form .content textarea{
+    .form .content textarea{
         width:100%;
         font:13px 'open_sanssemibold_italic';
         color:#4c4c4c;
@@ -1620,24 +1623,24 @@ textarea {
     .wrap.compl > .left .form .content textarea{
         height: 135px;
     }
-    .form label{
+    .form label,.chat label{
         font:13px 'open_sanssemibold';
         color:#4c4c4c;
         margin-bottom: 3px;
         display: block;
     }
-    .wrap.contact .form label.code_lbl{
+    .form label.code_lbl{
         display:inline-block;
         margin-right:8px;
     }
-    .wrap.compl > .left .form .content .radio_b label{
+    .form .content .radio_b label{
         display:inline-block;        
         margin:0 20px 20px -5px;
     }
-    .wrap.contact > .right.form .right{
+    .contact.right.form .right{
         width:343px;
     }
-    .wrap.contact > .right.form .content span{
+    .contact.right.form .content span{
         color:#5e5e5e;
         font:13px 'open_sanssemibold';
     }
@@ -1660,7 +1663,7 @@ textarea {
     section > .wrap.ncd > .left > p > span{
         display:block;
     }
-    .wrap.contact > .right.form .content input[type=text].code,.wrap.contact .chat input[type=text].code{
+    .chat input[type=text].code{
         width:85px;
         height:30px;
         margin-right:8px;
@@ -1979,7 +1982,7 @@ textarea {
         color:#000000;
     }
 
-    section .wrap > .left .subt,section .wrap.faq > .left .subt{
+    section .wrap > .left .subt,ul.faq  .subt{
         font: 24px 'open_sansbold';
         color: #232323;
         height: 57px;
@@ -1987,7 +1990,7 @@ textarea {
         width: 100%;
         margin-bottom: 25px;
     }
-    section .wrap.faq > .left .subt{
+    ul.faq .subt{
         margin-bottom:18px;
     }
 
@@ -2067,14 +2070,14 @@ textarea {
         color:#74b45a;
         width:320px;
     }
-    section > .wrap.faq .left ul li{
+    ul.faq  li{
         margin-bottom:8px;
         border: 1px solid #efefef;
         border-left:0;
         padding: 10px 25px;
         position: relative;
     }
-    section > .wrap.faq .left ul li:before{
+    ul.faq li:before{
         content:'';
         position:absolute;
         display:block;
@@ -2085,44 +2088,44 @@ textarea {
         -webkit-transition: border-left 2s; /* For Safari 3.1 to 6.0 */
         transition: border-left 1s;
     }
-    section > .wrap.faq .left ul li.active:before{
+    ul.faq  li.active:before{
         border-left: 3px solid #74b45a;
     }
-    section > .wrap.faq .left ul li a{
+    ul.faq li a{
         font:20px 'open_sanssemibold';
         color:#232323;
         display:block;
         line-height: 25px;
     }
-    section > .wrap.faq .left ul li.active a{
+    ul.faq li.active a{
         color:#74b45a;
     }
-    section > .wrap.faq .left ul li a span{
+    ul.faq li a span{
         font:20px 'open_sanssemibold';
         color:#74b45a;
         padding:0px;
     }
-    section > .wrap.faq .left ul li p{
+    ul.faq li p{
         font:14px 'open_sanssemibold';
         color:#4b4b4b;
         display:none;
         margin-top:15px;
     }
-    section > .wrap.culture .left > ul li {
+    .culture.left > ul li {
         width:100%;
         height:110px;
         border-bottom:2px solid #f7f7f7;
         margin-bottom:40px;
     }
-    section > .wrap.culture .left ul li .left.img img{
+    .culture.left ul li .left.img img{
         margin-right:20px;
     }
-    section > .wrap.culture .left ul li .left.img{
+    .culture.left ul li .left.img{
         width:132px;
         height:89px;
         overflow: hidden;
     }
-    section > .wrap.culture .left ul li .right .box{
+    .culture.left ul li .right .box{
         float:left;
         border-left:2px solid #b5c57e;
         min-width: 210px;
@@ -2156,7 +2159,7 @@ textarea {
 /*    section > .wrap  .left .right{
         width: 82%;
     }*/
-    section > .wrap.culture .left ul li .right .box p,section > .wrap.culture .left ul li .right .box p a{
+    .culture.left ul li .right .box p,.culture.left ul li .right .box p a{
         font:14px 'open_sanssemibold';
         color:#673167;
         margin-bottom: 0px;
@@ -2229,10 +2232,7 @@ textarea {
         border-bottom:0px;
         margin-top:50px;
     }
-    .wrap.contact > .right.form .content{
-        padding:20px 90px 28px 60px;
-    }
-    .wrap.contact > .right.form .left{
+    .contact.right.form .left{
         width:241px;
     }
     table.atz ,table.atz  td{

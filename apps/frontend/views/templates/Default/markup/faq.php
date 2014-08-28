@@ -7,11 +7,11 @@
             <a href="javascript:;">FAQ pentru cetățeni</a>
         </div>
     </div>
-    <div class="wrap faq">
+    <div class="wrap">
         <p class="c_title">Audierea cetățenilor</p>
 
         <div class='left'>                
-            <ul class=''>
+            <ul class='faq'>
                 <li>
                     <a href="javascript:;"><span>1.</span> Doresc sa-mi reintregesc familia pe teritoriul Moldovei!</a>
                     <p>Potrivit legii azilului din România, în conformitate cu prevederile Convenţiei de la Geneva din 1951, statutul de refugiat se recunoaşte, la cerere, cetăţeanului străin care, în urma unei temeri bine întemeiate de a fi persecutat pe motive de rasă, religie, naţionalitate, opinii politice sau apartenenţă la un anumit grup social, se află în afara ţării de origine şi care nu poate sau, datorită acestei temeri, nu doreşte protecţia acestei ţări, precum şi persoanei fără cetăţenie care, fiind în afara ţării în care îşi avea reşedinţa obişnuită datorită aceloraşi motive menţionate mai sus, nu poate sau, datorită respectivei temeri, nu doreşte să se reîntoarcă.</p>
@@ -55,11 +55,6 @@
 
 
             </ul>
-
-
-
-
-
         </div>
 
         <div class='right'>
