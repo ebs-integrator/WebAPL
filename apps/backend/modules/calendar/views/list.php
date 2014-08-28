@@ -47,9 +47,18 @@ View::make('sections/jqgrid/form')->with(array(
 ));
 ?>
 
-<form action="<?= url('calendar/create'); ?>">
+<form action="<?= url('calendar/create'); ?>" method='post'>
+    <div class='c20'></div>
+    <h4>Create new event</h4>
     <?php foreach (\Core\APL\Language::getList() as $lang) { ?>
-        <input name="lang[<?= $lang->id; ?>][name]" placeholder="Event name in <?= $lang->name; ?>"/>
+        <input class="form-control" name="lang[<?= $lang->id; ?>][name]" placeholder="Event name in <?= $lang->name; ?>"/>
+        <div class='c10'></div>
     <?php } ?>
-    <button>Creaza eveniment</button>
+    <div class='c20'></div>
+    <input class='form-control' type="text" name="general[period]" placeholder="Period" />
+    <div class='c10'></div>
+    <input class='form-control' type='text' name='general[date]' placeholder="Data" value='<?=date("Y-m-d H:i:s");?>' />
+    <br>
+    <button class="btn btn-success">Creaza eveniment</button>
+    <div class='c20'></div>
 </form>

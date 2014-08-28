@@ -25,6 +25,10 @@ class Template {
             'promisiuni_primar' => array(
                 'name' => 'Lista de promisiuni a primarului',
                 'function' => array('PageView', 'promisesMod')
+            ),
+            'locations_list' => array(
+                'name' => 'Lista cu locatii',
+                'function' => array('PageView', 'locationsList')
             )
         )
     );

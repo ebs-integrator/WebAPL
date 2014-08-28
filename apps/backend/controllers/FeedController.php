@@ -6,10 +6,10 @@ class FeedController extends BaseController {
         parent::__construct();
 
         $this->beforeFilter(function() {
-                    if (!Auth::check()) {
-                        return Redirect::to('auth');
-                    }
-                });
+            if (!Auth::check()) {
+                return Redirect::to('auth');
+            }
+        });
 
         $this->taxonomy = Taxonomy::get('article');
     }
@@ -268,22 +268,18 @@ class FeedController extends BaseController {
         $jqgrid = new jQgrid(Post::$ftable);
         $jqgrid->use_populate_count = true;
         echo $jqgrid->populate(function ($start, $limit) {
-                    $feed_id = Session::get('feed_id');
-                    $list = DB::table(Post::$ftable)
-                            ->join(PostLang::$ftable, Post::$ftable . ".id", '=', PostLang::$ftable . '.post_id')
-                            ->join(FeedPost::$ftable, FeedPost::$ftable . ".post_id", '=', Post::$ftable . ".id")
-                            ->select(Post::$ftable . '.id', PostLang::$ftable . '.title', Post::$ftable . '.created_at', Post::$ftable . '.views')
-                            ->where(PostLang::$ftable . '.lang_id', Language::getId())
-                            ->where(Post::$ftable . '.taxonomy_id', $this->taxonomy->id)
-                            ->where(FeedPost::$ftable . ".feed_id", $feed_id)
-                            ->orderBy(Post::$ftable . '.created_at', 'desc');
+            $feed_id = Session::get('feed_id');
+            $list = Post::prepareAll(true)
+                    ->select(Post::$ftable . '.id', PostLang::$ftable . '.title', Post::$ftable . '.created_at', Post::$ftable . '.views')
+                    ->where(Post::$ftable . '.taxonomy_id', $this->taxonomy->id)
+                    ->where(FeedPost::$ftable . ".feed_id", $feed_id);
+            
+            if ($limit) {
+                $list = $list->skip($start)->take($limit);
+            }
 
-                    if ($limit) {
-                        $list = $list->skip($start)->take($limit);
-                    }
-
-                    return $list->get($list);
-                });
+            return $list->get($list);
+        });
         $this->layout = null;
     }
 
