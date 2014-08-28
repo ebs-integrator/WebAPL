@@ -5,9 +5,9 @@
             <a href="javascript:;">Contacte</a>
         </div>
     </div>
-    <div class='wrap contact'>
+    <div class='wrap'>
         <p class="c_title">contacte</p>
-        <div class='left'>
+        <div class='left contact'>
             <p class='subt'>Legatură directă</p>
             <ul class='date_contact'>
                 <li>
@@ -36,7 +36,7 @@
                 <a href="javascript:;">Orarul rutelor</a>
             </div>
         </div>
-        <div class='right'>
+        <div class='right contact'>
             <p class='subt'>Adresa</p>
             <div id="map-canvas2" style="width:820px; height:307px;"></div>
             <div class="map_info">
@@ -71,11 +71,11 @@
                 </div>
             </form>
         </div>
-        <div class='right form'>
+        <div class='right form contact'>
             <form action="" method="">
                 <p class="ftb">Scrieți-ne direct</p>
 
-                <div class="content">
+                <div class="content green">
                     <div class="nmpm">
                         <label>Numele Prenume*</label>
                         <input type="text">

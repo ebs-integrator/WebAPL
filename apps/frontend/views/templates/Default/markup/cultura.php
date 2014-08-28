@@ -7,14 +7,14 @@
             <a href="javascript:;">Teatre</a>
         </div>
     </div>
-    <div class="wrap culture">
+    <div class="wrap">
         <p class="c_title">Turism și cultură</p>
 
-        <div class='left'>                
+        <div class='left culture'>                
             <ul>
                 <li>
                     <div class="left img">
-                        <img src="<?=res('assets/img/satiric.png');?>" />
+                        <img src="<?= res('assets/img/satiric.png'); ?>" />
                     </div>
                     <div class="right">
                         <p>Teatrul "Eugene Ionesco"	</p>
@@ -34,7 +34,7 @@
                 </li>
                 <li>
                     <div class="left img">
-                        <img src="<?=res('assets/img/satiric.png');?>" />
+                        <img src="<?= res('assets/img/satiric.png'); ?>" />
                     </div>
                     <div class="right">
                         <p>SATIRICUS Ion Luca Caragiale</p>
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                     <div class="left img">
-                        <img src="<?=res('assets/img/satiric.png')?>" />
+                        <img src="<?= res('assets/img/satiric.png') ?>" />
                     </div>
                     <div class="right">
                         <p>Teatrul "Eugene Ionesco"	</p>
@@ -74,7 +74,7 @@
                 </li>
                 <li>
                     <div class="left img">
-                        <img src="<?=res('assets/img/satiric.png');?>" />
+                        <img src="<?= res('assets/img/satiric.png'); ?>" />
                     </div>
                     <div class="right">
                         <p>SATIRICUS Ion Luca Caragiale</p>

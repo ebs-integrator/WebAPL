@@ -12,15 +12,15 @@ $(document).ready(function() {
         pager: false,
         auto: true
     });
-    $(".wrap.faq .left ul li").click(function() {
-        $('.wrap.faq .left ul li.active').removeClass('active');
+    $("ul.faq  li").click(function() {
+        $('ul.faq li.active').removeClass('active');
         if ($(this).find('p').hasClass('active')) {
-            $(".wrap.faq .left ul li p.active").slideToggle();
-            $(".wrap.faq .left ul li p.active").removeClass('active');
+            $("ul.faq  li p.active").slideToggle();
+            $("ul.faq li p.active").removeClass('active');
         }
         else {
-            $(".wrap.faq .left ul li p.active").slideToggle();
-            $(".wrap.faq .left ul li p.active").removeClass('active');
+            $("ul.faq li p.active").slideToggle();
+            $("ul.faq  p.active").removeClass('active');
             $(this).find('p').addClass('active').slideToggle();
             $(this).addClass('active');
         }
