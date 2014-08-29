@@ -9,12 +9,12 @@
     <div class="wrap">
         <p class="c_title">anunțuri</p>
         <div class="left">
-            <div class="a_box">
+            <div class="a_box v_g">
                 <p class="title">Casa noua!!!! Urgent!!!!</p>
                 <div class="hr_dbl"></div>
                 <div class="left">
 
-                    <div class="info">
+                    <div class="info unic">
                         <div class="img">
                             <img src="<?=res('assets/img/anunt.png');?>">
                             <div class="details">

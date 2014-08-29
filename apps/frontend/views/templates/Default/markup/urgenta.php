@@ -6,9 +6,9 @@
             <a href="javascript:;">Date de contact utile în situații de urgență</a>
         </div>
     </div>
-    <div class="wrap emrg">
+    <div class="wrap">
         <p class="c_title">Date de contact utile</p>
-        <div class="left">
+        <div class="left emrg">
             <p class="ul_title">
                 <span class="left">Telefon	</span>
                 <span class="right">Servicii de asistenta</span>

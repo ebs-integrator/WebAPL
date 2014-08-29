@@ -7,7 +7,7 @@
             <a href="javascript:;">Comisiile primăriei</a>
         </div>
     </div>
-    <div class="wrap com">
+    <div class="wrap">
         <p class="c_title">Primăria</p>
 
         <div class='left'>                
