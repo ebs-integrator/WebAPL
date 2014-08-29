@@ -12,6 +12,7 @@ use Core\APL\Actions,
     PersonGroup,
     PersonGroupLang,
     PersonGroupPostModel,
+    PersonRelModel,
     DB,
     Redirect,
     Exception;
@@ -50,11 +51,12 @@ class Person extends \Core\APL\ExtensionController {
         Actions::post('person/save_dynamic_fields', array('before' => 'auth', array($this, 'save_dynamic_fields')));
 
         Actions::post('person/save_post_attach', array('before' => 'auth', array($this, 'save_post_attach')));
-        
+        Actions::post('person/save_person_groups', array('before' => 'auth', array($this, 'save_person_groups')));
+
         // Register new action
         Actions::register('construct_left_menu', array($this, 'left_menu_item'));
         Actions::register('page_attachment', array($this, 'page_group_attachment'));
-        
+
         Template::registerViewMethod('page', 'persons_list', 'Tabel persoane (nume, apartenenta, contacte, sector)', null, true);
         Template::registerViewMethod('page', 'group_with_persons', 'Grupe de persoane', null, true);
 
@@ -167,6 +169,7 @@ class Person extends \Core\APL\ExtensionController {
                 $personGroupLang = PersonGroupLang::find($glang_id);
                 if ($personGroupLang) {
                     $personGroupLang->name = $langs['name'];
+                    $personGroupLang->description = $langs['description'];
                     $personGroupLang->save();
                 } else {
                     throw new Exception("PersonGroupLang not found #{$glang_id}, DATA: " . serialize($langs));
@@ -175,6 +178,7 @@ class Person extends \Core\APL\ExtensionController {
                 // if groupLang to exist, create new
                 $personGroupLang = new PersonGroupLang;
                 $personGroupLang->name = $langs['name'];
+                $personGroupLang->description = $langs['description'];
                 $personGroupLang->lang_id = $lang_id;
                 $personGroupLang->group_id = $id;
                 $personGroupLang->save();
@@ -189,6 +193,7 @@ class Person extends \Core\APL\ExtensionController {
             foreach ($langs as $lang_id => $lang) {
                 $personGroupLang = new PersonGroupLang;
                 $personGroupLang->name = $lang['name'];
+                $personGroupLang->description = $lang['description'];
                 $personGroupLang->lang_id = $lang_id;
                 $personGroupLang->group_id = $id;
                 $personGroupLang->save();
@@ -206,7 +211,12 @@ class Person extends \Core\APL\ExtensionController {
         $data = array(
             'person' => PersonModel::find($id),
             'person_lang' => array(),
-            'module' => $this->module_name
+            'module' => $this->module_name,
+            'person_groups' => PersonGroup::join(PersonGroupLang::getTableName(), PersonGroupLang::getField("group_id"), '=', PersonGroup::getField('id'))
+                    ->select(PersonGroup::getField("id"), PersonGroupLang::getField("name"))
+                    ->where(PersonGroupLang::getField("lang_id"), \Core\APL\Language::getId())
+                    ->get(),
+            'selected_groups' => array()
         );
 
         if ($data['person']) {
@@ -214,10 +224,27 @@ class Person extends \Core\APL\ExtensionController {
             foreach ($personLangs as $personLang) {
                 $data['person_lang'][$personLang->lang_id] = $personLang;
             }
+
+            $groups = PersonRelModel::where('person_id', $data['person']->id)->get();
+            foreach ($groups as $group) {
+                $data['selected_groups'][] = $group->group_id;
+            }
         }
 
         $this->layout->content = Template::moduleView($this->module_name, 'views.form', $data);
         return $this->layout;
+    }
+    
+    public function save_person_groups() {
+        $person_id = Input::get('id');
+        $groups = Input::get('groups');
+        PersonRelModel::where('person_id', $person_id)->delete();
+        foreach ($groups as $group) {
+            PersonRelModel::insert(array(
+                'person_id' => $person_id,
+                'group_id' => $group
+            ));
+        }
     }
 
     /**
@@ -352,7 +379,7 @@ class Person extends \Core\APL\ExtensionController {
         foreach ($selected_groups as $item) {
             $wdata['selected_groups'][] = $item->group_id;
         }
-        
+
         echo Template::moduleView($this->module_name, 'views.attachment-group-page', $wdata);
     }
 

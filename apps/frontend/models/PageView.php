@@ -30,7 +30,7 @@ class PageView {
     public static function locationsList($data) {
         if ($data['page']->feed_id) {
             Post::$taxonomy = 2;
-            $wdata["feedPosts"] = Post::postsFeed($data['page']->feed_id);
+            $wdata["feedPosts"] = Post::postsFeed($data['page']->feed_id, true);
             $data["page"]->text = View::make("sections.pages.modview.locations")->with($wdata);
         }
         return static::defaultView($data);

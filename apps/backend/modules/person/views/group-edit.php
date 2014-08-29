@@ -25,6 +25,12 @@
                             <input type="text" name="lang[name]" class="form-control" value="<?= isset($group_lang[$lang->id]->name) ? $group_lang[$lang->id]->name : ''; ?>" />
                         </td>
                     </tr>
+                    <tr>
+                        <th>Description:</th>
+                        <td>
+                            <textarea name="lang[description]" class="form-control"><?= isset($group_lang[$lang->id]->description) ? $group_lang[$lang->id]->description : ''; ?></textarea>
+                        </td>
+                    </tr>
                 </table>
                 
             </form>

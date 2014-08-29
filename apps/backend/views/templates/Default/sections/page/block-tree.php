@@ -1,6 +1,6 @@
 <?php foreach ($items as $item) { ?>
     <?php
-    $nodeName = isset($item['lang']['name']) && $item['lang']['name'] ? $item['lang']['name'] : "Page #{$item->id}";
+    $nodeName = isset($item['lang']['title']) && $item['lang']['title'] ? $item['lang']['title'] : "Page #{$item->id}";
     ?>
     <?php if (count($item['list'])) { ?>
         <li>

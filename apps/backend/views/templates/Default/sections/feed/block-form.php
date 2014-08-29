@@ -10,7 +10,7 @@
     <tr>
         <th>Limit type</th>
         <td>
-            <?=Form::select('general[limit_type]', array('0' => 'Pagination', '1' => 'Strict limit'), isset($feed->limit_type) ? $feed->limit_type : '', array('class'=>'form-control'));?>
+            <?= Form::select('general[limit_type]', array('0' => 'Pagination', '1' => 'Strict limit'), isset($feed->limit_type) ? $feed->limit_type : '', array('class' => 'form-control')); ?>
         </td>
     </tr>
     <tr>
@@ -20,13 +20,13 @@
     <tr>
         <th>Order type</th>
         <td>
-            <?=Form::select('general[order_type]', array('none'=>'none','asc'=>'ASCENDENT','desc'=>'DESCENDENT','rand()'=>'RANDOM'), isset($feed->order_type) ? $feed->order_type : '', array('class'=>'form-control'));?>
+            <?= Form::select('general[order_type]', array('none' => 'none', 'asc' => 'ASCENDENT', 'desc' => 'DESCENDENT'), isset($feed->order_type) ? $feed->order_type : '', array('class' => 'form-control')); ?>
         </td>
     </tr>
     <tr>
         <th>Order by</th>
         <td>
-            <?=Form::select('general[order_by]', array('0'=>'Date','1'=>'Title','2'=>'Views'), isset($feed->order_by) ? $feed->order_by : '', array('class'=>'form-control'));?>
+            <?= Form::select('general[order_by]', array('none' => 'none', 'created_at' => 'Date', 'title' => 'Title', 'views' => 'Views'), isset($feed->order_by) ? $feed->order_by : '', array('class' => 'form-control')); ?>
         </td>
     </tr>
 </table>
