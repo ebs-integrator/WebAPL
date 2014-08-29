@@ -30,7 +30,10 @@ class Template {
                 'name' => 'Lista cu locatii',
                 'function' => array('PageView', 'locationsList')
             ),
-            'accordion_list' =>
+            'accordion_list' => array(
+                'name' => 'Lista acordion',
+                'function' => array('PageView', 'accordionList')
+            )
         )
     );
     

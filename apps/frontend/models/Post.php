@@ -127,23 +127,44 @@ class Post extends Eloquent {
         }
     }
 
-    public static function postsFeed($feed_id) {
-        $posts = Post::prepareQuery()
-                ->join(FeedPost::getTableName(), Post::getField("id"), '=', FeedPost::getField("post_id"))
-                ->where(FeedPost::getField("feed_id"), $feed_id)
-                ->select(
-                        Post::columns() + array(FeedPost::getField("feed_id"))
-                )
-                ->get();
-        
-        foreach ($posts as &$post) {
-            $fields = FeedField::leftJoin(FeedFieldValue::getTableName(), FeedFieldValue::getField("feed_field_id"), "=", FeedField::getField("id"))
-                    ->whereIn(FeedFieldValue::getField("lang_id"), array(0, \Core\APL\Language::getId()))
-                    ->where(FeedFieldValue::getField("post_id"), $post->id)
-                    ->select(FeedField::getField("fkey"), FeedFieldValue::getField("value"))
-                    ->get();
-            foreach ($fields as $field) {
-                $post[$field->fkey] = $field->value;
+    public static function postsFeed($feed_id, $with_cover = false) {
+        $feed = Feed::where('id', $feed_id)
+                ->where('enabled', 1)
+                ->get()
+                ->first();
+
+        $posts = array();
+
+        if ($feed) {
+            $posts = Post::prepareQuery()
+                    ->join(FeedPost::getTableName(), Post::getField("id"), '=', FeedPost::getField("post_id"))
+                    ->where(FeedPost::getField("feed_id"), $feed_id)
+                    ->select(
+                    Post::columns() + array(FeedPost::getField("feed_id"))
+            );
+                      
+            if ($feed->order_type != 'none' && $feed->order_by != 'none') {
+                $posts = $posts->orderBy($feed->order_by, $feed->order_type);
+            }
+
+            $posts = $posts->get();
+            
+            foreach ($posts as &$post) {
+                $fields = FeedField::leftJoin(FeedFieldValue::getTableName(), FeedFieldValue::getField("feed_field_id"), "=", FeedField::getField("id"))
+                        ->whereIn(FeedFieldValue::getField("lang_id"), array(0, \Core\APL\Language::getId()))
+                        ->where(FeedFieldValue::getField("post_id"), $post->id)
+                        ->select(FeedField::getField("fkey"), FeedFieldValue::getField("value"))
+                        ->get();
+                foreach ($fields as $field) {
+                    $post[$field->fkey] = $field->value;
+                }
+                
+                if ($with_cover) {
+                    $post['cover'] = Files::where(array(
+                        'module_name' => 'post_cover',
+                        'module_id' => $post->id
+                    ))->get()->first();
+                }
             }
         }
 
