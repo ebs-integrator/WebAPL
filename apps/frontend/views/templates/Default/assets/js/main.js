@@ -26,15 +26,15 @@ $(document).ready(function() {
         }
     });
 
-    $(".wrap.dcr .left ul li a").click(function() {
-        $(".wrap.dcr .left ul  li.active").removeClass('active');
+    $("ul.dcr li a").click(function() {
+        $("ul.dcr  li.active").removeClass('active');
         if ($(this).parent().find('.dcr_box').hasClass('active')) {
-            $(".wrap.dcr .left ul li .dcr_box.active").slideToggle();
-            $(".wrap.dcr .left ul li .dcr_box.active").removeClass('active');
+            $("ul.dcr li .dcr_box.active").slideToggle();
+            $("ul.dcr li .dcr_box.active").removeClass('active');
         }
         else {
-            $(".wrap.dcr .left ul li .dcr_box.active").slideToggle();
-            $(".wrap.dcr .left ul li .dcr_box.active").removeClass('active');
+            $("ul.dcr li .dcr_box.active").slideToggle();
+            $("ul.dcr li .dcr_box.active").removeClass('active');
             $(this).parent().find('.dcr_box').addClass('active').slideToggle();
             $(this).parent().addClass('active');
         }

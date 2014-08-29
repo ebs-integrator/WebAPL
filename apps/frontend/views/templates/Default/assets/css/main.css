@@ -634,6 +634,10 @@ textarea {
     #map-canvas .gm-style > div:nth-child(2){
         display:none;
     }
+    .info .img{
+        float:left;
+        margin-right:30px;
+    }
     header .contact .cont .cont_form .form_title{
         height:41px;
         font:15px 'open_sansbold';
@@ -675,7 +679,7 @@ textarea {
         font:14px 'open_sansbold';
         margin-top:10px;
     }
-     .menu{
+    .menu{
         width:100%;
         min-height:346px;
         margin-top:15px;
@@ -685,7 +689,7 @@ textarea {
         position: relative;
         overflow: hidden;
     }
-     .menu img.backg{
+    .menu img.backg{
         position:absolute;
         z-index: -1;
         top:-330px;
@@ -693,7 +697,7 @@ textarea {
         right:0px;
         bottom:0px;
     }
-     .menu .box{
+    .menu .box{
         width:260px;
         min-height:225px;
         background-color:#fff;
@@ -701,23 +705,23 @@ textarea {
         margin-right:75px;
         display: inline-block;
     }
-     .menu .box:last-child{
+    .menu .box:last-child{
         margin-right:0px;
     }
-     .menu .box .menu_img{
+    .menu .box .menu_img{
         height:154px;
         border-bottom: 5px solid #673268;
         line-height: 154px;
         text-align: center;
     }
-     .menu .box .menu_title{
+    .menu .box .menu_title{
         text-transform: uppercase;
         height:71px;
         text-align: center;
         border-bottom: 9px solid #fbfbfb;
         margin-bottom: 0px;
     }
-     .menu .box .menu_title a{
+    .menu .box .menu_title a{
         color:#01374c;
         font:24px 'open_sansbold';
         text-decoration: none;
@@ -726,11 +730,11 @@ textarea {
         padding: 5px 24px;
         display: block;
     }
-     .menu  .box .menu_title.active {
+    .menu  .box .menu_title.active {
         background-color:#673268;
         border-bottom: 9px solid #673268;
     }
-     .menu  .box .menu_title.active a{
+    .menu  .box .menu_title.active a{
         color:#fff;
     }
     .menu .wrap{
@@ -752,7 +756,7 @@ textarea {
         position: relative;
         border-left:0px;
     }
-     .left > article:before{
+    .left > article:before{
         content:'';
         position:absolute;
         display:block;
@@ -762,7 +766,7 @@ textarea {
         border-left:3px solid #cebfed;
     }
 
-     .left > article:hover:before{
+    .left > article:hover:before{
         border-left:3px solid #cfd7a6;
     }
 
@@ -775,10 +779,10 @@ textarea {
         background-color: #fcfcfc;
 
     }
-     .right > article.atn .bx-wrapper .bx-viewport{
+    .right > article.atn .bx-wrapper .bx-viewport{
         height:140px!important;
     }
-     .right > article.atn li{
+    .right > article.atn li{
         position: relative;
         background: none;
         padding: 0px;        
@@ -794,7 +798,7 @@ textarea {
         margin-top:15px;
         margin-bottom: 20px;
     }
-     .right > article.atn .data p{
+    .right > article.atn .data p{
         display: inline-block;
         background: #673167;
         color:#fff;
@@ -804,7 +808,7 @@ textarea {
         padding:0 5px;
         line-height: 21px;
     }
-     .right > article.atn .data span:before{
+    .right > article.atn .data span:before{
         content:url('../img/v_arrow.png');
         float:left;
     }
@@ -816,7 +820,7 @@ textarea {
     .right > article.atn p{
         margin:0px;
     }
-     .right > article.atn p.info{
+    .right > article.atn p.info{
         font:13px 'open_sanssemibold_italic';
         height: 80px;
         overflow: hidden;
@@ -830,7 +834,7 @@ textarea {
         position:relative;
     }
 
-     .left > article:nth-child(2n){
+    .left > article:nth-child(2n){
         margin-left: 60px;
     }
     .global.left{
@@ -927,7 +931,7 @@ textarea {
     .right > article.news .hr{
         border-color:#74b45a;
     }
-     .right > article .ttl{        
+    .right > article .ttl{        
         padding-right:20px;
         margin-bottom: 0px;
         font:26px 'open_sansbold';
@@ -956,7 +960,7 @@ textarea {
         font:14px 'open_sanssemibold';
         color:#2b2b2b;
     }
-     .right > article.doc table tr:last-child{
+    .right > article.doc table tr:last-child{
         border:none;
     }
     .right > article.doc table tr td:last-child{
@@ -1256,11 +1260,11 @@ textarea {
         color:#000000;
         line-height: 20px;
     }
-    section .wrap.pda > .left p{
+    .pda p{
         color:#4b4b4b;
         font:17px 'open_sanssemibold';
     }
-    section .wrap.pda > .left p.sub_title{
+    .pda p.sub_title{
         color:#000;
         font:24px 'open_sanssemibold';
     }
@@ -1271,18 +1275,21 @@ textarea {
         display:block;
     }
 
-    .city .personal .img,section > .wrap.vice > .left .img{
+    .personal .img{
         width:170px;
         height:213px;
         position: relative;
         float: left;
         overflow: hidden;
     }
-    section > .wrap.vice > .left .img{
+    .vice .img{
         width:210px;
         height:264px;
+        position: relative;
+        float: left;
+        overflow: hidden;
     }
-    .city .personal .img::before ,section > .wrap.vice > .left .img::before{
+    .personal .img::before ,.vice .img::before{
         content: "";
         position: absolute;
         top: 0;
@@ -1304,7 +1311,7 @@ textarea {
         color:#7c4d7c;
         margin-bottom:0px;
     }
-    .city .personal{
+    .personal{
         width:435px;
         padding-right:20px;
         margin-bottom: 60px;
@@ -1352,7 +1359,7 @@ textarea {
         color:#27ae60;
         font:14px 'open_sansregular';
     }
-     .wrap .left.contact{
+    .wrap .left.contact{
         width:360px;
     }
     .right.contact{
@@ -1399,7 +1406,7 @@ textarea {
         bottom:-1px;
         border-left: 3px solid #7c4d7c;
     }
-     .left.contact .date_contact li p{
+    .left.contact .date_contact li p{
         margin:0px;
     }
     .left.contact .date_contact li p:first-child{
@@ -1408,7 +1415,7 @@ textarea {
         float: left;
         margin-top: -2px;
     }
-     .left.contact .date_contact li p:last-child{
+    .left.contact .date_contact li p:last-child{
         font:17px 'open_sanssemibold';
         color:#484848;
         clear:both;
@@ -1475,7 +1482,7 @@ textarea {
         background:url('../img/chat_dot.png') no-repeat center;
         margin-left:4px;
     }
-   .left.chat .chat_dot.active{
+    .left.chat .chat_dot.active{
         background:url('../img/chat_dot_active.png') no-repeat center;
     }
     .left.chat .green{
@@ -1570,13 +1577,15 @@ textarea {
     .relative{
         position:relative;
     }
-    .wrap.compl > .left .form .relative img{
+    .compl.form .relative img{
         position: absolute;
         left: 60px;
     }
     .form form{
         padding:0px 90px 40px 60px;
         position: relative;
+    }
+    .contact .form form{
         height:540px;
     }
     .content input[type=text],.chat input[type=text]{
@@ -1606,7 +1615,7 @@ textarea {
     .wrap .form .apt{
         width:520px;
     }
-    .wrap.compl > .left .form .content .left input[type=text],.wrap.compl > .left .form .content .right input[type=text]{
+    .compl.form .content .left input[type=text],.compl.form .content .right input[type=text]{
         margin-bottom:27px;
     }
     .form .content textarea{
@@ -1620,7 +1629,7 @@ textarea {
         border-left:3px solid #d9d9d9;
         margin-bottom: 20px;
     }
-    .wrap.compl > .left .form .content textarea{
+    .compl.form .content textarea{
         height: 135px;
     }
     .form label,.chat label{
@@ -1647,20 +1656,20 @@ textarea {
     .form_b{
         margin-top:15px;
     }
-    section > .wrap.ncd > .left > h1{
+    .ncd.left > h1{
         font:24px 'open_sanssemibold';
         margin-top:35px;
         margin-bottom: 25px;
     }
-    section > .wrap.ncd > .left > p{
+    .ncd.left > p{
         font:17px 'open_sanssemibold';
         color:#4c4c4c;
     }
-    section > .wrap.ncd > .left img{
+    .ncd.left img{
         display: block;
         margin-top:30px;
     }
-    section > .wrap.ncd > .left > p > span{
+    .ncd.left > p > span{
         display:block;
     }
     .chat input[type=text].code{
@@ -1676,7 +1685,7 @@ textarea {
         border:1px solid #d9d9d9;
         margin-right:12px;
     }
-    .wrap.compl > .left .form .right{
+    .compl.form .right{
         margin-right: 120px;
     }
     .form  input[type=submit]{
@@ -1713,7 +1722,12 @@ textarea {
         left:-1px;
         top:-2px;
         bottom:-1px;
+    }
+    .a_box.v_g:before{
         border-left:3px solid #b6c57e;
+    }
+    .a_box.g_g:before{
+        border-left:3px solid #cdcdcd;
     }
     .a_box .title{
         font:24px 'open_sansbold';
@@ -1721,7 +1735,7 @@ textarea {
         text-transform: uppercase;
         margin-bottom: 28px;
     }
-    .a_box .hr_dbl{
+    .hr_dbl{
         height:3px;
         border-top:1px solid #efefef;
         border-bottom:1px solid #efefef;
@@ -1738,33 +1752,42 @@ textarea {
         line-height: 60px;
         padding-left:30px;
     }
-/*    .a_box .left{
-        max-width:350px;
-    }*/
+    /*    .a_box .left{
+            max-width:350px;
+        }*/
     .a_box .info{
         font:17px 'open_sanssemibold';
         color:#343434;
         margin-top:-5px;
         margin-bottom: 0px;
+        max-height: 235px;
+        overflow: hidden;
+    }
+    .a_box .info.unic{
+        max-height:100%;
     }
     .a_box .details{
         height:21px;
         width:100%;
-        background:#8e588e;
         color:#fff;
         line-height:31px;
+    }
+    .a_box.v_g .details{        
+        background:#8e588e;
     }
     .a_box .details p{
         margin:0px;
         padding:2px 10px 0 7px; 
         height:21px;
     }
-
+    .a_box.v_g .details p.data{        
+        background-color: #673167;
+    }
     .a_box .details p.data{
         float:left;
         font:12px 'open_sanssemibold';
-        background-color: #673167;
         position:relative;
+        color: #fff;
     }
     .a_box .details p.data .arrow{
         position: absolute;
@@ -1774,6 +1797,7 @@ textarea {
     .a_box .details p.cont{
         float:right;
         font:12px 'open_sansregular';
+        color: #fff;
     }
     ul.a_n li a{
         width:100%;
@@ -1853,7 +1877,7 @@ textarea {
         pointer-events: none;
         cursor: default;
     }
-    .wrap.m_a > .right .more{
+    .m_a.right .more{
         width: 25px;
         height: 25px;
         background: url('../img/more.png')no-repeat center;
@@ -1861,17 +1885,17 @@ textarea {
         right: 15px;
         position: absolute;
     }
-    .wrap.m_a > .right hr{
+    .m_a.right hr{
         background:#f2f2f2;
         border-top:0px;
         height: 2px;
         width:100%;
     }
-    .wrap.u_a > .left .img {
+    .u_a {
         display: inline;
         float: left;        
         margin-right: 22px;
-
+        margin-top:20px;
     }
     ul.detail li{
         margin-bottom:3px;
@@ -1909,32 +1933,53 @@ textarea {
     ul.detail li.location a{
         background:url('../img/find.png') no-repeat 22px center;
     }
-    .wrap.m_a.news > .left .a_box .title{
+    .m_a.left .a_box .title{
         text-transform: initial;
     }
-    .wrap.m_a.news > .left .a_box{
+    .m_a.left .a_box{
         border-left: 0;
     }
-    .wrap.m_a.news > .left .a_box .details ,section > .wrap.u_a.u_s .left .details{
+    .a_box.g_g .details{
         background: #cbd8a0;
     }
-    .wrap.m_a.news > .left .a_box .details p.data,section > .wrap.u_a.u_s .left .details p.data{
+    .u_a .details{
+        background: #cbd8a0;
+        height: 21px;
+    }
+    .u_a p.data {
+        padding: 0 8px;
+        position: relative;
+        float: left;
+        height: 21px;
+        line-height: 21px;
         background-color: #74b45a;
     }
-    .wrap.m_a.news > .left .pag{
-        margin-bottom: 60px;
+    .a_box.g_g .details p.data{
+        background-color: #74b45a;
     }
-    .wrap.u_a.u_s > .left .det_news{
+    .u_a .data img{
+        position: absolute;
+        right: -8px;
+        top: 0;
+    }
+    .u_a .cont{
+        float:right;
+    }
+    .det_news{
         font:24px 'open_sansbold';
     }
-    section > .wrap.u_a.u_s .left .img img{
+    .u_a img{
         max-width: 870px;
         height:auto;
     }
-    section > .wrap.u_a.u_s .left .details {
+    .u_a .details {
         margin-top:-1px;
     }
-    section > .wrap.u_a.u_s .left div.cont p{
+    .u_a .data{
+        color:#fff;
+        font:12px 'open_sanssemibold';
+    }
+    .u_a .cont{
         color:#343434;
         font:17px 'open_sanssemibold';
         margin-top: 20px;
@@ -1994,23 +2039,18 @@ textarea {
         margin-bottom:18px;
     }
 
-    section .wrap.compl > .right {
-        width: 350px;
-    }
-    section .wrap.compl > .left .compl_list li{
-    }
-    section .wrap.compl > .left .compl_list li a{
+    .compl_list li a{
         border-bottom:2px solid #f7f7f7;
         height:110px;
         display:block;
         margin-bottom: 25px;
     }
-    section .wrap.compl > .left .compl_list li a span img {
+    .compl_list li a span img {
         position: absolute;
         right: -9px;
         top: 0px;
     }
-    section .wrap.compl > .left .compl_list li a .compl_title{
+    .compl_list li a .compl_title{
         font: 18px 'open_sansbold';
         display:inline-block;
         color:#7c4d7c;
@@ -2018,13 +2058,13 @@ textarea {
         margin-bottom:0px;
         line-height:51px;
     }
-    section .wrap.compl > .left .compl_list li a .compl_info{
+    .compl_list li a .compl_info{
         font:17px 'open_sanssemibold';
         max-height:46px;
         overflow: hidden;
         color:#000;
     }
-    section .wrap.compl > .left .compl_list li a span{
+    .compl_list li a span{
         color: #fff;
         font: 12px 'open_sanssemibold_italic';
         background-color: #b6c57f;
@@ -2111,21 +2151,21 @@ textarea {
         display:none;
         margin-top:15px;
     }
-    .culture.left > ul li {
+    ul.culture li {
         width:100%;
         height:110px;
         border-bottom:2px solid #f7f7f7;
         margin-bottom:40px;
     }
-    .culture.left ul li .left.img img{
+    ul.culture li .left.img img{
         margin-right:20px;
     }
-    .culture.left ul li .left.img{
+    ul.culture li .left.img{
         width:132px;
         height:89px;
         overflow: hidden;
     }
-    .culture.left ul li .right .box{
+    ul.culture li .right .box{
         float:left;
         border-left:2px solid #b5c57e;
         min-width: 210px;
@@ -2156,10 +2196,10 @@ textarea {
     .search input{
         float:left;
     }
-/*    section > .wrap  .left .right{
-        width: 82%;
-    }*/
-    .culture.left ul li .right .box p,.culture.left ul li .right .box p a{
+    /*    section > .wrap  .left .right{
+            width: 82%;
+        }*/
+    ul.culture li .right .box p,ul.culture li .right .box p a{
         font:14px 'open_sanssemibold';
         color:#673167;
         margin-bottom: 0px;
@@ -2171,7 +2211,7 @@ textarea {
     section > .wrap.crt > .left ul{
         margin-bottom:35px;
     }
-     ul.crt li{
+    ul.crt li{
         background: url('../img/li_g.png') no-repeat left 8px;
         padding-left:30px;        
         margin-bottom: 25px;
@@ -2191,13 +2231,13 @@ textarea {
         margin-right:15px;
         margin-bottom: 70px;
     }
-/*    .ul_title{
-        height:33px;
-        font:18px 'open_sansbold';
-        padding-left:18px;
-        background:#efefef;
-        line-height: 33px;
-    }*/
+    /*    .ul_title{
+            height:33px;
+            font:18px 'open_sansbold';
+            padding-left:18px;
+            background:#efefef;
+            line-height: 33px;
+        }*/
 
     .ul_title{
         text-transform: uppercase;
@@ -2207,7 +2247,7 @@ textarea {
         background:#efefef;
         height:33px;
     }
-     ul.mda > li ,section > .wrap.dcr  .dcr_box > ul > li,ul.atz  > li{
+    ul.mda > li ,ul.dcr  .dcr_box > ul > li,ul.atz  > li{
         padding-left:55px;
         height:40px;
         line-height: 40px;
@@ -2281,46 +2321,41 @@ textarea {
         color:#4c4c4c;
         max-width:97%;
     }
-    section > .wrap.taxe > .left table{
+    table.taxe{
         width:100%;
+        margin-bottom:50px;
     }
-    section > .wrap.taxe > .left table thead{
+    table.taxe thead{
         border-collapse: collapse;
     }
-    section > .wrap.taxe > .left table thead tr{
+    table.taxe thead tr{
         border:1px solid #a5d293;
         border-bottom: 2px solid #a5d293;
         padding-left:30px;
     }
-    section > .wrap.taxe > .left table thead tr td{
+    table.taxe thead tr td{
         border:1px solid #a5d293;
         font:18px 'open_sansbold';
         color:#74b45a;
         height:50px;
-        text-align: center;
+        padding:0px 20px;
     }
-    section > .wrap.taxe > .left table thead tr td:first-child{
-        text-align: left;
-        padding-left:30px;
-    }
-    section > .wrap.taxe > .left table tbody tr td:first-child{
-        text-align: left;
-        padding:10px 30px;
-        font:17px 'open_sanssemibold';
-        color:#4c4c4c;
-    }
-    section > .wrap.taxe > .left table tbody tr{
+    table.taxe tbody tr{
         border:1px solid #e3e3e3;
     }
-    section > .wrap.taxe > .left table tbody tr td{      
-        padding:10px 0px;
-        text-align: center;
+    table.taxe tbody tr td{      
         color:#4c4c4c;
         font:17px 'open_sansregular';
-        min-width: 105px;
         border:1px solid #e3e3e3;
+        padding:10px 20px;
+        line-height: 19px;
+        min-width:115px;
     }
-    section > .wrap.taxe > .left table tbody tr:nth-child(2n-1){
+    table.taxe tbody tr td:first-child{
+        font:17px 'open_sanssemibold';
+        min-width:270px;
+    }
+    table.taxe tbody tr:nth-child(2n-1){
         background: #fbfbfb;
     }
     ul.mda > li > a,ul.atz  > li a{
@@ -2333,21 +2368,21 @@ textarea {
     }
 
     .a_box .right{
-        max-width:390px;
+        max-width:420px;
     }
-    section > .wrap.emrg > .left .ul_title .left,.cda .ul_title .left {
+    .emrg.left .ul_title .left,.cda .ul_title .left {
         width:300px;
     }
-    section > .wrap.emrg > .left .ul_title .right{
+    .emrg.left .ul_title .right{
         width:550px;
     }    
     .cda .ul_title .right{
         width:120px;
     }
-    section > .wrap.emrg > .left ul,.cda ul{
+    .emrg.left ul,.cda ul{
         margin-bottom: 80px;
     }
-    section > .wrap.emrg > .left ul li .left{
+    .emrg.left ul li .left{
         width: 34%;
         font:17px 'open_sansbold';
         color:#7c4d7c;
@@ -2363,11 +2398,11 @@ textarea {
         color:#000;
         margin: 0px;
     }
-   .cda  ul li .left p.green a{
+    .cda  ul li .left p.green a{
         color:#5f9a47;
         font:14px 'open_sanssemibold';
     }
-    section > .wrap.emrg > .left ul li .right,.cda ul li .right{
+    .emrg.left ul li .right,.cda ul li .right{
         width: 66%;
         font:17px 'open_sanssemibold';
         color:#4c4c4c;
@@ -2375,19 +2410,19 @@ textarea {
     .cda  ul li .right{
         width:120px;
     }
-    section > .wrap.emrg > .left ul li:after,.cda ul li:after{        
+    .emrg.left ul li:after,.cda ul li:after{        
         content:'';
         display:block;
         clear: both;
     }
-    section > .wrap.emrg > .left ul li {
+    .emrg.left ul li {
         min-height:33px;
         border-bottom:2px solid #efefef;
         margin-top:33px;
         padding-left:35px;
         background:url('../img/g_phone.png') no-repeat left 3px;
     }
-   .cda ul li{
+    .cda ul li{
         background:url('../img/cadru.png') no-repeat left 9px;
         margin-top:12px;
         padding-bottom:12px;
@@ -2438,7 +2473,7 @@ textarea {
     .com_box span{        
         float:left;        
     }
-   .com_box  span.nr{
+    .com_box  span.nr{
         width:7%;
     }
     .com_box  span.name{
@@ -2471,49 +2506,55 @@ textarea {
     .com_box  ul li{
         height:30px;
     }
-    section > .wrap.vice > .left ul li .name{        
+    ul.vice li .name{        
         font:24px 'open_sansregular';
         color:#7c4d7c;
         margin-bottom: 0px;
     }
-    section > .wrap.vice > .left ul li .p_name{        
+    ul.vice li .p_name{        
         font:24px 'open_sansbold';
         color:#7c4d7c;
         margin-bottom: 40px;
     }
-    section > .wrap.vice > .left ul li:after{
+    ul.vice li:after{
         content:'';
         display:block;
         clear: both;
     }
-    section > .wrap.vice > .left ul li .left{
+    ul.vice li .left{
         margin-left:35px;
         height:264px;
         border-bottom: 2px solid #efefef;
         padding-right: 130px; 
     }
-    section > .wrap.vice > .left ul li .tel{
+    ul.vice li .tel{
         padding-left:30px;
         background:url('../img/g_mail.png') no-repeat left center;
         color:#4b4b4b;
         font:17px 'open_sanssemibold';
         margin-bottom:10px;
     }
-    section > .wrap.vice > .left ul li .email a{
+    ul.vice li .email a{
         padding-left:30px;
         background:url('../img/v_phone.png') no-repeat left center;
         color:#4b4b4b;
         font:17px 'open_sanssemibold';
 
     }
-    section > .wrap.vice > .left ul li{
+    ul.vice li{
         margin-bottom:60px;
     }
-    
+
+    header .right.contact{
+        width:auto;
+    }
+    .org img {
+        max-width:100%;
+    }
     ul.prom{
         border:0px !important;
     }
-     ul.prom li{
+    ul.prom li{
         width:37%;
         height:190px;
         border:2px solid #f7f7f7;
@@ -2535,7 +2576,8 @@ textarea {
     ul.prom li:nth-child(2n){
         margin-left:35px;
     }
-     ul.prom li .ttl{
+
+    ul.prom li .ttl{
         font:24px 'open_sansbold';
         color:#232323;
         line-height:30px;
@@ -2596,19 +2638,19 @@ textarea {
         clear: both
     }
 
-    section > .wrap.rpt > .left > ul > li{
+    section > .wrap.rpt > .left > ul > li,ul.dcr > li{
         width:100%;
         border-bottom:2px solid #f7f7f7;
         background:url('../img/dir.png') no-repeat left 31px;
         padding-bottom:8px;
         padding-top:30px;
     }
-    section > .wrap.rpt > .left ul > li a{
+    section > .wrap.rpt > .left ul > li a,ul.dcr > li a{
         font:17px 'open_sanssemibold';
         padding-left:38px;
         color:#000;
     }
-    section > .wrap.rpt > .left ul > li a:hover ,section > .wrap.rpt > .left > ul > li.active > a{
+    section > .wrap.rpt > .left ul > li a:hover ,section > .wrap.rpt > .left > ul > li.active > a,ul.dcr > li a:hover,ul.dcr > li.active a{
         color:#68a84e;
     }
     .clearfix140{
@@ -2627,54 +2669,59 @@ textarea {
         clear:both;
         height:100px;
     }
-    section > .wrap.dcr > .left > ul > li .dcr_box{
+    .ncd p.sctg{
+        color:#7c4d7c;
+        text-transform:uppercase;
+    }
+    ul.dcr > li .dcr_box{
         display:none;
         width:73%;
         margin-top:20px;
     }
-    section > .wrap.pda .left ul{
+    .pda ul{
         margin:0px;
         border:0px;
+        margin-bottom:50px;
     }
-    section > .wrap.pda .left ul li{
+    .pda ul li{
         padding-left:40px;
         height: 60px;
         line-height: 60px;
         border-bottom:2px solid #efefef;
     }
-    section > .wrap.pda .left ul li a{
+    .pda ul li a{
         color:#000;
         font:17px 'open_sanssemibold';
         height:60px;
         display: table-cell;
         vertical-align: middle;
     }
-    section > .wrap.dcr > .left > ul  > li .dcr_box .ul_title,section > .wrap.dcr > .left > ul  > li .dcr_box .ul_title span {
+    ul.dcr  > li .dcr_box .ul_title,uldcr  > li .dcr_box .ul_title span {
         text-transform: uppercase;
         font:14px 'open_sansbold';
         color:#000;
         line-height: 33px;           
     }
-    section > .wrap.dcr > .left > ul  > li .dcr_box .ul_title{
+    ul.dcr  > li .dcr_box .ul_title{
         margin-bottom:15px;
     }
-    section > .wrap.dcr > .left > ul  > li .dcr_box span{        
+    ul.dcr  > li .dcr_box span{        
         font:14px 'open_sansbold';
         color:#000;
         line-height: 33px;  
     }
-    section > .wrap.dcr > .left > ul  > li .dcr_box ul li{
+    ul.dcr  > li .dcr_box ul li{
         height:33px;
     }
-    section > .wrap.dcr > .left > ul  > li .dcr_box .ul_title span{
+    ul.dcr  > li .dcr_box .ul_title span{
         width:61%; 
         display:inline-block;
     }
-    section > .wrap.dcr > .left > ul  > li .dcr_box ul li span:first-child{
+    ul.dcr  > li .dcr_box ul li span:first-child{
         width:59%;
         display: inline-block;
     }
-    section > .wrap.dcr > .left > ul  > li .dcr_box:after{
+    ul.dcr  > li .dcr_box:after{
         content:'';
         display: block;                                                              
     }
@@ -2760,22 +2807,22 @@ textarea {
         left:-15px;
         top: -3px;
     }
-    section > .wrap.ldm > .left > .box{
+    .ldm.left > .box{
         border:2px solid #f7f7f7;
         border-left:3px solid #d9d9d9;
         padding:30px 0 30px 40px ;
     }
-    section > .wrap.ldm > .left > .box .title{
+    .ldm.left > .box .title{
         font:24px 'open_sansbold';
         border-bottom: 0px;
     }
-    section > .wrap.ldm > .left > .box .data{
+    .ldm.left > .box .data{
         background:#8e588e;
         height:21px;
         line-height: 19px;
         margin-bottom: 20px;
     }
-    section > .wrap.ldm > .left > .box .data p{
+    .ldm.left > .box .data p{
         background:#673167;
         height:21px;
         color:#fff;
@@ -2785,39 +2832,39 @@ textarea {
         margin:0;
         padding:0 7px;
     }
-    section > .wrap.ldm > .left > .box .data:after{
+    .ldm.left > .box .data:after{
         content: url('../img/v_arrow.png');
         clear:both;
     }
 
-    section > .wrap.ldm > .left > .box .p_i p{
+    .ldm.left > .box .p_i p{
         font:14px 'open_sanssemibold_italic';
         max-width: 520px;
     }
-    section > .wrap.ldm > .left > .box  .ldm_li p{
+    .ldm.left > .box  .ldm_li p{
         text-transform: uppercase;
         color:#7c4d7c;
         font:14px 'open_sansbold';
         margin-top:20px;
     }
-    section > .wrap.ldm > .left > .box  .ldm_li ul li{
+    .ldm.left > .box  .ldm_li ul li{
         font:14px 'open_sanssemibold';
         color:#343434;
         background: url('../img/h_li.png')no-repeat left 7px;
         padding-left: 30px;
         max-width: 560px;
     }
-    section > .wrap.ldm > .left > .box hr{
+    .ldm.left > .box hr{
         background:#f7f7f7;
         height: 2px;
         border-top: 0px;
         width:95%;
         margin: 35px 0;
     }
-    section > .wrap.ldm > .left > .box div.hr_grey{        
+    .ldm.left > .box div.hr_grey{        
         width:95%;
     }
-    section > .wrap.ldm > .left > .box input[type=text]{
+    .ldm.left > .box input[type=text]{
         height:33px;
         width:240px;
         border:1px solid #d9d9d9;
@@ -2825,10 +2872,10 @@ textarea {
         color:#a3a3a3;
         padding:12px;
     }
-    section > .wrap.ldm > .left > .box input[type=file]{
+    .ldm.left > .box input[type=file]{
         display: none;
     }
-    section > .wrap.ldm > .left > .box .upload{
+    .ldm.left > .box .upload{
         width:168px;
         border:1px solid #d9d9d9;
         background:url('../img/file.png') no-repeat 12px center #efefef;
@@ -2839,12 +2886,12 @@ textarea {
         line-height: 33px;
         margin:0px 28px;
     }
-    section > .wrap.ldm > .left > .box form *{
+    .ldm.left > .box form *{
         float:left;
         height:33px;
     }
 
-    section > .wrap.ldm > .left > .box input[type=submit]{
+    .ldm.left > .box input[type=submit]{
         width:113px;
         background: #4c4c4c;
         border-bottom: 2px solid #313131;
@@ -2852,13 +2899,13 @@ textarea {
         color:#fff;
         font:14px 'open_sansbold';
     }
-    section > .wrap.ldm > .left > .l_a li a{
+    .l_a li a{
         width: 100%;
         display: block;
         height: 50px;
         border-bottom: 2px solid #f7f7f7;
     }
-    section > .wrap.ldm > .left > .l_a  li a span {
+    .l_a  li a span {
         color: #fff;
         font: 12px 'open_sanssemibold_italic';
         background-color: #7c4d7c;
@@ -2871,12 +2918,12 @@ textarea {
         padding: 0px 4px 0px 10px;
         margin-top: 15px;
     }
-    section > .wrap.ldm > .left > .l_a li a span img {
+    .l_a li a span img {
         position: absolute;
         right: -9px;
         top: 0px;
     }
-    section > .wrap.ldm > .left > .l_a li a p {
+    .l_a li a p {
         font: 17px 'open_sanssemibold';
         color: #232323;
         padding-left: 20px;
@@ -2886,7 +2933,7 @@ textarea {
         height: 50px;
         line-height: 18px;
     }
-    section > .wrap.ldm > .left > .l_a{
+    .l_a{
         margin-top: 60px;
     }
     .fb-like,#vk_like,#ok_shareWidget{

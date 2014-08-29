@@ -7,10 +7,10 @@
             <a href="javascript:;"><span>Rapoarte și documente </span></a>
         </div>
     </div>
-    <div class="wrap pda">
+    <div class="wrap">
         <p class='c_title'>Rapoarte și documente </p>
 
-        <div class='left city'>
+        <div class='left pda'>
             <p class='sub_title'>Planurile de acţiune pentru reducerea zgomotului în raionul Strășeni</p>
             <p>Planurile de acţiune au fost elaborate pe baza rezultatelor conţinute de hărţile strategice de zgomot, în vederea prevenirii şi reducerii zgomotului şi a efectelor acestuia, mai cu seamă acolo unde valorile nivelurilor de zgomot depăşesc limitele admise.</p>
             <p>După elaborarea hărţilor de zgomot s-a constatat că circulaţia rutieră are cea mai mare pondere în producerea zgomotului, de aceea şi planul de acţiune se referă în primul rând la zgomotul produs de traficul rutier.</p>

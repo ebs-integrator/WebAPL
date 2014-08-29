@@ -7,11 +7,11 @@
             <a href="javascript:;">Caută grădinița potrivită </a>
         </div>
     </div>
-    <div class="wrap culture">
+    <div class="wrap">
         <p class="c_title">Turism și cultură</p>
 
         <div class='left'>                
-            <ul>
+            <ul class='culture'>
                 <li>
                     <div class="left img">
                         <img src="<?=res('assets/img/edu.png');?>" />

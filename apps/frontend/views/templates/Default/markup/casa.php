@@ -7,10 +7,9 @@
             <a href="javascript:;">Certificat de urbanism pentru proiectare</a>
         </div>
     </div>
-    <div class="wrap ncd">
-        <p class="c_title">Nașteri, căsătorii, decese</p>
-
-        <div class='left'>                
+    <div class="wrap">
+        <p class="c_title">Construiești o casă?</p>
+        <div class='left ncd'>                
             <p>Atunci cand achizitionati terenul trebuie sa luati in calcul urmatoarele elemente:</p>
             <h1>Situatia juridica a terenului:</h1>
             <p>
@@ -42,15 +41,15 @@
 
         <div class='right'>
             <ul class="right_menu">
-                <li class="active"><a href="javascript:;">Înregistrează-ți nașterea copilului</a></li>
-                <li><a href="javascript:;">Înregistrează un deces</a></li>
-                <li><a href="javascript:;">Birouri rituale</a></li>
-                <li><a href="javascript:;">Certificate ale arborelui genealogic</a></li>
-                <li><a href="javascript:;">Înregistrează căsătoria </a></li>
-                <li><a href="javascript:;">Ceremonii și alte evenimente</a></li>
+                <li class="active"><a href="javascript:;">De ce permisiuni am nevoie</a></li>
+                <li><a href="javascript:;"> Autorizațiile necesare</a></li>
+                <li><a href="javascript:;"> Alte documente conexe</a></li>
+                <li><a href="javascript:;">Care e procedura</a></li>
             </ul>
         </div>
-        <div class='clearfix'></div>
+        <div class='clearfix50'></div>
+
+
 
         <div class='socials'>
             <div id="vk_like"></div>
