@@ -7,41 +7,45 @@
     </div>
     <div class='wrap'>
         <p class="c_title">contacte</p>
-        <div class='left contact'>
-            <p class='subt'>Legatură directă</p>
-            <ul class='date_contact'>
-                <li>
-                    <p>Telefon Anticameră</p>
-                    <p>(0-237) 22-33-44</p>
-                </li>
-                <li>
-                    <p>Email</p>
-                    <p>info@straseni.gov.md</p>
-                </li>
-                <li>
-                    <p>Relatii cu publicul </p>
-                    <p>(0-237) 22-33-44</p>                                    
-                </li>
-                <li>
-                    <p>Fax</p>
-                    <p>(0-237) 55-66-77</p>
-                </li>
-            </ul>
-            <div class="prp">
-                <img src="<?= res('assets/img/phone_book.png'); ?>">
-                <a href="urgenta.php">Toate numerele de telefon</a>
-            </div>
-            <div class="prp">
-                <img src="<?= res('assets/img/notebook.png'); ?>">
-                <a href="javascript:;">Orarul rutelor</a>
+        <div class='left ccc'>
+            <div class='contact_l'>
+                <p class='subt'>Legatură directă</p>
+                <ul class='date_contact'>
+                    <li>
+                        <p>Telefon Anticameră</p>
+                        <p>(0-237) 22-33-44</p>
+                    </li>
+                    <li>
+                        <p>Email</p>
+                        <p>info@straseni.gov.md</p>
+                    </li>
+                    <li>
+                        <p>Relatii cu publicul </p>
+                        <p>(0-237) 22-33-44</p>                                    
+                    </li>
+                    <li>
+                        <p>Fax</p>
+                        <p>(0-237) 55-66-77</p>
+                    </li>
+                </ul>
+                <div class="prp">
+                    <img src="<?= res('assets/img/phone_book.png'); ?>">
+                    <a href="urgenta.php">Toate numerele de telefon</a>
+                </div>
+                <div class="prp">
+                    <img src="<?= res('assets/img/notebook.png'); ?>">
+                    <a href="javascript:;">Orarul rutelor</a>
+                </div>
             </div>
         </div>
-        <div class='right contact'>
-            <p class='subt'>Adresa</p>
-            <div id="map-canvas2" style="width:820px; height:307px;"></div>
-            <div class="map_info">
-                <p>Orașul Strășeni</p>
-                <p>Strada Ștefan cel Mare 24, MD 2034</p>
+        <div class='right'>
+            <div class='contact_r'>
+                <p class='subt'>Adresa</p>
+                <div id="map-canvas2" style="width:820px; height:307px;"></div>
+                <div class="map_info">
+                    <p>Orașul Strășeni</p>
+                    <p>Strada Ștefan cel Mare 24, MD 2034</p>
+                </div>
             </div>
         </div>
         <div class="clearfix"></div>
