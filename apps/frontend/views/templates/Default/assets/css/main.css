@@ -1303,10 +1303,10 @@ textarea {
     .city > img {
         margin:15px 0 35px 0;
     }
-    .city .left{
+    .city .left,.personal .left{
         margin-left:15px;
     }
-    .city .name{
+    .name{
         font:20px 'open_sanssemibold';
         color:#7c4d7c;
         margin-bottom:0px;
@@ -1317,56 +1317,56 @@ textarea {
         margin-bottom: 60px;
         float:left;
     }
-    .city .function{
+    .function{
         font:17px 'open_sanssemibold';
         color:#4b4b4b;
         margin-top:30px;
     }
-    .city .city_box{
+    .city_box{
         height:115px;
         width:870px;
         border-bottom: 2px solid #efefef;
         padding-bottom: 10px;
         margin-bottom: 25px;
     }
-    .city .city_box .img{
+    .city_box .img{
         float:left;
         margin-right:18px;
         width:96px;
     }
-    .city .city_box .title{
+    .city_box .title{
         font:24px 'open_sanssemibold';
         color:#7c4d7c;
         margin-bottom: 0px;
         margin-top: -3px;
 
     }
-    .city .city_box .info{
+    .city_box .info{
         font:17px 'open_sansregular';
         color:#4b4b4b;
         margin-bottom: 0px;
     }
-    .city .city_info{
+   .city_info{
         float:left;
         width:80%;
     }
-    .city .city_link{
+    .city_link{
         text-align:right;
         margin-top: 20px;
         float: right;
     }
-    .city .city_link a{
+     .city_link a{
         color:#27ae60;
         font:14px 'open_sansregular';
     }
-    .wrap .left.contact{
+    .contact _l{
         width:360px;
     }
-    .right.contact{
+    .contact_r{
         max-width:828px;
         width:80%;
     }
-    .contact .subt{
+    .contact_l .subt,.contact_r .subt{
         font:24px 'open_sansbold';
         color:#232323;
         height:57px;
@@ -1378,7 +1378,7 @@ textarea {
         position: relative;
     }
 
-    .contact .subt:before{
+    .contact_l .subt:before,.contact_r .subt:before{
         content:'';
         position:absolute;
         display:block;
@@ -1387,7 +1387,7 @@ textarea {
         bottom:-2px;
         border-left:3px solid #74b45a;
     }
-    .left.contact .date_contact li{
+    .contact_l .date_contact li{
         border-bottom: 1px solid #f3f3f3;
         border-left: 0;
         line-height: 1.533;
@@ -1397,7 +1397,7 @@ textarea {
         height:46px;
         position: relative;
     }
-    .left.contact .date_contact li:before{
+    .contact_l .date_contact li:before{
         content:'';
         position:absolute;
         display:block;
@@ -1406,34 +1406,34 @@ textarea {
         bottom:-1px;
         border-left: 3px solid #7c4d7c;
     }
-    .left.contact .date_contact li p{
+    .contact_l .date_contact li p{
         margin:0px;
     }
-    .left.contact .date_contact li p:first-child{
+    .contact_l .date_contact li p:first-child{
         font:15px 'open_sanssemibold';
         color:#484848;
         float: left;
         margin-top: -2px;
     }
-    .left.contact .date_contact li p:last-child{
+    .contact_l .date_contact li p:last-child{
         font:17px 'open_sanssemibold';
         color:#484848;
         clear:both;
     }
-    .left.contact .prp {
+    .contact_l .prp {
         width: 100%;
         border: 2px solid #dad6e2;
         height: 44px;
         margin-top: 6px;
         padding: 0px 19px;
     }
-    .left.contact .prp a {
+    .contact_l .prp a {
         font: 15px 'open_sansbold';
         line-height: 40px;
         color: #8e7fab;
         padding-left :12px;
     }
-    .right.contact .map_info {
+    .contact_r .map_info {
         display: inline-block;
         padding-right: 12px;
         border-bottom: 1px solid #f3f3f3;
@@ -1444,7 +1444,7 @@ textarea {
         position: relative;
     }
 
-    .right.contact .map_info:before{
+    .contact_r .map_info:before{
         content:'';
         position:absolute;
         display:block;
@@ -1453,14 +1453,14 @@ textarea {
         bottom:-1px;
         border-left: 3px solid #7c4d7c;
     }
-    .right.contact .map_info p{
+    .contact_r .map_info p{
         margin-bottom:0px;
     }
-    .right.contact .map_info p:first-child{
+    .contact_r .map_info p:first-child{
         color:#484848;
         font:15px 'open_sansbold';
     }
-    .right.contact .map_info p:last-child{
+    .contact_r .map_info p:last-child{
         color:#484848;
         font:15px 'open_sanssemibold';
     }
@@ -1538,6 +1538,7 @@ textarea {
         border-bottom:1px solid #e6e6e6;
         margin-top:65px;
         position: relative;
+        width: 820px;
     }
     .contact.right.form:before{
         content:'';
@@ -1585,8 +1586,8 @@ textarea {
         padding:0px 90px 40px 60px;
         position: relative;
     }
-    .contact .form form{
-        height:540px;
+    .wrap .left.ccc{
+        width:360px;
     }
     .content input[type=text],.chat input[type=text]{
         margin-bottom:20px;
@@ -1656,20 +1657,20 @@ textarea {
     .form_b{
         margin-top:15px;
     }
-    .ncd.left > h1{
+    .ncd  h1{
         font:24px 'open_sanssemibold';
         margin-top:35px;
         margin-bottom: 25px;
     }
-    .ncd.left > p{
+    .ncd > p{
         font:17px 'open_sanssemibold';
         color:#4c4c4c;
     }
-    .ncd.left img{
+    .ncd img{
         display: block;
         margin-top:30px;
     }
-    .ncd.left > p > span{
+    .ncd > p > span{
         display:block;
     }
     .chat input[type=text].code{
@@ -1933,12 +1934,6 @@ textarea {
     ul.detail li.location a{
         background:url('../img/find.png') no-repeat 22px center;
     }
-    .m_a.left .a_box .title{
-        text-transform: initial;
-    }
-    .m_a.left .a_box{
-        border-left: 0;
-    }
     .a_box.g_g .details{
         background: #cbd8a0;
     }
@@ -2159,6 +2154,8 @@ textarea {
     }
     ul.culture li .left.img img{
         margin-right:20px;
+        max-width:132px;
+        max-height:89px;
     }
     ul.culture li .left.img{
         width:132px;
@@ -2370,19 +2367,19 @@ textarea {
     .a_box .right{
         max-width:420px;
     }
-    .emrg.left .ul_title .left,.cda .ul_title .left {
+    .emrg .ul_title .left,.cda .ul_title .left {
         width:300px;
     }
-    .emrg.left .ul_title .right{
+    .emrg .ul_title .right{
         width:550px;
     }    
     .cda .ul_title .right{
         width:120px;
     }
-    .emrg.left ul,.cda ul{
+    .emrg ul,.cda ul{
         margin-bottom: 80px;
     }
-    .emrg.left ul li .left{
+    .emrg ul li .left{
         width: 34%;
         font:17px 'open_sansbold';
         color:#7c4d7c;
@@ -2402,7 +2399,7 @@ textarea {
         color:#5f9a47;
         font:14px 'open_sanssemibold';
     }
-    .emrg.left ul li .right,.cda ul li .right{
+    .emrg ul li .right,.cda ul li .right{
         width: 66%;
         font:17px 'open_sanssemibold';
         color:#4c4c4c;
@@ -2410,12 +2407,12 @@ textarea {
     .cda  ul li .right{
         width:120px;
     }
-    .emrg.left ul li:after,.cda ul li:after{        
+    .emrg ul li:after,.cda ul li:after{        
         content:'';
         display:block;
         clear: both;
     }
-    .emrg.left ul li {
+    .emrg ul li {
         min-height:33px;
         border-bottom:2px solid #efefef;
         margin-top:33px;
@@ -2807,22 +2804,22 @@ textarea {
         left:-15px;
         top: -3px;
     }
-    .ldm.left > .box{
+    .ldmbox{
         border:2px solid #f7f7f7;
         border-left:3px solid #d9d9d9;
         padding:30px 0 30px 40px ;
     }
-    .ldm.left > .box .title{
+    .ldmbox .title{
         font:24px 'open_sansbold';
         border-bottom: 0px;
     }
-    .ldm.left > .box .data{
+    .ldmbox .data{
         background:#8e588e;
         height:21px;
         line-height: 19px;
         margin-bottom: 20px;
     }
-    .ldm.left > .box .data p{
+    .ldmbox .data p{
         background:#673167;
         height:21px;
         color:#fff;
@@ -2832,39 +2829,39 @@ textarea {
         margin:0;
         padding:0 7px;
     }
-    .ldm.left > .box .data:after{
+    .ldmbox .data:after{
         content: url('../img/v_arrow.png');
         clear:both;
     }
 
-    .ldm.left > .box .p_i p{
+    .ldmbox .p_i p{
         font:14px 'open_sanssemibold_italic';
         max-width: 520px;
     }
-    .ldm.left > .box  .ldm_li p{
+    .ldmbox  .ldm_li p{
         text-transform: uppercase;
         color:#7c4d7c;
         font:14px 'open_sansbold';
         margin-top:20px;
     }
-    .ldm.left > .box  .ldm_li ul li{
+    .ldmbox  .ldm_li ul li{
         font:14px 'open_sanssemibold';
         color:#343434;
         background: url('../img/h_li.png')no-repeat left 7px;
         padding-left: 30px;
         max-width: 560px;
     }
-    .ldm.left > .box hr{
+    .ldmbox hr{
         background:#f7f7f7;
         height: 2px;
         border-top: 0px;
         width:95%;
         margin: 35px 0;
     }
-    .ldm.left > .box div.hr_grey{        
+    .ldmbox div.hr_grey{        
         width:95%;
     }
-    .ldm.left > .box input[type=text]{
+    .ldmbox input[type=text]{
         height:33px;
         width:240px;
         border:1px solid #d9d9d9;
@@ -2872,10 +2869,10 @@ textarea {
         color:#a3a3a3;
         padding:12px;
     }
-    .ldm.left > .box input[type=file]{
+    .ldmbox input[type=file]{
         display: none;
     }
-    .ldm.left > .box .upload{
+    .ldmbox .upload{
         width:168px;
         border:1px solid #d9d9d9;
         background:url('../img/file.png') no-repeat 12px center #efefef;
@@ -2886,12 +2883,12 @@ textarea {
         line-height: 33px;
         margin:0px 28px;
     }
-    .ldm.left > .box form *{
+    .ldmbox form *{
         float:left;
         height:33px;
     }
 
-    .ldm.left > .box input[type=submit]{
+    .ldmbox input[type=submit]{
         width:113px;
         background: #4c4c4c;
         border-bottom: 2px solid #313131;

@@ -7,7 +7,7 @@
     </div>
     <div class="wrap">
         <p class="c_title">Știri</p>
-        <div class="left m_a">
+        <div class="left">
             <div class="a_box g_g">
                 <p class="title">Focar de hepatită A în Drăgușeni - 23 de copii contaminați</p>
                 <div class="hr_dbl"></div>

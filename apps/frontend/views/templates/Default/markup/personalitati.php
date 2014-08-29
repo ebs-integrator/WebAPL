@@ -10,7 +10,7 @@
     <div class="wrap">
         <p class='c_title'>orașul</p>
 
-        <div class='left city'>
+        <div class='left'>
             <div class='personal'>
                 <div class='img'><img src='<?=res("assets/img/pers.png");?>'></div>
                 <div class="left">

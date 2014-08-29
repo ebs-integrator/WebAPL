@@ -8,8 +8,8 @@
     </div>
     <div class="wrap">
         <p class="c_title">Job-uri și voluntariat</p>
-        <div class="left ldm">
-            <div class='box'>
+        <div class="left">
+            <div class='ldmbox'>
                 <p class='title'>
                     Contabil
                 </p>

@@ -14,7 +14,7 @@
             <ul class='culture'>
                 <li>
                     <div class="left img">
-                        <img src="<?= res('assets/img/satiric.png'); ?>" />
+                        <img src="<?= res('assets/img/anunt.png'); ?>" />
                     </div>
                     <div class="right">
                         <p>Teatrul "Eugene Ionesco"	</p>
