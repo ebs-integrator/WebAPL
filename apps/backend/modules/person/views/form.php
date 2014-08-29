@@ -15,7 +15,9 @@
     <div class="tab-pane active" id="general">
         <?php
         echo Template::moduleView($module, 'views.tab-general', array(
-            'person' => $person
+            'person' => $person,
+            'selected_groups' => $selected_groups,
+            'person_groups' => $person_groups
         ));
         ?>
     </div>

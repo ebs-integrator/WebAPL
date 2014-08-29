@@ -22,6 +22,25 @@
         </tr>
     </table>
 </form>
+
+<form class="ajax-auto-submit" action='<?= url('person/save_person_groups'); ?>' method='post'>
+    <input type='hidden' name='id' value='<?= isset($person->id) ? $person->id : 0; ?>' />
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Groups: </th>
+            <td>
+                <select id="attach_pgroup" name="groups[]" class="form-control chzn-select-deselect" multiple>
+                    <option value="0">---</option>
+                    <?php foreach ($person_groups as $pgroup) { ?>
+                        <option value="<?= $pgroup['id']; ?>" <?= in_array($pgroup['id'], $selected_groups) ? 'selected' : '' ?>><?= $pgroup['name']; ?></option>
+                    <?php } ?>
+                </select>
+            </td>
+        </tr>
+    </table>
+</form>
+
 <table class="table table-bordered">
     <?php if (isset($person->id)) { ?>
         <tr>

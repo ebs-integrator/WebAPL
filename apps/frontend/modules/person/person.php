@@ -7,9 +7,9 @@ use Core\APL\Actions,
     PersonGroup,
     PersonGroupLang,
     PersonGroupPostModel,
-        PersonModel,
-        PersonRelModel,
-        PersonLangModel,
+    PersonModel,
+    PersonRelModel,
+    PersonLangModel,
     PageView;
 
 class Person extends \Core\APL\ExtensionController {
@@ -30,7 +30,7 @@ class Person extends \Core\APL\ExtensionController {
                 ->join(PersonGroupLang::getTableName(), PersonGroupLang::getField("group_id"), '=', PersonGroup::getField('id'))
                 ->where(PersonGroupLang::getField("lang_id"), \Core\APL\Language::getId())
                 ->where(PersonGroupPostModel::getField("post_id"), $data['page']->id)
-                ->select(PersonGroupLang::getField('name'), PersonGroup::getField("id"))
+                ->select(PersonGroupLang::getField('name'), PersonGroupLang::getField('description'), PersonGroup::getField("id"))
                 ->get();
         if ($groups) {
             foreach ($groups as &$group) {
@@ -40,10 +40,10 @@ class Person extends \Core\APL\ExtensionController {
                         ->where(PersonRelModel::getField("group_id"), $group->id)
                         ->get();
             }
-            
+
             $data["page"]->text = Template::moduleView($this->module_name, "views.person_groups", array('groups' => $groups));
         }
-        
+
         return PageView::defaultView($data);
     }
 
