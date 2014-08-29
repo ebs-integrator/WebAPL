@@ -4,7 +4,7 @@
         </div>
         <div class="menu">
             <img src="<?=res('assets/img/back1.png');?>" class="backg">
-            <div class="wrap global">                
+            <div class="wrap">                
                 <div class="box">
                     <div class="menu_img">
                         <img src="<?=res('assets/img/menu1.png');?>">

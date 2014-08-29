@@ -6,12 +6,12 @@
             <a href="javascript:;">Detalii stire</a>
         </div>
     </div>
-    <div class="wrap u_a u_s">
+    <div class="wrap  u_s">
         <p class="c_title">anunțuri</p>
         <div class="left">
             <p class='det_news'>Focar de hepatită A în Drăgușeni - 23 de copii contaminați</p>
             <div class='hr_dbl'></div>
-            <div class='img'>
+            <div class='u_a'>
                 <img src="<?=res('assets/img/b_news.png');?>">
                 <div class="details">
                     <p class="data">24 Iul 2014, 15:03	

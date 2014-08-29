@@ -10,8 +10,8 @@
     <div class="wrap">
         <p class="c_title">Turism și cultură</p>
 
-        <div class='left culture'>                
-            <ul>
+        <div class='left'>                
+            <ul class='culture'>
                 <li>
                     <div class="left img">
                         <img src="<?= res('assets/img/satiric.png'); ?>" />

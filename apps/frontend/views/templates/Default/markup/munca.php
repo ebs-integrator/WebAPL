@@ -6,9 +6,9 @@
             <a href="javascript:;">Job-uri și voluntariat</a>
         </div>
     </div>
-    <div class="wrap ldm">
+    <div class="wrap">
         <p class="c_title">Job-uri și voluntariat</p>
-        <div class="left">
+        <div class="left ldm">
             <div class='box'>
                 <p class='title'>
                     Contabil

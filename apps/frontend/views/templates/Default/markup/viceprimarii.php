@@ -7,11 +7,11 @@
             <a href="javascript:;">Viceprimarii</a>
         </div>
     </div>
-    <div class="wrap vice">
+    <div class="wrap">
         <p class="c_title">Primăria</p>
 
         <div class='left'>
-            <ul>
+            <ul class="vice">
                 <li>
                     <div class="img">
                         <img src="<?= res('assets/img/b_pers.png'); ?>">

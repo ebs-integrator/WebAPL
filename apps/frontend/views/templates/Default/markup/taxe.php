@@ -6,11 +6,11 @@
             <a href="javascript:;">Taxele și Impozite</a>
         </div>
     </div>
-    <div class="wrap taxe">
+    <div class="wrap">
         <p class="c_title">Taxele și Impozite</p>
 
         <div class='left'>                
-            <table>
+            <table class="taxe">
                 <thead>
                     <tr><td>Impozite</td><td>2011</td><td>2012</td><td>2013</td><td>2014</td></tr>
                 </thead>

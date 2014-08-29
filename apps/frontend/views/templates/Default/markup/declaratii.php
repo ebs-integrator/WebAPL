@@ -7,11 +7,11 @@
             <a href="javascript:;">Declarații de venituri și active </a>
         </div>
     </div>
-    <div class="wrap rpt dcr">
+    <div class="wrap">
         <p class="c_title">Primarul</p>
 
         <div class='left'>
-            <ul>
+            <ul class="dcr">
                 <li><a href='javascript:;'> Declaratii de avere 2005</a>
                     <div class='dcr_box'>
                         <p class="ul_title"> <span>Nume fisier</span>Actualizat</p>

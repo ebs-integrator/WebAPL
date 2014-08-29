@@ -2,18 +2,20 @@
     <div class="dirs_menu">
         <div class="wrap">
             <a href="javascript:;">Principala »</a>
-            <a href="javascript:;">Știri</a>
+            <a href="javascript:;">Primăria Strășeni »</a>
+            <a href="javascript:;">Primarul »</a>
+            <a href='javascript:;'>Discursuri și prelegeri publice</a>
         </div>
     </div>
     <div class="wrap">
-        <p class="c_title">Știri</p>
+        <p class="c_title">Primarul</p>
         <div class="left m_a">
             <div class="a_box g_g">
-                <p class="title">Focar de hepatită A în Drăgușeni - 23 de copii contaminați</p>
+                <p class="title">Prelegere publică la ULIM: ”Politica de securitate a statelor neutre din Europa</p>
                 <div class="hr_dbl"></div>
                 <div class="left">
                     <div class="img">
-                        <img src="<?=res('assets/img/news.png');?>">
+                        <img src="<?=res('assets/img/news1.png');?>">
                     </div>
                     <div class="details">
                         <p class="data">24 Iul 2014, 15:03	
@@ -23,18 +25,19 @@
                     </div>
                 </div>
                 <div class="right">
-                    <p class="info">Focar de hepatita A în comuna Drăguşeni, raionul Străşeni. 23 de copii au ajuns la spital, după ce au băut apă contaminată din fântâni. Focar de hepatita A în comuna Drăguşeni, raionul Străşeni. 23 de copii au ajuns la spital, după ce au băut apă.
-                        Focar de hepatita A în comuna Drăguşeni, raionul Străşeni. 23 de copii au ajuns la spital, după ce au băut apă contaminată din fântâni. Focar de hepatita A în comuna Drăguşeni, raionul Străşeni. </p>
+                    <p class="info">O prelege memorabilă a prezentat recent la Universitatea Liberă Internaţională din Moldova profesorul Dr. Hanspeter Neuhold, de la Universitatea din Viena, directorul Programului de Masterat al Universităţii şi Academiei Diplomatice din Viena. 
+
+Profesorul austriac a fost însoţit de câţiva diplomaţi din ţara sa, care de asemenea au răspuns cu amabilitate la întrebările studenţilor şi profesorilor ULIM -Dr. Karl Schramek, Ambasadorul Austriei la NATO, şi Ambasadorul Gerhard Jandl, Directorul Departamentului Politică de Securitate şi Politică Externă şi de Securitate Comună al MAE al Austriei.</p>
                 </div>
                 <a href="javascript:;" class="more"></a>
                 <div class="clearfix"></div>
             </div>
             <div class="a_box g_g">
-                <p class="title">Focar de hepatită A în Drăgușeni - 23 de copii contaminați</p>
+                <p class="title">Prelegere publică</p>
                 <div class="hr_dbl"></div>
                 <div class="left">
                     <div class="img">
-                        <img src="<?=res('assets/img/news.png');?>">
+                        <img src="<?=res('assets/img/news2.png');?>">
                     </div>
                     <div class="details">
                         <p class="data">24 Iul 2014, 15:03	
@@ -44,18 +47,17 @@
                     </div>
                 </div>
                 <div class="right">
-                    <p class="info">Focar de hepatita A în comuna Drăguşeni, raionul Străşeni. 23 de copii au ajuns la spital, după ce au băut apă contaminată din fântâni. Focar de hepatita A în comuna Drăguşeni, raionul Străşeni. 23 de copii au ajuns la spital, după ce au băut apă.
-                        Focar de hepatita A în comuna Drăguşeni, raionul Străşeni. 23 de copii au ajuns la spital, după ce au băut apă contaminată din fântâni. Focar de hepatita A în comuna Drăguşeni, raionul Străşeni. </p>
+                    <p class="info">Profesorul austriac a fost însoţit de câţiva diplomaţi din ţara sa, care de asemenea au răspuns cu amabilitate la întrebările studenţilor şi profesorilor ULIM -Dr. Karl Schramek, Ambasadorul Austriei la NATO, şi Ambasadorul Gerhard Jandl, Directorul Departamentului Politică de Securitate şi Politică Externă şi de Securitate Comună al MAE al Austriei.</p>
                 </div>
                 <a href="javascript:;" class="more"></a>
                 <div class="clearfix"></div>
             </div>
             <div class="a_box v_g">
-                <p class="title">Focar de hepatită A în Drăgușeni - 23 de copii contaminați</p>
+                <p class="title">Natalia Calmâș din satul Pănășești - mamă a cinci copii, studena si femei de afaceri</p>
                 <div class="hr_dbl"></div>
                 <div class="left">
                     <div class="img">
-                        <img src="<?=res('assets/img/news.png');?>">
+                        <img src="<?=res('assets/img/news3.png');?>">
                     </div>
                     <div class="details">
                         <p class="data">24 Iul 2014, 15:03	
@@ -65,8 +67,11 @@
                     </div>
                 </div>
                 <div class="right">
-                    <p class="info">Focar de hepatita A în comuna Drăguşeni, raionul Străşeni. 23 de copii au ajuns la spital, după ce au băut apă contaminată din fântâni. Focar de hepatita A în comuna Drăguşeni, raionul Străşeni. 23 de copii au ajuns la spital, după ce au băut apă.
-                        Focar de hepatita A în comuna Drăguşeni, raionul Străşeni. 23 de copii au ajuns la spital, după ce au băut apă contaminată din fântâni. Focar de hepatita A în comuna Drăguşeni, raionul Străşeni. </p>
+                    <p class="info">Natalia Calmâș din satul Pănășești, raionul Strășeni, administrează afacerea familiei - crește flori în sere. Are cinci copii și este studentă la Universitatea Agrară.
+Aceasta este protagonista unei povești de succes prezentate în cadrul proiectului
+ „Schimbarea percepţiei femeii în societate prin intermediul mass-media” implementat de Centrul pentru Jurnalism Independent (CJI), scrie agora.md.
+
+Într-un filmuleț, Natalia Calmâș vorbește despre experiența și eforturile depuse pentru a-și realiza dorințele, aici, acasă.</p>
                 </div>
                 <a href="javscript:;" class="more"></a>
                 <div class="clearfix"></div>
@@ -92,15 +97,14 @@
             </div>
             <div class="hr_grey"></div>
         </div>
-        <div class="right m_a">                
-            <p class='n_title'>arhivă</p>
+        <div class="right">                
             <ul class="right_menu">
-                <li><a href="javascript:;">Iunie 2014</a></li>
-                <li><a href="javascript:;">Mai 2014</a></li>
-                <li><a href="javascript:;">Aprilie 2014</a></li>
-                <li><a href="javascript:;">Martie 2014</a></li>
-                <li><a href="javascript:;">Februarie 2014</a></li>                    
-                <a href='javascript:;' class="more"></a>
+                <li><a href="javascript:;">Biografia primarului</a></li>
+                <li><a href="javascript:;">Declarații de venituri și active</a></li>
+                <li><a href="javascript:;">Rapoartele anuale</a></li>
+                <li><a href="javascript:;">Planul de acțiune pe anul curent</a></li>
+                <li><a href="javascript:;">Promisiunile primarului </a></li>
+                <li class="active" ><a href="javascript:;">Discursuri și prelegeri publice </a></li>
             </ul>
 
         </div>

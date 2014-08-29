@@ -6,7 +6,7 @@
             <a href="javascript:;">Depune o plângere</a>
         </div>
     </div>
-    <div class="wrap compl">
+    <div class="wrap">
         <p class="c_title">Audierea cetățenilor</p>
 
         <div class='left'>                
@@ -58,7 +58,7 @@
             <div class="av">
                 <p><span>ATENTIE ! </span>Petitiile anonime sau cele in care nu sunt trecute datele de identificare ale persoanei nu se iau în considerare si se claseaza, potrivit prezentei ordonante, administratorul site-ului rezervindu-si dreptul de a nu le face publice.</p>
             </div>
-            <div class="form">
+            <div class="form compl">
                 <form action="" method="">
                     <p class="ftb">Formular de completare</p>
                     <div class="content">

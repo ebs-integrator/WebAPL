@@ -7,11 +7,11 @@
             <a href="javascript:;">Documente strategice</a>
         </div>
     </div>
-    <div class="wrap rpt dcr">
+    <div class="wrap">
         <p class="c_title">Documente strategice</p>
 
         <div class='left'>
-            <ul>
+            <ul class="dcr">
                 <li><a href='javascript:;'> Documente strategice - 2008</a>
                     <div class='dcr_box'>
                         <p class="ul_title"> <span>Nume fisier</span>Actualizat</p>
