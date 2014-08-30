@@ -27,12 +27,20 @@ class Template {
                 'function' => array('PageView', 'promisesMod')
             ),
             'locations_list' => array(
-                'name' => 'Lista cu locatii',
+                'name' => 'Lista cu locatii (cultura)',
                 'function' => array('PageView', 'locationsList')
             ),
             'accordion_list' => array(
-                'name' => 'Lista acordion',
+                'name' => 'Lista acordion (faq)',
                 'function' => array('PageView', 'accordionList')
+            ),
+            'town_list' => array(
+                'name' => 'Lista primarii (orase)',
+                'function' => array('PageView', 'townList')
+            ),
+            'tablePosts' => array(
+                'name' => 'Posturi ca tabel (autorizatii)',
+                'function' => array('PageView', 'tablePosts')
             )
         )
     );

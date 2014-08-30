@@ -36,6 +36,33 @@ class PageView {
         return static::defaultView($data);
     }
     
+    public static function accordionList($data) {
+        if ($data['page']->feed_id) {
+            Post::$taxonomy = 2;
+            $wdata["feedPosts"] = Post::postsFeed($data['page']->feed_id);
+            $data["page"]->text = View::make("sections.pages.modview.accordion")->with($wdata);
+        }
+        return static::defaultView($data);
+    }
+    
+    public static function tablePosts($data) {
+        if ($data['page']->feed_id) {
+            Post::$taxonomy = 2;
+            $wdata["feedPosts"] = Post::postsFeed($data['page']->feed_id);
+            $data["page"]->text = View::make("sections.pages.modview.table")->with($wdata);
+        }
+        return static::defaultView($data);
+    }
+    
+    public static function townList($data) {
+        if ($data['page']->feed_id) {
+            Post::$taxonomy = 2;
+            $wdata["feedPosts"] = Post::postsFeed($data['page']->feed_id, true);
+            $data["page"]->text = View::make("sections.pages.modview.towns")->with($wdata);
+        }
+        return static::defaultView($data);
+    }
+    
     public static function defaultView($data) {
         return View::make('sections.pages.default')->with($data);
     }
