@@ -2,8 +2,9 @@
     <div class="dirs_menu">
         <div class="wrap">
             <a href="javascript:;">Principala »</a>
-            <a href="javascript:;">Primăria Strășeni »</a>
             <a href="javascript:;">Primăria »</a>
+            <a href="javascript:;">Primarul »</a>
+            <a href="javascript:;">Viceprimarii și declarații »</a>
             <a href="javascript:;">Viceprimarii</a>
         </div>
     </div>
@@ -80,11 +81,8 @@
 
         <div class='right'>
             <ul class="right_menu">
-                <li><a href="javascript:;">Aparatul primăriei</a></li>
-                <li><a href="javascript:;">Comisiile primăriei</a></li>
-                <li><a href="javascript:;">Organigrama primăriei</a></li>
-                <li><a href="javascript:;">Specialiștii primăriei</a></li>
-                <li class="active" ><a href="javascript:;">Viceprimarii </a></li>
+                <li class="active"><a href="javascript:;">Viceprimarii</a></li>
+                <li><a href="javascript:;">Declarații de venituri și active</a></li>
             </ul>
         </div>
         <div class='clearfix'></div>

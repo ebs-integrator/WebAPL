@@ -2,6 +2,8 @@
         <div class="dirs_menu">
             <div class="wrap">
                 <a href="javascript:;">Principala »</a>
+                <a href="javascript:;">Transparența »</a>
+                <a href="javascript:;">Informații publice »</a>
                 <a href="javascript:;">Anunțuri</a>
             </div>
         </div>

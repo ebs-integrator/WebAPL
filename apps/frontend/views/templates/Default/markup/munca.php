@@ -2,12 +2,13 @@
     <div class="dirs_menu">
         <div class="wrap">
             <a href="javascript:;">Principala »</a>
-            <a href="javascript:;">Transparenta decizionala »</a>                    
-            <a href="javascript:;">Job-uri și voluntariat</a>
+            <a href="javascript:;">Transparenta »</a>  
+            <a href="javascript:;">Informații publice »</a>                
+            <a href="javascript:;">Posturi vacante curente</a>
         </div>
     </div>
     <div class="wrap">
-        <p class="c_title">Job-uri și voluntariat</p>
+        <p class="c_title">Posturi vacante curente</p>
         <div class="left">
             <div class='ldmbox'>
                 <p class='title'>
@@ -61,8 +62,10 @@
         </div>
         <div class="right">
             <ul class="right_menu">
+                <li><a href="javascript:;">Anunțuri </a></li>
+                <li><a href="javascript:;">Achiziții publice </a></li>
                 <li class="active" ><a href="javascript:;">Posturi vacante curente</a></li>
-                <li><a href="javascript:;">Fii un voluntar</a></li>
+                <li><a href="javascript:;">Stagii și voluntariat în cadrul primăriei</a></li>
             </ul>
         </div>
         <div class='left'>

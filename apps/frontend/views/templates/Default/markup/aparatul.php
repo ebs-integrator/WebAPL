@@ -2,7 +2,7 @@
     <div class="dirs_menu">
         <div class="wrap">
             <a href="javascript:;">Principala »</a>
-            <a href="javascript:;">Primăria Strășeni »</a>
+            <a href="javascript:;">Primăria »</a>
             <a href="javascript:;">Primăria »</a>
             <a href="javascript:;">Aparatul primăriei</a>
         </div>
@@ -55,11 +55,13 @@ politicii de tineret</td><td>bir.- 419</td><td>456341</td></tr>
         <div class='right'>
             
             <ul class="right_menu">
+                <li><a href="javascript:;"> Primarul</a></li>
+                <li><a href="javascript:;"> Viceprimarii și declarații</a></li>
                 <li class="active"><a href="javascript:;">Aparatul primăriei</a></li>
-                <li><a href="javascript:;"> Comisiile primăriei</a></li>
                 <li><a href="javascript:;"> Organigrama primăriei</a></li>
-                <li><a href="javascript:;"> Specialistii primariei</a></li>
-                <li><a href="javascript:;"> Viceprimarii</a></li>
+                <li><a href="javascript:;"> Cadrul legal al APL</a></li>
+                <li><a hre="javascript:;">Regulamentele interne </a></li>
+                <li><a hre="javascript:;">Noutăți</a></li>
             </ul>
         </div>
         <div class='clearfix'></div>

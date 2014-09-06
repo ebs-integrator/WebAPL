@@ -2,9 +2,9 @@
     <div class="dirs_menu">
         <div class="wrap">
             <a href="javascript:;">Principala »</a>
-            <a href="javascript:;">Servicii pentru cetățeni »</a>
-            <a href="javascript:;">Audierea Cetatenilor »</a>
-            <a href="javascript:;">FAQ pentru cetățeni</a>
+            <a href="javascript:;">Cetățeni și business »</a>
+            <a href="javascript:;">Audierea cetățenilor »</a>
+            <a href="javascript:;">Întrebări frecvente</a>
         </div>
     </div>
     <div class="wrap">
@@ -59,11 +59,11 @@
 
         <div class='right'>
             <ul class="right_menu">
-                <li class="active"><a href="javascript:;"> FAQ pentru cetățeni</a></li>
                 <li><a href="javascript:;">Programează-te on-line pentru o audiență</a></li>
                 <li><a href="javascript:;">Orarul audierilor</a></li>
-                <li><a href="javascript:;">Discută on-line cu primarul</a></li>
+                <li><a href="javascript:;">Discută on-line cu primarul și consilierii locali</a></li>
                 <li><a href="javascript:;">Depune o plângere</a></li>
+                <li class="active"><a href="javascript:;">Întrebări frecvente </a></li>
             </ul>
         </div>
         <div class='clearfix'></div>

@@ -41,14 +41,14 @@
                         <div class="left">
                             <img src="<?=res('assets/img/serv.png');?>">
                         </div>
-                        <div class="left title">Servicii pentru cetățeni</div></a>
+                        <div class="left title third">Cetățeni și business</div></a>
                 </div>
                 <div class="top_menu">
                     <a href='javascript:;'>
                         <div class="left">
                             <img src="<?=res('assets/img/prim.png');?>">
                         </div>
-                        <div class="left title">Primăria Strășeni</div></a>
+                        <div class="left title second">Primăria</div></a>
                 </div>
                 <div class="top_menu">
                     <a href='javascript:;'>
@@ -62,7 +62,7 @@
                         <div class="left">
                             <img src="<?=res('assets/img/transp.png');?>">
                         </div>
-                        <div class="left title">Transparenta decizionala</div></a>
+                        <div class="left title second">Transparenta</div></a>
                 </div>
             </div>
             <div class="contact right">

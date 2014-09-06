@@ -431,7 +431,7 @@ textarea {
         margin-left:0px;
         margin-top:5px;
     }
-    header button.chat span.g_dot,button.chat_button span.g_dot{
+    header button.chat span.g_dot,button.chat_button span.g_dot,button.vice_button span.g_dot{
         display:inline-block;
         width:18px;
         height:18px;
@@ -440,13 +440,25 @@ textarea {
         margin-left: 10px;
         vertical-align: middle;
     }
-    header button.chat span.g_dot.active,button.chat_button span.g_dot.active{
+    button.vice_button span.g_dot{
+        margin-left:20px;
+    }
+    button.vice_button{
+        height:64px;
+        width:300px;
+        background:url('../img/vice_btn.png') no-repeat 22px center #f9f9f9;
+        border-radius: 3px;
+        border-bottom: 2px solid #c2c2c2;
+        font:27px 'open_sansbold';
+        padding-left:65px;
+    }
+    header button.chat span.g_dot.active,button.chat_button span.g_dot.active,button.vice_button span.g_dot.active{
         background:url('../img/a_dot.png');
     }
-    header button.chat .green ,button.chat_button .green{
+    header button.chat .green ,button.chat_button .green,button.vice_button .green{
         color:#b5c57e;
     }
-    header button.chat .violet ,button.chat_button .violet{
+    header button.chat .violet ,button.chat_button .violet,button.vice_button .violet{
         color:#7c4d7c;
     }
     header .contact .tel{
@@ -713,29 +725,34 @@ textarea {
         border-bottom: 5px solid #673268;
         line-height: 154px;
         text-align: center;
+        display:block;
     }
     .menu .box .menu_title{
         text-transform: uppercase;
-        height:71px;
+        height: 71px;
         text-align: center;
-        border-bottom: 9px solid #fbfbfb;
         margin-bottom: 0px;
-    }
-    .menu .box .menu_title a{
+        display: table-cell;
+        width: 260px;
+        vertical-align: middle;
         color:#01374c;
         font:24px 'open_sansbold';
         text-decoration: none;
-        line-height: 30px;
-        width: 100%;
-        padding: 5px 24px;
-        display: block;
+        line-height: 25px;
     }
-    .menu  .box .menu_title.active {
+    .menu  .box .active .menu_title {
         background-color:#673268;
-        border-bottom: 9px solid #673268;
-    }
-    .menu  .box .menu_title.active a{
         color:#fff;
+    }
+    .green_sub{
+        background:#74b45a;
+        color:#fff;
+        border-bottom:2px solid #568c40;
+        height:33px;
+        min-width:118px;
+        margin-left:20px;
+        font:17px 'open_sanssemibold';
+        text-transform:uppercase;
     }
     .menu .wrap{
         max-width: 1280px;
@@ -1154,11 +1171,16 @@ textarea {
     .top_menu  a{
         font:16px 'open_sansregular';
         color:#4b4b4b;        
-        line-height: 20px;
+        display: table-cell;
+        vertical-align: middle;
 
     }
     .top_menu .left.title.third{
         max-width:100px;
+    }
+    .top_menu .left.title.second{
+        line-height:40px;
+        height:40px;
     }
     .top_menu .left img{
         margin-top: 7px;
@@ -1231,6 +1253,9 @@ textarea {
         background: url('../img/right.png')25px center no-repeat;
         padding-right:15px;
     }
+    .right_menu li.li_b{
+        height:90px;
+    }
     .right_menu li a{
         font: 20px 'open_sanssemibold';
         color: #595959;
@@ -1239,6 +1264,10 @@ textarea {
         vertical-align: middle;
         line-height: 20px;
     }
+    .right_menu li.li_b a{
+        height:90px;
+    }
+
     .cda > .right ul li{
         margin:0px;
     }
@@ -1346,7 +1375,7 @@ textarea {
         color:#4b4b4b;
         margin-bottom: 0px;
     }
-   .city_info{
+    .city_info{
         float:left;
         width:80%;
     }
@@ -1355,7 +1384,7 @@ textarea {
         margin-top: 20px;
         float: right;
     }
-     .city_link a{
+    .city_link a{
         color:#27ae60;
         font:14px 'open_sansregular';
     }
@@ -2162,6 +2191,10 @@ textarea {
         height:89px;
         overflow: hidden;
     }
+    ul.culture li .right {
+        float:left;
+        margin-left:30px;
+    }
     ul.culture li .right .box{
         float:left;
         border-left:2px solid #b5c57e;
@@ -2177,7 +2210,7 @@ textarea {
         font:13px 'open_sanssemibold_italic';
         color:#b0b0b0;
     }
-    .search input[type=submit]{
+    .search input[type=button]{
         width:118px;
         height:33px;
         font:15px 'open_sansbold';
@@ -2228,13 +2261,6 @@ textarea {
         margin-right:15px;
         margin-bottom: 70px;
     }
-    /*    .ul_title{
-            height:33px;
-            font:18px 'open_sansbold';
-            padding-left:18px;
-            background:#efefef;
-            line-height: 33px;
-        }*/
 
     .ul_title{
         text-transform: uppercase;
@@ -2447,8 +2473,12 @@ textarea {
         bottom:-2px;
         border-left:3px solid #cdcdcd;
     }
-    table.atz  ul > li a:hover,ul.mda > li > a:hover{
+    ul.atz > li a:hover,ul.mda > li > a:hover{
         background:url('../img/a_active.png') no-repeat;
+    }
+    .vp_name{
+        color:#7c4d7c;
+        font:30px 'open_sansbold';
     }
     .com_box .title{
         text-transform: uppercase;
@@ -2755,17 +2785,16 @@ textarea {
         color:#4c4c4c;
         display: inline-block;
         width:360px;
+        margin-bottom:65px;
     }
     .bgr .quote:before{
         content: url('../img/q_t.png');
         margin-left:-33px;
     }
-    .dop .quote:before{
-        content: url('../img/q_t.png');
-        margin-left: -23px;
-        margin-right: -10px;
+    .dop {
+
     }
-    .bgr .quote:after,.dop .quote:after{
+    .bgr .quote:after{
         content: url('../img/q_b.png');
     }
     .bgr .info > ul > li{
@@ -2945,78 +2974,94 @@ textarea {
     }
 
     .dop{
-        position: fixed;
+        width:412px;
+        height:630px;
+        -webkit-box-shadow: 0px 1px 40px 0px rgba(210, 195, 210, 0.5);
+        -moz-box-shadow:    0px 1px 40px 0px rgba(210, 195, 210, 0.5);
+        box-shadow:         0px 1px 40px 0px rgba(210, 195, 210, 0.5);
+        position:fixed;
         bottom:0px;
         left:50%;
-        width:730px;
-        z-index: 999;
-        height:527px;
-    }
-    .dop > .left {
-        width:330px;
-        background:#7c4d7c;
-        height:100%;
-    }
-    .dop > .left > .title{
-        color:#fff;
-        height:85px;
-        background: #713871;
-        font:24px 'open_sanssemibold';
-        padding:10px 24px;
-    }
-    .dop > .right {
-        width:400px;
-        height:100%;
         background:#fff;
-        border:1px solid #d7d7d7;
-        border-left:0px;
+        z-index:888;
     }
-    .dop > .left > .details {
-        margin-top:20px;
-        height:130px;
-        padding:0px 20px;
+    .dop .top{
+        height:103px;
+        width:100%;
+        background:#7c4d7c;
+        border-bottom:4px solid #673167;
+        position:relative;
     }
-    .dop > .left > .details > .left{
-        height:100%;
-        border-radius: 50%;
-        width: 130px;
-        border:3px solid rgb( 230, 230, 230 );
-        overflow: hidden
+    .dop .top hr{
+        height:1px ;
+        background:#a07fa0;
+        position:absolute;
+        bottom:0px;
+        width:100%;
+        border-top:0px;
+        margin:0px;
     }
-    .dop > .left > .details > .right{
-        width:120px;
-        margin-top: 15px;
-        margin-right: 20px;
+    .dop .top .left{
+        width:114px;
+        height: 98px;
+        padding-top: 8px
     }
-    .dop > .left > .details > .right > span{
-        font:24px 'open_sanssemibold';
-        color:#acbe6b;
-        text-transform: uppercase;
+    .dop .top .left .photo{
+        width:83px;
+        height:83px;
+        border-radius:50%;
+        margin:0 auto;
+        border:1px solid #8a5a8a;
     }
-    .dop > .left > .details > .right > p.online.active{        
-        background:url('../img/on.png') no-repeat left center;
+    .dop .top .left .photo img{
+        width:80px;
+        height:80px;
+        border-radius:50%;
+        display:block;
+        margin:0 auto;
+        margin-top:1px;
     }
-    .dop > .left > .details > .right > p.online{
-        background:url('../img/off.png') no-repeat left center;
-        margin-top:15px;
-        padding-left:28px;        
+    .dop .right{
+        position:relative;
+        width:298px;
+        height:98px; 
+        padding-left:5px;
+    }
+    .dop .right .c_name{
+        color:#c4d390;
+        font:20px 'open_sanssemibold';
+        max-width:210px;
+        margin:10px 0px  5px; 
+    }
+    .dop .right .buttons{
+        position:absolute;
+        top:5px;
+        right:5px;
+    }
+    .dop .right .buttons button{
+        height:25px;
+        width:25px;
+        background:#673167;
+        margin-left:-2px;
+    }
+    
+    .dop .right .buttons button img {
+        margin-top:-4px;
+    }
+    .dop .right .status{
+        padding-left:25px;
         color:#fff;
         font:16px 'open_sanssemibold';
     }
-    .dop .quote{
-        width:255px;
-        margin:0 auto;
-        font:15px 'open_sanssemibold_italic';
-        color:#bea2be;
-        margin-top:35px;
+    .dop .right .status.on{
+        background:url('../img/on.png') no-repeat left center;
     }
-    .dop hr{
-        height:1px;
-        width:90%;
+    .dop .content{        
+        border:1px solid #d7d7d7;
         border-top:0px;
-        margin:0 auto;
-        background: #a07aa0;
-        margin-top:50px;
+    }
+    .bl_fr{
+        display:inline-block;
     }
 }
 @media only screen and (max-width : 1350px) {

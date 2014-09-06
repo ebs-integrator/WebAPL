@@ -2,12 +2,12 @@
     <div class="dirs_menu">
         <div class="wrap">
             <a href="javascript:;">Principala »</a>
-            <a href="javascript:;">Stiri »</a>                    
-            <a href="javascript:;">Detalii stire</a>
+            <a href="javascript:;">Noutăți »</a>                    
+            <a href="javascript:;">Detalii noutate</a>
         </div>
     </div>
     <div class="wrap  u_s">
-        <p class="c_title">anunțuri</p>
+        <p class="c_title">Noutăți</p>
         <div class="left">
             <p class='det_news'>Focar de hepatită A în Drăgușeni - 23 de copii contaminați</p>
             <div class='hr_dbl'></div>

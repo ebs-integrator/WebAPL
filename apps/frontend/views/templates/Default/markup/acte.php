@@ -2,7 +2,7 @@
     <div class="dirs_menu">
         <div class="wrap">
             <a href="javascript:;">Principala »</a>
-            <a href="javascript:;">Servicii pentru cetățeni »</a>
+            <a href="javascript:;">Cetățeni și business »</a>
             <a href="javascript:;">Modele de acte / formulare »</a>
             <a href="javascript:;">Formulare de cereri</a>
         </div>
@@ -13,7 +13,7 @@
         <div class='left'>        
             <div class="search">
                 <input type="text" placeholder="Cauta modelul/formularul">
-                <input type="submit" value="Caută">
+                <input type="submit" value="Caută" class="green_sub">
                 <div class="clearfix"></div>
             </div>
             <ul class="mda">
@@ -83,7 +83,8 @@
             <ul class="right_menu">
                 <li class="active"><a href="javascript:;"> Formulare de cereri</a></li>
                 <li><a href="javascript:;">Formulare pentru certificate</a></li>
-                <li><a href="javascript:;">Formulare pentru taxe</a></li>
+                <li><a href="javascript:;">Formulare pentru taxe</a></li>                
+                <li><a href="javascript:;">Modele de cereri / plângeri</a></li>
             </ul>
         </div>
         <div class='clearfix50'></div>
