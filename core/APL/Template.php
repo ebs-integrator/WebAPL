@@ -23,7 +23,7 @@ class Template {
                 'function' => array('PageView', 'posturiVacante')
             ),
             'promisiuni_primar' => array(
-                'name' => 'Lista de promisiuni a primarului',
+                'name' => 'Lista de promisiuni a primarului (feed based)',
                 'function' => array('PageView', 'promisesMod')
             ),
             'locations_list' => array(
@@ -41,6 +41,22 @@ class Template {
             'tablePosts' => array(
                 'name' => 'Posturi ca tabel (autorizatii)',
                 'function' => array('PageView', 'tablePosts')
+            ),
+            'urgentNumbers' => array(
+                'name' => 'Numere de urgenta (urgenta)',
+                'function' => array('PageView', 'urgentNumbers')
+            ),
+            'acticles' => array(
+                'name' => 'Lista articole',
+                'function' => array('PageView', 'articleList')
+            ),
+            'externLinks' => array(
+                'name' => 'Linkuri externe',
+                'function' => array('PageView', 'externLinks')
+            ),
+            'fileFolders' => array(
+                'name' => 'Dosare cu fisiere',
+                'function' => array('PageView', 'fileFolders')
             )
         )
     );

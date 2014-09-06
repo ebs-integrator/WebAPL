@@ -1,3 +1,9 @@
+$.expr[":"].contains = $.expr.createPseudo(function(arg) {
+    return function(elem) {
+        return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+    };
+});
+
 $(document).ready(function() {
     $('.currency .s_c,.overlay2').click(function() {
         $('.overlay2').toggleClass('hidden');
@@ -74,6 +80,14 @@ $(document).ready(function() {
         radioClass: 'iradio_square-red',
         increaseArea: '20%' // optional
     });
+
+    $(".search_start").click(function() {
+        var block = $(this).closest(".search_files");
+        var query = block.find(".search_input").val();
+
+        block.find(".mda li").hide();
+        block.find('.mda li span:contains("' + query + '")').closest("li").show();
+    });
 });
 
 
@@ -83,7 +97,7 @@ function initialize() {
     var big_map = document.getElementById("map-canvas2");
     var small_map = document.getElementById("map-canvas");
 
-    var iconBase = res_url+"assets/img/marker.png";
+    var iconBase = res_url + "assets/img/marker.png";
     var myLatlng = new google.maps.LatLng(47.148306, 28.617051);
 
     var center = new google.maps.LatLng(47.151994, 28.610020);

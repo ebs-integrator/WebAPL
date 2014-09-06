@@ -10,13 +10,22 @@ class PageController extends BaseController {
             $uri = end($parts);
             $this->data['page'] = Post::findURI($uri);
             if ($this->data['page']) {
-
                 Post::oneView($this->data['page']['id']);
-                
+
                 $this->data['parents'] = Post::getParents($this->data['page']['parent']);
                 $this->data['parent'] = Post::findID($this->data['page']['parent'], 1);
                 $this->data['colevels'] = Post::findWithParent($this->data['page']['parent']);
-                
+
+                if ($this->data['page']->show_files) {
+                    $this->data['page']['files'] = Files::where(array(
+                                'module_name' => 'page',
+                                'module_id' => $this->data['page']->id,
+                                'type' => 'document'
+                            ))->get();
+                } else {
+                    $this->data['page']['files'] = array();
+                }
+
                 if ($this->data['parent']) {
                     $this->data['top_title'] = $this->data['parent']['title'];
                 } else {
@@ -32,6 +41,9 @@ class PageController extends BaseController {
                 Template::addBreadCrumb($this->data['page']['url'], $this->data['page']['title']);
 
                 $realURI = implode('/', $segments);
+
+                $this->data['page_url'] = Core\APL\Language::url("page/" . $realURI);
+
                 if ($realURI === $query) {
                     $this->loadPage();
                 } else {
@@ -47,7 +59,7 @@ class PageController extends BaseController {
 
     public function loadPage() {
         $this->layout->content = PageView::run($this->data);
- 
+
         return $this->layout;
     }
 

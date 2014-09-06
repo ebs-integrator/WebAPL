@@ -37,7 +37,7 @@ class Post extends Eloquent {
     }
 
     protected static function columns() {
-        return array(Post::$ftable . ".*", PostLang::$ftable . ".text", PostLang::$ftable . ".title", PostLang::$ftable . ".enabled", PostLang::$ftable . ".lang_id", PostLang::$ftable . ".uri");
+        return array(Post::$ftable . ".*", PostLang::$ftable . ".id as post_lang_id", PostLang::$ftable . ".text", PostLang::$ftable . ".title", PostLang::$ftable . ".enabled", PostLang::$ftable . ".lang_id", PostLang::$ftable . ".uri");
     }
 
     protected static function prepareQuery() {
@@ -142,33 +142,41 @@ class Post extends Eloquent {
                     ->select(
                     Post::columns() + array(FeedPost::getField("feed_id"))
             );
-                      
+
             if ($feed->order_type != 'none' && $feed->order_by != 'none') {
                 $posts = $posts->orderBy($feed->order_by, $feed->order_type);
             }
 
             $posts = $posts->get();
-            
             foreach ($posts as &$post) {
                 $fields = FeedField::leftJoin(FeedFieldValue::getTableName(), FeedFieldValue::getField("feed_field_id"), "=", FeedField::getField("id"))
                         ->whereIn(FeedFieldValue::getField("lang_id"), array(0, \Core\APL\Language::getId()))
                         ->where(FeedFieldValue::getField("post_id"), $post->id)
-                        ->select(FeedField::getField("fkey"), FeedFieldValue::getField("value"))
+                        ->select(FeedField::getField("fkey"), FeedFieldValue::getField("value"), FeedField::getField("get_filter"))
                         ->get();
-                foreach ($fields as $field) {
-                    $post[$field->fkey] = $field->value;
-                }
                 
+                foreach ($fields as $field) {
+                    if ($field->get_filter && method_exists('DinamicFields', $field->get_filter)) {
+                        $post[$field->fkey] = call_user_func(array('DinamicFields', $field->get_filter), $field, $post);
+                    } else {
+                        $post[$field->fkey] = $field->value;
+                    }
+                }
+
                 if ($with_cover) {
-                    $post['cover'] = Files::where(array(
-                        'module_name' => 'post_cover',
-                        'module_id' => $post->id
-                    ))->get()->first();
+                    $post['cover'] = Post::coverImage($post->id);
                 }
             }
         }
 
         return $posts;
+    }
+
+    public static function coverImage($id) {
+        return Files::where(array(
+                    'module_name' => 'post_cover',
+                    'module_id' => $id
+                ))->get()->first();
     }
 
 }

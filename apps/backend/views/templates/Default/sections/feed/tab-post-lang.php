@@ -10,6 +10,12 @@
             </td>
         </tr>
         <tr>
+            <th>Uri: </th>
+            <td>
+                <input type="text" name="postlang[<?= $post_lang->id; ?>][uri]" class='form-control' value='<?= isset($post_lang->uri) ? $post_lang->uri : ''; ?>' />
+            </td>
+        </tr>
+        <tr>
             <th>Text: </th>
             <td>
                 <textarea name="postlang[<?= $post_lang->id; ?>][text]" class='ckeditor-run'><?= isset($post_lang->text) ? $post_lang->text : ''; ?></textarea>
@@ -25,10 +31,21 @@
             <tr>
                 <th><?= $field->title; ?>: </th>
                 <td>
-                    <?= dinamic_field($field, array('{name}' => "dinamic_lang[{$field->id}]", '{value}' => $field->value, '{class}' => 'form-control')); ?>
+                    <?= dinamic_field($field, isset($post_lang) ? $post_lang : array(), true, array('{name}' => "dinamic_lang[{$field->id}]", '{value}' => $field->value, '{class}' => 'form-control')); ?>
                 </td>
             </tr>
         <?php } ?>
     </table>
 
 </form>
+
+<table class="table table-bordered">
+    <?php foreach ($post_lang['fields_out'] as $field) { ?>
+        <tr>
+            <th><?= $field->title; ?>: </th>
+            <td>
+                <?= dinamic_field($field, isset($post_lang) ? $post_lang : array(), true, array('{name}' => "dinamic_lang[{$field->id}]", '{value}' => $field->value, '{class}' => 'form-control')); ?>
+            </td>
+        </tr>
+    <?php } ?>
+</table>

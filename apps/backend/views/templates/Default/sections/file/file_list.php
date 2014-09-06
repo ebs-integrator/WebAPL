@@ -1,5 +1,5 @@
 <?php if (count($files) < $num || $num == 0) { ?>
-    <button class="click-trigger btn btn-success" data-for=".button_<?= $module_name; ?>_<?= $module_id; ?>"><i class="fa fa-upload"></i> Select file</button>
+    <button type="button" class="click-trigger btn btn-success" data-for=".button_<?= $module_name; ?>_<?= $module_id; ?>"><i class="fa fa-upload"></i> Select file</button>
 <?php } ?>
 <br><br>
 <table class="table table-bordered">

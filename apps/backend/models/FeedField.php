@@ -2,10 +2,12 @@
 
 class FeedField extends Eloquent {
 
+    use EloquentTrait;
+    
     protected $table = 'apl_feed_field';
     public $timestamps = false;
 
-    public static function get($feed_id, $post_id, $lang_id = 0) {
+    public static function get($feed_id, $post_id, $lang_id = 0, $in_form = 1) {
         
         
         $stmt = FeedField::join('apl_feed_rel', 'apl_feed_field.id', '=', 'apl_feed_rel.feed_field_id')
@@ -29,6 +31,8 @@ class FeedField extends Eloquent {
         } else {
             $stmt = $stmt->where('apl_feed_field.lang_dependent', 0);
         }
+
+        $stmt = $stmt->where('apl_feed_field.in_form', $in_form);
 
         return $stmt->distinct()->get();
     }

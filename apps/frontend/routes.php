@@ -25,6 +25,8 @@ Route::group(array('prefix' => Core\APL\Language::ext()), function() {
     Route::get('home/{furi}', 'PageController@route')->where(array('furi' => '[A-Za-z0-9-]+'));
 });
 
-
+Route::get('markup', function () {
+    return View::make('sections.show_page');
+});
 Route::get('page/markup/{uri}', 'PageController@markup')->where(array('uri' => '[A-Za-z0-9-]+'));
 Route::get('home/markup/{uri}', 'HomeController@markup')->where(array('uri' => '[A-Za-z0-9-]+'));

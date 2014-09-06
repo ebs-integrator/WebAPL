@@ -44,8 +44,11 @@ class Person extends \Core\APL\ExtensionController {
         Actions::get('person/editgroup/{id}', array('before' => 'auth', array($this, 'edit_group')));
         Actions::post('person/savegroup', array('before' => 'auth', array($this, 'save_group')));
 
+        Actions::get('person/emptyperson', array('before' => 'auth', array($this, 'emptyperson')));
+
         Actions::get('person/form', array('before' => 'auth', array($this, 'form')));
         Actions::get('person/form/{id}', array('before' => 'auth', array($this, 'form')));
+
         Actions::post('person/save', array('before' => 'auth', array($this, 'save')));
         Actions::post('person/save_lang', array('before' => 'auth', array($this, 'save_lang')));
         Actions::post('person/save_dynamic_fields', array('before' => 'auth', array($this, 'save_dynamic_fields')));
@@ -59,6 +62,9 @@ class Person extends \Core\APL\ExtensionController {
 
         Template::registerViewMethod('page', 'persons_list', 'Tabel persoane (nume, apartenenta, contacte, sector)', null, true);
         Template::registerViewMethod('page', 'group_with_persons', 'Grupe de persoane', null, true);
+        Template::registerViewMethod('page', 'persons_with_photo', 'Persoane cu foto', null, true);
+        Template::registerViewMethod('page', 'persons_big', 'Persoane cu foto (viceprimari)', null, true);
+        Template::registerViewMethod('page', 'persons_mayor', 'Persoana cu foto (primar)', null, true);
 
         // Set layout
         $this->layout = Template::mainLayout();
@@ -193,7 +199,7 @@ class Person extends \Core\APL\ExtensionController {
             foreach ($langs as $lang_id => $lang) {
                 $personGroupLang = new PersonGroupLang;
                 $personGroupLang->name = $lang['name'];
-                $personGroupLang->description = $lang['description'];
+                //$personGroupLang->description = $lang['description'];
                 $personGroupLang->lang_id = $lang_id;
                 $personGroupLang->group_id = $id;
                 $personGroupLang->save();
@@ -234,7 +240,7 @@ class Person extends \Core\APL\ExtensionController {
         $this->layout->content = Template::moduleView($this->module_name, 'views.form', $data);
         return $this->layout;
     }
-    
+
     public function save_person_groups() {
         $person_id = Input::get('id');
         $groups = Input::get('groups');
@@ -245,6 +251,20 @@ class Person extends \Core\APL\ExtensionController {
                 'group_id' => $group
             ));
         }
+    }
+
+    public function emptyperson() {
+        $person = new PersonModel;
+        $person->save();
+
+        foreach (\Core\APL\Language::getList() as $lang) {
+            $person_lang = new PersonLangModel;
+            $person_lang->person_id = $person->id;
+            $person_lang->lang_id = $lang->id;
+            $person_lang->save();
+        }
+
+        return Redirect::to('person/form/' . $person->id);
     }
 
     /**
