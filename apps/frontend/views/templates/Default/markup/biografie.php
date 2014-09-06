@@ -2,8 +2,9 @@
     <div class="dirs_menu">
         <div class="wrap">
             <a href="javascript:;">Principala »</a>
-            <a href="javascript:;">Primăria Strășeni »</a>
-            <a href="javascript:;">Primarul »</a>
+            <a href="javascript:;">Primăria »</a>
+            <a href="javascript:;">Primăria  »</a>
+            <a href="javascript:;">Primarul  »</a>
             <a href="javascript:;">Biografia primarului</a>
         </div>
     </div>
@@ -14,11 +15,15 @@
             <div class="bgr">
                 <div class="img">
                     <img src='<?= res("assets/img/primar.png"); ?>'/>
-                    <p class="nm_prim">Nume Prenume</p>
                 </div>
+                <p class="vp_name">Ion MORARESCU</p>
                 <span class='quote'>
                     Strășeni înseamnă copilăria, adolescenţa şi familia mea. M-am născut, am copilărit şi am crescut pe străzile din acest oraş!
                 </span>
+                <button class="vice_button">
+                    <span class="green">Chat</span><span class="violet">-online</span>
+                    <span class="g_dot"></span>
+                </button>
                 <div class='clearfix'></div>
             </div>
             <div class="bgr">
@@ -82,13 +87,12 @@
         </div>
 
         <div class='right'>
-            <ul class="right_menu">
-                <li class="active" ><a href="javascript:;">Biografia primarului</a></li>
-                <li><a href="javascript:;">Declarații de venituri și active</a></li>
-                <li><a href="javascript:;">Rapoartele anuale</a></li>
-                <li><a href="javascript:;">Planul de acțiune pe anul curent</a></li>
-                <li><a href="javascript:;">Promisiunile primarului </a></li>
-                <li><a href="javascript:;">Discursuri și prelegeri publice </a></li>
+            <ul class='right_menu'>
+                <li class="active" ><a href='javascript:;'>Biografia primarului</a></li>
+                <li><a href='javascript:;'>Declarațiile cu privire la venituri și proprietate</a></li>
+                <li><a href="javascript:;">Planul de acțiuni pe anul curent </a></li>
+                <li><a href='javascript:;'>Programul de activitate al primarului</a></li>
+                <li><a href='javascript:;'>Raportul anual al primarului</a></li>
             </ul>
         </div>
         <div class='clearfix'></div>

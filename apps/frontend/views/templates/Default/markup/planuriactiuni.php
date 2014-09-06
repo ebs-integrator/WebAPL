@@ -2,9 +2,10 @@
     <div class="dirs_menu">
         <div class="wrap">
             <a href="javascript:;">Principala »</a>
-            <a href="javascript:;">Primăria Strășeni »</a>
-            <a href="javascript:;">Rapoarte și documente  »</a>
-            <a href="javascript:;"><span>Rapoarte și documente </span></a>
+            <a href="javascript:;">Primăria »</a>
+            <a href="javascript:;">Primăria »</a>
+            <a href="javascript:;">Rapoarte și planuri de activitate  »</a>
+            <a href="javascript:;">Planuri de acțiune</a>
         </div>
     </div>
     <div class="wrap">
@@ -31,9 +32,7 @@
 
             <ul class='right_menu'>
                 <li class='active'><a href='javascript:;'>Planuri de acțiune</a></li>
-                <li><a href='javascript:;'>Documente strategice</a></li>
-                <li><a href="javascript:;">Rapoarte </a></li>
-                <li><a href='javascript:;'>Cadrul legal al APL</a></li>
+                <li><a href="javascript:;">Rapoarte anuale</a></li>
             </ul>
 
 

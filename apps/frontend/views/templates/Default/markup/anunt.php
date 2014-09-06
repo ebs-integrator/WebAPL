@@ -2,8 +2,10 @@
     <div class="dirs_menu">
         <div class="wrap">
             <a href="javascript:;">Principala »</a>
-            <a href="javascript:;">Anunțuri »</a>                    
-            <a href="javascript:;">Detalii anunt</a>
+            <a href="javascript:;">Transparența »</a>
+            <a href="javascript:;">Informații publice »</a>
+            <a href="javascript:;">Anunțuri »</a>
+            <a href="javascript:;">Detalii anunț</a>
         </div>
     </div>
     <div class="wrap">
@@ -16,10 +18,10 @@
 
                     <div class="info unic">
                         <div class="img">
-                            <img src="<?=res('assets/img/anunt.png');?>">
+                            <img src="<?= res('assets/img/anunt.png'); ?>">
                             <div class="details">
                                 <p class="data">24 Iul 2014, 15:03	
-                                    <img src="<?=res('assets/img/v_arrow.png');?>" class='arrow'>
+                                    <img src="<?= res('assets/img/v_arrow.png'); ?>" class='arrow'>
                                 </p>
                                 <p class='cont'>3 com.</p>
                             </div>

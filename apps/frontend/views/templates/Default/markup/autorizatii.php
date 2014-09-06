@@ -2,13 +2,13 @@
     <div class="dirs_menu">
         <div class="wrap">
             <a href="javascript:;">Principala »</a>
-            <a href="javascript:;">Servicii pentru cetățeni »</a>
-            <a href="javascript:;">Modele de acte / formulare »</a>
-            <a href="javascript:;">Formulare de cereri</a>
+            <a href="javascript:;">Cetățeni și business »</a>
+            <a href="javascript:;">Autorizații și certificate »</a>
+            <a href="javascript:;">Autorizația pentru unități comerciale</a>
         </div>
     </div>
     <div class="wrap">
-        <p class="c_title">Autorizații</p>
+        <p class="c_title">Autorizații și certificate</p>
 
         <div class='left'>        
             <table class="atz">
@@ -48,10 +48,14 @@
 
         <div class='right'>
             <ul class="right_menu">
-                <li class="active"><a href="javascript:;">Unități comerciale</a></li>
-                <li><a href="javascript:;">Publicitate</a></li>
-                <li><a href="javascript:;">Construcție</a></li>
-                <li><a href="javascript:;">Desființare</a></li>
+                <li class="active"><a href="javascript:;">Autorizația pentru unități comerciale</a></li>
+                <li><a href="javascript:;">Autorizația de construcție</a></li>
+                <li><a href="javascript:;">Autorizația de desființare</a></li>
+                <li><a href="javascript:;">Certificatul de urbanism pentru proiectare</a></li>
+                <li><a href="javascript:;">Certificat privind lipsa / existența restanțelor</a></li>
+                <li><a href="javascript:;">Certificat privind componenta familiei</a></li>
+                <li class="li_b"><a href="javascript:;">Certificate necesare pentru construcția casei sau a unui obiectiv comercial</a></li>
+                <li class="li_b"><a href="javascript:;">Întrebări frecvente/ Modele de cereri / Ghid de completare a cererii</a></li>
             </ul>
         </div>
         <div class='clearfix50'></div>

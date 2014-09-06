@@ -2,8 +2,8 @@
     <div class="dirs_menu">
         <div class="wrap">
             <a href="javascript:;">Principala »</a>
-            <a href="javascript:;">Primăria Strășeni  »</a>     
-            <a href="javascript:;">Rapoarte și documente  »</a>                    
+            <a href="javascript:;">Primăria  »</a>    
+            <a href="javascript:;">Primăria  »</a>                      
             <a href="javascript:;">Cadrul legal al APL</a>
         </div>
     </div>
@@ -99,10 +99,13 @@
         </div>
         <div class="right">
             <ul class="right_menu">
-                <li><a href="javascript:;">Planuri de acțiune</a></li>
-                <li><a href="javascript:;">Documente strategice</a></li>
-                <li><a href="javascript:;">Rapoartele</a></li>
-                <li class="active"><a href="javascript:;">Cadrul legal al APL</a></li>
+                <li><a href="javascript:;"> Primarul</a></li>
+                <li><a href="javascript:;"> Viceprimarii și declarații</a></li>
+                <li><a href="javascript:;">Aparatul primăriei</a></li>
+                <li><a href="javascript:;"> Organigrama primăriei</a></li>
+                <li class="active"><a href="javascript:;"> Cadrul legal al APL</a></li>
+                <li><a hre="javascript:;">Regulamentele interne </a></li>
+                <li><a hre="javascript:;">Noutăți</a></li>
             </ul>
         </div>
 

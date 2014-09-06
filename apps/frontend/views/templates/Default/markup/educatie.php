@@ -2,13 +2,13 @@
     <div class="dirs_menu">
         <div class="wrap">
             <a href="javascript:;">Principala »</a>
-            <a href="javascript:;">Servicii pentru cetățeni »</a>
-            <a href="javascript:;">Educație și învățământ »</a>
-            <a href="javascript:;">Caută grădinița potrivită </a>
+            <a href="javascript:;">Cetățeni și business »</a>
+            <a href="javascript:;">Educație, Cultură, Turism și Sport »</a>
+            <a href="javascript:;">Grădinițe, gimnazii, licee</a>
         </div>
     </div>
     <div class="wrap">
-        <p class="c_title">Turism și cultură</p>
+        <p class="c_title">Educație</p>
 
         <div class='left'>                
             <ul class='culture'>
@@ -83,11 +83,12 @@
 
         <div class='right'>
             <ul class="right_menu">
-                <li class="active"><a href="javascript:;"> Caută grădinița potrivită</a></li>
-                <li><a href="javascript:;">Înscrie-te la școala dorită</a></li>
-                <li><a href="javascript:;">Perioada școlară și date utile</a></li>
-                <li><a href="javascript:;">Școli cu regim special</a></li>
-                <li><a href="javascript:;">Suport pentru minorități etnice</a></li>
+                <li  class="active"><a href="javascript:;"> Grădinițe, gimnazii, licee</a></li>
+                <li><a href="javascript:;">Colegiul și Universitatea</a></li>
+                <li><a href="javascript:;">Biblioteca, Muzeul și Teatrul </a></li>
+                <li><a href="javascript:;">Parcuri, zone de odihnă și sport</a></li>
+                <li><a href="javascript:;">Atracții turistice</a></li>
+                <li><a href="javascript:;">Despre orașul Strășeni </a></li>
             </ul>
         </div>
         <div class='clearfix'></div>

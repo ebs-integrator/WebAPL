@@ -1,9 +1,9 @@
 <section>
     <div class="dirs_menu">
         <div class="wrap">
-            <a href="javascript:;">Principala »</a>
-            <a href="javascript:;">Servicii pentru cetățeni »</a>
-            <a href="javascript:;">Certificate »</a>
+             <a href="javascript:;">Principala »</a>
+            <a href="javascript:;">Cetățeni și business »</a>
+            <a href="javascript:;">Autorizații și certificate »</a>
             <a href="javascript:;">Certificat de urbanism pentru proiectare</a>
         </div>
     </div>
@@ -31,10 +31,14 @@
 
         <div class='right'>
             <ul class="right_menu">
-                <li class="active"><a href="javascript:;"> Certificat de urbanism pentru proiectare</a></li>
-                <li><a href="javascript:;">Certificat de urbanism informativ</a></li>
-                <li><a href="javascript:;">Certificat privind componența familiei</a></li>
+                <li><a href="javascript:;">Autorizația pentru unități comerciale</a></li>
+                <li><a href="javascript:;">Autorizația de construcție</a></li>
+                <li><a href="javascript:;">Autorizația de desființare</a></li>
+                <li class="active"><a href="javascript:;">Certificatul de urbanism pentru proiectare</a></li>
                 <li><a href="javascript:;">Certificat privind lipsa / existența restanțelor</a></li>
+                <li><a href="javascript:;">Certificat privind componenta familiei</a></li>
+                <li class="li_b"><a href="javascript:;">Certificate necesare pentru construcția casei sau a unui obiectiv comercial</a></li>
+                <li class="li_b"><a href="javascript:;">Întrebări frecvente/ Modele de cereri / Ghid de completare a cererii</a></li>
             </ul>
         </div>
         <div class='clearfix'></div>

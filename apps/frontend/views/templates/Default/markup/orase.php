@@ -2,9 +2,9 @@
     <div class="dirs_menu">
         <div class="wrap">
             <a href="javascript:;">Principala »</a>
-            <a href="javascript:;">Servicii pentru cetățeni »</a>
-            <a href="javascript:;">Orasul »</a>
-            <a href="javascript:;">Legende locale</a>
+            <a href="javascript:;">Cetățeni și business »</a>
+            <a href="javascript:;">Despre orașul Strășeni  »</a>
+            <a href="javascript:;">Orașe înfrățite</a>
         </div>
     </div>
     <div class="wrap">
@@ -64,9 +64,9 @@
         <div class="right">
 
             <ul class='right_menu'>
-                <li><a href='javascript:;'>Scurt istoric</a></li>
+                <li><a href="javascript:;">Cum să ajungi în oraș / Amplasarea geografică</a></li>
+                <li ><a href='javascript:;'>Istoria orașului</a></li>
                 <li><a href='javascript:;'>Personalități marcante</a></li>
-                <li><a href="javascript:;">Legende locale</a></li>
                 <li class='active'><a href='javascript:;'>Orașe înfrățite</a></li>
             </ul>
 

@@ -1,24 +1,26 @@
 <div class="dop">
-    <div class="left">
-        <p class="title"> Discută on-line cu primarul </p>
-        <div class="details">
-            <div class="left">
+    <div class="top">
+        <div class="left">
+            <div class="photo">
                 <img src="<?= res('assets/img/small_p.png'); ?>">
             </div>
-            <div class="right">
-                <span>nume</span>
-                <span>prenume</span>
-                <p class="online active">Online</p>
-            </div>
         </div>
-        <div class="quote">
-            Strășeni înseamnă copilăria, adolescenţa şi familia mea. M-am născut, am copilărit şi am crescut pe străzile din acest oraş!
-
-            care a fost, cândva, micul Paris şi care, treptat, se reîntoarce la normalitate.
+        <div class="right">
+            <p class="c_name">
+                Discută on-line cu
+                primarul Ion Vasilica
+            </p>
+            <p class="status on">
+                on-line
+            </p>
+            <div class="buttons">
+                <button><img src="<?= res('assets/img/save.png'); ?>"></button>
+                <button><img src="<?= res('assets/img/close.png'); ?>"></button>
+            </div>
         </div>
         <hr>
     </div>
-    <div class="right">
+    <div class="content">
 
     </div>
 </div>
@@ -27,8 +29,9 @@
     <div class="dirs_menu">
         <div class="wrap">
             <a href="javascript:;">Principala »</a>
-            <a href="javascript:;">Servicii pentru cetățeni »</a>
-            <a href="javascript:;">Depune o plângere</a>
+            <a href="javascript:;">Cetățeni și business »</a>
+            <a href="javascript:;">Audierea cetățenilor »</a>
+            <a href="javascript:;">Programează-te on-line pentru o audiență</a>
         </div>
     </div>
     <div class="wrap">
@@ -71,11 +74,11 @@
 
         <div class='right'>
             <ul class="right_menu">
-                <li><a href="javascript:;"> FAQ pentru cetățeni</a></li>
                 <li class="active"><a href="javascript:;">Programează-te on-line pentru o audiență</a></li>
                 <li><a href="javascript:;">Orarul audierilor</a></li>
-                <li><a href="javascript:;">Discută on-line cu primarul</a></li>
+                <li><a href="javascript:;">Discută on-line cu primarul și consilierii locali</a></li>
                 <li><a href="javascript:;">Depune o plângere</a></li>
+                <li><a href="javascript:;">Întrebări frecvente </a></li>
             </ul>
         </div>
         <div class='clearfix'></div>
