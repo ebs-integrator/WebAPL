@@ -91,6 +91,7 @@ class PageController extends BaseController {
             if ($post->parent != $post->id) {
                 $post->parent = $page['parent'];
             }
+            $post->clone_id = $page['clone_id'];
             $post->view_mod = $page['view_mod'];
             $post->save();
         }
@@ -102,16 +103,51 @@ class PageController extends BaseController {
                 $post_lang->text = $page_lang['text'];
                 $post_lang->enabled = isset($page_lang['enabled']) && $page_lang ? 1 : 0;
                 if ($page_lang['uri']) {
-                    $post_lang->uri = $page_lang['uri'];
+                    $post_lang->uri = Core\APL\Actions::toAscii($page_lang['uri']);
                 } else {
-                    $post_lang->uri = $page_lang['title'];
+                    $post_lang->uri = Core\APL\Actions::toAscii($page_lang['title']);
                 }
                 $post_lang->save();
             }
         }
 
+        if (isset($post->clone_id) && $post->clone_id) {
+            $this->clonePageLangData($post->clone_id, $post->id);
+        }
+        
         return array(
         );
+    }
+    
+    public function postSavefilesdata() {
+        $page_id = Input::get('id');
+        $post = Post::find($page_id);
+        $post->show_files = Input::has('data.show_files') ? 1 : 0;
+        $post->show_file_search = Input::has('data.show_file_search') ? 1 : 0;
+        $post->save();
+        
+        return array();
+    }
+    
+    private function clonePageLangData($source_id, $target_id) {
+        foreach (Core\APL\Language::getList() as $lang) {
+            
+            $source = PostLang::where(array(
+                'lang_id' => $lang->id,
+                'post_id' => $source_id
+            ))->get()->first();
+            $target = PostLang::where(array(
+                'lang_id' => $lang->id,
+                'post_id' => $target_id
+            ))->get()->first();
+
+            if ($source && $target) {
+                $target->title = $source->title;
+                $target->uri = $source->uri;
+            } else {
+                throw new Exception("Undefined source or target on cloning: source#{$source_id}, target#{$target_id}");
+            } 
+        }
     }
 
 }

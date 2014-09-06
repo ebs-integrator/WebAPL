@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
 
     window.lock_window = function() {
         window.onbeforeunload = function() {
-            
+
             return "ATENTIE !!! \nAcum se petrece salvarea datelor, va rugam sa nu parasiti acum ca riscati sa pierdeti date.";
         };
     }
@@ -88,19 +88,19 @@ jQuery(document).ready(function($) {
     // Event listeners
     $("body").on("change", "form.ajax-auto-submit input, form.ajax-auto-submit select, form.ajax-auto-submit textarea", ajax_auto_save);
     $("body").on("switchChange.bootstrapSwitch", "form.ajax-auto-submit input", ajax_auto_save);
-    
+
     // Save interval for focused elements
-    setInterval(function () {
+    setInterval(function() {
         // Simple inputs
         $("form.ajax-auto-submit input:focus, form.ajax-auto-submit select:focus, form.ajax-auto-submit textarea:focus").change();
-        
+
         // ckeditor
         if (CKEDITOR.currentInstance !== null && typeof CKEDITOR.currentInstance != 'undefined') {
             CKEDITOR.currentInstance.updateElement();
             $(CKEDITOR.currentInstance.element.$).trigger('change');
         }
     }, 60000);
-    
+
     // Ajax process indicator
     $(document).bind("ajaxSend", function() {
         $("#loading").show(200);
@@ -117,16 +117,24 @@ jQuery(document).ready(function($) {
     $(".lter").css('min-height', $(window).height() - 90);
 
 
-    $(".ckeditor-run").ckeditor();
+    var roxyFileman = assets_url + '/assets/lib/fileman/index.html';
+    $(".ckeditor-run").ckeditor({
+        filebrowserBrowseUrl: roxyFileman,
+        filebrowserImageBrowseUrl: roxyFileman + '?type=image',
+        removeDialogTabs: 'link:upload;image:upload'
+    });
     function updateCkeditorElement(obj) {
         lock_window();
         obj.editor.updateElement();
         $(obj.editor.element.$).trigger('change');
-    };
+    }
+    ;
+
+
     for (var i in CKEDITOR.instances) {
         CKEDITOR.instances[i].on('blur', updateCkeditorElement);
         CKEDITOR.instances[i].on('focus', lock_window);
-        CKEDITOR.instances[i].on('change', function (obj) {
+        CKEDITOR.instances[i].on('change', function(obj) {
             obj.editor.updateElement();
         });
     }

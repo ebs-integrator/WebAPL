@@ -120,16 +120,16 @@ class FeedController extends BaseController {
             'post' => $post,
             'feeds' => Feed::all(),
             'post_feeds' => $feedsID,
-            'fields' => $feedsID ? FeedField::get($feedsID, $post_id) : array()
+            'fields' => $feedsID ? FeedField::get($feedsID, $post_id, 0, 1) : array(),
+            'fields_out' => $feedsID ? FeedField::get($feedsID, $post_id, 0, 0) : array()
         );
 
         $this->data['post_langs'] = array();
         foreach ($post->langs()->get() as $pl) {
             $this->data['post_langs'][$pl->lang_id] = $pl;
             $this->data['post_langs'][$pl->lang_id]['fields'] = $feedsID ? FeedField::get($feedsID, $post_id, $pl->lang_id) : array();
+            $this->data['post_langs'][$pl->lang_id]['fields_out'] = $feedsID ? FeedField::get($feedsID, $post_id, $pl->lang_id, 0) : array();
         }
-
-
 
         $this->layout->content = View::make('sections.feed.post-form')->with($this->data);
     }
@@ -196,21 +196,21 @@ class FeedController extends BaseController {
         // update dinamic post fields 
         $dinamic_post_fields = Input::get('dinamic_post');
         FeedFieldValue::where('post_id', $id)->where('lang_id', 0)->delete();
-        foreach ($dinamic_post_fields as $field_id => $field_value) {
-            $field = FeedField::find($field_id);
-            $fieldValue = new FeedFieldValue;
-            $fieldValue->feed_field_id = $field_id;
-            $fieldValue->post_id = $id;
-            if ($field->check_filter && method_exists('DinamicFields', $field->check_filter)) {
-                $fieldValue->value = call_user_func(array('DinamicFields', $field->check_filter), $field_value);
-            } else {
-                $fieldValue->value = $field_value;
+        if ($dinamic_post_fields) {
+            foreach ($dinamic_post_fields as $field_id => $field_value) {
+                $field = FeedField::find($field_id);
+                $fieldValue = new FeedFieldValue;
+                $fieldValue->feed_field_id = $field_id;
+                $fieldValue->post_id = $id;
+                if ($field->check_filter && method_exists('DinamicFields', $field->check_filter)) {
+                    $fieldValue->value = call_user_func(array('DinamicFields', $field->check_filter), $field_value);
+                } else {
+                    $fieldValue->value = $field_value;
+                }
+                $fieldValue->save();
             }
-            $fieldValue->save();
         }
-
-
-
+        
         return $response;
     }
 
@@ -229,6 +229,7 @@ class FeedController extends BaseController {
                 $post_lang = PostLang::find($plang_id);
                 if ($post_lang) {
                     $post_lang->title = $plang['title'];
+                    $post_lang->uri = Core\APL\Actions::toAscii($plang['uri'] ? $plang['uri'] : $plang['title']);
                     $post_lang->text = $plang['text'];
                     $post_lang->enabled = isset($plang['enabled']) ? 1 : 0;
                     $post_lang->save();
@@ -273,7 +274,7 @@ class FeedController extends BaseController {
                     ->select(Post::$ftable . '.id', PostLang::$ftable . '.title', Post::$ftable . '.created_at', Post::$ftable . '.views')
                     ->where(Post::$ftable . '.taxonomy_id', $this->taxonomy->id)
                     ->where(FeedPost::$ftable . ".feed_id", $feed_id);
-            
+
             if ($limit) {
                 $list = $list->skip($start)->take($limit);
             }

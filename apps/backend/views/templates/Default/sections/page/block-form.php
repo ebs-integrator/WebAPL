@@ -19,15 +19,14 @@
         </div>
     <?php } ?>
     <div class="tab-pane" id="files">
-        <div class='c20'></div>
-        <?= Files::widget('page', $page->id); ?>
+        <?= View::make('sections.page.tab-files'); ?>
     </div>
     <div class="tab-pane" id="actelocale">
         <?= View::make('sections.page.tab-actelocale'); ?>
     </div>
     <div class="tab-pane" id="attachment">
         <table class="table table-bordered">
-            <?=Actions::call('page_attachment', $page);?>
+            <?= Actions::call('page_attachment', $page); ?>
         </table>
     </div>
 </div>

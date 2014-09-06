@@ -4,11 +4,15 @@
         <p class='c_title'><?= $top_title; ?></p>
         <div class='left'>
             <?= Core\APL\Actions::call('page_top_container', $page); ?>
-            
+
             <?= $page->text; ?>
 
             <?= Core\APL\Actions::call('page_bottom_container', $page); ?>
 
+            <?= View::make('sections.pages.blocks.files', array(
+                'page' => $page
+            ));?>
+            
             <?php if ($page->have_socials) { ?>
             <div class='socials'>
                 <div id="vk_like"></div>

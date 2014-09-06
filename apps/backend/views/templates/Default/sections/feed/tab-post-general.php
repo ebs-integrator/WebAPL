@@ -24,12 +24,22 @@
 
         <?php foreach ($fields as $field) { ?>
             <tr>
-                <th><?=$field->title;?>: </th>
-                <td>
-                    <?=dinamic_field($field, array('{name}'=>"dinamic_post[{$field->id}]", '{value}' => $field->value, '{class}' => 'form-control'));?>
+                <th><?= $field->title; ?>: </th>
+                <td> 
+                    <?= dinamic_field($field, isset($post->id) ? $post->id : 0, false, array('{name}' => "dinamic_post[{$field->id}]", '{value}' => $field->value, '{class}' => 'form-control')); ?>
                 </td>
             </tr>
         <?php } ?>
     </table>
-    
 </form>
+
+<table class="table table-bordered">
+    <?php foreach ($fields_out as $field) { ?>
+        <tr>
+            <th><?= $field->title; ?>: </th>
+            <td> 
+                <?= dinamic_field($field, isset($post) ? $post : array(), false, array('{name}' => "dinamic_post[{$field->id}]", '{value}' => $field->value, '{class}' => 'form-control')); ?>
+            </td>
+        </tr>
+    <?php } ?>
+</table>

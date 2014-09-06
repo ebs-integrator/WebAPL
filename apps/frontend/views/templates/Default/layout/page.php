@@ -17,6 +17,8 @@
         <link rel="stylesheet" href="<?=res('assets/css/main.css');?>">        
         <link rel="stylesheet" href="<?=res('assets/css/jquery.selectBoxIt.css');?>">
         <link href="<?=res('assets/js/square/red.css" rel="stylesheet');?>">
+        
+        <script src="<?=res('assets/js/jquery-2.1.1.js');?>"></script>
     </head>
     <body>
         <div id="fb-root"></div>

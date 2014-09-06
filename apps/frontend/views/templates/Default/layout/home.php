@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="<?=res('assets/css/main.css');?>">
 <!--        <link rel="stylesheet" href="/css/jquery.selectBoxIt.css">-->
         
+        <script src="<?=res('assets/js/jquery-2.1.1.js');?>"></script>
     </head>
     <body>
         <div class="overlay hidden"></div>

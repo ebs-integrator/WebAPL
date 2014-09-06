@@ -2,6 +2,8 @@
 
 class Files extends Eloquent {
 
+    use EloquentTrait;
+    
     protected $table = 'apl_file';
     public $timestamps = false;
     public static $default_accept_extensions = array(

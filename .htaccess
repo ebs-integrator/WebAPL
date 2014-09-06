@@ -1,21 +1,39 @@
+<Files ~ "^.*\.([Hh][Tt][Aa])">
+ order allow,deny
+ deny from all
+ satisfy all
+</Files>
+
+<Files ~ "\.(htm|html|css|js|php)$">
+   AddDefaultCharset UTF-8
+   DefaultLanguage en-US
+</Files>
+
+
 <IfModule mod_rewrite.c>
-    <IfModule mod_negotiation.c>
-        Options -MultiViews
-    </IfModule>
+DirectoryIndex index.php
+RewriteEngine on
+RewriteCond $1 !^(index\.php|images|css|js|robots\.txt|favicon\.ico)
 
-    RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 
-    # Redirect Trailing Slashes...
-    RewriteRule ^(.*)/$ /$1 [L,R=301]
+RewriteRule ^(.*)$ index.php?/$1 [L,QSA]
 
-    # Handle Front Controller...
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    # RewriteRule ^ index.php [L]
-    RewriteRule ^([A-Za-z]{2,2})\/(.*)$ index.php/$2?lang=$1 [L,QSA]
-
-    # Handle Front Controller...
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^(.*)$ index.php/$1?lang=ro [L,QSA]
 </IfModule>
+
+<IfModule !mod_rewrite.c>
+    # If we don't have mod_rewrite installed, all 404's
+    # can be sent to index.php, and everything works as normal.
+
+    ErrorDocument 404 /index.php
+</IfModule>
+
+#php_value output_handler ob_gzhandler
+
+<ifmodule mod_php4.c>
+php_value zlib.output_compression 16386
+</ifmodule>
+
+
+

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * 
  *
@@ -43,10 +44,10 @@ class Actions {
         $arguments = func_get_args();
         // drop parameter $tag
         unset($arguments[0]);
-        
+
         if (self::check($tag)) {
             $actions = self::$actions[$tag];
-            
+
             foreach ($actions as $action) {
                 foreach ($action as $function) {
                     call_user_func_array($function, $arguments);
@@ -80,6 +81,21 @@ class Actions {
      */
     public static function post($tag, $function) {
         Route::post($tag, $function);
+    }
+
+    public static function toAscii($str, $replace = array(), $delimiter = '-') {
+        setlocale(LC_ALL, 'en_US.UTF8');
+        if (!empty($replace)) {
+            $str = str_replace((array) $replace, ' ', $str);
+        }
+
+        $clean = preg_replace(array('/Ä/', '/Ö/', '/Ü/', '/ä/', '/ö/', '/ü/'), array('Ae', 'Oe', 'Ue', 'ae', 'oe', 'ue'), $str);
+        $clean = iconv('UTF-8', 'ASCII//TRANSLIT', $clean);
+        $clean = preg_replace("/[^a-zA-Z0-9\/_|+ -]/", '', $clean);
+        $clean = strtolower(trim($clean, '-'));
+        $clean = preg_replace("/[\/_|+ -]+/", $delimiter, $clean);
+
+        return $clean;
     }
 
 }

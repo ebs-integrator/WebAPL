@@ -67,6 +67,7 @@
         <script src="<?= res('assets/lib/jquery/jquery.min.js'); ?>"></script>
         <script>
             var base_url = '<?= url('/'); ?>';
+            var assets_url = '<?= res('/'); ?>';
         </script>
     </head>
     <body class="  ">
