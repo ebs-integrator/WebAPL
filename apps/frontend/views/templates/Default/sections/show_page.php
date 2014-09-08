@@ -60,8 +60,8 @@
             <li><a href="/home/markup/servicii">Servicii pentru cetateni</a></li>
             <li><a href="/page/markup/sondajebegin">Sondaje partea a 1</a></li>
             <li><a href="/page/markup/sondajeend">Sondaje partea a 2</a></li>
-            <li><a href="/page/markup/stire">Stirile</a></li>
-            <li><a href="/page/markup/stiri">Detalii stirea</a></li>
+            <li><a href="/page/markup/stire">Detalii noutate</a></li>
+            <li><a href="/page/markup/stiri">Noutati</a></li>
             <li><a href="/page/markup/taxe">Taxe si impozite</a></li>
             <li><a href="/home/markup/transparenta">Transparenta decizionala</a></li>
             <li><a href="/page/markup/urgenta">Date de contact utile</a></li>
