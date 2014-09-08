@@ -2337,7 +2337,7 @@ textarea {
     table.atz tr td ol li{
         list-style: decimal;
         padding-left: 20px;
-        font:17px 'open_sanssemibold';
+        font:17px 'open_sansregular';
         color:#4c4c4c;
     }
     table.atz tr td ol{
@@ -2869,11 +2869,11 @@ textarea {
         clear:both;
     }
 
-    .ldmbox .p_i p{
+    .ldmbox p{
         font:14px 'open_sanssemibold_italic';
         max-width: 520px;
     }
-    .ldmbox  .ldm_li p{
+    .ldmbox  .ldm_li p strong{
         text-transform: uppercase;
         color:#7c4d7c;
         font:14px 'open_sansbold';
