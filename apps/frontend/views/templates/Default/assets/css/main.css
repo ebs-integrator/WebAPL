@@ -3096,8 +3096,142 @@ textarea {
     table.reg_tb span{
         display:block;
     }
+    .sec_img img{
+        max-width:212px;
+        max-height:265px;
+    }
+    .sec_img {
+        position:relative;
+        float:left;
+        width:24%;
+    }
+    .sec_img:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: inset 0 0 0 10px rgba(251,251,251,.20);
+        -moz-box-shadow: inset 0 0 0 10px rgba(251,251,251,.20);
+        -webkit-box-shadow: inset 0 0 0 10px rgba(251,251,251,.20);
+    }
+    ul.sec_details li{
+        min-height: 33px;
+        border-bottom: 2px solid #efefef;
+        margin-top: 15px;
+        display: table;
+        width: 100%;
+
+
+    }
+    ul.sec_details li:first-child{
+        margin-top:0px;
+    }
+    ul.sec_details{
+        padding-left:30px;
+        float:right;
+        width:76%;
+
+    }
+    section > .wrap > .left > ul > li > span.sec_criteria{
+        font:17px 'open_sanssemibold';
+        color:#7c4d7c;
+        display: table-cell;
+        vertical-align: bottom;
+        padding-bottom: 8px;
+        width:30%;
+    }
+    section > .wrap > .left > ul > li > span.crt_details{
+        width:70%;
+        display: table-cell;
+        vertical-align: middle;
+        font:17px 'open_sanssemibold';
+    }
+    section > .wrap > .left > ul > li > span.crt_details span{
+        display:block;
+    }
+    .prg{
+        color:#1c1c1c;
+        font:24px 'open_sanssemibold';
+    }
+    .sec_list {
+        color:#acbe6b;
+        font:17px 'open_sanssemibold';
+    }
+    .sec_list li{   
+        margin-top:20px;
+    }
+    .sec_list > li:before{        
+        margin-left:-35px;
+        padding-right:10px;
+        counter-increment: section;               /* Increment the section counter*/
+        content: "(" counter(section) ")";
+    }
+    .sec_list > li span{
+        color:#4b4b4b;
+    }
+    .sec_list > li > ul li{
+        color:#acbe6b;
+        counter-increment: listStyle;
+    }
+    .sec_list > li > ul li span{
+        color:#4b4b4b;
+    }
+    .sec_list > li ul li:before{                    /* Increment the section counter*/
+        content: counter(listStyle, lower-alpha) ")";
+        padding-right:5px;
+    }
+    .sec_list > li ul{
+        margin-left:-35px;
+    }
+    .adv{
+        width:100%;
+        background:#f0f3e4;
+        border:1px solid #cbd5a8;
+        font:13px 'open_sanssemibold_italic';
+        color:#5e5e5e;
+        padding:10px 12px;
+        margin-bottom:30px;
+    }
+    .snd_title{
+        background:#f8f8f8;
+        font:18px 'open_sansbold';
+        color:#673167;
+        padding:5px 20px;
+    }
+    table.sondaje progress[value]{
+        -webkit-appearance: none;
+        appearance: none;
+        height:17px;
+        width:375px;
+    }
+    table.sondaje progress[value]::-webkit-progress-bar {        
+        background:#e8e8e8;
+    }
+    table.sondaje progress[value]::-webkit-progress-value{
+        background:#7c4d7c;
+    }
+    table.sondaje td:first-child{
+        font:17px 'open_sanssemibold';
+        color:#4c4c4c;
+        padding-right:30px;
+    }
+    table.sondaje td:nth-child(2) span{
+        padding-left:12px;
+        font:17px 'open_sanssemibold';
+        color:#acbe6b;
+        padding-right:80px;
+    }
+    table.sondaje td:last-child{
+        color:#4c4c4c;
+        font:17px 'open_sansregular';
+    }
+    table.sondaje tr{
+        height:40px;
+    }
 }
-@media only screen and (max-width : 1350px) {
+@media only screen and (max-width : 1500px) {
     section > .wrap .left article,section > .wrap .left article:nth-child(2n){
         margin-left:25px;
     }
@@ -3114,10 +3248,18 @@ textarea {
         margin-top: -28px;
     }
     footer .right .left.search{
-        height: 60px;
+        height: 45px;
     }
     section .menu .box,section .menu .box:last-child{
         margin:60px 25px;
     }
-
+    header .logo{
+        margin:8px 20px;
+    }
+    header .top_menu{
+        margin-left:15px;
+    }
+    header .contact .currency span.s_c{
+        margin-right:10px;
+    }
 }
