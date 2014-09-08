@@ -3237,6 +3237,11 @@ textarea {
     .r_sond div{
         padding-bottom:5px;
     }
+    hr{
+        height:2px;
+        background:#f7f7f7;
+        border:0px;
+    }
 }
 @media only screen and (max-width : 1500px) {
     section > .wrap .left article,section > .wrap .left article:nth-child(2n){
