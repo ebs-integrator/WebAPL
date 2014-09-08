@@ -1894,7 +1894,7 @@ textarea {
     .pag ul li:last-child a{
         border:0px;
     }
-    .pag ul li a{
+    .pag ul li a,.pag ul li{
         width:20px;
         border-right:1px solid #d0d0d0;
         display: inline-block;
@@ -1903,7 +1903,7 @@ textarea {
         padding-right: 4px;
         color:#74b45a;
     }
-    .pag ul li.active a{
+    .pag ul li.active,.pag ul li.disabled {
         color:#4b4b4b;
         pointer-events: none;
         cursor: default;
