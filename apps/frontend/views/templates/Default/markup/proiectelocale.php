@@ -25,7 +25,7 @@
                         </td></tr>
                     <tr><td>3.</td><td>Scopul serviciului public</td><td>Autorizaţia de funcționare este un act administrativ individual ce atestă dreptul titularului autorizaţiei de a desfăşura activitatea în unitatea comercială şi/sau de prestări servicii în locul (terenul, localul, incinta) stabilit, pentru o perioadă stabilită, cu respectarea obligatorie a condiţiilor de autorizare prevăzute de legislaţie. </td></tr>
                     <tr><td>4.</td><td>Lista actelor necesare pentru obţinerea serviciului </td><td>
-                            <ol>
+                            <ul>
                                 <li><span><a href="">Cerere tipzată (descarcă)</a></span></li>
                                 <li><span>Extrasul din Registrul de stat al persoanelor juridice și întreprinzătorilor individuali;</span></li>
                                 <li><span>Certificatul de proprietate asupra imobilului cu destinaţie nelocativă, eliberat de către Oficiul cadastral teritorial. Pentru unităţile amplasate în încăperi închiriate urmează să fie prezentat şi contractul de locaţiune;</span></li>
@@ -34,7 +34,7 @@
                                 <li><span>Contractul de locaţiune sau titlul de autentificare a deţinătorului de teren;</span></li>
                                 <li><span>Autorizaţia sanitară de funcţionare, pentru toate tipurile de unităţi comerciale şi/sau prestare servicii, iar în cazul autorizării magazinelor alimentare şi unităţilor de alimentaţie publică suplimentar şi asortimentul produselor comercializate;
                                     Autorizaţia sanitară veterinară de funcţionare</span> </li>
-                            </ol>
+                            </ul>
                         </td></tr>
                 </tbody>
             </table>
