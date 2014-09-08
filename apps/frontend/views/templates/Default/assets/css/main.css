@@ -3237,10 +3237,14 @@ textarea {
     .r_sond div{
         padding-bottom:5px;
     }
-    hr{
+    hr.reg{
         height:2px;
         background:#f7f7f7;
         border:0px;
+    }
+    .int_code{
+        font:13px 'open_sanssemibold_italic';
+        color:#5e5e5e;
     }
 }
 @media only screen and (max-width : 1500px) {
