@@ -53,8 +53,8 @@
             <li><a href="/page/markup/planuriactiuni">Planuri de actiuni</a></li>
             <li><a href="/page/markup/plingere">Plingere</a></li>
             <li><a href="/home/markup/primaria">Primaria straseni</a></li>
-            <li><a href="/page/markup/promisiunea">Detalii promisiunii</a></li>
-            <li><a href="/page/markup/promisiunile">Promisiunile primarului</a></li>
+            <!--<li><a href="/page/markup/promisiunea">Detalii promisiunii</a></li>-->
+            <!--<li><a href="/page/markup/promisiunile">Promisiunile primarului</a></li>-->
             <li><a href="/page/markup/rapoarte">Rapoarte anuale</a></li>
             <li><a href="/page/markup/secretarulconsiliului">secretarulconsiliului</a></li>
             <li><a href="/home/markup/servicii">Servicii pentru cetateni</a></li>
