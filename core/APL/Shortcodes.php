@@ -99,7 +99,7 @@ class Shortcodes {
      * @param text $content
      * @return text
      */
-    public static function execute($content) {
+    public static function execute($content, $params = array()) {
         if (false === strpos($content, '[')) {
             return $content;
         }
@@ -108,9 +108,9 @@ class Shortcodes {
             return $content;
         }
 
-        return preg_replace_callback("/" . self::regex() . "/s", function ($m) {
-                    return self::exec_tag($m);
-                }, $content);
+        return preg_replace_callback("/" . self::regex() . "/s", function ($m) use ($params) {
+            return self::exec_tag($m, $params);
+        }, $content);
     }
 
     /**
@@ -118,19 +118,20 @@ class Shortcodes {
      * @param mixed $m
      * @return string
      */
-    public static function exec_tag($m) {
+    public static function exec_tag($m, $params = array()) {
         if ($m[1] == '[' && $m[6] == ']') {
             return substr($m[0], 1, -1);
         }
 
         $tag = $m[2];
-        $attr = self::parse_atts($m[3]);
+        
+        $attrb = self::parse_atts($m[3]);
+        
+        $attr = array_merge(is_array($attrb) ? $attrb : array($attrb), $params);
+        $attr['tag'] = $tag;
+        $attr['c'] = isset($m[5]) ? $m[5] : '';
 
-        if (isset($m[5])) {
-            return $m[1] . call_user_func(self::$shortcode_tags[$tag], $attr, $m[5], $tag) . $m[6];
-        } else {
-            return $m[1] . call_user_func(self::$shortcode_tags[$tag], $attr, null, $tag) . $m[6];
-        }
+        return $m[1] . call_user_func(self::$shortcode_tags[$tag], $attr) . $m[6];
     }
 
     /**

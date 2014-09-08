@@ -15,6 +15,7 @@ use Core\APL\Actions,
     PersonRelModel,
     DB,
     Redirect,
+    PersonAudienceModel,
     Exception;
 
 class Person extends \Core\APL\ExtensionController {
@@ -55,6 +56,8 @@ class Person extends \Core\APL\ExtensionController {
 
         Actions::post('person/save_post_attach', array('before' => 'auth', array($this, 'save_post_attach')));
         Actions::post('person/save_person_groups', array('before' => 'auth', array($this, 'save_person_groups')));
+
+        Actions::post('person/getaudiences', array('before' => 'auth', array($this, 'getaudiences')));
 
         // Register new action
         Actions::register('construct_left_menu', array($this, 'left_menu_item'));
@@ -110,6 +113,19 @@ class Person extends \Core\APL\ExtensionController {
         echo $jqgrid->populate(function ($start, $limit) {
             return PersonLangModel::select('person_id', 'first_name', 'last_name')
                             ->where('lang_id', Language::getId())
+                            ->skip($start)
+                            ->take($limit)
+                            ->get();
+        });
+    }
+
+    public function getaudiences() {
+        $jqgrid = new jQgrid(PersonAudienceModel::getTableName(), PersonAudienceModel::getField('id'));
+        echo $jqgrid->populate(function ($start, $limit) {
+            return PersonAudienceModel::select(PersonAudienceModel::getField('id'), DB::raw('CONCAT(first_name, " ", last_name) AS full_name'), PersonAudienceModel::getField('name'), PersonAudienceModel::getField('phone'), PersonAudienceModel::getField('email'), PersonAudienceModel::getField('date_created'))
+                            ->join(PersonLangModel::getTableName(), PersonAudienceModel::getField('person_id'), '=', PersonLangModel::getField('person_id'))
+                            ->where(PersonLangModel::getField('lang_id'), Language::getId())
+                            ->orderBy(PersonAudienceModel::getField('date_created'), 'desc')
                             ->skip($start)
                             ->take($limit)
                             ->get();
@@ -288,6 +304,7 @@ class Person extends \Core\APL\ExtensionController {
         $person->phone = Input::get('phone');
         $person->email = Input::get('email');
         $person->date_birth = Input::get('date_birth');
+        $person->for_audience = Input::get('for_audience') ? 1 : 0;
         $person->save();
 
         if ($id) {

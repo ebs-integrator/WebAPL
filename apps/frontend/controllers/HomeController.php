@@ -24,7 +24,19 @@ class HomeController extends BaseController {
         $this->layout = null;
     }
 
-    public function markup($view) {
+    public function home_markup($view) {
+        $this->layout = 'layout/html_home';
+        $this->setupLayout();
+        
+        $this->layout->content = View::make('markup/' . $view);
+
+        return $this->layout;
+    }
+
+    public function page_markup($view) {
+        $this->layout = 'layout/html_page';
+        $this->setupLayout();
+        
         $this->layout->content = View::make('markup/' . $view);
 
         return $this->layout;

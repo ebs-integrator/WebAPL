@@ -3,19 +3,36 @@
 class PageView {
 
     // INIT
-    public static function run($data) {
+    public static function run($data, $defaultView = 'defaultView') {
         if (isset($data['page']['view_mod']) && Core\APL\Template::checkViewMethod('page', $data['page']['view_mod'])) {
             return Core\APL\Template::callViewMethod('page', $data['page']['view_mod'], array($data));
         } else {
-            return static::defaultView($data);
+            return call_user_func(array('PageView', $defaultView), $data);
         }
     }
 
     /**
      *   PAGE VIEWS
      */
-    public static function posturiVacante($post) {
-        
+    public static function posturiVacante($data) {
+        if ($data['page']->feed_id) {
+            Post::$taxonomy = 2;
+            $item = Input::get('item');
+            $wdata['page_url'] = $data['page_url'];
+            
+            if ($item) {
+                $wdata["post"] = Post::findURI($item, 1);
+            } else {
+                $wdata["post"] = Post::postsFeed($data['page']->feed_id, false, true)->first();
+            }
+            
+            if ($wdata["post"]) {
+                $wdata["posts"] = Post::postsFeed($data['page']->feed_id, false, true)->where(Post::getField('id'), '<>', $wdata["post"]->id)->paginate(2);
+                //$wdata["pagination"] = $wdata["posts"]->links();
+                $data["page"]->text .= View::make("sections.pages.modview.vacansions")->with($wdata);
+            }
+        }
+        return static::defaultView($data);
     }
 
     public static function promisesMod($data) {
@@ -30,12 +47,10 @@ class PageView {
                 } else {
                     throw new Exception("Post not found");
                 }
-                
             } else {
                 $wdata["posts"] = Post::postsFeed($data['page']->feed_id, true);
                 $data["page"]->text .= View::make("sections.pages.modview.promises")->with($wdata);
             }
-            
         }
         return static::defaultView($data);
     }
@@ -84,7 +99,7 @@ class PageView {
         }
         return static::contactView($data);
     }
-    
+
     public static function articleList($data) {
         if ($data['page']->feed_id) {
             Post::$taxonomy = 2;
@@ -105,7 +120,7 @@ class PageView {
         }
         return static::defaultView($data);
     }
-    
+
     public static function externLinks($data) {
         if ($data['page']->feed_id) {
             Post::$taxonomy = 2;
@@ -114,7 +129,7 @@ class PageView {
         }
         return static::defaultView($data);
     }
-    
+
     public static function fileFolders($data) {
         if ($data['page']->feed_id) {
             Post::$taxonomy = 2;
@@ -134,6 +149,14 @@ class PageView {
         $data['page']->text = \Core\APL\Shortcodes::execute($data['page']->text);
 
         return View::make('sections.pages.contact')->with($data);
+    }
+    
+    public static function homeView($data) {
+        $data['page']->text = \Core\APL\Shortcodes::execute($data['page']->text);
+
+        $data['sub_pages'] = Post::subPosts($data['page']->id, 2);
+        //var_dump($data['sub_pages']);  
+        return View::make('sections.pages.home')->with($data);
     }
 
     /**
