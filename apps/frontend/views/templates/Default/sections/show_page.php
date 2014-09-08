@@ -35,7 +35,7 @@
             <li><a href="/page/markup/casa">Construiesti o casa?</a></li>
             <li><a href="/page/markup/certificate">Certificate</a></li>
             <li><a href="/page/markup/comisiile">Comisiile specializate</a></li>
-            <li><a href="/page/markup/consilierilocali.php">Consilieri locali</a></li>
+            <li><a href="/page/markup/consilierilocali">Consilieri locali</a></li>
             <li><a href="/home/markup/consiliul">Consiliul local</a></li>
             <li><a href="/page/markup/contacte">Contact</a></li>
             <li><a href="/page/markup/cultura">Cultura locala si turismul</a></li>
@@ -53,8 +53,8 @@
             <li><a href="/page/markup/planuriactiuni">Planuri de actiuni</a></li>
             <li><a href="/page/markup/plingere">Plingere</a></li>
             <li><a href="/home/markup/primaria">Primaria straseni</a></li>
-            <li><a href="/page/markup/promisiunea">Detalii promisiunii</a></li>
-            <li><a href="/page/markup/promisiunile">Promisiunile primarului</a></li>
+            <!--<li><a href="/page/markup/promisiunea">Detalii promisiunii</a></li>-->
+            <!--<li><a href="/page/markup/promisiunile">Promisiunile primarului</a></li>-->
             <li><a href="/page/markup/rapoarte">Rapoarte anuale</a></li>
             <li><a href="/page/markup/secretarulconsiliului">secretarulconsiliului</a></li>
             <li><a href="/home/markup/servicii">Servicii pentru cetateni</a></li>

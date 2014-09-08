@@ -1,5 +1,7 @@
 # Created by http://www.gitignore.io
 
+*/database.php
+
 ### Laravel ###
 .env.local.php
 .env.php

@@ -104,15 +104,6 @@
                 <a href="javascript:;" class="more"></a>
             </article>
             <article>
-                <p class="ttl"><a href="javascript:;">Servicii comunale</a></p>
-                <ul>
-                    <li><a href="javascript:;">Serviciul de evacuare a deșeurilor</a></li>
-                    <li><a href="javascript:;">Apa-Canalizare</a></li>
-                    <li><a href="javascript:;">Spații verzi și amenajarea teritoriului</a></li>
-                </ul>
-                <a href="javascript:;" class="more"></a>
-            </article>
-            <article>
                 <p class="ttl"><a href="javascript:;">Modele de acte / formulare</a></p>
                 <ul>
                     <li><a href="javascript:;">Formulare de cereri</a></li>
