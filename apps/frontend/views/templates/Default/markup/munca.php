@@ -15,7 +15,8 @@
                     Contabil
                 </p>
                 <div class='data'>
-                    <p>24 Iul 2014, 15:03</p>
+                    <p class="nr">24 Iul 2014, 15:03</p>
+                    <p class="term"><span>Termen limita de aplicare a CV-ului :</span> 4 sept 2014 </p>
                 </div>
                 <div class='p_i'>
                     <p>Cautati un serviciu care îţi poate aduce satisfacţie şi dezvoltare? </p>

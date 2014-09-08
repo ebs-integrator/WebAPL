@@ -10,26 +10,7 @@
     <div class="wrap">
         <p class="c_title">Consilieri locali</p>
         <div class='left'>
-            <table class="reg_tb">
-                <thead>
-                    <tr><td>Numele, prenumele</td><td>Apartenenta politica</td><td>contacte</td><td>Sectorul</td></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Scripnic Ivan</td><td>Partidul Comuniştilor din Republica Moldova</td>
-                        <td><span>(022) 22-32-53</span><span>primaria@gmail.com</span> </td>
-                        <td><span>bd. C. Negruzzi	</span> <span>str-la Negruzzi C.</span><span>bd. Dimitrie </span></td></tr>
-                    <tr><td>Scripnic Ivan</td><td>Partidul Comuniştilor din Republica Moldova</td>
-                        <td><span>(022) 22-32-53</span><span>primaria@gmail.com</span> </td>
-                        <td><span>bd. C. Negruzzi	</span> <span>str-la Negruzzi C.</span><span>bd. Dimitrie </span></td></tr>
-                    <tr><td>Scripnic Ivan</td><td>Partidul Comuniştilor din Republica Moldova</td>
-                        <td><span>(022) 22-32-53</span><span>primaria@gmail.com</span> </td>
-                        <td><span>bd. C. Negruzzi	</span> <span>str-la Negruzzi C.</span><span>bd. Dimitrie </span></td></tr>
-                    <tr><td>Scripnic Ivan</td><td>Partidul Comuniştilor din Republica Moldova</td>
-                        <td><span>(022) 22-32-53</span><span>primaria@gmail.com</span> </td>
-                        <td><span>bd. C. Negruzzi	</span> <span>str-la Negruzzi C.</span><span>bd. Dimitrie </span></td></tr>
-
-                </tbody>
-            </table>
+            
         </div>
 
         <div class='right'>
