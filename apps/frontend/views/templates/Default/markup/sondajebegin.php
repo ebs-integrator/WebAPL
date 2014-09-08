@@ -19,7 +19,8 @@
                 <div><input type='radio' name='pr_pb' id='rad3'/>
                     <label for='rad2'>Nu stiu</label></div>
             </div>
-
+            <hr class="reg">
+            <p class="int_code"></p>
         </div>
 
         <div class='right'>
