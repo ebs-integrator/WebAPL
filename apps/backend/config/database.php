@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'apl_template',
-			'username'  => 'root',
-			'password'  => '',
+			'host'      => 'sga.webhost1.ru',
+			'database'  => 'kopceak1_apl',
+			'username'  => 'kopceak1_apl',
+			'password'  => 'apl42fl',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
