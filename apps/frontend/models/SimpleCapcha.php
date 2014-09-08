@@ -38,5 +38,9 @@ class SimpleCapcha {
 
         return $get_value == $value;
     }
+    
+    public static function destroy($name) {
+        Session::forget('capcha_' . $name);
+    }
 
 }

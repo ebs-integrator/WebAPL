@@ -47,6 +47,39 @@ class Post extends Eloquent {
                         )
                         ->where(PostLang::$ftable . ".lang_id", Language::getId())->where('taxonomy_id', self::$taxonomy);
     }
+    
+    public static function registerInCache($row) {
+        if ($row) {
+            self::$cache_posts[$row->id] = $row;
+        }
+    }
+    
+    public static function findGeneral() {
+        $list = Post::prepareQuery()
+                ->where(Post::getField('general_node'), 1)
+                ->get();
+        
+        foreach ($list as &$item) {
+            Post::registerInCache($item);
+            $item['url'] = Post::getFullURI($item->id);
+        }
+         
+        return $list;
+    }
+    
+    public static function subPosts($parent, $max_level = 0, $clevel = 1) {
+        if ($max_level == 0 || $clevel <= $max_level) {
+            $list = Post::findWithParent($parent);
+        } else {
+            $list = array();  
+        }
+        
+        foreach ($list as &$item) {
+            $item['childrens'] = Post::subPosts($item->id, $max_level, $clevel+1);
+        }
+        
+        return $list;
+    }
 
     public static function findRow($where = array(), $enabled = 0) {
         $row = Post::prepareQuery();
@@ -127,7 +160,7 @@ class Post extends Eloquent {
         }
     }
 
-    public static function postsFeed($feed_id, $with_cover = false) {
+    public static function postsFeed($feed_id, $with_cover = false, $get_instance = false) {
         $feed = Feed::where('id', $feed_id)
                 ->where('enabled', 1)
                 ->get()
@@ -147,7 +180,12 @@ class Post extends Eloquent {
                 $posts = $posts->orderBy($feed->order_by, $feed->order_type);
             }
 
-            $posts = $posts->get();
+            if ($get_instance) {
+                return $posts;
+            } else {
+                $posts = $posts->get();
+            }
+            
             foreach ($posts as &$post) {
                 $fields = FeedField::leftJoin(FeedFieldValue::getTableName(), FeedFieldValue::getField("feed_field_id"), "=", FeedField::getField("id"))
                         ->whereIn(FeedFieldValue::getField("lang_id"), array(0, \Core\APL\Language::getId()))

@@ -93,6 +93,7 @@ class PageController extends BaseController {
             }
             $post->clone_id = $page['clone_id'];
             $post->view_mod = $page['view_mod'];
+            $post->general_node = isset($page['general_node']) ? 1 : 0;
             $post->save();
         }
 

@@ -20,6 +20,12 @@
                 <input type="text" name="date_birth" class='form-control' value='<?= isset($person->date_birth) ? $person->date_birth : date("Y-m-d"); ?>' />
             </td>
         </tr>
+        <tr>
+            <th>Accesibil pentru audienta: </th>
+            <td>
+                <input type="checkbox" class="make-switch" name="for_audience" class='form-control' <?= isset($person->for_audience) && $person->for_audience ? 'checked' : ''; ?> />
+            </td>
+        </tr>
     </table>
 </form>
 
