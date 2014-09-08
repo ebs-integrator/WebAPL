@@ -3230,6 +3230,13 @@ textarea {
     table.sondaje tr{
         height:40px;
     }
+    .r_sond{
+        font:17px 'open_sanssemibold';
+        color:#4c4c4c;
+    }
+    .r_sond div{
+        padding-bottom:5px;
+    }
 }
 @media only screen and (max-width : 1500px) {
     section > .wrap .left article,section > .wrap .left article:nth-child(2n){
