@@ -2903,6 +2903,7 @@ textarea {
         font:13px 'open_sanssemibold_italic';
         color:#a3a3a3;
         padding:12px;
+        float:left;
     }
     .ldmbox input[type=file]{
         display: none;
@@ -2917,9 +2918,9 @@ textarea {
         color:#5e5e5e;
         line-height: 33px;
         margin:0px 28px;
+        float:left;
     }
     .ldmbox form *{
-        float:left;
         height:33px;
     }
 
@@ -2930,6 +2931,7 @@ textarea {
         text-transform: uppercase;
         color:#fff;
         font:14px 'open_sansbold';
+        float:left;
     }
     .l_a li a{
         width: 100%;
