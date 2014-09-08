@@ -2278,6 +2278,12 @@ textarea {
     ul > li.word{
         background:url('../img/word.png') no-repeat 3px center;
     }
+    ul > li.doc{
+        background:url('../img/word.png') no-repeat 3px center;
+    }
+    ul > li.docx{
+        background:url('../img/word.png') no-repeat 3px center;
+    }
     ul > li.pdf{
         background:url('../img/pdf.png') no-repeat 3px center;
     }
@@ -2316,7 +2322,7 @@ textarea {
         font:16px 'open_sansbold';
         color:#000;
     }
-    table.atz  tr td p,table.atz  tr td ul li span{
+    table.atz  tr td p,table.atz  tr td ol li span{
         margin:0px;
         font:17px 'open_sansregular';
         color:#4c4c4c;
@@ -2325,16 +2331,16 @@ textarea {
         font:17px 'open_sansregular';
         color:#7c4d7c;
     }
-    table.atz tr td ul li a{
+    table.atz tr td ol li a{
         text-decoration: underline;
     }
-    table.atz tr td ul li{
+    table.atz tr td ol li{
         list-style: decimal;
         padding-left: 20px;
         font:17px 'open_sanssemibold';
         color:#4c4c4c;
     }
-    table.atz tr td ul{
+    table.atz tr td ol{
         padding-left:25px;
     }
     section > .wrap > .left > ul > li > span{
@@ -3241,10 +3247,39 @@ textarea {
         height:2px;
         background:#f7f7f7;
         border:0px;
+        margin-bottom:5px;
     }
     .int_code{
         font:13px 'open_sanssemibold_italic';
         color:#5e5e5e;
+    }
+    .snd_code input[type=text]{
+        height:31px;
+        width:92px;
+        border:1px solid #ececec;
+        float:left;
+        margin-right:35px;
+    }
+    .snd_code div{
+        float:left;
+    }
+    .snd_sbm{
+        min-width:114px;
+        height:33px;
+        color:#fff;
+        text-transform: uppercase;
+        font:15px 'open_sansbold';
+        background:#7c4d7c;
+        border-bottom:2px solid #673167;
+        margin-top:15px;
+    }
+    .e_sond{
+        font:24px 'open_sanssemibold';
+        color:#232323;
+        margin-top:80px;
+        margin-bottom:0px;
+        padding-bottom:15px;
+        border-bottom: 2px solid #f7f7f7;
     }
 }
 @media only screen and (max-width : 1500px) {
