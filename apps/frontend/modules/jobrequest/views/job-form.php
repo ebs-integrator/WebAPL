@@ -5,7 +5,8 @@
     <div class="upload">Incarca CV</div>
     <input type="file" name="upload" id='upload'/>
     <input type='submit' value='Trimite'/>
-    <div class="form_error" style="display: block;"></div>
+    <div class="clearfix"></div>
+    <div class="form_error"></div>
 </form>
 
 <script src="<?= res('assets/js/jquery.form.js'); ?>"></script>
