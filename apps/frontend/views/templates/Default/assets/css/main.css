@@ -1142,6 +1142,7 @@ textarea {
     section .dirs_menu{
         height: 21px;
         width:100%;
+        clear:both;
         background:#673167;
     }
     section .dirs_menu .wrap{

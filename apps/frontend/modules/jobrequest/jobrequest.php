@@ -46,7 +46,7 @@ class Jobrequest extends \Core\APL\ExtensionController {
         );
 
         if ($validator->fails()) {
-            $return['message'] = implode('<br>', $validator->messages()->all(':message<br>'));
+            $return['message'] = implode('<br>', $validator->messages()->all(':message'));
             $return['error'] = 1;
         } else {
             $post_id = Input::get('post_id');
