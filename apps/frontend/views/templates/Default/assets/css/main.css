@@ -2337,7 +2337,7 @@ textarea {
     table.atz tr td ol li{
         list-style: decimal;
         padding-left: 20px;
-        font:17px 'open_sanssemibold';
+        font:17px 'open_sansregular';
         color:#4c4c4c;
     }
     table.atz tr td ol{
