@@ -3044,7 +3044,7 @@ textarea {
         background:#673167;
         margin-left:-2px;
     }
-    
+
     .dop .right .buttons button img {
         margin-top:-4px;
     }
@@ -3062,6 +3062,39 @@ textarea {
     }
     .bl_fr{
         display:inline-block;
+    }
+    table.reg_tb tbody tr td:first-child{
+        min-width:240px;
+    }
+    table.reg_tb tbody tr td:nth-child(2){
+        min-width:260px;
+    }
+    table.reg_tb thead tr td{
+        text-transform: uppercase;
+    }
+    table.reg_tb thead tr td{
+        border: 1px solid #a5d293;
+        font: 18px 'open_sansbold';
+        color: #74b45a;
+        height: 50px;
+        padding: 0px 17px;
+    }
+    table.reg_tb tbody tr td{
+        color: #4c4c4c;
+        font: 14px 'open_sanssemibold';
+        border: 1px solid #e3e3e3;
+        padding: 5px 20px;
+        line-height: 19px;
+        min-width: 115px;
+    }
+    table.reg_tb tbody tr:nth-child(2n-1) {
+        background: #fbfbfb;
+    }
+    table.reg_tb tbody tr td:first-child{
+        font:17px 'open_sanssemibold';
+    }
+    table.reg_tb span{
+        display:block;
     }
 }
 @media only screen and (max-width : 1350px) {
