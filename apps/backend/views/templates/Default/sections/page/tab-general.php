@@ -23,6 +23,18 @@
                 <?php } ?>
             </td>
         </tr>
+        <tr class="<?= isset($page->redirect_to) && $page->redirect_to ? 'label-warning' : ''; ?>">
+            <th>Redirect to: </th>
+            <td>
+                <select name="page[redirect_to]" class='form-control'>
+                    <option value='0'>----</option>
+                    <?= View::make('sections.page.element-tree-option', array('level' => 1, 'items' => $tree_pages, 'selected' => isset($page->redirect_to) ? $page->redirect_to : 0)); ?>
+                </select>
+                <?php if (isset($page->redirect_to) && $page->redirect_to) { ?>
+                    <a href="<?= url('page/index/' . $page->redirect_to); ?>">View redirect page</a>
+                <?php } ?>
+            </td>
+        </tr>
         <tr>
             <th>View mod:</th>
             <td>
@@ -44,6 +56,12 @@
             <th>General node: </th>
             <td>
                 <input type="checkbox" name="page[general_node]" class='make-switch' <?= isset($page->general_node) && $page->general_node ? 'checked' : ''; ?> />
+            </td>
+        </tr>
+        <tr>
+            <th>Home page: </th>
+            <td>
+                <input type="checkbox" name="page[is_home_page]" class='make-switch' <?= isset($page->is_home_page) && $page->is_home_page ? 'checked' : ''; ?> />
             </td>
         </tr>
     </table>

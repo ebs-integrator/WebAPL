@@ -47,37 +47,37 @@ class Post extends Eloquent {
                         )
                         ->where(PostLang::$ftable . ".lang_id", Language::getId())->where('taxonomy_id', self::$taxonomy);
     }
-    
+
     public static function registerInCache($row) {
         if ($row) {
             self::$cache_posts[$row->id] = $row;
         }
     }
-    
+
     public static function findGeneral() {
         $list = Post::prepareQuery()
                 ->where(Post::getField('general_node'), 1)
                 ->get();
-        
+
         foreach ($list as &$item) {
             Post::registerInCache($item);
             $item['url'] = Post::getFullURI($item->id);
         }
-         
+
         return $list;
     }
-    
+
     public static function subPosts($parent, $max_level = 0, $clevel = 1) {
         if ($max_level == 0 || $clevel <= $max_level) {
             $list = Post::findWithParent($parent);
         } else {
-            $list = array();  
+            $list = array();
         }
-        
+
         foreach ($list as &$item) {
-            $item['childrens'] = Post::subPosts($item->id, $max_level, $clevel+1);
+            $item['childrens'] = Post::subPosts($item->id, $max_level, $clevel + 1);
         }
-        
+
         return $list;
     }
 
@@ -139,13 +139,20 @@ class Post extends Eloquent {
         return $list;
     }
 
-    public static function getFullURI($id) {
+    public static function getFullURI($id, $full = true) {
         $parents = Post::getParents($id);
         $uri_segments = array();
         foreach (array_reverse($parents) as $parent) {
             $uri_segments[] = $parent['uri'];
         }
-        return Post::getURL(implode('/', $uri_segments));
+
+        $furi = implode('/', $uri_segments);
+
+        if ($full) {
+            return Post::getURL($furi);
+        } else {
+            return $furi;
+        }
     }
 
     public static function getURL($uri) {
@@ -185,14 +192,14 @@ class Post extends Eloquent {
             } else {
                 $posts = $posts->get();
             }
-            
+
             foreach ($posts as &$post) {
                 $fields = FeedField::leftJoin(FeedFieldValue::getTableName(), FeedFieldValue::getField("feed_field_id"), "=", FeedField::getField("id"))
                         ->whereIn(FeedFieldValue::getField("lang_id"), array(0, \Core\APL\Language::getId()))
                         ->where(FeedFieldValue::getField("post_id"), $post->id)
                         ->select(FeedField::getField("fkey"), FeedFieldValue::getField("value"), FeedField::getField("get_filter"))
                         ->get();
-                
+
                 foreach ($fields as $field) {
                     if ($field->get_filter && method_exists('DinamicFields', $field->get_filter)) {
                         $post[$field->fkey] = call_user_func(array('DinamicFields', $field->get_filter), $field, $post);

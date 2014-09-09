@@ -6,17 +6,17 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title><?= Core\APL\Template::getPageTitle(); ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link href="<?=res('assets/css/jquery.bxslider.css');?>" rel="stylesheet" />
-        <link rel="stylesheet" href="<?=res('assets/css/normalize.css');?>">
-        <link rel="stylesheet" href="<?=res('assets/css/main.css');?>">
-<!--        <link rel="stylesheet" href="/css/jquery.selectBoxIt.css">-->
-        
-        <script src="<?=res('assets/js/jquery-2.1.1.js');?>"></script>
+        <link href="<?= res('assets/css/jquery.bxslider.css'); ?>" rel="stylesheet" />
+        <link rel="stylesheet" href="<?= res('assets/css/normalize.css'); ?>">
+        <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">
+        <!--        <link rel="stylesheet" href="/css/jquery.selectBoxIt.css">-->
+
+        <script src="<?= res('assets/js/jquery-2.1.1.js'); ?>"></script>
     </head>
     <body>
         <div class="overlay hidden"></div>
@@ -58,11 +58,11 @@
                         </ul>
                         <div class="clearfix"></div>
                         <div class="prp">
-                            <img src="<?=res('assets/img/phone_book.png');?>">
+                            <img src="<?= res('assets/img/phone_book.png'); ?>">
                             <a href="javascript:;">Toate numerele de telefon</a>
                         </div>                            
                         <div class="prp">
-                            <img src="<?=res('assets/img/notebook.png');?>">
+                            <img src="<?= res('assets/img/notebook.png'); ?>">
                             <a href="javascript:;">Orarul rutelor</a>
                         </div>
                         <div class="left c_info">
@@ -84,20 +84,25 @@
                         <input type="submit">
                     </form>
                 </div>
-                <div class="currency">                        
+                <div class="currency">
                     <span class="s_c">
-                        <img src="<?=res('assets/img/line_dot.png');?>">
-                        <span>ro</span>
-                        <img src="<?=res('assets/img/line_dot.png');?>">
+                        <img src="<?= res('assets/img/line_dot.png'); ?>">
+                        <span><?= Core\APL\Language::ext(); ?></span>
+                        <img src="<?= res('assets/img/line_dot.png'); ?>">
                     </span>
                     <div class="lang hidden">
                         <div class="relative">
                             <p></p>
                         </div>
-                        <p>Romană</p>
-                        <p>Rusă</p>
-                        <p>Engleza</p>
-                        <p>Bulgară</p>
+                        <?php
+                        foreach (Core\APL\Language::getList() as $lang) {
+                            if (Core\APL\Language::ext() != $lang->ext) {
+                                ?>
+                                <p><a href="<?= url('language/' . $lang->ext); ?>"><?= $lang->name; ?></a></p>
+                                <?php
+                            }
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -108,7 +113,7 @@
 
 
 
-<?=$content;?> 
+    <?= $content; ?> 
 
 
-<?=View::make('block.footer');?>
+    <?= View::make('block.footer'); ?>

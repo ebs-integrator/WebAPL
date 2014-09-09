@@ -7,18 +7,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title><?= Core\APL\Template::getPageTitle(); ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link href="<?=res('assets/css/jquery.bxslider.css');?>" rel="stylesheet" />
-        <link rel="stylesheet" href="<?=res('assets/css/normalize.css');?>">
-        <link rel="stylesheet" href="<?=res('assets/css/main.css');?>">        
-        <link rel="stylesheet" href="<?=res('assets/css/jquery.selectBoxIt.css');?>">
-        <link href="<?=res('assets/js/square/red.css" rel="stylesheet');?>">
-        
-        <script src="<?=res('assets/js/jquery-2.1.1.js');?>"></script>
+        <link href="<?= res('assets/css/jquery.bxslider.css'); ?>" rel="stylesheet" />
+        <link rel="stylesheet" href="<?= res('assets/css/normalize.css'); ?>">
+        <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">        
+        <link rel="stylesheet" href="<?= res('assets/css/jquery.selectBoxIt.css'); ?>">
+        <link href="<?= res('assets/js/square/red.css" rel="stylesheet'); ?>">
+
+        <script src="<?= res('assets/js/jquery-2.1.1.js'); ?>"></script>
     </head>
     <body>
         <div id="fb-root"></div>
@@ -35,35 +35,22 @@
         <div class="overlay2 hidden"></div>
         <header>
             <div class="left">
-                <a href="javascript:;"><img src="<?=res('assets/img/s_logo.png');?>" class="logo"></a>
-                <div class="top_menu">
-                    <a href='javascript:;' class=" active">
-                        <div class="left">
-                            <img src="<?=res('assets/img/serv.png');?>">
+                <a href="<?= Language::url('/'); ?>"><img src="<?= res('assets/img/s_logo.png'); ?>" class="logo"></a>
+                <?php
+                if (isset($general_pages)) {
+                    foreach ($general_pages as $item) {
+                        ?>
+                        <div class="top_menu">
+                            <a href='<?= $item->url; ?>' class="<?= $item->id == $active_page_id ? 'active' : ''; ?>">
+                                <div class="left">
+                                    <img src="<?= res('assets/img/serv.png'); ?>">
+                                </div>
+                                <div class="left title third"><?= $item->title; ?></div></a>
                         </div>
-                        <div class="left title third">Cetățeni și business</div></a>
-                </div>
-                <div class="top_menu">
-                    <a href='javascript:;'>
-                        <div class="left">
-                            <img src="<?=res('assets/img/prim.png');?>">
-                        </div>
-                        <div class="left title second">Primăria</div></a>
-                </div>
-                <div class="top_menu">
-                    <a href='javascript:;'>
-                        <div class="left">
-                            <img src="<?=res('assets/img/consiliu.png');?>">
-                        </div>
-                        <div class="left title third">Consiliul local</div></a>
-                </div>
-                <div class="top_menu">
-                    <a href='javascript:;'>
-                        <div class="left">
-                            <img src="<?=res('assets/img/transp.png');?>">
-                        </div>
-                        <div class="left title second">Transparenta</div></a>
-                </div>
+                        <?php
+                    }
+                }
+                ?>
             </div>
             <div class="contact right">
                 <p class="tel">(022) 22-32-53</p>
@@ -95,11 +82,11 @@
                         </ul>
                         <div class="clearfix"></div>
                         <div class="prp">
-                            <img src="<?=res('assets/img/phone_book.png');?>">
+                            <img src="<?= res('assets/img/phone_book.png'); ?>">
                             <a href="javascript:;">Toate numerele de telefon</a>
                         </div>
                         <div class="prp">
-                            <img src="<?=res('assets/img/notebook.png');?>">
+                            <img src="<?= res('assets/img/notebook.png'); ?>">
                             <a href="javascript:;">Orarul rutelor</a>
                         </div>
                         <div class="left c_info">
@@ -122,18 +109,23 @@
                 </div>
                 <div class="currency">
                     <span class="s_c">
-                        <img src="<?=res('assets/img/line_dot.png');?>">
-                        <span>ro</span>
-                        <img src="<?=res('assets/img/line_dot.png');?>">
+                        <img src="<?= res('assets/img/line_dot.png'); ?>">
+                        <span><?=Core\APL\Language::ext();?></span>
+                        <img src="<?= res('assets/img/line_dot.png'); ?>">
                     </span>
                     <div class="lang hidden">
                         <div class="relative">
                             <p></p>
                         </div>
-                        <p>Romană</p>
-                        <p>Rusă</p>
-                        <p>Engleza</p>
-                        <p>Bulgară</p>
+                        <?php
+                        foreach (Core\APL\Language::getList() as $lang) {
+                            if (Core\APL\Language::ext() != $lang->ext) {
+                                ?>
+                                <p><a href="<?= url('language/' . $lang->ext); ?>"><?= $lang->name; ?></a></p>
+                                <?php
+                            }
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -142,7 +134,7 @@
 
 
 
-<?=$content;?> 
+    <?= $content; ?> 
 
 
-<?=View::make('block.footer');?>
+    <?= View::make('block.footer'); ?>

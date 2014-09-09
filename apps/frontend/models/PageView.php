@@ -19,17 +19,39 @@ class PageView {
             Post::$taxonomy = 2;
             $item = Input::get('item');
             $wdata['page_url'] = $data['page_url'];
-            
+
             if ($item) {
                 $wdata["post"] = Post::findURI($item, 1);
             } else {
                 $wdata["post"] = Post::postsFeed($data['page']->feed_id, false, true)->first();
             }
-            
+
             if ($wdata["post"]) {
                 $wdata["posts"] = Post::postsFeed($data['page']->feed_id, false, true)->where(Post::getField('id'), '<>', $wdata["post"]->id)->paginate(2);
                 //$wdata["pagination"] = $wdata["posts"]->links();
                 $data["page"]->text .= View::make("sections.pages.modview.vacansions")->with($wdata);
+            }
+        }
+        return static::defaultView($data);
+    }
+
+    public static function acquisitionsList($data) {
+        if ($data['page']->feed_id) {
+            Post::$taxonomy = 2;
+            $item = Input::get('item');
+            $wdata['page_url'] = $data['page_url'];
+
+            if ($item) {
+                $wdata["post"] = Post::findURI($item, 1);
+                if ($wdata["post"]) {
+                    $wdata["post_files"] = Files::file_list('doc_post_lang', $wdata["post"]->post_lang_id);
+                    $data["page"]->text .= View::make("sections.pages.modview.acquisition")->with($wdata);
+                } else {
+                    throw new Exception("Undefined article '{$item}'");
+                }
+            } else {
+                $wdata["posts"] = Post::postsFeed($data['page']->feed_id, false, true)->paginate(2);
+                $data["page"]->text .= View::make("sections.pages.modview.acquisitionsList")->with($wdata);
             }
         }
         return static::defaultView($data);
@@ -150,7 +172,7 @@ class PageView {
 
         return View::make('sections.pages.contact')->with($data);
     }
-    
+
     public static function homeView($data) {
         $data['page']->text = \Core\APL\Shortcodes::execute($data['page']->text);
 

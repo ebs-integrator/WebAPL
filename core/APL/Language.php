@@ -13,7 +13,8 @@ namespace Core\APL;
 use DB,
     Exception,
     Session,
-    Input;
+    Input,
+    Request;
 
 class Language {
 
@@ -39,24 +40,13 @@ class Language {
      * @throws Exception
      */
     private static function _init_language() {
-        $lang = Input::get('lang');
+        $lang = Request::segment(1);
 
         if (!$lang) {
             $lang = Session::get('lang');
         }
 
-        $language = DB::table('apl_lang')->where('ext', $lang)->first();
-        if (!$language) {
-            $language = DB::table('apl_lang')->first();
-        }
-
-        if ($language) {
-            self::$language = $language;
-            self::$id = $language->id;
-            Session::put('lang', self::ext());
-        } else {
-            throw new Exception("Available language not found");
-        }
+        self::setLanguage($lang);
     }
 
     /**
@@ -110,6 +100,21 @@ class Language {
      */
     public static function url($path = '') {
         return url(self::ext() . '/' . $path);
+    }
+    
+    public static function setLanguage($ext) {
+        $language = DB::table('apl_lang')->where('ext', $ext)->first();
+        if (!$language) {
+            $language = DB::table('apl_lang')->first();
+        }
+
+        if ($language) {
+            self::$language = $language;
+            self::$id = $language->id;
+            Session::put('lang', self::ext());
+        } else {
+            throw new Exception("Available language not found");
+        }
     }
 
 }

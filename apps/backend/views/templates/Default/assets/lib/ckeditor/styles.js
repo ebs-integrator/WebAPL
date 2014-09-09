@@ -112,6 +112,14 @@ CKEDITOR.stylesSet.add( 'default', [
         },
         styles: {}
     },
+    {
+        name: 'Green List',
+        element: 'ul',
+        attributes: {
+            'class': 'crt'
+        },
+        styles: {}
+    },
 	{ name: 'Borderless Table',		element: 'table',	styles: { 'border-style': 'hidden', 'background-color': '#E6E6FA' } },
 	{ name: 'Square Bulleted List',	element: 'ul',		styles: { 'list-style-type': 'square' } }
 ] );

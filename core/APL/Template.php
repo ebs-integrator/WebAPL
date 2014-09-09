@@ -57,10 +57,14 @@ class Template {
             'fileFolders' => array(
                 'name' => 'Dosare cu fisiere',
                 'function' => array('PageView', 'fileFolders')
+            ),
+            'acquisitionsList' => array(
+                'name' => 'Lista de achizitii',
+                'function' => array('PageView', 'acquisitionsList')
             )
         )
     );
-    
+    protected static $page_title = '';
     protected static $breadcrumbs = array();
 
     /**
@@ -224,23 +228,35 @@ class Template {
      * 
      * 
      */
-    
-    
-    
+
     /**
      * 
      *   Breadcrumb
      * 
      */
-    
     public static function addBreadCrumb($url, $name) {
         self::$breadcrumbs[] = array(
             'name' => $name,
             'url' => $url
         );
     }
-    
+
     public static function getBreadCrumbs() {
         return self::$breadcrumbs;
     }
+
+    public static function setPageTitle($title, $override = false) {
+        if (static::$page_title) {
+            if ($override) {
+                static::$page_title = $title;
+            }
+        } else {
+            static::$page_title = $title;
+        }
+    }
+    
+    public static function getPageTitle() {
+        return static::$page_title;
+    }
+
 }

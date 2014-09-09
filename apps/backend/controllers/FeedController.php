@@ -229,7 +229,7 @@ class FeedController extends BaseController {
                 $post_lang = PostLang::find($plang_id);
                 if ($post_lang) {
                     $post_lang->title = $plang['title'];
-                    $post_lang->uri = Core\APL\Actions::toAscii($plang['uri'] ? $plang['uri'] : $plang['title']);
+                    $post_lang->uri = PostLang::uniqURI($plang_id, $plang['uri'] ? $plang['uri'] : $plang['title']);
                     $post_lang->text = $plang['text'];
                     $post_lang->enabled = isset($plang['enabled']) ? 1 : 0;
                     $post_lang->save();
