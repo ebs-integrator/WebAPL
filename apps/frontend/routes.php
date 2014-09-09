@@ -23,6 +23,11 @@ Route::group(array('prefix' => Core\APL\Language::ext()), function() {
     Route::get('home/{furi}', 'PageController@route')->where(array('furi' => '[A-Za-z0-9-]+'));
 });
 
+Route::get('language/{ext}', function ($ext) {
+    Core\APL\Language::setLanguage($ext);
+    return Redirect::to(Core\APL\Language::ext());
+})->where(array('ext' => '[a-z]{0,2}'));
+
 Route::get('markup', function () {
     return View::make('sections.show_page');
 });
