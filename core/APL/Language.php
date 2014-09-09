@@ -13,7 +13,8 @@ namespace Core\APL;
 use DB,
     Exception,
     Session,
-    Input;
+    Input,
+    Request;
 
 class Language {
 
@@ -39,7 +40,7 @@ class Language {
      * @throws Exception
      */
     private static function _init_language() {
-        $lang = Input::get('lang');
+        $lang = Request::segment(1);
 
         if (!$lang) {
             $lang = Session::get('lang');

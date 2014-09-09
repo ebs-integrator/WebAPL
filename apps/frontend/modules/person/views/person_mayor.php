@@ -7,9 +7,13 @@ foreach ($groups as $group) {
                 <?php if (isset($person->path) && $person->path) { ?>
                     <img src='<?= url($person->path); ?>'>
                 <?php } ?>
-                <p class="nm_prim"><?= $person->first_name; ?> <?= $person->last_name; ?></p>
             </div>
+            <p class="vp_name"><?= $person->first_name; ?> <?= $person->last_name; ?></p>
             <span class='quote'><?= $person->motto; ?></span>
+            <button class="vice_button">
+                <span class="green">Chat</span><span class="violet">-online</span>
+                <span class="g_dot"></span>
+            </button>
             <div class='clearfix'></div>
         </div>
         <div class="bgr">
@@ -36,12 +40,12 @@ foreach ($groups as $group) {
                     if (is_array($fields)) {
                         foreach ($fields as $field) {
                             if ($field['lang_id'] == 0 || $field['lang_id'] == Core\APL\Language::getId()) {
-                            ?>
-                            <li>
-                                <div class="left"><?=$field['name'];?></div>
-                                <div class="right list"><?=$field['value'];?></div>
-                            </li>
-                            <?php
+                                ?>
+                                <li>
+                                    <div class="left"><?= $field['name']; ?></div>
+                                    <div class="right list"><?= $field['value']; ?></div>
+                                </li>
+                                <?php
                             }
                         }
                     }
