@@ -4,12 +4,11 @@
             <a href="javascript:;">Principala »</a>
             <a href="javascript:;">Consiliul local »</a>
             <a href="javascript:;">Consiliul local »</a>
-            <a href="javascript:;">Ședințele Consiliului  »</a>
-            <a href="javascript:;">Calendarul ședințelor viitoare</a>
+            <a href="javascript:;">Arhiva deciziilor anterioare </a>
         </div>
     </div>
     <div class="wrap">
-        <p class="c_title">Ședințele Consiliului</p>
+        <p class="c_title">Arhiva deciziilor anterioare</p>
 
         <div class='left'>        
             <div class="search left">
@@ -32,7 +31,7 @@
                     <div class="slide">
                         <table>
                             <thead>
-                                <tr><td colspan="5">Aprilie 2014</td></tr>
+                                <tr><td colspan="5">Aprilie </td></tr>
                                 <tr><td>nr.</td><td>Titlu </td><td>Tip </td><td>Emitent</td><td>Data</td></tr>
                             </thead>
                             <tbody>
@@ -50,7 +49,7 @@
                     <div class="slide">
                         <table>
                             <thead>
-                                <tr><td colspan="5">Mai 2014</td></tr>
+                                <tr><td colspan="5">Mai </td></tr>
                                 <tr><td>nr.</td><td>Titlu </td><td>Tip </td><td>Emitent</td><td>Data</td></tr>
                             </thead>
                             <tbody>
@@ -68,7 +67,7 @@
                     <div class="slide">
                         <table>
                             <thead>
-                                <tr><td colspan="5">Iunie 2014</td></tr>
+                                <tr><td colspan="5">Iunie </td></tr>
                                 <tr><td>nr.</td><td>Titlu </td><td>Tip </td><td>Emitent</td><td>Data</td></tr>
                             </thead>
                             <tbody>
@@ -86,7 +85,7 @@
                     <div class="slide">
                         <table>
                             <thead>
-                                <tr><td colspan="5">Iulie 2014</td></tr>
+                                <tr><td colspan="5">Iulie </td></tr>
                                 <tr><td>nr.</td><td>Titlu </td><td>Tip </td><td>Emitent</td><td>Data</td></tr>
                             </thead>
                             <tbody>
@@ -104,7 +103,7 @@
                     <div class="slide">
                         <table>
                             <thead>
-                                <tr><td colspan="5">August 2014</td></tr>
+                                <tr><td colspan="5">August </td></tr>
                                 <tr><td>nr.</td><td>Titlu </td><td>Tip </td><td>Emitent</td><td>Data</td></tr>
                             </thead>
                             <tbody>
@@ -122,7 +121,7 @@
                     <div class="slide">
                         <table>
                             <thead>
-                                <tr><td colspan="5">September 2014</td></tr>
+                                <tr><td colspan="5">September </td></tr>
                                 <tr><td>nr.</td><td>Titlu </td><td>Tip </td><td>Emitent</td><td>Data</td></tr>
                             </thead>
                             <tbody>
@@ -140,7 +139,7 @@
                     <div class="slide">
                         <table>
                             <thead>
-                                <tr><td colspan="5">Octomber 2014</td></tr>
+                                <tr><td colspan="5">Octomber </td></tr>
                                 <tr><td>nr.</td><td>Titlu </td><td>Tip </td><td>Emitent</td><td>Data</td></tr>
                             </thead>
                             <tbody>
@@ -158,7 +157,7 @@
                     <div class="slide">
                         <table>
                             <thead>
-                                <tr><td colspan="5">Noiembrie 2014</td></tr>
+                                <tr><td colspan="5">Noiembrie </td></tr>
                                 <tr><td>nr.</td><td>Titlu </td><td>Tip </td><td>Emitent</td><td>Data</td></tr>
                             </thead>
                             <tbody>
@@ -176,7 +175,7 @@
                     <div class="slide">
                         <table>
                             <thead>
-                                <tr><td colspan="5">Decembrie 2014</td></tr>
+                                <tr><td colspan="5">Decembrie </td></tr>
                                 <tr><td>nr.</td><td>Titlu </td><td>Tip </td><td>Emitent</td><td>Data</td></tr>
                             </thead>
                             <tbody>
@@ -191,7 +190,7 @@
                             </tbody>
                         </table>
                     </div>
-
+                    <div class="clearfix"></div>
                 </div>
 
 
@@ -199,8 +198,7 @@
         </div>
         <div class='right'>
             <ul class="right_menu">
-                <li class="active"><a href="javascript:;">Calendarul ședințelor viitoare</a></li> 
-                <li><a href="javascript:;">Anul 2014</a></li>
+                <li class="active"><a href="javascript:;">Anul 2014</a></li>
                 <li><a href="javascript:;">Anul 2013</a></li>
                 <li><a href="javascript:;">Anul 2012</a></li>
                 <li><a href="javascript:;">Anul 2011</a></li>

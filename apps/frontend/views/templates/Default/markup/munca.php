@@ -43,6 +43,12 @@
                         <li>Evidenţa intrărilor şi ieşirilor mijloacelor băneşti (casa);</li>
                         <li>Păstrarea competentă şi veridică a evidenţei contabile;</li>
                     </ul>
+                    
+                </div>
+                <div class="ldm_middle">
+                    <p class="tda">
+                        Termen limita de aplicare : <span>4 sept 2014</span>
+                    </p>
                 </div>
                 <hr>
                 <form action="" method="">
@@ -72,28 +78,28 @@
         <div class='left'>
             <ul class="l_a">
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="<?=res('assets/img/v_arrow_l.png');?>"></span>
+                        <span> 29 Iul 2014 <img src="<?= res('assets/img/v_arrow_l.png'); ?>"></span>
                         <p>Casa noua!!!! Urgent!!!!</p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="<?=res('assets/img/v_arrow_l.png');?>"></span>
+                        <span> 29 Iul 2014 <img src="<?= res('assets/img/v_arrow_l.png'); ?>"></span>
                         <p>împrumut rapid la rate ale dobânzii scăzute</p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="<?=res('assets/img/v_arrow_l.png');?>"></span>
+                        <span> 29 Iul 2014 <img src="<?= res('assets/img/v_arrow_l.png'); ?>"></span>
                         <p>Cursuri gratuite de tinichigiu, mecanic si electrician auto pentru someri, cu sprijin la angajare</p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="<?=res('assets/img/v_arrow_l.png');?>"></span>
+                        <span> 29 Iul 2014 <img src="<?= res('assets/img/v_arrow_l.png'); ?>"></span>
                         <p>Cursuri gratuite pentru someri. Ingrijitoare copil, lucrator in comert</p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="<?=res('assets/img/v_arrow_l.png');?>"></span>
+                        <span> 29 Iul 2014 <img src="<?= res('assets/img/v_arrow_l.png'); ?>"></span>
                         <p>Casa noua!!!! Urgent!!!!</p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="<?=res('assets/img/v_arrow_l.png');?>"></span>
+                        <span> 29 Iul 2014 <img src="<?= res('assets/img/v_arrow_l.png'); ?>"></span>
                         <p>împrumut rapid la rate ale dobânzii scăzute</p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="<?=res('assets/img/v_arrow_l.png');?>"></span>
+                        <span> 29 Iul 2014 <img src="<?= res('assets/img/v_arrow_l.png'); ?>"></span>
                         <p>Cursuri gratuite de tinichigiu, mecanic si electrician auto pentru someri, cu sprijin la angajare</p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="<?=res('assets/img/v_arrow_l.png');?>"></span>
+                        <span> 29 Iul 2014 <img src="<?= res('assets/img/v_arrow_l.png'); ?>"></span>
                         <p>Cursuri gratuite pentru someri. Ingrijitoare copil, lucrator in comert</p></a></li>
             </ul>
 

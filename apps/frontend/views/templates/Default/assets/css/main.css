@@ -1004,6 +1004,12 @@ textarea {
         bottom: 8px;
         right: 20px;
     }
+    span.more{        
+        width: 30px;
+        height: 30px;
+        background: url('../img/more.png')no-repeat center;
+        float:right;
+    }
     .right > article .hr{
         height:3px;
         width:100%;
@@ -1262,7 +1268,7 @@ textarea {
         height:90px;
     }
     .right_menu li a{
-        font: 20px 'open_sanssemibold';
+        font: 18px 'open_sanssemibold';
         color: #595959;
         display: table-cell;
         height: 61px;
@@ -1290,7 +1296,7 @@ textarea {
         background:url('../img/right.png')25px center no-repeat #f8f8f8;
     }
     .right_menu li.active a,.cda .right_menu li.active a{
-        font:20px 'open_sansbold';
+        font:18px 'open_sansbold';
         color:#000000;
         line-height: 20px;
     }
@@ -1777,7 +1783,7 @@ textarea {
         margin-bottom:15px;
     }
     .n_title{
-        font:24px 'open_sansbold';
+        font:22px 'open_sansbold';
         color:#74b45a;
         text-transform: uppercase;
         margin-bottom: 0px;
@@ -1942,7 +1948,7 @@ textarea {
         height:48px;
         border: 1px solid #f7f7f7;
         border-left:0;
-        font:20px 'open_sanssemibold';
+        font:18px 'open_sanssemibold';
         color:#74b45a;
         display: block;
         line-height: 48px;
@@ -2399,7 +2405,7 @@ textarea {
     table.taxe tbody tr:nth-child(2n-1){
         background: #fbfbfb;
     }
-    ul.mda > li > a,ul.atz  > li a{
+    ul.mda > li > a,ul.atz  > li a,.dcr_dwnl{
         background:url('../img/a_dis.png') no-repeat;
         width:19px;
         height:19px;
@@ -2491,7 +2497,7 @@ textarea {
         bottom:-2px;
         border-left:3px solid #cdcdcd;
     }
-    ul.atz > li a:hover,ul.mda > li > a:hover{
+    ul.atz > li a:hover,ul.mda > li > a:hover,a.dcr_dwnl:hover{
         background:url('../img/a_active.png') no-repeat;
     }
     .vp_name{
@@ -2572,14 +2578,14 @@ textarea {
         border-bottom: 2px solid #efefef;
         padding-right: 130px; 
     }
-    ul.vice li .tel{
+    .tel{
         padding-left:30px;
         background:url('../img/g_mail.png') no-repeat left center;
         color:#4b4b4b;
         font:17px 'open_sanssemibold';
         margin-bottom:10px;
     }
-    ul.vice li .email a{
+    .email a{
         padding-left:30px;
         background:url('../img/v_phone.png') no-repeat left center;
         color:#4b4b4b;
@@ -2684,16 +2690,28 @@ textarea {
     }
 
     section > .wrap.rpt > .left > ul > li,ul.dcr > li{
-        width:100%;
-        border-bottom:2px solid #f7f7f7;
+        width:100%;        
         background:url('../img/dir.png') no-repeat left 31px;
         padding-bottom:8px;
         padding-top:30px;
     }
-    section > .wrap.rpt > .left ul > li a,ul.dcr > li a{
+    section > .wrap.rpt > .left ul > li > a,ul.dcr > li > a{
         font:17px 'open_sanssemibold';
         padding-left:38px;
         color:#000;
+    }
+    ul.dcr > li  a.dcr_dwnl{
+        border-bottom:0px;
+        width: 25px;
+        padding: 0px;
+        margin-top: -30px;
+    }
+    ul.dcr > li > a{
+        border-bottom:2px solid #f7f7f7;
+        width:100%;
+        display:block;
+        padding-bottom:10px;
+
     }
     section > .wrap.rpt > .left ul > li a:hover ,section > .wrap.rpt > .left > ul > li.active > a,ul.dcr > li a:hover,ul.dcr > li.active a{
         color:#68a84e;
@@ -3577,11 +3595,13 @@ textarea {
     .sort_b .selectboxit-container{
         width:auto;
     }
-    
+
     .calendar_slider table{
         width:100%;
+        font:15px 'open_sanssemibold';
+        color:#4c4c4c;
     }
-    
+
     .calendar_slider table thead td {
         border:1px solid #a5d293;
     }
@@ -3612,7 +3632,126 @@ textarea {
         height:20px;
         top:33px;
     }
-    
+    .calendar_slider table tbody tr:nth-child(2n-1),.calendar_slider table tbody tr td:first-child{
+        background:#fbfbfb;
+    }
+    .cns_locali thead tr td{
+        color:#74b45a;
+        font:17px 'open_sansbold';
+        text-transform:uppercase;
+        border:1px solid #a5d293;
+    }
+    .cns_locali tr td span,.c_l_u span{
+        display:block;
+    }
+    .cns_locali tr td{
+        padding:10px 20px; 
+    }
+    table.cns_locali,table.c_l_u{
+        width:100%;
+    }
+    .cns_locali td:first-child,.c_l_u td:first-child{
+        width:72%;
+    }
+    table.c_l_u td{
+        border:1px solid #e5e5e5;
+        padding:25px;
+    }
+    table.c_l_u tr:last-child{
+        background:#fbfbfb;
+    }
+    table.c_l_u  ul.dcr > li > a {
+        border:0px;
+        padding-bottom:0px;
+    }
+    table.c_l_u ul.dcr > li{
+        padding-top:0px;
+        background: url('../img/dir.png') no-repeat left 2px;
+    }
+    table.c_l_u ul.dcr > li a.dcr_dwnl{
+        margin-top:0px;
+    }
+    table.c_l_u ul.dcr > li .dcr_box{
+        width:100%;
+    }
+    .clu_img img{
+        max-width:140px;
+        max-height:177px;
+    }
+    .clu_img{
+        width:140px;
+        height:177px;
+        position:relative;
+        float:left;
+        margin-right:20px;
+    }
+    .clu_img:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: inset 0 0 0 4px rgba(251,251,251,.30);
+        -moz-box-shadow: inset 0 0 0 4px rgba(251,251,251,.30);
+        -webkit-box-shadow: inset 0 0 0 4px rgba(251,251,251,.30);
+    }
+    .clu_cont{
+        float:left;
+    }
+    ul.mda li span a{
+        color:#000;
+    }
+    .clu_nume{
+        color:#000000;
+        font:20px 'open_sansregular';
+    }
+    .clu_nume span{
+        font:20px 'open_sansbold';
+        display:inline;
+        padding-left:3px;
+    }
+    .c_l_u td{
+        font:17px 'open_sansregular';
+        color:#4c4c4c;
+        vertical-align:top;
+    }
+    .clu_partid {
+        color:#4c4c4c;
+        font:17px 'open_sanssemibold';
+        max-width:175px;
+    }
+    .c_l_u tr:first-child td{
+        border-top:0px;
+    }
+    .cns_locali tr:last-child td{
+        padding:0px;
+        padding-top:1px;
+    }
+    ul.dcr.smpl > li a.dcr_dwnl{
+        margin-top:0px;
+    }
+    ul.dcr.smpl > li .dcr_box {
+        width:100%;
+    }
+    .ldmbox p.tda,.tda{
+        background:#f7f7f7;
+        font:15px 'open_sanssemibold';
+        color:#343434;
+        padding:0 15px;
+        height:45px;
+        line-height: 45px;
+        width:100%;
+        max-width:100%;
+        margin-top:25px;
+    }
+    .ldm_middle{
+        width:100%;
+        padding-right:40px;
+    }
+    .tda span,.ldmbox p.tda span{
+        color:#7c4d7c;
+    }
 }
 @media only screen and (max-width : 1500px) {
     section > .wrap .left article,section > .wrap .left article:nth-child(2n){

@@ -35,13 +35,16 @@
                     <p> <span>Scopul acestui studiu </span>este de a prezenta situația din achizițiile publice din Republica Moldova, nu numai prin prisma politicilor și reglementărilor din acest domeniu, dar și ținând cont de alți factori care pot influența performanța acestora.</p>
                     <p><span>Rezultatele studiului </span>se bazează pe analiza actelor legislative din achizițiile publice, consultarea paginilor WEB ale autorităților publice, organizațiilor internaționale, inclusiv a donatorilor.De asemenea, au fost studiate practicile internaționale în acest domeniu. În calitate de s  urse de informație privind procesul real de achiziții publice și performanța acestuia au fost utilizate rapoartele de audit ale Curții de Conturi din perioada 2011-2013 (circa 60 rapoarte), dările de seamă ale autorităților contractante pe achiziții și contestațiile prezentate de către Agenția Achizițiilor Publice la solicitarea autorilor și rapoartele Agenției publicate pe http://tender.gov.md/ . De asemenea, pentru a evalua conlucrarea Agenției cu autoritățile publice locale au fost intervievate și chestionate peste 30 de autorități locale de nivelul I și II.</p>
                     <p><span>Studiul conține </span>șapte capitole de baz.ă, Introducere și Sumar executiv. În primul capitol este prezentată privirea de ansamblu a dezvoltării achizițiilor publice în Republica Moldova și evoluția volumelor</p>
+
+                    <p class="tda">
+                        Termen limita de aplicare : <span>4 sept 2014</span>
+                    </p>
                 </div>
-                <input type="button" class="dwnl" value="descarca studiul">
-                <p class="t_hdd">Modificat la 5 iunie 2014. Descărcări anterioare: 15</p>
+
 
                 <ul class="mda n_t">
                     <li class="word">
-                        <span>Achizițiile Publice în Moldova</span></a>
+                        <span><a href="javascript:;">Achizițiile Publice în Moldova</a></span>
                     </li>  
                 </ul>
                 <div class='clearfix50'></div>

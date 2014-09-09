@@ -13,21 +13,18 @@
 
         <div class='left'>
             <ul class="dcr">
-                <li><a href='javascript:;'> Declaratii de avere 2005</a>
+                <li><a href='javascript:;'> Declaratii de avere 2005 </a>
+                    <a href="javascript:;" class="dcr_dwnl"></a>
                     <div class='dcr_box'>
-                        <p class="ul_title"> <span>Nume fisier</span>Actualizat</p>
                         <ul>
                             <li class="word">
                                 <span>Ionele Aurelia.pdf </span>
-                                <span>02/06/2014	</span>
                             </li>
                             <li class="pdf">
                                 <span>Magerusan Onita.doc </span>
-                                <span>26/03/2014</span>
                             </li>
                             <li class="word">
                                 <span>Malaicu Sabina.pdf	</span>
-                                <span>23/06/2014	</span>
                             </li>
 
                         </ul>
@@ -35,153 +32,129 @@
 
                 </li>
                 <li><a href='javascript:;'> Declaratii de avere 2006</a>
+                    <a href="javascript:;" class="dcr_dwnl"></a>
                     <div class='dcr_box'>
-                        <p class="ul_title"> <span>Nume fisier</span>Actualizat</p>
                         <ul>
                             <li class="word">
                                 <span>Ionele Aurelia.pdf </span>
-                                <span>02/06/2014	</span>
                             </li>
                             <li class="pdf">
                                 <span>Magerusan Onita.doc </span>
-                                <span>26/03/2014</span>
                             </li>
                             <li class="word">
                                 <span>Malaicu Sabina.pdf	</span>
-                                <span>23/06/2014	</span>
                             </li>
 
                         </ul>
                     </div></li>
                 <li><a href='javascript:;'> Declaratii de avere 2007</a>
+                    <a href="javascript:;" class="dcr_dwnl"></a>
                     <div class='dcr_box'>
-                        <p class="ul_title"> <span>Nume fisier</span>Actualizat</p>
                         <ul>
                             <li class="word">
                                 <span>Ionele Aurelia.pdf </span>
-                                <span>02/06/2014	</span>
                             </li>
                             <li class="pdf">
                                 <span>Magerusan Onita.doc </span>
-                                <span>26/03/2014</span>
                             </li>
                             <li class="word">
                                 <span>Malaicu Sabina.pdf	</span>
-                                <span>23/06/2014	</span>
                             </li>
 
                         </ul>
                     </div></li>
                 <li><a href='javascript:;'> Declaratii de avere 2008</a>
+                    <a href="javascript:;" class="dcr_dwnl"></a>
                     <div class='dcr_box'>
-                        <p class="ul_title"> <span>Nume fisier</span>Actualizat</p>
                         <ul>
                             <li class="word">
                                 <span>Ionele Aurelia.pdf </span>
-                                <span>02/06/2014	</span>
                             </li>
                             <li class="pdf">
                                 <span>Magerusan Onita.doc </span>
-                                <span>26/03/2014</span>
                             </li>
                             <li class="word">
                                 <span>Malaicu Sabina.pdf	</span>
-                                <span>23/06/2014	</span>
                             </li>
 
                         </ul>
                     </div></li>
                 <li><a href='javascript:;'> Declaratii de avere 2009</a>
+                    <a href="javascript:;" class="dcr_dwnl"></a>
                     <div class='dcr_box'>
-                        <p class="ul_title"> <span>Nume fisier</span>Actualizat</p>
                         <ul>
                             <li class="word">
                                 <span>Ionele Aurelia.pdf </span>
-                                <span>02/06/2014	</span>
                             </li>
                             <li class="pdf">
                                 <span>Magerusan Onita.doc </span>
-                                <span>26/03/2014</span>
                             </li>
                             <li class="word">
                                 <span>Malaicu Sabina.pdf	</span>
-                                <span>23/06/2014	</span>
                             </li>
 
                         </ul>
                     </div></li>
                 <li><a href='javascript:;'> Declaratii de avere 2010</a>
+                    <a href="javascript:;" class="dcr_dwnl"></a>
                     <div class='dcr_box'>
-                        <p class="ul_title"> <span>Nume fisier</span>Actualizat</p>
                         <ul>
                             <li class="word">
                                 <span>Ionele Aurelia.pdf </span>
-                                <span>02/06/2014	</span>
                             </li>
                             <li class="pdf">
                                 <span>Magerusan Onita.doc </span>
-                                <span>26/03/2014</span>
                             </li>
                             <li class="word">
                                 <span>Malaicu Sabina.pdf	</span>
-                                <span>23/06/2014	</span>
                             </li>
 
                         </ul>
                     </div></li>
                 <li><a href='javascript:;'> Declaratii de avere 2011</a>
+                    <a href="javascript:;" class="dcr_dwnl"></a>
                     <div class='dcr_box'>
-                        <p class="ul_title"> <span>Nume fisier</span>Actualizat</p>
                         <ul>
                             <li class="word">
                                 <span>Ionele Aurelia.pdf </span>
-                                <span>02/06/2014	</span>
                             </li>
                             <li class="pdf">
                                 <span>Magerusan Onita.doc </span>
-                                <span>26/03/2014</span>
                             </li>
                             <li class="word">
                                 <span>Malaicu Sabina.pdf	</span>
-                                <span>23/06/2014	</span>
                             </li>
 
                         </ul>
                     </div></li>
                 <li><a href='javascript:;'> Declaratii de avere si interese 2013</a>
+                    <a href="javascript:;" class="dcr_dwnl"></a>
                     <div class='dcr_box'>
-                        <p class="ul_title"> <span>Nume fisier</span>Actualizat</p>
                         <ul>
                             <li class="word">
                                 <span>Ionele Aurelia.pdf </span>
-                                <span>02/06/2014	</span>
                             </li>
                             <li class="pdf">
                                 <span>Magerusan Onita.doc </span>
-                                <span>26/03/2014</span>
                             </li>
                             <li class="word">
                                 <span>Malaicu Sabina.pdf	</span>
-                                <span>23/06/2014	</span>
                             </li>
 
                         </ul>
                     </div></li>
                 <li><a href='javascript:;'>  Declaratii de avere si interese 2014</a>
+                    <a href="javascript:;" class="dcr_dwnl"></a>
                     <div class='dcr_box'>
-                        <p class="ul_title"> <span>Nume fisier</span>Actualizat</p>
                         <ul>
                             <li class="word">
                                 <span>Ionele Aurelia.pdf </span>
-                                <span>02/06/2014	</span>
                             </li>
                             <li class="pdf">
                                 <span>Magerusan Onita.doc </span>
-                                <span>26/03/2014</span>
                             </li>
                             <li class="word">
                                 <span>Malaicu Sabina.pdf	</span>
-                                <span>23/06/2014	</span>
                             </li>
 
                         </ul>
