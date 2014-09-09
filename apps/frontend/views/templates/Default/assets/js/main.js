@@ -46,13 +46,15 @@ $(document).ready(function() {
         $("ul.dcr  li.active").removeClass('active');
         if ($(this).parent().find('.dcr_box').hasClass('active')) {
             $("ul.dcr li .dcr_box.active").slideToggle();
-            $("ul.dcr li .dcr_box.active").removeClass('active');
+            $("ul.dcr li .dcr_box.active").removeClass('active');            
+            $(this).find('span.more').removeClass('hidden');
         }
         else {
             $("ul.dcr li .dcr_box.active").slideToggle();
             $("ul.dcr li .dcr_box.active").removeClass('active');
             $(this).parent().find('.dcr_box').addClass('active').slideToggle();
             $(this).parent().addClass('active');
+            $(this).find('span.more').addClass('hidden');
         }
     });
     $('.upload').click(function() {
