@@ -2,69 +2,49 @@
     <div class="dirs_menu">
         <div class="wrap">
             <a href="javascript:;">Principala »</a>
-            <a href="javascript:;">Cetateni si business »</a>
-            <a href="javascript:;">Autorizatii si certificate »</a>
-            <a href="javascript:;">Autorizatii pentru unități comerciale</a>
+            <a href="javascript:;">Cetățeni și business »</a>
+            <a href="javascript:;">Despre orașul Strășeni  »</a>
+            <a href="javascript:;">Cum să ajungi în oraș / Amplasarea geografică</a>
         </div>
     </div>
     <div class="wrap">
-        <p class="c_title">Autorizații</p>
-        <div class='left'>         
-            <table class="atz">      
-                <tbody>
-                    <tr><td>1.</td><td>Scopul serviciului public</td><td>Autorizaţia de funcționare este un act administrativ individual ce atestă dreptul titularului autorizaţiei de a desfăşura activitatea în unitatea comercială şi/sau de prestări servicii în locul (terenul, localul, incinta) stabilit, pentru o perioadă stabilită, cu respectarea obligatorie a condiţiilor de autorizare prevăzute de legislaţie. </td></tr>
-                    <tr><td>2.</td><td>Organul emitent. Subdiviziunea organului emitent responsabilă de prestarea serviciului. Datele de contact si programul de lucru. </td><td>
+        <p class='c_title'>orașul</p>
 
-                            <p>Primăria or. Orhei, et.1, bir. 4.</p>
-                            <p>Specialist Reglementare Probleme de Comerţ,</p>
-                            <p>Apreutesei Marcel</p>
-                            <p>Tel: 0(235)-22771</p>
-                            <p>Email: <a href="mailto:autorizatii-functionare@orhei.md">autorizatii-functionare@orhei.md</a></p>
-                            <p>Programul de lucru: Luni – Vineri, 08:00 – 17:00</p>
-                        </td></tr>
-                    <tr><td>3.</td><td>Scopul serviciului public</td><td>Autorizaţia de funcționare este un act administrativ individual ce atestă dreptul titularului autorizaţiei de a desfăşura activitatea în unitatea comercială şi/sau de prestări servicii în locul (terenul, localul, incinta) stabilit, pentru o perioadă stabilită, cu respectarea obligatorie a condiţiilor de autorizare prevăzute de legislaţie. </td></tr>
-                    <tr><td>4.</td><td>Lista actelor necesare pentru obţinerea serviciului </td><td>
-                            <ul>
-                                <li><span><a href="">Cerere tipzată (descarcă)</a></span></li>
-                                <li><span>Extrasul din Registrul de stat al persoanelor juridice și întreprinzătorilor individuali;</span></li>
-                                <li><span>Certificatul de proprietate asupra imobilului cu destinaţie nelocativă, eliberat de către Oficiul cadastral teritorial. Pentru unităţile amplasate în încăperi închiriate urmează să fie prezentat şi contractul de locaţiune;</span></li>
-                                <li><span>Planul încăperii nelocative actualizat la OCT;</span></li>
-                                <li><span>Schema de amplasare a unităţii comerciale (pentru gherete, tarabe şi alte unităţi mobile);</span></li>
-                                <li><span>Contractul de locaţiune sau titlul de autentificare a deţinătorului de teren;</span></li>
-                                <li><span>Autorizaţia sanitară de funcţionare, pentru toate tipurile de unităţi comerciale şi/sau prestare servicii, iar în cazul autorizării magazinelor alimentare şi unităţilor de alimentaţie publică suplimentar şi asortimentul produselor comercializate;
-                                    Autorizaţia sanitară veterinară de funcţionare</span> </li>
-                            </ul>
-                        </td></tr>
-                </tbody>
-            </table>
-            
-            <ul>
-                <li class="pdf">
-                    <span>Cerere eliberare acord de functionare </span><a href="javascript:;" class="active"></a>
-                </li>      
+        <div class='left'>
+            <div class='city'>
+                <div id="map-canvas2" style="width:870px; height:500px;"></div>
+                
+                <p>Orășelul cu această denumire e menționat documentar ca sat la 20 martie 1545, când Alexandru Voievod, domnul Moldovei, confirmă mănăstirii Pobrata o jumătate de moșie pe care călugării o aveau în dar de la jupâneasa Frățiman cu satul Curluceni. La 4 iulie 1774 îl aflăm în stăpânirea mănăstirii Frumoasa, cu 84 de gospodării cu răzeși și mazili. Orașul avea 2 preoți, biserica a fost construită în anul 1785, alături de alta veche. Sat mare și frumos, în anul 1870 aici erau 596 gospodării, 1840 bărbați și 1110 femei. Gospodarii țineau prisăci, vii și livezi frumoase, erau lemnari, tâmplari vestiți. La 6 ianuarie 1873 zemstva județeană trimite la Strășeni primul medic cu studii superioare, pe doctorul Feodor Constantinovichi Scordeli. La 1 iulie 1877 satul avea o bibliotecă sătească, uar în anul 1910 avea 2 școli și o biserică.</p>
+                
+                <div class="gal">
+                    <ul class='gallery bxslider g_slide'>
+                        <li><img  src="<?= res('assets/img/gal1.png'); ?>"></li>                    
+                        <li><img  src="<?= res('assets/img/gal2.png'); ?>"></li>                    
+                        <li><img  src="<?= res('assets/img/gal1.png'); ?>"></li>                    
+                        <li><img  src="<?= res('assets/img/gal2.png'); ?>"></li>
+                    </ul>
+                    <p class="counter"><span class='current'></span>/<span class='total'></span></p>
+                </div> 
+                <div class='socials'>
+                    <div id="vk_like"></div>
+                    <div id="ok_shareWidget"></div>
+                    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="125" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+
+            <ul class='right_menu'>
+                <li class='active'><a href="javascript:;">Cum să ajungi în oraș / Amplasarea geografică</a></li>
+                <li><a href='javascript:;'>Istoria orașului</a></li>
+                <li><a href='javascript:;'>Personalități marcante</a></li>
+                <li><a href='javascript:;'>Orașe înfrățite</a></li>
             </ul>
+
+
         </div>
-
-        <div class='right'>
-            <ul class="right_menu">
-                <li class="active"><a href="javascript:;">Autorizatii pentru unități comerciale</a></li>
-                <li><a href="javascript:;">Autorizatii de constructie</a></li>
-                <li><a href="javascript:;">Certificatul de urbanism pentru proiectare</a></li>
-                <li><a href="javascript:;">Certificat privind lipsa/existenta restantelor</a></li>
-            </ul>
-        </div>
-        <div class='clearfix50'></div>
-
-
-
-        <div class='socials'>
-            <div id="vk_like"></div>
-            <div id="ok_shareWidget"></div>
-            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="125" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-            <div class="clearfix"></div>
-        </div>
-        <div class="hr_grey"></div>
+        <div class='clearfix'></div>
+        <div class='hr_grey'></div>
     </div>
-
-    <div class='clearfix'></div>
 </section>

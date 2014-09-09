@@ -5,6 +5,16 @@ $.expr[":"].contains = $.expr.createPseudo(function(arg) {
 });
 
 $(document).ready(function() {
+    $('.calendar_slider').bxSlider({
+        minSlides: 2,
+        maxSlides: 12,
+        slideMargin: 10,
+        pager:false,
+        controls:true
+    });
+
+
+
     $('.currency .s_c,.overlay2').click(function() {
         $('.overlay2').toggleClass('hidden');
         $('.currency .lang').toggleClass('hidden');

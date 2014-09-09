@@ -532,11 +532,13 @@ textarea {
         font:15px 'open_sanssemibold';
         color:#484848;
         margin-top:-2px;
+        margin-bottom:0px;
     }
     header .contact .cont .cont_form ul li p:last-child{
         font:17px 'open_sanssemibold';
         color:#484848;
         padding-bottom:2px;
+        margin-bottom:0px;
     }
     header .contact .cont .cont_form .relative{
         position:relative;
@@ -634,11 +636,13 @@ textarea {
         font:15px 'open_sansbold';
         line-height: 1.533;
         margin-bottom:22px;
+        margin-bottom:0px;
     }
     header .contact .cont .cont_form .c_info .street{
         line-height: 1.533;
         color:#484848;
         font:15px 'open_sanssemibold';
+        margin-bottom:0px;
     }
     .gmnoprint {
         display:none;
@@ -3381,6 +3385,234 @@ textarea {
         display: table-cell;
         vertical-align: middle;
     }
+    table.plc > tbody > tr:nth-child(2n){
+        background:#fbfbfb;
+    }
+    table.plc > tbody > tr > td:first-child{
+        background:#f8fcf6;
+        border:1px solid #d8ebd2;
+        padding:20px;
+        border-bottom-width:2px;
+    }
+    table.plc > tbody > tr > td:nth-child(2){
+        width:35%;
+    }
+    table.plc > tbody > tr > td{
+        padding:20px;
+        border:1px solid #e3e3e3;        
+        vertical-align:top;
+        border-bottom-width: 2px;
+    }
+    table.plc > tbody > tr:last-child > td{
+        border-bottom-width:1px;
+    }
+    table.plc > tbody > tr > td:last-child{
+        position:relative;
+    }
+    table.plc > tbody > tr > td > a{
+        font:17px 'open_sansbold';
+        color:#74b45a;
+    }
+    table.plc table td{
+        border:1px solid #ebebeb;
+    }
+    table.plc table{
+        border:0px;
+    }
+    table.plc table tr:first-child td {
+        border-top: 0;
+    }
+    table.plc table tr:last-child td {
+        border-bottom: 0;
+    }
+    table.plc table tr td:first-child {
+        border-left: 0;
+        font:17px 'open_sanssemibold';
+        width:50%;
+    }
+    table.plc table tr:nth-child(3) td:last-child{
+        font:17px 'open_sanssemibold';
+    }
+    table.plc table tr td:last-child {
+        border-right: 0;
+        padding-left:15px;
+    }
+    table.plc table td{
+        padding:5px 0;
+        vertical-align:top;
+    }
+    table.plc  .more{
+        width: 30px;
+        height: 20px;
+        background: url('../img/more.png')no-repeat center;
+        position: absolute;
+        bottom: 8px;
+        right: 20px;
+    }
+
+
+    table.plcu > tbody > tr > th,table.plcu > thead > tr > th{
+        width:40%;
+        padding:30px;
+    }
+    table.plcu > tbody > tr > td,table.plcu > tbody > tr > th{
+        border:1px solid #e3e3e3;
+        text-align:left;
+        padding:30px;
+
+    }
+    table.plcu > tbody > tr > th,table.plcu > thead > tr > th{
+        font:17px 'open_sansbold';
+        color:#000;
+    }
+    table.plcu > thead > tr > th{
+        text-align:left;
+        border:1px solid #d8ebd2;
+        padding:30px;
+    }
+    table.plcu > thead > tr > td{        
+        border:1px solid #d8ebd2;
+        padding:30px;
+        font:17px 'open_sanssemibold';
+        color:#6aa652;
+    }
+    table.plcu > thead > tr{
+        background:#f8fcf6;
+    }
+    table.plcu strong{
+        color:#4c4c4c;
+        font:17px 'open_sanssemibold';
+    }
+    table.plcu p{
+        font:17px 'open_sansregular';
+        padding-bottom:30px;
+    }
+    ptable.plcu ol{
+        padding:0px;
+    }
+    table.plcu ol li{
+        list-style:decimal;
+        padding:0px;
+        float:left;
+    }
+    table.plcu  table{
+        width:100%;
+        font:17px 'open_sanssemibold';
+    }
+    table.plcu  table tr td{
+        border:1px solid #ebebeb;
+    }
+    table.plcu table tr:first-child td {
+        border-top: 0;
+    }
+    table.plcu table tr:last-child td {
+        border-bottom: 0;
+    }
+    table.plcu table tr td:first-child{
+        border-left: 0;
+    }
+    table.plcu  table tr td:last-child{
+        border-right: 0;
+        padding-left:20px;
+    }
+    table.plcu  table tr td{
+        padding:5px 0;
+        color:#4c4c4c;
+    }
+    table.plcu > tbody > tr:last-child td,table.plcu > tbody > tr:last-child th{
+        background:#fbfbfb;
+        padding:10px 30px;
+    }
+    table.plcu .word,table.plcu .doc,table.plcu .pdf,table.plcu .docx{
+        padding-left:40px;
+        color:#4c4c4c;
+        font:17px 'open_sansbold';
+        background:url('../img/word.png')no-repeat left center;
+        height:30px;
+        display:block;
+        line-height:30px;
+    }
+    .sort_b{
+        float:right;        
+    }
+    .sort_b p{
+        color:#4c4c4c;
+        font:17px 'open_sanssemibold';
+        display:inline-block;
+        height:33px;
+        line-height:33px;
+        margin-top:0px;
+        margin-right:15px;
+    }
+    .sort_b .selectboxit-container .selectboxit{
+        width:65px !important;
+        height:33px;
+    }
+    .sort_b .selectboxit-default-arrow{
+        background:url('../img/sort_b.png')no-repeat;
+        width:12px;
+        height:17px;
+    }
+    .sort_b .selectboxit .selectboxit-arrow-container .selectboxit-arrow{
+        top: 7px;
+        left: 10px;
+    }
+    .sort_b .selectboxit-btn{
+        border-left-width:1px;
+    }
+    .sort_b .selectboxit-container span, .selectboxit-container .selectboxit-options a{
+        font:17px 'open_sanssemibold';
+        color:#74b45a;
+        line-height:31px;
+    }
+    .sort_b .selectboxit-container .selectboxit-options{
+        min-width:10px !important;
+        width:65px;
+    }
+    .sort_b .selectboxit-container .selectboxit-options a{
+        font:17px 'open_sanssemibold';
+        color:#74b45a;
+        line-height:31px;
+    }
+    .sort_b .selectboxit-container{
+        width:auto;
+    }
+    
+    .calendar_slider table{
+        width:100%;
+    }
+    
+    .calendar_slider table thead td {
+        border:1px solid #a5d293;
+    }
+    .calendar_slider td{
+        padding:15px;
+        border:1px solid #e3e3e3;
+    }
+    .calendar_slider table thead tr:first-child td{
+        font:17px 'open_sansbold';
+        background:#fbfbfb;
+        text-align:center;
+    }
+    .calendar_slider table thead tr:last-child td{
+        color:#74b45a;
+        font:17px 'open_sansbold';
+        text-transform:uppercase;
+    }
+    .clndr .bx-wrapper .bx-prev{
+        background:url('../img/clndr_prev.png');
+        left:20px;
+    }
+    .clndr .bx-wrapper .bx-next{
+        background:url('../img/clndr_next.png');
+        right:20px;
+    }
+    .clndr .bx-wrapper .bx-controls-direction a{
+        width:12px;
+        height:20px;
+        top:33px;
+    }
+    
 }
 @media only screen and (max-width : 1500px) {
     section > .wrap .left article,section > .wrap .left article:nth-child(2n){
