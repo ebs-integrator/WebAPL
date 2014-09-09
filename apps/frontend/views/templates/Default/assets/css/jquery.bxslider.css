@@ -30,7 +30,6 @@
 ===================================*/
 
 .bx-wrapper .bx-viewport {
-    height:300px !important;
     /*fix other elements on the page moving (on Chrome)*/
     -webkit-transform: translatez(0);
     -moz-transform: translatez(0);

@@ -13,57 +13,77 @@
         <div class='left'>        
             <table class="plc">
                 <tbody>
-                    <tr><td>1.</td><td>Scopul serviciului public</td><td>Autorizaţia de funcționare este un act administrativ individual ce atestă dreptul titularului autorizaţiei de a desfăşura activitatea în unitatea comercială şi/sau de prestări servicii în locul (terenul, localul, incinta) stabilit, pentru o perioadă stabilită, cu respectarea obligatorie a condiţiilor de autorizare prevăzute de legislaţie. </td></tr>
-                    <tr><td>2.</td><td>Organul emitent. Subdiviziunea organului emitent responsabilă de prestarea serviciului. Datele de contact si programul de lucru. </td><td>
-
-                            <p>Primăria or. Orhei, et.1, bir. 4.</p>
-                            <p>Specialist Reglementare Probleme de Comerţ,</p>
-                            <p>Apreutesei Marcel</p>
-                            <p>Tel: 0(235)-22771</p>
-                            <p>Email: <a href="mailto:autorizatii-functionare@orhei.md">autorizatii-functionare@orhei.md</a></p>
-                            <p>Programul de lucru: Luni – Vineri, 08:00 – 17:00</p>
+                    <tr><td>1.</td>
+                        <td><a href="javascript:;">12000 cetățeni aprovizionați cu apă potabilă în 12 localități</a></td>
+                        <td>
+                            <table>
+                                <tr><td>Data de start și finalizare:</td><td>13.02.2014 - 15.02.2014</td></tr>
+                                <tr><td>Domeniu:</td><td>Măsura 1.4: Creşterea eficienţei energetice în clădirile şi facilităţile publice.</td></tr>
+                                <tr><td>Stadiul de realizare proiect:</td><td>În derulare</td></tr>
+                                <tr><td>Valoarea proiectului:</td><td>93 344 840,00 lei</td></tr>
+                            </table>
+                            <a class="more" href=""></a>
                         </td></tr>
-                    <tr><td>3.</td><td>Scopul serviciului public</td><td>Autorizaţia de funcționare este un act administrativ individual ce atestă dreptul titularului autorizaţiei de a desfăşura activitatea în unitatea comercială şi/sau de prestări servicii în locul (terenul, localul, incinta) stabilit, pentru o perioadă stabilită, cu respectarea obligatorie a condiţiilor de autorizare prevăzute de legislaţie. </td></tr>
-                    <tr><td>4.</td><td>Lista actelor necesare pentru obţinerea serviciului </td><td>
-                            <ul>
-                                <li><span><a href="">Cerere tipzată (descarcă)</a></span></li>
-                                <li><span>Extrasul din Registrul de stat al persoanelor juridice și întreprinzătorilor individuali;</span></li>
-                                <li><span>Certificatul de proprietate asupra imobilului cu destinaţie nelocativă, eliberat de către Oficiul cadastral teritorial. Pentru unităţile amplasate în încăperi închiriate urmează să fie prezentat şi contractul de locaţiune;</span></li>
-                                <li><span>Planul încăperii nelocative actualizat la OCT;</span></li>
-                                <li><span>Schema de amplasare a unităţii comerciale (pentru gherete, tarabe şi alte unităţi mobile);</span></li>
-                                <li><span>Contractul de locaţiune sau titlul de autentificare a deţinătorului de teren;</span></li>
-                                <li><span>Autorizaţia sanitară de funcţionare, pentru toate tipurile de unităţi comerciale şi/sau prestare servicii, iar în cazul autorizării magazinelor alimentare şi unităţilor de alimentaţie publică suplimentar şi asortimentul produselor comercializate;
-                                    Autorizaţia sanitară veterinară de funcţionare</span> </li>
-                            </ul>
+                    <tr><td>2.</td>
+                        <td><a href="javascript:;">Deschiderea traseului turistic (Vama Veche Lăpușna) prin restaurarea obiectelor de patrimoniu istoric, Conacul „Manuc-Bey” din or. Hîncești , Locația geto-dacică din s. Stolniceni</a> </td>
+                        <td>
+                            <table>
+                                <tr><td>Data de start și finalizare:</td><td>13.02.2014 - 15.02.2014</td></tr>
+                                <tr><td>Domeniu:</td><td>Măsura 1.4: Creşterea eficienţei energetice în clădirile şi facilităţile publice.</td></tr>
+                                <tr><td>Stadiul de realizare proiect:</td><td>În derulare</td></tr>
+                                <tr><td>Valoarea proiectului:</td><td>93 344 840,00 lei</td></tr>
+                            </table>
+                            <a class="more" href=""></a>
+                        </td></tr>
+                    <tr><td>3.</td>
+                        <td><a href="javascript:;">Un mediu salubru pentru o dezvoltarea regională durabilă (Hîncești)</a></td>
+                        <td>
+                            <table>
+                                <tr><td>Data de start și finalizare:</td><td>13.02.2014 - 15.02.2014</td></tr>
+                                <tr><td>Domeniu:</td><td>Măsura 1.4: Creşterea eficienţei energetice în clădirile şi facilităţile publice.</td></tr>
+                                <tr><td>Stadiul de realizare proiect:</td><td>În derulare</td></tr>
+                                <tr><td>Valoarea proiectului:</td><td>93 344 840,00 lei</td></tr>
+                            </table>
+                            <a class="more" href=""></a>
+                        </td></tr>
+                    <tr><td>4.</td>
+                        <td><a href="javascript:;">Acces asigurat la viața publică „Managementul deşeurilor menajere în localităţile Teleneşti şi Sîngerei”</a></td>
+                        <td>
+                            <table>
+                                <tr><td>Data de start și finalizare:</td><td>13.02.2014 - 15.02.2014</td></tr>
+                                <tr><td>Domeniu:</td><td>Măsura 1.2: Modernizarea şi dezvoltarea traseelor de acces, infrastructurii rutiere şi conexiunilor internaţionale.
+                                        Susținute și Finanțate din sursele FNDR
+                                        (DUP) Documentul Unic de Program 2013-2015</td></tr>
+                                <tr><td>Stadiul de realizare proiect:</td><td>În așteptare</td></tr>
+                                <tr><td>Valoarea proiectului:</td><td>93 344 840,00 lei</td></tr>
+                            </table>
+                            <a class="more" href=""></a>
                         </td></tr>
                 </tbody>
             </table>
-            
-            <ul class="atz">
-                <li class="pdf">
-                    <span>Cerere eliberare acord de functionare </span><a href="javascript:;" class="active"></a>
-                </li>      
-            </ul>
+
+            <div class="pag">
+                <span class="w_p">Pagina</span>
+                <span class="p_n"><a href="javascript:;">Precedenta</a></span>
+                <ul>
+                    <li><a href="javascript:;">1</a></li>
+                    <li class="active"><a href="javascript:;">2</a></li>
+                    <li><a href="javascript:;">3</a></li>
+                    <li><a href="javascript:;">4</a></li>
+                    <li><a href="javascript:;">5</a></li>
+                </ul>
+                <span class="n_p"><a href="javascript:;">următoarea</a></span>
+            </div>
         </div>
 
         <div class='right'>
             <ul class="right_menu">
                 <li class="active"><a href="javascript:;">Proiecte finalizate</a></li>
                 <li><a href="javascript:;">Proiecte curente</a></li>
-               
+
             </ul>
         </div>
         <div class='clearfix50'></div>
-
-
-
-        <div class='socials'>
-            <div id="vk_like"></div>
-            <div id="ok_shareWidget"></div>
-            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="125" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-            <div class="clearfix"></div>
-        </div>
-        <div class="hr_grey"></div>
     </div>
 
     <div class='clearfix'></div>
