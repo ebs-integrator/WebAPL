@@ -28,7 +28,6 @@
         <div class="right">
             <?=
             View::make('sections.pages.blocks.right-menu')->with(array(
-                'page' => $page,
                 'colevels' => $colevels
             ));
             ?>

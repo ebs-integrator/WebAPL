@@ -7,27 +7,25 @@
  * @copyright  2014 Enterprise Business Solutions SRL
  * @link       http://ebs.md/
  */
-
-
 class PageController extends BaseController {
 
     function __construct() {
         parent::__construct();
 
         $this->beforeFilter(function() {
-                    if (!Auth::check()) {
-                        return Redirect::to('auth');
-                    }
-                });
+            if (!Auth::check()) {
+                return Redirect::to('auth');
+            }
+        });
 
         $this->taxonomy = Taxonomy::get('page');
 
         Actions::register('page_attachment', function ($page) {
-                    echo View::make('sections.feed.attachment-page', array(
-                        'post' => $page->toArray(),
-                        'list' => Feed::all()
-                    ));
-                });
+            echo View::make('sections.feed.attachment-page', array(
+                'post' => $page->toArray(),
+                'list' => Feed::all()
+            ));
+        });
     }
 
     protected $taxonomy;
@@ -83,7 +81,7 @@ class PageController extends BaseController {
         $page_id = Input::get('id');
         $page = Input::get('page');
         $page_lang = Input::get('lang');
-        
+
         $post = Post::find($page_id);
         if ($post && $page) {
             $post->created_at = $page['created_at'];
@@ -92,8 +90,13 @@ class PageController extends BaseController {
                 $post->parent = $page['parent'];
             }
             $post->clone_id = $page['clone_id'];
+            $post->redirect_to = $page['redirect_to'];
             $post->view_mod = $page['view_mod'];
             $post->general_node = isset($page['general_node']) ? 1 : 0;
+            $post->is_home_page = isset($page['is_home_page']) ? 1 : 0;
+            if ($post->is_home_page) {
+                DB::table(Post::getTableName())->where('is_home_page', $post->is_home_page)->update(array('is_home_page' => 0));
+            }
             $post->save();
         }
 
@@ -104,9 +107,9 @@ class PageController extends BaseController {
                 $post_lang->text = $page_lang['text'];
                 $post_lang->enabled = isset($page_lang['enabled']) && $page_lang ? 1 : 0;
                 if ($page_lang['uri']) {
-                    $post_lang->uri = Core\APL\Actions::toAscii($page_lang['uri']);
+                    $post_lang->uri = PostLang::uniqURI($page_lang['uri']);
                 } else {
-                    $post_lang->uri = Core\APL\Actions::toAscii($page_lang['title']);
+                    $post_lang->uri = PostLang::uniqURI($page_lang['title']);
                 }
                 $post_lang->save();
             }
@@ -115,39 +118,41 @@ class PageController extends BaseController {
         if (isset($post->clone_id) && $post->clone_id) {
             $this->clonePageLangData($post->clone_id, $post->id);
         }
-        
+
         return array(
         );
     }
-    
+
     public function postSavefilesdata() {
         $page_id = Input::get('id');
         $post = Post::find($page_id);
         $post->show_files = Input::has('data.show_files') ? 1 : 0;
         $post->show_file_search = Input::has('data.show_file_search') ? 1 : 0;
         $post->save();
-        
+
         return array();
     }
-    
+
     private function clonePageLangData($source_id, $target_id) {
+        echo 'run cloning';
         foreach (Core\APL\Language::getList() as $lang) {
-            
+
             $source = PostLang::where(array(
-                'lang_id' => $lang->id,
-                'post_id' => $source_id
-            ))->get()->first();
+                        'lang_id' => $lang->id,
+                        'post_id' => $source_id
+                    ))->get()->first();
             $target = PostLang::where(array(
-                'lang_id' => $lang->id,
-                'post_id' => $target_id
-            ))->get()->first();
+                        'lang_id' => $lang->id,
+                        'post_id' => $target_id
+                    ))->get()->first();
 
             if ($source && $target) {
                 $target->title = $source->title;
-                $target->uri = $source->uri;
+                $target->uri = PostLang::uniqURI($source->uri);
+                $target->save(); 
             } else {
                 throw new Exception("Undefined source or target on cloning: source#{$source_id}, target#{$target_id}");
-            } 
+            }
         }
     }
 

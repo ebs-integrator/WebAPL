@@ -2,6 +2,8 @@
 
 class Post extends Eloquent {
 
+    use EloquentTrait;
+    
     protected $table = 'apl_post';
     public static $ftable = 'apl_post'; // public table name
     public $timestamps = true;
