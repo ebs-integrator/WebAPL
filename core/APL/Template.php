@@ -57,6 +57,10 @@ class Template {
             'fileFolders' => array(
                 'name' => 'Dosare cu fisiere',
                 'function' => array('PageView', 'fileFolders')
+            ),
+            'acquisitionsList' => array(
+                'name' => 'Lista de achizitii',
+                'function' => array('PageView', 'acquisitionsList')
             )
         )
     );

@@ -107,9 +107,9 @@ class PageController extends BaseController {
                 $post_lang->text = $page_lang['text'];
                 $post_lang->enabled = isset($page_lang['enabled']) && $page_lang ? 1 : 0;
                 if ($page_lang['uri']) {
-                    $post_lang->uri = PostLang::uniqURI($page_lang['uri']);
+                    $post_lang->uri = PostLang::uniqURI($page_lang_id, $page_lang['uri']);
                 } else {
-                    $post_lang->uri = PostLang::uniqURI($page_lang['title']);
+                    $post_lang->uri = PostLang::uniqURI($page_lang_id, $page_lang['title']);
                 }
                 $post_lang->save();
             }
@@ -148,7 +148,7 @@ class PageController extends BaseController {
 
             if ($source && $target) {
                 $target->title = $source->title;
-                $target->uri = PostLang::uniqURI($source->uri);
+                $target->uri = PostLang::uniqURI($source_id, $source->uri);
                 $target->save(); 
             } else {
                 throw new Exception("Undefined source or target on cloning: source#{$source_id}, target#{$target_id}");

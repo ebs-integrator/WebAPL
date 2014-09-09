@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title><?=Core\APL\Template::getPageTitle();?></title>
+        <title><?= Core\APL\Template::getPageTitle(); ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -110,17 +110,22 @@
                 <div class="currency">
                     <span class="s_c">
                         <img src="<?= res('assets/img/line_dot.png'); ?>">
-                        <span>ro</span>
+                        <span><?=Core\APL\Language::ext();?></span>
                         <img src="<?= res('assets/img/line_dot.png'); ?>">
                     </span>
                     <div class="lang hidden">
                         <div class="relative">
                             <p></p>
                         </div>
-                        <p>Romană</p>
-                        <p>Rusă</p>
-                        <p>Engleza</p>
-                        <p>Bulgară</p>
+                        <?php
+                        foreach (Core\APL\Language::getList() as $lang) {
+                            if (Core\APL\Language::ext() != $lang->ext) {
+                                ?>
+                                <p><a href="<?= url('language/' . $lang->ext); ?>"><?= $lang->name; ?></a></p>
+                                <?php
+                            }
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
