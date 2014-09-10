@@ -131,13 +131,16 @@ jQuery(document).ready(function($) {
     ;
 
 
-    for (var i in CKEDITOR.instances) {
-        CKEDITOR.instances[i].on('blur', updateCkeditorElement);
-        CKEDITOR.instances[i].on('focus', lock_window);
-        CKEDITOR.instances[i].on('change', function(obj) {
-            obj.editor.updateElement();
-        });
-    }
+    setTimeout(function () {
+        for (var i in CKEDITOR.instances) {
+            CKEDITOR.instances[i].on('blur', updateCkeditorElement);
+            CKEDITOR.instances[i].on('focus', lock_window);
+            CKEDITOR.instances[i].on('change', function(obj) {
+                obj.editor.updateElement();
+            });
+        }
+    }, 1000);
+
 
 
 });

@@ -61,6 +61,10 @@ class Template {
             'acquisitionsList' => array(
                 'name' => 'Lista de achizitii',
                 'function' => array('PageView', 'acquisitionsList')
+            ),
+            'projectsList' => array(
+                'name' => 'Lista de proiecte',
+                'function' => array('PageView', 'projectsList')
             )
         )
     );

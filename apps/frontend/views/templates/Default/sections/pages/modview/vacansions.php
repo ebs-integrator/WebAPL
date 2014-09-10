@@ -28,5 +28,9 @@
 </ul>
 
 <div class="clearfix"></div>
-<?php echo $posts->links(); ?>
+<?php 
+if (method_exists($posts , 'links')) {
+    echo $posts->links(); 
+}
+?>
 <div class="clearfix"></div>

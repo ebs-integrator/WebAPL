@@ -26,10 +26,10 @@
 
     <div class="acz_details"><?= $post->text; ?></div>
 
-    <?php if ($post_files) { ?>
+    <?php if ($post->docs) { ?>
     <ul class="mda n_t">
-        <?php foreach ($post_files as $file) { ?>
-        <li class="word"><a href="<?=$file->path;?>"><span><?=$file->name;?></span></a></li>  
+        <?php foreach ($post->docs as $file) { ?>
+        <li class="<?=$file->extension;?>"><span><a href="<?=$file->path;?>"><?=$file->name;?></a></span></li>  
         <?php } ?>
     </ul>
     <?php } ?>
@@ -42,5 +42,5 @@
         <div class="clearfix"></div>
     </div>
     <div class="hr_grey"></div>
-    <div class="fb-comments" data-href="http://example.com/comments" data-width="785" data-numposts="2" data-colorscheme="light"></div>
+    <?=View::make('sections.elements.comments');?>
 </div>

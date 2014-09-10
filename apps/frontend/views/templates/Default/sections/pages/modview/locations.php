@@ -30,15 +30,8 @@
     <?php } ?>
 </ul>
 
-<div class='pag'>
-    <span class='w_p'>Pagina</span>
-    <span class='p_n'><a href='javascript:;'>Precedenta</a></span>
-    <ul>
-        <li><a href="javascript:;">1</a></li>
-        <li class='active'><a href="javascript:;">2</a></li>
-        <li><a href="javascript:;">3</a></li>
-        <li><a href="javascript:;">4</a></li>
-        <li><a href="javascript:;">5</a></li>
-    </ul>
-    <span class='n_p'><a href='javascript:;'>următoarea</a></span>
-</div>
+<?php 
+if (method_exists($feedPosts , 'links')) {
+    echo $feedPosts->links(); 
+}
+?>

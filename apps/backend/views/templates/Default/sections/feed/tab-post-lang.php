@@ -31,7 +31,7 @@
             <tr>
                 <th><?= $field->title; ?>: </th>
                 <td>
-                    <?= dinamic_field($field, isset($post_lang) ? $post_lang : array(), true, array('{name}' => "dinamic_lang[{$field->id}]", '{value}' => $field->value, '{class}' => 'form-control')); ?>
+                    <?= dinamic_field($field, isset($post_lang) ? $post_lang : array(), true, array('{name}' => "dinamic_lang[".(isset($post_lang->lang_id) ? $post_lang->lang_id : 0)."][{$field->id}]", '{value}' => $field->value, '{class}' => 'form-control')); ?>
                 </td>
             </tr>
         <?php } ?>
