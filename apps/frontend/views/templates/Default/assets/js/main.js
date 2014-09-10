@@ -9,11 +9,11 @@ $(document).ready(function() {
         minSlides: 2,
         maxSlides: 12,
         slideMargin: 10,
-        pager:false,
-        controls:true
+        pager: false,
+        controls: true
     });
 
-
+    $('.video').height($(window).height() - 244);
 
     $('.currency .s_c,.overlay2').click(function() {
         $('.overlay2').toggleClass('hidden');
@@ -46,7 +46,7 @@ $(document).ready(function() {
         $("ul.dcr  li.active").removeClass('active');
         if ($(this).parent().find('.dcr_box').hasClass('active')) {
             $("ul.dcr li .dcr_box.active").slideToggle();
-            $("ul.dcr li .dcr_box.active").removeClass('active');            
+            $("ul.dcr li .dcr_box.active").removeClass('active');
             $(this).find('span.more').removeClass('hidden');
         }
         else {

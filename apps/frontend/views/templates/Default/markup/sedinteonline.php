@@ -12,7 +12,9 @@
         <p class="c_title">Privește on-line ședințele consiliului </p>
 
         <div class='left'>                
-            
+            <div class="video">                
+                <img src="<?= res('assets/img/video.png'); ?>">
+            </div>
         </div>
 
         <div class='right'>

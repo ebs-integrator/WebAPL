@@ -2305,6 +2305,12 @@ textarea {
     ul > li.pdf{
         background:url('../img/pdf.png') no-repeat 3px center;
     }
+    ul > li.xls{
+        background:url('../img/icon.png') no-repeat 3px center;
+    }
+     ul > li.xlsx{
+        background:url('../img/icon.png') no-repeat 3px center;
+    }
     ul.mda{
         border-bottom: 2px solid #f7f7f7;
         border-top: 2px solid #f7f7f7;
@@ -3516,6 +3522,7 @@ textarea {
     table.plcu  table{
         width:100%;
         font:17px 'open_sanssemibold';
+        border: 0px;
     }
     table.plcu  table tr td{
         border:1px solid #ebebeb;
@@ -3541,7 +3548,7 @@ textarea {
         background:#fbfbfb;
         padding:10px 30px;
     }
-    table.plcu .word,table.plcu .doc,table.plcu .pdf,table.plcu .docx{
+    table.plcu .word,table.plcu .doc,table.plcu .pdf,table.plcu .docx,table.plcu .xls,table.plcu .xlsx{
         padding-left:40px;
         color:#4c4c4c;
         font:17px 'open_sansbold';
@@ -3751,6 +3758,8 @@ textarea {
     }
     .tda span,.ldmbox p.tda span{
         color:#7c4d7c;
+    }
+    .video{
     }
 }
 @media only screen and (max-width : 1500px) {
