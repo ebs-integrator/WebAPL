@@ -167,12 +167,36 @@ class Post extends Eloquent {
         }
     }
 
-    public static function postsFeed($feed_id, $with_cover = false, $get_instance = false) {
-        $feed = Feed::where('id', $feed_id)
-                ->where('enabled', 1)
-                ->get()
-                ->first();
+    public static function setFeedPagination($posts_instance, $feed_id) {
+        $feed = Feed::getFeed($feed_id);
 
+        if ($feed->limit_type == 'pagination') {
+            return $posts_instance->paginate($feed->limit_value);
+        } else {
+            return $posts_instance->get();
+        }
+    }
+
+    public static function withDinamicFields($post) {
+        $fields = FeedField::leftJoin(FeedFieldValue::getTableName(), FeedFieldValue::getField("feed_field_id"), "=", FeedField::getField("id"))
+                ->whereIn(FeedFieldValue::getField("lang_id"), array(0, \Core\APL\Language::getId()))
+                ->where(FeedFieldValue::getField("post_id"), $post->id)
+                ->select(FeedField::getField("fkey"), FeedFieldValue::getField("value"), FeedField::getField("get_filter"))
+                ->get();
+
+        foreach ($fields as $field) {
+            if ($field->get_filter && method_exists('DinamicFields', $field->get_filter)) {
+                $post[$field->fkey] = call_user_func(array('DinamicFields', $field->get_filter), $field, $post);
+            } else {
+                $post[$field->fkey] = $field->value;
+            }
+        }
+
+        return $post;
+    }
+
+    public static function postsFeed($feed_id, $with_cover = false, $get_instance = false) {
+        $feed = Feed::getFeed($feed_id);
         $posts = array();
 
         if ($feed) {
@@ -183,30 +207,27 @@ class Post extends Eloquent {
                     Post::columns() + array(FeedPost::getField("feed_id"))
             );
 
+
             if ($feed->order_type != 'none' && $feed->order_by != 'none') {
                 $posts = $posts->orderBy($feed->order_by, $feed->order_type);
+            }
+
+            if ($feed->limit_type == 'strictlimit') {
+                $posts = $posts->take($feed->limit_value);
             }
 
             if ($get_instance) {
                 return $posts;
             } else {
-                $posts = $posts->get();
+                if ($feed->limit_type == 'pagination') {
+                    $posts = $posts->paginate($feed->limit_value);
+                } else {
+                    $posts = $posts->get();
+                }
             }
 
             foreach ($posts as &$post) {
-                $fields = FeedField::leftJoin(FeedFieldValue::getTableName(), FeedFieldValue::getField("feed_field_id"), "=", FeedField::getField("id"))
-                        ->whereIn(FeedFieldValue::getField("lang_id"), array(0, \Core\APL\Language::getId()))
-                        ->where(FeedFieldValue::getField("post_id"), $post->id)
-                        ->select(FeedField::getField("fkey"), FeedFieldValue::getField("value"), FeedField::getField("get_filter"))
-                        ->get();
-
-                foreach ($fields as $field) {
-                    if ($field->get_filter && method_exists('DinamicFields', $field->get_filter)) {
-                        $post[$field->fkey] = call_user_func(array('DinamicFields', $field->get_filter), $field, $post);
-                    } else {
-                        $post[$field->fkey] = $field->value;
-                    }
-                }
+                $post = Post::withDinamicFields($post);
 
                 if ($with_cover) {
                     $post['cover'] = Post::coverImage($post->id);

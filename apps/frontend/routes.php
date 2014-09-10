@@ -30,6 +30,6 @@ Route::get('language/{ext}', function ($ext) {
 
 Route::get('markup', function () {
     return View::make('sections.show_page');
-});
+}); 
 Route::get('page/markup/{uri}', 'HomeController@page_markup')->where(array('uri' => '[A-Za-z0-9-]+'));
 Route::get('home/markup/{uri}', 'HomeController@home_markup')->where(array('uri' => '[A-Za-z0-9-]+'));

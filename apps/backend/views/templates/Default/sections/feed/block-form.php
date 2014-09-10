@@ -10,7 +10,7 @@
     <tr>
         <th>Limit type</th>
         <td>
-            <?= Form::select('general[limit_type]', array('0' => 'Pagination', '1' => 'Strict limit'), isset($feed->limit_type) ? $feed->limit_type : '', array('class' => 'form-control')); ?>
+            <?= Form::select('general[limit_type]', array('none' => 'none', 'pagination' => 'Pagination', 'strictlimit' => 'Strict limit'), isset($feed->limit_type) ? $feed->limit_type : '', array('class' => 'form-control')); ?>
         </td>
     </tr>
     <tr>

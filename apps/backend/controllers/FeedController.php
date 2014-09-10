@@ -240,7 +240,7 @@ class FeedController extends BaseController {
         }
 
         // update dinamic lang fields
-        $dinamic_lang_fields = Input::get('dinamic_lang');
+        $dinamic_lang_fields = Input::get("dinamic_lang.{$lang_id}");
         FeedFieldValue::where('post_id', $id)->where('lang_id', $lang_id)->delete();
         foreach ($dinamic_lang_fields as $field_id => $field_value) {
             $field = FeedField::find($field_id);

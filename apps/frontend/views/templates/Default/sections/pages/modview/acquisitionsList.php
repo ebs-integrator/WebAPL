@@ -8,3 +8,9 @@
     </li>
     <?php } ?>
 </ul>
+
+<?php 
+if (method_exists($posts , 'links')) {
+    echo $posts->links(); 
+}
+?>

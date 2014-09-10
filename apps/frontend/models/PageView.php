@@ -27,8 +27,8 @@ class PageView {
             }
 
             if ($wdata["post"]) {
-                $wdata["posts"] = Post::postsFeed($data['page']->feed_id, false, true)->where(Post::getField('id'), '<>', $wdata["post"]->id)->paginate(2);
-                //$wdata["pagination"] = $wdata["posts"]->links();
+                $posts_instance = Post::postsFeed($data['page']->feed_id, false, true)->where(Post::getField('id'), '<>', $wdata["post"]->id);
+                $wdata["posts"] = Post::setFeedPagination($posts_instance, $data['page']->feed_id);
                 $data["page"]->text .= View::make("sections.pages.modview.vacansions")->with($wdata);
             }
         }
@@ -42,16 +42,43 @@ class PageView {
             $wdata['page_url'] = $data['page_url'];
 
             if ($item) {
-                $wdata["post"] = Post::findURI($item, 1);
-                if ($wdata["post"]) {
-                    $wdata["post_files"] = Files::file_list('doc_post_lang', $wdata["post"]->post_lang_id);
+                $post = Post::findURI($item, 1);
+                if ($post) {
+                    $wdata['post'] = Post::withDinamicFields($post);
                     $data["page"]->text .= View::make("sections.pages.modview.acquisition")->with($wdata);
                 } else {
                     throw new Exception("Undefined article '{$item}'");
                 }
             } else {
-                $wdata["posts"] = Post::postsFeed($data['page']->feed_id, false, true)->paginate(2);
+                $wdata["posts"] = Post::postsFeed($data['page']->feed_id, false);
                 $data["page"]->text .= View::make("sections.pages.modview.acquisitionsList")->with($wdata);
+            }
+        }
+        return static::defaultView($data);
+    }
+    
+    public static function pollList($data) {
+        
+    }
+
+    public static function projectsList($data) {
+        if ($data['page']->feed_id) {
+            Post::$taxonomy = 2;
+            $item = Input::get('item');
+            $wdata['page_url'] = $data['page_url'];
+
+            if ($item) {
+                $post = Post::findURI($item, 1);
+                if ($post) {
+                    $wdata["post"] = Post::withDinamicFields($post);
+                    $wdata["post_files"] = Files::file_list('doc_post_lang', $wdata["post"]->post_lang_id);
+                    $data["page"]->text .= View::make("sections.pages.modview.project")->with($wdata);
+                } else {
+                    throw new Exception("Undefined article '{$item}'");
+                }
+            } else {
+                $wdata["posts"] = Post::postsFeed($data['page']->feed_id, false);
+                $data["page"]->text .= View::make("sections.pages.modview.projectsList")->with($wdata);
             }
         }
         return static::defaultView($data);
