@@ -10,7 +10,8 @@ class PageController extends BaseController {
             $uri = end($parts);
             $this->data['page'] = Post::findURI($uri);
             if ($this->data['page']) {
-
+                PostResources::init();
+                
                 // Verify if page is redirectable
                 if ($this->data['page']->redirect_to) {
                     $redirect_url = Post::getFullURI($this->data['page']->redirect_to);
