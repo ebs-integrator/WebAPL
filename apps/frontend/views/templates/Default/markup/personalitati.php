@@ -17,6 +17,7 @@
                     <p class='name'>Nume</p>
                     <p class="name">Prenume</p>
                     <p class='function'>Functia</p>
+                    <p class="descr">A fost domn al Moldovei între 22 noiembrie 1615 - 2 august 1616. Este al doilea fiu al lui Ieremia Movilă și a fost ridicat pe tron cu ajutor polonez.</p>
                 </div>
             </div>
             <div class='personal'>
@@ -25,6 +26,8 @@
                     <p class='name'>Nume</p>
                     <p class="name">Prenume</p>
                     <p class='function'>Functia</p>
+                    <p class="descr">A fost domn al Moldovei între 22 noiembrie 1615 - 2 august 1616. Este al doilea fiu al lui Ieremia Movilă și a fost ridicat pe tron cu ajutor polonez.</p>
+                
                 </div>
             </div>
             <div class='personal'>
@@ -33,6 +36,8 @@
                     <p class='name'>Nume</p>
                     <p class="name">Prenume</p>
                     <p class='function'>Functia</p>
+                    <p class="descr">A fost domn al Moldovei între 22 noiembrie 1615 - 2 august 1616. Este al doilea fiu al lui Ieremia Movilă și a fost ridicat pe tron cu ajutor polonez.</p>
+                
                 </div>
             </div>
             <div class='personal'>
@@ -41,6 +46,8 @@
                     <p class='name'>Nume</p>
                     <p class="name">Prenume</p>
                     <p class='function'>Functia</p>
+                    <p class="descr">A fost domn al Moldovei între 22 noiembrie 1615 - 2 august 1616. Este al doilea fiu al lui Ieremia Movilă și a fost ridicat pe tron cu ajutor polonez.</p>
+                
                 </div>
             </div><div class='personal'>
                 <div class='img'><img src='<?=res("assets/img/pers.png");?>'></div>
@@ -48,6 +55,8 @@
                     <p class='name'>Nume</p>
                     <p class="name">Prenume</p>
                     <p class='function'>Functia</p>
+                    <p class="descr">A fost domn al Moldovei între 22 noiembrie 1615 - 2 august 1616. Este al doilea fiu al lui Ieremia Movilă și a fost ridicat pe tron cu ajutor polonez.</p>
+                
                 </div>
             </div>
             <div class='personal'>
@@ -56,6 +65,8 @@
                     <p class='name'>Nume</p>
                     <p class="name">Prenume</p>
                     <p class='function'>Functia</p>
+                    <p class="descr">A fost domn al Moldovei între 22 noiembrie 1615 - 2 august 1616. Este al doilea fiu al lui Ieremia Movilă și a fost ridicat pe tron cu ajutor polonez.</p>
+                
                 </div>
             </div>
             <div class='personal'>
@@ -64,6 +75,8 @@
                     <p class='name'>Nume</p>
                     <p class="name">Prenume</p>
                     <p class='function'>Functia</p>
+                    <p class="descr">A fost domn al Moldovei între 22 noiembrie 1615 - 2 august 1616. Este al doilea fiu al lui Ieremia Movilă și a fost ridicat pe tron cu ajutor polonez.</p>
+                
                 </div>
             </div>
             <div class='personal'>
@@ -72,6 +85,8 @@
                     <p class='name'>Nume</p>
                     <p class="name">Prenume</p>
                     <p class='function'>Functia</p>
+                    <p class="descr">A fost domn al Moldovei între 22 noiembrie 1615 - 2 august 1616. Este al doilea fiu al lui Ieremia Movilă și a fost ridicat pe tron cu ajutor polonez.</p>
+                
                 </div>
             </div>
             <div class="clearfix"></div>

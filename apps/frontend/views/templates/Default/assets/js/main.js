@@ -12,7 +12,6 @@ $(document).ready(function() {
     });
 
     $('.video').css('min-height', ($(window).height() - 510));
-    console.log($(window).height());
     $('.currency .s_c,.overlay2').click(function() {
         $('.overlay2').toggleClass('hidden');
         $('.currency .lang').toggleClass('hidden');
@@ -40,7 +39,7 @@ $(document).ready(function() {
         }
     });
 
-    $("ul.dcr li a").click(function() {
+    $("ul.dcr > li > a").click(function() {
         $("ul.dcr  li.active").removeClass('active');
         if ($(this).parent().find('.dcr_box').hasClass('active')) {
             $("ul.dcr li .dcr_box.active").slideToggle();

@@ -507,6 +507,7 @@ textarea {
         text-transform: uppercase;
         font:17px 'open_sanssemibold';
         color:#7c4d7c;
+        margin-bottom: 0px;
     }
 
     header .contact .cont .cont_form .d_hr{
@@ -519,11 +520,21 @@ textarea {
     header .contact .cont .cont_form ul li{
         width:220px;
         float:left;
-        border-left:3px solid #7c4d7c;
         border-bottom: 1px solid #f3f3f3;
         line-height: 1.533;
         padding-left:18px;
         margin-bottom:28px;
+        border-left:0px;
+        position:relative;
+    }
+    header .contact .cont .cont_form ul li:before{
+        content: '';
+        position: absolute;
+        display: block;
+        left: -1px;
+        top: -2px;
+        bottom: -1px;        
+        border-left:3px solid #7c4d7c;
     }
     header .contact .cont .cont_form ul{
         margin-bottom:9px;
@@ -621,12 +632,23 @@ textarea {
         margin-right:12px;
     }
     header .contact .cont .cont_form .c_info{
-        border-left: 3px solid #7c4d7c;
+        border-left: 0;
         border-bottom: 1px solid #f3f3f3;
         width:280px;
         padding-bottom: 10px;
         padding-left:18px;
         margin-top:20px;
+        height: 117px;
+        position:relative;
+    }
+    header .contact .cont .cont_form .c_info:before{
+        content: '';
+        position: absolute;
+        display: block;
+        left: -1px;
+        top: -2px;
+        bottom: -1px;
+        border-left: 3px solid #7c4d7c;
     }
     header .contact .cont .cont_form  .map{
         margin-left:10px;
@@ -639,7 +661,7 @@ textarea {
         font:15px 'open_sansbold';
         line-height: 1.533;
         margin-bottom:22px;
-        margin-bottom:0px;
+        padding-right:20px;
     }
     header .contact .cont .cont_form .c_info .street{
         line-height: 1.533;
@@ -1407,6 +1429,7 @@ textarea {
         font:17px 'open_sanssemibold';
         color:#4b4b4b;
         margin-top:30px;
+        margin-bottom:10px;
     }
     .city_box{
         height:115px;
@@ -2841,6 +2864,29 @@ textarea {
         width:59%;
         display: inline-block;
     }
+    .city_dt{
+        margin-bottom:25px;
+        border-bottom:1px solid #ececec;
+        padding:5px 0px;
+    }
+    .city_dt p{
+        color:#484848;
+        margin-bottom: 0px;
+    }
+    .city_dt p:first-child{
+        font:15px 'open_sansbold';
+    }
+    .city_dt p:last-child{
+        font:15px 'open_sanssemibold';
+    }
+    p.descr{
+        max-width: 230px;
+        max-height:110px;
+        font:14px 'open_sansregular';
+        color:#4b4b4b;
+        overflow:hidden;
+        margin-bottom:0px;
+    }
     ul.dcr  > li .dcr_box:after{
         content:'';
         display: block;                                                              
@@ -4023,6 +4069,45 @@ textarea {
         color:#4b4b4b;
         max-height:98px;
         overflow:hidden;
+    }
+    .m_video > p{
+        color:#000;
+        font:24px 'open_sanssemibold';
+    }
+    .m_video{
+        margin-top:65px;
+    }
+    .m_video > div{
+        width:348px;
+        height:340px;
+        float:left;
+    }
+    .m_video > div:nth-child(2n){
+        margin-right:85px;
+    }
+    .video_d{
+        height:21px;
+        background:#4c4c4c;
+        color:#fff;
+        font:12px 'open_sanssemibold';
+    }
+    .video_d span{
+        display:inline-block;
+        padding:0 7px;
+        height:21px;
+        line-height:21px;
+        background:#000;
+    }
+    .video_d span:after{
+        content: url('../img/black_arrow.png');
+        margin-right:-15px;
+        float: right;
+        margin-top: -21px;
+    }
+    .video_i {
+        font:17px 'open_sansbold';
+        color:#7c4d7c;
+        padding-right:20px;
     }
 }
 @media only screen and (max-width : 1500px) {
