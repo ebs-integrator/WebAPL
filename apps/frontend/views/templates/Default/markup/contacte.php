@@ -32,50 +32,48 @@
                     <img src="<?= res('assets/img/phone_book.png'); ?>">
                     <a href="urgenta.php">Toate numerele de telefon</a>
                 </div>
-                <div class="prp">
-                    <img src="<?= res('assets/img/notebook.png'); ?>">
-                    <a href="javascript:;">Orarul rutelor</a>
-                </div>
+
+            </div>
+            <div class="chat"> 
+                <form action="" method="">
+                    <img src="<?= res('assets/img/chat_man.png'); ?>" class="mn">
+                    <span class="chat_dot"></span>
+                    <span class="green">Chat-</span><span class="violet">online</span>
+                    <hr>
+                    <p class="center">Vorbeste direct cu un reprezentant al primariei</p>
+                    <div class="cont">
+                        <label>Functionar *</label>
+                        <select>
+                            <option>ghjghjghj</option>
+                            <option>ghjghjghjgh</option>
+                            <option>ghjghjghjgh</option>
+                            <option>ghjghjgh</option>
+                        </select>
+                        <label>Numele Prenumele * </label>
+                        <input type="text" >
+                        <label>Email*</label>
+                        <input type="text" >    
+                        <label>Cod de verificare*</label>
+                        <input class="code" type="text">
+                        <img src="<?= res('assets/img/code.png'); ?>">
+                        <input type="submit" value="trimite"/>
+                    </div>
+                </form>
             </div>
         </div>
-        <div class='right'>
-            <div class='contact_r'>
-                <p class='subt'>Adresa</p>
-                <div id="map-canvas2" style="width:820px; height:307px;"></div>
-                <div class="map_info">
-                    <p>Orașul Strășeni</p>
-                    <p>Strada Ștefan cel Mare 24, MD 2034</p>
-                </div>
+        <div class='left contact_r'>
+            <p class='subt'>Adresa</p>
+            <div id="map-canvas2" style="width:450px; height:450px;"></div>
+            <div class="prp">
+                <img src="<?= res('assets/img/notebook.png'); ?>">
+                <a href="javascript:;">Orarul rutelor de autobus</a>
+            </div>
+            <div class="map_info">
+                <p>Adresa primărie Orașului Strășeni</p>
+                <p>Sreda Ștefan cel Mare 24, MD 2034 <span>Orașul Strășeni</span></p>
             </div>
         </div>
-        <div class="clearfix"></div>
-        <div class='left chat'>
-            <form action="" method="">
-                <img src="<?= res('assets/img/chat_man.png'); ?>" class="mn">
-                <span class="chat_dot"></span>
-                <span class="green">Chat-</span><span class="violet">online</span>
-                <hr>
-                <p class="center">Vorbeste direct cu un reprezentant al primariei</p>
-                <div class="cont">
-                    <label>Functionar *</label>
-                    <select>
-                        <option>ghjghjghj</option>
-                        <option>ghjghjghjgh</option>
-                        <option>ghjghjghjgh</option>
-                        <option>ghjghjgh</option>
-                    </select>
-                    <label>Numele Prenumele * </label>
-                    <input type="text" >
-                    <label>Email*</label>
-                    <input type="text" >    
-                    <label>Cod de verificare*</label>
-                    <input class="code" type="text">
-                    <img src="<?= res('assets/img/code.png'); ?>">
-                    <input type="submit" value="trimite"/>
-                </div>
-            </form>
-        </div>
-        <div class='right form contact'>
+        <div class='left form contact'>
             <form action="" method="">
                 <p class="ftb">Scrieți-ne direct</p>
 
@@ -106,7 +104,7 @@
                 </div>
             </form>
         </div>
-        <div class='clearfix10'></div>
+        <div class='clearfix140'></div>
         <div class='socials'>
             <div id="vk_like"></div>
             <div id="ok_shareWidget"></div>

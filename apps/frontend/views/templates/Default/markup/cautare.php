@@ -23,17 +23,61 @@
                     </select>
                 </div>
                 <div class="clearfix"></div>
-                
+
                 <ul class="search_li">
                     <li>
                         <a href="javascript:;">
-                            <div class="search_img"><img src="<?=res('assets/img/edu2.png');?>"></div>
+                            <div class="search_img"><img src="<?= res('assets/img/edu2.png'); ?>"></div>
+                            <p>
+                                <span>Democrații vor face un anunț la ora 18:00 - Unimedia</span>
+                                2 Iul 2014 ... Democrații vor face un anunț la ora 18:00. Foto: privesc.eu. Biroul Permanent extins al PDM se întrunește astăzi, la orele 17.00. 
+                            </p>
+                            <div class="more"></div>
                         </a>
                     </li>
-                    <li></li>
+                    <li>
+                        <a href="javascript:;">
+                            <div class="search_img"><img src="<?= res('assets/img/edu3.png'); ?>"></div>
+                            <p>
+                                <span>ANUNŢ pentru presă</span>
+                                ANUNŢ pentru presă. Нравится. Mâine, 25 septembrie, la sediul central al PDM din strada Tighina, cu începere de la ora 12:00 va fi inaugurat Departamentul
+                            </p>
+                            <div class="more"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">                            
+                            <p>
+                                <span>Poliţia a arestat maşina primarului Chişinăului, care transporta cadouri pentru elevii gimnaziului internat din Străşeni</span>
+                                Maşina primarului Dorin Chirtoacă, care urma să ducă daruri pentru elevii gimnaziului internat din Străşeni,
+                                a fost reţinută astăzi, 23 decembrie, de angajaţii Ministerului Afacerilor Interne, fără a oferi explicaţii referitor la acest caz. Pe agenda ...
+                            </p>
+                            <div class="more"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">                            
+                            <p>
+                                <span>Contrabandă cu arme şi muniţii. Destinația finală: Germania</span>
+                                Pe parcursul ultimelor două luni, oamenii legii au documentat activitatea unei grupări specializate în procurarea, păstrarea şi comercializarea ilegală a muniţiilor şi a armelor de foc, informează serviciul de presă 
+
+                            </p>
+                            <div class="more"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div class="search_img"><img src="<?= res('assets/img/edu.png'); ?>"></div>
+                            <p>
+                                <span>Efectul vizitei lui Merkel: „Leoni” ar putea investi în R. Moldova</span>
+                                ANUNŢ pentru presă. Нравится. Mâine, 25 septembrie, la sediul central al PDM
+                            </p>
+                            <div class="more"></div>
+                        </a>
+                    </li>
                 </ul>
             </div>
-            <div class="clearfix"></div>
+            <div class="clearfix50"></div>
             <div class="pag">
                 <span class="w_p">Pagina</span>
                 <span class="p_n"><a href="javascript:;">Precedenta</a></span>
@@ -66,7 +110,7 @@
 
 
         </div>
-        <div class='clearfix'></div>
+        <div class='clearfix50'></div>
         <div class='socials'>
             <div id="vk_like"></div>
             <div id="ok_shareWidget"></div>

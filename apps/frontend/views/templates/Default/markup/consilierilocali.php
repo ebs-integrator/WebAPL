@@ -48,17 +48,17 @@
                                 <div class='dcr_box'>
                                     <ul>
                                         <li class="word">
-                                            <span>Ionele Aurelia.pdf </span>
+                                            <span><a href="javascript:;">Ionele Aurelia.pdf</a> </span>
 
                                             <a href="javascript:;" class="dcr_dwnl"></a>
                                         </li>
                                         <li class="pdf">
-                                            <span>Magerusan Onita.doc </span>
+                                            <span><a href="javascript:;">Magerusan Onita.doc</a> </span>
 
                                             <a href="javascript:;" class="dcr_dwnl"></a>
                                         </li>
                                         <li class="word">
-                                            <span>Malaicu Sabina.pdf	</span>
+                                            <span><a href="javascript:;">Malaicu Sabina.pdf</a>	</span>
 
                                             <a href="javascript:;" class="dcr_dwnl"></a>
                                         </li>
@@ -99,17 +99,17 @@
                                 <div class='dcr_box'>
                                     <ul>
                                         <li class="word">
-                                            <span>Ionele Aurelia.pdf </span>
+                                            <span><a href="javascript:;">Ionele Aurelia.pdf</a> </span>
 
                                             <a href="javascript:;" class="dcr_dwnl"></a>
                                         </li>
                                         <li class="pdf">
-                                            <span>Magerusan Onita.doc </span>
+                                            <span><a href="javascript:;">Magerusan Onita.doc</a> </span>
 
                                             <a href="javascript:;" class="dcr_dwnl"></a>
                                         </li>
                                         <li class="word">
-                                            <span>Malaicu Sabina.pdf	</span>
+                                            <span><a href="javascript:;">Malaicu Sabina.pdf</a>	</span>
 
                                             <a href="javascript:;" class="dcr_dwnl"></a>
                                         </li>
@@ -150,17 +150,17 @@
                                 <div class='dcr_box'>
                                     <ul>
                                         <li class="word">
-                                            <span>Ionele Aurelia.pdf </span>
+                                            <span><a href="javascript:;">Ionele Aurelia.pdf</a> </span>
 
                                             <a href="javascript:;" class="dcr_dwnl"></a>
                                         </li>
                                         <li class="pdf">
-                                            <span>Magerusan Onita.doc </span>
+                                            <span><a href="javascript:;">Magerusan Onita.doc</a> </span>
 
                                             <a href="javascript:;" class="dcr_dwnl"></a>
                                         </li>
                                         <li class="word">
-                                            <span>Malaicu Sabina.pdf	</span>
+                                            <span><a href="javascript:;">Malaicu Sabina.pdf</a>	</span>
 
                                             <a href="javascript:;" class="dcr_dwnl"></a>
                                         </li>

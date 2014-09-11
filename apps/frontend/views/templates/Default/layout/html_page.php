@@ -100,12 +100,12 @@
                         </div>
                         <div class="prp">
                             <img src="<?=res('assets/img/notebook.png');?>">
-                            <a href="javascript:;">Orarul rutelor</a>
+                            <a href="javascript:;">Orarul rutelor de autobus</a>
                         </div>
                         <div class="left c_info">
-                            <p class="city">Orașul Strășeni</p>
+                            <p class="city">Adresa primărie Orașului Strășeni</p>
                             <p class="street">Strada Ștefan cel Mare 24, MD 2034</p>
-                            <p class="street">Orașul Strășeni</p>
+                            <p class="street2">Orașul Strășeni</p>
                         </div>
                         <div class="left map">
                             <div id="map-canvas" style="width:158px; height:119px;"/>

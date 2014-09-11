@@ -439,6 +439,7 @@ textarea {
         background:url('../img/g_dot.png');
         margin-left: 10px;
         vertical-align: middle;
+        margin-top: -1px;
     }
     button.vice_button span.g_dot{
         margin-left:20px;
@@ -455,11 +456,13 @@ textarea {
     header button.chat span.g_dot.active,button.chat_button span.g_dot.active,button.vice_button span.g_dot.active{
         background:url('../img/a_dot.png');
     }
-    header button.chat .green ,button.chat_button .green,button.vice_button .green{
+    header .left button.chat .green ,button.chat_button .green,button.vice_button .green{
         color:#b5c57e;
+        font:20px 'open_sansbold';
     }
-    header button.chat .violet ,button.chat_button .violet,button.vice_button .violet{
-        color:#7c4d7c;
+    header .left button.chat .violet ,button.chat_button .violet,button.vice_button .violet{
+        color:#7c4d7c;        
+        font:20px 'open_sansbold';
     }
     header .contact .tel{
         float:left;
@@ -622,7 +625,7 @@ textarea {
         border-bottom: 1px solid #f3f3f3;
         width:280px;
         padding-bottom: 10px;
-        padding-left:20px;
+        padding-left:18px;
         margin-top:20px;
     }
     header .contact .cont .cont_form  .map{
@@ -642,6 +645,12 @@ textarea {
         line-height: 1.533;
         color:#484848;
         font:15px 'open_sanssemibold';
+        margin-bottom:0px;
+    }
+    header .contact .cont .cont_form .c_info .street2{
+        line-height: 1.533;
+        color:#484848;
+        font:15px 'open_sansregular';
         margin-bottom:0px;
     }
     .gmnoprint {
@@ -877,7 +886,7 @@ textarea {
         border-left:0px;
     }
     .right > article:before{        
-        border-left:3px solid #cfd7a6;
+        border-left:3px solid #6b6b6b;
         content:'';
         position:absolute;
         display:block;
@@ -972,24 +981,52 @@ textarea {
         background: none;
         padding:0px;
     }
-    .right > article.doc table tr td{
-        padding:17px 0;
+    .right article.doc table{
+        width:100%;
+        max-height:134px;
     }
-    .right > article.doc table tr td:first-child{
-        width:106px;
-        vertical-align: top;
-        font:14px 'open_sanssemibold';
-        color:#2b2b2b;
+    .m_criteria{
+        font: 17px 'open_sansbold';
+        background: #fbfbfb;
+        text-align: center;
+        border: 1px solid #a5d293;
+        padding: 15px;
+        height:54px;
+        margin-bottom:55px;
     }
-    .right > article.doc table tr:last-child{
-        border:none;
+    .m_criteria .left{
+        background:url('../img/clndr_prev.png');
+        width:12px;
+        height:20px;
     }
-    .right > article.doc table tr td:last-child{
-        color:#000000;
-        font:14px 'open_sansbold';
+    .m_criteria .right{
+        background:url('../img/clndr_next.png');
+        width:12px;
+        height:20px;
     }
-    .right > article.doc table tr{
-        border-bottom:2px solid #e7e7e7;
+    .right article.doc table thead tr td{
+        background:#fff;
+        border:1px solid #a5d292;
+        border-bottom:2px solid #a5d292;
+        text-transform: uppercase;
+        font:15px 'open_sanssemibold';
+        color:#74b45a;
+        height:50px;
+        padding:0 18px;
+    }
+    .right article.doc table thead tr td:first-child{
+        width:65px;
+        text-align:center;
+    }
+    .right article.doc table tbody tr td{
+        border:1px solid #e3e3e3;
+        border-top:0px;
+        font:15px 'open_sanssemibold';
+        color:#4c4c4c;
+        padding:20px 12px;
+    }
+    .right article.doc table tbody tr td:first-child{
+        text-align:center;
     }
     .left > article ul li a, .right article ul li a{
         text-decoration: none;
@@ -1004,11 +1041,19 @@ textarea {
         bottom: 8px;
         right: 20px;
     }
-    span.more{        
+    span.more,div.more{        
         width: 30px;
         height: 30px;
         background: url('../img/more.png')no-repeat center;
         float:right;
+    }
+    div.more{     
+        width: 30px;
+        background: url('../img/more.png')no-repeat center;
+        height: 5px;
+        position: absolute;
+        right: 0px;
+        bottom: 5px;
     }
     .right > article .hr{
         height:3px;
@@ -1121,7 +1166,8 @@ textarea {
     }
     section > .wrap .right .doc{
         width:383px;
-        height:389px;
+        height:229px;
+        padding-top: 16px;
         background:#fcfcfc;
     }
     .bx-wrapper .bx-prev {
@@ -1402,9 +1448,9 @@ textarea {
     .contact _l{
         width:360px;
     }
-    .contact_r{
-        max-width:828px;
-        width:80%;
+    section > .wrap >  .left.contact_r{
+        width:450px;
+        margin-right:55px;
     }
     .contact_l .subt,.contact_r .subt{
         font:24px 'open_sansbold';
@@ -1460,42 +1506,33 @@ textarea {
         color:#484848;
         clear:both;
     }
-    .contact_l .prp {
+    .prp {
         width: 100%;
         border: 2px solid #dad6e2;
         height: 44px;
         margin-top: 6px;
         padding: 0px 19px;
+        text-transform: uppercase;
     }
-    .contact_l .prp a {
+    .prp a {
         font: 15px 'open_sansbold';
         line-height: 40px;
         color: #8e7fab;
         padding-left :12px;
     }
-    .contact_r .map_info {
-        display: inline-block;
-        padding-right: 12px;
-        border-bottom: 1px solid #f3f3f3;
-        height: 46px;
-        padding-left: 18px;
-        margin-top:10px;
-        line-height: 1.533;
-        position: relative;
-    }
-
-    .contact_r .map_info:before{
-        content:'';
-        position:absolute;
-        display:block;
-        left:-1px;
-        top:-1px;
-        bottom:-1px;
-        border-left: 3px solid #7c4d7c;
+    .contact_r .prp{
+        width:auto;
+        display:inline-block;
+        padding:0px 60px 0px 19px;
+        margin:30px 0;
     }
     .contact_r .map_info p{
-        margin-bottom:0px;
+        margin-bottom:18px;
     }
+    .contact_r .map_info{
+        border-bottom:1px solid #ececec;
+    }
+
     .contact_r .map_info p:first-child{
         color:#484848;
         font:15px 'open_sansbold';
@@ -1504,17 +1541,21 @@ textarea {
         color:#484848;
         font:15px 'open_sanssemibold';
     }
-    .wrap .left.chat {
+    .contact_r .map_info p span{
+        font:15px 'open_sansregular';
+        display:block;
+    }
+    .wrap .left .chat {
         height:540px;
         width:360px;
-        margin-top:65px;
+        margin-top:50px;
         border:2px solid #e6e6e6;
         padding:13px 16px 27px;
     }
-    .left.chat img.mn{
+    .left .chat img.mn{
         float:left;
     }
-    .left.chat .chat_dot{
+    .left .chat .chat_dot{
         width:18px;
         height:61px;
         display: block;
@@ -1522,28 +1563,28 @@ textarea {
         background:url('../img/chat_dot.png') no-repeat center;
         margin-left:4px;
     }
-    .left.chat .chat_dot.active{
+    .left .chat .chat_dot.active{
         background:url('../img/chat_dot_active.png') no-repeat center;
     }
-    .left.chat .green{
+    .left .chat .green{
         font:33px 'open_sansbold';
         color:#b5c57e;
         line-height: 61px;
         margin-left:10px;
     }
-    .left.chat .violet{
+    .left .chat .violet{
         font:33px 'open_sansbold';
         color:#7c4d7c;
         line-height: 61px;
     }
-    .left.chat hr{
+    .left .chat hr{
         background: #e6e6e6;
         height:3px;
         width:100%;
         border-top:0px;
         margin:8px 0 10px 0;
     }
-    .left.chat .center{
+    .left .chat .center{
         color:#7a7a7a;
         font:13px 'open_sanssemibold_italic';
         text-align:center;
@@ -1551,7 +1592,7 @@ textarea {
         border-bottom: 1px solid #e6e6e6;
         margin-bottom:25px;
     }
-    .left.chat textarea{
+    .left .chat textarea{
         width:100%;
         height:100px;
         border: 1px solid #d9d9d9;
@@ -1560,7 +1601,7 @@ textarea {
         font:13px 'open_sanssemibold_italic';
         color:#959595;
     }
-    .left.chat input[type="submit"]{
+    .left .chat input[type="submit"]{
         width:280px;
         height:35px;
         background-color:#7c4d7c;
@@ -1570,17 +1611,26 @@ textarea {
         color:#fff;
         text-transform: uppercase;
     }
-    .left.chat .cont{
+    .left .chat .cont{
         margin:0 auto;
         width:280px;
     }
-    .contact.right.form{
+    .contact.left.form{
         border-bottom:1px solid #e6e6e6;
-        margin-top:65px;
         position: relative;
-        width: 820px;
+        margin-top: 0;
+        width: 360px;
     }
-    .contact.right.form:before{
+    .contact.left.form .ftb{
+        width:100%;
+        color:#000;
+        margin-bottom:30px;
+    }
+    .contact.left.form form{
+        padding:0px 0px 30px 30px;
+        position: relative;
+    }
+    .contact.left.form:before{
         content:'';
         position:absolute;
         display:block;
@@ -1628,6 +1678,7 @@ textarea {
     }
     .wrap .left.ccc{
         width:360px;
+        margin-right:55px;
     }
     .content input[type=text],.chat input[type=text]{
         margin-bottom:20px;
@@ -1654,7 +1705,7 @@ textarea {
         width:100%;
     }
     .wrap .form .apt{
-        width:520px;
+        width:100%;
     }
     .compl.form .content .left input[type=text],.compl.form .content .right input[type=text]{
         margin-bottom:27px;
@@ -1722,7 +1773,7 @@ textarea {
     }
     .green input[type=text].code{
         height:30px;
-        max-width: 135px;
+        max-width: 85px;
         border:1px solid #d9d9d9;
         margin-right:12px;
     }
@@ -2774,7 +2825,7 @@ textarea {
     ul.dcr  > li .dcr_box .ul_title{
         margin-bottom:15px;
     }
-    ul.dcr  > li .dcr_box span{        
+    ul.dcr  > li .dcr_box span,ul.dcr > li .dcr_box span a{        
         font:14px 'open_sansbold';
         color:#000;
         line-height: 33px;  
@@ -3948,15 +3999,30 @@ textarea {
         height:160px;
         border-bottom:2px solid #efefef;
         padding-top:40px;
+        position:relative;
     }
     .search_img{
         width:130px;
         height:90px;
-        margin-left:18px;
+        margin-right:18px;
+        float:left;
     }
     .search_img *{
         max-width:130px;
         max-height:90px;
+    }
+    .search_li li p span{
+        display:block;
+        color:#7c4d7c;
+        font:24px 'open_sanssemibold';
+        margin:-8px 0 20px;
+        padding-right: 20px;
+    }
+    .search_li li p{
+        font:17px 'open_sansregular';
+        color:#4b4b4b;
+        max-height:98px;
+        overflow:hidden;
     }
 }
 @media only screen and (max-width : 1500px) {
