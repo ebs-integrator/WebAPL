@@ -50,7 +50,10 @@ class Actions {
 
             foreach ($actions as $action) {
                 foreach ($action as $function) {
-                    call_user_func_array($function, $arguments);
+                    $output = call_user_func_array($function, $arguments);
+                    if ($output) {
+                        echo $output;
+                    }
                 }
             }
         }

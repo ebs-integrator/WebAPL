@@ -1,7 +1,7 @@
 <?php
 
 /**
- * 
+ *
  *
  * @author     Victor Vlas <victor.vlas@ebs.md>
  * @copyright  2014 Enterprise Business Solutions SRL
@@ -17,6 +17,9 @@ use Core\APL\Actions,
     PollAnswerModel,
     PollQuestionModel,
     Language,
+    PageView,
+    Validator,
+    SimpleCapcha,
     Redirect;
 
 class Poll extends \Core\APL\ExtensionController {
@@ -28,6 +31,116 @@ class Poll extends \Core\APL\ExtensionController {
         parent::__construct();
 
         $this->loadClass(array('PollModel'));
+
+        Template::registerViewMethod('page', 'pollList', 'Lista de sondaje', array($this, 'pollList'), true);
+        Actions::post('poll/register', array($this, 'pollRegister'));
+
+        \Core\APL\Shortcodes::register('poll', array($this, 'pollShortcode'));
+    }
+
+    public function pollList($data) {
+        $wdata['page_url'] = $data['page_url'];
+
+        $item = intval(Input::get('item'));
+        if ($item) {
+            $wdata['poll'] = PollModel::getByID($item);
+            if (!$wdata['poll']) {
+                throw new Exception("Poll not found #{$item}");
+            }
+        } else {
+            $wdata['poll'] = PollModel::getLast();
+            if (!$wdata['poll']) {
+                throw new Exception("Polls not found");
+            }
+        }
+
+        $wdata['voted'] = PollModel::ivoted($wdata['poll']->id);
+
+        if ($wdata['voted']) {
+            $wdata['poll'] = PollModel::getWithVotes($wdata['poll']->id);
+        }
+
+        $wdata['polls'] = PollModel::getList($wdata['poll']->id);
+
+        $data['page']->text .= Template::moduleView($this->module_name, 'views.pollList', $wdata);
+
+        return PageView::defaultView($data);
+    }
+
+    public function pollRegister() {
+        $id = Input::get('id');
+        $answer_id = Input::get('poll_answer');
+        $capcha = Input::get('capcha');
+
+        $validator = Validator::make(array(
+                    'id' => $id,
+                    'poll_answer' => $answer_id,
+                    'capcha' => SimpleCapcha::valid('poll', $capcha) ? 1 : null
+                        ), array(
+                    'id' => 'required',
+                    'poll_answer' => 'required',
+                    'capcha' => 'required'
+        ));
+
+        $return = array(
+            'message' => '',
+            'error' => 0,
+            'html' => ''
+        );
+
+        if ($validator->fails()) {
+            $return['message'] = implode(' ', $validator->messages()->all('<p>:message</p>'));
+            $return['error'] = 1;
+        } else {
+
+            $wdata = array(
+                'poll' => PollModel::getWithVotes($id),
+                'answer' => PollAnswerModel::join(PollQuestionModel::getTableName(), PollQuestionModel::getField('id'), '=', PollAnswerModel::getField('poll_question_id'))
+                        ->where(PollQuestionModel::getField('poll_id'), $id)
+                        ->first(),
+                'total_votes' => \PollVotesModel::where('poll_id', $id)->count()
+            );
+
+            if ($wdata['poll'] && $wdata['answer']) {
+                if (!PollModel::ivoted($id)) {
+                    SimpleCapcha::destroy('person_subscribe');
+
+                    $vote = new \PollVotesModel;
+                    $vote->poll_id = $wdata['poll']->id;
+                    $vote->answer_id = $answer_id;
+                    $vote->ip = \Request::getClientIp();
+                    $vote->save();
+
+                    \Cookie::queue('voted_id_' . $wdata['poll']->id, '1', 3600);
+
+                    $return['html'] = Template::moduleView($this->module_name, 'views.pollResults', $wdata)->render();
+                } else {
+                    $return['message'] = 'You have already voted';
+                    $return['error'] = 1;
+                }
+            } else {
+                $return['message'] = 'Poll not found';
+                $return['error'] = 1;
+            }
+        }
+
+        return $return;
+    }
+
+    public function pollShortcode($params) {
+        $wdata['poll'] = PollModel::getWithVotes($params['id']);
+
+        if (!$wdata['poll']) {
+            throw new Exception("Poll not found #{$params['id']}");
+        }
+
+        if (PollModel::ivoted($params['id'])) {
+            $wdata['total_votes'] = \PollVotesModel::where('poll_id', $wdata['poll']->id)->count();
+            
+            return Template::moduleView($this->module_name, 'views.pollResults', $wdata);
+        } else {
+            return Template::moduleView($this->module_name, 'views.pollItem', $wdata);
+        }
     }
 
 }

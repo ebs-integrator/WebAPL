@@ -5,7 +5,7 @@
         <tr>
             <th>Date: </th>
             <td>
-                <input type="text" name="post[created_at]" class='form-control' value='<?= isset($post->created_at) ? $post->created_at : ''; ?>' />
+                <input type="text" name="post[created_at]" class='form-control datetimepicker' data-date-format="YYYY-MM-DD hh:mm:ss" value='<?= isset($post->created_at) ? $post->created_at : ''; ?>' />
             </td>
         </tr>
 

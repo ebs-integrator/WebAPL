@@ -21,12 +21,13 @@ class PageView {
             $wdata['page_url'] = $data['page_url'];
 
             if ($item) {
-                $wdata["post"] = Post::findURI($item, 1);
+                $post = Post::findURI($item, 1);
             } else {
-                $wdata["post"] = Post::postsFeed($data['page']->feed_id, false, true)->first();
+                $post = Post::postsFeed($data['page']->feed_id, false, true)->first();
             }
 
-            if ($wdata["post"]) {
+            if ($post) {
+                $wdata["post"] = Post::withDinamicFields($post);
                 $posts_instance = Post::postsFeed($data['page']->feed_id, false, true)->where(Post::getField('id'), '<>', $wdata["post"]->id);
                 $wdata["posts"] = Post::setFeedPagination($posts_instance, $data['page']->feed_id);
                 $data["page"]->text .= View::make("sections.pages.modview.vacansions")->with($wdata);
@@ -57,10 +58,6 @@ class PageView {
         return static::defaultView($data);
     }
     
-    public static function pollList($data) {
-        
-    }
-
     public static function projectsList($data) {
         if ($data['page']->feed_id) {
             Post::$taxonomy = 2;

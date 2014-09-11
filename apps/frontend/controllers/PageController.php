@@ -18,6 +18,14 @@ class PageController extends BaseController {
                         return Redirect::to($redirect_url);
                     }
                 }
+                // Verify if page is redirectable
+                if ($this->data['page']->redirect_to) {
+                    $redirect_url = Post::getFullURI($this->data['page']->redirect_to);
+                    if ($redirect_url) {
+                        return Redirect::to($redirect_url);
+                    }
+                }
+
 
                 Template::addBreadCrumb("/", "Home");
 

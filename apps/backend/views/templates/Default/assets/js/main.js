@@ -87,6 +87,7 @@ jQuery(document).ready(function($) {
 
     // Event listeners
     $("body").on("change", "form.ajax-auto-submit input, form.ajax-auto-submit select, form.ajax-auto-submit textarea", ajax_auto_save);
+    $("body").on("dp.change", "form.ajax-auto-submit .datetimepicker", ajax_auto_save);
     $("body").on("switchChange.bootstrapSwitch", "form.ajax-auto-submit input", ajax_auto_save);
 
     // Save interval for focused elements
@@ -142,5 +143,9 @@ jQuery(document).ready(function($) {
     }, 1000);
 
 
+
+    $('.datetimepicker').datetimepicker({
+      language: 'en'
+    });
 
 });
