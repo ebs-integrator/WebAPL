@@ -44,28 +44,28 @@
             <p class="e_sond">Alte sondaje</p>
             <ul class="a_n">
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="/apps/frontend/views/templates/Default/assets/img/d_arrow.png"></span>
+                        <span> 29 Iul 2014 <img src="<?=res('assets/img/d_arrow.png');?>"></span>
                         <p>Ilegalizarea avortului </p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="/apps/frontend/views/templates/Default/assets/img/d_arrow.png"></span>
+                        <span> 29 Iul 2014 <img src="<?=res('assets/img/d_arrow.png');?>"></span>
                         <p>Până când vom mai fi umiliți </p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="/apps/frontend/views/templates/Default/assets/img/d_arrow.png"></span>
+                        <span> 29 Iul 2014 <img src="<?=res('assets/img/d_arrow.png');?>"></span>
                         <p>Alegeri Parlamentare 2014 </p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="/apps/frontend/views/templates/Default/assets/img/d_arrow.png"></span>
+                        <span> 29 Iul 2014 <img src="<?=res('assets/img/d_arrow.png');?>"></span>
                         <p>Cursuri gratuite pentru someri</p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="/apps/frontend/views/templates/Default/assets/img/d_arrow.png"></span>
+                        <span> 29 Iul 2014 <img src="<?=res('assets/img/d_arrow.png');?>"></span>
                         <p>Alegeri Parlamentare 2014 </p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="/apps/frontend/views/templates/Default/assets/img/d_arrow.png"></span>
+                        <span> 29 Iul 2014 <img src="<?=res('assets/img/d_arrow.png');?>"></span>
                         <p>Cat ai munci daca ai primi 500 de lei pe ora? </p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="/apps/frontend/views/templates/Default/assets/img/d_arrow.png"></span>
+                        <span> 29 Iul 2014 <img src="<?=res('assets/img/d_arrow.png');?>"></span>
                         <p>Sucuri Consumate in parc</p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="/apps/frontend/views/templates/Default/assets/img/d_arrow.png"></span>
+                        <span> 29 Iul 2014 <img src="<?=res('assets/img/d_arrow.png');?>"></span>
                         <p>Sucuri Consumate in parc</p></a></li>
             </ul>
             <div class="pag">

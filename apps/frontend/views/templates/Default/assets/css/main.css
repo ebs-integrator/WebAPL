@@ -2308,7 +2308,7 @@ textarea {
     ul > li.xls{
         background:url('../img/icon.png') no-repeat 3px center;
     }
-     ul > li.xlsx{
+    ul > li.xlsx{
         background:url('../img/icon.png') no-repeat 3px center;
     }
     ul.mda{
@@ -3626,18 +3626,21 @@ textarea {
         font:17px 'open_sansbold';
         text-transform:uppercase;
     }
-    .clndr .bx-wrapper .bx-prev{
+    .clndr .bx-wrapper .bx-prev,.orsl .bx-wrapper .bx-prev{
         background:url('../img/clndr_prev.png');
         left:20px;
     }
-    .clndr .bx-wrapper .bx-next{
+    .clndr .bx-wrapper .bx-next,.orsl .bx-wrapper .bx-next{
         background:url('../img/clndr_next.png');
         right:20px;
     }
-    .clndr .bx-wrapper .bx-controls-direction a{
+    .clndr .bx-wrapper .bx-controls-direction a,.orsl .bx-wrapper .bx-controls-direction a{
         width:12px;
         height:20px;
         top:33px;
+    }
+    .orsl .slider{
+        margin-top:2px;
     }
     .calendar_slider table tbody tr:nth-child(2n-1),.calendar_slider table tbody tr td:first-child{
         background:#fbfbfb;
@@ -3759,7 +3762,201 @@ textarea {
     .tda span,.ldmbox p.tda span{
         color:#7c4d7c;
     }
-    .video{
+    .cl_pop{
+        display:none;
+        position:absolute;
+        left: 100%;
+        top: -20px;
+        min-width:200px;
+        z-index: 99;
+        background:#fff;
+        padding:7px 17px;
+        border:1px solid #74b45a;
+    }
+    .cl_pop span{
+        font:14px 'open_sanssemibold';
+    }
+    .cl_pop p{
+        font:14px 'open_sansbold';
+        margin:0px;
+    }
+    .cl_pop img{
+        position: absolute;
+        left: -6px;
+        top: 23px;
+    }
+    table.orar {
+        width:100%;
+    }
+    table.orar thead tr:first-child{
+        background:#fbfbfb;
+        text-align:center;
+        font:17px 'open_sansbold';
+        color:#7c4d7c;
+        height:46px;
+    }
+    table.orar td{
+        border:1px solid #e3e3e3;        
+        padding:12px;
+    }
+    table.orar thead tr:last-child{
+        font:17px 'open_sansregular';
+        color:#4c4c4c;
+        text-align:right;
+    }
+    table.orar thead tr:last-child td{
+
+        padding:15px 12px 5px 12px;
+    }
+    table.orar ul li > p{
+        font:13px 'open_sanssemibold';
+        margin-bottom:10px;
+    }
+    table.orar ul li{
+        padding-left:10px;
+        background: url('../img/li_clnd.png') no-repeat left 7px;
+    }
+    table.orar tbody tr td{
+        padding:50px 12px;
+        position:relative;
+    }
+    .cl_data{
+        position:absolute;
+        height:36px;
+        width:36px;
+        background:url('../img/date.png');
+        background-size: 36px;
+        top:-1px;
+        right:-1px;
+        color:#fff;
+        font:17px 'open_sansbold';
+        text-align:center;
+        padding-top: 5px;
+    }
+    .cl_data.active{
+        background:url('../img/date_active.png');
+    }
+    table.orar tbody tr td:last-child, table.orar tbody tr td:nth-child(6){
+        background:#f9fced;
+
+    }
+    .orsl li{
+        position:relative;
+    }
+    .w_line{
+        right:1px;
+        top:49px;
+        height:18px;
+        background:#fff;
+        z-index:78;
+        left:1px;
+        position:absolute;
+    }
+    .cl_time li:hover > p{
+        text-decoration: underline;
+        cursor:pointer;
+    }
+    .cl_time li:hover .cl_pop{
+        display:block;
+    }
+    .bsa_block{
+        margin-top:30px;
+    }
+    .bsa_head{
+        color:#fff;
+        font:24px 'open_sansbold';
+        background:#acbe6b;
+        height:53px;
+        padding-left:33px;
+        line-height:53px;
+        margin-bottom:0px;
+    }
+    .bsa_content{
+        height:120px;
+        border:1px solid #e8e8e8;
+        border-top:0px;
+        background:#fafafa;
+    }
+    .bsa_tel,.bsa_fax,.bsa_email{
+        float:left;
+        margin-left:35px;
+        margin-top:30px;
+        padding-left:45px;
+        min-width:230px;        
+    }
+    .bsa_tel{
+        background:url('../img/tel.png') no-repeat left 5px;
+        padding-left:35px;
+    }
+    .bsa_fax{
+        background:url('../img/fax_.png') no-repeat left 5px;
+    }
+    .bsa_email{
+        background:url('../img/email_.png') no-repeat left 5px;
+    }
+    .bsa_content span{
+        font:18px 'open_sanssemibold';
+        color:#acbe6b;
+    }
+    .bsa_content p{
+        font:18px 'open_sanssemibold';
+        color:#4c4c4c;
+    }
+    ul.sec_details.left{
+        float:left;
+        padding-left:0px;
+    }
+    ul.sec_details.left li{
+        min-height:45px;
+    }
+    section > .wrap > .left > ul.sec_details.left li span.sec_criteria,section > .wrap > .left > ul.sec_details.left li span.crt_details{
+        padding-bottom:2px;
+    }
+    section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
+        vertical-align:bottom;
+    }
+    .search_t{
+        color:#040404;
+        font:20px 'open_sanssemibold';
+        height:45px;
+        line-height:45px;
+        padding:0px 15px;
+        background:#fbfbfb;
+        border:1px solid #e3e3e3;
+    }
+    .search_t span{
+        padding-left:5px;
+        color:#7c4d7c;
+    }
+    .search_p{
+        color:#4c4c4c;
+        float:left;
+        font:17px 'open_sanssemibold';
+    }
+    .search_p span{
+        color:#80ba69;
+        padding:0 5px;
+    }
+    .search_r .sort_b .selectboxit-container .selectboxit{
+        min-width:150px;
+    }
+    .search_r .sort_b .selectboxit-container .selectboxit-options{
+        min-width:150px !important;
+    }
+    .search_li li{
+        display:block;
+        height:160px;
+        border-bottom:2px solid #efefef;
+        padding-top:40px;
+    }
+    .search_img{
+        width:130px;
+        height:90px;
+        margin-left:18px;
+    }
+    .search_img *{
+        max-width:130px;
+        max-height:90px;
     }
 }
 @media only screen and (max-width : 1500px) {
