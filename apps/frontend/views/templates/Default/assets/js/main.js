@@ -5,16 +5,14 @@ $.expr[":"].contains = $.expr.createPseudo(function(arg) {
 });
 
 $(document).ready(function() {
-    $('.calendar_slider').bxSlider({
-        minSlides: 2,
-        maxSlides: 12,
-        slideMargin: 10,
+    $('.calendar_slider,.orar_slider').bxSlider({
         pager: false,
-        controls: true
+        controls: true,
+        adaptiveHeight: true
     });
 
-    $('.video').height($(window).height() - 244);
-
+    $('.video').css('min-height', ($(window).height() - 510));
+    console.log($(window).height());
     $('.currency .s_c,.overlay2').click(function() {
         $('.overlay2').toggleClass('hidden');
         $('.currency .lang').toggleClass('hidden');
