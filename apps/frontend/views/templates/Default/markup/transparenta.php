@@ -96,65 +96,50 @@
                 <ul class="bxslider2">
                     <li>
                         <table>
-                            <tr>
-                                <td> Denumire:</td>
-                                <td>Cu privire la aprobarea Regulamentului privind organizarea educaţiei incluzive în instituţiile de învăţămînt preuniversitar din mun. Bălţi</td>
-                            </tr>
-                            <tr>
-                                <td>Tipul Doc.:</td>
-                                <td>Decizie</td>                                    
-                            </tr>
-                            <tr>
-                                <td>Emis:</td>
-                                <td>Primăria Strășeni</td>                                    
-                            </tr>
-                            <tr>
-                                <td>Data emiterii:  </td>
-                                <td>31.07.2014</td>                                    
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <td>nr.</td><td>titlu</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4/11</td><td>Cu privire la concediul anual de odihnă al d. Vîntu Elena Parti</td>
+                                </tr>
+                            </tbody>
                         </table>
+                        <div class="clearfix10"></div>
                     </li>
 
                     <li>
                         <table>
-                            <tr>
-                                <td> Denumire:</td>
-                                <td>Cu privire la aprobarea Regulamentului privind organizarea educaţiei incluzive în instituţiile de învăţămînt preuniversitar din mun. Bălţi</td>
-                            </tr>
-                            <tr>
-                                <td>Tipul Doc.:</td>
-                                <td>Decizie</td>                                    
-                            </tr>
-                            <tr>
-                                <td>Emis:</td>
-                                <td>Primăria Strășeni</td>                                    
-                            </tr>
-                            <tr>
-                                <td>Data emiterii:  </td>
-                                <td>31.07.2014</td>                                    
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <td>nr.</td><td>titlu</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4/11</td><td>Cu privire la concediul anual de odihnă al d. Vîntu Elena Parti</td>
+                                </tr>
+                            </tbody>
                         </table>
+                        <div class="clearfix10"></div>
                     </li>
 
                     <li>
                         <table>
-                            <tr>
-                                <td> Denumire:</td>
-                                <td>Cu privire la aprobarea Regulamentului privind organizarea educaţiei incluzive în instituţiile de învăţămînt preuniversitar din mun. Bălţi</td>
-                            </tr>
-                            <tr>
-                                <td>Tipul Doc.:</td>
-                                <td>Decizie</td>                                    
-                            </tr>
-                            <tr>
-                                <td>Emis:</td>
-                                <td>Primăria Strășeni</td>                                    
-                            </tr>
-                            <tr>
-                                <td>Data emiterii:  </td>
-                                <td>31.07.2014</td>                                    
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <td>nr.</td><td>titlu</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4/11</td><td>Cu privire la concediul anual de odihnă al d. Vîntu Elena Parti</td>
+                                </tr>
+                            </tbody>
                         </table>
+                        <div class="clearfix10"></div>
                     </li>
                 </ul>
             </article>

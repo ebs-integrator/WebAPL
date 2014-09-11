@@ -45,6 +45,7 @@
                                 <tr><td>4/12 </td><td>Cu privire la concediul anual de odihnă al d. Vîntu Elena</td><td>Decizie</td><td>Consiliu Local</td><td>26.08.14</td></tr>
                             </tbody>
                         </table>
+                        <div class="clearfix10"></div>
                     </div>
                     <div class="slide">
                         <table>
@@ -63,6 +64,7 @@
                                 <tr><td>4/12 </td><td>Cu privire la concediul anual de odihnă al d. Vîntu Elena</td><td>Decizie</td><td>Consiliu Local</td><td>26.08.14</td></tr>
                             </tbody>
                         </table>
+                        <div class="clearfix10"></div>
                     </div>
                     <div class="slide">
                         <table>
@@ -81,6 +83,7 @@
                                 <tr><td>4/12 </td><td>Cu privire la concediul anual de odihnă al d. Vîntu Elena</td><td>Decizie</td><td>Consiliu Local</td><td>26.08.14</td></tr>
                             </tbody>
                         </table>
+                        <div class="clearfix10"></div>
                     </div>
                     <div class="slide">
                         <table>
@@ -99,6 +102,7 @@
                                 <tr><td>4/12 </td><td>Cu privire la concediul anual de odihnă al d. Vîntu Elena</td><td>Decizie</td><td>Consiliu Local</td><td>26.08.14</td></tr>
                             </tbody>
                         </table>
+                        <div class="clearfix10"></div>
                     </div>
                     <div class="slide">
                         <table>
@@ -117,6 +121,7 @@
                                 <tr><td>4/12 </td><td>Cu privire la concediul anual de odihnă al d. Vîntu Elena</td><td>Decizie</td><td>Consiliu Local</td><td>26.08.14</td></tr>
                             </tbody>
                         </table>
+                        <div class="clearfix10"></div>
                     </div>
                     <div class="slide">
                         <table>
@@ -135,6 +140,7 @@
                                 <tr><td>4/12 </td><td>Cu privire la concediul anual de odihnă al d. Vîntu Elena</td><td>Decizie</td><td>Consiliu Local</td><td>26.08.14</td></tr>
                             </tbody>
                         </table>
+                        <div class="clearfix10"></div>
                     </div>
                     <div class="slide">
                         <table>
@@ -153,6 +159,7 @@
                                 <tr><td>4/12 </td><td>Cu privire la concediul anual de odihnă al d. Vîntu Elena</td><td>Decizie</td><td>Consiliu Local</td><td>26.08.14</td></tr>
                             </tbody>
                         </table>
+                        <div class="clearfix10"></div>
                     </div>
                     <div class="slide">
                         <table>
@@ -171,6 +178,7 @@
                                 <tr><td>4/12 </td><td>Cu privire la concediul anual de odihnă al d. Vîntu Elena</td><td>Decizie</td><td>Consiliu Local</td><td>26.08.14</td></tr>
                             </tbody>
                         </table>
+                        <div class="clearfix10"></div>
                     </div>
                     <div class="slide">
                         <table>
@@ -189,6 +197,7 @@
                                 <tr><td>4/12 </td><td>Cu privire la concediul anual de odihnă al d. Vîntu Elena</td><td>Decizie</td><td>Consiliu Local</td><td>26.08.14</td></tr>
                             </tbody>
                         </table>
+                        <div class="clearfix10"></div>
                     </div>
                     <div class="clearfix"></div>
                 </div>

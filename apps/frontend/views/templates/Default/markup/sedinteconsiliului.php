@@ -4,22 +4,23 @@
             <a href="javascript:;">Principala »</a>
             <a href="javascript:;">Consiliul local »</a>
             <a href="javascript:;">Consiliul local »</a>
-            <a href="javascript:;">Ședințele Consiliului</a>
+            <a href="javascript:;">Ședințele Consiliului »</a>            
+            <a href="javascript:;">Agenda următoarei ședințe</a>
         </div>
     </div>
     <div class="wrap">
-        <p class="c_title">Consiliul local</p>
+        <p class="c_title">Ședințele Consiliului</p>
 
         <div class='left'>
             <ul class="sec_details left">
                 <li>
                     <span class="sec_criteria">Data:</span>
-                    <span class="crt_details">15 Septembrie 2014</span>
+                    <span class="crt_details">luni – 15 Septembrie 2014</span>
                 </li>
                 <li>
 
                     <span class="sec_criteria">Ora:</span>
-                    <span class="crt_details">luni – 08:00 – 13:00</span>
+                    <span class="crt_details"> 08:00 – 13:00</span>
                 </li>
                 <li>
                     <span class="sec_criteria">Locația:</span>
@@ -51,13 +52,10 @@
 
         <div class='right'>
             <ul class="right_menu">
-                <li><a href="javascript:;">Ce este consiliul local?</a></li>
-                <li class="active"><a href="javascript:;">Ședințele Consiliului </a></li>
-                <li><a href="javascript:;">Secretarul consiliului local</a></li>
-                <li><a href="javascript:;">Consilierii locali și domeniile de responsabilitate</a></li>
-                <li><a href="javascript:;">Programul de audiență al consilierilor locali</a></li>
-                <li><a href="javascript:;">Arhiva deciziilor anterioare </a></li>
-                <li><a href="javascript:;">Taxa de cazare</a></li>
+                <li class="active"><a href="javascript:;">Agenda următoarei ședințe</a></li>
+                <li ><a href="javascript:;">Agendele ședințelor anterioare </a></li>
+                <li><a href="javascript:;">Calendarul ședințelor viitoare</a></li>
+                <li><a href="javascript:;">Privește on-line ședințele consiliului </a></li>
             </ul>
         </div>
     </div>
