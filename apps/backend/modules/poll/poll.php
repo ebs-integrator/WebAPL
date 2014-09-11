@@ -48,6 +48,8 @@ class Poll extends \Core\APL\ExtensionController {
 
         Actions::register('construct_left_menu', array($this, 'left_menu_item'));
 
+        Template::registerViewMethod('page', 'pollList', 'Lista de sondaje', null, true);
+        
         $this->layout = Template::mainLayout();
     }
 

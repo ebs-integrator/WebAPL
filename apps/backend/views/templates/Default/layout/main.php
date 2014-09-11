@@ -19,9 +19,10 @@
         <link rel="stylesheet" href="<?= res('assets/lib/switch/css/bootstrap3/bootstrap-switch.min.css'); ?>">
         <link rel="stylesheet" href="<?= res('assets/lib/treeview/jquery.treeview.css'); ?>">
         <link rel="stylesheet" href="<?= res('assets/lib/chosen/chosen.css'); ?>">
+        <link rel="stylesheet" href="<?= res('assets/css/bootstrap-datetimepicker.min.css'); ?>">
         <link rel="stylesheet" href="<?= res('assets/lib/treeview/jquery.treeview.css'); ?>">
         <link rel="stylesheet" type="text/css" media="screen" href="<?= res('assets/lib/jquery-ui/jquery-ui.css') ?>" />
- 
+
         <!-- Metis core stylesheet -->
         <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">
 
@@ -115,7 +116,7 @@
 
                             <!-- .nav -->
                             <ul class="nav navbar-nav">
-                                <li> <a href="<?=url('log');?>">Log</a></li>
+                                <li> <a href="<?= url('log'); ?>">Log</a></li>
 
                                 <li><img id="loading" style="display: none;margin-top: 14px;" src="<?= res('assets/img/ajax-loader.gif'); ?>" /></li>
                             </ul><!-- /.nav -->
@@ -144,7 +145,7 @@
                     <li><a href="<?= url('menu'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Menu</span></a></li>
                     <li><a href="<?= url('page'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Pages</span></a></li>
                     <li><a href="<?= url('feed'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Feeds</span></a></li>
-                    <?=Actions::call('construct_left_menu');?>
+                    <?= Actions::call('construct_left_menu'); ?>
                 </ul><!-- /#menu -->
             </div><!-- /#left -->
             <div id="content">
@@ -182,6 +183,10 @@
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal --><!-- /#helpModal -->
 
+        <!--Bootstrap -->
+        <script src="<?= res('assets/lib/bootstrap/js/bootstrap.min.js'); ?>"></script>
+
+
         <!-- module -->
         <script src="<?= res('assets/lib/jquery-ui/jquery-ui.min.js'); ?>" type="text/javascript"></script>   
         <script src="<?= res('assets/lib/jquery-form/jquery.form.js'); ?>"></script>
@@ -192,9 +197,8 @@
         <script src="<?= res('assets/lib/chosen/chosen.jquery.js'); ?>"></script>
         <script src="<?= res('assets/lib/ckeditor/ckeditor.js'); ?>"></script>
         <script src="<?= res('assets/lib/ckeditor/adapters/jquery.js'); ?>"></script>
-
-        <!--Bootstrap -->
-        <script src="<?= res('assets/lib/bootstrap/js/bootstrap.min.js'); ?>"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
+        <script src="<?= res('assets/js/bootstrap-datetimepicker.min.js'); ?>"></script>
 
         <!-- Screenfull -->
         <script src="<?= res('assets/lib/screenfull/screenfull.js'); ?>"></script>

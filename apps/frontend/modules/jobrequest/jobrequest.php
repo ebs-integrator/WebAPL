@@ -20,11 +20,12 @@ class Jobrequest extends \Core\APL\ExtensionController {
         $this->loadClass(array('JobRequestModel'));
 
         Shortcodes::register('cv_form', array($this, 'cv_form'));
+        Actions::register('cv_form', array($this, 'cv_form'));
         Actions::post('job/apply', array($this, 'cv_form_submit'));
     }
 
     public function cv_form($attr) {
-        if (isset($attr['post'])) {
+        if (isset($attr['post']) && (strtotime($attr['post']->date_point) == 0 || strtotime($attr['post']->date_point) > time())) {
             return Template::moduleView($this->module_name, 'views.job-form', array('post_id' => $attr['post']['id']));
         }
     }
