@@ -31,6 +31,7 @@ class Person extends \Core\APL\ExtensionController {
         Template::registerViewMethod('page', 'persons_with_photo', 'Persoane cu foto', array($this, 'photo_persons'), true);
         Template::registerViewMethod('page', 'persons_big', 'Persoane cu foto (viceprimari)', array($this, 'vicemayor'), true);
         Template::registerViewMethod('page', 'persons_mayor', 'Persoana cu foto (primar)', array($this, 'mayor'), true);
+        Template::registerViewMethod('page', 'persons_secretar', 'Persoana cu foto (secretar)', array($this, 'secretar'), true);
 
         Shortcodes::register('person_subscribe', array($this, 'subscribe'));
 
@@ -68,6 +69,17 @@ class Person extends \Core\APL\ExtensionController {
         $groups = PersonModel::getPostPersonGroups($data['page']->id);
         if ($groups) {
             $data["page"]->text = Template::moduleView($this->module_name, "views.person_mayor", array('groups' => $groups));
+        }
+
+        return PageView::defaultView($data);
+    }
+
+    public function secretar($data) {
+        $groups = PersonModel::getPostPersonGroups($data['page']->id);
+        if ($groups) {
+            $data["page"]->text = Template::moduleView($this->module_name, "views.person_secretar", array(
+                        'groups' => $groups
+            ));
         }
 
         return PageView::defaultView($data);

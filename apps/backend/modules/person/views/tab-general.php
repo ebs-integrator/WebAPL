@@ -17,13 +17,24 @@
         <tr>
             <th>Birth date: </th>
             <td>
-                <input type="text" name="date_birth" class='form-control' value='<?= isset($person->date_birth) ? $person->date_birth : date("Y-m-d"); ?>' />
+                <input type="text" name="date_birth" class='form-control datetimepicker' data-date-format="YYYY-MM-DD" value='<?= isset($person->date_birth) ? $person->date_birth : date("Y-m-d"); ?>' />
             </td>
         </tr>
         <tr>
             <th>Accesibil pentru audienta: </th>
             <td>
                 <input type="checkbox" class="make-switch" name="for_audience" class='form-control' <?= isset($person->for_audience) && $person->for_audience ? 'checked' : ''; ?> />
+            </td>
+        </tr>
+        <tr>
+            <th>Feed: </th>
+            <td>
+                <select name="feed_id" class="form-control">
+                    <option value="0">---</option>
+                    <?php foreach ($feeds as $feed) { ?>
+                        <option value="<?= $feed->id; ?>" <?= isset($person['feed_id']) && $person['feed_id'] == $feed->id ? 'selected' : '' ?>><?= $feed->name; ?></option>
+                    <?php } ?>
+                </select>
             </td>
         </tr>
     </table>

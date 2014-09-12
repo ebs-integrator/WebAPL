@@ -68,6 +68,7 @@ class Person extends \Core\APL\ExtensionController {
         Template::registerViewMethod('page', 'persons_with_photo', 'Persoane cu foto', null, true);
         Template::registerViewMethod('page', 'persons_big', 'Persoane cu foto (viceprimari)', null, true);
         Template::registerViewMethod('page', 'persons_mayor', 'Persoana cu foto (primar)', null, true);
+        Template::registerViewMethod('page', 'persons_secretar', 'Persoana cu foto (secretar)', array($this, 'secretar'), true);
 
         // Set layout
         $this->layout = Template::mainLayout();
@@ -252,7 +253,9 @@ class Person extends \Core\APL\ExtensionController {
                 $data['selected_groups'][] = $group->group_id;
             }
         }
-
+        
+        $data['feeds'] = \Feed::all();
+        
         $this->layout->content = Template::moduleView($this->module_name, 'views.form', $data);
         return $this->layout;
     }
@@ -301,6 +304,7 @@ class Person extends \Core\APL\ExtensionController {
             // if the person does not exist, create new
             $person = new PersonModel;
         }
+        $person->feed_id = Input::get('feed_id');
         $person->phone = Input::get('phone');
         $person->email = Input::get('email');
         $person->date_birth = Input::get('date_birth');
@@ -357,6 +361,7 @@ class Person extends \Core\APL\ExtensionController {
         $person_lang->activity = Input::get('activity');
         $person_lang->sector = Input::get('sector');
         $person_lang->motto = Input::get('motto');
+        $person_lang->text = Input::get('text');
         $person_lang->save();
 
         if ($redirect_to) {

@@ -52,5 +52,12 @@
                 <input type="text" name="motto" class='form-control' value='<?= isset($person_lang->motto) ? $person_lang->motto : ''; ?>' />
             </td>
         </tr>
+        <tr>
+            <th>Text: </th>
+            <td>
+                <textarea class="ckeditor-run" name="text"><?= isset($person_lang->text) ? $person_lang->text : ''; ?></textarea>
+                <input type="text" name="motto" class='form-control' value='<?= isset($person_lang->motto) ? $person_lang->motto : ''; ?>' />
+            </td>
+        </tr>
     </table>
 </form>

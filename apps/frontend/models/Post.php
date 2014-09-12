@@ -178,12 +178,14 @@ class Post extends Eloquent {
     }
 
     public static function withDinamicFields($post) {
-        $fields = FeedField::leftJoin(FeedFieldValue::getTableName(), FeedFieldValue::getField("feed_field_id"), "=", FeedField::getField("id"))
-                ->whereIn(FeedFieldValue::getField("lang_id"), array(0, \Core\APL\Language::getId()))
-                ->where(FeedFieldValue::getField("post_id"), $post->id)
-                ->select(FeedField::getField("fkey"), FeedFieldValue::getField("value"), FeedField::getField("get_filter"))
-                ->get();
+        $values_SQL = "(SELECT * FROM " . FeedFieldValue::getTableName() . " WHERE " . FeedFieldValue::getField("lang_id") . " IN (0," . Core\APL\Language::getId() . ") AND " . FeedFieldValue::getField("post_id") . " = {$post->id}) as sb";
 
+        $fields = FeedField::leftJoin(DB::raw($values_SQL), "sb.feed_field_id", "=", FeedField::getField("id"))
+                ->select(FeedField::getField("fkey"), "sb.value", FeedField::getField("get_filter"))
+                ->join(FeedRel::getTableName(), FeedRel::getField('feed_field_id'), '=', FeedField::getField('id'))
+                ->join(FeedPost::getTableName(), FeedPost::getField('feed_id'), '=', FeedRel::getField('feed_id'))
+                ->where(FeedPost::getField('post_id'), '=', $post->id)
+                ->get();
         foreach ($fields as $field) {
             if ($field->get_filter && method_exists('DinamicFields', $field->get_filter)) {
                 $post[$field->fkey] = call_user_func(array('DinamicFields', $field->get_filter), $field, $post);
@@ -200,6 +202,7 @@ class Post extends Eloquent {
         $posts = array();
 
         if ($feed) {
+            Post::$taxonomy = 2;
             $posts = Post::prepareQuery()
                     ->join(FeedPost::getTableName(), Post::getField("id"), '=', FeedPost::getField("post_id"))
                     ->where(FeedPost::getField("feed_id"), $feed_id)
