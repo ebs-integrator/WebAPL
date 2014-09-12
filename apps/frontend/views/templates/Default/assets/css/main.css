@@ -1315,7 +1315,6 @@ textarea {
         margin:5px;
     }
     div.hr_grey{
-        width:100%;
         border-top: 1px dotted #dbdbdb;
         height: 1px;
         margin-top:10px;
@@ -4110,7 +4109,7 @@ textarea {
         padding-right:20px;
     }
 }
-@media only screen and (max-width : 1500px) {
+@media only screen and (max-width : 1525px) {
     section > .wrap .left article,section > .wrap .left article:nth-child(2n){
         margin-left:25px;
     }
@@ -4121,10 +4120,11 @@ textarea {
         margin-right:25px;
     }
     footer .right > .left{
-        float: none;
+        margin-right:20px;
     }
-    footer .right{
-        margin-top: -28px;
+    footer .links{
+        padding-left:20px;
+        width:200px;
     }
     footer .right .left.search{
         height: 45px;
@@ -4140,5 +4140,34 @@ textarea {
     }
     header .contact .currency span.s_c{
         margin-right:10px;
+    }
+    header .contact .currency .lang{
+        right:10px;
+    }
+    header .contact .cont .cont_form{
+        right:10px;
+    }
+}
+@media only screen and (max-width : 1280px){
+    footer .right .left.search{
+        display:none;
+    }
+    section .dirs_menu .wrap{
+        padding-left:20px;
+    }
+    .c_title{
+        padding-left:10px;
+    }
+    section > .wrap .right{
+        margin-right:10px;
+    }
+    section > .wrap .left{
+        margin-left:10px;
+    }
+    div.hr_grey{
+        margin:10px;
+    }
+    .socials{
+        padding:0 10px;
     }
 }
