@@ -37,7 +37,7 @@
 </section>
 <section>
     <div class="wrap">
-        <div class="left">            
+        <div class="left global">            
             <article>
                 <p class="ttl"><a href="javascript:;">Primăria</a></p>
                 <ul>
@@ -66,7 +66,7 @@
             </article>
 
         </div>
-        <div class="right">            
+        <div class="right global">            
             <article>
                 <p class="ttl"><a href="javascript:;">Transparență Decizională</p>
                 <div class="hr"></div>

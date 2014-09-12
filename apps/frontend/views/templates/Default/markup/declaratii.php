@@ -13,152 +13,190 @@
 
         <div class='left'>
             <ul class="dcr">
-                <li><a href='javascript:;'> Declaratii de avere 2005 </a>
-                    <a href="javascript:;" class="dcr_dwnl"></a>
+                <li><a href='javascript:;'> Declaratii de avere 2012 <span class="more"></span></a>
+                                <div class='dcr_box'>
+                                    <ul>
+                                        <li class="word">
+                                            <span><a href="javascript:;">Ionele Aurelia.pdf</a> </span>
+
+                                            <a href="javascript:;" class="dcr_dwnl"></a>
+                                        </li>
+                                        <li class="pdf">
+                                            <span><a href="javascript:;">Magerusan Onita.doc</a> </span>
+
+                                            <a href="javascript:;" class="dcr_dwnl"></a>
+                                        </li>
+                                        <li class="word">
+                                            <span><a href="javascript:;">Malaicu Sabina.pdf</a>	</span>
+
+                                            <a href="javascript:;" class="dcr_dwnl"></a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </li>
+                <li><a href='javascript:;'> Declaratii de avere 2011 <span class="more"></span></a>
+                                <div class='dcr_box'>
+                                    <ul>
+                                        <li class="word">
+                                            <span><a href="javascript:;">Ionele Aurelia.pdf</a> </span>
+
+                                            <a href="javascript:;" class="dcr_dwnl"></a>
+                                        </li>
+                                        <li class="pdf">
+                                            <span><a href="javascript:;">Magerusan Onita.doc</a> </span>
+
+                                            <a href="javascript:;" class="dcr_dwnl"></a>
+                                        </li>
+                                        <li class="word">
+                                            <span><a href="javascript:;">Malaicu Sabina.pdf</a>	</span>
+
+                                            <a href="javascript:;" class="dcr_dwnl"></a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </li>
+                <li><a href='javascript:;'> Declaratii de avere 2010 <span class="more"></span></a>
+                                <div class='dcr_box'>
+                                    <ul>
+                                        <li class="word">
+                                            <span><a href="javascript:;">Ionele Aurelia.pdf</a> </span>
+
+                                            <a href="javascript:;" class="dcr_dwnl"></a>
+                                        </li>
+                                        <li class="pdf">
+                                            <span><a href="javascript:;">Magerusan Onita.doc</a> </span>
+
+                                            <a href="javascript:;" class="dcr_dwnl"></a>
+                                        </li>
+                                        <li class="word">
+                                            <span><a href="javascript:;">Malaicu Sabina.pdf</a>	</span>
+
+                                            <a href="javascript:;" class="dcr_dwnl"></a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </li>
+                <li><a href='javascript:;'> Declaratii de avere 2009 <span class="more"></span></a>
+                                <div class='dcr_box'>
+                                    <ul>
+                                        <li class="word">
+                                            <span><a href="javascript:;">Ionele Aurelia.pdf</a> </span>
+
+                                            <a href="javascript:;" class="dcr_dwnl"></a>
+                                        </li>
+                                        <li class="pdf">
+                                            <span><a href="javascript:;">Magerusan Onita.doc</a> </span>
+
+                                            <a href="javascript:;" class="dcr_dwnl"></a>
+                                        </li>
+                                        <li class="word">
+                                            <span><a href="javascript:;">Malaicu Sabina.pdf</a>	</span>
+
+                                            <a href="javascript:;" class="dcr_dwnl"></a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </li>
+                <li><a href='javascript:;'> Declaratii de avere 2008 <span class="more"></span></a>
+                                <div class='dcr_box'>
+                                    <ul>
+                                        <li class="word">
+                                            <span><a href="javascript:;">Ionele Aurelia.pdf</a> </span>
+
+                                            <a href="javascript:;" class="dcr_dwnl"></a>
+                                        </li>
+                                        <li class="pdf">
+                                            <span><a href="javascript:;">Magerusan Onita.doc</a> </span>
+
+                                            <a href="javascript:;" class="dcr_dwnl"></a>
+                                        </li>
+                                        <li class="word">
+                                            <span><a href="javascript:;">Malaicu Sabina.pdf</a>	</span>
+
+                                            <a href="javascript:;" class="dcr_dwnl"></a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </li>
+                <li><a href='javascript:;'> Declaratii de avere 2007 <span class="more"></span></a>
                     <div class='dcr_box'>
                         <ul>
                             <li class="word">
-                                <span>Ionele Aurelia.pdf </span>
+                                <span><a href="javascript:;">Ionele Aurelia.pdf</a> </span>
+
+                                <a href="javascript:;" class="dcr_dwnl"></a>
                             </li>
                             <li class="pdf">
-                                <span>Magerusan Onita.doc </span>
+                                <span><a href="javascript:;">Magerusan Onita.doc</a> </span>
+
+                                <a href="javascript:;" class="dcr_dwnl"></a>
                             </li>
                             <li class="word">
-                                <span>Malaicu Sabina.pdf	</span>
+                                <span><a href="javascript:;">Malaicu Sabina.pdf</a>	</span>
+
+                                <a href="javascript:;" class="dcr_dwnl"></a>
                             </li>
 
                         </ul>
                     </div>
 
                 </li>
-                <li><a href='javascript:;'> Declaratii de avere 2006</a>
-                    <a href="javascript:;" class="dcr_dwnl"></a>
+                <li><a href='javascript:;'> Declaratii de avere 2006 <span class="more"></span></a>
                     <div class='dcr_box'>
                         <ul>
                             <li class="word">
-                                <span>Ionele Aurelia.pdf </span>
+                                <span><a href="javascript:;">Ionele Aurelia.pdf</a> </span>
+
+                                <a href="javascript:;" class="dcr_dwnl"></a>
                             </li>
                             <li class="pdf">
-                                <span>Magerusan Onita.doc </span>
+                                <span><a href="javascript:;">Magerusan Onita.doc</a> </span>
+
+                                <a href="javascript:;" class="dcr_dwnl"></a>
                             </li>
                             <li class="word">
-                                <span>Malaicu Sabina.pdf	</span>
+                                <span><a href="javascript:;">Malaicu Sabina.pdf</a>	</span>
+
+                                <a href="javascript:;" class="dcr_dwnl"></a>
                             </li>
 
                         </ul>
-                    </div></li>
-                <li><a href='javascript:;'> Declaratii de avere 2007</a>
-                    <a href="javascript:;" class="dcr_dwnl"></a>
+                    </div>
+
+                </li>
+                <li><a href='javascript:;'> Declaratii de avere 2005 <span class="more"></span></a>
                     <div class='dcr_box'>
                         <ul>
                             <li class="word">
-                                <span>Ionele Aurelia.pdf </span>
+                                <span><a href="javascript:;">Ionele Aurelia.pdf</a> </span>
+
+                                <a href="javascript:;" class="dcr_dwnl"></a>
                             </li>
                             <li class="pdf">
-                                <span>Magerusan Onita.doc </span>
+                                <span><a href="javascript:;">Magerusan Onita.doc</a> </span>
+
+                                <a href="javascript:;" class="dcr_dwnl"></a>
                             </li>
                             <li class="word">
-                                <span>Malaicu Sabina.pdf	</span>
+                                <span><a href="javascript:;">Malaicu Sabina.pdf</a>	</span>
+
+                                <a href="javascript:;" class="dcr_dwnl"></a>
                             </li>
 
                         </ul>
-                    </div></li>
-                <li><a href='javascript:;'> Declaratii de avere 2008</a>
-                    <a href="javascript:;" class="dcr_dwnl"></a>
-                    <div class='dcr_box'>
-                        <ul>
-                            <li class="word">
-                                <span>Ionele Aurelia.pdf </span>
-                            </li>
-                            <li class="pdf">
-                                <span>Magerusan Onita.doc </span>
-                            </li>
-                            <li class="word">
-                                <span>Malaicu Sabina.pdf	</span>
-                            </li>
+                    </div>
 
-                        </ul>
-                    </div></li>
-                <li><a href='javascript:;'> Declaratii de avere 2009</a>
-                    <a href="javascript:;" class="dcr_dwnl"></a>
-                    <div class='dcr_box'>
-                        <ul>
-                            <li class="word">
-                                <span>Ionele Aurelia.pdf </span>
-                            </li>
-                            <li class="pdf">
-                                <span>Magerusan Onita.doc </span>
-                            </li>
-                            <li class="word">
-                                <span>Malaicu Sabina.pdf	</span>
-                            </li>
-
-                        </ul>
-                    </div></li>
-                <li><a href='javascript:;'> Declaratii de avere 2010</a>
-                    <a href="javascript:;" class="dcr_dwnl"></a>
-                    <div class='dcr_box'>
-                        <ul>
-                            <li class="word">
-                                <span>Ionele Aurelia.pdf </span>
-                            </li>
-                            <li class="pdf">
-                                <span>Magerusan Onita.doc </span>
-                            </li>
-                            <li class="word">
-                                <span>Malaicu Sabina.pdf	</span>
-                            </li>
-
-                        </ul>
-                    </div></li>
-                <li><a href='javascript:;'> Declaratii de avere 2011</a>
-                    <a href="javascript:;" class="dcr_dwnl"></a>
-                    <div class='dcr_box'>
-                        <ul>
-                            <li class="word">
-                                <span>Ionele Aurelia.pdf </span>
-                            </li>
-                            <li class="pdf">
-                                <span>Magerusan Onita.doc </span>
-                            </li>
-                            <li class="word">
-                                <span>Malaicu Sabina.pdf	</span>
-                            </li>
-
-                        </ul>
-                    </div></li>
-                <li><a href='javascript:;'> Declaratii de avere si interese 2013</a>
-                    <a href="javascript:;" class="dcr_dwnl"></a>
-                    <div class='dcr_box'>
-                        <ul>
-                            <li class="word">
-                                <span>Ionele Aurelia.pdf </span>
-                            </li>
-                            <li class="pdf">
-                                <span>Magerusan Onita.doc </span>
-                            </li>
-                            <li class="word">
-                                <span>Malaicu Sabina.pdf	</span>
-                            </li>
-
-                        </ul>
-                    </div></li>
-                <li><a href='javascript:;'>  Declaratii de avere si interese 2014</a>
-                    <a href="javascript:;" class="dcr_dwnl"></a>
-                    <div class='dcr_box'>
-                        <ul>
-                            <li class="word">
-                                <span>Ionele Aurelia.pdf </span>
-                            </li>
-                            <li class="pdf">
-                                <span>Magerusan Onita.doc </span>
-                            </li>
-                            <li class="word">
-                                <span>Malaicu Sabina.pdf	</span>
-                            </li>
-
-                        </ul>
-                    </div></li>
+                </li>
 
 
             </ul>

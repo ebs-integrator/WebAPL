@@ -85,30 +85,30 @@
 
             </div>
             <ul class="dcr smpl">
-                            <li><a href='javascript:;'> Declaratii de avere 2005 </a>
-                                <div class='dcr_box'>
-                                    <ul>
-                                        <li class="word">
-                                            <span>Ionele Aurelia.pdf </span>
+                <li><a href='javascript:;'> Declaratii de avere 2005 </a>
+                    <div class='dcr_box'>
+                        <ul>
+                            <li class="word">
+                                <span><a href="javascript:;">Ionele Aurelia.pdf </a></span>
 
-                                            <a href="javascript:;" class="dcr_dwnl"></a>
-                                        </li>
-                                        <li class="pdf">
-                                            <span>Magerusan Onita.doc </span>
-
-                                            <a href="javascript:;" class="dcr_dwnl"></a>
-                                        </li>
-                                        <li class="word">
-                                            <span>Malaicu Sabina.pdf	</span>
-
-                                            <a href="javascript:;" class="dcr_dwnl"></a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-
+                                <a href="javascript:;" class="dcr_dwnl"></a>
                             </li>
+                            <li class="pdf">
+                                <span><a href="javascript:;">Magerusan Onita.doc</a> </span>
+
+                                <a href="javascript:;" class="dcr_dwnl"></a>
+                            </li>
+                            <li class="word">
+                                <span><a href="javascript:;">Malaicu Sabina.pdf	</a></span>
+
+                                <a href="javascript:;" class="dcr_dwnl"></a>
+                            </li>
+
                         </ul>
+                    </div>
+
+                </li>
+            </ul>
         </div>
 
         <div class='right'>
