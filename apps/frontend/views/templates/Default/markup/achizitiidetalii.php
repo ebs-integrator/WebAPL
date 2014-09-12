@@ -39,23 +39,24 @@
                     <p class="tda">
                         Termen limita de aplicare : <span>4 sept 2014</span>
                     </p>
-                </div>
 
 
-                <ul class="mda n_t">
-                    <li class="word">
-                        <span><a href="javascript:;">Achizițiile Publice în Moldova</a></span>
-                    </li>  
-                </ul>
-                <div class='clearfix50'></div>
-                <div class='socials'>
-                    <div id="vk_like"></div>
-                    <div id="ok_shareWidget"></div>
-                    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="125" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-                    <div class="clearfix"></div>
+
+                    <ul class="mda n_t">
+                        <li class="word">
+                            <span><a href="javascript:;">Achizițiile Publice în Moldova</a></span>
+                        </li>  
+                    </ul>
+                    <div class='clearfix50'></div>
+                    <div class='socials'>
+                        <div id="vk_like"></div>
+                        <div id="ok_shareWidget"></div>
+                        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="125" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="hr_grey"></div>
+                    <div class="fb-comments" data-href="http://example.com/comments" data-width="100%" data-numposts="2" data-colorscheme="light"></div>
                 </div>
-                <div class="hr_grey"></div>
-                <div class="fb-comments" data-href="http://example.com/comments" data-width="785" data-numposts="2" data-colorscheme="light"></div>
             </div>
         </div>
         <div class="right">

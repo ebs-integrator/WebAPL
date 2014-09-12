@@ -12,7 +12,7 @@
 
         <div class='left'>
             <div class='city'>
-                <div id="map-canvas2" style="width:870px; height:310px;"></div>
+                <div id="map-canvas2" style="width:100%; height:310px;"></div>
                 <div class="city_dt">
                     <p>Orașul Strășeni</p>
                     <p>Strada Ștefan cel Mare 24, MD 2034</p>

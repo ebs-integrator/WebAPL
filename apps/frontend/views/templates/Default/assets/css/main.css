@@ -2083,7 +2083,7 @@ textarea {
         font:24px 'open_sansbold';
     }
     .u_a img{
-        max-width: 870px;
+        max-width:100%;
         height:auto;
     }
     .u_a .details {
@@ -2894,9 +2894,6 @@ textarea {
         display: block;                                                              
     }
     .bgr .img {
-        width:400px;
-        height:505px;
-        overflow:hidden;
         position: relative;
         float:left;
         margin-right:75px;
@@ -3037,9 +3034,6 @@ textarea {
         border-top: 0px;
         width:95%;
         margin: 35px 0;
-    }
-    .ldmbox div.hr_grey{        
-        width:95%;
     }
     .ldmbox input[type=text]{
         height:33px;
@@ -3788,8 +3782,6 @@ textarea {
         max-height:177px;
     }
     .clu_img{
-        width:140px;
-        height:177px;
         position:relative;
         float:left;
         margin-right:20px;
@@ -4063,7 +4055,7 @@ textarea {
         display:block;
         color:#7c4d7c;
         font:24px 'open_sanssemibold';
-        margin:-8px 0 20px;
+        margin:-5px 0 20px;
         padding-right: 20px;
     }
     .search_li li p{
@@ -4104,12 +4096,18 @@ textarea {
         content: url('../img/black_arrow.png');
         margin-right:-15px;
         float: right;
-        margin-top: -21px;
     }
     .video_i {
         font:17px 'open_sansbold';
         color:#7c4d7c;
         padding-right:20px;
+    }
+    .bgr .img img{
+        max-width:400px;
+        max-height:510px;
+    }
+    .right > article.atn:before{
+        border:0px;
     }
 }
 @media only screen and (max-width : 1525px) {
@@ -4152,6 +4150,13 @@ textarea {
     }
     section .wrap.site_map .map_cont .left{
         width:700px;
+    }
+    .info .img img{
+        max-width: 348px;
+        max-height: 220px;
+    }
+    .a_box.v_g .left{
+        margin-left:0px;
     }
 }
 @media only screen and (max-width : 1280px){
@@ -4197,5 +4202,215 @@ textarea {
     }
     .personal{
         width: 425px;
+    }
+    .emrg .ul_title .left{
+        width: 275px;
+    }
+    .emrg .ul_title .right,.emrg ul li .right{
+        width: 539px;
+    }
+    .emrg ul li .left{
+        width:250px;
+    }
+}
+@media only screen and (max-width : 1024px){
+    .top_menu .left img,header .contact .contact_us{
+        display:none;
+    }
+    header .contact .tel{
+        margin-right:10px;
+    }
+    section > .wrap > .left{
+        width: 65%;
+    }
+    section > .wrap .right{
+        width: 30%;
+    }
+    section > .wrap{
+        max-width:1024px;
+    }
+    .right_menu{
+        width:100%;
+    }
+    .bsa_tel, .bsa_fax, .bsa_email{
+        min-width: 180px;
+        margin-left: 20px;
+    }
+    .bsa_content span{
+        font: 16px 'open_sanssemibold';
+    }
+    .bsa_content p{
+        font: 16px 'open_sanssemibold';
+    }
+    .bsa_head{
+        font: 22px 'open_sansbold';
+        line-height: 53px;
+    }
+    .c_title{
+        font: 33px 'open_sansbold';
+    }
+    .ncd h1{
+        font: 22px 'open_sanssemibold';
+    }
+    section > .wrap > .left > ul > li > span{
+        max-width: 95%;
+    }
+    .img img{
+        max-width: 330px;
+    }
+    ul.detail li a{
+        width:100%;
+    }
+    .a_box.v_g >.right{
+        width: 40%;
+        margin: 0px;
+    }
+    table.taxe tbody tr td:first-child{
+        min-width:220px;
+    }
+    .bgr .img img {
+        max-width: 300px;
+        max-height: 380px;
+    }
+    .bgr .img{
+        margin-right:50px;
+    }
+    .vp_name{
+        font: 28px 'open_sansbold';
+    }
+    .bgr .quote{
+        width: 300px;
+    }
+    .bgr .info > ul > li .left{
+        width: 25%;
+    }
+    .search input[type=text]{
+        width: 225px;
+    }
+    .com_box span.fun{
+        width: 30%;
+    }
+    .com_box span.soc{
+        width: 25%;
+    }
+    .clu_img img{
+        max-width: 125px;
+        max-height: 160px;
+    }
+    .clu_partid{
+        max-width:100%;
+    }
+    .c_l_u span{
+        font-size:15px;
+    }
+    .menu .box{
+        width: 200px;
+        min-height: 200px;
+    }
+    .menu .box .menu_img{
+        height: 130px;
+        line-height: 130px;
+    }
+    section .menu .box, section .menu .box:last-child{
+        margin: 60px 20px;
+    }
+    .menu{
+        padding-bottom:0px;
+    }
+    .menu .box .menu_title{
+        font: 20px 'open_sansbold';
+    }
+    section .logo{
+        margin-top: 30px;
+    }
+    section .logo img{
+        max-width: 50%;
+    }
+    section > .wrap .right.global{
+        margin:0px;
+        width:50%;
+    }
+    section > .wrap .left.global{
+        width:50%;
+    }
+    .contact.left.form{
+        display:none;
+    }
+    .wrap .left.ccc{
+        margin-right:50px;
+    }
+    ul.culture li .right{
+        width:100%;
+        margin:0px;
+    }
+    ul.culture li .left.img{
+        display:none;
+    }
+    ul.faq li a,ul.faq li a span{
+        font: 17px 'open_sanssemibold';
+    }
+    ul.faq li p{
+        font: 13px 'open_sanssemibold';
+    }
+    section .wrap.site_map .map_cont .h_list p a{
+        font: 16px 'open_sansbold';
+    }
+    section .wrap.site_map p.map_sub{
+        font: 22px 'open_sansbold';
+    }
+    section .wrap.site_map .map_cont .left,section .wrap.site_map .map_cont .right{
+        width:45%;
+    }
+    .city_box{
+        width: 100%;
+    }
+    .city_box .title{
+        font: 22px 'open_sanssemibold';
+    }
+    .personal{
+        width:100%;
+    }
+    p.descr{
+        max-width: 340px;
+    }
+    .form form{
+        padding: 0px 90px 40px 40px;
+    }
+    table.plc > tbody > tr > td:first-child{
+        display:none;
+    }
+    table.plc > tbody > tr > td > a{
+        font: 16px 'open_sansbold';
+    }
+    table.plc table,table.plcu > thead > tr > td,table.plcu > tbody > tr > th, table.plcu > thead > tr > th,table.plcu > tbody > tr > td,table.plcu strong,table.plcu p,table.plcu table,
+    table.plc table tr td:first-child{
+        font-size:15px;
+    }
+    table.plcu .word, table.plcu .doc, table.plcu .pdf, table.plcu .docx, table.plcu .xls, table.plcu .xlsx{
+        font-size:15px;
+    }
+    .sec_img img{
+        width:100%;
+    }
+    section > .wrap > .left > ul > li > span.crt_details,section > .wrap > .left > ul > li > span.sec_criteria{
+        display:block;
+        font-size:15px;
+        padding-bottom:0px;
+        width:100%;
+    }
+    .prg{
+        font-size:22px;
+    }
+    table.sondaje tbody tr td:nth-child(2){
+        width:450px;
+    }
+    table.sondaje td:nth-child(2) span{
+        padding:0px 5px;
+    }
+    .det_news{
+        font-size:22px;
+    }
+    .emrg .ul_title .right, .emrg ul li .right{
+        width: 340px;
     }
 }
