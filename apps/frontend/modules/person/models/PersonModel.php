@@ -23,11 +23,21 @@ class PersonModel extends Eloquent {
             foreach ($groups as &$group) {
                 $persons = PersonModel::join(PersonLangModel::getTableName(), PersonLangModel::getField("person_id"), '=', PersonModel::getField("id"))
                         ->join(PersonRelModel::getTableName(), PersonRelModel::getField("person_id"), '=', PersonModel::getField("id"))
-                        ->leftJoin(Files::getTableName(), Files::getField("module_id"), '=', PersonModel::getField("id"))
+                        ->leftJoin(Files::getTableName(), function($join) {
+                            $join->on(Files::getField("module_id"), '=', PersonModel::getField("id"));
+                            $join->on(Files::getField("module_name"), '=', DB::raw("'person'"));
+                        })
                         ->where(PersonLangModel::getField("lang_id"), \Core\APL\Language::getId())
                         ->where(PersonRelModel::getField("group_id"), $group->id)
-                        ->where(Files::getField("module_name"), 'person')
                         ->get();
+
+                foreach ($persons as &$person) {
+                    if ($person->feed_id) {
+                        $person['posts'] = \Post::postsFeed($person->feed_id);
+                    } else {
+                        $person['posts'] = array();
+                    }
+                }
 
                 $group['persons'] = $persons;
             }

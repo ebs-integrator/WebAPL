@@ -17,7 +17,8 @@
         echo Template::moduleView($module, 'views.tab-general', array(
             'person' => $person,
             'selected_groups' => $selected_groups,
-            'person_groups' => $person_groups
+            'person_groups' => $person_groups,
+            'feeds' => $feeds
         ));
         ?>
     </div>

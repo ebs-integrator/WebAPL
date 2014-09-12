@@ -38,7 +38,7 @@
         <tr>
             <th>View mod:</th>
             <td>
-                <select name="page[view_mod]" class='form-control'>
+                <select name="page[view_mod]" class='chzn-select'>
                     <option value="">Default</option>
                     <?php foreach ($view_mods as $view_key => $view_mod) { ?>
                         <option value="<?= $view_key; ?>" <?= isset($page->view_mod) && $page->view_mod == $view_key ? 'selected' : ''; ?>><?= $view_mod['name']; ?></option>
@@ -49,7 +49,7 @@
         <tr>
             <th>Date: </th>
             <td>
-                <input type="text" name="page[created_at]" class='form-control' value='<?= isset($page->created_at) ? $page->created_at : ''; ?>' />
+                <input type="text" name="page[created_at]" class='form-control datetimepicker' data-date-format="YYYY-MM-DD hh:mm:ss" value='<?= isset($page->created_at) ? $page->created_at : ''; ?>' />
             </td>
         </tr>
         <tr>
