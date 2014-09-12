@@ -37,7 +37,7 @@
                 <div class="clearfix"></div>
             </div>
             <div class="hr_grey"></div>
-            <div class="fb-comments" data-href="http://example.com/comments" data-width="870" data-numposts="2" data-colorscheme="light"></div>
+            <div class="fb-comments" data-href="http://example.com/comments" data-width="100%" data-numposts="2" data-colorscheme="light"></div>
         </div>
         <div class="right">
             <ul class='detail'>
