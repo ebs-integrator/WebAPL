@@ -18,7 +18,7 @@
                     <div><input type='radio' name='pr_pb' id='rad2'/>
                         <label for='rad2'>Nu</label></div>
                     <div><input type='radio' name='pr_pb' id='rad3'/>
-                        <label for='rad2'>Nu stiu</label></div>
+                        <label for='rad3'>Nu stiu</label></div>
                 </div>
                 <hr class="reg">
                 <p class="int_code">Introduceti codul, previne voturile automate</p>
