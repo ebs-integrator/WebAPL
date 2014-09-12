@@ -47,6 +47,7 @@
                     <p class="video_i">Prelegere publică la ULIM: ”Politica de securitate a statelor neutre din Europa”</p>
                 </div>
             </div>
+            <div class="clearfix"></div>
             <div class="pag">
                 <span class="w_p">Pagina</span>
                 <span class="p_n"><a href="javascript:;">Precedenta</a></span>
@@ -67,7 +68,7 @@
                 <li><a href="javascript:;">Adresează o întrebare primarului </a></li>
             </ul>
         </div>
-        <div class='clearfix'></div>
+        <div class='clearfix50'></div>
 
 
 
