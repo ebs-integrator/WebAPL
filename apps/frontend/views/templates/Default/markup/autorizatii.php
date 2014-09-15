@@ -9,7 +9,18 @@
     </div>
     <div class="wrap">
         <p class="c_title">Autorizații și certificate</p>
-
+        <div class='right'>
+            <ul class="right_menu">
+                <li class="active"><a href="javascript:;">Autorizația pentru unități comerciale</a></li>
+                <li><a href="javascript:;">Autorizația de construcție</a></li>
+                <li><a href="javascript:;">Autorizația de desființare</a></li>
+                <li><a href="javascript:;">Certificatul de urbanism pentru proiectare</a></li>
+                <li><a href="javascript:;">Certificat privind lipsa / existența restanțelor</a></li>
+                <li><a href="javascript:;">Certificat privind componenta familiei</a></li>
+                <li class="li_b"><a href="javascript:;">Certificate necesare pentru construcția casei sau a unui obiectiv comercial</a></li>
+                <li class="li_b"><a href="javascript:;">Întrebări frecvente/ Modele de cereri / Ghid de completare a cererii</a></li>
+            </ul>
+        </div>
         <div class='left'>        
             <table class="atz">
                 <tbody>
@@ -33,35 +44,19 @@
                                 <li><span>Schema de amplasare a unităţii comerciale (pentru gherete, tarabe şi alte unităţi mobile);</span></li>
                                 <li><span>Contractul de locaţiune sau titlul de autentificare a deţinătorului de teren;</span></li>
                                 <li><span>Autorizaţia sanitară de funcţionare, pentru toate tipurile de unităţi comerciale şi/sau prestare servicii, iar în cazul autorizării magazinelor alimentare şi unităţilor de alimentaţie publică suplimentar şi asortimentul produselor comercializate;
-                                    Autorizaţia sanitară veterinară de funcţionare</span> </li>
+                                        Autorizaţia sanitară veterinară de funcţionare</span> </li>
                             </ol>
                         </td></tr>
                 </tbody>
             </table>
-            
+
             <ul class="atz">
                 <li class="pdf">
                     <span>Cerere eliberare acord de functionare </span><a href="javascript:;" class="active"></a>
                 </li>      
             </ul>
         </div>
-
-        <div class='right'>
-            <ul class="right_menu">
-                <li class="active"><a href="javascript:;">Autorizația pentru unități comerciale</a></li>
-                <li><a href="javascript:;">Autorizația de construcție</a></li>
-                <li><a href="javascript:;">Autorizația de desființare</a></li>
-                <li><a href="javascript:;">Certificatul de urbanism pentru proiectare</a></li>
-                <li><a href="javascript:;">Certificat privind lipsa / existența restanțelor</a></li>
-                <li><a href="javascript:;">Certificat privind componenta familiei</a></li>
-                <li class="li_b"><a href="javascript:;">Certificate necesare pentru construcția casei sau a unui obiectiv comercial</a></li>
-                <li class="li_b"><a href="javascript:;">Întrebări frecvente/ Modele de cereri / Ghid de completare a cererii</a></li>
-            </ul>
-        </div>
         <div class='clearfix50'></div>
-
-
-
         <div class='socials'>
             <div id="vk_like"></div>
             <div id="ok_shareWidget"></div>

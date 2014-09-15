@@ -10,7 +10,16 @@
     </div>
     <div class="wrap">
         <p class="c_title">Primarul</p>
-
+        <div class='right'>
+            <ul class="right_menu">
+                <li><a href="javascript:;">Biografia primarului</a></li>
+                <li><a href="javascript:;">Declarații de venituri și active</a></li>
+                <li><a href="javascript:;">Rapoartele anuale</a></li>
+                <li><a href="javascript:;">Planul de acțiune pe anul curent</a></li>
+                <li class="active" ><a href="javascript:;">Promisiunile primarului </a></li>
+                <li><a href="javascript:;">Discursuri și prelegeri publice </a></li>
+            </ul>
+        </div>
         <div class='left'>
             <div class="subt">Construire a 2 școli noi </div>
             <div class="info">
@@ -29,23 +38,14 @@
 
         </div>
 
-        <div class='right'>
-            <ul class="right_menu">
-                <li><a href="javascript:;">Biografia primarului</a></li>
-                <li><a href="javascript:;">Declarații de venituri și active</a></li>
-                <li><a href="javascript:;">Rapoartele anuale</a></li>
-                <li><a href="javascript:;">Planul de acțiune pe anul curent</a></li>
-                <li class="active" ><a href="javascript:;">Promisiunile primarului </a></li>
-                <li><a href="javascript:;">Discursuri și prelegeri publice </a></li>
-            </ul>
-        </div>
+
         <div class='clearfix'></div>
         <div class="slider">
             <ul class="bxslider g_slide">
-                <li><img src="<?=res('assets/img/slide.png');?>"></li>
-                <li><img src='<?=res("assets/img/slide2.png");?>'></li>
-                <li><img src="<?=res('assets/img/slide.png');?>"></li>
-                <li><img src="<?=res('assets/img/slide3.png');?>"></li>
+                <li><img src="<?= res('assets/img/slide.png'); ?>"></li>
+                <li><img src='<?= res("assets/img/slide2.png"); ?>'></li>
+                <li><img src="<?= res('assets/img/slide.png'); ?>"></li>
+                <li><img src="<?= res('assets/img/slide3.png'); ?>"></li>
             </ul>
             <div class="clearfix10"></div>
             <p class="counter"><span class='current'></span>/<span class='total'></span></p>

@@ -7,11 +7,19 @@
         </div>
     </div>
     <div class="wrap">
-        <p class="c_title">Consultări publice</p>        
+        <p class="c_title">Consultări publice</p>   
+        <div class='right'>
+            <ul class="right_menu">
+                <li class="li_b"><a href="javascript:;">Proiecte de decizii propuse spre consultare cu publicul și materialele aferente</a></li>
+                <li class="li_b"><a href="javascript:;">Proiecte consultate, Sinteza recomandărilor recepționate, procesul verbal </a></li>
+                <li><a href="javascript:;">Dezbateri publice</a></li>
+                <li class="active"><a href="javascript:;">Sondaje on-line</a></li>
+            </ul>
+        </div>
         <div class='left'>                
             <p class="adv">Raspunsurile dumneavoastra au fost inregistrate cu succes! Va multumim! Puteti urmari rezultatele curente ale sondajului:</p>
             <p class="snd_title">Credeti ca va merge Romania bine vreodata avand in vedere ultimii 24 de ani si evolutia clasei politice?</p>
-            
+
             <table class="sondaje">
                 <tbody>
                     <tr>
@@ -33,22 +41,9 @@
                         </td><td> 1 raspuns</td>
                     </tr>
                 </tbody>
-            </table>
-            
-        </div>
-
-        <div class='right'>
-            <ul class="right_menu">
-                <li class="li_b"><a href="javascript:;">Proiecte de decizii propuse spre consultare cu publicul și materialele aferente</a></li>
-                <li class="li_b"><a href="javascript:;">Proiecte consultate, Sinteza recomandărilor recepționate, procesul verbal </a></li>
-                <li><a href="javascript:;">Dezbateri publice</a></li>
-                <li class="active"><a href="javascript:;">Sondaje on-line</a></li>
-            </ul>
-        </div>
+            </table>            
+        </div>        
         <div class='clearfix'></div>
-
-
-
         <div class='socials'>
             <div id="vk_like"></div>
             <div id="ok_shareWidget"></div>

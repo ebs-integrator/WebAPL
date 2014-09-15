@@ -10,7 +10,12 @@
     </div>
     <div class="wrap">
         <p class="c_title">Primarul</p>
-
+        <div class='right'>
+            <ul class="right_menu">
+                <li><a href="javascript:;">Viceprimarii</a></li>
+                <li class="active"><a href="javascript:;">Declarații de venituri și active</a></li>
+            </ul>
+        </div>
         <div class='left'>
             <ul class="dcr">
                 <li><a href='javascript:;'> Declaratii de avere 2012 <span class="more"></span></a>
@@ -31,10 +36,8 @@
 
                                 <a href="javascript:;" class="dcr_dwnl"></a>
                             </li>
-
                         </ul>
                     </div>
-
                 </li>
                 <li><a href='javascript:;'> Declaratii de avere 2011 <span class="more"></span></a>
                     <div class='dcr_box'>
@@ -54,10 +57,8 @@
 
                                 <a href="javascript:;" class="dcr_dwnl"></a>
                             </li>
-
                         </ul>
                     </div>
-
                 </li>
                 <li><a href='javascript:;'> Declaratii de avere 2010 <span class="more"></span></a>
                     <div class='dcr_box'>
@@ -77,10 +78,8 @@
 
                                 <a href="javascript:;" class="dcr_dwnl"></a>
                             </li>
-
                         </ul>
                     </div>
-
                 </li>
                 <li><a href='javascript:;'> Declaratii de avere 2009 <span class="more"></span></a>
                     <div class='dcr_box'>
@@ -100,10 +99,8 @@
 
                                 <a href="javascript:;" class="dcr_dwnl"></a>
                             </li>
-
                         </ul>
                     </div>
-
                 </li>
                 <li><a href='javascript:;'> Declaratii de avere 2008 <span class="more"></span></a>
                     <div class='dcr_box'>
@@ -123,10 +120,8 @@
 
                                 <a href="javascript:;" class="dcr_dwnl"></a>
                             </li>
-
                         </ul>
                     </div>
-
                 </li>
                 <li><a href='javascript:;'> Declaratii de avere 2007 <span class="more"></span></a>
                     <div class='dcr_box'>
@@ -146,10 +141,8 @@
 
                                 <a href="javascript:;" class="dcr_dwnl"></a>
                             </li>
-
                         </ul>
                     </div>
-
                 </li>
                 <li><a href='javascript:;'> Declaratii de avere 2006 <span class="more"></span></a>
                     <div class='dcr_box'>
@@ -169,10 +162,8 @@
 
                                 <a href="javascript:;" class="dcr_dwnl"></a>
                             </li>
-
                         </ul>
                     </div>
-
                 </li>
                 <li><a href='javascript:;'> Declaratii de avere 2005 <span class="more"></span></a>
                     <div class='dcr_box'>
@@ -195,19 +186,7 @@
 
                         </ul>
                     </div>
-
                 </li>
-
-
-            </ul>
-
-
-        </div>
-
-        <div class='right'>
-            <ul class="right_menu">
-                <li><a href="javascript:;">Viceprimarii</a></li>
-                <li class="active"><a href="javascript:;">Declarații de venituri și active</a></li>
             </ul>
         </div>
         <div class='clearfix'></div>

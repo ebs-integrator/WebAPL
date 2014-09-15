@@ -9,12 +9,21 @@
     </div>
     <div class="wrap">
         <p class="c_title">Educație</p>
-
+        <div class='right'>
+            <ul class="right_menu">
+                <li  class="active"><a href="javascript:;"> Grădinițe, gimnazii, licee</a></li>
+                <li><a href="javascript:;">Colegiul și Universitatea</a></li>
+                <li><a href="javascript:;">Biblioteca, Muzeul și Teatrul </a></li>
+                <li><a href="javascript:;">Parcuri, zone de odihnă și sport</a></li>
+                <li><a href="javascript:;">Atracții turistice</a></li>
+                <li><a href="javascript:;">Despre orașul Strășeni </a></li>
+            </ul>
+        </div>
         <div class='left'>                
             <ul class='culture'>
                 <li>
                     <div class="left img">
-                        <img src="<?=res('assets/img/edu.png');?>" />
+                        <img src="<?= res('assets/img/edu.png'); ?>" />
                     </div>
                     <div class="right">
                         <p>Gradinita: MishMail	</p>
@@ -34,7 +43,7 @@
                 </li>
                 <li>
                     <div class="left img">
-                        <img src="<?=res('assets/img/edu2.png');?>" />
+                        <img src="<?= res('assets/img/edu2.png'); ?>" />
                     </div>
                     <div class="right">
                         <p>Gradinita: Tom si Jerry</p>
@@ -54,7 +63,7 @@
                 </li>
                 <li>
                     <div class="left img">
-                        <img src="<?=res('assets/img/edu3.png');?>" />
+                        <img src="<?= res('assets/img/edu3.png'); ?>" />
                     </div>
                     <div class="right">
                         <p>Gradinita: Spiridus</p>
@@ -71,28 +80,10 @@
                             <p><a href="www.satiricus.md">web:  www.satiricus.md</a></p>
                         </div>
                     </div>
-                </li>
-                
-            </ul>
-
-
-            
-
-
-        </div>
-
-        <div class='right'>
-            <ul class="right_menu">
-                <li  class="active"><a href="javascript:;"> Grădinițe, gimnazii, licee</a></li>
-                <li><a href="javascript:;">Colegiul și Universitatea</a></li>
-                <li><a href="javascript:;">Biblioteca, Muzeul și Teatrul </a></li>
-                <li><a href="javascript:;">Parcuri, zone de odihnă și sport</a></li>
-                <li><a href="javascript:;">Atracții turistice</a></li>
-                <li><a href="javascript:;">Despre orașul Strășeni </a></li>
-            </ul>
+                </li>                
+            </ul>       
         </div>
         <div class='clearfix'></div>
-
         <div class='socials'>
             <div id="vk_like"></div>
             <div id="ok_shareWidget"></div>

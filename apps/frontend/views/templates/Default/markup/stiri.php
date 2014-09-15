@@ -7,6 +7,17 @@
     </div>
     <div class="wrap">
         <p class="c_title">Noutăți</p>
+        <div class="right">                
+            <p class='n_title'>arhivă</p>
+            <ul class="right_menu">
+                <li><a href="javascript:;">2014</a></li>
+                <li><a href="javascript:;">2013</a></li>
+                <li><a href="javascript:;">2012</a></li>
+                <li><a href="javascript:;">2011</a></li>
+                <li><a href="javascript:;">2010</a></li>                    
+                <a href='javascript:;' class="more"></a>
+            </ul>
+        </div>
         <div class="left">
             <div class="m_criteria">
                 <a href="javascript:;" class="left"></a>
@@ -18,11 +29,11 @@
                 <div class="hr_dbl"></div>
                 <div class="left">
                     <div class="img">
-                        <img src="<?=res('assets/img/news.png');?>">
+                        <img src="<?= res('assets/img/news.png'); ?>">
                     </div>
                     <div class="details">
                         <p class="data">24 Iul 2014, 15:03	
-                            <img src='<?=res("assets/img/gr_arrow.png");?>' class='arrow'>
+                            <img src='<?= res("assets/img/gr_arrow.png"); ?>' class='arrow'>
                         </p>
                         <p class='cont'></p>
                     </div>
@@ -39,11 +50,11 @@
                 <div class="hr_dbl"></div>
                 <div class="left">
                     <div class="img">
-                        <img src="<?=res('assets/img/news.png');?>">
+                        <img src="<?= res('assets/img/news.png'); ?>">
                     </div>
                     <div class="details">
                         <p class="data">24 Iul 2014, 15:03	
-                            <img src='<?=res("assets/img/gr_arrow.png");?>' class='arrow'>
+                            <img src='<?= res("assets/img/gr_arrow.png"); ?>' class='arrow'>
                         </p>
                         <p class='cont'></p>
                     </div>
@@ -60,11 +71,11 @@
                 <div class="hr_dbl"></div>
                 <div class="left">
                     <div class="img">
-                        <img src="<?=res('assets/img/news.png');?>">
+                        <img src="<?= res('assets/img/news.png'); ?>">
                     </div>
                     <div class="details">
                         <p class="data">24 Iul 2014, 15:03	
-                            <img src='<?=res("assets/img/v_arrow.png");?>' class='arrow'>
+                            <img src='<?= res("assets/img/v_arrow.png"); ?>' class='arrow'>
                         </p>
                         <p class='cont'></p>
                     </div>
@@ -97,18 +108,7 @@
             </div>
             <div class="hr_grey"></div>
         </div>
-        <div class="right m_a">                
-            <p class='n_title'>arhivă</p>
-            <ul class="right_menu">
-                <li><a href="javascript:;">2014</a></li>
-                <li><a href="javascript:;">2013</a></li>
-                <li><a href="javascript:;">2012</a></li>
-                <li><a href="javascript:;">2011</a></li>
-                <li><a href="javascript:;">2010</a></li>                    
-                <a href='javascript:;' class="more"></a>
-            </ul>
 
-        </div>
     </div>
     <div class="clearfix"> </div>
 </section>

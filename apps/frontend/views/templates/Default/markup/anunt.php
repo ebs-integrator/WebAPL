@@ -10,6 +10,22 @@
     </div>
     <div class="wrap">
         <p class="c_title">anunțuri</p>
+        <div class="right">
+            <ul class='detail'>
+                <li class='email'>
+                    <a href='javascript:;'>info@straseni.gov.md</a>
+                </li>
+                <li class='fax'>
+                    <a href='javascript:;'>(0-237) 55-66-77</a>
+                </li>
+                <li class='chat'>
+                    <a href='javascript:;'>chat-online</a>
+                </li>
+                <li class='location'>
+                    <a href='javascript:;'>Cum ne găsiți</a>
+                </li>
+            </ul>
+        </div>
         <div class="left">
             <div class="a_box v_g">
                 <p class="title">Casa noua!!!! Urgent!!!!</p>
@@ -39,22 +55,7 @@
             </div>
 
         </div>
-        <div class="right">
-            <ul class='detail'>
-                <li class='email'>
-                    <a href='javascript:;'>info@straseni.gov.md</a>
-                </li>
-                <li class='fax'>
-                    <a href='javascript:;'>(0-237) 55-66-77</a>
-                </li>
-                <li class='chat'>
-                    <a href='javascript:;'>chat-online</a>
-                </li>
-                <li class='location'>
-                    <a href='javascript:;'>Cum ne găsiți</a>
-                </li>
-            </ul>
-        </div>
+
     </div>
     <div class="clearfix"> </div>
 </section>

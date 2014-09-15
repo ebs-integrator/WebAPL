@@ -2084,6 +2084,7 @@ textarea {
     }
     .u_a img{
         max-width:100%;
+        max-height:500px;
         height:auto;
     }
     .u_a .details {
@@ -3580,6 +3581,7 @@ textarea {
     }
     table.plcu > tbody > tr > th,table.plcu > thead > tr > th{
         font:17px 'open_sansbold';
+        vertical-align: top;
         color:#000;
     }
     table.plcu > thead > tr > th{
@@ -4109,6 +4111,10 @@ textarea {
     .right > article.atn:before{
         border:0px;
     }
+    .a_box.g_g .left .img img,.a_box.v_g .left .img img{
+        max-width: 350px;
+        max-height:350px;
+    }
 }
 @media only screen and (max-width : 1525px) {
     section > .wrap .left article,section > .wrap .left article:nth-child(2n){
@@ -4158,22 +4164,19 @@ textarea {
     .a_box.v_g .left{
         margin-left:0px;
     }
+    section > .wrap,section .dirs_menu .wrap{
+        padding:0 10px;
+    }
 }
-@media only screen and (max-width : 1280px){
+@media only screen and (max-width: 1280px){
     footer .right .left.search{
         display:none;
     }
     section .dirs_menu .wrap{
         padding-left:20px;
     }
-    .c_title{
-        padding-left:10px;
-    }
     section > .wrap .right{
         margin-right:10px;
-    }
-    section > .wrap .left{
-        margin-left:10px;
     }
     div.hr_grey{
         margin:10px;
@@ -4213,7 +4216,7 @@ textarea {
         width:250px;
     }
 }
-@media only screen and (max-width : 1024px){
+@media only screen and (min-width: 1024px) and (max-width: 1280px){
     .top_menu .left img,header .contact .contact_us{
         display:none;
     }
@@ -4223,11 +4226,16 @@ textarea {
     section > .wrap > .left{
         width: 65%;
     }
-    section > .wrap .right{
+    section > .wrap > .right{
         width: 30%;
     }
     section > .wrap{
         max-width:1024px;
+        padding: 0px 10px;
+    }
+    section .dirs_menu .wrap{        
+        padding: 0px 10px;
+        max-width: 1024px;
     }
     .right_menu{
         width:100%;
@@ -4273,7 +4281,7 @@ textarea {
         max-height: 380px;
     }
     .bgr .img{
-        margin-right:50px;
+        margin-right:45px;
     }
     .vp_name{
         font: 28px 'open_sansbold';
@@ -4413,4 +4421,184 @@ textarea {
     .emrg .ul_title .right, .emrg ul li .right{
         width: 340px;
     }
+    .a_box.g_g .left .img img, .a_box.v_g .left .img img {
+        max-width: 300px;
+        max-height: 300px;
+    }
+    .a_box.v_g >.right{
+        width: 45%;
+    }
+    table.taxe tbody tr td{
+        min-width: 105px;
+    }
+
+
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    header .contact .contact_us,footer .right,.top_menu .left img,header .contact .tel{
+        display:none;
+    }
+    header .logo{
+        max-width:180px;
+    }
+    section > .wrap > .right{
+        width:510px;
+        margin-bottom:45px;
+        float:none;
+    }
+    section .dirs_menu .wrap{
+        padding:0px 10px;
+        max-width: 768px;
+    }
+    section > .wrap{
+        padding: 0px 10px;
+        max-width:768px;
+    }
+    section > .wrap > .left{
+        width:100%;
+    }
+    .right_menu{
+        width:100%;
+    }
+    p,.ncd > p{
+        font-size:16px;
+    }
+    .ncd h1{
+        font-size: 20px;
+    }
+    .c_title{
+        font-size: 30px;
+    }
+    .bsa_tel, .bsa_fax, .bsa_email{
+        float:none;
+    }
+    .bsa_content{
+        height:auto;
+        padding-top: 1px;
+        padding-right: 30px;
+    }
+    .bsa_block{
+        float:left;
+    }
+    .bsa_block:after{
+        clear:both;
+    }
+    .bsa_head{
+        padding-right:30px;
+    }
+    .ath{
+        padding-right:30px;
+    }
+    .right ul.detail{
+        display:none;
+    }
+    .a_box.v_g.m_an,.clndr thead tr td:nth-child(3),.clndr tbody tr td:nth-child(3),.clndr thead tr:nth-child(2) td:nth-child(1),.clndr tbody tr td:nth-child(1){
+        display:none;
+    }
+    table.taxe.aprt thead tr td:nth-child(3),table.taxe.aprt tbody tr td:nth-child(3){
+        display:none;
+    }
+    .bgr .img img {
+        max-width: 230px;
+        max-height: 300px;
+    }
+    .vp_name{
+        font-size:25px;
+    }
+    .bgr .quote{
+        font-size: 16px;
+    }
+    button.vice_button{
+        width:210px;
+        background: url('../img/vice_btn.png') no-repeat 15px center #f9f9f9;
+        padding-left: 40px;
+        background-size: 30px;
+        height: 55px;
+    }
+    button.vice_button span.g_dot{
+        margin-left: 6px;
+    }
+    .bgr .info > ul > li .right{
+        width:65%;
+    }
+    .search_li li p span{
+        font-size: 20px;
+    }
+    .search_li li p{
+        font-size:15px;
+    }
+    .search_t{
+        font-size:18px;
+    }
+    .search_p,.sort_b p,.sort_b .selectboxit-container span, .selectboxit-container .selectboxit-options a,.sort_b .selectboxit-container .selectboxit-options a{
+        font-size:15px;
+    }
+    .search_li li p{
+        max-height: 110px;
+    }
+    ul.crt li{
+        font-size:16px;
+    }
+    .com_box span.nr{
+        display:none;
+    }
+    section .logo img{
+        max-width:50%;
+    }
+    section .menu .box, section .menu .box:last-child {
+        margin: 60px 10px;
+    }
+    .menu .box{
+        width: 160px;
+        min-height: 160px;
+    }
+    .menu .box .menu_img{
+        height: 100px;
+        line-height:100px;
+    }
+    .menu .box .menu_title{
+        width:160px;
+        font-size:17px;
+        height:60px;
+    }
+    .menu .box .menu_img img{
+        max-width: 45px;
+    }
+    .menu{
+        min-height: 290px;
+        padding:0px;
+    }
+    .right.global article{
+        margin-left:25px;
+    }
+    header button.chat{
+        margin-left:15px;
+    }
+    .contact.left.form,ul.culture li .left.img{
+        display:none;
+    }
+    .wrap .left .chat,section .wrap > .left .subt,.contact_r .prp{
+        display:none;
+    }
+    .contact_r .map_info{
+        margin-top:25px;
+    }
+    section > .wrap > .left.contact_r{
+        margin-top:55px;
+    }
+    ul.culture li .right{
+        margin-left:0px;
+    }
+    ul.faq li a,ul.faq li a span{
+        font-size:17px;
+    }
+    ul.faq li p{
+        font-size: 13px;
+    }
+    section .wrap.site_map .map_cont .right{
+        float:left;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px){
+    
 }

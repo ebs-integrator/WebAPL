@@ -9,6 +9,18 @@
     </div>
     <div class="wrap">
         <p class="c_title">Construiești o casă?</p>
+        <div class='right'>
+            <ul class="right_menu">
+                <li ><a href="javascript:;">Autorizația pentru unități comerciale</a></li>
+                <li><a href="javascript:;">Autorizația de construcție</a></li>
+                <li><a href="javascript:;">Autorizația de desființare</a></li>
+                <li><a href="javascript:;">Certificatul de urbanism pentru proiectare</a></li>
+                <li><a href="javascript:;">Certificat privind lipsa / existența restanțelor</a></li>
+                <li><a href="javascript:;">Certificat privind componenta familiei</a></li>
+                <li class="li_b active"><a href="javascript:;">Certificate necesare pentru construcția casei sau a unui obiectiv comercial</a></li>
+                <li class="li_b"><a href="javascript:;">Întrebări frecvente/ Modele de cereri / Ghid de completare a cererii</a></li>
+            </ul>
+        </div>
         <div class='left'>   
             <div class='ncd'>
                 <p>Atunci cand achizitionati terenul trebuie sa luati in calcul urmatoarele elemente:</p>
@@ -40,22 +52,8 @@
                 </p>
             </div>
         </div>
-        <div class='right'>
-            <ul class="right_menu">
-                <li ><a href="javascript:;">Autorizația pentru unități comerciale</a></li>
-                <li><a href="javascript:;">Autorizația de construcție</a></li>
-                <li><a href="javascript:;">Autorizația de desființare</a></li>
-                <li><a href="javascript:;">Certificatul de urbanism pentru proiectare</a></li>
-                <li><a href="javascript:;">Certificat privind lipsa / existența restanțelor</a></li>
-                <li><a href="javascript:;">Certificat privind componenta familiei</a></li>
-                <li class="li_b active"><a href="javascript:;">Certificate necesare pentru construcția casei sau a unui obiectiv comercial</a></li>
-                <li class="li_b"><a href="javascript:;">Întrebări frecvente/ Modele de cereri / Ghid de completare a cererii</a></li>
-            </ul>
-        </div>
+
         <div class='clearfix50'></div>
-
-
-
         <div class='socials'>
             <div id="vk_like"></div>
             <div id="ok_shareWidget"></div>

@@ -9,7 +9,16 @@
     </div>
     <div class="wrap ">
         <p class="c_title">Primarul</p>
-
+        <div class='right'>
+            <ul class="right_menu">
+                <li><a href="javascript:;">Biografia primarului</a></li>
+                <li><a href="javascript:;">Declarații de venituri și active</a></li>
+                <li><a href="javascript:;">Rapoartele anuale</a></li>
+                <li><a href="javascript:;">Planul de acțiune pe anul curent</a></li>
+                <li class="active" ><a href="javascript:;">Promisiunile primarului </a></li>
+                <li><a href="javascript:;">Discursuri și prelegeri publice </a></li>
+            </ul>
+        </div>
         <div class='left'>
             <ul class="prom">
                 <li>
@@ -37,16 +46,7 @@
 
         </div>
 
-        <div class='right'>
-            <ul class="right_menu">
-                <li><a href="javascript:;">Biografia primarului</a></li>
-                <li><a href="javascript:;">Declarații de venituri și active</a></li>
-                <li><a href="javascript:;">Rapoartele anuale</a></li>
-                <li><a href="javascript:;">Planul de acțiune pe anul curent</a></li>
-                <li class="active" ><a href="javascript:;">Promisiunile primarului </a></li>
-                <li><a href="javascript:;">Discursuri și prelegeri publice </a></li>
-            </ul>
-        </div>
+
         <div class='clearfix'></div>
 
         <div class='socials'>

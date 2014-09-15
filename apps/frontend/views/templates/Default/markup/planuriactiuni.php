@@ -10,7 +10,12 @@
     </div>
     <div class="wrap">
         <p class='c_title'>Rapoarte și documente </p>
-
+        <div class="right">
+            <ul class='right_menu'>
+                <li class='active'><a href='javascript:;'>Planuri de acțiune</a></li>
+                <li><a href="javascript:;">Rapoarte anuale</a></li>
+            </ul>
+        </div>
         <div class='left'>
             <div class='pda'>
                 <p class='sub_title'>Planurile de acţiune pentru reducerea zgomotului în raionul Strășeni</p>
@@ -28,15 +33,7 @@
                 </ul>
             </div>
         </div>
-        <div class="right">
 
-            <ul class='right_menu'>
-                <li class='active'><a href='javascript:;'>Planuri de acțiune</a></li>
-                <li><a href="javascript:;">Rapoarte anuale</a></li>
-            </ul>
-
-
-        </div>
         <div class='clearfix'></div>
         <div class='socials'>
             <div id="vk_like"></div>

@@ -9,7 +9,14 @@
     </div>
     <div class="wrap">
         <p class='c_title'>orașul</p>
-
+        <div class="right">
+            <ul class='right_menu'>
+                <li class='active'><a href="javascript:;">Cum să ajungi în oraș / Amplasarea geografică</a></li>
+                <li><a href='javascript:;'>Istoria orașului</a></li>
+                <li><a href='javascript:;'>Personalități marcante</a></li>
+                <li><a href='javascript:;'>Orașe înfrățite</a></li>
+            </ul>
+        </div>
         <div class='left'>
             <div class='city'>
                 <div id="map-canvas2" style="width:100%; height:310px;"></div>
@@ -41,17 +48,7 @@
                 <div class='hr_grey'></div>
             </div>
         </div>
-        <div class="right">
 
-            <ul class='right_menu'>
-                <li class='active'><a href="javascript:;">Cum să ajungi în oraș / Amplasarea geografică</a></li>
-                <li><a href='javascript:;'>Istoria orașului</a></li>
-                <li><a href='javascript:;'>Personalități marcante</a></li>
-                <li><a href='javascript:;'>Orașe înfrățite</a></li>
-            </ul>
-
-
-        </div>
         <div class='clearfix'></div>
     </div>
 </section>

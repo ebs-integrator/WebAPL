@@ -9,7 +9,14 @@
     </div>
     <div class="wrap">
         <p class="c_title">Modele de acte / formulare</p>
-
+        <div class='right'>
+            <ul class="right_menu">
+                <li class="active"><a href="javascript:;"> Formulare de cereri</a></li>
+                <li><a href="javascript:;">Formulare pentru certificate</a></li>
+                <li><a href="javascript:;">Formulare pentru taxe</a></li>                
+                <li><a href="javascript:;">Modele de cereri / plângeri</a></li>
+            </ul>
+        </div>
         <div class='left'>        
             <div class="search">
                 <input type="text" placeholder="Cauta modelul/formularul">
@@ -64,7 +71,7 @@
                 </li>
 
             </ul>
-            
+
             <div class="pag">
                 <span class="w_p">Pagina</span>
                 <span class="p_n"><a href="javascript:;">Precedenta</a></span>
@@ -77,15 +84,6 @@
                 </ul>
                 <span class="n_p"><a href="javascript:;">următoarea</a></span>
             </div>
-        </div>
-
-        <div class='right'>
-            <ul class="right_menu">
-                <li class="active"><a href="javascript:;"> Formulare de cereri</a></li>
-                <li><a href="javascript:;">Formulare pentru certificate</a></li>
-                <li><a href="javascript:;">Formulare pentru taxe</a></li>                
-                <li><a href="javascript:;">Modele de cereri / plângeri</a></li>
-            </ul>
         </div>
         <div class='clearfix50'></div>
 

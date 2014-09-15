@@ -9,7 +9,15 @@
     </div>
     <div class="wrap">
         <p class='c_title'>orașul</p>
+        <div class="right">
 
+            <ul class='right_menu'>
+                <li><a href="javascript:;">Cum să ajungi în oraș / Amplasarea geografică</a></li>
+                <li class='active'><a href='javascript:;'>Istoria orașului</a></li>
+                <li><a href='javascript:;'>Personalități marcante</a></li>
+                <li><a href='javascript:;'>Orașe înfrățite</a></li>
+            </ul>
+        </div>
         <div class='left'>
             <div class='city'>
                 <p>Orășelul cu această denumire e menționat documentar ca sat la 20 martie 1545, când Alexandru Voievod, domnul Moldovei, confirmă mănăstirii Pobrata o jumătate de moșie pe care călugării o aveau în dar de la jupâneasa Frățiman cu satul Curluceni. La 4 iulie 1774 îl aflăm în stăpânirea mănăstirii Frumoasa, cu 84 de gospodării cu răzeși și mazili. Orașul avea 2 preoți, biserica a fost construită în anul 1785, alături de alta veche. Sat mare și frumos, în anul 1870 aici erau 596 gospodării, 1840 bărbați și 1110 femei. Gospodarii țineau prisăci, vii și livezi frumoase, erau lemnari, tâmplari vestiți. La 6 ianuarie 1873 zemstva județeană trimite la Strășeni primul medic cu studii superioare, pe doctorul Feodor Constantinovichi Scordeli. La 1 iulie 1877 satul avea o bibliotecă sătească, uar în anul 1910 avea 2 școli și o biserică.</p>
@@ -38,17 +46,7 @@
                 </div>
             </div>
         </div>
-        <div class="right">
 
-            <ul class='right_menu'>
-                <li><a href="javascript:;">Cum să ajungi în oraș / Amplasarea geografică</a></li>
-                <li class='active'><a href='javascript:;'>Istoria orașului</a></li>
-                <li><a href='javascript:;'>Personalități marcante</a></li>
-                <li><a href='javascript:;'>Orașe înfrățite</a></li>
-            </ul>
-
-
-        </div>
         <div class='clearfix'></div>
         <div class='hr_grey'></div>
     </div>

@@ -9,6 +9,14 @@
     </div>
     <div class="wrap">
         <p class="c_title">Informații publice</p>
+        <div class="right">
+            <ul class="right_menu">
+                <li><a href="javascript:;">Anunțuri </a></li>
+                <li class="active"><a href="javascript:;">Achiziții publice </a></li>
+                <li ><a href="javascript:;">Posturi vacante curente</a></li>
+                <li><a href="javascript:;">Stagii și voluntariat în cadrul primăriei</a></li>
+            </ul>
+        </div>
         <div class="left">
             <div class='ldmbox'>
                 <div class="ath">
@@ -59,14 +67,7 @@
                 </div>
             </div>
         </div>
-        <div class="right">
-            <ul class="right_menu">
-                <li><a href="javascript:;">Anunțuri </a></li>
-                <li class="active"><a href="javascript:;">Achiziții publice </a></li>
-                <li ><a href="javascript:;">Posturi vacante curente</a></li>
-                <li><a href="javascript:;">Stagii și voluntariat în cadrul primăriei</a></li>
-            </ul>
-        </div>
+
 
 
         <div class="clearfix"></div>

@@ -36,7 +36,15 @@
     </div>
     <div class="wrap">
         <p class="c_title">Audierea cetățenilor</p>
-
+        <div class='right'>
+            <ul class="right_menu">
+                <li class="active"><a href="javascript:;">Programează-te on-line pentru o audiență</a></li>
+                <li><a href="javascript:;">Orarul audierilor</a></li>
+                <li><a href="javascript:;">Discută on-line cu primarul și consilierii locali</a></li>
+                <li><a href="javascript:;">Depune o plângere</a></li>
+                <li><a href="javascript:;">Întrebări frecvente </a></li>
+            </ul>
+        </div>
         <div class='left'>                
             <p>Pentru programarea audiențelor vă rugăm să transmiteți o scurtă prezentare a problemei ce urmează a fi discutată, precum și datele dvs. de contact la adresa de e-mail: relpubl@casan.ro.</p>
             <p> Totodată, puteți să vă adresați telefonic Biroului de Relații cu Asigurații la nr. de telefon: 0372.309.236.</p>
@@ -72,15 +80,7 @@
             </div>
         </div>
 
-        <div class='right'>
-            <ul class="right_menu">
-                <li class="active"><a href="javascript:;">Programează-te on-line pentru o audiență</a></li>
-                <li><a href="javascript:;">Orarul audierilor</a></li>
-                <li><a href="javascript:;">Discută on-line cu primarul și consilierii locali</a></li>
-                <li><a href="javascript:;">Depune o plângere</a></li>
-                <li><a href="javascript:;">Întrebări frecvente </a></li>
-            </ul>
-        </div>
+
         <div class='clearfix'></div>
 
         <div class='socials'>

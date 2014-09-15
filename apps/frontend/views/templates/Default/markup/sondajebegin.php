@@ -7,7 +7,15 @@
         </div>
     </div>
     <div class="wrap">
-        <p class="c_title">Consultări publice</p>        
+        <p class="c_title">Consultări publice</p>       
+        <div class='right'>
+            <ul class="right_menu">
+                <li class="li_b"><a href="javascript:;">Proiecte de decizii propuse spre consultare cu publicul și materialele aferente</a></li>
+                <li class="li_b"><a href="javascript:;">Proiecte consultate, Sinteza recomandărilor recepționate, procesul verbal </a></li>
+                <li><a href="javascript:;">Dezbateri publice</a></li>
+                <li class="active"><a href="javascript:;">Sondaje on-line</a></li>
+            </ul>
+        </div>
         <div class='left'>        
             <form action="" method="">
                 <p class="snd_title">Credeti ca va merge Romania bine vreodata avand in vedere ultimii 24 de ani si evolutia clasei politice?</p>
@@ -22,8 +30,6 @@
                 </div>
                 <hr class="reg">
                 <p class="int_code">Introduceti codul, previne voturile automate</p>
-
-
                 <div class="snd_code">
                     <input  type="text">
                     <div class="img_code">
@@ -44,28 +50,28 @@
             <p class="e_sond">Alte sondaje</p>
             <ul class="a_n">
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="<?=res('assets/img/d_arrow.png');?>"></span>
+                        <span> 29 Iul 2014 <img src="<?= res('assets/img/d_arrow.png'); ?>"></span>
                         <p>Ilegalizarea avortului </p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="<?=res('assets/img/d_arrow.png');?>"></span>
+                        <span> 29 Iul 2014 <img src="<?= res('assets/img/d_arrow.png'); ?>"></span>
                         <p>Până când vom mai fi umiliți </p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="<?=res('assets/img/d_arrow.png');?>"></span>
+                        <span> 29 Iul 2014 <img src="<?= res('assets/img/d_arrow.png'); ?>"></span>
                         <p>Alegeri Parlamentare 2014 </p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="<?=res('assets/img/d_arrow.png');?>"></span>
+                        <span> 29 Iul 2014 <img src="<?= res('assets/img/d_arrow.png'); ?>"></span>
                         <p>Cursuri gratuite pentru someri</p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="<?=res('assets/img/d_arrow.png');?>"></span>
+                        <span> 29 Iul 2014 <img src="<?= res('assets/img/d_arrow.png'); ?>"></span>
                         <p>Alegeri Parlamentare 2014 </p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="<?=res('assets/img/d_arrow.png');?>"></span>
+                        <span> 29 Iul 2014 <img src="<?= res('assets/img/d_arrow.png'); ?>"></span>
                         <p>Cat ai munci daca ai primi 500 de lei pe ora? </p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="<?=res('assets/img/d_arrow.png');?>"></span>
+                        <span> 29 Iul 2014 <img src="<?= res('assets/img/d_arrow.png'); ?>"></span>
                         <p>Sucuri Consumate in parc</p></a></li>
                 <li><a href="javascript:;">
-                        <span> 29 Iul 2014 <img src="<?=res('assets/img/d_arrow.png');?>"></span>
+                        <span> 29 Iul 2014 <img src="<?= res('assets/img/d_arrow.png'); ?>"></span>
                         <p>Sucuri Consumate in parc</p></a></li>
             </ul>
             <div class="pag">
@@ -80,23 +86,8 @@
                 </ul>
                 <span class="n_p"><a href="javascript:;">următoarea</a></span>
             </div>
-        </div>
-
-        <div class='right'>
-            <ul class="right_menu">
-                <li class="li_b"><a href="javascript:;">Proiecte de decizii propuse spre consultare cu publicul și materialele aferente</a></li>
-                <li class="li_b"><a href="javascript:;">Proiecte consultate, Sinteza recomandărilor recepționate, procesul verbal </a></li>
-                <li><a href="javascript:;">Dezbateri publice</a></li>
-                <li class="active"><a href="javascript:;">Sondaje on-line</a></li>
-            </ul>
-        </div>
+        </div>        
         <div class='clearfix'></div>
-
-
-
-
-
     </div>
-
     <div class='clearfix'></div>
 </section>

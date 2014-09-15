@@ -9,7 +9,12 @@
     </div>
     <div class="wrap">
         <p class="c_title">Dialogul cu cetățenii </p>
-
+        <div class='right'>
+            <ul class="right_menu">
+                <li class="active"><a href="javascript:;">Înregistrări video</a></li>
+                <li><a href="javascript:;">Adresează o întrebare primarului </a></li>
+            </ul>
+        </div>
         <div class='left'>                
             <div>                
                 <img src="<?= res('assets/img/video.png'); ?>">
@@ -60,18 +65,8 @@
                 </ul>
                 <span class="n_p"><a href="javascript:;">următoarea</a></span>
             </div>
-        </div>
-
-        <div class='right'>
-            <ul class="right_menu">
-                <li class="active"><a href="javascript:;">Înregistrări video</a></li>
-                <li><a href="javascript:;">Adresează o întrebare primarului </a></li>
-            </ul>
-        </div>
+        </div>        
         <div class='clearfix50'></div>
-
-
-
         <div class='socials'>
             <div id="vk_like"></div>
             <div id="ok_shareWidget"></div>

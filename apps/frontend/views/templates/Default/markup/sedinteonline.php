@@ -10,13 +10,6 @@
     </div>
     <div class="wrap">
         <p class="c_title">Privește on-line ședințele consiliului </p>
-
-        <div class='left'>                
-            <div class="video">                
-                <img src="<?= res('assets/img/video.png'); ?>">
-            </div>
-        </div>
-
         <div class='right'>
             <ul class="right_menu">
                 <li><a href="javascript:;">Agenda următoarei ședințe</a></li>
@@ -25,10 +18,12 @@
                 <li class="active"><a href="javascript:;">Privește on-line ședințele consiliului 	</a></li>
             </ul>
         </div>
+        <div class='left'>                
+            <div class="video">                
+                <img src="<?= res('assets/img/video.png'); ?>">
+            </div>
+        </div>
         <div class='clearfix'></div>
-
-
-
         <div class='socials'>
             <div id="vk_like"></div>
             <div id="ok_shareWidget"></div>
