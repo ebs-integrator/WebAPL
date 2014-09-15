@@ -9,3 +9,10 @@
         <?php } ?>
     </tbody>
 </table>
+
+
+<?php
+if (method_exists($feedPosts, 'links')) {
+    echo $feedPosts->links();
+}
+?>

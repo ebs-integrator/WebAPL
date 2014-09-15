@@ -12,3 +12,9 @@
         <?php } ?>
     </ul>
 </div>
+
+<?php
+if (method_exists($feedPosts, 'links')) {
+    echo $feedPosts->links();
+}
+?>

@@ -189,4 +189,26 @@ class Shortcodes {
         return $out;
     }
 
+    public static function strip($content) {
+        if (false === strpos($content, '[')) {
+            return $content;
+        }
+
+        if (empty(static::$shortcode_tags) || !is_array(static::$shortcode_tags)) {
+            return $content;
+        }
+
+        $pattern = static::regex();
+
+        return preg_replace_callback("/$pattern/s", array('Shortcodes', 'strip_tag'), $content);
+    }
+
+    public static function strip_tag($m) {
+        if ($m[1] == '[' && $m[6] == ']') {
+            return substr($m[0], 1, -1);
+        }
+
+        return $m[1] . $m[6];
+    }
+
 }

@@ -9,7 +9,7 @@ CKEDITOR.editorConfig = function( config ) {
     config.uiColor = '#4eb25c';
     
     config.removePlugins = 'about,save,forms';
-    config.extraPlugins = 'texttransform,wordcount,oembed';
+    config.extraPlugins = 'texttransform,wordcount,oembed,addmap';
     config.height = 400;
 
     config.colorButton_colors = '7c4d7c,4c4c4c,b6c57e,74b45a';

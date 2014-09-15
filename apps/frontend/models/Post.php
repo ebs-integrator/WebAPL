@@ -41,11 +41,17 @@ class Post extends Eloquent {
     }
 
     protected static function prepareQuery() {
-        return Post::join(PostLang::$ftable, PostLang::$ftable . ".post_id", '=', Post::$ftable . ".id")
-                        ->select(
-                                Post::columns()
-                        )
-                        ->where(PostLang::$ftable . ".lang_id", Language::getId())->where('taxonomy_id', self::$taxonomy);
+        $query = Post::join(PostLang::$ftable, PostLang::$ftable . ".post_id", '=', Post::$ftable . ".id")
+                ->select(
+                        Post::columns()
+                )
+                ->where(PostLang::$ftable . ".lang_id", Language::getId());
+
+        if (self::$taxonomy) {
+            $query = $query->where('taxonomy_id', self::$taxonomy);
+        }
+
+        return $query;
     }
 
     public static function registerInCache($row) {
@@ -246,6 +252,46 @@ class Post extends Eloquent {
                     'module_name' => 'post_cover',
                     'module_id' => $id
                 ))->get()->first();
+    }
+
+    public static function applyDate($post_instance, $year = '', $month = '', $day = '') {
+        if ($year) {
+            $post_instance = $post_instance->where(DB::raw("YEAR(" . Post::getField('created_at') . ")"), $year);
+        }
+        if ($month) {
+            $post_instance = $post_instance->where(DB::raw("MONTH(" . Post::getField('created_at') . ")"), $month);
+        }
+        if ($day) {
+            $post_instance = $post_instance->where(DB::raw("DAY(" . Post::getField('created_at') . ")"), $day);
+        }
+
+        return $post_instance;
+    }
+
+    public static function search($string, $paginate = true) {
+        $words = explode(' ', trim(strip_tags($string)));
+
+        if ($words) {
+            self::$taxonomy = 0;
+            $query = Post::prepareQuery();
+            $query = $query->where(function ($query) use ($words) {
+                foreach ($words as $word) {
+                    $word = trim($word);
+                    if ($word) {
+                        $query = $query->orWhere(PostLang::getField('title'), 'like', "%{$word}%");
+                        $query = $query->orWhere(PostLang::getField('text'), 'like', "%{$word}%");
+                    }
+                }
+            });
+
+            if ($paginate) {
+                return $query->paginate(10);
+            } else {
+                return $query->get();
+            }
+        } else {
+            return [];
+        }
     }
 
 }
