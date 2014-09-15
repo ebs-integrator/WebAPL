@@ -15,3 +15,9 @@
     <?php } ?>
     <div class="clearfix"></div>
 </div>
+
+<?php
+if (method_exists($feedPosts, 'links')) {
+    echo $feedPosts->links();
+}
+?>

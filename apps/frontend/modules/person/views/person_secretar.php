@@ -47,22 +47,20 @@ foreach ($groups as $group) {
         <div class="clearfix50"></div>
         <ul class="dcr">
             <?php foreach ($person->posts as $folder) { ?>
-                <li><a href='javascript:;'><?= $folder->title; ?></a>
+                <li><a href='javascript:;'><?= $folder->title; ?><span class="more"></span></a>
                     <div class='dcr_box'>
-                        <p class="ul_title"> <span>Nume fisier</span>Actualizat</p>
                         <ul>
                             <?php foreach ($folder->docs as $doc) { ?>
-                                <li class="word">
-                                    <span><?= $doc->name; ?></span>
-                                    <span><?= date('d/m/Y', strtotime($doc->date_uploaded)); ?></span>
-                                </li>
+                            <li class="<?=$doc->extension;?>">
+                                <span><a href="<?=url($doc->path);?>"><?= $doc->name; ?></a></span>
+                                <a href="<?=url($doc->path);?>" class="dcr_dwnl"></a>
+                            </li>
                             <?php } ?>
                         </ul>
                     </div>
                 </li>
             <?php } ?>
         </ul>
-
         <?php
     }
 }

@@ -20,7 +20,10 @@ Route::get('/', function () {
 Route::group(array('prefix' => Core\APL\Language::ext()), function() {
     Route::get('/', 'PageController@home');
     Route::get('page/{furi}', 'PageController@route')->where(array('furi' => '[A-Za-z0-9-\/]+'));
-    Route::get('home/{furi}', 'PageController@route')->where(array('furi' => '[A-Za-z0-9-]+'));
+    //Route::get('home/{furi}', 'PageController@route')->where(array('furi' => '[A-Za-z0-9-]+'));
+    
+    Route::get('search', 'SearchController@results');
+    Route::get('topost/{id}', 'SearchController@topost');
 });
 
 Route::get('language/{ext}', function ($ext) {

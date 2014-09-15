@@ -65,6 +65,18 @@ class Template {
             'projectsList' => array(
                 'name' => 'Lista de proiecte',
                 'function' => array('PageView', 'projectsList')
+            ),
+            'videoList' => array(
+                'name' => 'Lista cu video',
+                'function' => array('PageView', 'videoList')
+            ),
+            'adsList' => array(
+                'name' => 'Anunturi',
+                'function' => array('PageView', 'adsList')
+             ),
+            'newsList' => array(
+                'name' => 'Stiri',
+                'function' => array('PageView', 'newsList')
             )
         )
     );

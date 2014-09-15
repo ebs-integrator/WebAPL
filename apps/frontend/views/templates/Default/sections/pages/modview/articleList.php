@@ -22,3 +22,11 @@
         <div class="clearfix"></div>
     </div>
 <?php } ?>
+
+
+
+<?php
+if (method_exists($posts, 'links')) {
+    echo $posts->links();
+}
+?>

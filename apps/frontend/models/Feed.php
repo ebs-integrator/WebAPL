@@ -20,8 +20,21 @@ class Feed extends Eloquent {
                     ->first();
             static::$cache_feed[$feed_id] = $feed;
         }
-        
+
         return $feed;
+    }
+
+    public static function getYears($feed_id) {
+        return Post::join(FeedPost::getTableName(), FeedPost::getField('post_id'), '=', Post::getField('id'))
+                ->distinct()
+                ->orderBy(Post::getField('created_at'), 'desc')
+                ->select(DB::raw("YEAR(" . Post::getField('created_at') . ") as year"))
+                ->where(FeedPost::getField('feed_id'), '=', $feed_id)
+                ->get();
+    }
+    
+    public static function getMonths($feed_id, $year) {
+        
     }
 
 }

@@ -9,3 +9,10 @@
 </ul>
 
 <div class="clearfix"></div>
+
+
+<?php
+if (method_exists($posts, 'links')) {
+    echo $posts->links();
+}
+?>

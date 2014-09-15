@@ -9,5 +9,6 @@ class PostResources {
     public static function blockContact($params) {
         return View::make('sections.pages.blocks.contactDiv', $params);
     }
+    
 
 }
