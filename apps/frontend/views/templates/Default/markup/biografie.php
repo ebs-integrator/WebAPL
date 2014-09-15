@@ -10,7 +10,15 @@
     </div>
     <div class="wrap">
         <p class="c_title">Primarul</p>
-
+        <div class='right'>
+            <ul class='right_menu'>
+                <li class="active" ><a href='javascript:;'>Biografia primarului</a></li>
+                <li><a href='javascript:;'>Declarațiile cu privire la venituri și proprietate</a></li>
+                <li><a href="javascript:;">Planul de acțiuni pe anul curent </a></li>
+                <li><a href='javascript:;'>Programul de activitate al primarului</a></li>
+                <li><a href='javascript:;'>Raportul anual al primarului</a></li>
+            </ul>
+        </div>
         <div class='left'>
             <div class="bgr">
                 <div class="img">
@@ -111,15 +119,7 @@
             </ul>
         </div>
 
-        <div class='right'>
-            <ul class='right_menu'>
-                <li class="active" ><a href='javascript:;'>Biografia primarului</a></li>
-                <li><a href='javascript:;'>Declarațiile cu privire la venituri și proprietate</a></li>
-                <li><a href="javascript:;">Planul de acțiuni pe anul curent </a></li>
-                <li><a href='javascript:;'>Programul de activitate al primarului</a></li>
-                <li><a href='javascript:;'>Raportul anual al primarului</a></li>
-            </ul>
-        </div>
+
         <div class='clearfix'></div>
 
         <div class='socials'>

@@ -9,6 +9,14 @@
     </div>
     <div class="wrap">
         <p class="c_title">Posturi vacante curente</p>
+        <div class="right">
+            <ul class="right_menu">
+                <li><a href="javascript:;">Anunțuri </a></li>
+                <li><a href="javascript:;">Achiziții publice </a></li>
+                <li class="active" ><a href="javascript:;">Posturi vacante curente</a></li>
+                <li><a href="javascript:;">Stagii și voluntariat în cadrul primăriei</a></li>
+            </ul>
+        </div>
         <div class="left">
             <div class='ldmbox'>
                 <p class='title'>
@@ -43,7 +51,7 @@
                         <li>Evidenţa intrărilor şi ieşirilor mijloacelor băneşti (casa);</li>
                         <li>Păstrarea competentă şi veridică a evidenţei contabile;</li>
                     </ul>
-                    
+
                 </div>
                 <div class="ldm_middle">
                     <p class="tda">
@@ -66,15 +74,7 @@
                 </div>
                 <div class="hr_grey"></div>
             </div>
-        </div>
-        <div class="right">
-            <ul class="right_menu">
-                <li><a href="javascript:;">Anunțuri </a></li>
-                <li><a href="javascript:;">Achiziții publice </a></li>
-                <li class="active" ><a href="javascript:;">Posturi vacante curente</a></li>
-                <li><a href="javascript:;">Stagii și voluntariat în cadrul primăriei</a></li>
-            </ul>
-        </div>
+        </div>        
         <div class='left'>
             <ul class="l_a">
                 <li><a href="javascript:;">

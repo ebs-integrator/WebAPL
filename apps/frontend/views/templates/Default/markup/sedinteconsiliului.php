@@ -10,7 +10,14 @@
     </div>
     <div class="wrap">
         <p class="c_title">Ședințele Consiliului</p>
-
+        <div class='right'>
+            <ul class="right_menu">
+                <li class="active"><a href="javascript:;">Agenda următoarei ședințe</a></li>
+                <li ><a href="javascript:;">Agendele ședințelor anterioare </a></li>
+                <li><a href="javascript:;">Calendarul ședințelor viitoare</a></li>
+                <li><a href="javascript:;">Privește on-line ședințele consiliului </a></li>
+            </ul>
+        </div>
         <div class='left'>
             <ul class="sec_details left">
                 <li>
@@ -38,7 +45,7 @@
             <p>Primarul capitalei, Dorin Chirtoacă, le-a cerut responsabililor ca în această săptămână să înceapă și evaluarea pagubelelor produse de incendiu și ploi. Iar şi pe cele suportate de proprietarii apartamentelor situate la etajele de jos: ”Pot începe deja lucrările de reparație, primesc suma pentru compensații și acolo se poate introduce și două trei luni pentru chirie pentru a nu fi încurcate lucrurile”.</p>
             <p>''Pot începe deja lucrările de reparație, primesc suma pentru compensații și acolo se poate introduce și două trei luni pentru chirie pentru a nu fi încurcate lucrurile. Trebuie de început de la cazurile cele mai grave", a spus Dorin Chirtoacă.</p>
             <p>Pentru construcția acoperișului blocului, Primăria a alocat 3,5 milioane de lei.</p>
-            
+
 
             <div class="clearfix50"></div>
             <div class='socials'>
@@ -48,17 +55,7 @@
                 <div class="clearfix"></div>
             </div>
             <div class="hr_grey"></div>
-        </div>
-
-        <div class='right'>
-            <ul class="right_menu">
-                <li class="active"><a href="javascript:;">Agenda următoarei ședințe</a></li>
-                <li ><a href="javascript:;">Agendele ședințelor anterioare </a></li>
-                <li><a href="javascript:;">Calendarul ședințelor viitoare</a></li>
-                <li><a href="javascript:;">Privește on-line ședințele consiliului </a></li>
-            </ul>
-        </div>
+        </div>        
     </div>
-
     <div class='clearfix'></div>
 </section>

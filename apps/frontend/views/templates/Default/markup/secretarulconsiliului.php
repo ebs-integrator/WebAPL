@@ -9,7 +9,17 @@
     </div>
     <div class="wrap">
         <p class="c_title">Secretarul consiliului local</p>
-
+        <div class='right'>
+            <ul class="right_menu">
+                <li><a href="javascript:;">Ce este consiliul local?</a></li>
+                <li><a href="javascript:;">Ședințele Consiliului </a></li>
+                <li class="active"><a href="javascript:;">Secretarul consiliului local</a></li>
+                <li><a href="javascript:;">Consilierii locali și domeniile de responsabilitate</a></li>
+                <li><a href="javascript:;">Programul de audiență al consilierilor locali</a></li>
+                <li><a href="javascript:;">Arhiva deciziilor anterioare </a></li>
+                <li><a href="javascript:;">Taxa de cazare</a></li>
+            </ul>
+        </div>
         <div class='left'>                
             <div class="sec_img">
                 <img src="<?= res('assets/img/primar.png'); ?>">
@@ -145,20 +155,7 @@
                 <div class="clearfix"></div>
             </div>
             <div class="hr_grey"></div>
-        </div>
-
-        <div class='right'>
-            <ul class="right_menu">
-                <li><a href="javascript:;">Ce este consiliul local?</a></li>
-                <li><a href="javascript:;">Ședințele Consiliului </a></li>
-                <li class="active"><a href="javascript:;">Secretarul consiliului local</a></li>
-                <li><a href="javascript:;">Consilierii locali și domeniile de responsabilitate</a></li>
-                <li><a href="javascript:;">Programul de audiență al consilierilor locali</a></li>
-                <li><a href="javascript:;">Arhiva deciziilor anterioare </a></li>
-                <li><a href="javascript:;">Taxa de cazare</a></li>
-            </ul>
-        </div>
+        </div>        
     </div>
-
     <div class='clearfix'></div>
 </section>

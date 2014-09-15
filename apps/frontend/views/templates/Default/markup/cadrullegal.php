@@ -9,6 +9,17 @@
     </div>
     <div class="wrap">
         <p class="c_title">Rapoarte și documente </p>
+        <div class="right">
+            <ul class="right_menu">
+                <li><a href="javascript:;"> Primarul</a></li>
+                <li><a href="javascript:;"> Viceprimarii și declarații</a></li>
+                <li><a href="javascript:;">Aparatul primăriei</a></li>
+                <li><a href="javascript:;"> Organigrama primăriei</a></li>
+                <li class="active"><a href="javascript:;"> Cadrul legal al APL</a></li>
+                <li><a hre="javascript:;">Regulamentele interne </a></li>
+                <li><a hre="javascript:;">Noutăți</a></li>
+            </ul>
+        </div>
         <div class="left">
             <div class="cda">
                 <p class="ul_title">
@@ -97,17 +108,7 @@
             </div>
 
         </div>
-        <div class="right">
-            <ul class="right_menu">
-                <li><a href="javascript:;"> Primarul</a></li>
-                <li><a href="javascript:;"> Viceprimarii și declarații</a></li>
-                <li><a href="javascript:;">Aparatul primăriei</a></li>
-                <li><a href="javascript:;"> Organigrama primăriei</a></li>
-                <li class="active"><a href="javascript:;"> Cadrul legal al APL</a></li>
-                <li><a hre="javascript:;">Regulamentele interne </a></li>
-                <li><a hre="javascript:;">Noutăți</a></li>
-            </ul>
-        </div>
+
 
         <div class="clearfix"></div>
         <div class='socials'>

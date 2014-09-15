@@ -9,12 +9,6 @@
     </div>
     <div class="wrap">
         <p class="c_title">Primăria</p>
-        <div class='left '>                
-            <div class=org>
-                <img src='<?= res("assets/img/organigrama.png"); ?>' />
-            </div>
-        </div>
-
         <div class='right'>
             <ul class="right_menu">
                 <li><a href="javascript:;"> Primarul</a></li>
@@ -25,6 +19,11 @@
                 <li><a hre="javascript:;">Regulamentele interne </a></li>
                 <li><a hre="javascript:;">Noutăți</a></li>
             </ul>
+        </div>
+        <div class='left '>                
+            <div class=org>
+                <img src='<?= res("assets/img/organigrama.png"); ?>' />
+            </div>
         </div>
         <div class='clearfix50'></div>
         <div class='socials'>

@@ -9,7 +9,23 @@
     </div>
     <div class="wrap">
         <p class='c_title'>Beneficii sociale și ajutoare </p>
+        <div class="right">
 
+            <ul class='right_menu'>
+                <li><a href="javascript:;">Ajutoare sociale familiale</a></li>
+                <li><a href='javascript:;'>Bursa muncii / Ajutorul de șomaj </a></li>
+                <li><a href='javascript:;'>Pensionarea și ajutorul social</a></li>
+                <li><a href='javascript:;'>Consiliere socială </a></li>
+                <li><a href='javascript:;'>Puncte medicale locale</a></li>
+                <li><a href='javascript:;'>Decesul și ajutorul de deces</a></li>
+                <li><a href='javascript:;'>Adăposturi sociale și case de bătrâni </a></li>    
+                <li><a href='javascript:;'>Violența domestică / Cazuri de urgență</a></li>
+                <li class='active'><a href='javascript:;'>Raportează o fraudă socială</a></li>
+                <li class="li_b"><a href='javascript:;'>Întrebări frecvente / Modele de cereri / Ghid de completare a cererii </a></li>    
+            </ul>
+
+
+        </div>
         <div class='left'>
             <div class='ncd'>
                 <h1>Sunteţi îngrijorat în privinţa unui copil? </h1>
@@ -26,7 +42,7 @@
                 <p>Există posibilităţi de a ajuta copilul fără a-l separa pentru totdeauna de familie. În unele situaţii familiile pot fi ajutate de către asistentul social, psiholog sau alt specialis. . În alte cazuri, copilul poate fi referit la un Centru comunitar specializat în prevenirea abuzului sau plasat provizoriu într-un adăpost. Soluţiile pentru fiecare situaţie trebuie să urmărească interesul superior al copilului. </p>
                 <h1>„Mă tem de răzbunare”</h1>
                 <p>Legea asigură confidenţialitatea persoanei care raportează un caz de abuz sau neglijare a copilului. Persoanele care depun mărturii cu bună credinţă sunt apărate împotriva oricăror acuzaţii. Cel care dezvăluie identitatea persoanei care a raportat cazul este pasibil de pedeapsă civilă sau penală. Organele abilitate cu răspunderea de a primi şi a examina rapoarte despre abuz asupra copilului pot accepta şi declaraţii anonime a cetăţenilor. În acelaşi timp, cei care raportează sunt încurajaţi să lase date de contact pentru cazul în care va fi nevoie de altă informaţie. </p>
-                
+
                 <div class="bsa_block">
                     <p class="bsa_head">Raportează un abuz social</p>
                     <div class="bsa_content">
@@ -46,23 +62,7 @@
                 </div>
             </div>
         </div>
-        <div class="right">
 
-            <ul class='right_menu'>
-                <li><a href="javascript:;">Ajutoare sociale familiale</a></li>
-                <li><a href='javascript:;'>Bursa muncii / Ajutorul de șomaj </a></li>
-                <li><a href='javascript:;'>Pensionarea și ajutorul social</a></li>
-                <li><a href='javascript:;'>Consiliere socială </a></li>
-                <li><a href='javascript:;'>Puncte medicale locale</a></li>
-                <li><a href='javascript:;'>Decesul și ajutorul de deces</a></li>
-                <li><a href='javascript:;'>Adăposturi sociale și case de bătrâni </a></li>    
-                <li><a href='javascript:;'>Violența domestică / Cazuri de urgență</a></li>
-                <li class='active'><a href='javascript:;'>Raportează o fraudă socială</a></li>
-                <li class="li_b"><a href='javascript:;'>Întrebări frecvente / Modele de cereri / Ghid de completare a cererii </a></li>    
-            </ul>
-
-
-        </div>
         <div class='clearfix'></div>
         <div class='socials'>
             <div id="vk_like"></div>

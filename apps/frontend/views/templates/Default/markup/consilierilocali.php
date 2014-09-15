@@ -9,6 +9,16 @@
     </div>
     <div class="wrap">
         <p class="c_title">Consilieri locali</p>
+        <div class='right'>
+            <ul class="right_menu">
+                <li><a href="javascript:;">Ce este consiliul local?</a></li>
+                <li><a href="javascript:;">Ședințele Consiliului </a></li>
+                <li><a href="javascript:;">Secretarul consiliului local</a></li>
+                <li class="active"><a href="javascript:;">Consilierii locali și domeniile de responsabilitate</a></li>
+                <li><a href="javascript:;">Programul de audiență al consilierilor locali</a></li>
+                <li><a href="javascript:;">Arhiva deciziilor anterioare </a></li>
+            </ul>
+        </div>
         <div class='left'>
             <table class="cns_locali">
                 <thead>
@@ -23,7 +33,7 @@
                 <tr>
                     <td>
                         <div class="clu_img">
-                            <img src="<?=res('assets/img/b_pers.png');?>">
+                            <img src="<?= res('assets/img/b_pers.png'); ?>">
                         </div>
                         <div class="clu_cont">
                             <p class="clu_nume">Nume<span>Prenume</span></p>
@@ -74,7 +84,7 @@
                 <tr>
                     <td>
                         <div class="clu_img">
-                            <img src="<?=res('assets/img/b_pers.png');?>">
+                            <img src="<?= res('assets/img/b_pers.png'); ?>">
                         </div>
                         <div class="clu_cont">
                             <p class="clu_nume">Nume<span>Prenume</span></p>
@@ -125,7 +135,7 @@
                 <tr>
                     <td>
                         <div class="clu_img">
-                            <img src="<?=res('assets/img/b_pers.png');?>">
+                            <img src="<?= res('assets/img/b_pers.png'); ?>">
                         </div>
                         <div class="clu_cont">
                             <p class="clu_nume">Nume<span>Prenume</span></p>
@@ -172,22 +182,8 @@
                         </ul>
                     </td></tr>
             </table>
-        </div>
-
-        <div class='right'>
-            <ul class="right_menu">
-                <li><a href="javascript:;">Ce este consiliul local?</a></li>
-                <li><a href="javascript:;">Ședințele Consiliului </a></li>
-                <li><a href="javascript:;">Secretarul consiliului local</a></li>
-                <li class="active"><a href="javascript:;">Consilierii locali și domeniile de responsabilitate</a></li>
-                <li><a href="javascript:;">Programul de audiență al consilierilor locali</a></li>
-                <li><a href="javascript:;">Arhiva deciziilor anterioare </a></li>
-            </ul>
         </div>
         <div class='clearfix'></div>
-
-
-
         <div class='socials'>
             <div id="vk_like"></div>
             <div id="ok_shareWidget"></div>

@@ -9,7 +9,18 @@
     </div>
     <div class="wrap">
         <p class='c_title'>Strategii, planuri și politici</p>
-
+        <div class="right">
+            <ul class='right_menu'>
+                <li><a href="javascript:;">Strategia de Dezvoltare Socio-economică a orașului</a></li>
+                <li><a href='javascript:;'>Planul Urbanistic General </a></li>
+                <li><a href='javascript:;'>Planul de acțiuni privind eficiența energetică</a></li>
+                <li><a href='javascript:;'>Programul local de eficiență energetică </a></li>
+                <li class='active'><a href='javascript:;'>Politici de protecție a mediului</a></li>
+                <li><a href='javascript:;'>Planul de îmbunătățire a serviciului municipal</a></li>
+                <li><a href='javascript:;'>Politici de protecție a familiei și copilului </a></li>    
+                <li><a href='javascript:;'>Locuință și protecție socială</a></li>
+            </ul>
+        </div>
         <div class='left'>
             <div class='city'>
                 <p>Politica de protecţie a mediului înconjurător</p>
@@ -26,7 +37,7 @@
                 <p>Prin informări, şcolarizări şi perfecţionări profesionale regulate promovăm competenţele şi cunoştiinţele angajaţilor noştri şi a partenerilor noştri comerciali pentru a-şi desfăşura munca în condiţii de siguranţă şi cu un impact minim asupra mediului înconjurător în toate domeniile de activitate.</p>
                 <p>Măsuri preventive</p>
                 <p>Prin vaste măsuri preventive, protejăm angajaţii si clientii de influenţe dăunătoare sănătăţii, şi mediul înconjurător de efecte negative. Asigurăm resurse necesare şi eficiente pentru ajutor în cazuri de urgenţă</p>
-                
+
                 <div class='socials'>
                     <div id="vk_like"></div>
                     <div id="ok_shareWidget"></div>
@@ -35,21 +46,7 @@
                 </div>
             </div>
         </div>
-        <div class="right">
 
-            <ul class='right_menu'>
-                <li><a href="javascript:;">Strategia de Dezvoltare Socio-economică a orașului</a></li>
-                <li><a href='javascript:;'>Planul Urbanistic General </a></li>
-                <li><a href='javascript:;'>Planul de acțiuni privind eficiența energetică</a></li>
-                <li><a href='javascript:;'>Programul local de eficiență energetică </a></li>
-                <li class='active'><a href='javascript:;'>Politici de protecție a mediului</a></li>
-                <li><a href='javascript:;'>Planul de îmbunătățire a serviciului municipal</a></li>
-                <li><a href='javascript:;'>Politici de protecție a familiei și copilului </a></li>    
-                <li><a href='javascript:;'>Locuință și protecție socială</a></li>
-            </ul>
-
-
-        </div>
         <div class='clearfix'></div>
         <div class='hr_grey'></div>
     </div>

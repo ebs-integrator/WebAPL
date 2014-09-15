@@ -10,7 +10,16 @@
     </div>
     <div class="wrap">
         <p class='c_title'>Primarul</p>
+        <div class="right">
 
+            <ul class='right_menu'>
+                <li ><a href='javascript:;'>Biografia primarului</a></li>
+                <li><a href='javascript:;'>Declarațiile cu privire la venituri și proprietate</a></li>
+                <li class="active"><a href="javascript:;">Planul de acțiuni pe anul curent </a></li>
+                <li><a href='javascript:;'>Programul de activitate al primarului</a></li>
+                <li><a href='javascript:;'>Raportul anual al primarului</a></li>
+            </ul>
+        </div>
         <div class='left'>
             <div class='ncd'>
                 <h1>I. Etapele si categoriile mari de activitati ale proiectului</h1>
@@ -62,18 +71,7 @@
                 </div>
             </div>
         </div>
-        <div class="right">
 
-            <ul class='right_menu'>
-                <li ><a href='javascript:;'>Biografia primarului</a></li>
-                <li><a href='javascript:;'>Declarațiile cu privire la venituri și proprietate</a></li>
-                <li class="active"><a href="javascript:;">Planul de acțiuni pe anul curent </a></li>
-                <li><a href='javascript:;'>Programul de activitate al primarului</a></li>
-                <li><a href='javascript:;'>Raportul anual al primarului</a></li>
-            </ul>
-
-
-        </div>
         <div class='clearfix'></div>
         <div class='socials'>
             <div id="vk_like"></div>

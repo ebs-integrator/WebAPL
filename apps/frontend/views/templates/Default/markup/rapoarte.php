@@ -10,7 +10,12 @@
     </div>
     <div class="wrap">
         <p class="c_title">Primarul</p>
-
+        <div class='right'>
+            <ul class="right_menu">
+                <li><a href='javascript:;'>Planuri de acțiune</a></li>
+                <li class='active'><a href="javascript:;">Rapoarte anuale</a></li>
+            </ul>
+        </div>
         <div class='left'>
             <ul class="dcr">
                 <li><a href='javascript:;'>Raportul Primarului - 2008</a>
@@ -154,20 +159,8 @@
                     </div>
                 </li>
             </ul>
-
-
-        </div>
-
-        <div class='right'>
-            <ul class="right_menu">
-                <li><a href='javascript:;'>Planuri de acțiune</a></li>
-                <li class='active'><a href="javascript:;">Rapoarte anuale</a></li>
-            </ul>
         </div>
         <div class='clearfix140'></div>
-
-
     </div>
-
     <div class='clearfix'></div>
 </section>

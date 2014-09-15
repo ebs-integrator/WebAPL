@@ -10,7 +10,12 @@
     </div>
     <div class="wrap">
         <p class="c_title">Primăria</p>
-
+        <div class='right'>
+            <ul class="right_menu">
+                <li class="active"><a href="javascript:;">Viceprimarii</a></li>
+                <li><a href="javascript:;">Declarații de venituri și active</a></li>
+            </ul>
+        </div>
         <div class='left'>
             <ul class="vice">
                 <li>
@@ -74,19 +79,8 @@
                     </div>
                 </li>
             </ul>
-
-
-
-        </div>
-
-        <div class='right'>
-            <ul class="right_menu">
-                <li class="active"><a href="javascript:;">Viceprimarii</a></li>
-                <li><a href="javascript:;">Declarații de venituri și active</a></li>
-            </ul>
-        </div>
+        </div>        
         <div class='clearfix'></div>
-
         <div class='socials'>
             <div id="vk_like"></div>
             <div id="ok_shareWidget"></div>

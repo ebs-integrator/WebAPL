@@ -9,7 +9,16 @@
     </div>
     <div class="wrap">
         <p class="c_title">Cultură </p>
-
+        <div class='right'>
+            <ul class="right_menu">
+                <li><a href="javascript:;"> Grădinițe, gimnazii, licee</a></li>
+                <li><a href="javascript:;">Colegiul și Universitatea</a></li>
+                <li class="active"><a href="javascript:;">Biblioteca, Muzeul și Teatrul </a></li>
+                <li><a href="javascript:;">Parcuri, zone de odihnă și sport</a></li>
+                <li><a href="javascript:;">Atracții turistice</a></li>
+                <li><a href="javascript:;">Despre orașul Strășeni </a></li>
+            </ul>
+        </div>
         <div class='left'>                
             <ul class='culture'>
                 <li>
@@ -110,19 +119,7 @@
 
 
         </div>
-
-        <div class='right'>
-            <ul class="right_menu">
-                <li><a href="javascript:;"> Grădinițe, gimnazii, licee</a></li>
-                <li><a href="javascript:;">Colegiul și Universitatea</a></li>
-                <li class="active"><a href="javascript:;">Biblioteca, Muzeul și Teatrul </a></li>
-                <li><a href="javascript:;">Parcuri, zone de odihnă și sport</a></li>
-                <li><a href="javascript:;">Atracții turistice</a></li>
-                <li><a href="javascript:;">Despre orașul Strășeni </a></li>
-            </ul>
-        </div>
         <div class='clearfix'></div>
-
         <div class='socials'>
             <div id="vk_like"></div>
             <div id="ok_shareWidget"></div>

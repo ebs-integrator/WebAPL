@@ -8,7 +8,22 @@
     </div>
     <div class="wrap">
         <p class="c_title">Impozite și taxe locale</p>
-
+        <div class='right'>
+            <ul class="right_menu">
+                <li class="active"><a href="javascript:;">Impozite și taxe locale</a></li>
+                <li><a href="javascript:;">Taxa pe amenajarea teritoriului</a></li>
+                <li><a href="javascript:;">Taxa de publicitate</a></li>
+                <li><a href="javascript:;">Taxa de organizare a licitațiilor / loteriilor</a></li>
+                <li><a href="javascript:;">Taxa pentru unități comerciale</a></li>
+                <li><a href="javascript:;">Taxa de piața</a></li>
+                <li><a href="javascript:;">Taxa de cazare</a></li>
+                <li><a href="javascript:;">Taxa de parcare</a></li>
+                <li><a href="javascript:;">Taxa pentru unități stradale</a></li>
+                <li><a href="javascript:;">Taxa pentru evacuarea deșeurilor</a></li>
+                <li><a href="javascript:;">Impozitul pe bunuri imobiliare</a></li>
+                <li class="li_b"><a href="javascript:;">Întrebări frecvente / Modele de documente / Ghid de taxe și impozitele</a></li>
+            </ul>
+        </div>
         <div class='left'>                
             <table class="taxe">
                 <thead>
@@ -27,26 +42,9 @@
                     <tr><td>Impozitul pe mijloacele de transport</td><td>000 Lei </td><td>000 Lei </td><td>000 Lei </td><td>000 Lei </td></tr>
                     <tr><td>Taxa pentru afisaj în scop de reclama si publicitate</td><td>000 Lei </td><td>000 Lei </td><td>000 Lei </td><td>000 Lei </td></tr>
                     <tr><td>Impozitul pe spectacole</td><td>000 Lei </td><td>000 Lei </td><td>000 Lei </td><td>000 Lei </td></tr>
-                    
+
                 </tbody>
             </table>
-        </div>
-
-        <div class='right'>
-            <ul class="right_menu">
-                <li class="active"><a href="javascript:;">Impozite și taxe locale</a></li>
-                <li><a href="javascript:;">Taxa pe amenajarea teritoriului</a></li>
-                <li><a href="javascript:;">Taxa de publicitate</a></li>
-                <li><a href="javascript:;">Taxa de organizare a licitațiilor / loteriilor</a></li>
-                <li><a href="javascript:;">Taxa pentru unități comerciale</a></li>
-                <li><a href="javascript:;">Taxa de piața</a></li>
-                <li><a href="javascript:;">Taxa de cazare</a></li>
-                <li><a href="javascript:;">Taxa de parcare</a></li>
-                <li><a href="javascript:;">Taxa pentru unități stradale</a></li>
-                <li><a href="javascript:;">Taxa pentru evacuarea deșeurilor</a></li>
-                <li><a href="javascript:;">Impozitul pe bunuri imobiliare</a></li>
-                <li class="li_b"><a href="javascript:;">Întrebări frecvente / Modele de documente / Ghid de taxe și impozitele</a></li>
-            </ul>
         </div>
         <div class='clearfix'></div>
 

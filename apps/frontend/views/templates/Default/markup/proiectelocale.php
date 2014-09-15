@@ -9,7 +9,12 @@
     </div>
     <div class="wrap">
         <p class="c_title">Proiecte finalizate</p>
-
+        <div class='right'>
+            <ul class="right_menu">
+                <li class="active"><a href="javascript:;">Proiecte finalizate</a></li>
+                <li><a href="javascript:;">Proiecte curente</a></li>
+            </ul>
+        </div>
         <div class='left'>        
             <table class="plc">
                 <tbody>
@@ -76,13 +81,7 @@
             </div>
         </div>
 
-        <div class='right'>
-            <ul class="right_menu">
-                <li class="active"><a href="javascript:;">Proiecte finalizate</a></li>
-                <li><a href="javascript:;">Proiecte curente</a></li>
 
-            </ul>
-        </div>
         <div class='clearfix50'></div>
     </div>
 

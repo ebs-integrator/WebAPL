@@ -10,7 +10,14 @@
     </div>
     <div class="wrap">
         <p class="c_title">Primăria</p>
-
+        <div class='right'>
+            <ul class="right_menu">
+                <li class="active"><a href="javascript:;">Comisia urbanism</a></li>
+                <li><a href="javascript:;">Comisia buget, finanțe și economie</a></li>
+                <li><a href="javascript:;">Comisia juridică</a></li>
+                <li><a href="javascript:;">Comisia socială</a></li>
+            </ul>
+        </div>
         <div class='left'>                
             <div class="com_box">
                 <p class="title">COMISIA JURIDICĂ</p>
@@ -84,7 +91,7 @@
                             <span class="fun">Presedinte</span>
                             <span class="soc">USL</span>
                         </li>
-                       <li>
+                        <li>
                             <span class="nr">11</span>
                             <span class="name">Nume pRENUME</span>
                             <span class="fun">Presedinte</span>
@@ -93,7 +100,7 @@
                     </ul>
                 </div>
             </div>
-         
+
             <div class="pag">
                 <span class="w_p">Pagina</span>
                 <span class="p_n"><a href="javascript:;">Precedenta</a></span>
@@ -109,17 +116,7 @@
 
 
         </div>
-
-        <div class='right'>
-            <ul class="right_menu">
-                <li class="active"><a href="javascript:;">Comisia urbanism</a></li>
-                <li><a href="javascript:;">Comisia buget, finanțe și economie</a></li>
-                <li><a href="javascript:;">Comisia juridică</a></li>
-                <li><a href="javascript:;">Comisia socială</a></li>
-            </ul>
-        </div>
         <div class='clearfix'></div>
-
         <div class='socials'>
             <div id="vk_like"></div>
             <div id="ok_shareWidget"></div>

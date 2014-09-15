@@ -9,7 +9,15 @@
     </div>
     <div class="wrap">
         <p class="c_title">Arhiva deciziilor anterioare</p>
-
+        <div class='right'>
+            <ul class="right_menu">
+                <li class="active"><a href="javascript:;">Anul 2014</a></li>
+                <li><a href="javascript:;">Anul 2013</a></li>
+                <li><a href="javascript:;">Anul 2012</a></li>
+                <li><a href="javascript:;">Anul 2011</a></li>
+                <li><a href="javascript:;">Anul 2010</a></li>
+            </ul>
+        </div>
         <div class='left'>        
             <div class="search left">
                 <input type="text" placeholder="Cauta">
@@ -205,19 +213,8 @@
 
             </div>
         </div>
-        <div class='right'>
-            <ul class="right_menu">
-                <li class="active"><a href="javascript:;">Anul 2014</a></li>
-                <li><a href="javascript:;">Anul 2013</a></li>
-                <li><a href="javascript:;">Anul 2012</a></li>
-                <li><a href="javascript:;">Anul 2011</a></li>
-                <li><a href="javascript:;">Anul 2010</a></li>
-            </ul>
-        </div>
+
         <div class='clearfix50'></div>
-
-
-
         <div class='socials'>
             <div id="vk_like"></div>
             <div id="ok_shareWidget"></div>

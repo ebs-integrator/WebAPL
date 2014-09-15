@@ -8,14 +8,30 @@
     </div>
     <div class="wrap  u_s">
         <p class="c_title">Noutăți</p>
+        <div class="right">
+            <ul class='detail'>
+                <li class='email'>
+                    <a href='javascript:;'>info@straseni.gov.md</a>
+                </li>
+                <li class='fax'>
+                    <a href='javascript:;'>(0-237) 55-66-77</a>
+                </li>
+                <li class='chat'>
+                    <a href='javascript:;'>chat-online</a>
+                </li>
+                <li class='location'>
+                    <a href='javascript:;'>Cum ne găsiți</a>
+                </li>
+            </ul>
+        </div>
         <div class="left">
             <p class='det_news'>Focar de hepatită A în Drăgușeni - 23 de copii contaminați</p>
             <div class='hr_dbl'></div>
             <div class='u_a'>
-                <img src="<?=res('assets/img/b_news.png');?>">
+                <img src="<?= res('assets/img/b_news.png'); ?>">
                 <div class="details">
                     <p class="data">24 Iul 2014, 15:03	
-                        <img src="<?=res('assets/img/gr_arrow.png');?>" class="arrow">
+                        <img src="<?= res('assets/img/gr_arrow.png'); ?>" class="arrow">
                     </p>
                     <p class="cont"></p>
                 </div>
@@ -38,25 +54,8 @@
             </div>
             <div class="hr_grey"></div>
             <div class="fb-comments" data-href="http://example.com/comments" data-width="100%" data-numposts="2" data-colorscheme="light"></div>
-        </div>
-        <div class="right">
-            <ul class='detail'>
-                <li class='email'>
-                    <a href='javascript:;'>info@straseni.gov.md</a>
-                </li>
-                <li class='fax'>
-                    <a href='javascript:;'>(0-237) 55-66-77</a>
-                </li>
-                <li class='chat'>
-                    <a href='javascript:;'>chat-online</a>
-                </li>
-                <li class='location'>
-                    <a href='javascript:;'>Cum ne găsiți</a>
-                </li>
-            </ul>
-        </div>
+        </div>       
         <div class="clearfix"> </div>
-
     </div>
     <div class="clearfix"> </div>
 
