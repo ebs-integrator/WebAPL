@@ -610,6 +610,9 @@ textarea {
         height:10px;
         top:-33px;
     }
+    header .header_mini{
+        display:none;
+    }
     section .logo{
         text-align: center;
         margin-top:40px;
@@ -4598,7 +4601,89 @@ textarea {
     section .wrap.site_map .map_cont .right{
         float:left;
     }
+    .city_box{
+        width: 100%;
+    }
+    .city_box .title{
+        font-size:20px;
+    }
+    .city_box .info{
+        font-size:16px;
+    }
+    .city_box .img{
+        margin-right:10px;
+    }
+    table.plc > tbody > tr > td:first-child{
+        display:none;
+    }
+    .sec_img img{
+        max-width: 100%;
+    }
+    .a_box.g_g .left .img img, .a_box.v_g .left .img img{
+        max-width:270px;
+        max-height:270px;
+    }
+    .a_box .right{
+        max-width: 370px;
+    }
+    .a_box .info{
+        max-height: 188px;
+    }
+    .emrg .ul_title .right, .emrg ul li .right {
+        width: 420px;
+    }
 }
-@media only screen and (min-width: 480px) and (max-width: 768px){
-    
+@media only screen and (min-width: 640px) and (max-width: 768px){
+    header .left .top_menu,header .contact.right p.tel,header .cont .contact_us{
+        display:none;
+    }
+    header .header_mini{
+        display:block;
+        float:right;
+        width:87px;
+        height:100%;
+        background: url('../img/menu_icon.png')no-repeat center #7c4d7c;
+        cursor:pointer;
+        position:relative;
+    }
+    section .dirs_menu *{
+        display:none;
+    }
+    section .dirs_menu{
+        height:4px;
+        background: #7c4d7c;
+    }
+    header .logo {
+        max-width:200px;
+    }
+    header .menu_list li{
+        height:72px;
+        border-bottom: 1px solid #835b83;
+        font:22px 'open_sansbold';
+        color:#fff;
+        text-transform: uppercase;
+        padding: 20px 25px;
+    }
+    header .menu_list li a{        
+        color:#fff;
+    }
+    header .menu_list li:first-child{
+        display:table-cell;
+        vertical-align:middle;
+        line-height: 24px;
+
+    }
+    header .menu_content{
+        position:relative;
+        width:250px;
+        background:#7c4d7c;
+        top: 83px;
+        right: 163px;
+        z-index: 999;
+    }
+    header .menu_content .social{
+        bottom:5px;
+        position:absolute;
+        background:#784478;
+    }
 }
