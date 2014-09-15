@@ -12,17 +12,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link href="<?=res('assets/css/jquery.bxslider.css');?>" rel="stylesheet" />
-        <link rel="stylesheet" href="<?=res('assets/css/normalize.css');?>">
-        <link rel="stylesheet" href="<?=res('assets/css/main.css');?>">        
-        <link rel="stylesheet" href="<?=res('assets/css/jquery.selectBoxIt.css');?>">
-        <link href="<?=res('assets/js/square/red.css" rel="stylesheet');?>">
-        
-        <script src="<?=res('assets/js/jquery-2.1.1.js');?>"></script>
+        <link href="<?= res('assets/css/jquery.bxslider.css'); ?>" rel="stylesheet" />
+        <link rel="stylesheet" href="<?= res('assets/css/normalize.css'); ?>">
+        <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">        
+        <link rel="stylesheet" href="<?= res('assets/css/jquery.selectBoxIt.css'); ?>">
+        <link href="<?= res('assets/js/square/red.css" rel="stylesheet'); ?>">
+
+        <script src="<?= res('assets/js/jquery-2.1.1.js'); ?>"></script>
     </head>
     <body>
         <div id="fb-root"></div>
-        <script>(function(d, s, id) {
+        <script>(function (d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0];
                 if (d.getElementById(id))
                     return;
@@ -35,34 +35,47 @@
         <div class="overlay2 hidden"></div>
         <header>
             <div class="left">
-                <a href="javascript:;"><img src="<?=res('assets/img/s_logo.png');?>" class="logo"></a>
+                <a href="javascript:;"><img src="<?= res('assets/img/s_logo.png'); ?>" class="logo"></a>
                 <div class="top_menu">
                     <a href='javascript:;' class=" active">
                         <div class="left">
-                            <img src="<?=res('assets/img/serv.png');?>">
+                            <img src="<?= res('assets/img/serv.png'); ?>">
                         </div>
                         <div class="left title third">Cetățeni și business</div></a>
                 </div>
                 <div class="top_menu">
                     <a href='javascript:;'>
                         <div class="left">
-                            <img src="<?=res('assets/img/prim.png');?>">
+                            <img src="<?= res('assets/img/prim.png'); ?>">
                         </div>
                         <div class="left title second">Primăria</div></a>
                 </div>
                 <div class="top_menu">
                     <a href='javascript:;'>
                         <div class="left">
-                            <img src="<?=res('assets/img/consiliu.png');?>">
+                            <img src="<?= res('assets/img/consiliu.png'); ?>">
                         </div>
                         <div class="left title third">Consiliul local</div></a>
                 </div>
                 <div class="top_menu">
                     <a href='javascript:;'>
                         <div class="left">
-                            <img src="<?=res('assets/img/transp.png');?>">
+                            <img src="<?= res('assets/img/transp.png'); ?>">
                         </div>
                         <div class="left title second">Transparenta</div></a>
+                </div>
+            </div>
+            <div class="header_mini">
+                <div class="menu_content">
+                    <ul class="menu_list">
+                        <li><a href='javascript:;'>Cetățeni și business</a></li>
+                        <li><a href='javascript:;'>primăria</a></li>
+                        <li><a href='javascript:;'>consiliul local</a></li>
+                        <li><a href='javascript:;'>TRANSPARENȚĂ</a></li>
+                    </ul>
+                    <ul class="social">
+                        <li><a href='javascript:;'></a></li>
+                    </ul>
                 </div>
             </div>
             <div class="contact right">
@@ -95,11 +108,11 @@
                         </ul>
                         <div class="clearfix"></div>
                         <div class="prp">
-                            <img src="<?=res('assets/img/phone_book.png');?>">
+                            <img src="<?= res('assets/img/phone_book.png'); ?>">
                             <a href="javascript:;">Toate numerele de telefon</a>
                         </div>
                         <div class="prp">
-                            <img src="<?=res('assets/img/notebook.png');?>">
+                            <img src="<?= res('assets/img/notebook.png'); ?>">
                             <a href="javascript:;">Orarul rutelor de autobus</a>
                         </div>
                         <div class="left c_info">
@@ -122,9 +135,9 @@
                 </div>
                 <div class="currency">
                     <span class="s_c">
-                        <img src="<?=res('assets/img/line_dot.png');?>">
+                        <img src="<?= res('assets/img/line_dot.png'); ?>">
                         <span>ro</span>
-                        <img src="<?=res('assets/img/line_dot.png');?>">
+                        <img src="<?= res('assets/img/line_dot.png'); ?>">
                     </span>
                     <div class="lang hidden">
                         <div class="relative">
@@ -138,11 +151,12 @@
                 </div>
             </div>
         </div>
+
     </header>
 
 
 
-<?=$content;?> 
+    <?= $content; ?> 
 
 
-<?=View::make('block.footer');?>
+    <?= View::make('block.footer'); ?>
