@@ -33,6 +33,7 @@
             }(document, 'script', 'facebook-jssdk'));</script>
         <div class="overlay hidden"></div>
         <div class="overlay2 hidden"></div>
+        <div class="overlay3 hidden"></div>
         <header>
             <div class="left">
                 <a href="javascript:;"><img src="<?= res('assets/img/s_logo.png'); ?>" class="logo"></a>
@@ -65,8 +66,9 @@
                         <div class="left title second">Transparenta</div></a>
                 </div>
             </div>
-            <div class="header_mini">
-                <div class="menu_content">
+            <div class="header_mini ">
+                <div class="head_list"></div>
+                <div class="menu_content hidden">
                     <ul class="menu_list">
                         <li><a href='javascript:;'>Cetățeni și business</a></li>
                         <li><a href='javascript:;'>primăria</a></li>
@@ -74,7 +76,12 @@
                         <li><a href='javascript:;'>TRANSPARENȚĂ</a></li>
                     </ul>
                     <ul class="social">
-                        <li><a href='javascript:;'></a></li>
+                        <li><a href='javascript:;' class="fb">Facebook</a></li>
+                        <li><a href='javascript:;' class="odno">Odnoklassniki</a></li>
+                        <li><a href='javascript:;' class="vk">Vkontakte</a></li>
+                        <li><a href='javascript:;' class="twitter">twitter</a></li>
+                        <li><a href='javascript:;' class="gplus">google+</a></li>
+                        <li><a href='javascript:;' class="rsss">rsss</a></li>
                     </ul>
                 </div>
             </div>

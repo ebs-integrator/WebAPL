@@ -3,7 +3,7 @@
         <div class="left links">
             <a href="javascript:;">Orasul</a>
             <a href="javascript:;">Harta site-ului</a>
-            <a href="javascript:;">Adrese utile</a>
+            <a href="javascript:;">Contacte</a>
         </div>
         <div class="left socials">
             <a href="javascript:;"><span><img src="<?= res('assets/img/fb.png'); ?>"></span>Facebook</a>

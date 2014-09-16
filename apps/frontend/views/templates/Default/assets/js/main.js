@@ -13,7 +13,12 @@ $(document).ready(function () {
 
     $('.video').css('min-height', ($(window).height() - 510));    
     $('.l_a.m_t_n').css('min-height', ($(window).height() - 413));
-    $('.menu_content').height($(window).height() - 83)
+    $('.menu_content').height($(window).height() - 83);
+    
+    $('.head_list,.overlay3').click(function(){
+        $('header .menu_content').toggleClass('hidden');
+        $('.overlay3').toggleClass('hidden');
+    });
     $('.currency .s_c,.overlay2').click(function () {
         $('.overlay2').toggleClass('hidden');
         $('.currency .lang').toggleClass('hidden');
