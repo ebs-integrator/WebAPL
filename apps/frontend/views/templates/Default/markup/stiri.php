@@ -66,7 +66,7 @@
                 <a href="javascript:;" class="more"></a>
                 <div class="clearfix"></div>
             </div>
-            <div class="a_box v_g">
+            <div class="a_box g_g">
                 <p class="title">Focar de hepatită A în Drăgușeni - 23 de copii contaminați</p>
                 <div class="hr_dbl"></div>
                 <div class="left">
@@ -75,7 +75,7 @@
                     </div>
                     <div class="details">
                         <p class="data">24 Iul 2014, 15:03	
-                            <img src='<?= res("assets/img/v_arrow.png"); ?>' class='arrow'>
+                            <img src='<?= res("assets/img/gr_arrow.png"); ?>' class='arrow'>
                         </p>
                         <p class='cont'></p>
                     </div>

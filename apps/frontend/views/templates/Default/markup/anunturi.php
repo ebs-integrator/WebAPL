@@ -17,7 +17,6 @@
                 <li><a href="javascript:;">Aprilie 2014</a></li>
                 <li><a href="javascript:;">Martie 2014</a></li>
                 <li><a href="javascript:;">Februarie 2014</a></li>
-                <a href='javascript:;' class="more"></a>
             </ul>
         </div>
         <div class="left">

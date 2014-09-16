@@ -11,22 +11,43 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link href="<?=res('assets/css/jquery.bxslider.css');?>" rel="stylesheet" />
-        <link rel="stylesheet" href="<?=res('assets/css/normalize.css');?>">
-        <link rel="stylesheet" href="<?=res('assets/css/main.css');?>">
-<!--        <link rel="stylesheet" href="/css/jquery.selectBoxIt.css">-->
-        
-        <script src="<?=res('assets/js/jquery-2.1.1.js');?>"></script>
+        <link href="<?= res('assets/css/jquery.bxslider.css'); ?>" rel="stylesheet" />
+        <link rel="stylesheet" href="<?= res('assets/css/normalize.css'); ?>">
+        <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">
+        <!--        <link rel="stylesheet" href="/css/jquery.selectBoxIt.css">-->
+
+        <script src="<?= res('assets/js/jquery-2.1.1.js'); ?>"></script>
     </head>
     <body>
         <div class="overlay hidden"></div>
         <div class="overlay2 hidden"></div>
+        <div class="overlay3 hidden"></div>
         <header>
             <div class="left">
+                <a href="javascript:;"><img src="<?= res('assets/img/s_logo.png'); ?>" class="logo logo_home"></a>
                 <button class="chat">
                     <span class="green">Chat</span><span class="violet">-online</span>
                     <span class="g_dot"></span>
                 </button>
+            </div>
+            <div class="header_mini ">
+                <div class="head_list"></div>
+                <div class="menu_content hidden">
+                    <ul class="menu_list">
+                        <li><a href='javascript:;'>Cetățeni și business</a></li>
+                        <li><a href='javascript:;'>primăria</a></li>
+                        <li><a href='javascript:;'>consiliul local</a></li>
+                        <li><a href='javascript:;'>TRANSPARENȚĂ</a></li>
+                    </ul>
+                    <ul class="social">
+                        <li><a href='javascript:;' class="fb">Facebook</a></li>
+                        <li><a href='javascript:;' class="odno">Odnoklassniki</a></li>
+                        <li><a href='javascript:;' class="vk">Vkontakte</a></li>
+                        <li><a href='javascript:;' class="twitter">twitter</a></li>
+                        <li><a href='javascript:;' class="gplus">google+</a></li>
+                        <li><a href='javascript:;' class="rsss">rsss</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="contact right">
                 <p class="tel">(022) 22-32-53</p>
@@ -58,11 +79,11 @@
                         </ul>
                         <div class="clearfix"></div>
                         <div class="prp">
-                            <img src="<?=res('assets/img/phone_book.png');?>">
+                            <img src="<?= res('assets/img/phone_book.png'); ?>">
                             <a href="javascript:;">Toate numerele de telefon</a>
                         </div>                            
                         <div class="prp">
-                            <img src="<?=res('assets/img/notebook.png');?>">
+                            <img src="<?= res('assets/img/notebook.png'); ?>">
                             <a href="javascript:;">Orarul rutelor</a>
                         </div>
                         <div class="left c_info">
@@ -86,9 +107,9 @@
                 </div>
                 <div class="currency">                        
                     <span class="s_c">
-                        <img src="<?=res('assets/img/line_dot.png');?>">
+                        <img src="<?= res('assets/img/line_dot.png'); ?>">
                         <span>ro</span>
-                        <img src="<?=res('assets/img/line_dot.png');?>">
+                        <img src="<?= res('assets/img/line_dot.png'); ?>">
                     </span>
                     <div class="lang hidden">
                         <div class="relative">
@@ -108,7 +129,7 @@
 
 
 
-<?=$content;?> 
+    <?= $content; ?> 
 
 
-<?=View::make('block.footer');?>
+    <?= View::make('block.footer'); ?>
