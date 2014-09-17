@@ -69,6 +69,9 @@ class PageController extends BaseController {
             $pageLang->post_id = $page->id;
             $pageLang->save();
         }
+        
+        $page->ord_num = $page->id;
+        $page->save();
 
         return Redirect::to('page/index/' . $page->id);
     }
@@ -149,10 +152,34 @@ class PageController extends BaseController {
             if ($source && $target) {
                 $target->title = $source->title;
                 $target->uri = PostLang::uniqURI($source_id, $source->uri);
-                $target->save(); 
+                $target->save();
             } else {
                 throw new Exception("Undefined source or target on cloning: source#{$source_id}, target#{$target_id}");
             }
+        }
+    }
+
+    public function getMove($page_id, $up) {
+
+        $page = Post::find($page_id);
+
+        if ($page) {
+
+            $spage = Post::where(Post::getField('parent'), $page->parent)->where(Post::getField("ord_num"), $up ? '<' : '>', $page->ord_num)->orderBy('ord_num', $up ? 'desc' : 'asc')->first();
+
+            if ($spage) {
+                $ord_num = $page->ord_num;
+
+                $page->ord_num = $spage->ord_num;
+                $page->save();
+
+                $spage->ord_num = $ord_num;
+                $spage->save();
+            }
+            
+            return Redirect::to($_SERVER['HTTP_REFERER']);
+        } else {
+            throw new Exception("Page not found #{$page_id}, move action");
         }
     }
 

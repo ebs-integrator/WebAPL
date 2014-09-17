@@ -14,7 +14,7 @@ class Post extends Eloquent {
     }
 
     public static function tree($taxonomy_id, $parent = 0) {
-        $list = Post::where('parent', $parent)->where('taxonomy_id', $taxonomy_id);
+        $list = Post::where('parent', $parent)->where('taxonomy_id', $taxonomy_id)->orderBy('ord_num', 'asc')->get();
 
         foreach ($list as &$item) {
             $item['lang'] = $item->langs()->where('lang_id', Language::getId())->first();
@@ -25,7 +25,7 @@ class Post extends Eloquent {
     }
     
     public static function treePosts($parent = 0) {
-        $list = Post::prepareQuery()->where(Post::getField('parent'), $parent)->get();
+        $list = Post::prepareQuery()->where(Post::getField('parent'), $parent)->orderBy('ord_num', 'asc')->get();
         
         foreach ($list as &$item) {
             $item['list'] = Post::treePosts($item->id);
@@ -73,6 +73,7 @@ class Post extends Eloquent {
     public static function findGeneral() {
         $list = Post::prepareQuery()
                 ->where(Post::getField('general_node'), 1)
+                ->orderBy('ord_num', 'asc')
                 ->get();
 
         foreach ($list as &$item) {
@@ -111,7 +112,7 @@ class Post extends Eloquent {
         $query = Post::prepareQuery();
         $list = $query->where(array(
                     'parent' => $parent_id
-                ))->get();
+                ))->orderBy('ord_num', 'asc')->get();
 
         foreach ($list as &$item) {
             $item['url'] = Post::getFullURI($item['id']);

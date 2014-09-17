@@ -1,7 +1,7 @@
 <section>
     <?= View::make('sections.elements.breadcrumbs'); ?>
     <div class='wrap site_map'>
-        <p class='c_title'><?= $top_title; ?></p>
+        <p class='c_title'><?= $page->title; ?></p>
 
         <?= Core\APL\Actions::call('page_top_container', $page); ?>
 

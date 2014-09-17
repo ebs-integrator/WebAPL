@@ -9,7 +9,7 @@
         <th>Type</th>
         <th>Size</th>
         <th>Action</th>
-    </tr>
+    </tr> 
     <?php if (count($files)) { ?>
         <?php foreach ($files as $file) { ?>
             <tr>

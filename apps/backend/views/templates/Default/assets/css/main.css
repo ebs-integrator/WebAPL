@@ -2610,3 +2610,14 @@ body.error .logo h1 {
     color: #fff;
     background-color: #d9534f;
 }
+
+.move-btn {
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 2px;
+}
+
+.move-btn:hover {
+    color: #fff;
+    background: #cccccc;
+}
