@@ -21,6 +21,7 @@
     <body>
         <div class="overlay hidden"></div>
         <div class="overlay2 hidden"></div>
+        <div class="overlay3 hidden"></div>
         <header>
             <div class="left">
                 <a href="<?= Language::url('/'); ?>"><img src="<?= res('assets/img/s_logo.png'); ?>" class="logo logo_home"></a>
@@ -28,6 +29,30 @@
                     <span class="green">Chat</span><span class="violet">-online</span>
                     <span class="g_dot"></span>
                 </button>
+            </div>
+            <div class="header_mini ">
+                <div class="head_list"></div>
+                <div class="menu_content hidden">
+                    <ul class="menu_list">
+                        <?php
+                        if (isset($general_pages)) {
+                            foreach ($general_pages as $item) {
+                                ?>
+                                <li><a href='<?= $item->url; ?>'><?= $item->title; ?></a></li>
+                                <?php
+                            }
+                        }
+                        ?>
+                    </ul>
+                    <ul class="social">
+                        <li><a href='javascript:;' class="fb">Facebook</a></li>
+                        <li><a href='javascript:;' class="odno">Odnoklassniki</a></li>
+                        <li><a href='javascript:;' class="vk">Vkontakte</a></li>
+                        <li><a href='javascript:;' class="twitter">twitter</a></li>
+                        <li><a href='javascript:;' class="gplus">google+</a></li>
+                        <li><a href='javascript:;' class="rsss">rsss</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="contact right">
                 <p class="tel">(022) 22-32-53</p>

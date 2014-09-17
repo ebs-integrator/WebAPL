@@ -2,6 +2,13 @@
     <?= View::make('sections.elements.breadcrumbs'); ?>
     <div class="wrap">
         <p class='c_title'><?= $top_title; ?></p>
+        <div class="right">
+            <?=
+            View::make('sections.pages.blocks.right-menu')->with(array(
+                'colevels' => $colevels
+            ));
+            ?>
+        </div>
         <div class='left'>
             <?= Core\APL\Actions::call('page_top_container', $page); ?>
 
@@ -24,13 +31,6 @@
             <?php if ($page->have_comments) {
                 View::make('sections.elements.comments');
             } ?>
-        </div>
-        <div class="right">
-            <?=
-            View::make('sections.pages.blocks.right-menu')->with(array(
-                'colevels' => $colevels
-            ));
-            ?>
         </div>
         <div class='clearfix'></div>
         <div class='hr_grey'></div>
