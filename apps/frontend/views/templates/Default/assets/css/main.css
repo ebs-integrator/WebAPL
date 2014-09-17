@@ -1791,7 +1791,8 @@ textarea {
     .ncd img{
         display: block;
         margin-top:30px;
-        max-width:870px;
+        max-width:100%;
+
     }
     .files{
         padding:0 10px;
@@ -3882,13 +3883,23 @@ textarea {
         font:14px 'open_sansbold';
         margin:0px;
     }
-    .cl_pop img{
+    .cl_pop:after{
         position: absolute;
         left: -6px;
-        top: 23px;
+        top: 17px;
+        content: url('../img/cln_arrow.png');
     }
     table.orar {
         width:100%;
+    }
+    table.orar tbody tr td:last-child .cl_pop, table.orar tbody tr td:nth-child(6) .cl_pop{
+        left:-210px;
+    }
+    table.orar tbody tr td:last-child .cl_pop:after, table.orar tbody tr td:nth-child(6) .cl_pop:after{
+        position: absolute;
+        left: 100%;
+        top: 17px;
+        content: url('../img/cln_arrow-r.png');
     }
     table.orar thead tr:first-child{
         background:#fbfbfb;
@@ -4454,7 +4465,15 @@ textarea {
     .a_box .right {
         max-width: 250px;
     }
-
+    table.orar tbody tr td:nth-child(5) .cl_pop{
+        left:-210px;
+    }
+    table.orar tbody tr td:nth-child(5) .cl_pop:after{
+        position: absolute;
+        left: 100%;
+        top: 17px;
+        content: url('../img/cln_arrow-r.png');
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px){
     header .contact .contact_us,footer .right,.top_menu .left img,header .contact .tel{
@@ -4831,7 +4850,7 @@ textarea {
         max-height: 270px;
     }
     .a_box .title{
-        font-size:22px;
+        font-size:20px;
     }
     .a_box.g_g .details{
         background:transparent;
@@ -4850,7 +4869,7 @@ textarea {
         padding: 20px 30px;
     }
     ul.sec_details{
-        width:390px;
+        width:370px;
     }
     section > .wrap > .left > ul > li > span.sec_criteria,section > .wrap > .left > ul > li > span.crt_details{
         display: block;
@@ -5176,12 +5195,58 @@ textarea {
     ul.vice li .p_name{
         margin-bottom: 25px;
     }
-    
+
     section > .wrap > .left > ul > li > span{
         width:96%;
     }
     ul.mda > li{
         height:50px;
         line-height:50px;
+    }
+    table.atz, table.atz td,table.atz tr td p, table.atz tr td ol li span{
+        font-size:16px;
+    }
+    .ncd h1{
+        font-size:22px;
+    }
+    .ncd > p,.b_weight, .ncd .b_weight,ul.crt li,.pda p{
+        font-size:15px;
+    }
+    .pda ul li a,.compl_list li a .compl_info,.snd_title{
+        font-size:16px;
+    }
+    section .wrap.site_map .map_cont .left,section .wrap.site_map .map_cont .right{
+        width:100%;
+        margin:0px;
+    }
+    .city_box,.personal{
+        width:100%;
+    }
+    .city_box .title,.pda p.sub_title{
+        font-size:20px;
+    }
+    .city_box .info,table.plcu p,table.plcu > tbody > tr > td,.r_sond,table.sondaje td:first-child,table.sondaje td:last-child{
+        font-size:15px;
+    }
+    .city_link{
+        margin-top: 40px;
+    }
+    p.descr {
+        max-width: 340px;
+    }
+    table.sondaje progress[value]{
+        width:250px;
+    }
+    .a_box .info{
+        font-size:15px;
+    }
+    table.orar tbody tr td:nth-child(5) .cl_pop{
+        left:-210px;
+    }
+    table.orar tbody tr td:nth-child(5) .cl_pop:after{
+        position: absolute;
+        left: 100%;
+        top: 17px;
+        content: url('../img/cln_arrow-r.png');
     }
 }

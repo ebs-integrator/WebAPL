@@ -38,7 +38,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -46,7 +45,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -61,7 +59,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -69,7 +66,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -84,7 +80,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -92,7 +87,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -107,7 +101,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -115,7 +108,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -130,7 +122,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -138,7 +129,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -153,7 +143,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -161,7 +150,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -176,7 +164,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -184,7 +171,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -200,7 +186,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -208,7 +193,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -223,7 +207,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -231,7 +214,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -246,7 +228,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -254,7 +235,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -269,7 +249,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -277,7 +256,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -292,7 +270,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -300,7 +277,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -315,7 +291,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -323,7 +298,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -338,7 +312,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -346,7 +319,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -374,7 +346,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -382,7 +353,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -397,7 +367,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -405,7 +374,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -420,7 +388,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -428,7 +395,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -443,7 +409,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -451,7 +416,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -472,7 +436,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -480,7 +443,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -496,7 +458,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -504,7 +465,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -519,7 +479,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -527,7 +486,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -542,7 +500,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -550,7 +507,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -565,7 +521,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -573,7 +528,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -588,7 +542,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -596,7 +549,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -611,7 +563,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -619,7 +570,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -634,7 +584,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -642,7 +591,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -658,7 +606,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -666,7 +613,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -681,7 +627,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -689,7 +634,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -704,7 +648,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -712,7 +655,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -727,7 +669,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -735,7 +676,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -750,7 +690,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -758,7 +697,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -773,7 +711,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -781,7 +718,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -796,7 +732,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -804,7 +739,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -833,7 +767,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -841,7 +774,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -856,7 +788,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -864,7 +795,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -879,7 +809,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -887,7 +816,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -902,7 +830,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -910,7 +837,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -925,7 +851,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -933,7 +858,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -948,7 +872,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -956,7 +879,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -971,7 +893,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -979,7 +900,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -995,7 +915,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -1003,7 +922,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -1018,7 +936,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -1026,7 +943,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -1041,7 +957,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -1049,7 +964,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -1064,7 +978,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -1072,7 +985,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -1087,7 +999,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -1095,7 +1006,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -1110,7 +1020,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -1118,7 +1027,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -1133,7 +1041,6 @@
                                                 <li>
                                                     <p>09:00 - 11:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
@@ -1141,7 +1048,6 @@
                                                 <li>
                                                     <p>11:00 - 13:00</p>
                                                     <div class="cl_pop">
-                                                        <img src="<?= res('assets/img/cln_arrow.png'); ?>">
                                                         <span>Viceprimar</span>
                                                         <p>Ion Vasilica</p>
                                                     </div>
