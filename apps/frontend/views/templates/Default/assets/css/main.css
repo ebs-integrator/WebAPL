@@ -2125,9 +2125,17 @@ textarea {
     section .wrap.site_map .map_cont .right{
         min-width:530px;
     }
-    section .wrap.site_map .map_cont .h_list{
+    section .wrap.site_map .map_cont .h_list > li{
         padding-left:25px;        
         margin-bottom:35px;
+        display: inline-block;
+        width:50%;
+    }
+
+    section .wrap.site_map .map_cont .h_list {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
     }
     section .wrap.site_map .map_cont .h_list p {
         margin-bottom:5px;
