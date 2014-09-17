@@ -89,6 +89,10 @@ class Template {
             'meetingFuture' => array(
                 'name' => 'Sedinta viitoare',
                 'function' => array('PageView', 'meetingFuture')
+            ),
+            'mapPage' => array(
+                'name' => 'Harta',
+                'function' => array('PageView', 'mapPage')
             )
         )
     );

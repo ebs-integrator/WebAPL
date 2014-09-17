@@ -17,7 +17,6 @@
         </div>
     </div>
     <div class="right">
-
         <div class="left search">
             <form action="<?= Language::url('search'); ?>" method="get">
                 <p>Căutare prin site</p>
@@ -26,12 +25,7 @@
                 <input type="submit">
             </form>
         </div>
-        <div class="left email">
-            <p>Aboneazate la Buletinul informativ al primăriei</p>
-            <img src="<?= res('assets/img/email.png'); ?>">
-            <input type="text" placeholder="Email-ul Dvs.">
-            <input type="submit">
-        </div>
+        <?=Core\APL\Actions::call('bottom_widgets');?>
     </div>
     <div class="clearfix"> </div>
     <p class="copy"><a href="javascript:;">Cititi mai multe</a> despre licențiere CC, sau <a href="javascript:;">utilizati licența</a> pentru propriul dvs. material.</p>

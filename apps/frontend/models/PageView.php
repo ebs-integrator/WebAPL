@@ -216,6 +216,12 @@ class PageView {
         //var_dump($data['sub_pages']);
         return View::make('sections.pages.home')->with($data);
     }
+    
+    public static function fullView($data) {
+        $data['page']->text = \Core\APL\Shortcodes::execute($data['page']->text);
+
+        return View::make('sections.pages.fullw')->with($data);
+    }
 
     public static function meetingPast($data) {
         if ($data['page']->feed_id) {
@@ -366,7 +372,7 @@ class PageView {
         
         $data['page']->text .= View::make('sections.pages.modview.map', $wdata);
         
-        return static::defaultView($data);
+        return static::fullView($data);
     }
 
     /**
