@@ -24,8 +24,7 @@
                 </p>
                 <div class='data'>
                     <p class="nr">24 Iul 2014, 15:03</p>
-                    <p class="term"><span>Termen limita de aplicare a CV-ului :</span> 4 sept 2014 </p>
-                </div>
+                    </div>
                 <div class='p_i'>
                     <p>Cautati un serviciu care îţi poate aduce satisfacţie şi dezvoltare? </p>
                     <p>Care îţi va pune în valoare potenţialul şi unde vei putea să-ţi manifeşti cunoştinţele pe deplin?</p>
