@@ -23,6 +23,7 @@
         <div class="overlay2 hidden"></div>
         <header>
             <div class="left">
+                <a href="<?= Language::url('/'); ?>"><img src="<?= res('assets/img/s_logo.png'); ?>" class="logo logo_home"></a>
                 <button class="chat">
                     <span class="green">Chat</span><span class="violet">-online</span>
                     <span class="g_dot"></span>

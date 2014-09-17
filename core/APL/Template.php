@@ -77,6 +77,18 @@ class Template {
             'newsList' => array(
                 'name' => 'Stiri',
                 'function' => array('PageView', 'newsList')
+            ),
+            'contactsView' => array(
+                'name' => 'Contacte',
+                'function' => array('PageView', 'contactsView')
+            ),
+            'meetingPast' => array(
+                'name' => 'Sedinte trecute',
+                'function' => array('PageView', 'meetingPast')
+            ),
+            'meetingFuture' => array(
+                'name' => 'Sedinta viitoare',
+                'function' => array('PageView', 'meetingFuture')
             )
         )
     );

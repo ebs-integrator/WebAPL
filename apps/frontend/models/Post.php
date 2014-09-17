@@ -14,11 +14,21 @@ class Post extends Eloquent {
     }
 
     public static function tree($taxonomy_id, $parent = 0) {
-        $list = Post::where('parent', $parent)->where('taxonomy_id', $taxonomy_id)->get();
+        $list = Post::where('parent', $parent)->where('taxonomy_id', $taxonomy_id);
 
         foreach ($list as &$item) {
             $item['lang'] = $item->langs()->where('lang_id', Language::getId())->first();
             $item['list'] = Post::tree($taxonomy_id, $item->id);
+        }
+
+        return $list;
+    }
+    
+    public static function treePosts($parent = 0) {
+        $list = Post::prepareQuery()->where(Post::getField('parent'), $parent)->get();
+        
+        foreach ($list as &$item) {
+            $item['list'] = Post::treePosts($item->id);
         }
 
         return $list;
@@ -246,7 +256,7 @@ class Post extends Eloquent {
 
         return $posts;
     }
-
+    
     public static function coverImage($id) {
         return Files::where(array(
                     'module_name' => 'post_cover',

@@ -31,4 +31,9 @@ jQuery(document).ready(function($) {
     $("body").on('click', ".click-trigger", function() {
         $($(this).data('for')).click();
     });
+    
+    $("body").on('change', ".file_name_edit", function () {
+        $.post(base_url + "/uploader/editname", {id: $(this).attr('data-id'), name: $(this).val()}, function(data) {
+        }, 'json');
+    });
 });

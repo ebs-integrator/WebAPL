@@ -1,5 +1,5 @@
 <?php if (isset($post) && $post) { ?>
-<div class="a_box v_g">
+<div class="a_box v_g m_an">
     <p class="title"><?=$post->title;?></p>
     <div class="hr_dbl"></div>
     <div class="left">

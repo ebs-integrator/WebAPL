@@ -26,6 +26,9 @@ Route::group(array('prefix' => Core\APL\Language::ext()), function() {
     Route::get('topost/{id}', 'SearchController@topost');
 });
 
+
+Route::post('contact/submit', array('PostResources', 'contactSubmit'));
+
 Route::get('language/{ext}', function ($ext) {
     Core\APL\Language::setLanguage($ext);
     return Redirect::to(Core\APL\Language::ext());

@@ -88,5 +88,20 @@ class UploaderController extends BaseController {
         }
         return $data;
     }
+    
+    
+    public function editname() {
+        $id = Input::get('id');
+        $name = Input::get('name');
+        
+        $file = Files::find($id);
+        
+        if ($file) {
+            $file->name = $name;
+            $file->save();
+        } else {
+            throw new Exception("File not found #{$id}");
+        }
+    }
 
 }
