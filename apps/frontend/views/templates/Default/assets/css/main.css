@@ -597,8 +597,10 @@ textarea {
         padding-left:40px;
         line-height: 1.533;
         font:15px 'open_sanssemibold';
-        color:rgb( 72, 72, 72 );
         cursor:pointer;
+    }
+    header .contact .currency .lang p a{
+        color:rgb( 72, 72, 72 );
     }
     header .contact .currency .lang .relative{
         position:relative;
@@ -2112,50 +2114,50 @@ textarea {
     .fb-comments{
         margin-top:75px;
     }
-    section .wrap.site_map p.map_sub{
+    section  p.map_sub{
         font:24px 'open_sansbold';
         color:#7c4d7c;
         border-bottom:2px solid #efefef;
         padding-bottom: 5px;
         clear:both;
     }
-    section .wrap.site_map .map_cont .left{
+    section  .map_cont .left{
         width: 750px;
     }
-    section .wrap.site_map .map_cont .right{
+    section  .map_cont .right{
         min-width:530px;
     }
-    section .wrap.site_map .map_cont .h_list > li{
+    section  .map_cont .h_list > li{
         padding-left:25px;        
         margin-bottom:35px;
         display: inline-block;
-        width:50%;
+        width:100%;
     }
 
-    section .wrap.site_map .map_cont .h_list {
+    section  .map_cont .h_list {
         -webkit-column-count: 2;
         -moz-column-count: 2;
         column-count: 2;
     }
-    section .wrap.site_map .map_cont .h_list p {
+    section  .map_cont .h_list p {
         margin-bottom:5px;
     }
-    section .wrap.site_map .map_cont .h_list p a {
+    section  .map_cont .h_list p a {
         font:18px 'open_sansbold';
         color:#a8b96f;
     }
-    section .wrap.site_map .map_cont .h_list ul{
+    section  .map_cont .h_list ul{
         margin-left:20px;
     }
-    section .wrap.site_map .map_cont .h_list ul li{
+    section  .map_cont .h_list ul li{
         background: url('../img/h_li.png') no-repeat 0 center;
         padding-left:20px;
     }
-    section .wrap.site_map .map_cont .h_list ul li a{
+    section  .map_cont .h_list ul li a{
         font:14px 'open_sansbold';
         color:#4c4c4c;
     }
-    section .wrap.site_map .map_cont .h_list ul li:hover a{
+    section  .map_cont .h_list ul li:hover a{
         text-decoration: underline;
         color:#000000;
     }
@@ -2335,9 +2337,6 @@ textarea {
     .search input{
         float:left;
     }
-    /*    section > .wrap  .left .right{
-            width: 82%;
-        }*/
     ul.culture li .right .box p,ul.culture li .right .box p a{
         font:14px 'open_sanssemibold';
         color:#673167;
@@ -4172,6 +4171,7 @@ textarea {
     }
     header .logo{
         margin:8px 20px;
+        width:200px;
     }
     header .top_menu{
         margin-left:15px;
@@ -4185,7 +4185,7 @@ textarea {
     header .contact .cont .cont_form{
         right:10px;
     }
-    section .wrap.site_map .map_cont .left{
+    section  .map_cont .left{
         width:700px;
     }
     .info .img img{
@@ -4231,7 +4231,7 @@ textarea {
     .wrap .left.ccc{
         margin-right:20px;
     }
-    section .wrap.site_map p.map_sub{
+    section  p.map_sub{
         margin-left:10px;
         margin-right:10px;
     }
@@ -4399,13 +4399,13 @@ textarea {
     ul.faq li p{
         font: 13px 'open_sanssemibold';
     }
-    section .wrap.site_map .map_cont .h_list p a{
+    section  .map_cont .h_list p a{
         font: 16px 'open_sansbold';
     }
-    section .wrap.site_map p.map_sub{
+    section  p.map_sub{
         font: 22px 'open_sansbold';
     }
-    section .wrap.site_map .map_cont .left,section .wrap.site_map .map_cont .right{
+    section  .map_cont .left,section  .map_cont .right{
         width:45%;
     }
     .city_box{
@@ -4489,6 +4489,7 @@ textarea {
     }
     header .logo{
         max-width:180px;
+        margin: 12px 20px;
     }
 
     section > .wrap,section .dirs_menu .wrap{
@@ -4519,6 +4520,9 @@ textarea {
     .ncd h1{
         font-size: 20px;
     }
+    section .wrap.site_map .map_cont .h_list p a{
+        font-size:16px;
+    }
     .c_title{
         font-size: 30px;
     }
@@ -4532,6 +4536,9 @@ textarea {
     }
     .bsa_block{
         float:left;
+    }
+    header .top_menu {
+        margin-left: 0px;
     }
     .bsa_block:after{
         clear:both;
@@ -4646,7 +4653,7 @@ textarea {
     ul.faq li p{
         font-size: 13px;
     }
-    section .wrap.site_map .map_cont .right{
+    section  .map_cont .right{
         float:left;
     }
     .city_box{
@@ -4682,7 +4689,7 @@ textarea {
     }
 
 }
-@media only screen and (min-width: 640px) and (max-width: 767px){
+@media only screen and (max-width: 767px){
     p{
         font-size:16px;
     }
@@ -5223,7 +5230,7 @@ textarea {
     .pda ul li a,.compl_list li a .compl_info,.snd_title{
         font-size:16px;
     }
-    section .wrap.site_map .map_cont .left,section .wrap.site_map .map_cont .right{
+    section  .map_cont .left,section  .map_cont .right{
         width:100%;
         margin:0px;
     }
@@ -5256,5 +5263,16 @@ textarea {
         left: 100%;
         top: 17px;
         content: url('../img/cln_arrow-r.png');
+    }
+}
+@media only screen and (max-width: 639px){
+    section > .wrap, section .dirs_menu .wrap {
+        max-width: 480px;
+    }
+    .right_menu{
+        width:100%;
+    }
+    section > .wrap > .left{
+        width:100%;
     }
 }
