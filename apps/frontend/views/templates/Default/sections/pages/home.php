@@ -19,27 +19,8 @@
 </section>
 <section>
     <div class="wrap ">
-        <div class="left global">    
-            <?php foreach ($sub_pages as $item) { ?>
-                <article>
-                    <p class="ttl"> <a href="<?= $item->url; ?>"><?= $item->title; ?></a></p>
-                    <ul>
-                        <?php
-                        foreach ($item['childrens'] as $k => $chitem) {
-                            if ($k < 4) {
-                                ?>
-                                <li><a href="<?= $chitem->url; ?>"><?= $chitem->title; ?></a></li>
-                                <?php
-                            }
-                        }
-                        ?> 
-                    </ul> 
-                    <a href="<?= $item->url; ?>" class="more"></a>
-                </article>
-            <?php } ?>
-        </div>
         <div class="right global">   
-            <article class="doc">
+<!--            <article class="doc">
                 <p class="ttl"><img src="<?= res('assets/img/doc.png'); ?>"><a href="javascript:;">Toate actele locale</a></p>
                 <div class="hr"></div>
                 <ul class="bxslider2">
@@ -106,7 +87,7 @@
                         </table>
                     </li>
                 </ul>
-            </article>
+            </article>-->
             <article class="news">
                 <p class="ttl"><img src="<?= res('assets/img/stiri.png'); ?>"><a href="javascript:;">Știri</a></p>
                 <div class="hr"></div>
@@ -126,6 +107,25 @@
                 </ul>
                 <a href="javascript:;" class="more"></a>
             </article>
+        </div>
+        <div class="left global">    
+            <?php foreach ($sub_pages as $item) { ?>
+                <article>
+                    <p class="ttl"> <a href="<?= $item->url; ?>"><?= $item->title; ?></a></p>
+                    <ul>
+                        <?php
+                        foreach ($item['childrens'] as $k => $chitem) {
+                            if ($k < 4) {
+                                ?>
+                                <li><a href="<?= $chitem->url; ?>"><?= $chitem->title; ?></a></li>
+                                <?php
+                            }
+                        }
+                        ?> 
+                    </ul> 
+                    <a href="<?= $item->url; ?>" class="more"></a>
+                </article>
+            <?php } ?>
         </div>
     </div>
     <div class="clearfix"></div>
