@@ -5,7 +5,7 @@
             <a href="javascript:;">Harta site-ului</a>
         </div>
     </div>
-    <div class='wrap site_map'>
+    <div class='wrap '>
         <p class='c_title'>Harta site-ului</p>
         <p class='map_sub'>Servicii pentru cetățeni</p>
         <div class='map_cont'>
