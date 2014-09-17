@@ -69,6 +69,7 @@ class Person extends \Core\APL\ExtensionController {
         Template::registerViewMethod('page', 'persons_big', 'Persoane cu foto (viceprimari)', null, true);
         Template::registerViewMethod('page', 'persons_mayor', 'Persoana cu foto (primar)', null, true);
         Template::registerViewMethod('page', 'persons_secretar', 'Persoana cu foto (secretar)', array($this, 'secretar'), true);
+        Template::registerViewMethod('page', 'city_councilors', 'Consilieri locali', null, true);
 
         // Set layout
         $this->layout = Template::mainLayout();
@@ -361,7 +362,7 @@ class Person extends \Core\APL\ExtensionController {
         $person_lang->activity = Input::get('activity');
         $person_lang->sector = Input::get('sector');
         $person_lang->motto = Input::get('motto');
-        $person_lang->text = Input::get('text');
+        $person_lang->text = Input::get("text.{$person_lang_id}");
         $person_lang->save();
 
         if ($redirect_to) {

@@ -203,12 +203,54 @@ class PageView {
         return View::make('sections.pages.article')->with($data);
     }
 
+    public static function contactsView($data) {
+        $data['page']->text = \Core\APL\Shortcodes::execute($data['page']->text);
+
+        return View::make('sections.pages.contacts')->with($data);
+    }
+
     public static function homeView($data) {
         $data['page']->text = \Core\APL\Shortcodes::execute($data['page']->text);
 
         $data['sub_pages'] = Post::subPosts($data['page']->id, 2);
         //var_dump($data['sub_pages']);
         return View::make('sections.pages.home')->with($data);
+    }
+
+    public static function meetingPast($data) {
+        if ($data['page']->feed_id) {
+            Post::$taxonomy = 2;
+            $item = Input::get('item');
+            $wdata['page_url'] = $data['page_url'];
+
+            if ($item) {
+                $wdata["post"] = Post::findURI($item, 1);
+                if ($wdata["post"]) {
+                    $wdata["post"] = Post::withDinamicFields($wdata["post"]);
+                    $data["page"]->text .= View::make("sections.pages.modview.meetingFuture")->with($wdata);
+                } else {
+                    throw new Exception("Undefined post #{$item}");
+                }
+            } else {
+                $posts_instance = Post::postsFeed($data['page']->feed_id, false, true)->where(Post::getField('created_at'), '<', DB::raw('CURRENT_TIMESTAMP'));
+                $wdata["posts"] = Post::setFeedPagination($posts_instance, $data['page']->feed_id);
+                $data["page"]->text .= View::make("sections.pages.modview.meetingPasts")->with($wdata);
+            }
+        }
+        return static::defaultView($data);
+    }
+
+    public static function meetingFuture($data) {
+        if ($data['page']->feed_id) {
+            Post::$taxonomy = 2;
+            $wdata['post'] = Post::postsFeed($data['page']->feed_id, false, true)->where(Post::getField('created_at'), '>', DB::raw('CURRENT_TIMESTAMP'))->first();
+            if ($wdata['post']) {
+                $data["page"]->text = View::make("sections.pages.modview.meetingFuture")->with($wdata);
+            } else {
+                $data["page"]->text = "Nui";
+            }
+        }
+        return static::defaultView($data);
     }
 
     public static function videoList($data) {
@@ -258,7 +300,7 @@ class PageView {
 
                 $wdata['current_year'] = $data['current_year'];
                 $wdata['current_month'] = $data['current_month'];
-                
+
                 $posts_instance = Post::postsFeed($data['page']->feed_id, false, true)->where(Post::getField('id'), '<>', $wdata["post"]->id);
                 $wdata['posts'] = Post::setFeedPagination(Post::applyDate($posts_instance, $data['current_year'], $data['current_month']), $data['page']->feed_id);
             }
@@ -286,7 +328,7 @@ class PageView {
                     $wdata["post"]->cover = Post::coverImage($wdata["post"]->id);
 
                     $data["page"]->text .= View::make("sections.pages.modview.newsFull")->with($wdata);
-                
+
                     return static::contactView($data);
                 } else {
                     throw new Exception("Post not found");
@@ -302,20 +344,29 @@ class PageView {
                         throw new Exception("Posts not found");
                     }
                 }
-                
+
                 $wdata['current_year'] = $data['current_year'];
                 $wdata['current_month'] = $data['current_month'];
                 $wdata['posts'] = Post::setFeedPagination(Post::applyDate(Post::postsFeed($data['page']->feed_id, false, true), $data['current_year'], $data['current_month']), $data['page']->feed_id);
                 foreach ($wdata['posts'] as &$post) {
                     $post['cover'] = Post::coverImage($post->id);
                 }
-                
+
                 $data["page"]->text .= View::make("sections.pages.modview.news")->with($wdata);
             }
 
             $data['years_list'] = Feed::getYears($data['page']->feed_id);
         }
         return static::articleView($data);
+    }
+
+    public static function mapPage($data) {
+        
+        $wdata['tree'] = Post::treePosts(0);
+        
+        $data['page']->text .= View::make('sections.pages.modview.map', $wdata);
+        
+        return static::defaultView($data);
     }
 
     /**

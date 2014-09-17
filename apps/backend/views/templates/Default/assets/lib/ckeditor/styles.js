@@ -113,6 +113,14 @@ CKEDITOR.stylesSet.add( 'default', [
         styles: {}
     },
     {
+        name: 'Aparat responsive table',
+        element: 'table',
+        attributes: {
+            'class': 'aprt'
+        },
+        styles: {}
+    },
+    {
         name: 'Green List',
         element: 'ul',
         attributes: {

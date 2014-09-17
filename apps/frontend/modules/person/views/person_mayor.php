@@ -54,6 +54,22 @@ foreach ($groups as $group) {
             </div>
 
         </div>
+        <ul class="dcr">
+            <?php foreach ($person->posts as $folder) { ?>
+                <li><a href='javascript:;'><?= $folder->title; ?><span class="more"></span></a>
+                    <div class='dcr_box'>
+                        <ul>
+                            <?php foreach ($folder->docs as $doc) { ?>
+                            <li class="<?=$doc->extension;?>">
+                                <span><a href="<?=url($doc->path);?>"><?= $doc->name; ?></a></span>
+                                <a href="<?=url($doc->path);?>" class="dcr_dwnl"></a>
+                            </li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                </li>
+            <?php } ?>
+        </ul>
         <?php
     }
 }
