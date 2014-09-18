@@ -32,17 +32,17 @@ $(document).ready(function () {
         pager: false,
         auto: true
     });
-    $("ul.faq  li").click(function () {
+    $("ul.faq  li a").click(function () {
         $('ul.faq li.active').removeClass('active');
-        if ($(this).find('p').hasClass('active')) {
+        if ($(this).parent().find('p').hasClass('active')) {
             $("ul.faq  li p.active").slideToggle();
             $("ul.faq li p.active").removeClass('active');
         }
         else {
             $("ul.faq li p.active").slideToggle();
             $("ul.faq  p.active").removeClass('active');
-            $(this).find('p').addClass('active').slideToggle();
-            $(this).addClass('active');
+            $(this).parent().find('p').addClass('active').slideToggle();
+            $(this).parent().addClass('active');
         }
     });
 

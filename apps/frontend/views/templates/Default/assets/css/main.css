@@ -935,6 +935,8 @@ textarea {
         clear:both;
         padding-left: 23px;
         padding-top:20px;
+        max-height: 100px;
+        overflow: hidden;
     }
     .right article{
         padding:23px 19px 20px 27px;
