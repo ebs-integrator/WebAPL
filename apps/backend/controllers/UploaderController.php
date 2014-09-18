@@ -59,13 +59,17 @@ class UploaderController extends BaseController {
             $uploadSuccess = $file->move(Files::fullDir(), $filename);
 
             if ($uploadSuccess) {
-                Files::register($name, $filename, $extension, $data['module_name'], $data['module_id']);
+                $fid = Files::register($name, $filename, $extension, $data['module_name'], $data['module_id']);
 
                 $data['error'] = '0';
                 $data['succes'] = 'Uploaded!';
+                
+                Log::info("File uploaded #{$fid} - '{$filename}'");
             } else {
                 $data['error'] = '1';
                 $data['succes'] = 'Error!';
+                
+                Log::warning("Error upload file {$name}");
             }
         } else {
             $data['error'] = '1';

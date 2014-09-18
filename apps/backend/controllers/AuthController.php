@@ -9,6 +9,7 @@ class AuthController extends BaseController {
 
     public function postTake() {
         if (Auth::attempt(array('username' => Input::get('username'), 'password' => Input::get('password')))) {
+            Log::info('User login');
             return Redirect::intended('/');
         } else {
             return Redirect::intended('auth/index')->with('auth_error', 'Invalid Username or Password');
@@ -16,6 +17,7 @@ class AuthController extends BaseController {
     }
     
     public function getLogout() {
+        Log::info('User logout');
         Auth::logout();
     }
 

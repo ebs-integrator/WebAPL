@@ -58,6 +58,8 @@ class FeedController extends BaseController {
                 $frel->save();
             }
         }
+        
+        Log::info("Create new feed '{$general['name']}'");
 
         return Redirect::to('feed/edit/' . $feed->id);
     }
@@ -103,6 +105,8 @@ class FeedController extends BaseController {
             $postlang->post_id = $post->id;
             $postlang->save();
         }
+        
+        Log::info("Create new post #{$post->id}");
 
         return Redirect::to('feed/editpost/' . $post->id);
     }
@@ -151,6 +155,8 @@ class FeedController extends BaseController {
             $feed->order_type = $general['order_type'];
             $feed->order_by = $general['order_by'];
             $feed->save();
+            
+            Log::info("Edit feed #{$id}");
         } else {
             throw new Exception("Undefined Feed #{$id} DATA: " . serialize($general));
         }
@@ -176,6 +182,8 @@ class FeedController extends BaseController {
             $post = Post::findTax($id, $this->taxonomy->id);
             $post->created_at = $general['created_at'];
             $post->save();
+            
+            Log::info("Edit Post (article) #{$id}");
         }
 
         // update FeedPost records
@@ -233,6 +241,8 @@ class FeedController extends BaseController {
                     $post_lang->text = $plang['text'];
                     $post_lang->enabled = isset($plang['enabled']) ? 1 : 0;
                     $post_lang->save();
+                    
+                    Log::info("Edit PostLang (article) #{$plang_id}");
                 } else {
                     throw new Exception("Undefined PostLang #{$plang_id} DATA: " . serialize($plang));
                 }
