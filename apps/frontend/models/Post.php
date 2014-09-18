@@ -23,10 +23,10 @@ class Post extends Eloquent {
 
         return $list;
     }
-    
+
     public static function treePosts($parent = 0) {
         $list = Post::prepareQuery()->where(Post::getField('parent'), $parent)->orderBy('ord_num', 'asc')->get();
-        
+
         foreach ($list as &$item) {
             $item['list'] = Post::treePosts($item->id);
         }
@@ -79,8 +79,22 @@ class Post extends Eloquent {
         foreach ($list as &$item) {
             Post::registerInCache($item);
             $item['url'] = Post::getFullURI($item->id);
+            $item['image_icon'] = Files::getfile('page_icon', $item->id);
+            $item['image_icon_active'] = Files::getfile('page_icon_active', $item->id);
+            $item['image_icon_big'] = Files::getfile('page_icon_big', $item->id);
         }
 
+        return $list;
+    }
+
+    public static function findHomePosts() {
+        $current_tax = static::$taxonomy;
+        static::$taxonomy = 2;
+        $list = Post::prepareQuery()
+                ->where(Post::getField('to_home'), 1)
+                ->orderBy('created_at', 'desc')
+                ->get();
+        static::$taxonomy = $current_tax;
         return $list;
     }
 
@@ -257,7 +271,7 @@ class Post extends Eloquent {
 
         return $posts;
     }
-    
+
     public static function coverImage($id) {
         return Files::where(array(
                     'module_name' => 'post_cover',

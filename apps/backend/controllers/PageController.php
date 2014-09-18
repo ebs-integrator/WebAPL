@@ -23,7 +23,7 @@ class PageController extends BaseController {
         Actions::register('page_attachment', function ($page) {
             echo View::make('sections.feed.attachment-page', array(
                 'post' => $page->toArray(),
-                'list' => Feed::all()
+                'list' => Feed::orderBy('name', 'asc')->get()
             ));
         });
     }

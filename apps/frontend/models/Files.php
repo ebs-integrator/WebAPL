@@ -16,7 +16,9 @@ class Files extends Eloquent {
         return Files::where('module_name', $module_name)->where('module_id', intval($module_id))->get();
     }
 
-
+    public static function getfile($module_name, $module_id) {
+        return Files::where('module_name', $module_name)->where('module_id', intval($module_id))->first();
+    }
 
 
 }

@@ -26,10 +26,23 @@ class SearchController extends BaseController {
                 case 2:
                     $feed = FeedPost::where('post_id', $post->id)->first();
                     if ($feed) {
-                        $post = Post::where('feed_id', $feed->feed_id)->first();
-                        if ($post) {
-                            $uri = Post::getFullURI($post->id, true);
-                            return Redirect::to($uri);
+                        $page = Post::where('feed_id', $feed->feed_id)->first();
+                        if ($page) {
+                            $viewmods = Core\APL\Template::getViewMethodList('page');
+                            $uri = Post::getFullURI($page->id, true);
+
+                            if (isset($viewmods[$page->view_mod]['support_item']) && $viewmods[$page->view_mod]['support_item']) {
+                                $plang = PostLang::where('post_id', $post->id)->where('lang_id', \Core\APL\Language::getId())->first();
+                                if ($plang) {
+                                    $url = $uri . "?item=" . $plang->uri;
+                                } else {
+                                    $url = $uri;
+                                }
+                            } else {
+                                $url = $uri;
+                            }
+
+                            return Redirect::to($url);
                         }
                     }
                     break;

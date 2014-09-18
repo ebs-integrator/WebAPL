@@ -180,7 +180,8 @@ class FeedController extends BaseController {
             $response['Post'] = 1;
 
             $post = Post::findTax($id, $this->taxonomy->id);
-            $post->created_at = $general['created_at'];
+            $post->created_at = $general['created_at'];    
+            $post->to_home = isset($general['to_home']) ? 1 : 0;
             $post->save();
             
             Log::info("Edit Post (article) #{$id}");
