@@ -1,25 +1,25 @@
 <?php if (isset($post) && $post) { ?>
-<div class="a_box v_g m_an">
-    <p class="title"><?=$post->title;?></p>
-    <div class="hr_dbl"></div>
-    <div class="left">
-        <div class="img">
-            <?php if ($post->cover) { ?>
-            <img src="<?= url($post->cover['path']); ?>">
-            <?php } ?>
+    <div class="a_box v_g">
+        <p class="title"><?= $post->title; ?></p>
+        <div class="hr_dbl"></div>
+        <div class="left">
+            <div class="info unic">
+                <div class="img">
+                    <?php if ($post->cover) { ?>
+                        <img src="<?= url($post->cover['path']); ?>">
+                    <?php } ?>
+                    <div class="details">
+                        <p class="data"><?= date("d-m-Y, H:i", strtotime($post->created_at)); ?>
+                            <img src="<?= res('assets/img/v_arrow.png'); ?>" class='arrow'>
+                        </p>
+                        <p class='cont'></p>
+                    </div>
+                </div>
+                <?= $post->text; ?>
+            </div>
         </div>
-        <div class="details">
-            <p class="data"><?= date("d-m-Y, H:i", strtotime($post->created_at)); ?>
-                <img src="<?= res('assets/img/v_arrow.png'); ?>" class='arrow'>
-            </p>
-            <p class='cont'></p>
-        </div>
+        <div class="clearfix"></div>
     </div>
-    <div class="right">
-        <p class="info"><?=$post->text;?></p>
-    </div>
-    <div class="clearfix"></div>
-</div>
 <?php } ?>
 
 <?php if (isset($posts) && count($posts)) { ?>

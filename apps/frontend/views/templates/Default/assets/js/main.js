@@ -11,7 +11,8 @@ $(document).ready(function () {
         adaptiveHeight: true
     });
 
-    $('.video').css('min-height', ($(window).height() - 510));    
+    $('section').css('min-height', ($(window).height() - 326));    
+    console.log($(window).height());
     $('.l_a.m_t_n').css('min-height', ($(window).height() - 413));
     $('.menu_content').height($(window).height() - 83);
     

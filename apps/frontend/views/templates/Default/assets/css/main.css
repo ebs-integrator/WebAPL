@@ -912,6 +912,10 @@ textarea {
         background-color:#fcfcfc;
         border-left:0px;
     }
+    .right > article.news{
+        height:auto;        
+        min-height:229px;
+    }
     .right > article:before{        
         border-left:3px solid #6b6b6b;
         content:'';
@@ -4135,14 +4139,12 @@ textarea {
     }
     .bgr .img img{
         max-width:400px;
-        max-height:510px;
     }
     .right > article.atn:before{
         border:0px;
     }
     .a_box.g_g .left .img img,.a_box.v_g .left .img img{
         max-width: 350px;
-        max-height:350px;
     }
 }
 @media only screen and (max-width : 1525px) {
