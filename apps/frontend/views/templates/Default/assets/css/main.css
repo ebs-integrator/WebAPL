@@ -912,6 +912,10 @@ textarea {
         background-color:#fcfcfc;
         border-left:0px;
     }
+    .right > article.news{
+        height:auto;        
+        min-height:229px;
+    }
     .right > article:before{        
         border-left:3px solid #6b6b6b;
         content:'';
