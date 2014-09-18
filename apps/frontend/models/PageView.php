@@ -221,8 +221,11 @@ class PageView {
     public static function homeView($data) {
         $data['page']->text = \Core\APL\Shortcodes::execute($data['page']->text);
 
+        $data['page']['background'] = Files::getfile('page_bg', $data['page']->id);
+        
         $data['sub_pages'] = Post::subPosts($data['page']->id, 2);
-        //var_dump($data['sub_pages']);
+        $data['home_posts'] = Post::findHomePosts();
+
         return View::make('sections.pages.home')->with($data);
     }
 

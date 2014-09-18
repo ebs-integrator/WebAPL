@@ -10,6 +10,13 @@
         </tr>
 
         <tr>
+            <th>To home page: </th>
+            <td>
+                <input type="checkbox" name="post[to_home]" class='make-switch' <?= isset($post->to_home) && $post->to_home ? 'checked' : ''; ?> />
+            </td>
+        </tr>
+
+        <tr>
             <th>Feeds: </th>
             <td>
                 <input name='feed_post[]' value='0' type='hidden' />

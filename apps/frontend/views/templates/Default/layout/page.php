@@ -44,7 +44,11 @@
                         <div class="top_menu">
                             <a href='<?= $item->url; ?>' class="<?= $item->id == $active_page_id ? 'active' : ''; ?>">
                                 <div class="left">
-                                    <img src="<?= res('assets/img/serv.png'); ?>">
+                                    <?php if ($item->image_icon_active && isset($parrents_ids) && in_array($item->id, $parrents_ids)) { ?>
+                                        <img src="<?= url($item->image_icon_active->path); ?>">
+                                    <?php } elseif ($item->image_icon) { ?>
+                                        <img src="<?= url($item->image_icon->path); ?>">
+                                    <?php } ?>
                                 </div>
                                 <div class="left title third"><?= $item->title; ?></div></a>
                         </div>

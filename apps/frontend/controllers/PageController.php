@@ -37,8 +37,10 @@ class PageController extends BaseController {
 
                 // get real page URI
                 $segments = array();
+                $parrents_ids = array();
                 foreach (array_reverse($this->data['parents']) as $parrent) {
                     $segments[] = $parrent['uri'];
+                    $parrents_ids[] = $parrent['id'];
                     Template::addBreadCrumb(Post::getURL(implode('/', $segments)), $parrent['title']);
                 }
                 $segments[] = $this->data['page']['uri'];
@@ -52,7 +54,8 @@ class PageController extends BaseController {
                     $this->data['general_pages'] = Post::findGeneral();
                     View::share(array(
                         'general_pages' => $this->data['general_pages'],
-                        'active_page_id' => $this->data['page']->id
+                        'active_page_id' => $this->data['page']->id,
+                        'parrents_ids' => $parrents_ids
                     ));
 
                     // Verify if this page is clone
