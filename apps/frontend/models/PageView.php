@@ -101,6 +101,15 @@ class PageView {
         return static::defaultView($data);
     }
 
+    public static function promisesPageMod($data) {
+
+        Post::$taxonomy = 1;
+        $wdata["posts"] = Post::findWithParent($data['page']->id);
+        $data["page"]->text .= View::make("sections.pages.modview.promisePages")->with($wdata);
+
+        return static::defaultView($data);
+    }
+
     public static function locationsList($data) {
         if ($data['page']->feed_id) {
             Post::$taxonomy = 2;
@@ -216,7 +225,7 @@ class PageView {
         //var_dump($data['sub_pages']);
         return View::make('sections.pages.home')->with($data);
     }
-    
+
     public static function fullView($data) {
         $data['page']->text = \Core\APL\Shortcodes::execute($data['page']->text);
 
@@ -367,11 +376,11 @@ class PageView {
     }
 
     public static function mapPage($data) {
-        
+
         $wdata['tree'] = Post::treePosts(0);
-        
+
         $data['page']->text .= View::make('sections.pages.modview.map', $wdata);
-        
+
         return static::fullView($data);
     }
 

@@ -116,7 +116,7 @@ CKEDITOR.stylesSet.add( 'default', [
         name: 'Aparat responsive table',
         element: 'table',
         attributes: {
-            'class': 'aprt'
+            'class': 'aprt taxe'
         },
         styles: {}
     },

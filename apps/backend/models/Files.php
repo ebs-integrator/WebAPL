@@ -68,6 +68,8 @@ class Files extends Eloquent {
         $file = Files::find($id);
         if ($file) {
             Files::dropFile($file->path);
+            
+            Log::warning("Drop file #{$id} - {$file->path}");
         }
         return Files::destroy($id);
     }

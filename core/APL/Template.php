@@ -26,6 +26,10 @@ class Template {
                 'name' => 'Lista de promisiuni a primarului (feed based)',
                 'function' => array('PageView', 'promisesMod')
             ),
+            'promisiuni_primar_page' => array(
+                'name' => 'Lista de promisiuni a primarului (pages based)',
+                'function' => array('PageView', 'promisesPageMod')
+            ),
             'locations_list' => array(
                 'name' => 'Lista cu locatii (cultura)',
                 'function' => array('PageView', 'locationsList')

@@ -66,12 +66,16 @@ class ModuleController extends BaseController {
     public function getEnable($id) {
         Module::changeState($id, 1);
 
+        Log::info("Enable module #{$id}");
+        
         return Redirect::to('module');
     }
 
     public function getDisable($id) {
         Module::changeState($id, 0);
 
+        Log::info("Disable module #{$id}");
+        
         return Redirect::to('module');
     }
 

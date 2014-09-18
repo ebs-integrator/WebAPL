@@ -72,6 +72,8 @@ class PageController extends BaseController {
         
         $page->ord_num = $page->id;
         $page->save();
+        
+        Log::info("Create page #{$page->id}");
 
         return Redirect::to('page/index/' . $page->id);
     }
@@ -121,6 +123,8 @@ class PageController extends BaseController {
         if (isset($post->clone_id) && $post->clone_id) {
             $this->clonePageLangData($post->clone_id, $post->id);
         }
+        
+        Log::info("Edit page #{$page_id}");
 
         return array(
         );
@@ -133,11 +137,13 @@ class PageController extends BaseController {
         $post->show_file_search = Input::has('data.show_file_search') ? 1 : 0;
         $post->save();
 
+        Log::info("Edit page file settings #{$page_id}");
+        
         return array();
     }
 
     private function clonePageLangData($source_id, $target_id) {
-        echo 'run cloning';
+        //echo 'run cloning';
         foreach (Core\APL\Language::getList() as $lang) {
 
             $source = PostLang::where(array(
@@ -175,8 +181,10 @@ class PageController extends BaseController {
 
                 $spage->ord_num = $ord_num;
                 $spage->save();
+                
+                Log::info("Move page ord,  #{$page->id} - #{$spage->id}");
             }
-            
+                                   
             return Redirect::to($_SERVER['HTTP_REFERER']);
         } else {
             throw new Exception("Page not found #{$page_id}, move action");

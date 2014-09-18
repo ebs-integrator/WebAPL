@@ -31,6 +31,10 @@ class HomeController extends BaseController {
         ));
         
         $this->layout = null;
+        
+        $oper = Input::get('oper');
+        $id = Input::get('id');
+        Log::info("Lang operation {$oper} #{$id}");
     }
     
     public function showDashboard() {
