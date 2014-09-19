@@ -68,18 +68,15 @@
                 <img src="<?= res('assets/img/notebook.png'); ?>">
                 <a href="javascript:;">Orarul rutelor de autobus</a>
             </div>
-            <div class="map_info"><?=$page->text;?></div>
+            <div class="map_info"><?= $page->text; ?></div>
         </div>
         <div class='left form contact'>
-            <?=View::make('sections.pages.blocks.contactForm');?>
+            <?= View::make('sections.pages.blocks.contactForm'); ?>
         </div>
         <div class='clearfix140'></div>
-        <div class='socials'>
-            <div id="vk_like"></div>
-            <div id="ok_shareWidget"></div>
-            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="125" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-            <div class="clearfix"></div>
-        </div>
+        <?php if ($page->have_socials) { ?>
+            <?= View::make('sections.elements.socials', array('url' => $page_url)); ?>
+        <?php } ?>
         <div class='hr_grey'></div>
     </div>
 </section>

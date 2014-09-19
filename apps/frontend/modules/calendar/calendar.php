@@ -47,8 +47,16 @@ class Calendar extends \Core\APL\ExtensionController {
                 ->orderBy(\CalendarModel::getField('event_date'), 'asc')
                 ->get();
         
+        $min_time = mktime(0, 0, 0, $wdata['begin_month'], 1, $wdata['begin_year']);
+        $max_time = mktime(0, 0, 0, $wdata['end_month'], 1, $wdata['end_year']);
         foreach ($events as $event) {
             $time = strtotime($event->event_date);
+            if ($min_time > $time) {
+                $min_time = $time;
+            } 
+            if ($max_time < $time) {
+                $max_time = $time;
+            }
             $year = intval(date("Y", $time));
             $month = intval(date("m", $time));
             $day = intval(date("d", $time));
@@ -57,6 +65,12 @@ class Calendar extends \Core\APL\ExtensionController {
             }
             $wdata['events'][$year][$month][$day][] = $event;
         }
+        
+        $wdata['begin_year'] = intval(date('Y', $min_time));
+        $wdata['begin_month'] = intval(date('m', $min_time));
+        
+        $wdata['end_year'] = intval(date('Y', $max_time));
+        $wdata['end_month'] = intval(date('m', $max_time));
 
         $data['page']->text .= Template::moduleView($this->module_name, "views.calendarPage", $wdata);
 

@@ -47,7 +47,7 @@
 
                             echo '<tr>';
 
-                            echo $firstDayOfMonth > 0 ? str_repeat('<td>&nbsp;</td>', $firstDayOfMonth) : '';
+                            echo $firstDayOfMonth > 0 ? str_repeat('<td class="empty_cell">&nbsp;</td>', $firstDayOfMonth) : '';
 
                             $dayOfWeek = $firstDayOfMonth + 1;
                             $weekNum = 1;
@@ -86,7 +86,7 @@
                             }
                         }
 
-                        echo 8 - $dayOfWeek > 0 ? str_repeat('<td>&nbsp;</td>', 8 - $dayOfWeek) : '';
+                        echo 8 - $dayOfWeek > 0 ? str_repeat('<td class="empty_cell">&nbsp;</td>', 8 - $dayOfWeek) : '';
                         echo '</tr></table>';
                         
                         if ($month == $current_month && $year == $current_year) {
