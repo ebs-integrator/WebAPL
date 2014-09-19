@@ -1339,22 +1339,20 @@ textarea {
         position: relative;
     }
     .right_menu li{
-        height:61px;
         cursor:pointer;
-        padding-left:50px;
         background: url('../img/right.png')25px center no-repeat;
-        padding-right:15px;
     }
     .right_menu li.li_b{
         height:90px;
     }
     .right_menu li a{
-        font: 18px 'open_sanssemibold';
+        ffont: 18px 'open_sanssemibold';
         color: #595959;
         display: table-cell;
         height: 61px;
         vertical-align: middle;
         line-height: 20px;
+        padding: 11px 15px 11px 50px;
     }
     .right_menu li.li_b a{
         height:90px;
@@ -3945,6 +3943,7 @@ textarea {
     table.orar tbody tr td{
         padding:50px 12px;
         position:relative;
+        width: 14.28%;
     }
     .cl_data{
         position:absolute;
@@ -4201,6 +4200,9 @@ textarea {
     }
     .a_box .right {
         max-width: 400px;
+    }
+    ul.prom li {
+        width: 45%;
     }
 }
 @media only screen and (max-width: 1280px){
