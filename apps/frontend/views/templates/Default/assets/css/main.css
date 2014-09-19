@@ -1346,7 +1346,7 @@ textarea {
         height:90px;
     }
     .right_menu li a{
-        ffont: 18px 'open_sanssemibold';
+        font: 18px 'open_sanssemibold';
         color: #595959;
         display: table-cell;
         height: 61px;
