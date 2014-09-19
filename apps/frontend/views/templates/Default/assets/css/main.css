@@ -722,14 +722,16 @@ textarea {
         line-height: 47px;
     }
     header .contact .cont .cont_form input[type=submit]{
-        width:450px;
-        height:35px;
-        border-bottom:2px solid #282828;
-        background:#4b4b4b;
-        color:#fff;
+        width: 200px;
+        height: 35px;
+        border-bottom: 2px solid #282828;
+        background: #4b4b4b;
+        color: #fff;
         text-transform: uppercase;
-        font:14px 'open_sansbold';
-        margin-top:10px;
+        font: 14px 'open_sansbold';
+        margin-top: 10px;
+        float: right;
+        margin-right: 17px;
     }
     .menu{
         width:100%;
@@ -1823,7 +1825,7 @@ textarea {
         padding:5px;
         border:1px solid #d9d9d9;
     }
-    .green input[type=text].code{
+    .green input[type=text].code,.cont_form input[type=text].code{
         height:30px;
         max-width: 85px;
         border:1px solid #d9d9d9;
@@ -4744,15 +4746,8 @@ textarea {
         padding: 10px 0px;
     }
     header .menu_content .social a{
-        font-size:11px;
-        height: 20px;
-        line-height:23px;
-        
-    }
-    header .menu_list li{
-        height:45px;
-        font-size:22px;
-        padding: 12px 25px;
+
+
     }
     section .dirs_menu{
         height:4px;
@@ -4762,12 +4757,12 @@ textarea {
         max-width:200px;
     }
     header .menu_list li{
-        height:72px;
+        height:45px;
         border-bottom: 1px solid #835b83;
-        font:22px 'open_sansbold';
+        font:14px 'open_sansbold';
         color:#fff;
         text-transform: uppercase;
-        padding: 20px 25px;
+        padding: 12px 25px;
     }
     header .menu_list li a{        
         color:#fff;
@@ -4791,16 +4786,16 @@ textarea {
         position:absolute;
         background:#784478;
         width:100%;
-        padding:40px 0px;
+        padding:10px 0px;
     }
     header .menu_content .social a{
         color: #fff;
-        font: 13px 'open_sanssemibold';
-        line-height: 32px;
+        font: 11px 'open_sanssemibold';
         text-transform: uppercase;
         padding-left: 30px;
-        height: 30px;
+        height: 20px;
         display: block;
+        line-height:23px;
     }
     header .menu_content .social  li{
         line-height:30px;
@@ -5304,7 +5299,7 @@ textarea {
 }
 @media only screen and (max-width: 640px){
     section > .wrap, section .dirs_menu .wrap {
-        max-width: 480px;
+        max-width: 320px;
     }
     .right_menu{
         width:100%;
@@ -5323,5 +5318,8 @@ textarea {
     }
     ul.prom li:nth-child(2n){
         margin-left:0px;
+    }
+    footer{
+        height:195px;
     }
 }
