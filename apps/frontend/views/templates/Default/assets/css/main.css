@@ -5118,7 +5118,7 @@ textarea {
         margin:0px;
     }
     ul.culture li .right .box{
-        min-width:193px;
+        min-width:185px;
     }
     ul.faq li a,ul.faq li a span{
         font-size:17px;
@@ -5290,5 +5290,11 @@ textarea {
     }
     section > .wrap > .left{
         width:100%;
+    }
+    ul.culture li .right,ul.culture li .right .box{
+        float:none;
+    }
+    ul.culture li{
+        height:auto;
     }
 }
