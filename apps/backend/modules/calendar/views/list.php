@@ -56,6 +56,14 @@
         <form action="<?= url('calendar/create'); ?>" method='post'>
             <div class='c20'></div>
             <h4>Create new event</h4>
+
+            <select class="chzn-select" name="general[calendar_group_id]">
+                <option value="0">---</option>
+                <?php foreach ($groups as $group) { ?>
+                    <option value="<?= $group->id; ?>"><?= $group->name; ?></option>
+                <?php } ?>
+            </select>
+            <br><br>
             <?php foreach (\Core\APL\Language::getList() as $lang) { ?>
                 <input class="form-control" name="lang[<?= $lang->id; ?>][name]" placeholder="Event name in <?= $lang->name; ?>"/>
                 <div class='c10'></div>
@@ -63,14 +71,14 @@
             <div class='c20'></div>
             <input class='form-control' type="text" name="general[period]" placeholder="Period" />
             <div class='c10'></div>
-            <input class='form-control' type='text' name='general[date]' placeholder="Data" value='<?= date("Y-m-d H:i:s"); ?>' />
+            <input class='form-control datetimepicker' data-date-format="YYYY-MM-DD hh:mm:ss" type='text' name='general[date]' placeholder="Data" value='<?= date("Y-m-d H:i:s"); ?>' />
             <br>
             <button class="btn btn-success">Creaza eveniment</button>
             <div class='c20'></div>
         </form>
 
     </div>
-    
+
     <div class="tab-pane" id="egroups">
         <script>
             var egroups_options = {
@@ -97,7 +105,7 @@
                 caption: "",
                 editurl: '<?= url('calendar/editgroup') ?>',
                 loadComplete: function() {
-                },ight: $(window).height() * 0.7,
+                }, ight: $(window).height() * 0.7,
                 onSelectRow: function(rowid) {
                 }
             };

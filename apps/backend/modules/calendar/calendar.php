@@ -53,7 +53,9 @@ class Calendar extends \Core\APL\ExtensionController {
     }
 
     public function calendar_list() {
-        $this->layout->content = Template::moduleView($this->module_name, 'views.list');
+        $data['groups'] = \CalendarGroup::orderBy('name', 'asc')->get();
+        
+        $this->layout->content = Template::moduleView($this->module_name, 'views.list', $data);
 
         return $this->layout;
     }
@@ -121,6 +123,7 @@ class Calendar extends \Core\APL\ExtensionController {
         $item = new CalendarModel;
         $item->period = Input::get("general.period");
         $item->event_date = Input::get("general.date");
+        $item->calendar_group_id = Input::get("general.calendar_group_id");
         $item->user_id = Auth::user()->id;
         $item->save();
 
