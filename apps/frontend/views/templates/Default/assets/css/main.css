@@ -615,7 +615,7 @@ textarea {
     header .header_mini{
         display:none;
     }
-    section .logo{
+    div .logo{
         text-align: center;
         margin-top:40px;
     }

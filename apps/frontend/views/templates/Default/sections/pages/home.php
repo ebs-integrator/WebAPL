@@ -1,9 +1,8 @@
-<section>
+<div>
     <div class="logo">
         <img src="<?= res('assets/img/logo.png'); ?>">
     </div>
     <div class="menu">
-
         <?php if ($page->background) { ?>
         <img src="<?= url($page->background->path); ?>" class="backg">
         <?php } ?>
@@ -22,7 +21,7 @@
             <?php } ?>
         </div>
     </div>
-</section>
+</div>
 <section>
     <div class="wrap ">
         <div class="right global">   
