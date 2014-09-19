@@ -26,7 +26,10 @@ foreach ($groups as $group) {
                         <p class="email"><a href="mailto:<?= $person->email; ?>" target="_blank"><?= $person->email; ?></a></p>
                     </div>
                 </td>
-                <td><?=$person->text;?></td>
+                <td>
+                    <div class="sec_span">secretarul</div>
+                    <?= $person->text; ?>
+                </td>
             </tr>
             <tr>
                 <td colspan="2">

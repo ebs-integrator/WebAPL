@@ -2621,3 +2621,6 @@ body.error .logo h1 {
     color: #fff;
     background: #cccccc;
 }
+.treeview a{
+    white-space: pre-wrap;
+}
