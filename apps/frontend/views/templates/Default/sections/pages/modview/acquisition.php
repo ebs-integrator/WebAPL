@@ -23,18 +23,26 @@
         <?php } ?>
         <div class="clearfix"></div>
     </div>
+    
+    <?php if ($post->docs) { ?>
+        <ul class="dcr">
+            <li><a href='javascript:;'><?= $item->title; ?></a>
+                <div class='dcr_box'>
+                    <ul class="mda n_t">
+                        <?php foreach ($post->docs as $file) { ?>
+                            <li class="<?= $file->extension; ?>"><span><a href="<?= $file->path; ?>"><?= $file->name; ?></a></span></li>  
+                        <?php } ?>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    <?php } ?>
 
     <div class="acz_details">
         <?= $post->text; ?>
 
 
-        <?php if ($post->docs) { ?>
-            <ul class="mda n_t">
-                <?php foreach ($post->docs as $file) { ?>
-                    <li class="<?= $file->extension; ?>"><span><a href="<?= $file->path; ?>"><?= $file->name; ?></a></span></li>  
-                <?php } ?>
-            </ul>
-        <?php } ?>
+
 
         <div class='clearfix50'></div>
         <div class='socials'>
