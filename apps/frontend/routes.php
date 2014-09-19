@@ -24,10 +24,14 @@ Route::group(array('prefix' => Core\APL\Language::ext()), function() {
     
     Route::get('search', 'SearchController@results');
     Route::get('topost/{id}', 'SearchController@topost');
+    
+    Route::any('rss', array('PostResources', 'rssPage'));
 });
 
 
 Route::post('contact/submit', array('PostResources', 'contactSubmit'));
+Route::post('contact/topsubmit', array('PostResources', 'contactTopSubmit'));
+
 
 Route::get('language/{ext}', function ($ext) {
     Core\APL\Language::setLanguage($ext);

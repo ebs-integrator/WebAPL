@@ -34,10 +34,44 @@ class PostResources {
             $return['message'] = implode(' ', $validator->messages()->all('<p>:message</p>'));
             $return['error'] = 1;
         } else {
-            SimpleCapcha::destroy('person_subscribe');
+            SimpleCapcha::destroy('contact');
+        }
+
+        return $return;
+    }
+    
+    public static function contactTopSubmit() {
+                $validator = Validator::make(array(
+                    'name' => Input::get('name'),
+                    'email' => Input::get('email'),
+                    'message' => Input::get('message'),
+                    'capcha' => SimpleCapcha::valid('contact_top', Input::get('capcha')) ? 1 : null
+                        ), array(
+                    'name' => 'required',
+                    'email' => 'email|required',
+                    'message' => 'required',
+                    'capcha' => 'required'
+        ));
+
+        $return = array(
+            'message' => '',
+            'error' => 0
+        );
+
+        if ($validator->fails()) {
+            $return['message'] = implode(' ', $validator->messages()->all('<p>:message</p>'));
+            $return['error'] = 1;
+        } else {
+            SimpleCapcha::destroy('contact_top');
         }
 
         return $return;
     }
 
+    public static function rssPage() {
+        $data['posts'] = Post::rssPosts();
+        
+        return View::make('sections.others.rss', $data);
+    }
+    
 }

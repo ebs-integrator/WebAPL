@@ -115,6 +115,24 @@ $(document).ready(function() {
         block.find(".mda li").hide();
         block.find('.mda li span:contains("' + query + '")').closest("li").show();
     });
+
+    $("#contact_top_form").submit(function(e) {
+        e.preventDefault();
+
+        var form = $(this);
+
+        $.post('contact/topsubmit', $(this).serialize(), function(data) {
+            if (data.error == 0) {
+                form.fadeOut(400, function() {
+                    $(".contact_top_notif").fadeIn(300);
+                });
+            } else {
+                form.find(".form_error").html(data.message);
+            }
+        });
+
+        return false;
+    });
 });
 
 

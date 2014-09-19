@@ -318,5 +318,10 @@ class Post extends Eloquent {
             return [];
         }
     }
+    
+    public static function rssPosts() {
+        static::$taxonomy = 2;
+        return Post::prepareQuery()->orderBy(Post::getField('created_at'), 'desc')->take(50)->get();
+    }
 
 }

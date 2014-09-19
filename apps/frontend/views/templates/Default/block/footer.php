@@ -13,7 +13,7 @@
         <div class="left socials">
             <a href="javascript:;"><span><img src="<?= res('assets/img/twitter.png'); ?>"></span>Twitter</a>
             <a href="javascript:;"><span><img src="<?= res('assets/img/gplus.png'); ?>"></span>Google+</a>
-            <a href="javascript:;"><span><img src="<?= res('assets/img/rsss.png'); ?>" class="rsss"></span>RSSS</a>
+            <a href="<?=Language::url('rss');?>"><span><img src="<?= res('assets/img/rsss.png'); ?>" class="rsss"></span>RSS</a>
         </div>
     </div>
     <div class="right">
