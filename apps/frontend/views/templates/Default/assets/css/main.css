@@ -472,6 +472,9 @@ textarea {
         margin-top:27px;
         background: url('../img/tel_v.png') no-repeat left center;
     }
+    section img{
+        max-width:100%;
+    }
     header .contact .contact_us{
         height:33px;
         float:left;
@@ -5322,4 +5325,216 @@ textarea {
     footer{
         height:195px;
     }
+    header .logo{
+        max-width:120px;
+        margin-top:20px;
+    }
+    .wrap .left.ccc{
+        width:100%;
+        margin:0px;
+    }
+    section > .wrap > .left.contact_r{
+        width:100%;
+        margin-top:20px;
+    }
+    .prp a{
+        font-size:12px
+    }
+    .right > article,section > .wrap .left article, section > .wrap .left article:nth-child(2n){
+        width:100%;
+        margin-left:0px;
+        margin-right:0px;
+    }
+    section > .wrap .right.global,section > .wrap .left.global{
+        float:none;
+        margin-left:0px;
+        margin-right:0px;
+        width:100%;
+    }
+    section > .wrap, section .dirs_menu .wrap{
+        padding:0px;
+    }
+    .right > article .ttl a{
+        font-size: 20px;
+    }
+    .right article.news li a{
+        width: 188px;
+        font-size:12px;
+    }
+    .left article .ttl a{
+        font-size:20px;
+    }
+    .left > article ul li a, .right article ul li a{
+        font-size:15px;
+    }
+    section > .wrap .right{
+        margin-right:0px;
+    }
+    .bgr .info > ul > li .left{
+        font-size:16px;
+    }
+    .bgr .info > ul > li .right{
+        font-size:13px;
+    }
+    .bgr .info > ul > li{
+        margin-top:15px;
+    }
+    ul.vice li .name, ul.vice li .p_name{
+        display:inline;
+    }
+    .tel{
+        margin-top:8px;
+    }
+    ul.vice li .left{
+        margin-left:0px;
+        margin-top:8px;
+        height: 100px;
+    }
+    ul.vice .img img{
+        height:auto;
+    }
+    section > .wrap.rpt > .left ul > li > a, ul.dcr > li > a{
+        font-size:16px;
+    }
+    .bgr .quote {
+        width: 280px;
+        margin-left: 22px;
+        font-size:14px;
+        margin-bottom:20px;
+    }
+    .vp_name{
+        font-size:20px;
+        clear:both;
+    }
+    .c_title{
+        font-size:20px;
+    }
+    table.taxe thead tr td,table.atz tr td:nth-child(2){
+        font-size:15px;
+    }
+    table.atz tr td a,table.taxe tbody tr td:first-child,table.taxe tbody tr td,table.atz tr td p, table.atz tr td ol li span,table.atz tr td ol li{
+        font-size:13px;
+    }
+    table.atz, table.atz td, table.atz tr td:last-child{
+        width:100% !important;        
+    }
+    table.atz{
+        padding:0px !important;
+    }
+    ul.mda > li span{
+        height:50px;
+        float:left;
+    }
+    table.atz, table.atz td, table.atz tr td:last-child{
+        border:0px !important;
+    }
+    .personal .left{
+        margin-top:20px;
+    }
+    table.taxe tbody tr td{
+        min-width:90px;
+    }
+    table.taxe tbody tr td:first-child{
+        min-width:230px;
+    }
+    h2 {
+        font-size: 1.1em;
+    }
+    .av{
+        margin-top:30px;
+    }
+    .form .ftb{
+        font-size: 20px;
+        width:100%;
+    }
+    .compl_list li a .compl_title{
+        font-size: 15px;
+    }
+    .form label, .chat label{
+        font-size: 11px;
+    }
+    .av p,.pda ul li a, .compl_list li a .compl_info, .snd_title{
+        font-size:13px;
+    }
+    .compl_list li a{
+        height:100px;
+    }
+    .form form{
+        padding:0px 10px 15px;
+    }
+    .form.green .ftb{
+        width:100%;
+    }
+    .name{
+        display:inline;
+    }
+    .city_box .title, .pda p.sub_title{
+        font-size:17px;
+    }
+    .city_link {
+        margin-top: 25px;
+    }
+    personal .left{
+        margin-left:0px;
+    }
+    .city_info{
+        width:200px;
+    }
+    .function{
+        margin-top:10px;
+    }
+    .personal{
+        margin-bottom:20px;
+    }
+    p.descr{
+        max-width:100%;
+        padding-bottom:5px;
+        border-bottom: 1px solid #dbdbdb;
+    }
+    ul.mda > li > a, ul.atz > li a, .dcr_dwnl{
+        margin-top:18px;
+    }
+    ul.mda > li span a{
+        display: table-cell;
+        vertical-align: middle;
+        max-width: 239px;
+        line-height: 17px;
+        height:50px;
+        font-size: 11px;
+    }
+    ul > li.pdf,ul > li.xls,ul > li.doc,ul > li.docx,ul > li.xlsx{
+        background-size: 21px;
+        padding-left: 38px;
+    }
+    h1{
+        font-size: 1.4em;
+    }
+    ul.prom li .ttl{
+        height:70px;
+    }
+    p ,.ncd > p, .b_weight, .ncd .b_weight, ul.crt li, .pda p{
+        font-size: 13px;
+    }
+    ul.faq li p span{
+        font-size:11px !important;
+    }
+    ul.faq li a, ul.faq li a span{
+        font-size:14px;
+    }
+    ul.prom li .ttl{
+        font-size:20px;  
+    }
+    ul.prom li{
+        height:160px;
+    }
+    ul.crt li{
+        margin-bottom:15px;
+    }
+    .left article ul{
+        max-height:106px;
+    }
+    footer .copy{
+        font-size:11px;
+    }
+
 }
