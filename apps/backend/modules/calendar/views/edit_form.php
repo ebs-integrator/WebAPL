@@ -22,7 +22,7 @@
                 <tr>
                     <th>Event date: </th>
                     <td>
-                        <input type="text" name="event_date" class='form-control' value='<?= isset($calendar->event_date) ? $calendar->event_date : date("Y-m-d H:i:s"); ?>' />
+                        <input type="text" name="event_date" class='form-control datetimepicker' data-date-format="YYYY-MM-DD hh:mm:ss" value='<?= isset($calendar->event_date) ? $calendar->event_date : date("Y-m-d H:i:s"); ?>' />
                     </td>
                 </tr>
                 <tr>

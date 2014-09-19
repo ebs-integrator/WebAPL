@@ -56,7 +56,7 @@
                                 $date = sprintf('%4d-%02d-%02d', $year, $month, $dayOfMonth);
                                 ?>
                             <td class='day'>                            
-                                <div class="cl_data"><?= $dayOfMonth; ?></div>
+                                <div class="cl_data <?=$month == $current_month && $year == $current_year && $dayOfMonth == $current_day ? 'active' : '';?>"><?= $dayOfMonth; ?></div>
                                 <div class="cl_time">
                                     <ul>
                                         <?php if (isset($events[$year][$month][$dayOfMonth])) { ?>

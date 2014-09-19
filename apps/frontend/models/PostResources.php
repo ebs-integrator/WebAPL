@@ -21,8 +21,6 @@ class PostResources {
                         ), array(
                     'name' => 'required',
                     'email' => 'email|required',
-                    'address' => 'required',
-                    'subject' => 'required',
                     'message' => 'required',
                     'capcha' => 'required'
         ));

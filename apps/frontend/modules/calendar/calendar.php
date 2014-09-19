@@ -33,6 +33,7 @@ class Calendar extends \Core\APL\ExtensionController {
             'end_month' => 11,
             'current_year' => intval(date("Y")),
             'current_month' => intval(date("m")),
+            'current_day' => intval(date("d")),
             'events' => array()
         );
 
