@@ -26,7 +26,12 @@ class Calendar extends \Core\APL\ExtensionController {
     }
 
     public function calendarViewMod($data) {
-
+        $wdata = array(
+            ''
+        );
+        
+        $data['page']->text .= Template::moduleView($this->module_name, "views.calendarPage", $wdata);
+        
         return PageView::defaultView($data);
     }
 
