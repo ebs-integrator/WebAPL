@@ -26,6 +26,17 @@
                     </td>
                 </tr>
                 <tr>
+                    <th>Group: </th>
+                    <td>
+                        <select class="chzn-select" name="group_id">
+                            <option value="0">---</option>
+                            <?php foreach ($groups as $group) { ?>
+                                <option value="<?=$group->id;?>" <?= isset($calendar->calendar_group_id) && $calendar->calendar_group_id == $group->id ? 'selected' : '';?>><?=$group->name;?></option>
+                            <?php } ?>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
                     <th>Enabled: </th>
                     <td>
                         <input type="checkbox" name="enabled" class='make-switch' <?= isset($calendar->enabled) && $calendar->enabled ? 'checked' : ''; ?> />

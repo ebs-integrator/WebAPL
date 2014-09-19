@@ -135,7 +135,6 @@
                         <textarea placeholder="Mesaj"></textarea>
                         <input type="submit" value="trimite">
                     </form>
-                    <div class="adv">Mesajul dumneavoastra a fost expediat cu succes </div>
                 </div>
                 <div class="currency">
                     <span class="s_c">

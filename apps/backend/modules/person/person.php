@@ -254,9 +254,9 @@ class Person extends \Core\APL\ExtensionController {
                 $data['selected_groups'][] = $group->group_id;
             }
         }
-        
+
         $data['feeds'] = \Feed::all();
-        
+
         $this->layout->content = Template::moduleView($this->module_name, 'views.form', $data);
         return $this->layout;
     }
@@ -409,21 +409,23 @@ class Person extends \Core\APL\ExtensionController {
     }
 
     public function page_group_attachment($post) {
-        $wdata = array(
-            'post' => $post->toArray(),
-            'person_groups' => PersonGroup::join(PersonGroupLang::getTableName(), PersonGroupLang::getField("group_id"), '=', PersonGroup::getField('id'))
-                    ->select(PersonGroup::getField("id"), PersonGroupLang::getField("name"))
-                    ->where(PersonGroupLang::getField("lang_id"), \Core\APL\Language::getId())
-                    ->get()->toArray(),
-            'selected_groups' => array()
-        );
+        if (in_array($post->view_mod, array('persons_list', 'city_councilors', 'persons_big', 'persons_secretar', 'persons_mayor', 'group_with_persons', 'persons_with_photo'))) {
+            $wdata = array(
+                'post' => $post->toArray(),
+                'person_groups' => PersonGroup::join(PersonGroupLang::getTableName(), PersonGroupLang::getField("group_id"), '=', PersonGroup::getField('id'))
+                        ->select(PersonGroup::getField("id"), PersonGroupLang::getField("name"))
+                        ->where(PersonGroupLang::getField("lang_id"), \Core\APL\Language::getId())
+                        ->get()->toArray(),
+                'selected_groups' => array()
+            );
 
-        $selected_groups = PersonGroupPostModel::where('post_id', $post->id)->get();
-        foreach ($selected_groups as $item) {
-            $wdata['selected_groups'][] = $item->group_id;
+            $selected_groups = PersonGroupPostModel::where('post_id', $post->id)->get();
+            foreach ($selected_groups as $item) {
+                $wdata['selected_groups'][] = $item->group_id;
+            }
+
+            echo Template::moduleView($this->module_name, 'views.attachment-group-page', $wdata);
         }
-
-        echo Template::moduleView($this->module_name, 'views.attachment-group-page', $wdata);
     }
 
     public function save_post_attach() {

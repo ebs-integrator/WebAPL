@@ -324,7 +324,7 @@ class PageView {
             }
             $data["page"]->text .= View::make("sections.pages.modview.ads")->with($wdata);
         }
-        return static::articleView($data);
+        return static::defaultView($data);
     }
 
     public static function newsList($data) {

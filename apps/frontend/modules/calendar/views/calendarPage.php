@@ -1,34 +1,108 @@
+<?php
+    $months = array('', 'Ianuarie', 'Februarie', 'Martie', 'Aprilie', 'Mai', 'Iunie', 'Iulie', 'August', 'Septembrie', 'Octombrie', 'Noiembrie', 'Decembrie');
+?>
+
 <div class="orsl">
     <ul class="orar_slider">
-        <li><!-- luna -->
-            <div class=" w_line"></div>
-            <table class="orar">
-                <thead>
-                    <tr><td colspan="7">Aprilie </td></tr>
-                    <tr>
-                        <td>lu</td><td>ma </td><td>mi </td><td>jo</td><td>vi</td><td>si</td><td>du</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><!-- saptamina -->
-                        <td><!-- zi -->
-                            <div class="cl_data">1</div>
-                            <div class="cl_time">
-                                <ul>
-                                    <li><!-- eveniment -->
-                                        <p>09:00 - 11:00</p>
-                                        <div class="cl_pop">
-                                            <span>Viceprimar</span>
-                                            <p>Ion Vasilica</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="clearfix50"></div>
-        </li>
+        <?php 
+            $current_month_ord = 0;
+            $month_ord = 0;
+        ?>
+        <?php for ($year = $begin_year; $year <= $end_year; $year++) { ?>
+            <?php for ($month = ($year == $begin_year ? $begin_month : 1); ($year == $end_year && $month <= $end_month) || ($year != $end_year && $month <= 12); $month++) {
+                ?>
+                <li><!-- luna -->
+                    <div class=" w_line"></div>
+                    <table class="orar">
+                        <thead>
+                            <tr><td colspan="7"><?= $months[$month]; ?> <?= $year; ?></td></tr>
+                            <tr>
+                                <td>lu</td><td>ma </td><td>mi </td><td>jo</td><td>vi</td><td>si</td><td>du</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $firstDayOfMonth = date('w', mktime(0, 0, 0, $month, 1, $year)); // a zero based day number
+
+
+                            /* IMPORTANT STATEMENT
+                              value based on the starting day of array
+                              E.G. (starting_day = value):
+                              Tuesday = 5
+                              Wednesday = 4
+                              Thursday = 3
+                              Friday = 2
+                              Saturday = 1
+                              Sunday = 0
+                              Monday = -1
+
+                             */
+
+                            $firstDayOfMonth = $firstDayOfMonth - 1;
+
+                            /* END IMPORTANT STATEMENT */
+
+
+                            $daysInMonth = date('t', mktime(0, 0, 0, $month, 1, $year));
+
+                            echo '<tr>';
+
+                            echo $firstDayOfMonth > 0 ? str_repeat('<td>&nbsp;</td>', $firstDayOfMonth) : '';
+
+                            $dayOfWeek = $firstDayOfMonth + 1;
+                            $weekNum = 1;
+
+                            for ($dayOfMonth = 1; $dayOfMonth <= $daysInMonth; $dayOfMonth++) {
+                                $date = sprintf('%4d-%02d-%02d', $year, $month, $dayOfMonth);
+                                ?>
+                            <td class='day'>                            
+                                <div class="cl_data"><?= $dayOfMonth; ?></div>
+                                <div class="cl_time">
+                                    <ul>
+                                        <?php if (isset($events[$year][$month][$dayOfMonth])) { ?>
+                                            <?php foreach ($events[$year][$month][$dayOfMonth] as $event) { ?>
+                                                <li><!-- eveniment -->
+                                                    <p><?=$event->period;?></p>
+                                                    <div class="cl_pop">
+                                                        <span><?=$event->title;?></span>
+                                                        <!--<p>Ion Vasilica</p>-->
+                                                    </div>
+                                                </li>
+                                            <?php } ?>
+                                        <?php } ?>
+                                    </ul>
+                                </div>
+                            </td></td>
+                            <?php
+                            if ($dayOfWeek >= 7 || ($firstDayOfMonth == -1 && $dayOfWeek >= 6 && $weekNum == 1)) {
+                                echo '</tr>' . "\r\n";
+                                $weekNum++;
+                                if ($dayOfMonth != $daysInMonth) {
+                                    echo '<tr>';
+                                }
+                                $dayOfWeek = 1;
+                            } else {
+                                $dayOfWeek++;
+                            }
+                        }
+
+                        echo 8 - $dayOfWeek > 0 ? str_repeat('<td>&nbsp;</td>', 8 - $dayOfWeek) : '';
+                        echo '</tr></table>';
+                        
+                        if ($month == $current_month && $year == $current_year) {
+                            $current_month_ord = $month_ord;
+                        }
+                        $month_ord++;
+                        ?>
+                        </tbody>
+                    </table>
+                    <div class="clearfix50"></div>
+                </li>
+            <?php } ?>
+        <?php } ?>
     </ul>
 </div>
+
+<script>
+    start_month = <?=$current_month_ord;?>;
+</script>
