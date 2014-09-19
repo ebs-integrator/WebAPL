@@ -137,6 +137,8 @@
                         <input type="text" placeholder="Nume, Prenume">
                         <input type="text" placeholder="Email">
                         <textarea placeholder="Mesaj"></textarea>
+                        <input class="code" type="text">
+                        <img src="<?= res('assets/img/code.png'); ?>">
                         <input type="submit" value="trimite">
                     </form>
                     <div class="adv">Mesajul dumneavoastra a fost expediat cu succes </div>
