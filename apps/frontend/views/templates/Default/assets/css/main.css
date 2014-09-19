@@ -1263,6 +1263,11 @@ textarea {
         float: none;
 
     }
+    .cont_form .adv{
+        text-align: center;
+        margin-top:10px;
+        margin-bottom:0px;
+    }
     .top_menu  a{
         font:16px 'open_sansregular';
         color:#4b4b4b;        
