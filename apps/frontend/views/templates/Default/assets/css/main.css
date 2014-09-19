@@ -1255,8 +1255,13 @@ textarea {
     }
     .top_menu .left.title{
         max-width:115px;
-        margin-left:5px;
+        padding-left: 5px;
         line-height: 20px;
+        display: table-cell;
+        vertical-align: middle;
+        height: 46px;
+        float: none;
+
     }
     .top_menu  a{
         font:16px 'open_sansregular';
