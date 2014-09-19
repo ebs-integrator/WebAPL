@@ -1,4 +1,4 @@
-<section>
+<div>
     <div class="logo">
         <img src="<?= res('assets/img/logo.png'); ?>">
     </div>
@@ -22,7 +22,7 @@
             <?php } ?>
         </div>
     </div>
-</section>
+</div>
 <section>
     <div class="wrap ">
         <div class="right global">   
