@@ -4369,6 +4369,7 @@ textarea {
     .menu .box{
         width: 200px;
         min-height: 200px;
+        margin-right: 65px;
     }
     .menu .box .menu_img{
         height: 130px;
@@ -4499,7 +4500,7 @@ textarea {
         content: url('../img/cln_arrow-r.png');
     }
 }
-@media only screen and (min-width: 768px) and (max-width: 1023px){
+@media only screen and (min-width: 768px) and (max-width: 1024px){
     header .contact .contact_us,footer .right,.top_menu .left img,header .contact .tel{
         display:none;
     }
@@ -4705,7 +4706,7 @@ textarea {
     }
 
 }
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 768px){
     p{
         font-size:16px;
     }
@@ -4732,6 +4733,26 @@ textarea {
     }
     section .dirs_menu *{
         display:none;
+    }
+    div div.logo{
+        display:none;
+    }
+    .menu{
+        display:none;
+    }
+    header .menu_content .social{
+        padding: 10px 0px;
+    }
+    header .menu_content .social a{
+        font-size:11px;
+        height: 20px;
+        line-height:23px;
+        
+    }
+    header .menu_list li{
+        height:45px;
+        font-size:22px;
+        padding: 12px 25px;
     }
     section .dirs_menu{
         height:4px;
@@ -5281,7 +5302,7 @@ textarea {
         content: url('../img/cln_arrow-r.png');
     }
 }
-@media only screen and (max-width: 639px){
+@media only screen and (max-width: 640px){
     section > .wrap, section .dirs_menu .wrap {
         max-width: 480px;
     }
@@ -5296,5 +5317,11 @@ textarea {
     }
     ul.culture li{
         height:auto;
+    }
+    ul.prom li {
+        width: 100%;
+    }
+    ul.prom li:nth-child(2n){
+        margin-left:0px;
     }
 }

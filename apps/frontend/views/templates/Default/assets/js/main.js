@@ -31,7 +31,7 @@ $(document).ready(function () {
     $('.bxslider2').bxSlider({
         pager: false,
         auto: true,
-        adaptiveHeight: true
+        //adaptiveHeight: true
     });
     $("ul.faq  li a").click(function () {
         $('ul.faq li.active').removeClass('active');
