@@ -2615,11 +2615,12 @@ body.error .logo h1 {
     display: inline-block;
     padding: 2px 4px;
     border-radius: 2px;
+    color: #fff;
+    background: rgba(153, 153, 153, 0.57);
 }
 
 .move-btn:hover {
     color: #fff;
-    background: #cccccc;
 }
 .treeview a{
     white-space: pre-wrap;

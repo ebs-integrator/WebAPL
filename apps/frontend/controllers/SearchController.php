@@ -10,6 +10,15 @@ class SearchController extends BaseController {
         $this->data['words'] = strip_tags($keywords);
         $this->data['results'] = Post::search($keywords);
 
+        Core\APL\Template::setPageTitle("Search: {$this->data['words']}", true);
+        
+        View::share(array(
+            'general_pages' => Post::findGeneral(),
+            'active_page_id' => 0,
+            'parrents_ids' => [],
+            'buttom_pages' => PostProperty::postsWithProperty('button_site', 3)
+        ));
+
         $this->layout->content = View::make('sections.search.results', $this->data);
     }
 

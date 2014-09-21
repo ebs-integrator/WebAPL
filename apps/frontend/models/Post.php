@@ -50,15 +50,17 @@ class Post extends Eloquent {
         return array(Post::$ftable . ".*", PostLang::$ftable . ".id as post_lang_id", PostLang::$ftable . ".text", PostLang::$ftable . ".title", PostLang::$ftable . ".enabled", PostLang::$ftable . ".lang_id", PostLang::$ftable . ".uri");
     }
 
-    protected static function prepareQuery() {
+    public static function prepareQuery($taxonomy_id = 0) {
         $query = Post::join(PostLang::$ftable, PostLang::$ftable . ".post_id", '=', Post::$ftable . ".id")
                 ->select(
                         Post::columns()
                 )
                 ->where(PostLang::$ftable . ".lang_id", Language::getId());
 
-        if (self::$taxonomy) {
-            $query = $query->where('taxonomy_id', self::$taxonomy);
+        if ($taxonomy_id) {
+            $query = $query->where(Post::getField('taxonomy_id'), $taxonomy_id);
+        } elseif (self::$taxonomy) {
+            $query = $query->where(Post::getField('taxonomy_id'), self::$taxonomy);
         }
 
         return $query;
@@ -87,13 +89,21 @@ class Post extends Eloquent {
         return $list;
     }
 
-    public static function findHomePosts() {
+    public static function findHomePosts($modView) {
         $current_tax = static::$taxonomy;
         static::$taxonomy = 2;
-        $list = Post::prepareQuery()
-                ->where(Post::getField('to_home'), 1)
-                ->orderBy('created_at', 'desc')
-                ->get();
+        $post = Post::prepareQuery(1)->where('view_mod', $modView)->first();
+
+        if ($post) {
+            $list = Post::prepareQuery()
+                    ->join(FeedPost::getTableName(), FeedPost::getField('post_id'), '=', Post::getField('id'))
+                    ->where(Post::getField('to_home'), 1)
+                    ->where(FeedPost::getField('feed_id'), $post->feed_id)
+                    ->orderBy('created_at', 'desc')
+                    ->get();
+        } else {
+            $list = array();
+        }
         static::$taxonomy = $current_tax;
         return $list;
     }
@@ -237,6 +247,7 @@ class Post extends Eloquent {
             $posts = Post::prepareQuery()
                     ->join(FeedPost::getTableName(), Post::getField("id"), '=', FeedPost::getField("post_id"))
                     ->where(FeedPost::getField("feed_id"), $feed_id)
+                    ->where(PostLang::getField('enabled'), 1)
                     ->select(
                     Post::columns() + array(FeedPost::getField("feed_id"))
             );
@@ -298,7 +309,7 @@ class Post extends Eloquent {
 
         if ($words) {
             self::$taxonomy = 0;
-            $query = Post::prepareQuery();
+            $query = Post::prepareQuery()->where(PostLang::getField('enabled'), 1);
             $query = $query->where(function ($query) use ($words) {
                 foreach ($words as $word) {
                     $word = trim($word);
@@ -318,10 +329,10 @@ class Post extends Eloquent {
             return [];
         }
     }
-    
+
     public static function rssPosts() {
         static::$taxonomy = 2;
-        return Post::prepareQuery()->orderBy(Post::getField('created_at'), 'desc')->take(50)->get();
+        return Post::prepareQuery()->where(PostLang::getField('enabled'), 1)->orderBy(Post::getField('created_at'), 'desc')->take(50)->get();
     }
 
 }

@@ -42,6 +42,8 @@ class Calendar extends \Core\APL\ExtensionController {
         Actions::post('calendar/save_post_attach', array('before' => 'auth', array($this, 'save_post_attach')));
 
         Actions::register('construct_left_menu', array($this, 'left_menu_item'));
+        Actions::register('language_created', array($this, 'language_created'));
+        Actions::register('language_deleted', array($this, 'language_deleted'));
 
         Template::registerViewMethod('page', $this->page_view_mod, 'Pagina calendar', null, true);
 
@@ -54,7 +56,7 @@ class Calendar extends \Core\APL\ExtensionController {
 
     public function calendar_list() {
         $data['groups'] = \CalendarGroup::orderBy('name', 'asc')->get();
-        
+
         $this->layout->content = Template::moduleView($this->module_name, 'views.list', $data);
 
         return $this->layout;
@@ -196,6 +198,20 @@ class Calendar extends \Core\APL\ExtensionController {
         }
 
         return array();
+    }
+
+    public function language_created($lang_id) {
+        $list = CalendarModel::all();
+        foreach ($list as $ent) {
+            $item = new CalendarLangModel;
+            $item->calendar_item_id = $ent->id;
+            $item->lang_id = $lang_id;
+            $item->save();
+        }
+    }
+
+    public function language_deleted($lang_id) {
+        CalendarLangModel::where('lang_id', $lang_id)->delete();
     }
 
 }

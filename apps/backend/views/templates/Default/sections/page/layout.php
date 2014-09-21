@@ -30,15 +30,15 @@
         </div>
     </div><!-- /.col-lg-4 -->
     <?php if (isset($page) && $page) { ?>
-    <div class="col-lg-8">
-        <div class="box">
-            <header>
-                <h5>Form</h5>
-            </header>
-            <div class="body">
-                <?= View::make('sections.page.block-form'); ?>
+        <div class="col-lg-8">
+            <div class="box">
+                <header>
+                    <h5>Form</h5> <a href='<?= url('page/delete/' . $page->id); ?>' class='label label-danger pull-right' style='line-height: 38px'>DELETE</a>
+                </header>
+                <div class="body">
+                    <?= View::make('sections.page.block-form'); ?>
+                </div>
             </div>
-        </div>
-    </div><!-- /.col-lg-8 -->
+        </div><!-- /.col-lg-8 -->
     <?php } ?>
 </div><!-- /.row -->

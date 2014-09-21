@@ -46,16 +46,16 @@
     <div class="clearfix"></div>
     <p class="form_title">Scrieti-ne direct</p>
     <div class="contact_top_notif adv" style="display: none;">Mesajul dumneavoastra a fost expediat cu succes </div>
-    <form id="contact_top_form" action="<?=url();?>" method="post">
+    <form id="contact_top_form" action="<?= url(); ?>" method="post">
         <div class="form_error"></div>
         <input type="text" name="name" placeholder="Nume, Prenume">
         <input type="text" name="email" placeholder="Email">
         <textarea name="message" placeholder="Mesaj"></textarea>
         <input name="capcha" class="code" type="text">
-        <img src="<?=SimpleCapcha::make('contact_top');?>" height="31">
+        <img src="<?= SimpleCapcha::make('contact_top'); ?>" height="31">
         <input type="submit" value="trimite">
     </form>
-    
+
 </div>
 <div class="currency">
     <span class="s_c">

@@ -47,9 +47,11 @@ class Poll extends \Core\APL\ExtensionController {
         Actions::post('poll/list/answer/{poll_lang_id}', array('before' => 'auth', array($this, 'getlist_answer')));
 
         Actions::register('construct_left_menu', array($this, 'left_menu_item'));
+        Actions::register('language_created', array($this, 'language_created'));
+        Actions::register('language_deleted', array($this, 'language_deleted'));
 
         Template::registerViewMethod('page', 'pollList', 'Lista de sondaje', null, true);
-        
+
         $this->layout = Template::mainLayout();
     }
 
@@ -222,6 +224,24 @@ class Poll extends \Core\APL\ExtensionController {
         }
 
         return Redirect::to('poll/list');
+    }
+
+    public function language_created($lang_id) {
+        $list = \PollModel::all();
+        foreach ($list as $ent) {
+            $item = new PollQuestionModel;
+            $item->poll_id = $ent->id;
+            $item->lang_id = $lang_id;
+            $item->save();
+        }
+    }
+
+    public function language_deleted($lang_id) {
+        $list = PollQuestionModel::where('lang_id', $lang_id);
+        foreach ($list as $item) {
+            \PollAnswerModel::where('poll_question_id', $item->id);
+            $item->delete();
+        }
     }
 
 }

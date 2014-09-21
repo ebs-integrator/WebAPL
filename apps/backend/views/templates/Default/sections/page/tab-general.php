@@ -40,8 +40,30 @@
             <td>
                 <select name="page[view_mod]" class='chzn-select'>
                     <option value="">Default</option>
-                    <?php foreach ($view_mods as $view_key => $view_mod) { ?>
-                        <option value="<?= $view_key; ?>" <?= isset($page->view_mod) && $page->view_mod == $view_key ? 'selected' : ''; ?>><?= $view_mod['name']; ?></option>
+                    <?php $finded = false; ?>
+                    <?php
+                    foreach ($view_mods as $view_key => $view_mod) {
+                        if (isset($page->view_mod) && $page->view_mod == $view_key) {
+                            $state = 'selected';
+                            $finded = true;
+                        } else {
+                            $state = '';
+                        }
+                        ?>
+                        <option value="<?= $view_key; ?>" <?= $state; ?>><?= $view_mod['name']; ?></option>
+                    <?php } ?>
+                    <?php if (!$finded && isset($page->view_mod) && $page->view_mod) { ?>
+                        <option value="<?= $page->view_mod; ?>" selected>Undefined (<?= $page->view_mod; ?>):inactive</option>
+                    <?php } ?>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Properties:</th>
+            <td>
+                <select name="properties[]" class='chzn-select' multiple>
+                    <?php foreach ($page_properties_all as $property) { ?>
+                        <option value="<?= $property->id; ?>" <?= in_array($property->id, $page_properties) ? 'selected' : ''; ?>><?= $property->name; ?></option>
                     <?php } ?>
                 </select>
             </td>

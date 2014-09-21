@@ -1,10 +1,12 @@
 <footer>
     <div class="left">
+        <?php if (isset($buttom_pages) && count($buttom_pages)) { ?>
         <div class="left links">
-            <a href="javascript:;">Orasul</a>
-            <a href="javascript:;">Harta site-ului</a>
-            <a href="javascript:;">Contacte</a>
+            <?php foreach ($buttom_pages as $item) { ?>
+                <a href="<?= Language::url('topost/' . $item->id); ?>"><?= $item->title; ?></a>
+            <?php } ?>
         </div>
+        <?php } ?>
         <div class="left socials">
             <a href="javascript:;"><span><img src="<?= res('assets/img/fb.png'); ?>"></span>Facebook</a>
             <a href="javascript:;"><span><img src="<?= res('assets/img/ok.png'); ?>"></span>Odnoklassniki</a>

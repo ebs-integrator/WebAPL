@@ -224,8 +224,23 @@ class PageView {
         $data['page']['background'] = Files::getfile('page_bg', $data['page']->id);
 
         $data['sub_pages'] = Post::subPosts($data['page']->id, 2);
-        $data['home_posts'] = Post::findHomePosts();
-
+        
+        
+        $data['page_properies'] = PostProperty::getPostProperties($data['page']->id);
+        if (in_array('show_news', $data['page_properies'])) {
+            $data['home_posts'] = Post::findHomePosts('newsList');
+        }
+        if (in_array('show_ads', $data['page_properies'])) {
+            $data['home_ads'] = Post::findHomePosts('adsList');
+        }
+        if (in_array('show_block_page', $data['page_properies'])) {
+            $selected_page = PostProperty::postWithProperty('is_selected_page');
+            if ($selected_page) {
+                $data['home_page'] = $selected_page;
+                $data['home_page']['childrens'] = Post::findWithParent($selected_page->id);
+            }
+        }
+      
         return View::make('sections.pages.home')->with($data);
     }
 

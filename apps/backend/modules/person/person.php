@@ -63,6 +63,9 @@ class Person extends \Core\APL\ExtensionController {
         Actions::register('construct_left_menu', array($this, 'left_menu_item'));
         Actions::register('page_attachment', array($this, 'page_group_attachment'));
 
+        Actions::register('language_created', array($this, 'language_created'));
+        Actions::register('language_deleted', array($this, 'language_deleted'));
+
         Template::registerViewMethod('page', 'persons_list', 'Tabel persoane (nume, apartenenta, contacte, sector)', null, true);
         Template::registerViewMethod('page', 'group_with_persons', 'Grupe de persoane', null, true);
         Template::registerViewMethod('page', 'persons_with_photo', 'Persoane cu foto', null, true);
@@ -439,6 +442,29 @@ class Person extends \Core\APL\ExtensionController {
             $item->save();
         }
         return array();
+    }
+
+    public function language_created($lang_id) {
+        $plist = \PersonModel::all();
+        foreach ($plist as $ent) {
+            $item = new \PersonLangModel;
+            $item->person_id = $ent->id;
+            $item->lang_id = $lang_id;
+            $item->save();
+        }
+        
+        $glist = \PersonGroup::all();
+        foreach ($glist as $ent) {
+            $item = new \PersonGroupLang;
+            $item->group_id = $ent->id;
+            $item->lang_id = $lang_id;
+            $item->save();
+        }
+    }
+
+    public function language_deleted($lang_id) {
+        PersonLangModel::where('lang_id', $lang_id)->delete();
+        PersonGroupLang::where('lang_id', $lang_id)->delete();
     }
 
 }
