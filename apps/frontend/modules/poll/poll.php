@@ -62,6 +62,10 @@ class Poll extends \Core\APL\ExtensionController {
 
         $wdata['polls'] = PollModel::getList($wdata['poll']->id);
 
+        if ($wdata['poll']) {
+            Template::setPageTitle($wdata['poll']->title, true);
+        }
+        
         $data['page']->text .= Template::moduleView($this->module_name, 'views.pollList', $wdata);
 
         return PageView::defaultView($data);

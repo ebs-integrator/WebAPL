@@ -13,7 +13,7 @@
         <div class="left socials">
             <a href="javascript:;"><span><img src="<?= res('assets/img/twitter.png'); ?>"></span>Twitter</a>
             <a href="javascript:;"><span><img src="<?= res('assets/img/gplus.png'); ?>"></span>Google+</a>
-            <a href="<?=Language::url('rss');?>"><span><img src="<?= res('assets/img/rsss.png'); ?>" class="rsss"></span>RSS</a>
+            <a href="<?= Language::url('rss'); ?>"><span><img src="<?= res('assets/img/rsss.png'); ?>" class="rsss"></span>RSS</a>
         </div>
     </div>
     <div class="right">
@@ -25,7 +25,7 @@
                 <input type="submit">
             </form>
         </div>
-        <?=Core\APL\Actions::call('bottom_widgets');?>
+        <?= Core\APL\Actions::call('bottom_widgets'); ?>
     </div>
     <div class="clearfix"> </div>
     <p class="copy"><a href="javascript:;">Cititi mai multe</a> despre licențiere CC, sau <a href="javascript:;">utilizati licența</a> pentru propriul dvs. material.</p>
@@ -46,23 +46,19 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 <script src="<?= res('assets/js/jquery.selectBoxIt.min.js'); ?>"></script>
 <script src="<?= res('assets/js/main.js'); ?>"></script>
-<script type="text/javascript">
-    !function(d, id, did, st) {
-        var js = d.createElement("script");
-        js.src = "http://connect.ok.ru/connect.js";
-        js.onload = js.onreadystatechange = function() {
-            if (!this.readyState || this.readyState == "loaded" || this.readyState == "complete") {
-                if (!this.executed) {
-                    this.executed = true;
-                    setTimeout(function() {
-                        OK.CONNECT.insertShareWidget(id, did, st);
-                    }, 0);
-                }
-            }
-        };
-        d.documentElement.appendChild(js);
-    }(document, "ok_shareWidget", document.URL, "{width:145,height:30,st:'oval',sz:20,ck:1}");
-</script>
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?115"></script>
 
+<script type="text/javascript">
+    VK.init({apiId: 1, onlyWidgets: true});
+</script>
+<script>!function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+        if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = p + '://platform.twitter.com/widgets.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+    }(document, 'script', 'twitter-wjs');</script>
 </body>
 </html>
