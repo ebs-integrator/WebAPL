@@ -24,7 +24,7 @@
     </div>
 </div>
 <section>
-    <div class="wrap ">
+    <div class="wrap " id="hm">
         <div class="left global">
             <?php foreach ($sub_pages as $item) { ?>
                 <article>

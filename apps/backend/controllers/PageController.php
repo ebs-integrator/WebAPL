@@ -106,6 +106,8 @@ class PageController extends BaseController {
             $post->view_mod = $page['view_mod'];
             $post->general_node = isset($page['general_node']) ? 1 : 0;
             $post->is_home_page = isset($page['is_home_page']) ? 1 : 0;
+            $post->have_socials = isset($page['have_socials']) ? 1 : 0;
+            $post->have_comments = isset($page['have_comments']) ? 1 : 0;
             if ($post->is_home_page) {
                 DB::table(Post::getTableName())->where('is_home_page', 1)->where(Post::getField('id'), '<>', $page_id)->update(array('is_home_page' => 0));
             }

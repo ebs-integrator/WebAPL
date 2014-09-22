@@ -141,6 +141,7 @@ class Poll extends \Core\APL\ExtensionController {
         }
 
         $poll->enabled = (Input::get('enabled') == 'on') ? 1 : 0;
+        $poll->active = (Input::get('active') == 'on') ? 1 : 0;
         $poll->save();
 
         if ($id) {

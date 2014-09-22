@@ -22,12 +22,12 @@
             ));
             ?>
 
-            <?php if ($page->have_socials) { ?>
-                <?= View::make('sections.elements.socials', array('url' => $page_url)); ?>
-            <?php } ?>
-            <?php
+            <?php 
+            if ($page->have_socials) { 
+                echo View::make('sections.elements.socials', array('url' => $page_url));  
+            } 
             if ($page->have_comments) {
-                View::make('sections.elements.comments');
+               echo View::make('sections.elements.comments');
             }
             ?>
         </div>

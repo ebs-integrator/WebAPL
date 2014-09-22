@@ -11,6 +11,12 @@
         </tr>
         <?php } ?>
         <tr>
+            <th>Active: </th>
+            <td>
+                <input type="checkbox" name="active" class='make-switch' <?= isset($poll->active) && $poll->active ? 'checked' : ''; ?> />
+            </td>
+        </tr>
+        <tr>
             <th>Enabled: </th>
             <td>
                 <input type="checkbox" name="enabled" class='make-switch' <?= isset($poll->enabled) && $poll->enabled ? 'checked' : ''; ?> />

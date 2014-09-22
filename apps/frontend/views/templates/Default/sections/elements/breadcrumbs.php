@@ -7,7 +7,7 @@
             <?php
             $current = $k == (count($breadcrumbs) - 1);
             ?>
-            <a href="<?= $item['url']; ?>">
+            <a href="<?= $item['url']; ?>#hm">
                 <?php if ($current) { ?>
                     <span><?= $item['name']; ?></span>
                 <?php } else { ?>
