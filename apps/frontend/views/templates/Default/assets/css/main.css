@@ -913,7 +913,7 @@ textarea {
     }
     .right > article{
         width:383px;
-        height:229px;
+        height:auto;
         border:2px solid #f7f7f7;
         display: inline-block;
         margin-top:50px;
@@ -1145,6 +1145,7 @@ textarea {
         height:86px;
         border-left:1px solid #e3e3e3;
         margin-top:0px;
+        clear:none;
     }
     footer .socials a{
         text-decoration: none;
@@ -1421,7 +1422,6 @@ textarea {
     }
     .vice .img{
         width:210px;
-        height:264px;
         position: relative;
         float: left;
         overflow: hidden;
@@ -2699,7 +2699,7 @@ textarea {
         margin-left:35px;
         height:264px;
         border-bottom: 2px solid #efefef;
-        padding-right: 130px; 
+        width: 625px;
     }
     .tel{
         padding-left:30px;
@@ -2992,6 +2992,7 @@ textarea {
         width: 70%;
         font: 17px 'open_sanssemibold';
         color: #4c4c4c;
+        margin:0px;
     }
 
     .bgr .info > ul > li:after {
@@ -3913,7 +3914,7 @@ textarea {
         font:14px 'open_sansbold';
         margin:0px;
     }
-    
+
     .cl_pop:after{
         position: absolute;
         left: -6px;
@@ -4157,7 +4158,7 @@ textarea {
         padding-right:20px;
     }
     .bgr .img img{
-        max-width:400px;
+        max-width:370px;
     }
     .right > article.atn:before{
         border:0px;
@@ -4167,7 +4168,7 @@ textarea {
     }
 }
 @media only screen and (max-width : 1525px) {
-    section > .wrap .left article,section > .wrap .left article:nth-child(2n){
+    section > .wrap .left article:nth-child(2n){
         margin-left:25px;
     }
     .emrg .ul_title .left, .cda .ul_title .left{
@@ -4224,6 +4225,12 @@ textarea {
     ul.prom li {
         width: 45%;
     }
+    .menu .box {
+        margin-right: 60px;
+    }
+    .left > article:nth-child(2n),.left > article{
+        margin-left:25px;
+    }
 }
 @media only screen and (max-width: 1280px){
     footer .right .left.search{
@@ -4239,6 +4246,9 @@ textarea {
         margin:10px;
     }
 
+    section > .wrap .left article:nth-child(2n),.left > article{
+        margin-left:25px;
+    }
     section > .wrap,section .dirs_menu .wrap{
         padding:0 20px;
     }
@@ -4250,7 +4260,7 @@ textarea {
         margin-left:0px;
     }
     section > .wrap .right.global{
-        margin-right:25px;
+        margin-right:0px;
     }
     section > .wrap > .left.contact_r{
         margin-right:20px;
@@ -4278,7 +4288,7 @@ textarea {
         width:250px;
     }
 }
-@media only screen and (min-width: 1024px) and (max-width: 1280px){
+@media only screen and (min-width: 1024px) and (max-width: 1269px){
     .top_menu .left img,header .contact .contact_us{
         display:none;
     }
@@ -4291,7 +4301,6 @@ textarea {
     section > .wrap > .right{
         width: 30%;
     }
-
     section > .wrap,section .dirs_menu .wrap{
         padding:0 20px;
     }
@@ -4353,13 +4362,16 @@ textarea {
         font: 28px 'open_sansbold';
     }
     .bgr .quote{
-        width: 300px;
+        width: 295px;
     }
     .bgr .info > ul > li .left{
         width: 25%;
     }
     .search input[type=text]{
         width: 225px;
+    }
+    button.vice_button{
+        width: 290px;
     }
     .com_box span.fun{
         width: 30%;
@@ -4510,14 +4522,18 @@ textarea {
         top: 17px;
         content: url('../img/cln_arrow-r.png');
     }
+
+    ul.vice li .left{
+        width:400px;
+    }
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px){
+@media only screen and (min-width: 768px) and (max-width: 1023px){
     header .contact .contact_us,footer .right,.top_menu .left img,header .contact .tel{
         display:none;
     }
     header .logo{
         max-width:180px;
-        margin: 12px 20px;
+        margin: 12px 20px 0px;
     }
 
     section > .wrap,section .dirs_menu .wrap{
@@ -4553,6 +4569,9 @@ textarea {
     }
     .c_title{
         font-size: 30px;
+    }
+    ul.vice li .left{
+        width:490px;
     }
     .bsa_tel, .bsa_fax, .bsa_email{
         float:none;
@@ -4637,6 +4656,7 @@ textarea {
     .menu .box{
         width: 160px;
         min-height: 160px;
+        margin-right: 25px;
     }
     .menu .box .menu_img{
         height: 100px;
@@ -4653,9 +4673,6 @@ textarea {
     .menu{
         min-height: 290px;
         padding:0px;
-    }
-    .right.global article{
-        margin-left:25px;
     }
     header button.chat{
         margin-left:15px;
@@ -4716,8 +4733,12 @@ textarea {
         width: 420px;
     }
 
+    .right article{
+        margin-left:25px;
+    }
+
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 767px){
     p{
         font-size:16px;
     }
@@ -4921,8 +4942,8 @@ textarea {
         width:210px;
     }
 
-    table.plcu > tbody > tr > td, table.plcu > tbody > tr > th{
-        padding: 20px 30px;
+    table.plcu > thead > tr > td,table.plcu > thead > tr > th,table.plcu > tbody > tr > td, table.plcu > tbody > tr > th{
+        padding: 20px;
     }
     ul.sec_details{
         width:370px;
@@ -4951,7 +4972,7 @@ textarea {
     table.plc{
         border:1px solid  #e3e3e3;
     }
-    table.plc > tbody > tr td:nth-child(2){
+    table.plc > tbody > tr > td:nth-child(2){
         padding:30px 35px;
     }
     table.plc > tbody > tr{
@@ -5108,7 +5129,8 @@ textarea {
         display:none;
     }
     section > .wrap .right.global{
-        margin-left:25px;
+        margin-left:0px;
+        width:100%;
     }
     .cda ul li .left{
         max-width:100%;
@@ -5235,12 +5257,15 @@ textarea {
         font-size: 20px;
         margin-bottom: 0px;
     }
-    ul.vice .img img,ul.vice li .left{
+    ul.vice li .left{
         height:140px;
+        padding-right:0px;
+        width: 335px;
     }
     .vice .img{
         width:auto;
         height:auto;
+        max-width:210px;
     }
     button.chat_button{
         display:none;
@@ -5305,8 +5330,12 @@ textarea {
         top: 17px;
         content: url('../img/cln_arrow-r.png');
     }
+
+    .right article{
+        margin-left:25px;
+    }
 }
-@media only screen and (max-width: 640px){
+@media only screen and (max-width: 639px){
     section > .wrap, section .dirs_menu .wrap {
         max-width: 320px;
     }
@@ -5315,6 +5344,9 @@ textarea {
     }
     section > .wrap > .left{
         width:100%;
+    }
+    .right article{
+        margin-left:25px;
     }
     ul.culture li .right,ul.culture li .right .box{
         float:none;
@@ -5370,8 +5402,14 @@ textarea {
     .left article .ttl a{
         font-size:20px;
     }
-    .left > article ul li a, .right article ul li a{
+    .left > article ul li a, .right article ul li a,.l_a li a p{
         font-size:15px;
+    }
+    .right article ul li{
+        background: url('../img/li_g.png') no-repeat left 8px;
+    }
+    .left article ul li{
+        background: url('../img/li.png') no-repeat left 8px;
     }
     section > .wrap .right{
         margin-right:0px;
@@ -5380,11 +5418,30 @@ textarea {
     .bgr .info > ul > li .left{
         font-size:16px;
     }
+    .ldmbox .title{
+        font-size:18px;
+    }
+    .ldm_middle{
+        padding-right:10px;
+    }
+    .ldmbox p.tda, .tda{
+        font-size:12px;
+    }
+    .ldmbox p{
+        font-size:12px;
+    }
+
+    .ldmbox{
+        padding: 15px 0 30px 10px;
+    }
     .bgr .info > ul > li .right{
         font-size:13px;
     }
     .bgr .info > ul > li{
         margin-top:15px;
+    }
+    .info .img{
+        margin-right:0px;
     }
     .cda ul li .left p.green a{
         font-size:10px;
@@ -5554,7 +5611,7 @@ textarea {
         margin-bottom:15px;
     }
     .left article ul{
-        max-height:106px;
+        max-height:108px;
     }
     footer .copy{
         font-size:11px;
@@ -5573,8 +5630,14 @@ textarea {
     .c_l_u tr td, .c_l_u tr:first-child td{
         padding:15px 10px;
     }
+    table.plc > tbody > tr > td:last-child {
+        padding: 0px 20px 30px;
+    }
     .clu_img{
         margin-right:8px;
+    }
+    table.plc > tbody > tr >  td:nth-child(2){
+        padding:20px;
     }
     .clu_cont {
         width: 180px;
@@ -5624,4 +5687,13 @@ textarea {
         border-bottom:1px solid #efefef;
         padding: 15px;
     }
+    .left article .ttl{
+        padding:25px 0px 0px 22px;
+    }
+    .right > article.atn{
+        width:100%;
+    }
+    .info .img:after{
+        clear:both;
+        content:"";    }
 }
