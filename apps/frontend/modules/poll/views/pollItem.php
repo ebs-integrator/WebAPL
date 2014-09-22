@@ -1,5 +1,5 @@
 <?php if ($poll) { ?>
-    <form class="poll_form" action="" method="">
+    <form class="poll_form" action="#" method="post">
         <p class="snd_title"><?= $poll->title; ?></p>
 
         <input type="hidden" name="id" value="<?= $poll->id; ?>" />
@@ -24,12 +24,8 @@
 
         <input type="submit" value="trimite" class="snd_sbm">
     </form>
-    <div class='socials'>
-        <div id="vk_like"></div>
-        <div id="ok_shareWidget"></div>
-        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="125" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-        <div class="clearfix"></div>
-    </div>
+    
+    <?=View::make('sections.elements.socials');?>
 
 
     <script>

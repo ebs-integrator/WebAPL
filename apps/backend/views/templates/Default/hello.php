@@ -1,9 +1,1 @@
-hallo
-
-<?=Files::widget('test', 1);?>
-
-<br><br>
-hwang
-<br><br>
-
-<?=Files::widget('rewwe', 1, 1);?>
+<h3>Welcome to APL Admin Panel</h3>

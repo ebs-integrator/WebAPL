@@ -26,6 +26,53 @@ class Calendar extends \Core\APL\ExtensionController {
     }
 
     public function calendarViewMod($data) {
+        $wdata = array(
+            'begin_year' => 2014,
+            'begin_month' => 1,
+            'end_year' => intval(date("Y")) + 2,
+            'end_month' => 11,
+            'current_year' => intval(date("Y")),
+            'current_month' => intval(date("m")),
+            'current_day' => intval(date("d")),
+            'events' => array()
+        );
+
+        $events = \CalendarModel::join(CalendarLangModel::getTableName(), \CalendarModel::getField('id'), '=', CalendarLangModel::getField('calendar_item_id'))
+                ->join(\CalendarGroup::getTableName(), \CalendarGroup::getField('id'), '=', \CalendarModel::getField('calendar_group_id'))
+                ->join(\CalendarPostModel::getTableName(), \CalendarPostModel::getField('calendar_group_id'), '=', \CalendarGroup::getField('id'))
+                ->where(CalendarLangModel::getField('lang_id'), \Core\APL\Language::getId())
+                ->where(\CalendarPostModel::getField('post_id'), $data['page']->id)
+                ->where(\CalendarModel::getField('enabled'), 1)
+                ->select(CalendarLangModel::getField("*"), \CalendarModel::getField('event_date'), \CalendarModel::getField('period'))
+                ->orderBy(\CalendarModel::getField('event_date'), 'asc')
+                ->get();
+        
+        $min_time = mktime(0, 0, 0, $wdata['begin_month'], 1, $wdata['begin_year']);
+        $max_time = mktime(0, 0, 0, $wdata['end_month'], 1, $wdata['end_year']);
+        foreach ($events as $event) {
+            $time = strtotime($event->event_date);
+            if ($min_time > $time) {
+                $min_time = $time;
+            } 
+            if ($max_time < $time) {
+                $max_time = $time;
+            }
+            $year = intval(date("Y", $time));
+            $month = intval(date("m", $time));
+            $day = intval(date("d", $time));
+            if (!isset($wdata['events'][$year][$month][$day])) {
+                $wdata['events'][$year][$month][$day] = array();
+            }
+            $wdata['events'][$year][$month][$day][] = $event;
+        }
+        
+        $wdata['begin_year'] = intval(date('Y', $min_time));
+        $wdata['begin_month'] = intval(date('m', $min_time));
+        
+        $wdata['end_year'] = intval(date('Y', $max_time));
+        $wdata['end_month'] = intval(date('m', $max_time));
+
+        $data['page']->text .= Template::moduleView($this->module_name, "views.calendarPage", $wdata);
 
         return PageView::defaultView($data);
     }

@@ -26,7 +26,7 @@
     
     <?php if ($post->docs) { ?>
         <ul class="dcr">
-            <li><a href='javascript:;'><?= $item->title; ?></a>
+            <li><a href='javascript:;'>Documente</a>
                 <div class='dcr_box'>
                     <ul class="mda n_t">
                         <?php foreach ($post->docs as $file) { ?>
@@ -41,16 +41,7 @@
     <div class="acz_details">
         <?= $post->text; ?>
 
-
-
-
-        <div class='clearfix50'></div>
-        <div class='socials'>
-            <div id="vk_like"></div>
-            <div id="ok_shareWidget"></div>
-            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="125" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-            <div class="clearfix"></div>
-        </div>
+        <?= View::make('sections.elements.socials'); ?>
         <div class="hr_grey"></div>
         <?= View::make('sections.elements.comments'); ?>
 

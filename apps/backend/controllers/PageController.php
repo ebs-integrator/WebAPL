@@ -41,6 +41,13 @@ class PageController extends BaseController {
             if ($this->data['page']) {
                 $this->data['view_mods'] = Template::getViewMethodList('page');
                 $this->data['page_langs'] = $this->data['page']->langs()->get();
+                $this->data['page_properties_all'] = PostProperty::where('taxonomy_id', 1)->orderBy('name', 'asc')->get();
+                
+                $properties = PostPropertyRel::where('post_id', $page_id)->get();
+                $this->data['page_properties'] = [];
+                foreach ($properties as $property) {
+                    $this->data['page_properties'][] = $property->post_property_id;
+                }
             }
         }
 
@@ -100,7 +107,7 @@ class PageController extends BaseController {
             $post->general_node = isset($page['general_node']) ? 1 : 0;
             $post->is_home_page = isset($page['is_home_page']) ? 1 : 0;
             if ($post->is_home_page) {
-                DB::table(Post::getTableName())->where('is_home_page', $post->is_home_page)->update(array('is_home_page' => 0));
+                DB::table(Post::getTableName())->where('is_home_page', 1)->where(Post::getField('id'), '<>', $page_id)->update(array('is_home_page' => 0));
             }
             $post->save();
         }
@@ -117,6 +124,17 @@ class PageController extends BaseController {
                     $post_lang->uri = PostLang::uniqURI($page_lang_id, $page_lang['title']);
                 }
                 $post_lang->save();
+            }
+        }
+        
+        $properties = Input::get('properties');
+        PostPropertyRel::where('post_id', $page_id)->delete();
+        if (is_array($properties)) {
+            foreach ($properties as $property) {
+                $newproperty = new PostPropertyRel;
+                $newproperty->post_id = $page_id;
+                $newproperty->post_property_id = $property;
+                $newproperty->save();
             }
         }
 
@@ -191,4 +209,8 @@ class PageController extends BaseController {
         }
     }
 
+    public function getDelete($id) {
+        
+    }
+    
 }

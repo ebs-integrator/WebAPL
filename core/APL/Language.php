@@ -33,6 +33,8 @@ class Language {
         }
 
         self::_init_language();
+
+        self::loadVars();
     }
 
     /**
@@ -101,7 +103,7 @@ class Language {
     public static function url($path = '') {
         return url(self::ext() . '/' . $path);
     }
-    
+
     public static function setLanguage($ext) {
         $language = DB::table('apl_lang')->where('ext', $ext)->first();
         if (!$language) {
@@ -114,6 +116,20 @@ class Language {
             Session::put('lang', self::ext());
         } else {
             throw new Exception("Available language not found");
+        }
+    }
+
+    public static function getVar($key) {
+        return isset(static::$vars[$key]) ? static::$vars[$key] : '';
+    }
+
+    protected static $vars = [];
+
+    protected static function loadVars() {
+        $vars = \VarModel::prepareQuery()->get();
+
+        foreach ($vars as $var) {
+            static::$vars[$var->key] = $var->value;
         }
     }
 

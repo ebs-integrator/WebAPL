@@ -5693,7 +5693,7 @@ textarea {
     .right > article.atn{
         width:100%;
     }
-    .info .img:after{
+    .info.unic p{
         clear:both;
-        content:"";    }
+    }
 }

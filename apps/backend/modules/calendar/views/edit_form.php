@@ -22,7 +22,18 @@
                 <tr>
                     <th>Event date: </th>
                     <td>
-                        <input type="text" name="event_date" class='form-control' value='<?= isset($calendar->event_date) ? $calendar->event_date : date("Y-m-d H:i:s"); ?>' />
+                        <input type="text" name="event_date" class='form-control datetimepicker' data-date-format="YYYY-MM-DD hh:mm:ss" value='<?= isset($calendar->event_date) ? $calendar->event_date : date("Y-m-d H:i:s"); ?>' />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Group: </th>
+                    <td>
+                        <select class="chzn-select" name="group_id">
+                            <option value="0">---</option>
+                            <?php foreach ($groups as $group) { ?>
+                                <option value="<?=$group->id;?>" <?= isset($calendar->calendar_group_id) && $calendar->calendar_group_id == $group->id ? 'selected' : '';?>><?=$group->name;?></option>
+                            <?php } ?>
+                        </select>
                     </td>
                 </tr>
                 <tr>

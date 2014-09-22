@@ -16,12 +16,7 @@
     <hr>
     <?=Core\APL\Actions::call('cv_form', array('post'=>$post));?>
     <div class='clearfix'></div>
-    <div class='socials'>
-        <div id="vk_like"></div>
-        <div id="ok_shareWidget"></div>
-        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="125" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-        <div class="clearfix"></div>
-    </div>
+    <?= View::make('sections.elements.socials'); ?>
     <div class="hr_grey"></div>
 </div>
 

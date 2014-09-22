@@ -30,12 +30,7 @@
             ));?>
             
             <?php if ($page->have_socials) { ?>
-                <div class='socials'>
-                    <div id="vk_like"></div>
-                    <div id="ok_shareWidget"></div>
-                    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="125" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-                    <div class="clearfix"></div>
-                </div>
+                <?=View::make('sections.elements.socials', array('url' => $page_url));?>
             <?php } ?>
             <?php
             if ($page->have_comments) {

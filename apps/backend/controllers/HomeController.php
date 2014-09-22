@@ -21,26 +21,34 @@ class HomeController extends BaseController {
         });
         $this->layout = null;
     }
-    
+
     public function postEditlang() {
+        $oper = Input::get('oper');
+        $id = Input::get('id');
+
         $jqgrid = new jQgrid('apl_lang');
-        $jqgrid->operation(array(
+        $result = $jqgrid->operation(array(
             'name' => Input::get('name'),
             'ext' => Input::get('ext'),
             'enabled' => Input::get('enabled')
         ));
-        
+
         $this->layout = null;
-        
-        $oper = Input::get('oper');
-        $id = Input::get('id');
+
+        if ($oper == 'add') {
+            \Core\APL\Actions::call('language_created', $result);
+        }
+        if ($oper == 'del') {
+            \Core\APL\Actions::call('language_deleted', $id);
+        }
+
         Log::info("Lang operation {$oper} #{$id}");
     }
-    
+
     public function showDashboard() {
         $this->layout->content = View::make('hello');
     }
-    
+
     public function getLanguages() {
         $this->layout->content = View::make('sections.language.list');
     }

@@ -63,6 +63,9 @@ class Person extends \Core\APL\ExtensionController {
         Actions::register('construct_left_menu', array($this, 'left_menu_item'));
         Actions::register('page_attachment', array($this, 'page_group_attachment'));
 
+        Actions::register('language_created', array($this, 'language_created'));
+        Actions::register('language_deleted', array($this, 'language_deleted'));
+
         Template::registerViewMethod('page', 'persons_list', 'Tabel persoane (nume, apartenenta, contacte, sector)', null, true);
         Template::registerViewMethod('page', 'group_with_persons', 'Grupe de persoane', null, true);
         Template::registerViewMethod('page', 'persons_with_photo', 'Persoane cu foto', null, true);
@@ -254,9 +257,9 @@ class Person extends \Core\APL\ExtensionController {
                 $data['selected_groups'][] = $group->group_id;
             }
         }
-        
+
         $data['feeds'] = \Feed::all();
-        
+
         $this->layout->content = Template::moduleView($this->module_name, 'views.form', $data);
         return $this->layout;
     }
@@ -409,21 +412,23 @@ class Person extends \Core\APL\ExtensionController {
     }
 
     public function page_group_attachment($post) {
-        $wdata = array(
-            'post' => $post->toArray(),
-            'person_groups' => PersonGroup::join(PersonGroupLang::getTableName(), PersonGroupLang::getField("group_id"), '=', PersonGroup::getField('id'))
-                    ->select(PersonGroup::getField("id"), PersonGroupLang::getField("name"))
-                    ->where(PersonGroupLang::getField("lang_id"), \Core\APL\Language::getId())
-                    ->get()->toArray(),
-            'selected_groups' => array()
-        );
+        if (in_array($post->view_mod, array('persons_list', 'city_councilors', 'persons_big', 'persons_secretar', 'persons_mayor', 'group_with_persons', 'persons_with_photo'))) {
+            $wdata = array(
+                'post' => $post->toArray(),
+                'person_groups' => PersonGroup::join(PersonGroupLang::getTableName(), PersonGroupLang::getField("group_id"), '=', PersonGroup::getField('id'))
+                        ->select(PersonGroup::getField("id"), PersonGroupLang::getField("name"))
+                        ->where(PersonGroupLang::getField("lang_id"), \Core\APL\Language::getId())
+                        ->get()->toArray(),
+                'selected_groups' => array()
+            );
 
-        $selected_groups = PersonGroupPostModel::where('post_id', $post->id)->get();
-        foreach ($selected_groups as $item) {
-            $wdata['selected_groups'][] = $item->group_id;
+            $selected_groups = PersonGroupPostModel::where('post_id', $post->id)->get();
+            foreach ($selected_groups as $item) {
+                $wdata['selected_groups'][] = $item->group_id;
+            }
+
+            echo Template::moduleView($this->module_name, 'views.attachment-group-page', $wdata);
         }
-
-        echo Template::moduleView($this->module_name, 'views.attachment-group-page', $wdata);
     }
 
     public function save_post_attach() {
@@ -437,6 +442,29 @@ class Person extends \Core\APL\ExtensionController {
             $item->save();
         }
         return array();
+    }
+
+    public function language_created($lang_id) {
+        $plist = \PersonModel::all();
+        foreach ($plist as $ent) {
+            $item = new \PersonLangModel;
+            $item->person_id = $ent->id;
+            $item->lang_id = $lang_id;
+            $item->save();
+        }
+        
+        $glist = \PersonGroup::all();
+        foreach ($glist as $ent) {
+            $item = new \PersonGroupLang;
+            $item->group_id = $ent->id;
+            $item->lang_id = $lang_id;
+            $item->save();
+        }
+    }
+
+    public function language_deleted($lang_id) {
+        PersonLangModel::where('lang_id', $lang_id)->delete();
+        PersonGroupLang::where('lang_id', $lang_id)->delete();
     }
 
 }

@@ -87,7 +87,7 @@
                                 <span class="icon-bar"></span> 
                                 <span class="icon-bar"></span> 
                             </button>
-                            <a href="index.html" class="navbar-brand">
+                            <a href="<?=url('/');?>" class="navbar-brand">
                                 <img src="<?= res('assets/img/logo.png'); ?>" alt="">
                             </a> 
                         </header>
@@ -97,7 +97,7 @@
                                     <i class="glyphicon glyphicon-fullscreen"></i>
                                 </a> 
                             </div>
-                            <div class="btn-group">
+<!--                            <div class="btn-group">
                                 <a data-placement="bottom" data-original-title="E-mail" data-toggle="tooltip" class="btn btn-default btn-sm">
                                     <i class="fa fa-envelope"></i>
                                     <span class="label label-warning">5</span> 
@@ -105,7 +105,7 @@
                                 <a data-toggle="modal" data-original-title="Help" data-placement="bottom" class="btn btn-default btn-sm" href="#helpModal">
                                     <i class="fa fa-question"></i>
                                 </a> 
-                            </div>
+                            </div>-->
                             <div class="btn-group">
                                 <a href="<?= url('auth/logout'); ?>" data-toggle="tooltip" data-original-title="Logout" data-placement="bottom" class="btn btn-metis-1 btn-sm">
                                     <i class="fa fa-power-off"></i>
@@ -116,8 +116,10 @@
 
                             <!-- .nav -->
                             <ul class="nav navbar-nav">
+                                <li> <a href="<?= url('module'); ?>">Extensions</a></li>
+                                <li> <a href="<?= url('home/languages'); ?>">Languages</a></li>
                                 <li> <a href="<?= url('log'); ?>">Log</a></li>
-
+                                
                                 <li><img id="loading" style="display: none;margin-top: 14px;" src="<?= res('assets/img/ajax-loader.gif'); ?>" /></li>
                             </ul><!-- /.nav -->
                         </div>
@@ -140,11 +142,9 @@
                 <ul id="menu" class="bg-blue dker">
                     <li class="nav-header">Menu</li>
                     <li class="nav-divider"></li>
-                    <li><a href="<?= url('module'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Extensions</span></a></li>
-                    <li><a href="<?= url('home/languages'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Languages</span></a></li>
-                    <li><a href="<?= url('menu'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Menu</span></a></li>
-                    <li><a href="<?= url('page'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Pages</span></a></li>
+                    <li><a href="<?= url('page'); ?>"><i class="fa"></i><span class="link-title">&nbsp;<?=Language::getVar('pages');?></span></a></li>
                     <li><a href="<?= url('feed'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Feeds</span></a></li>
+                    <li><a href="<?= url('var'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Var</span></a></li>
                     <?= Actions::call('construct_left_menu'); ?>
                 </ul><!-- /#menu -->
             </div><!-- /#left -->

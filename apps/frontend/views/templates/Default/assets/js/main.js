@@ -1,30 +1,39 @@
-$.expr[":"].contains = $.expr.createPseudo(function (arg) {
-    return function (elem) {
+$.expr[":"].contains = $.expr.createPseudo(function(arg) {
+    return function(elem) {
         return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
     };
 });
 
-$(document).ready(function () {
-    $('.calendar_slider,.orar_slider').bxSlider({
+$(document).ready(function() {
+    $('.calendar_slider').bxSlider({
         pager: false,
         controls: true,
         adaptiveHeight: true
     });
 
-    $('section').css('min-height', ($(window).height() - 326));    
+
+    $('.orar_slider').bxSlider({
+        pager: false,
+        controls: true,
+        adaptiveHeight: true,
+        startSlide: typeof start_month !== 'undefined' ? start_month : 0
+    });
+
+    $('section').css('min-height', ($(window).height() - 326));
+    console.log($(window).height());
     $('.l_a.m_t_n').css('min-height', ($(window).height() - 413));
     $('.menu_content').height($(window).height() - 83);
-    
-    $('.head_list,.overlay3').click(function(){
+
+    $('.head_list,.overlay3').click(function() {
         $('header .menu_content').toggleClass('hidden');
         $('.overlay3').toggleClass('hidden');
     });
-    $('.currency .s_c,.overlay2').click(function () {
+    $('.currency .s_c,.overlay2').click(function() {
         $('.overlay2').toggleClass('hidden');
         $('.currency .lang').toggleClass('hidden');
 
     });
-    $('.cont .contact_us,.overlay').click(function () {
+    $('.cont .contact_us,.overlay').click(function() {
         $('.overlay').toggleClass('hidden');
         $('.cont .cont_form').toggleClass('hidden');
     });
@@ -33,7 +42,7 @@ $(document).ready(function () {
         auto: true,
         //adaptiveHeight: true
     });
-    $("ul.faq  li a").click(function () {
+    $("ul.faq  li a").click(function() {
         $('ul.faq li.active').removeClass('active');
         if ($(this).parent().find('p').hasClass('active')) {
             $("ul.faq  li p.active").slideToggle();
@@ -47,7 +56,7 @@ $(document).ready(function () {
         }
     });
 
-    $("ul.dcr > li > a").click(function () {
+    $("ul.dcr > li > a").click(function() {
         $("ul.dcr  li.active").removeClass('active');
         $('span.more').removeClass('hidden');
         if ($(this).parent().find('.dcr_box').hasClass('active')) {
@@ -63,7 +72,7 @@ $(document).ready(function () {
             $(this).find('span.more').addClass('hidden');
         }
     });
-    $('.upload').click(function () {
+    $('.upload').click(function() {
         $('#upload').click();
     });
 
@@ -72,9 +81,9 @@ $(document).ready(function () {
     var slider = $('.bxslider').bxSlider({
         pager: false,
         auto: true,
-        onSliderLoad: function () {
+        onSliderLoad: function() {
             setTimeout(
-                    function ()
+                    function()
                     {
                         var count = slider.getSlideCount();
                         var current = slider.getCurrentSlide() + 1;
@@ -85,7 +94,7 @@ $(document).ready(function () {
 
 
         },
-        onSlideAfter: function () {
+        onSlideAfter: function() {
             var count = slider.getSlideCount();
             var current = slider.getCurrentSlide() + 1;
             $('.counter .total').text(count);
@@ -99,12 +108,30 @@ $(document).ready(function () {
         increaseArea: '20%' // optional
     });
 
-    $(".search_start").click(function () {
+    $(".search_start").click(function() {
         var block = $(this).closest(".search_files");
         var query = block.find(".search_input").val();
 
         block.find(".mda li").hide();
         block.find('.mda li span:contains("' + query + '")').closest("li").show();
+    });
+
+    $("#contact_top_form").submit(function(e) {
+        e.preventDefault();
+
+        var form = $(this);
+
+        $.post('/contact/topsubmit', $(this).serialize(), function(data) {
+            if (data.error == 0) {
+                form.fadeOut(400, function() {
+                    $(".contact_top_notif").fadeIn(300);
+                });
+            } else {
+                form.find(".form_error").html(data.message);
+            }
+        });
+
+        return false;
     });
 });
 

@@ -24,26 +24,7 @@
     </div>
 </div>
 <section>
-    <div class="wrap ">        
-        <div class="left global">
-            <?php foreach ($sub_pages as $item) { ?>
-                <article>
-                    <p class="ttl"> <a href="<?= $item->url; ?>"><?= $item->title; ?></a></p>
-                    <ul>
-                        <?php
-                        foreach ($item['childrens'] as $k => $chitem) {
-                            if ($k < 4) {
-                                ?>
-                                <li><a href="<?= $chitem->url; ?>"><?= $chitem->title; ?></a></li>
-                                <?php
-                            }
-                        }
-                        ?>
-                    </ul>
-                    <a href="<?= $item->url; ?>" class="more"></a>
-                </article>
-            <?php } ?>
-        </div>
+    <div class="wrap ">
         <div class="right global">
             <!--            <article class="doc">
                             <p class="ttl"><img src="<?= res('assets/img/doc.png'); ?>"><a href="javascript:;">Toate actele locale</a></p>
@@ -120,13 +101,13 @@
                     <ul class="bxslider2">
                         <?php foreach ($home_ads as $item) { ?>
                             <li><a href='<?= Language::url('topost/' . $item->id); ?>'>
-                                    <div class="data">
-                                        <p><?= date('d-m-Y', strtotime($item->created_at)); ?></p>
-                                        <span><?= $item->title; ?></span>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <p class="info"><?= Str::words(strip_tags($item->text), 20); ?></p>
-                                </a></li>
+                                <div class="data">
+                                    <p><?= date('d-m-Y', strtotime($item->created_at)); ?></p>
+                                    <span><?= $item->title; ?></span>
+                                </div>
+                                <div class="clearfix"></div>
+                                <p class="info"><?= Str::words(strip_tags($item->text), 20); ?></p>
+                            </a></li>
                         <?php } ?>
                     </ul>
                 </article>
@@ -150,7 +131,7 @@
             <?php } ?>
 
             <?php if (isset($home_page) && $home_page) { ?>
-                <article>
+                <article style='height: auto;/** trebuie mutat in main.css **/'>
                     <p class="ttl"><a href="<?= Language::url('topost/' . $home_page->id); ?>"><?= $home_page->title; ?></a></p>
                     <div class="hr"></div>
                     <ul>
@@ -159,6 +140,26 @@
                         <?php } ?>
                     </ul>
                     <a href="<?= Language::url('topost/' . $home_page->id); ?>" class="more"></a>
+                </article>
+            <?php } ?>
+        </div>
+        <div class="left global">
+            <?php foreach ($sub_pages as $item) { ?>
+                <article>
+                    <p class="ttl"><a href="<?= Language::url('topost/' . $home_page->id); ?>"><?= $home_page->title; ?></a></p>
+                    <div class="hr"></div>
+                    <ul>
+                        <?php
+                        foreach ($item['childrens'] as $k => $chitem) {
+                            if ($k < 4) {
+                                ?>
+                                <li><a href="<?= $chitem->url; ?>"><?= $chitem->title; ?></a></li>
+                                <?php
+                            }
+                        }
+                        ?>
+                    </ul>
+                    <a href="<?= $item->url; ?>" class="more"></a>
                 </article>
             <?php } ?>
         </div>
