@@ -31,18 +31,38 @@ jQuery(document).ready(function($) {
     $("body").on('click', ".click-trigger", function() {
         $($(this).data('for')).click();
     });
-    
-    window.current_instance = '';
-    $("body").on('click', '.click-trigger-sv', function () {
-        current_instance = $(this).data('for');
+
+
+    $("body").on('click', '.click-trigger-sv', function() {
+        current_file_instance = $(this).data('for');
         $("#fileModal").modal('show');
-        $("#fileModal").find('iframe').each(function () {
+        $("#fileModal").find('iframe').each(function() {
             $(this).attr('src', $(this).data('src'));
         });
     });
-    
-    $("body").on('change', ".file_name_edit", function () {
+
+    $("body").on('change', ".file_name_edit", function() {
         $.post(base_url + "/uploader/editname", {id: $(this).attr('data-id'), name: $(this).val()}, function(data) {
         }, 'json');
     });
 });
+
+var current_file_instance;
+window.setFilePath = function(file) {
+    $(current_file_instance).val(file.fullPath);
+
+    alert(current_file_instance, file.fullPath);
+
+    var options = {
+        success: function(data) {
+            console.log(data);
+            filewidget.filelist(data.module_name, data.module_id, '.files-' + data.module_name + '-' + data.module_id, data.num);
+        },
+        dataType: 'json',
+        resetForm: true
+    };
+
+    $(current_file_instance).closest('form').ajaxForm(options).submit();
+
+    $("#fileModal").modal('hide');
+}

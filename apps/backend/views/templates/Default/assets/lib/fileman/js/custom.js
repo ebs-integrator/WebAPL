@@ -33,8 +33,6 @@ function FileSelected(file) {
      * height - if the file is image, this will be the height of the original image, 0 otherwise
      * 
      */
-    alert(window.parent.current_instance + " -- " + file.fullPath);
-    //$(window.parent.document).find('#customRoxyImage').attr('src', );
-    window.parent.closeCustomRoxy();
+    window.parent.setFilePath(file);
 }
 

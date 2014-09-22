@@ -7,8 +7,6 @@
  * @copyright  2014 Enterprise Business Solutions SRL
  * @link       http://ebs.md/
  */
-
-
 class UploaderController extends BaseController {
 
     function __construct() {
@@ -54,7 +52,7 @@ class UploaderController extends BaseController {
             $extension = $file->getClientOriginalExtension();
             $name = $file->getClientOriginalName();
 
-            $filename = uniqid() . '_' . md5($name) . "." . $extension;
+            $filename = Core\APL\Actions::toAscii($name) . '_' . sha1(uniqid() . $name) . "." . $extension;
 
             $uploadSuccess = $file->move(Files::fullDir(), $filename);
 
@@ -63,18 +61,52 @@ class UploaderController extends BaseController {
 
                 $data['error'] = '0';
                 $data['succes'] = 'Uploaded!';
-                
+
                 Log::info("File uploaded #{$fid} - '{$filename}'");
             } else {
                 $data['error'] = '1';
                 $data['succes'] = 'Error!';
-                
+
                 Log::warning("Error upload file {$name}");
             }
         } else {
             $data['error'] = '1';
             $data['succes'] = 'Upload file not found';
         }
+        return $data;
+    }
+
+    /**
+     * Upload file
+     * @return array
+     */
+    public function add() {
+        $data = array(
+            'module_id' => Input::get('module_id'),
+            'module_name' => Input::get('module_name'),
+            'num' => Input::get('num'),
+            'filepath' => Input::get('path')
+        );
+
+        $filename = ltrim($data['filepath'], '/');
+        $name = basename($filename);
+        $extension = pathinfo($filename, PATHINFO_EXTENSION);
+
+        $dbfile = Files::where('path', 'like', "%{$name}")->first();
+
+        if ($dbfile) {
+            $filename = $dbfile->path;
+            $name = $dbfile->name;
+            $extension = $dbfile->extension;
+        }
+
+        $fid = Files::register($name, $filename, $extension, $data['module_name'], $data['module_id']);
+
+        $data['error'] = '0';
+        $data['succes'] = 'Uploaded!';
+
+        Log::info("File added #{$fid} - '{$filename}'");
+
         return $data;
     }
 
@@ -92,14 +124,13 @@ class UploaderController extends BaseController {
         }
         return $data;
     }
-    
-    
+
     public function editname() {
         $id = Input::get('id');
         $name = Input::get('name');
-        
+
         $file = Files::find($id);
-        
+
         if ($file) {
             $file->name = $name;
             $file->save();
