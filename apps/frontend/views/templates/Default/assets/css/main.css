@@ -409,9 +409,9 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
 header{
     width:100%;
+    max-width:2580px;
     height:83px;
     line-height: 81px;
 }
@@ -615,7 +615,7 @@ header .contact .currency .lang .relative p{
     background: url('../img/g_arrow.png') no-repeat right #fff;
     width:100%;
     height:10px;
-    top:-33px;
+    top:-32px;
 }
 header .header_mini{
     display:none;
@@ -1103,11 +1103,26 @@ div.more{
     margin-top:5px;
     margin-bottom: 10px;
 }
+section{
+    max-width:2580px;
+}
+.bx-wrapper .bx-controls-direction a.disabled{
+    display:block;
+}
+body{
+    max-width:2580px;
+    margin:0 auto;
+}
+body >div{
+    max-width:2580px;
+}
 footer{
     clear:both;
     margin-top:75px;
     background-color:#f2f2f2;
     height:170px;
+    max-width:2580px;
+    width:100%;
     padding-top:30px;
     -webkit-box-shadow: inset 1px 1px 3px 0px rgba(211, 211, 211, 0.23);
     -moz-box-shadow:    inset 1px 1px 3px 0px rgba(211, 211, 211, 0.23);
@@ -4188,6 +4203,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     footer .right .left.search{
         height: 45px;
     }
+    div > .logo > img{
+        max-width:450px;
+    }
     section .menu .box,section .menu .box:last-child{
         margin:60px 25px;
     }
@@ -4243,7 +4261,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     div.hr_grey{
         margin:10px;
     }
-
+div > .logo > img{
+        max-width:400px;
+    }
     section > .wrap .left article:nth-child(2n),.left > article{
         margin-left:25px;
     }
@@ -4405,12 +4425,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .menu .box .menu_title{
         font: 20px 'open_sansbold';
     }
-    section .logo{
-        margin-top: 30px;
-    }
-    section .logo img{
-        max-width: 50%;
-    }
+    
     section > .wrap .right.global{
         margin:0px;
         width:50%;
@@ -4523,6 +4538,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
 
     ul.vice li .left{
         width:400px;
+    }
+    div > div.logo{
+        margin-top:20px;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px){
@@ -4645,11 +4663,14 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .com_box span.nr{
         display:none;
     }
-    section .logo img{
-        max-width:50%;
+    div > .logo > img {
+        max-width: 380px;
     }
     section .menu .box, section .menu .box:last-child {
         margin: 60px 10px;
+    }
+    div .logo{
+        margin-top:20px;
     }
     .menu .box{
         width: 160px;
@@ -5377,9 +5398,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         font-size:12px
     }
     .right > article,section > .wrap .left article, section > .wrap .left article:nth-child(2n){
-        width:100%;
-        margin-left:0px;
-        margin-right:0px;
+        width:300px;
+        margin:0 auto;
+        margin-top:25px;
     }
     section > .wrap .right.global,section > .wrap .left.global{
         float:none;
@@ -5387,6 +5408,17 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         margin-right:0px;
         width:100%;
     }
+    .right > article.atn .data{
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+    .right article{
+        padding: 10px 19px 10px 27px;
+    }
+    .left > article,.right > article.atn{
+        height:190px;
+    }
+
     section > .wrap, section .dirs_menu .wrap{
         padding:0px;
     }
