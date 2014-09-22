@@ -42,13 +42,23 @@ class Files extends Eloquent {
     }
 
     public static function fullDir($file = '') {
-        return $_SERVER['DOCUMENT_ROOT'] . '/' . Files::$upload_dir . "/" . $file;
+        return $_SERVER['DOCUMENT_ROOT'] . '/' . Files::path($file);
+    }
+
+    public static function path($filename) {
+        if (!$filename) {
+            return Files::$upload_dir . "/";
+        } elseif (file_exists($_SERVER['DOCUMENT_ROOT'] . "/" . $filename)) {
+            return $filename;
+        } else {
+            return Files::$upload_dir . "/" . $filename;
+        }
     }
 
     public static function register($name, $filename, $extension, $module_name, $module_id) {
         $file = new Files;
         $file->name = $name;
-        $file->path = Files::$upload_dir . "/" . $filename;
+        $file->path = Files::path($filename);
         $file->extension = $extension;
         $file->type = Files::getType($extension);
         $file->module_name = $module_name;
@@ -58,25 +68,26 @@ class Files extends Eloquent {
         return $file->id;
     }
 
-    public static function dropFile($path) {
-            if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/' . $path)) {
-                unlink($_SERVER['DOCUMENT_ROOT'] . '/' . $path);
-            }
+    public static function dropFile($path, $id = 0) {
+        $used = Files::where('path', 'like', "%{$path}")->where('id', '<>', $id)->count();
+        if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/' . $path) && $used == 0) {
+            unlink($_SERVER['DOCUMENT_ROOT'] . '/' . $path);
+        }
     }
-    
+
     public static function drop($id) {
         $file = Files::find($id);
         if ($file) {
-            Files::dropFile($file->path);
-            
+            Files::dropFile($file->path, $id);
+
             Log::warning("Drop file #{$id} - {$file->path}");
         }
         return Files::destroy($id);
     }
-    
+
     public static function dropMultiple($module_name, $module_id) {
         foreach (Files::file_list($module_name, $module_id) as $file) {
-            Files::dropFile($file->path);
+            Files::dropFile($file->path, $file->id);
             Files::destroy($file->id);
         }
     }
