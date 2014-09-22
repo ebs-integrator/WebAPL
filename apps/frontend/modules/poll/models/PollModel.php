@@ -16,7 +16,7 @@ class PollModel extends Eloquent {
         return PollModel::join(PollQuestionModel::getTableName(), PollModel::getField('id'), '=', PollQuestionModel::getField('poll_id'))
                         ->where(PollQuestionModel::getField('lang_id'), '=', \Core\APL\Language::getId())
                         ->where(PollModel::getField('enabled'), '=', 1)
-                        ->select(PollModel::getField('date_created'), PollQuestionModel::getField('title'), DB::raw(PollQuestionModel::getField('id') . " as poll_question_id"), PollModel::getField('id'));
+                        ->select(PollModel::getField('date_created'), PollQuestionModel::getField('title'), DB::raw(PollQuestionModel::getField('id') . " as poll_question_id"), PollModel::getField('id'), PollModel::getField('active'));
     }
     
     public static function getWithVotes($id) {

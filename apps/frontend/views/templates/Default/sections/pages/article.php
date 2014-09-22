@@ -33,7 +33,7 @@
                 <?php if (isset($months[intval($current_month) - 1])) { ?>
                     <a href="<?= $page_url; ?>?year=<?= $current_year; ?>&month=<?= intval($current_month) - 1; ?>" class="left"></a>
                 <?php } ?>
-                <span><?= $months[intval($current_month)]; ?></span>
+                <span><?= $months[intval($current_month)]; ?> <?= $current_year; ?></span>
                 <?php if (isset($months[intval($current_month) + 1])) { ?>
                     <a href="<?= $page_url; ?>?year=<?= $current_year; ?>&month=<?= intval($current_month) + 1; ?>" class="right"></a>
                 <?php } ?>

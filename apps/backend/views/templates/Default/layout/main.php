@@ -87,7 +87,7 @@
                                 <span class="icon-bar"></span> 
                                 <span class="icon-bar"></span> 
                             </button>
-                            <a href="<?=url('/');?>" class="navbar-brand">
+                            <a href="<?= url('/'); ?>" class="navbar-brand">
                                 <img src="<?= res('assets/img/logo.png'); ?>" alt="">
                             </a> 
                         </header>
@@ -97,15 +97,15 @@
                                     <i class="glyphicon glyphicon-fullscreen"></i>
                                 </a> 
                             </div>
-<!--                            <div class="btn-group">
-                                <a data-placement="bottom" data-original-title="E-mail" data-toggle="tooltip" class="btn btn-default btn-sm">
-                                    <i class="fa fa-envelope"></i>
-                                    <span class="label label-warning">5</span> 
-                                </a>
-                                <a data-toggle="modal" data-original-title="Help" data-placement="bottom" class="btn btn-default btn-sm" href="#helpModal">
-                                    <i class="fa fa-question"></i>
-                                </a> 
-                            </div>-->
+                            <!--                            <div class="btn-group">
+                                                            <a data-placement="bottom" data-original-title="E-mail" data-toggle="tooltip" class="btn btn-default btn-sm">
+                                                                <i class="fa fa-envelope"></i>
+                                                                <span class="label label-warning">5</span> 
+                                                            </a>
+                                                            <a data-toggle="modal" data-original-title="Help" data-placement="bottom" class="btn btn-default btn-sm" href="#helpModal">
+                                                                <i class="fa fa-question"></i>
+                                                            </a> 
+                                                        </div>-->
                             <div class="btn-group">
                                 <a href="<?= url('auth/logout'); ?>" data-toggle="tooltip" data-original-title="Logout" data-placement="bottom" class="btn btn-metis-1 btn-sm">
                                     <i class="fa fa-power-off"></i>
@@ -119,7 +119,7 @@
                                 <li> <a href="<?= url('module'); ?>">Extensions</a></li>
                                 <li> <a href="<?= url('home/languages'); ?>">Languages</a></li>
                                 <li> <a href="<?= url('log'); ?>">Log</a></li>
-                                
+
                                 <li><img id="loading" style="display: none;margin-top: 14px;" src="<?= res('assets/img/ajax-loader.gif'); ?>" /></li>
                             </ul><!-- /.nav -->
                         </div>
@@ -142,7 +142,7 @@
                 <ul id="menu" class="bg-blue dker">
                     <li class="nav-header">Menu</li>
                     <li class="nav-divider"></li>
-                    <li><a href="<?= url('page'); ?>"><i class="fa"></i><span class="link-title">&nbsp;<?=Language::getVar('pages');?></span></a></li>
+                    <li><a href="<?= url('page'); ?>"><i class="fa"></i><span class="link-title">&nbsp;<?= Language::getVar('pages'); ?></span></a></li>
                     <li><a href="<?= url('feed'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Feeds</span></a></li>
                     <li><a href="<?= url('var'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Var</span></a></li>
                     <?= Actions::call('construct_left_menu'); ?>
@@ -182,6 +182,25 @@
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal --><!-- /#helpModal -->
+
+
+        <!-- Modal -->
+        <div class="modal fade bs-example-modal-lg" id="fileModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog bs-example-modal-lg">
+                <div class="modal-content modal-lg">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Select file</h4>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src data-src="<?= res('assets/lib/fileman/index.html?integration=custom'); ?>" style="width:100%;height:70vh" frameborder="0"></iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!--Bootstrap -->
         <script src="<?= res('assets/lib/bootstrap/js/bootstrap.min.js'); ?>"></script>

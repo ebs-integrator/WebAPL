@@ -32,6 +32,15 @@ jQuery(document).ready(function($) {
         $($(this).data('for')).click();
     });
     
+    window.current_instance = '';
+    $("body").on('click', '.click-trigger-sv', function () {
+        current_instance = $(this).data('for');
+        $("#fileModal").modal('show');
+        $("#fileModal").find('iframe').each(function () {
+            $(this).attr('src', $(this).data('src'));
+        });
+    });
+    
     $("body").on('change', ".file_name_edit", function () {
         $.post(base_url + "/uploader/editname", {id: $(this).attr('data-id'), name: $(this).val()}, function(data) {
         }, 'json');

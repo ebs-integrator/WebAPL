@@ -1,5 +1,5 @@
 <?php
-if ($voted) {
+if ($voted || $poll->active == 0) {
     echo Template::moduleView('poll', 'views.pollResults', array(
         'poll' => $poll,
         'total_votes' => PollVotesModel::where('poll_id', $poll->id)->count()

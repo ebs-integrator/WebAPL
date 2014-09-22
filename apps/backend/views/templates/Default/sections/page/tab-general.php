@@ -86,6 +86,18 @@
                 <input type="checkbox" name="page[is_home_page]" class='make-switch' <?= isset($page->is_home_page) && $page->is_home_page ? 'checked' : ''; ?> />
             </td>
         </tr>
+        <tr>
+            <th>Have socials: </th>
+            <td>
+                <input type="checkbox" name="page[have_socials]" class='make-switch' <?= isset($page->have_socials) && $page->have_socials ? 'checked' : ''; ?> />
+            </td>
+        </tr>
+        <tr>
+            <th>Have comments: </th>
+            <td>
+                <input type="checkbox" name="page[have_comments]" class='make-switch' <?= isset($page->have_comments) && $page->have_comments ? 'checked' : ''; ?> />
+            </td>
+        </tr>
     </table>
 
     <?php if (isset($menu['id'])) { ?>
