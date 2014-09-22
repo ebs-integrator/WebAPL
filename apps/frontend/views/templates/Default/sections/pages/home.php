@@ -146,7 +146,8 @@
         <div class="left global">
             <?php foreach ($sub_pages as $item) { ?>
                 <article>
-                    <p class="ttl"> <a href="<?= $item->url; ?>"><?= $item->title; ?></a></p>
+                    <p class="ttl"><a href="<?= Language::url('topost/' . $home_page->id); ?>"><?= $home_page->title; ?></a></p>
+                    <div class="hr"></div>
                     <ul>
                         <?php
                         foreach ($item['childrens'] as $k => $chitem) {
