@@ -56,7 +56,7 @@ class PageController extends BaseController {
                         'general_pages' => $this->data['general_pages'],
                         'active_page_id' => $this->data['page']->id,
                         'parrents_ids' => $parrents_ids,
-                        'buttom_pages' => PostProperty::postsWithProperty('button_site', 3)
+                        'buttom_pages' => PostProperty::postsWithProperty('button_site', 3),
                     ));
 
                     // Verify if this page is clone
