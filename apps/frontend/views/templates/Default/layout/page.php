@@ -72,6 +72,7 @@
                         ?>
                     </ul>
                     <ul class="social">
+                        <p>(022) 22-32-53</p>
                         <li><a href='javascript:;' class="fb">Facebook</a></li>
                         <li><a href='javascript:;' class="odno">Odnoklassniki</a></li>
                         <li><a href='javascript:;' class="vk">Vkontakte</a></li>

@@ -25,9 +25,12 @@
         <header>
             <div class="left">
                 <a href="<?= Language::url('/'); ?>"><img src="<?= res('assets/img/s_logo.png'); ?>" class="logo logo_home"></a>
-                <button class="chat">
-                    <span class="green">Chat</span><span class="violet">-online</span>
-                    <span class="g_dot"></span>
+                <button class="home_chat">
+                    <div class="pot"></div>
+                    <div class="pct">
+                        <p>Discută <span>online</span></p>
+                        <span>Offline</span>
+                    </div>
                 </button>
             </div>
             <div class="header_mini ">
@@ -45,6 +48,7 @@
                         ?>
                     </ul>
                     <ul class="social">
+                        <p>(022) 22-32-53</p>
                         <li><a href='javascript:;' class="fb">Facebook</a></li>
                         <li><a href='javascript:;' class="odno">Odnoklassniki</a></li>
                         <li><a href='javascript:;' class="vk">Vkontakte</a></li>
