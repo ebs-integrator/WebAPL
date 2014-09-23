@@ -294,6 +294,22 @@ class FeedController extends BaseController {
         });
         $this->layout = null;
     }
+    
+    public function postAllposts() {
+        $jqgrid = new jQgrid(Post::$ftable);
+        $jqgrid->use_populate_count = true;
+        return $jqgrid->populate(function ($start, $limit) {
+            $list = Post::prepareAll()
+                    ->select(Post::$ftable . '.id', PostLang::$ftable . '.title', Post::$ftable . '.created_at', Post::$ftable . '.views')
+                    ->where(Post::$ftable . '.taxonomy_id', $this->taxonomy->id);
+
+            if ($limit) {
+                $list = $list->skip($start)->take($limit);
+            }
+
+            return $list->get($list);
+        });
+    }
 
     public function postPostattach() {
         $post = Post::find(Input::get('post_id'));

@@ -30,6 +30,7 @@ Route::controller('page', 'PageController');
 Route::controller('feed', 'FeedController');
 Route::controller('log', 'LogController');
 Route::controller('var', 'VarController');
+Route::controller('user', 'UserController');
 
 Route::get('/', 'HomeController@showDashboard');
 
