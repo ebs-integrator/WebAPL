@@ -4,8 +4,6 @@
     </p>
     <div class='data'>
         <p class="nr"><?= date('d-m-Y, H:i', strtotime($post->created_at)); ?></p>
-        <p class="term"><span>Termen limita de aplicare a CV-ului :</span> <?= date('d-m-Y, H:i', strtotime($post->date_point)); ?> </p>
-
     </div>
     <div class='p_i ldm_li'><?= Core\APL\Shortcodes::execute($post->text, array('post' => $post)); ?></div>
     <div class="ldm_middle">

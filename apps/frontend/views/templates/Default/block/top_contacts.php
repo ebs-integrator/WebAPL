@@ -71,7 +71,7 @@
         foreach (Core\APL\Language::getList() as $lang) {
             if (Core\APL\Language::ext() != $lang->ext) {
                 ?>
-                <p><a href="<?= url('language/' . $lang->ext); ?>"><?= $lang->name; ?></a></p>
+                <p><a href="<?= url('language/' . $lang->ext . '/' . (isset($active_page_id) ? $active_page_id : '')); ?>"><?= $lang->name; ?></a></p>
                 <?php
             }
         }

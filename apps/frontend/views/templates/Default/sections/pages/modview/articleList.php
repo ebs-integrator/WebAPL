@@ -1,6 +1,6 @@
 <?php foreach ($posts as $item) { ?>
     <div class="a_box g_g">
-        <p class="title"><?= $item->title; ?></p>
+        <p class="title"><a href="<?=$page_url;?>?item=<?=$item->uri;?>"><?= $item->title; ?></a></p>
         <div class="hr_dbl"></div>
         <div class="left">
             <div class="img">

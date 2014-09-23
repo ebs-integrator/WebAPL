@@ -33,10 +33,8 @@ Route::post('contact/submit', array('PostResources', 'contactSubmit'));
 Route::post('contact/topsubmit', array('PostResources', 'contactTopSubmit'));
 
 
-Route::get('language/{ext}', function ($ext) {
-    Core\APL\Language::setLanguage($ext);
-    return Redirect::to(Core\APL\Language::ext());
-})->where(array('ext' => '[a-z]{0,2}'));
+Route::get('language/{ext}', 'PageController@changeLanguage')->where(array('ext' => '[a-z]{0,2}'));
+Route::get('language/{ext}/{id}', 'PageController@changeLanguage')->where(array('ext' => '[a-z]{0,2}'));
 
 Route::get('markup', function () {
     return View::make('sections.show_page');

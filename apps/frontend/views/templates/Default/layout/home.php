@@ -30,6 +30,9 @@
                     <span class="g_dot"></span>
                 </button>
             </div>
+            <div class="left" style="display: none;">
+                <?=View::make('sections.elements.topmenu');?>
+            </div>
             <div class="header_mini ">
                 <div class="head_list"></div>
                 <div class="menu_content hidden">

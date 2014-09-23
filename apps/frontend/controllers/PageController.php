@@ -11,7 +11,7 @@ class PageController extends BaseController {
             $this->data['page'] = Post::findURI($uri);
             if ($this->data['page']) {
                 PostResources::init();
-                
+
                 // Verify if page is redirectable
                 if ($this->data['page']->redirect_to) {
                     $redirect_url = Post::getFullURI($this->data['page']->redirect_to);
@@ -68,11 +68,8 @@ class PageController extends BaseController {
                     }
 
                     // Set page title
-                    if ($this->data['parent']) {
-                        $this->data['top_title'] = $this->data['parent']['title'];
-                    } else {
-                        $this->data['top_title'] = $this->data['page']['title'];
-                    }
+                    $this->data['top_title'] = $this->data['page']['title'];
+
                     Core\APL\Template::setPageTitle($this->data['page']['title']);
 
                     $this->data['page_url'] = Core\APL\Language::url("page/" . $realURI);
@@ -134,6 +131,20 @@ class PageController extends BaseController {
         $this->layout->content = PageView::run($this->data, 'homeView');
 
         return $this->layout;
+    }
+
+    public function changeLanguage($ext, $id = 0) {
+        Core\APL\Language::setLanguage($ext);
+
+        $redirectTo = Core\APL\Language::ext();
+        if ($id) {
+            $url = Post::getFullURI($id);
+            if ($url) {
+                $redirectTo = $url;
+            }
+        }
+
+        return Redirect::to($redirectTo);
     }
 
 }
