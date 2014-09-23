@@ -1269,17 +1269,68 @@ section .dirs_menu .wrap{
 }
 section .dirs_menu a{
     font:12px 'open_sansregular';
-    color:#b591b5;
+    color: #c8b0c8 ;
     text-decoration: none;
     line-height: 21px;
 }
 section .dirs_menu a:last-child{
     color:#fff;
 }
+.home_chat{
+    width:210px;
+    height:48px;
+    padding:0px;
+    margin-left:70px;
+    vertical-align: middle;
+    margin-top: -3px;
+    border-radius:3px;
+}
+.home_chat.active .pot{    
+    border-bottom:2px solid #b6c57f;
+    background:url('../img/chat_home_a.png') no-repeat center #e5e9d8;
+}
+.home_chat.active .pct > p{
+    color:#74b45a;
+}
+.home_chat .pot{
+    border-bottom:2px solid #cacaca;
+    height:100%;
+    width:43px;
+    float:left;
+    background:url('../img/chat_home.png') no-repeat center #f2f2f2;
+}
+.home_chat .pct{
+    background:#f9f9f9;
+    border-bottom:2px solid #eaeaea;
+    height:100%;
+    float:left;
+    width:167px;
+}
+.home_chat .pct > span{
+    color:#a1a1a1;
+    display:block;
+    margin-top:-2px;
+    text-align: left;
+    padding-left: 13px;
+    font:13px 'open_sanssemibold';
+}
+.home_chat .pct > p span{
+    color:#5f5f5f;
+}
+.home_chat .pct > p{
+    font:20px "open_sansbold";
+    margin:0px;
+    color:#9c9c9c;
+    margin-top:2px;
+}
 header .top_menu{
     float:left;
     margin-left:40px;
     padding-top: 21px;
+}
+.top_menu a.active .left.title{
+    color:#7c4d7c;
+    font-family:'open_sanssemibold';
 }
 .top_menu .left.title{
     max-width:115px;
@@ -1289,7 +1340,6 @@ header .top_menu{
     vertical-align: middle;
     height: 46px;
     float: none;
-
 }
 .cont_form .adv{
     text-align: center;
@@ -1881,6 +1931,13 @@ section > .wrap >  .left.contact_r{
 .socials{
     margin-top:30px;
 }
+ul.social p{
+    background: url('../img/g_phone.png') no-repeat 36px center;
+    color: #fff;
+    padding:17px 0px 17px 65px;
+    border-bottom:1px solid #7c4d7c;
+    font: 16px "open_sansregular";
+}
 .a_box{
     width:100%;
     border:2px solid #f7f7f7;
@@ -1908,6 +1965,10 @@ section > .wrap >  .left.contact_r{
     color:#242424;
     text-transform: uppercase;
     margin-bottom: 28px;
+}
+.a_box .title a{
+    font:24px 'open_sansbold';
+    color:#242424;
 }
 .hr_dbl{
     height:3px;
@@ -4280,7 +4341,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     section > .wrap .right{
         margin-right:0px;
     }
-    
+
     div.hr_grey{
         margin:10px;
     }
@@ -4588,7 +4649,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     section > .wrap .left article:nth-child(2n){
         margin-left:0px;
     }
-    
+
     .city_link{
         margin-top:30px;
         margin-bottom: 10px;
@@ -4846,13 +4907,6 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .menu{
         display:none;
     }
-    header .menu_content .social{
-        padding: 10px 0px;
-    }
-    header .menu_content .social a{
-
-
-    }
     section .dirs_menu{
         height:4px;
         background: #7c4d7c;
@@ -4890,10 +4944,10 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         position:absolute;
         background:#784478;
         width:100%;
-        padding:10px 0px;
+        padding-bottom:10px;
     }
     header .menu_content .social a{
-        color: #fff;
+        color: #dfb7df;
         font: 11px 'open_sanssemibold';
         text-transform: uppercase;
         padding-left: 30px;
@@ -4904,6 +4958,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     header .menu_content .social  li{
         line-height:30px;
         padding:0 35px;
+    }
+    header .menu_content .social  li:nth-child(4){
+        margin-bottom:10px;
     }
     header .menu_content .social a.fb{
         background: url('../img/fb_white.png') no-repeat 5px center;
@@ -5199,6 +5256,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .logo_home{
         display: block;
     }
+    .home_chat{
+        display:none;
+    }
     header button.chat,.cda .ul_title .right,.cda ul li .right{
         display:none;
     }
@@ -5413,6 +5473,10 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     .city_info{
         width:78%;
+    }
+
+    .hide_on_mobile{
+        display:none;
     }
 }
 @media only screen and (max-width: 639px){
@@ -5816,5 +5880,8 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     section > .wrap .left article:nth-child(2n){
         margin-left:0px;
+    }
+    .hide_on_mobile{
+        display:none;
     }
 }
