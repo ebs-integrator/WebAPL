@@ -4,6 +4,15 @@
 
     <table class="table table-bordered">
         <tr>
+            <th>Frontend link: </th>
+            <td>
+                <?php
+                $link = "/" . (Language::getItem($post_lang->lang_id)->ext) . "/topost/" . (isset($post['id']) ? $post['id'] : 0);
+                ?>
+                <a href="<?=$link;?>" target="_blank"><?=$link;?></a>
+            </td>
+        </tr>
+        <tr>
             <th>Title: </th>
             <td>
                 <input type="text" name="postlang[<?= $post_lang->id; ?>][title]" class='form-control' value='<?= isset($post_lang->title) ? $post_lang->title : ''; ?>' />
