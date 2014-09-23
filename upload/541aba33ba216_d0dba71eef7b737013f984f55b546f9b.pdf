@@ -1,0 +1,62 @@
+<style>
+    @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,600);
+</style>
+<div style="width:100%;background-color:#f2f3f4;margin:0px;padding:30px 0px">
+    <div style="width:700px;background-color:#fff;
+         box-shadow: 0px 1px 13px 0px rgba(183,183,183,1);margin:0 auto;font-family: 'Open Sans', sans-serif;font-weight: 400">  
+        <div style="width:95%;height:60px;border-bottom:1px solid #efefef;padding:0px 18px;">
+            <img alt="" style="float:left;margin-top:11px;margin-right:12px;"  src="http://globaldatabase.co.uk/img/logo.png" />
+            <p style=" float:left;margin:0px;font-weight:300;color:#33627c;font-size: 17px;margin-top:24px;padding-left: 12px;border-left:1px solid #efefef;" class="MsoNormal">Company Intelligence on Global Markets</p>
+        </div>
+        <div style="width:77%;padding: 55px 80px 85px;">
+            <p style="color:#5a5a5a;font-size:14px;margin:0px;font-weight: 600" class="MsoNormal">Dear {name}</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;font-weight: 700" class="MsoNormal">Global Database has released its latest update of Senior Executives in Croatia, granting users comprehensive access to over 198,214 decision makers, covering 163,714 leading companies.</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">The <span style="font-weight:700">Croatia Companies Database</span> is build to help companies like <span style="font-weight:700">{company}</span> to  target opportunistic contacts, leveraging our email and telephone directory to avoid gatekeepers.</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">It is ideal if you are looking for <span style="font-weight:700">new business partners, suppliers or to expend your business activities.</span></p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">Our company data is compiled and aggregated from numerous authoritative sources and includes firm-level details such as:</p>
+            <div style="margin-top: 22px;font-size: 13px;color:#5a5a5a;">
+                <p style="margin:0px" class="MsoNormal">Full Company Name</p>
+                <p style="margin:0px" class="MsoNormal">Senior Executives Personnel list</p>
+                <p style="margin:0px" class="MsoNormal">Key Executives' Emails and Phone Numbers</p>
+                <p style="margin:0px" class="MsoNormal">Full Postal Address</p>
+                <p style="margin:0px" class="MsoNormal">Company Websites</p>
+                <p style="margin:0px" class="MsoNormal">Company Office Locations </p>
+                <p style="margin:0px" class="MsoNormal">Year of Establishment</p>
+                <p style="margin:0px" class="MsoNormal">Industry Classifications</p>
+                <p style="margin:0px" class="MsoNormal">Employee Size</p>
+                <p style="margin:0px" class="MsoNormal">Sales Volumes</p>
+            </div>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">Visit our <a href="http://www.globaldatabase.co.uk/main/link/44" target="_blank"><u style="font-weight: 700;color:#5a5a5a">website</u></a>, speak with one or our experts on <a href="tel:%2B44%2020%207993%202581" value="+442079932581" target="_blank"><span style="color:#019ae6;"><u>+44 20 7993 2581</u></span></a> or <a href="mailto:paul.webster@globaldatabase.co.uk?subject=I%20would%20like%20to%20book%20a%20Demo" target="_blank"><u style="font-weight: 700;color:#5a5a5a">book a demo</u></a> for more information. </p>
+
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">Order by the <u style="font-weight: 700;">30th of August</u> using Promo Code <u style="font-weight: 700;">(53fb8a46c294e)</u> and <u style="font-weight: 700;">save 15%</u>, so you pay just <span style="font-weight: 700">$1,691</span> (down from $1990). </p>
+        <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">To request an invoice, simply <a href="mailto:paul.webster@globaldatabase.co.uk?subject=I%20would%20like%20to%20subscribe,%20please%20send%20me%20the%20invoice"><u style="font-weight: 700;color:#5a5a5a">reply</u></a> to this email, or if you prefer instant access, <a href="http://www.globaldatabase.co.uk/main/link/44" target="_blank"><u style="font-weight: 700;color:#5a5a5a">order online</u></a> now using our secure payments system. </p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">You will also get online access with unlimited updates for one year, keeping you up-to-date with key personnel changes and new content updates. </p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">As the world leader in Company Intelligence across 35 industry verticals and 195 countries, serving some of the world's largest and most influential company's listed in the S&P 500, we pride ourselves with high customer service standards and unrivalled product depth. </p>
+
+            
+            <div>
+                <div style="height:10px;"></div>
+                <a href="mailto:paul.webster@globaldatabase.co.uk?subject=I%20would%20like%20to%20subscribe,%20please%20send%20me%20the%20invoice" target="_blank" style="background-color: #019ae6;border-bottom: 2px solid #247cab;color:#fff;font-size: 12px;text-decoration: none;font-weight: 700;padding:7px 18px;margin-right:20px;">Request an invoice</a>
+                <a href="mailto:paul.webster@globaldatabase.co.uk?subject=I%20would%20like%20to%20book%20a%20Demo" target="_blank" style="background-color: #019ae6;border-bottom: 2px solid #247cab;color:#fff;font-size: 12px;text-decoration: none;font-weight: 700;padding:7px 18px;margin-right:20px">Request a Demo</a>
+                <a href="http://www.globaldatabase.co.uk/main/link/44" target="_blank" style="background-color: #019ae6;border-bottom: 2px solid #247cab;color:#fff;font-size: 12px;text-decoration: none;font-weight: 700;padding:7px 18px;">Order Online </a>
+            </div>
+
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">Thank you for your time, and I hope we can build a fruitful and lasting business relationship.</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">Kind regards,</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">Paul Webster, Head of Research<br>
+                Global Database</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">
+                Tel: <a href="tel:%2B44%2020%207993%202581" value="+442079932581" target="_blank"><span style="color:#019ae6;"><u>+44 20 7993 2581</u></span></a> <br>
+                Email: <a href="mailto:paul.webster@globaldatabase.co.uk" target="_blank"><span style="color:#019ae6;"><u>paul.webster@<wbr>globaldatabase.co.uk</u></span></a> <br>
+                Store: <a href="http://www.globaldatabase.co.uk/" target="_blank"><span style="color:#019ae6;"><u>www.globaldatabase.co.<wbr>uk</u></span></a>
+            </p>
+            <p style="margin-top: 22px;font-size: 11px;color:#a7a7a7;" class="MsoNormal">
+                Global Database is part of Global Business Intelligence Limited, registered in England and Wales. <br />
+                Registered office: 179 Gloucester Place, London NW1 6DX, United Kingdom.<br />
+                Registered number: 08555665<br />
+                This email was sent to {email}. To unsubscribe, please click <a href="http://globaldatabase.co.uk/main/link/10" target="_blank" style="text-decoration: none;color:#a7a7a7;font-weight: 700">here</a>.
+
+            </p>
+        </div>
+    </div>
+</div>

@@ -774,6 +774,11 @@ header .contact .cont .cont_form input[type=submit]{
     text-align: center;
     display:block;
 }
+table.taxe.aprt tbody tr td{
+    width:auto;
+    max-width:inherit;
+    min-width:inherit;
+}
 .menu .box .menu_title{
     text-transform: uppercase;
     height: 71px;
@@ -1474,9 +1479,12 @@ div[data-cont].curr{
     margin-top:30px;
     margin-bottom:10px;
 }
+.left.city{
+    width:100%;
+}
 .city_box{
     height:115px;
-    width:870px;
+    width:100%;
     border-bottom: 2px solid #efefef;
     padding-bottom: 10px;
     margin-bottom: 25px;
@@ -2345,7 +2353,7 @@ ul.culture li .right {
 ul.culture li .right .box{
     float:left;
     border-left:2px solid #b5c57e;
-    min-width: 210px;
+    min-width: 195px;
     padding-top:8px;
     padding-left:15px;
 }
@@ -2552,7 +2560,7 @@ ul.mda > li > a,ul.atz  > li a,.dcr_dwnl{
 }
 
 .a_box .right{
-    max-width:420px;
+    max-width:500px;
 }
 .emrg .ul_title .left,.cda .ul_title .left {
     width:300px;
@@ -2665,14 +2673,14 @@ ul.atz > li a:hover,ul.mda > li > a:hover,a.dcr_dwnl:hover{
     width:7%;
 }
 .com_box  span.name{
-    width:35%;
+    width:32%;
 }
 .com_box  span.fun{
     width:35%;
 }
 .com_box  span.soc{
     text-align: center;
-    width:23%;
+    width:26%;
 }
 .com_box ul li:after{
     content:'';
@@ -2727,7 +2735,7 @@ ul.vice li .left{
     background:url('../img/v_phone.png') no-repeat left center;
     color:#4b4b4b;
     font:17px 'open_sanssemibold';
-
+    word-break: break-all;
 }
 ul.vice li{
     margin-bottom:60px;
@@ -2976,15 +2984,18 @@ ul.dcr  > li .dcr_box:after{
     font:20px 'open_sanssemibold_italic';
     color:#4c4c4c;
     display: inline-block;
-    width:360px;
+    width:309px;
     margin-bottom:65px;
 }
 .bgr .quote:before{
     content: url('../img/q_t.png');
     margin-left:-33px;
 }
-.dop {
-
+table.taxe tbody tr td{
+    max-width:100px;
+}
+table.taxe tbody tr td:first-child{
+    max-width:250px;
 }
 .bgr .quote:after{
     content: url('../img/q_b.png');
@@ -3855,6 +3866,7 @@ table.c_l_u ul.dcr > li .dcr_box{
 }
 .clu_cont{
     float:left;
+    max-width:62%;
 }
 ul.mda li span a{
     color:#000;
@@ -4178,7 +4190,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     border:0px;
 }
 .a_box.g_g .left .img img,.a_box.v_g .left .img img{
-    max-width: 350px;
+    max-width: 270px;
 }
 @media only screen and (max-width : 1525px) {
     section > .wrap .left article:nth-child(2n){
@@ -4244,8 +4256,18 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .menu .box {
         margin-right: 60px;
     }
-    .left > article:nth-child(2n),.left > article{
-        margin-left:25px;
+    section > .wrap,section .dirs_menu .wrap{
+        max-width:1235px;
+    }
+    section > .wrap > .left{
+        width:65%;
+    }
+    ul.culture li .right{
+        margin-right:0px;
+        margin-left:18px;
+    }
+    .menu .wrap{
+        max-width: 1235px;
     }
 }
 @media only screen and (max-width: 1280px){
@@ -4256,19 +4278,36 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         padding-left:20px;
     }
     section > .wrap .right{
-        margin-right:10px;
+        margin-right:0px;
     }
+    
     div.hr_grey{
         margin:10px;
     }
-div > .logo > img{
+    section > .wrap ,.menu .wrap{
+        max-width: 1200px;
+    }
+    div > .logo > img{
         max-width:400px;
     }
-    section > .wrap .left article:nth-child(2n),.left > article{
+    section > .wrap .left article:nth-child(2n),.left > article,.global.right,.right > article,.right > article.atn{
+        width:360px;
+        padding-right:10px;
+        margin-left:0px;
+    }
+    .right article.news li span{
+        margin-right:12px;
+    }
+    section > .wrap .left article:nth-child(2n){
         margin-left:25px;
+    }
+    .menu .box{
+        width:250px;
+        margin-right:50px;
     }
     section > .wrap,section .dirs_menu .wrap{
         padding:0 20px;
+        max-width: 1200px;
     }
     .socials{
         padding:0 10px;
@@ -4319,16 +4358,19 @@ div > .logo > img{
     section > .wrap > .right{
         width: 30%;
     }
+    ul.culture li .right .box{
+        min-width:30%;
+    }
     section > .wrap,section .dirs_menu .wrap{
         padding:0 20px;
     }
     section > .wrap{
-        max-width:1024px;
+        max-width:950px;
         padding: 0px 10px;
     }
     section .dirs_menu .wrap{        
         padding: 0px 10px;
-        max-width: 1024px;
+        max-width: 950px;
     }
     .right_menu{
         width:100%;
@@ -4380,7 +4422,7 @@ div > .logo > img{
         font: 28px 'open_sansbold';
     }
     .bgr .quote{
-        width: 295px;
+        width: 255px;
     }
     .bgr .info > ul > li .left{
         width: 25%;
@@ -4389,13 +4431,13 @@ div > .logo > img{
         width: 225px;
     }
     button.vice_button{
-        width: 290px;
+        width: 255px;
     }
     .com_box span.fun{
         width: 30%;
     }
     .com_box span.soc{
-        width: 25%;
+        width: 31%;
     }
     .clu_img img{
         max-width: 125px;
@@ -4409,26 +4451,28 @@ div > .logo > img{
     }
     .menu .box{
         width: 200px;
-        min-height: 200px;
-        margin-right: 65px;
+        min-height: 185px;
+        margin-right: 40px;
     }
     .menu .box .menu_img{
-        height: 130px;
-        line-height: 130px;
+        height: 120px;
+        line-height: 120px;
     }
     section .menu .box, section .menu .box:last-child{
         margin: 60px 20px;
     }
     .menu{
         padding-bottom:0px;
+        min-height:310px;
     }
     .menu .box .menu_title{
         font: 20px 'open_sansbold';
+        height: 65px;
     }
-    
+
     section > .wrap .right.global{
         margin:0px;
-        width:50%;
+        width:365px;
     }
     section > .wrap .left.global{
         width:50%;
@@ -4514,8 +4558,7 @@ div > .logo > img{
         width: 340px;
     }
     .a_box.g_g .left .img img, .a_box.v_g .left .img img {
-        max-width: 300px;
-        max-height: 300px;
+        max-width: 270px;
     }
     .a_box.v_g >.right{
         width: 45%;
@@ -4542,6 +4585,14 @@ div > .logo > img{
     div > div.logo{
         margin-top:20px;
     }
+    section > .wrap .left article:nth-child(2n){
+        margin-left:0px;
+    }
+    
+    .city_link{
+        margin-top:30px;
+        margin-bottom: 10px;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px){
     header .contact .contact_us,footer .right,.top_menu .left img,header .contact .tel{
@@ -4566,10 +4617,13 @@ div > .logo > img{
     }
     section > .wrap{
         padding: 0px 10px;
-        max-width:768px;
+        max-width:680px;
     }
     section > .wrap > .left{
         width:100%;
+    }
+    section > .wrap .left article:nth-child(2n){
+        margin-left:0px;
     }
     .right_menu{
         width:100%;
@@ -4742,9 +4796,6 @@ div > .logo > img{
         max-width:270px;
         max-height:270px;
     }
-    .a_box .right{
-        max-width: 260px;
-    }
     .a_box .info{
         max-height: 188px;
     }
@@ -4752,8 +4803,12 @@ div > .logo > img{
         width: 420px;
     }
 
-    .right article{
-        margin-left:25px;
+    .city_link{
+        margin-top:40px;
+        margin-bottom: 10px;
+    }
+    .a_box .right{
+        max-width: 310px;
     }
 
 }
@@ -5353,6 +5408,12 @@ div > .logo > img{
     .right article{
         margin-left:25px;
     }
+    section > .wrap .left article:nth-child(2n){
+        margin-left:0px;
+    }
+    .city_info{
+        width:78%;
+    }
 }
 @media only screen and (max-width: 639px){
     section > .wrap, section .dirs_menu .wrap {
@@ -5404,9 +5465,8 @@ div > .logo > img{
     }
     section > .wrap .right.global,section > .wrap .left.global{
         float:none;
-        margin-left:0px;
-        margin-right:0px;
-        width:100%;
+        margin: 0 auto;
+        width: 300px;
     }
     .right > article.atn .data{
         margin-top:10px;
@@ -5426,11 +5486,11 @@ div > .logo > img{
         font-size: 20px;
     }
     .right article.news li a{
-        width: 188px;
+        width: 180px;
         font-size:12px;
     }
     .left article .ttl a{
-        font-size:20px;
+        font-size:19px;
     }
     .left > article ul li a, .right article ul li a,.l_a li a p{
         font-size:15px;
@@ -5444,6 +5504,9 @@ div > .logo > img{
     section > .wrap .right{
         margin-right:0px;
         width: 100%;
+    }
+    .left article .ttl{
+        font:inherit;
     }
     .bgr .info > ul > li .left{
         font-size:16px;
@@ -5540,6 +5603,7 @@ div > .logo > img{
     }
     .personal .left{
         margin-top:20px;
+        margin-left:0px;
     }
     table.taxe tbody tr td{
         min-width:90px;
@@ -5718,12 +5782,39 @@ div > .logo > img{
         padding: 15px;
     }
     .left article .ttl{
-        padding:25px 0px 0px 22px;
+        padding:18px 0px 0px 22px;
     }
     .right > article.atn{
-        width:100%;
+        width:300px;
     }
     .info.unic p{
         clear:both;
+    }
+    .left article .ttl{
+        font:19px 'open_sansbold';
+        height:70px;
+        width:100%;
+    }
+    .left article ul{
+        padding-top:0px;
+        height:90px;
+    }
+    .left article ul li:nth-child(n+4){
+        display:none;
+    }
+    .right article.news li span{
+        margin-right:10px;
+    }
+    .right > article.atn p.info{
+        padding-left:2px;
+    }
+    .right > article.atn .data span{
+        font-size: 12px;
+    }
+    article .more{
+        bottom:3px;
+    }
+    section > .wrap .left article:nth-child(2n){
+        margin-left:0px;
     }
 }

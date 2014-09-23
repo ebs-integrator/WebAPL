@@ -1,0 +1,62 @@
+<style>
+    @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,600);
+</style>
+<div style="width:100%;background-color:#f2f3f4;margin:0px;padding:30px 0px">
+    <div style="width:700px;background-color:#fff;
+         box-shadow: 0px 1px 13px 0px rgba(183,183,183,1);margin:0 auto;font-family: 'Open Sans', sans-serif;font-weight: 400">  
+        <div style="width:95%;height:60px;border-bottom:1px solid #efefef;padding:0px 18px;">
+            <img alt="" style="float:left;margin-top:11px;margin-right:12px;"  src="http://globaldatabase.co.uk/img/logo.png" />
+            <p style=" float:left;margin:0px;font-weight:300;color:#33627c;font-size: 17px;margin-top:24px;padding-left: 12px;border-left:1px solid #efefef;" class="MsoNormal">Company Intelligence on Global Markets</p>
+        </div>
+        <div style="width:77%;padding: 55px 80px 85px;">
+            <p style="color:#5a5a5a;font-size:14px;margin:0px;font-weight: 600" class="MsoNormal">Estimado {name}</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;font-weight: 700" class="MsoNormal">Global Database acaba de disponibilizar uma atualização da base de dados “Senior Executives in Tunisia”, garantindo aos seus utilizadores, um acesso integral a 10.211 decisores de 13.746 das mais destacadas empresas Tunisinas.</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">A base de dados empresarial da  <span style="font-weight:700">Tunísia </span> foi elaborada para ajudar empresas como a  <span style="font-weight:700">{company}</span> a desenvolver verdadeiros contatos e oportunidades, permitindo o contacto direto com os decisores, eliminando as barreiras administrativas associadas aos contatos gerais.</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">É a ferramenta ideal para quem procura novos clientes, novos parceiros de negócio ou novos fornecedores, que lhe permitam expandir a sua atividade neste mercado.</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">A informação é apresentada de forma compilada e agrega informação a partir de diversas origens, incluindo todos os detalhes da empresa bem da sua equipa de gestão e decisão como:</p>
+            <div style="margin-top: 22px;font-size: 13px;color:#5a5a5a;">
+                <p style="margin:0px" class="MsoNormal">Nome complete da Empresa</p>
+                <p style="margin:0px" class="MsoNormal">Lista dos Executivos e decisores da empresa</p>
+                <p style="margin:0px" class="MsoNormal">Emails e números de contacto dos decisores</p>
+                <p style="margin:0px" class="MsoNormal">Morada e Código Postal completo</p>
+                <p style="margin:0px" class="MsoNormal">Websites da empresa</p>
+                <p style="margin:0px" class="MsoNormal">Localização dos escritórios </p>
+                <p style="margin:0px" class="MsoNormal">Ano de constituição</p>
+                <p style="margin:0px" class="MsoNormal">Classificação Industrial</p>
+                <p style="margin:0px" class="MsoNormal">Número de Funcionários</p>
+                <p style="margin:0px" class="MsoNormal">Volumes de Vendas</p>
+            </div>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">Visite o nosso  <a href="http://www.globaldatabase.co.uk/main/link/27" target="_blank"><u style="font-weight: 700;color:#5a5a5a">website</u></a>, fale com um dos nossos especialistas através do  <a href="tel:%2B44%2020%207993%202581" value="+442079932581" target="_blank"><span style="color:#019ae6;"><u>+44 20 7993 2581</u></span></a> ou agende uma  <a href="mailto:paul.webster@globaldatabase.co.uk?subject=I%20would%20like%20to%20book%20a%20Demo" target="_blank"><u style="font-weight: 700;color:#5a5a5a">demo</u></a> para mais informação. </p>
+
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">Adquira até  <u style="font-weight: 700;">21 de Setembro </u> usando o Código Promocional  <u style="font-weight: 700;">(53b95068d350a)</u> e <u style="font-weight: 700;">poupe 15%</u>, pagando apenas  <span style="font-weight: 700">$1,691</span> (em vez de  $1990). </p>
+        <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">Para solicitar uma fatura, basta  <a href="mailto:paul.webster@globaldatabase.co.uk?subject=I%20would%20like%20to%20subscribe,%20please%20send%20me%20the%20invoice"><u style="font-weight: 700;color:#5a5a5a">responder </u></a> a este email, ou se preferir e para ter acesso imediato,  <a href="http://www.globaldatabase.co.uk/main/link/44" target="_blank"><u style="font-weight: 700;color:#5a5a5a">encomende online</u></a> agora utilizando o nosso sistema de pagamentos seguro. </p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">Irá receber um acesso online que inclui updates ilimitados, mantendo a base de dados permanentemente atualizada durante 1 ano.  </p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">Como líder mundial em serviços de inteligência empresarial, em 35 industrias verticais e 195 países, servindo algumas das maiores e mais influentes empresas listadas no S&P 500, orgulhamo-nos dos nosso elevados níveis de serviço aos nossos clientes, bem como da atestada qualidade dos nossos produtos. </p>
+
+            
+            <div>
+                <div style="height:10px;"></div>
+                <a href="mailto:paul.webster@globaldatabase.co.uk?subject=I%20would%20like%20to%20subscribe,%20please%20send%20me%20the%20invoice" target="_blank" style="background-color: #019ae6;border-bottom: 2px solid #247cab;color:#fff;font-size: 12px;text-decoration: none;font-weight: 700;padding:7px 18px;margin-right:20px;">Solicite uma Fatura</a>
+                <a href="mailto:paul.webster@globaldatabase.co.uk?subject=I%20would%20like%20to%20book%20a%20Demo" target="_blank" style="background-color: #019ae6;border-bottom: 2px solid #247cab;color:#fff;font-size: 12px;text-decoration: none;font-weight: 700;padding:7px 18px;margin-right:20px">Agende uma Demo</a>
+                <a href="http://www.globaldatabase.co.uk/main/link/27" target="_blank" style="background-color: #019ae6;border-bottom: 2px solid #247cab;color:#fff;font-size: 12px;text-decoration: none;font-weight: 700;padding:7px 18px;">Encomende Online  </a>
+            </div>
+
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">Obrigado pelo seu tempo, esperamos poder construir uma relação comercial frutuosa e duradoura com a sua empresa.</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">Atenciosamente,</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">Paul Webster, Head of Research<br>
+                Global Database</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">
+                Tel: <a href="tel:%2B44%2020%207993%202581" value="+442079932581" target="_blank"><span style="color:#019ae6;"><u>+44 20 7993 2581</u></span></a> <br>
+                Email: <a href="mailto:paul.webster@globaldatabase.co.uk" target="_blank"><span style="color:#019ae6;"><u>paul.webster@<wbr>globaldatabase.co.uk</u></span></a> <br>
+                Store: <a href="http://www.globaldatabase.co.uk/" target="_blank"><span style="color:#019ae6;"><u>www.globaldatabase.co.<wbr>uk</u></span></a>
+            </p>
+            <p style="margin-top: 22px;font-size: 11px;color:#a7a7a7;" class="MsoNormal">
+                Global Database is part of Global Business Intelligence Limited, registered in England and Wales. <br />
+                Registered office: 179 Gloucester Place, London NW1 6DX, United Kingdom.<br />
+                Registered number: 08555665<br />
+                This email was sent to {email}. To unsubscribe, please click <a href="http://globaldatabase.co.uk/main/link/10" target="_blank" style="text-decoration: none;color:#a7a7a7;font-weight: 700">here</a>.
+
+            </p>
+        </div>
+    </div>
+</div>
