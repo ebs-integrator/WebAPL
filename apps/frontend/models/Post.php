@@ -140,6 +140,7 @@ class Post extends Eloquent {
 
         foreach ($list as &$item) {
             $item['url'] = Post::getFullURI($item['id']);
+            $item['properties'] = PostProperty::getPostProperties($item['id']);
         }
 
         return $list;

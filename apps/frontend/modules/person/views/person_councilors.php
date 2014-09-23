@@ -33,8 +33,11 @@ foreach ($groups as $group) {
             </tr>
             <tr>
                 <td colspan="2">
+                    <?php
+                    $folder = isset($person->posts[0]) ? $person->posts[0] : array();
+                    ?>
                     <ul class="dcr">
-                        <?php foreach ($person->posts as $folder) { ?>
+                        <?php if ($folder) { ?>
                             <li><a href='javascript:;'><?= $folder->title; ?> <span class="more"></span></a>
                                 <div class='dcr_box'>
                                     <ul>
