@@ -37,6 +37,17 @@
                 </select>
             </td>
         </tr>
+        <tr>
+            <th>User: </th>
+            <td>
+                <select name="user_id" class="form-control">
+                    <option value="0">---</option>
+                    <?php foreach (User::all() as $user) { ?>
+                        <option value="<?= $user->id; ?>" <?= isset($person['user_id']) && $person['user_id'] == $user->id ? 'selected' : '' ?>><?= $user->username; ?></option>
+                    <?php } ?>
+                </select>
+            </td>
+        </tr>
     </table>
 </form>
 

@@ -33,6 +33,7 @@
     <p class="copy"><a href="javascript:;">Cititi mai multe</a> despre licențiere CC, sau <a href="javascript:;">utilizati licența</a> pentru propriul dvs. material.</p>
 </footer>
 
+<?=\Core\APL\Actions::call('bottom_contructor');?>
 
 <script>
     var res_url = "<?= res(''); ?>";
