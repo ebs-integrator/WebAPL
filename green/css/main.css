@@ -1,0 +1,695 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'open_sansbold_italic';
+    src: url('../font/opensans-bolditalic-webfont.eot');
+    src: url('../font/opensans-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/opensans-bolditalic-webfont.woff') format('woff'),
+        url('../font/opensans-bolditalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sanssemibold_italic';
+    src: url('../font/opensans-semibolditalic-webfont.eot');
+    src: url('../font/opensans-semibolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/opensans-semibolditalic-webfont.woff') format('woff'),
+        url('../font/opensans-semibolditalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'roboto_slabregular';
+    src: url('../font/robotoslab-regular-webfont.eot');
+    src: url('../font/robotoslab-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/robotoslab-regular-webfont.woff') format('woff'),
+        url('../font/robotoslab-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'open_sansitalic';
+    src: url('../font/opensans-italic-webfont.eot');
+    src: url('../font/opensans-italic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/opensans-italic-webfont.woff') format('woff'),
+        url('../font/opensans-italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('../font/opensans-semibold-webfont.eot');
+    src: url('../font/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/opensans-semibold-webfont.woff') format('woff'),
+        url('../font/opensans-semibold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../font/opensans-regular-webfont.eot');
+    src: url('../font/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/opensans-regular-webfont.woff') format('woff'),
+        url('../font/opensans-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('../font/opensans-bold-webfont.eot');
+    src: url('../font/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/opensans-bold-webfont.woff') format('woff'),
+        url('../font/opensans-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'AvenirNext-Bold';
+    src: url('../font/AvenirNext-Bold.eot?#iefix') format('embedded-opentype'),  url('../font/AvenirNext-Bold.woff') format('woff'), url('../font/AvenirNext-Bold.ttf')  format('truetype'), url('../font/AvenirNext-Bold.svg#AvenirNext-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirNext-Regular';
+    src: url('../font/AvenirNext-Regular.eot?#iefix') format('embedded-opentype'),  url('../font/AvenirNext-Regular.woff') format('woff'), url('../font/AvenirNext-Regular.ttf')  format('truetype'), url('../font/AvenirNext-Regular.svg#AvenirNext-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirNext-Medium';
+    src: url('../font/AvenirNext-Medium.eot?#iefix') format('embedded-opentype'),  url('../font/AvenirNext-Medium.woff') format('woff'), url('../font/AvenirNext-Medium.ttf')  format('truetype'), url('../font/AvenirNext-Medium.svg#AvenirNext-Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirNext-DemiBold';
+    src: url('../font/AvenirNext-DemiBold.eot?#iefix') format('embedded-opentype'),  url('../font/AvenirNext-DemiBold.woff') format('woff'), url('../font/AvenirNext-DemiBold.ttf')  format('truetype'), url('../font/AvenirNext-DemiBold.svg#AvenirNext-DemiBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+    border:0px;
+    font-size:13px;
+    font-family: 'open_sansregular';
+}
+button:focus,
+input:focus,
+select:focus,
+textarea:focus{
+    outline: none;
+}
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+*{
+    box-sizing: border-box;
+}
+p{
+    margin:0px;
+}
+ul{
+    padding:0px;
+    margin:0px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+    .relative{
+        position:relative;
+    }
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+header{
+    width:100%;
+    max-width:2580px;
+    height: 640px;
+}
+header .background{
+    position: absolute;
+    top:0;
+    width:100%;
+    z-index: -1;
+}
+header .row1{
+    margin-top:35px;
+
+}
+header .row1 > .left{
+    width:15%;
+}
+.l_box{
+    color:#fff;
+    display:block;
+    float:right;
+    text-transform: uppercase;
+    border:4px solid #fff;
+    padding:8px 35px 5px 23px;
+    max-width: 213px;
+    font:29px "AvenirNext-Bold";
+    line-height: 1.115;
+}
+
+
+.contact{
+    margin-right:70px;
+}
+.contact .tel{
+    color:#fff;
+    font:35px 'AvenirNext-Regular';
+}
+.contact a.contact_us{
+    color:#fffe86;
+    background:url("../img/contact)und.png") repeat-x bottom;
+    cursor: pointer;
+    font:16px "AvenirNext-Medium";
+}
+header .row2{
+    float:right;
+    width: 85%;
+}
+.menu_block{
+    height:77px;
+    width:70%;
+    background:#00bd9c;
+    border-bottom:2px solid #fff;
+    padding-right: 70px;
+    display:table-cell;
+    vertical-align: middle;
+}
+.top_menu{
+    float:left;
+}
+
+.top_menu li{
+    display:inline-block;
+    padding-left: 40px;
+    height: 65px;
+    line-height: 65px;
+}
+.row1 .left{
+    margin-top: 10px;
+}
+.top_menu li a{
+    color:#fff;
+    text-transform: uppercase;
+    font: 20px "AvenirNext-Bold";
+    margin-right:12px;
+}
+.top_el{
+    float:right;
+}
+.lang{
+    position:relative;
+    float:right;
+}
+.lang ul{
+    position:absolute;
+}
+.lang  p,.lang ul li{    
+    width:61px;
+    text-align:center;
+    height:64px;    
+    font:20px "AvenirNext-Bold";
+}
+.lang  p{
+    background:#fffead;
+    display:table-cell;
+    vertical-align: middle;
+    color:#00bd9c;
+    cursor: pointer;
+}
+.lang ul a{
+    width:61px;
+    height:64px;    
+    color:#fff;
+    display:table-cell;
+    vertical-align: middle;
+}
+.lang ul li:first-child{
+    background:#00deb7;
+}
+.lang ul li:nth-child(2){
+    background:#01cca9;
+}
+.lang ul li:last-child{
+    background:#00bd9c;
+}
+.overlay2,.overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+}
+header .cont{
+    position:relative;
+}
+.chat_b{
+    display:block;
+    background:url('../img/chat_dots.png')no-repeat 18px center #fff;
+    padding-left:55px;
+    float:left;
+    margin-right:5px;
+    height:64px;
+    color:#00bd9c;
+    font:20px 'AvenirNext-Bold';
+    line-height: 64px;
+    padding-right:20px;
+}
+header .cont_form{
+    position: absolute;
+    width: 503px;
+    right: 0px;
+    top: 40px;
+    background: #fff;
+    padding: 0px 27px 30px;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(174, 174, 174, 0.75);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(174, 174, 174, 0.75);
+    box-shadow: 0px 0px 8px 0px rgba(174, 174, 174, 0.75);
+    z-index: 3;
+}
+.cont_form .title{
+    background:#f3f3f3;
+    color:#000;
+    font:18px 'AvenirNext-DemiBold';
+    width: 503px;
+    padding:12px 30px;
+    text-transform: uppercase;
+    margin-left: -27px;
+}
+.cont_form ul li{
+    font:17px 'AvenirNext-Medium';
+    color:#484848;
+    width: 50%;
+    float: left;
+    margin-top:30px;
+}
+.cont_form ul li img{
+    float:left;
+    margin-right:5px;
+    margin-top:4px;
+}
+.cont_form ul{
+    margin-bottom:35px;
+}
+header .cont_form .prp {
+    width: 450px;
+    border: 2px solid #00bd9c;
+    height: 44px;
+    margin-top: 6px;
+    padding: 0px 19px;
+    line-height: 39px;
+}
+header .cont_form .prp a {
+    font: 15px 'AvenirNext-Bold';
+    line-height: 40px;
+    color: #00bd9c;
+    text-transform: uppercase;
+}
+header .left.c_info,header .right.map {
+    margin-top:24px;
+    max-width:260px;
+}
+header .left.c_info .city{
+    color:#484848;
+    margin-bottom:15px;
+    font:17px 'AvenirNext-DemiBold';
+}
+header .left.c_info .street{
+    color:#484848;
+    font:17px 'AvenirNext-Medium';
+}
+p.form_title{
+    color:#ff6476;
+    margin-top:30px;
+    text-transform: uppercase;
+    font:18px "AvenirNext-DemiBold";
+    margin-bottom:8px;
+}
+.cont_form input[type="text"]{
+    width:100%;
+    height:33px;
+    background: #f3f3f3;
+    margin-bottom: 13px;
+}
+.cont_form textarea ,.cont_form input[type="text"]{
+    padding:0px 13px;
+    color:#5c5c5c;
+    font:14px 'AvenirNext-Medium';
+}
+.cont_form textarea{
+    resize: none;
+    background:#f3f3f3;
+    height:84px;
+    width:100%;
+    padding-top:13px;
+}
+.cont_form input[type="text"].code{
+    width:100px;
+    height:30px;
+    margin-right:8px;
+    padding-left:13px;
+    margin-top:17px;
+}
+.cont_form input[type="submit"]{
+    width: 57%;
+    float: right;
+    margin-top: 13px;
+    height: 37px;
+    background: #00bd9c;
+    text-transform: uppercase;
+    color:#fff;
+    font:18px 'AvenirNext-Regular';
+}
+.cont_form .relative img{
+    position:absolute;
+    top: -7px;
+    right: 127px;
+}
+section{
+    background: #f3f3f3;
+}
+.wrap{
+    width:1280px;
+    margin:0 auto;
+}

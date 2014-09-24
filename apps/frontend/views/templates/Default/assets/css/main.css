@@ -1456,11 +1456,20 @@ div.hr_grey{
 .cda  ul li a:before{
     border:0px;
 }
+.home_menu{
+    position:fixed;
+    display:none;
+    background:#fff;
+    width: 100%;
+    z-index:999;
+    border-bottom:4px solid #b6c57e;
+    padding-bottom:2px;
+}
 .right_menu li.active,.right_menu li.active:hover {
     background:url('../img/right_active.png')25px center no-repeat #f8f8f8;
 }
 .right_menu li:hover {
-    background:url('../img/right.png')25px center no-repeat #f8f8f8;
+    background:url('../img/right_active.png')25px center no-repeat #f8f8f8;
 }
 .right_menu li.active a,.cda .right_menu li.active a{
     font:18px 'open_sansbold';
@@ -1670,11 +1679,13 @@ section > .wrap >  .left.contact_r{
     display:block;
 }
 .wrap .left .chat {
-    height:540px;
     width:360px;
     margin-top:50px;
     border:2px solid #e6e6e6;
-    padding:13px 16px 27px;
+    padding:13px 16px;
+}
+.ccc > .chat > a{
+    display:block;
 }
 .left .chat img.mn{
     float:left;
@@ -1711,10 +1722,7 @@ section > .wrap >  .left.contact_r{
 .left .chat .center{
     color:#7a7a7a;
     font:13px 'open_sanssemibold_italic';
-    text-align:center;
-    padding-bottom: 11px;
-    border-bottom: 1px solid #e6e6e6;
-    margin-bottom:25px;
+    margin-bottom:0px;
 }
 .left .chat textarea{
     width:100%;
@@ -1900,7 +1908,7 @@ section > .wrap >  .left.contact_r{
     width:85px;
     height:30px;
     margin-right:8px;
-    padding:5px;
+    padding-left:5px;
     border:1px solid #d9d9d9;
 }
 .green input[type=text].code,.cont_form input[type=text].code{
