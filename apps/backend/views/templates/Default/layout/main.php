@@ -117,9 +117,11 @@
                             <!-- .nav -->
                             <ul class="nav navbar-nav">
                                 <li> <a href="<?= url('module'); ?>">Extensions</a></li>
+                                <li> <a href="<?= url('user'); ?>">Users</a></li>
                                 <li> <a href="<?= url('home/languages'); ?>">Languages</a></li>
-                                <li> <a href="<?= url('log'); ?>">Log</a></li>
-
+                                <?php if (User::has('log-view')) { ?>
+                                    <li> <a href="<?= url('log'); ?>">Log</a></li>
+                                <?php } ?> 
                                 <li><img id="loading" style="display: none;margin-top: 14px;" src="<?= res('assets/img/ajax-loader.gif'); ?>" /></li>
                             </ul><!-- /.nav -->
                         </div>
