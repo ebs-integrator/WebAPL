@@ -1,5 +1,11 @@
-<!--<footer>
-    <div class="left">
+<footer>
+    <div class="row1">
+        
+    </div>
+    <div class="row2">
+        
+    </div>
+<!--    <div class="left">
         <div class="left links">
             <a href="javascript:;">Primăria</a>
             <a href="javascript:;">Contacte și adrese utile</a>
@@ -33,10 +39,10 @@
                 <input type="submit">
             </form>
         </div>
-    </div>
+    </div>-->
     <div class="clearfix"> </div>
-    <p class="copy"><a href="javascript:;">Cititi mai multe</a> despre licențiere CC, sau <a href="javascript:;">utilizati licența</a> pentru propriul dvs. material.</p>
-</footer>-->
+<!--    <p class="copy"><a href="javascript:;">Cititi mai multe</a> despre licențiere CC, sau <a href="javascript:;">utilizati licența</a> pentru propriul dvs. material.</p>-->
+</footer>
 
 <script src="js/plugins.js"></script>
 <script src="js/icheck.js"></script>
