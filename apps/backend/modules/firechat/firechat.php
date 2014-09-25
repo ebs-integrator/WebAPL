@@ -21,6 +21,8 @@ class Firechat extends \Core\APL\ExtensionController {
         Actions::get('firechat', array('before' => 'auth', array($this, 'view')));
         Actions::get('firechat/display', array('before' => 'auth', array($this, 'display')));
         Actions::post('firechat/closeroom', array('before' => 'auth', array($this, 'closeroom')));
+        Actions::post('firechat/audience', array('before' => 'auth', array($this, 'audience')));
+
         Actions::register('construct_left_menu', array($this, 'left_menu_item'));
 
         $this->layout = Template::mainLayout();
@@ -28,8 +30,10 @@ class Firechat extends \Core\APL\ExtensionController {
 
     public function view() {
         \User::onlyHas('chat-view');
-        
-        $data = array();
+
+        $data = array(
+            'person' => \PersonModel::where('user_id', \Auth::user()->id)->first(),
+        );
 
         $this->layout->content = Template::moduleView($this->module_name, 'views.chat-form', $data);
 
@@ -38,7 +42,7 @@ class Firechat extends \Core\APL\ExtensionController {
 
     public function display() {
         \User::onlyHas('chat-view');
-        
+
         $data = array(
             'person' => \PersonModel::where('user_id', \Auth::user()->id)->first(),
         );
@@ -64,7 +68,7 @@ class Firechat extends \Core\APL\ExtensionController {
 
     public function closeroom() {
         \User::onlyHas('chat-view');
-        
+
         $roomId = \Input::get('roomId');
         $person_id = \Input::get('person_id');
 
@@ -75,6 +79,21 @@ class Firechat extends \Core\APL\ExtensionController {
             'active' => 0
         ));
 
+        return [];
+    }
+
+    public function audience() {
+        $id = \Input::get('id');
+        $for_audience = \Input::get('for_audience');
+
+        if ($id) {
+            $person = \PersonModel::find($id);
+            if ($person) {
+                $person->for_audience = $for_audience ? 1 : 0;
+                $person->save();
+            }
+        }
+        
         return [];
     }
 

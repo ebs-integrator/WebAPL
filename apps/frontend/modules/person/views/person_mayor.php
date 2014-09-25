@@ -10,7 +10,7 @@ foreach ($groups as $group) {
             </div>
             <p class="vp_name"><?= $person->first_name; ?> <?= $person->last_name; ?></p>
             <span class='quote'><?= $person->motto; ?></span>
-            <button class="vice_button">
+            <button class="vice_button <?= $person->for_audience ? 'firechat-start-with' : ''; ?>" data-personid='<?= $person->person_id; ?>'>
                 <span class="green">Chat</span><span class="violet">-online</span>
                 <span class="g_dot"></span>
             </button>
@@ -60,10 +60,10 @@ foreach ($groups as $group) {
                     <div class='dcr_box'>
                         <ul>
                             <?php foreach ($folder->docs as $doc) { ?>
-                            <li class="<?=$doc->extension;?>">
-                                <span><a href="<?=url($doc->path);?>"><?= $doc->name; ?></a></span>
-                                <a href="<?=url($doc->path);?>" class="dcr_dwnl"></a>
-                            </li>
+                                <li class="<?= $doc->extension; ?>">
+                                    <span><a href="<?= url($doc->path); ?>"><?= $doc->name; ?></a></span>
+                                    <a href="<?= url($doc->path); ?>" class="dcr_dwnl"></a>
+                                </li>
                             <?php } ?>
                         </ul>
                     </div>

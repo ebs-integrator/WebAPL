@@ -25,13 +25,7 @@
         <header>
             <div class="left">
                 <a href="<?= Language::url('/'); ?>"><img src="<?= res('assets/img/s_logo.png'); ?>" class="logo logo_home"></a>
-                <button class="home_chat firechat-start">
-                    <div class="pot"></div>
-                    <div class="pct">
-                        <p><?=varlang('discuta');?><span><?= varlang('online'); ?></span></p>
-                        <span><?= varlang('offline'); ?></span><!--<?= varlang('online'); ?>-->
-                    </div>
-                </button>
+                <?=Core\APL\Actions::call('logo_contructor');?>
             </div>
             <div class="left home_menu">
                 <?=View::make('sections.elements.topmenu');?>

@@ -4,7 +4,7 @@ if (isset($general_pages)) {
     foreach ($general_pages as $item) {
         ?>
         <div class="top_menu">
-            <a href='<?= $item->url; ?>' class="<?= isset($parrents_ids) && in_array($item->id, $parrents_ids) ? 'active' : ''; ?>">
+            <a href='<?= $item->url; ?>#hm' class="<?= isset($parrents_ids) && in_array($item->id, $parrents_ids) ? 'active' : ''; ?>">
                 <div class="left">
                     <?php if ($item->image_icon_active && isset($parrents_ids) && in_array($item->id, $parrents_ids)) { ?>
                         <img src="<?= url($item->image_icon_active->path); ?>">

@@ -4,10 +4,10 @@
     <ul class='h_list'>
         <?php foreach ($item['list'] as $sitem) { ?>
         <li>
-            <p><a href='javascript:;'><?=$sitem->title;?></a></p>
+            <p><a href='<?=Core\APL\Language::url('topost/'.$sitem->id);?>'><?=$sitem->title;?></a></p>
             <ul>
                 <?php foreach ($sitem['list'] as $titem) { ?>
-                <li><a href='javascript:;'><?=$titem->title;?></a></li>
+                <li><a href='<?=  Core\APL\Language::url('topost/'.$titem->id);?>'><?=$titem->title;?></a></li>
                 <?php } ?>
             </ul>
         </li>
