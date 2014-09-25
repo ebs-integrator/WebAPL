@@ -29,16 +29,22 @@ class Jobrequest extends \Core\APL\ExtensionController {
     }
 
     public function left_menu_item() {
-        echo Template::moduleView($this->module_name, 'views.jobrequest-left-menu');
+        if (\User::has('jobrequest-view')) {
+            echo Template::moduleView($this->module_name, 'views.jobrequest-left-menu');
+        }
     }
 
     public function requests_list() {
+        \User::onlyHas('jobrequest-view');
+        
         $this->layout->content = Template::moduleView($this->module_name, 'views.list');
 
         return $this->layout;
     }
 
     public function getlist() {
+        \User::onlyHas('jobrequest-view');
+        
         $jqgrid = new jQgrid(\JobRequestModel::getTableName());
         echo $jqgrid->populate(function ($start, $limit) {
             return \JobRequestModel::join(PostLang::getTableName(), \PostLang::getField('post_id'), '=', \JobRequestModel::getField('post_id'))
@@ -51,6 +57,8 @@ class Jobrequest extends \Core\APL\ExtensionController {
     }
 
     public function edititem() {
+        \User::onlyHas('jobrequest-view');
+        
         $jqgrid = new jQgrid(\JobRequestModel::getTableName());
         $jqgrid->operation(array());
     }

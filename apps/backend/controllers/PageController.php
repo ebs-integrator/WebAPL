@@ -223,6 +223,15 @@ class PageController extends BaseController {
     public function getDelete($id) {
         User::onlyHas("page-delete");
         
+        $trash_folder = 270;
+        
+        if ($id != $trash_folder) {
+            $page = Post::find($id);
+            $page->parent = $trash_folder;
+            $page->save();
+        }
+        
+        return Redirect::to($_SERVER['HTTP_REFERER']);
     }
     
 }

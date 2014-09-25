@@ -1,4 +1,5 @@
 <?php
+
 /**
  * 
  *
@@ -60,6 +61,8 @@ class Gallery extends \Core\APL\ExtensionController {
      * @return layout
      */
     public function gallery_list() {
+        \User::onlyHas('gallery-view');
+
         $this->data['list'] = GalleryModel::all();
 
         $this->layout->content = Template::moduleView($this->module_name, 'views.list', $this->data);
@@ -71,6 +74,8 @@ class Gallery extends \Core\APL\ExtensionController {
      * @return Redirect
      */
     public function gallery_create() {
+        \User::onlyHas('gallery-view');
+
         $gallery = new GalleryModel;
         $gallery->name = Input::get('name');
         $gallery->save();
@@ -84,6 +89,8 @@ class Gallery extends \Core\APL\ExtensionController {
      * @return Redirect
      */
     public function gallery_delete($id) {
+        \User::onlyHas('gallery-view');
+
         GalleryModel::find($id)->delete();
         // Drop files for this gallery
         Files::dropMultiple('gallery', $id);
@@ -97,6 +104,8 @@ class Gallery extends \Core\APL\ExtensionController {
      * @return layout
      */
     public function gallery_edit($id) {
+        \User::onlyHas('gallery-view');
+
         $this->data['gallery'] = GalleryModel::find($id);
 
         $this->layout->content = Template::moduleView($this->module_name, 'views.form', $this->data);
@@ -108,6 +117,8 @@ class Gallery extends \Core\APL\ExtensionController {
      * ajax
      */
     public function gallery_save() {
+        \User::onlyHas('gallery-view');
+
         $id = Input::get('id');
         $gallery = Input::get('gallery');
 
@@ -120,7 +131,9 @@ class Gallery extends \Core\APL\ExtensionController {
      * Left menu Action
      */
     public function left_menu_item() {
-        echo Template::moduleView($this->module_name, 'views.gallery-left-menu');
+        if (\User::has('gallery-view')) {
+            echo Template::moduleView($this->module_name, 'views.gallery-left-menu');
+        }
     }
 
     /**
@@ -128,17 +141,21 @@ class Gallery extends \Core\APL\ExtensionController {
      * @param Post $page
      */
     public function page_attachment($page) {
-        $post = $page->toArray();
-        $this->data['page'] = $post;
-        $this->data['list'] = GalleryModel::all();
-        $this->data['selected'] = GalleryPost::where('post_id', $post['id'])->first();
-        echo Template::moduleView($this->module_name, 'views.attachment', $this->data);
+        if (\User::has('gallery-view')) {
+            $post = $page->toArray();
+            $this->data['page'] = $post;
+            $this->data['list'] = GalleryModel::all();
+            $this->data['selected'] = GalleryPost::where('post_id', $post['id'])->first();
+            echo Template::moduleView($this->module_name, 'views.attachment', $this->data);
+        }
     }
 
     /**
      * Ajax save page attachment
      */
     public function save_post_attach() {
+        \User::onlyHas('gallery-view');
+        
         $id = Input::get('id');
         $post_id = Input::get('post_id');
 

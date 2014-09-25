@@ -119,9 +119,9 @@
                                 <?php if (User::has("modules-view")) { ?>
                                 <li> <a href="<?= url('module'); ?>">Extensions</a></li>
                                 <?php } ?>
-                                
+                                <?php if (User::has("user-view")) { ?>
                                 <li> <a href="<?= url('user'); ?>">Users</a></li>
-
+                                <?php } ?>
                                 <?php if (User::has('lang-view')) { ?>
                                     <li> <a href="<?= url('home/languages'); ?>">Languages</a></li>
                                 <?php } ?>
@@ -157,6 +157,7 @@
                         <li><a href="<?= url('feed'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Feeds</span></a></li>
                     <?php } ?>
                     <li><a href="<?= url('var'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Var</span></a></li>
+                    
                     <?= Actions::call('construct_left_menu'); ?>
                 </ul><!-- /#menu -->
             </div><!-- /#left -->

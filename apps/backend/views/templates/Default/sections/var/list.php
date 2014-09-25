@@ -20,7 +20,7 @@
     <?php if (count($var_list)) { ?>
         <?php foreach ($var_list as $item) { ?>
             <tr>
-                <td><?= $item->key; ?></td>
+                <td><input type='text' class='form-control' onClick="this.select();" value="&lt;?= varlang('<?= $item->key; ?>'); ?&gt;" /></td>
                 <td>
                     <form action="<?=url('var/edit');?>" method="post" class="ajax-auto-submit">
                         <input type="hidden" name="id" value="<?= $item->id; ?>" />

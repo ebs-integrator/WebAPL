@@ -27,6 +27,8 @@ class Firechat extends \Core\APL\ExtensionController {
     }
 
     public function view() {
+        \User::onlyHas('chat-view');
+        
         $data = array();
 
         $this->layout->content = Template::moduleView($this->module_name, 'views.chat-form', $data);
@@ -35,6 +37,8 @@ class Firechat extends \Core\APL\ExtensionController {
     }
 
     public function display() {
+        \User::onlyHas('chat-view');
+        
         $data = array(
             'person' => \PersonModel::where('user_id', \Auth::user()->id)->first(),
         );
@@ -53,10 +57,14 @@ class Firechat extends \Core\APL\ExtensionController {
     }
 
     public function left_menu_item() {
-        echo Template::moduleView($this->module_name, 'views.chat-left-menu');
+        if (\User::has('chat-view')) {
+            echo Template::moduleView($this->module_name, 'views.chat-left-menu');
+        }
     }
 
     public function closeroom() {
+        \User::onlyHas('chat-view');
+        
         $roomId = \Input::get('roomId');
         $person_id = \Input::get('person_id');
 
