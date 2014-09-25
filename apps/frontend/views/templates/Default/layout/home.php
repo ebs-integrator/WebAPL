@@ -25,7 +25,7 @@
         <header>
             <div class="left">
                 <a href="<?= Language::url('/'); ?>"><img src="<?= res('assets/img/s_logo.png'); ?>" class="logo logo_home"></a>
-                <button class="home_chat">
+                <button class="home_chat firechat-start">
                     <div class="pot"></div>
                     <div class="pct">
                         <p>Discută <span>online</span></p>

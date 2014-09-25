@@ -309,6 +309,7 @@ class Person extends \Core\APL\ExtensionController {
             $person = new PersonModel;
         }
         $person->feed_id = Input::get('feed_id');
+        $person->user_id = Input::get('user_id');
         $person->phone = Input::get('phone');
         $person->email = Input::get('email');
         $person->date_birth = Input::get('date_birth');
