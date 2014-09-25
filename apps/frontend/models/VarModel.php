@@ -9,9 +9,10 @@ class VarModel extends Eloquent {
 
     public static function prepareQuery() {
         return VarModel::join(VarLangModel::getTableName(), VarLangModel::getField('var_key'), '=', VarModel::getField('key'))
-                ->where(VarLangModel::getField('lang_id'), \Core\APL\Language::getId());
+                        ->where(VarLangModel::getField('lang_id'), \Core\APL\Language::getId())
+                        ->select(VarLangModel::getField('*'));
     }
-    
+
     public static function withParent($var_key) {
         $list = VarModel::prepareQuery()
                 ->where(VarModel::getField('parent_key'), $var_key)

@@ -115,6 +115,8 @@ class UploaderController extends BaseController {
      * @return array
      */
     public function delete() {
+        User::onlyHas('file-delete');
+        
         $id = Input::get('id');
         $data = array(
             'deleted' => 0
