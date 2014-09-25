@@ -36,16 +36,22 @@ class Newsletter extends \Core\APL\ExtensionController {
     }
 
     public function left_menu_item() {
-        echo Template::moduleView($this->module_name, 'views.newsletter-left-menu');
+        if (\User::has('newsletter-view')) {
+            echo Template::moduleView($this->module_name, 'views.newsletter-left-menu');
+        }
     }
 
     public function email_list() {
+        \User::onlyHas('newsletter-view');
+        
         $this->layout->content = Template::moduleView($this->module_name, 'views.list');
 
         return $this->layout;
     }
 
     public function getlist() {
+        \User::onlyHas('newsletter-view');
+        
         $jqgrid = new jQgrid('apl_newsletter');
         echo $jqgrid->populate(function ($start, $limit) {
                     return NewsletterModel::select('id', 'email', 'subscribe_date', 'enabled')->skip($start)->take($limit)->get();
@@ -53,6 +59,8 @@ class Newsletter extends \Core\APL\ExtensionController {
     }
 
     public function edititem() {
+        \User::onlyHas('newsletter-view');
+        
         $jqgrid = new jQgrid('apl_newsletter');
         $jqgrid->operation(array(
             'email' => Input::get('email'),
@@ -61,6 +69,8 @@ class Newsletter extends \Core\APL\ExtensionController {
     }
     
     public function send_message() {
+        \User::onlyHas('newsletter-view');
+        
         $this->layout->content = Template::moduleView($this->module_name, 'views.list');
 
         return $this->layout;

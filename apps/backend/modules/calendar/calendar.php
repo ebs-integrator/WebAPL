@@ -51,10 +51,14 @@ class Calendar extends \Core\APL\ExtensionController {
     }
 
     public function left_menu_item() {
-        echo Template::moduleView($this->module_name, 'views.calendar-left-menu');
+        if (\User::has('calendar-view')) {
+            echo Template::moduleView($this->module_name, 'views.calendar-left-menu');
+        }
     }
 
     public function calendar_list() {
+        \User::onlyHas('calendar-view');
+        
         $data['groups'] = \CalendarGroup::orderBy('name', 'asc')->get();
 
         $this->layout->content = Template::moduleView($this->module_name, 'views.list', $data);
@@ -63,6 +67,8 @@ class Calendar extends \Core\APL\ExtensionController {
     }
 
     public function edit_item($id = 0) {
+        \User::onlyHas('calendar-view');
+        
         $data = array(
             'calendar' => CalendarModel::find($id)
         );
@@ -95,6 +101,8 @@ class Calendar extends \Core\APL\ExtensionController {
     }
 
     public function getlist() {
+        \User::onlyHas('calendar-view');
+        
         $jqgrid = new jQgrid('apl_calendar_item');
         echo $jqgrid->populate(function ($start, $limit) {
             return CalendarModel::select(CalendarModel::$ftable . '.id', CalendarModel::$ftable . '.event_date', CalendarLangModel::$ftable . '.title', CalendarModel::$ftable . '.period', CalendarModel::$ftable . '.enabled')
@@ -107,6 +115,8 @@ class Calendar extends \Core\APL\ExtensionController {
     }
 
     public function getgroups() {
+        \User::onlyHas('calendar-view');
+        
         $jqgrid = new jQgrid(\CalendarGroup::getTableName());
         echo $jqgrid->populate(function ($start, $limit) {
             return CalendarGroup::select(\CalendarGroup::getField('id'), \CalendarGroup::getField('name'))
@@ -115,6 +125,8 @@ class Calendar extends \Core\APL\ExtensionController {
     }
 
     public function editgroup() {
+        \User::onlyHas('calendar-view');
+        
         $jqgrid = new jQgrid(\CalendarGroup::getTableName());
         $jqgrid->operation(array(
             'name' => Input::get('name')
@@ -122,6 +134,8 @@ class Calendar extends \Core\APL\ExtensionController {
     }
 
     public function create_item() {
+        \User::onlyHas('calendar-view');
+        
         $item = new CalendarModel;
         $item->period = Input::get("general.period");
         $item->event_date = Input::get("general.date");
@@ -141,6 +155,8 @@ class Calendar extends \Core\APL\ExtensionController {
     }
 
     public function save() {
+        \User::onlyHas('calendar-view');
+        
         $id = Input::get('id');
 
         $item = CalendarModel::find($id);
@@ -156,6 +172,8 @@ class Calendar extends \Core\APL\ExtensionController {
     }
 
     public function save_lang() {
+        \User::onlyHas('calendar-view');
+        
         $langs = Input::get('lang');
 
         foreach ($langs as $id => $lang) {
@@ -168,7 +186,7 @@ class Calendar extends \Core\APL\ExtensionController {
     }
 
     public function page_group_attachment($post) {
-        if ($post->view_mod == $this->page_view_mod) {
+        if ($post->view_mod == $this->page_view_mod && \User::has('calendar-view')) {
             $wdata = array(
                 'post' => $post->toArray(),
                 'calendar_groups' => \CalendarGroup::orderBy('name', 'asc')->get(),
@@ -185,6 +203,8 @@ class Calendar extends \Core\APL\ExtensionController {
     }
 
     public function save_post_attach() {
+        \User::onlyHas('calendar-view');
+        
         $page_id = Input::get('page_id');
         $groups = Input::get('calendar_groups');
         CalendarPostModel::where('post_id', $page_id)->delete();

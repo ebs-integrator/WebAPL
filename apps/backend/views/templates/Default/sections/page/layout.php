@@ -35,7 +35,7 @@
         <div class="col-lg-8">
             <div class="box">
                 <header>
-                    <h5>Form</h5> <a href='<?= url('page/delete/' . $page->id); ?>' class='label label-danger pull-right' style='line-height: 38px'>DELETE</a>
+                    <h5>Form</h5> <a href='<?= url('page/delete/' . $page->id); ?>' onclick='return confirm("Delete this page? ");' class='label label-danger pull-right' style='line-height: 38px'>DELETE</a>
                 </header>
                 <div class="body">
                     <?= View::make('sections.page.block-form'); ?>

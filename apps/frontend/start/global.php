@@ -46,6 +46,26 @@ Log::useFiles(storage_path() . '/logs/laravel.log');
 
 App::error(function(Exception $exception, $code) {
     Log::error($exception);
+
+    $page_property = false;
+
+    if ($code == 404) {
+        $page_property = 'error_404';
+    } elseif ($code >= 500) {
+        $page_property = 'error_500';
+    } else {
+        $page_property = 'error_other';
+    }
+
+    if ($page_property) {
+        $page = PostProperty::postWithProperty('error_404');
+        if ($page) {
+            $uri = Post::getFullURI($page->id, false);
+            return App::make('PageController')->route($uri);
+        }
+    }
+    
+    return "Undefined error!";
 });
 
 Event::listen('APL.core.load', function() {
@@ -59,14 +79,14 @@ Event::listen('APL.core.load', function() {
     foreach ($APLExtensions as $Extension) {
         if (!ClassLoader::load($Extension)) {
             throw new Exception("'{$Extension}' load failed!");
-    }
+        }
 
-        $full_class = "Core\APL\\".$Extension;
+        $full_class = "Core\APL\\" . $Extension;
         $full_class::__init();
     }
-    
+
     //var_dump(get_declared_classes());
-    
+
     class_alias('Core\APL\Modules', 'Modules');
     class_alias('Core\APL\Actions', 'Actions');
     class_alias('Core\APL\Shortcodes', 'Shortcodes');
@@ -86,8 +106,7 @@ Event::listen('APL.modules.load', function() {
 });
 
 
-App::before(function($request)
-{
+App::before(function($request) {
     Config::set('app.locale', Core\APL\Language::ext());
     App::setLocale(Core\APL\Language::ext());
 });
