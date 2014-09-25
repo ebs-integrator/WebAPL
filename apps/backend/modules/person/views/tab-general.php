@@ -77,5 +77,11 @@
                 <?= Files::widget('person', $person->id, 1); ?>
             </td>
         </tr>
+        <tr>
+            <th>Chat icon:</th>
+            <td>
+                <?= Files::widget('person_chat', $person->id, 1); ?>
+            </td>
+        </tr>
     <?php } ?>
 </table>

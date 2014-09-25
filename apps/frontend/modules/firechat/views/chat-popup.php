@@ -1,8 +1,8 @@
-<div id="firechat" class="dop" style="display: none;">
+<div id="firechat" class="dop" style="display: <?= $session_exist ? 'block' : 'none'; ?>;">
     <div class="top">
-        <div class="left firechat-photo" style=" display: none;">
+        <div class="left firechat-photo" style=" display: <?= $session_exist ? 'block' : 'none'; ?>;">
             <div class="photo">
-                <img src="<?= res('assets/img/small_p.png'); ?>">
+                <img src="<?= isset($person_icon) ? $person_icon->path : ''; ?>">
             </div>
         </div>
 
@@ -12,10 +12,10 @@
                 <button class="firechat-close"><img src="<?= res('assets/img/close.png'); ?>"></button>
             </div>
         </div>
-        <div class="right firechat-name" style="width: 220px; display:none;">
+        <div class="right firechat-name" style="width: 220px; display:<?= $session_exist ? 'block' : 'none'; ?>;">
             <p class="c_name">
                 Discută on-line cu
-                primarul Ion Vasilica
+                primarul <span class="firechat-person"><?= isset($person) ? $person->first_name . " " . $person->last_name : ''; ?></span>
             </p>
             <p class="status on">
                 on-line
@@ -25,26 +25,28 @@
     </div>
     <div class="content">
 
-        <div class="form green firechat-register">
-            <form action="" method="">
-                <div class="contenta">
-                    <label>Functionar *</label>
-                    <select name="person_id">
-                        <?php foreach ($persons as $person) { ?>
-                            <option value="<?= $person->id; ?>"><?= $person->first_name; ?> <?= $person->last_name; ?></option>
-                        <?php } ?>
-                    </select>
-                    <label>Numele Prenumele * </label>
-                    <input name="name" type="text" >
-                    <label>Email*</label>
-                    <input name="email" type="text" >    
-                    <input type="submit" value="trimite">
-                    <div class="clearfix"></div>
-                </div>
-            </form>
-        </div>
-
-
+        <?php if ($session_exist) { ?>
+            <?= Core\APL\Template::moduleView('firechat', 'views.chat-iframe'); ?>
+        <?php } else { ?>
+            <div class="form green">
+                <form class="firechat-register" action="" method="">
+                    <div class="contenta">
+                        <label>Functionar *</label>
+                        <select name="person_id">
+                            <?php foreach ($persons as $person) { ?>
+                                <option value="<?= $person->id; ?>"><?= $person->first_name; ?> <?= $person->last_name; ?></option>
+                            <?php } ?>
+                        </select>
+                        <label>Numele Prenumele * </label>
+                        <input name="name" type="text" >
+                        <label>Email*</label>
+                        <input name="email" type="text" >    
+                        <input type="submit" value="trimite">
+                        <div class="clearfix"></div>
+                    </div>
+                </form>
+            </div>
+        <?php } ?>
     </div>
 </div>
 
@@ -57,6 +59,7 @@
 
         $("body").on("click", ".firechat-close", function() {
             $("#firechat").slideToggle(500);
+            jQuery.post('<?= url('firechat/close'); ?>', {});
         });
 
         $("body").on("click", ".firechat-hide", function() {
@@ -73,13 +76,17 @@
 
         $("body").on("submit", ".firechat-register", function(e) {
             e.preventDefault();
-
+            console.log($(".firechat-register").serialize());
             $.post('<?= url('firechat/register'); ?>', $(this).serialize(), function(data) {
                 if (data.error === 0) {
                     $("#firechat .content").html(data.html);
+                    $(".firechat-person").text(data.person.first_name + " " + data.person.last_name);
+                    $(".firechat-photo img").attr('src', data.person.photo);
+
+                    $(".firechat-photo, .firechat-name").show();
                 } else {
                     alert('Chat error!');
-                    window.location.reload();
+                    //window.location.reload();
                 }
             }, 'json');
 
