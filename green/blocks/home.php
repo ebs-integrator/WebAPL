@@ -116,11 +116,4 @@
             <div class="clearfix"></div>
         </header>
         
-        <section>
-            <div class="wrap">
-                <article>
-                    <img src="img/">
-                    
-                </article>
-            </div>
-        </section>
+        
