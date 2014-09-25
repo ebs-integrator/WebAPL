@@ -38,3 +38,17 @@
     'options' => 'users_options',
     'id' => 'user_list'
 )); ?>
+
+<form action="<?=url('user/create');?>" method="post">
+    <div class="c20"></div>
+    <h3>New user</h3>
+    <input class="form-control" type="text" name="username" placeholder="Username"/>
+    <div class="c10"></div>
+    <input class="form-control" type="email" name="email" placeholder="Email"/>
+    <div class="c10"></div>
+    <input class="form-control" type="password" name="password" placeholder="Password"/>
+    <div class="c10"></div>
+    <input class="btn btn-success" type="submit" value="Save" />
+    <div class="c20"></div>
+    <div class="c20"></div>
+</form>

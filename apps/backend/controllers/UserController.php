@@ -27,6 +27,16 @@ class UserController extends BaseController {
         return $this->layout;
     }
 
+    public function postCreate() {
+        $user = new User;
+        $user->username = Input::get('username');
+        $user->email = Input::get('email');
+        $user->password = Hash::make(Input::get('password'));
+        $user->save();
+
+        return Illuminate\Support\Facades\Redirect::to('user/view/' . $user->id);
+    }
+
     public function postLists() {
         $jqgrid = new jQgrid(User::getTableName());
         return $jqgrid->populate(function ($start, $limit) {
@@ -40,7 +50,7 @@ class UserController extends BaseController {
     public function getView($id) {
         $this->data['user'] = User::find($id);
         $this->data['roles'] = Role::orderBy('key', 'asc')->get();
-        
+
         if ($this->data['user']) {
             $this->layout->content = View::make('sections.user.view', $this->data);
 
@@ -63,8 +73,27 @@ class UserController extends BaseController {
                 $item->save();
             }
         }
-        
+
         return [];
+    }
+    
+    public function postSave() {
+        $user = User::find(Input::get('id'));
+        $user->username = Input::get('username');
+        $user->email = Input::get('email');
+        $user->save();
+        return [];
+    }
+    
+    public function postSavepassword() {
+        $password = trim(Input::get('password'));
+        if ($password) {
+            
+            $user = User::find(Input::get('id'));
+            $user->password = Hash::make($password);
+            $user->save();
+            
+        }
     }
 
 }

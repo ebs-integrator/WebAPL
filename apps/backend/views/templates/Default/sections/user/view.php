@@ -1,19 +1,45 @@
-<table class="table table-bordered">
-    <tr>
-        <th></th>
-        <td>
+<form action="<?= url('user/save'); ?>" method="post" class="ajax-auto-submit">
+    <h4>Edit details:</h4>
+    
+    <input type="hidden" name="id" value="<?=$user->id;?>" />
+    
+    <table class="table table-bordered">
+        <tr>
+            <th>Username</th>
+            <td>
+                <input class="form-control" type="text" value="<?=$user->username;?>" name="username" placeholder="Username"/>
+            </td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>
+                <input class="form-control" type="email" value="<?=$user->email;?>" name="email" placeholder="Email"/>
+            </td>
+        </tr>
+    </table>
+</form>
 
-        </td>
-    </tr>
-</table>
+<form action="<?= url('user/changepassword'); ?>" method="post" class="ajax-auto-submit">
+    <h4>Change password:</h4>
+    
+    <input type="hidden" name="id" value="<?=$user->id;?>" />
+    
+    <table class="table table-bordered">
+        <tr>
+            <th>New password</th>
+            <td>
+                <input class="form-control" type="password" name="password" placeholder="Password"/>
+            </td>
+        </tr>
+    </table>
+</form>
 
-
-<form action="<?=url('user/saveroles');?>" method="post" class="ajax-auto-submit">
+<form action="<?= url('user/saveroles'); ?>" method="post" class="ajax-auto-submit">
 
     <h4>This user can:</h4>
 
-    <input type="hidden" name="id" value="<?=$user->id;?>" />
-    
+    <input type="hidden" name="id" value="<?= $user->id; ?>" />
+
     <select name="roles[]" class="chzn-select" multiple>
         <?php
         $uroles = User::extractRoles($user->id);

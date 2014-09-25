@@ -62,5 +62,16 @@ class VarController extends BaseController {
         
         return Illuminate\Support\Facades\Redirect::to('var/index/' . $key);
     }
+    
+    public function postEdit() {
+        $id = Input::get('id');
+        $value = Input::get('value');
+        
+        $vlang = VarLangModel::find($id);
+        $vlang->value = $value;
+        $vlang->save();
+        
+        return [];
+    }
 
 }

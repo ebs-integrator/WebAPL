@@ -21,7 +21,12 @@
         <?php foreach ($var_list as $item) { ?>
             <tr>
                 <td><?= $item->key; ?></td>
-                <td><?= Str::words(strip_tags($item->value), 12); ?></td>
+                <td>
+                    <form action="<?=url('var/edit');?>" method="post" class="ajax-auto-submit">
+                        <input type="hidden" name="id" value="<?= $item->id; ?>" />
+                        <textarea rows="1" style="border: 0;" name="value"><?= $item->value; ?></textarea>
+                    </form>
+                </td>
                 <td>
                     <a href='<?= url("var/index/{$item->key}"); ?>'>View sub</a>
                     <?= $item->num_vars; ?>
