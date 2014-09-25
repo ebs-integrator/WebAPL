@@ -22,7 +22,7 @@
     </head>
     <body>
         <div id="fb-root"></div>
-        <script>(function(d, s, id) {
+        <script>(function (d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0];
                 if (d.getElementById(id))
                     return;
@@ -36,7 +36,7 @@
         <div class="overlay3 hidden"></div>
         <header>
             <div class="left">
-                <?=View::make('sections.elements.topmenu');?>
+                <?= View::make('sections.elements.topmenu'); ?>
             </div>
             <div class="header_mini ">
                 <div class="head_list"></div>
@@ -53,22 +53,22 @@
                         ?>
                     </ul>
                     <ul class="social">
-                        <p>(022) 22-32-53</p>
-                        <li><a href='javascript:;' class="fb">Facebook</a></li>
-                        <li><a href='javascript:;' class="odno">Odnoklassniki</a></li>
-                        <li><a href='javascript:;' class="vk">Vkontakte</a></li>
-                        <li><a href='javascript:;' class="twitter">twitter</a></li>
-                        <li><a href='javascript:;' class="gplus">google+</a></li>
-                        <li><a href='javascript:;' class="rsss">rsss</a></li>
+                        <p><?= varlang('nr-phone'); ?></p>
+                        <li><a href='<?= varlang('facebook_link'); ?>' class="fb"><?= varlang('facebook'); ?></a></li>
+                        <li><a href='<?= varlang('odnoklassniki-link-1'); ?>' class="odno"><?= varlang('odnoklassniki'); ?></a></li>
+                        <li><a href='<?= varlang('vkontakte-link'); ?>' class="vk"><?= varlang('vkontakte'); ?></a></li>
+                        <li><a href='<?= varlang('twitter-link'); ?>' class="twitter"><?= varlang('twitter'); ?></a></li>
+                        <li><a href='<?= varlang('gplus-link'); ?>' class="gplus"><?= varlang('gplus'); ?></a></li>
+                        <li><a href='<?= varlang('rss-link'); ?>' class="rsss"><?= varlang('rss'); ?></a></li>
                     </ul>
                 </div>
             </div>
-            <div class="contact right"><?=View::make('block.top_contacts');?></div>
-    </header>
+            <div class="contact right"><?= View::make('block.top_contacts'); ?></div>
+        </header>
 
 
 
-    <?= $content; ?> 
+        <?= $content; ?> 
 
 
-    <?= View::make('block.footer'); ?>
+        <?= View::make('block.footer'); ?>

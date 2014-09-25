@@ -28,8 +28,8 @@
                 <button class="home_chat firechat-start">
                     <div class="pot"></div>
                     <div class="pct">
-                        <p><?=\Core\APL\Language::getVar('discuta');?><span>online</span></p>
-                        <span>Offline</span>
+                        <p><?=varlang('discuta');?><span><?= varlang('online'); ?></span></p>
+                        <span><?= varlang('offline'); ?></span><!--<?= varlang('online'); ?>-->
                     </div>
                 </button>
             </div>
@@ -52,12 +52,12 @@
                     </ul>
                     <ul class="social">
                         <p>(022) 22-32-53</p>
-                        <li><a href='<?=\Core\APL\Language::getVar('facebook_link');?>' class="fb"><?=\Core\APL\Language::getVar('facebook');?></a></li>
-                        <li><a href='javascript:;' class="odno">Odnoklassniki</a></li>
-                        <li><a href='javascript:;' class="vk">Vkontakte</a></li>
-                        <li><a href='javascript:;' class="twitter">twitter</a></li>
-                        <li><a href='javascript:;' class="gplus">google+</a></li>
-                        <li><a href='javascript:;' class="rsss">rsss</a></li>
+                        <li><a href='<?=varlang('facebook_link');?>' class="fb"><?=varlang('facebook');?></a></li>
+                        <li><a href='<?= varlang('odnoklassniki-link-1'); ?>' class="odno"><?=varlang('odnoklassniki');?></a></li>
+                        <li><a href='<?= varlang('vkontakte-link'); ?>' class="vk"><?= varlang('vkontakte'); ?></a></li>
+                        <li><a href='<?= varlang('twitter-link'); ?>' class="twitter"><?= varlang('twitter'); ?></a></li>
+                        <li><a href='<?= varlang('gplus-link'); ?>' class="gplus"><?= varlang('gplus'); ?></a></li>
+                        <li><a href='<?= varlang('rss-link'); ?>' class="rsss"><?= varlang('rss'); ?></a></li>
                     </ul>
                 </div>
             </div>

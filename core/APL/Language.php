@@ -126,11 +126,15 @@ class Language {
     protected static $vars = [];
 
     protected static function loadVars() {
-        $vars = \VarModel::prepareQuery()->get();
+        $vars = \VarModel::prepareQuery()->select(\VarModel::getField('key'), \VarLangModel::getField('value'))->get();
 
+        $tmpv = array();
+        
         foreach ($vars as $var) {
-            static::$vars[$var->key] = $var->value;
+            $tmpv[$var->key] = $var->value;
         }
+        
+        static::$vars = $tmpv;
     }
 
 }

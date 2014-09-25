@@ -493,6 +493,7 @@ header .contact .currency{
 header .contact .cont{
     position:relative;
     float:left;
+    z-index: 999;
 }
 header .contact .cont .cont_form{
     position:absolute;
