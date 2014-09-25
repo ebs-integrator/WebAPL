@@ -6,13 +6,13 @@
             </div>
         </div>
 
-        <div class="right" style="width: 60px;">
+        <div class="right" >
             <div class="buttons">
                 <button class="firechat-hide"><img src="<?= res('assets/img/save.png'); ?>"></button>
                 <button class="firechat-close"><img src="<?= res('assets/img/close.png'); ?>"></button>
             </div>
         </div>
-        <div class="right firechat-name" style="width: 220px; display:<?= $session_exist ? 'block' : 'none'; ?>;">
+        <div class="right firechat-name" style="display:<?= $session_exist ? 'block' : 'none'; ?>;">
             <p class="c_name">
                 Discută on-line cu
                 primarul <span class="firechat-person"><?= isset($person) ? $person->first_name . " " . $person->last_name : ''; ?></span>
