@@ -12,6 +12,7 @@
             </div>
         </div>
 
+        <?php if (User::has("page-create")) { ?>
         <div class="box">
             <header>
                 <h5>Create new page</h5>
@@ -28,8 +29,9 @@
                 </form>
             </div>
         </div>
+        <?php } ?>
     </div><!-- /.col-lg-4 -->
-    <?php if (isset($page) && $page) { ?>
+    <?php if (isset($page) && $page && User::has("page-edit")) { ?>
         <div class="col-lg-8">
             <div class="box">
                 <header>

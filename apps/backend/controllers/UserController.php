@@ -39,7 +39,7 @@ class UserController extends BaseController {
 
     public function getView($id) {
         $this->data['user'] = User::find($id);
-        $this->data['roles'] = Role::all();
+        $this->data['roles'] = Role::orderBy('key', 'asc')->get();
         
         if ($this->data['user']) {
             $this->layout->content = View::make('sections.user.view', $this->data);

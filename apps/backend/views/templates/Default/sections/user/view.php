@@ -10,7 +10,7 @@
 
 <form action="<?=url('user/saveroles');?>" method="post" class="ajax-auto-submit">
 
-    <h4>User access</h4>
+    <h4>This user can:</h4>
 
     <input type="hidden" name="id" value="<?=$user->id;?>" />
     

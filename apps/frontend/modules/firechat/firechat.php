@@ -25,6 +25,8 @@ class Firechat extends \Core\APL\ExtensionController {
         Actions::post('firechat/newroom', array($this, 'newroom'));
         Actions::post('firechat/close', array($this, 'closesession'));
 
+        Actions::post('firechat/getform', array($this, 'getform'));
+
         Actions::register('bottom_contructor', array($this, 'popup'));
     }
 
@@ -105,9 +107,8 @@ class Firechat extends \Core\APL\ExtensionController {
 
         $person = PersonModel::join(PersonLangModel::getTableName(), PersonLangModel::getField('person_id'), '=', PersonModel::getField('id'))
                 ->select(PersonModel::getField('id'), PersonLangModel::getField('first_name'), PersonLangModel::getField('last_name'))
-                ->orderBy(PersonLangModel::getField('first_name'))
                 ->where(PersonModel::getField('for_audience'), 1)
-                ->where(\PersonModel::getField('id'), $person_id)
+                ->where(PersonModel::getField('id'), $person_id)
                 ->where(PersonLangModel::getField('lang_id'), \Core\APL\Language::getId())
                 ->first();
         if ($person) {
@@ -117,15 +118,15 @@ class Firechat extends \Core\APL\ExtensionController {
             $item->user_name = $name;
             $item->person_id = $person_id;
             $item->save();
-            
+
             $photo = \Files::getfile('person_chat', $person->id);
             if ($photo) {
                 $person['photo'] = $photo->path;
             } else {
                 $person['photo'] = '';
             }
-            
-            
+
+
             \Session::put('chat_session_id', $item->id);
 
             return array(
@@ -154,6 +155,28 @@ class Firechat extends \Core\APL\ExtensionController {
                 $chat->save();
             }
         }
+    }
+
+    public function getform() {
+        $this->closesession();
+        
+        $id = \Input::get('id');
+        
+        $data = array(
+            'persons' => PersonModel::join(PersonLangModel::getTableName(), PersonLangModel::getField('person_id'), '=', PersonModel::getField('id'))
+                    ->select(PersonModel::getField('id'), PersonLangModel::getField('first_name'), PersonLangModel::getField('last_name'))
+                    ->orderBy(PersonLangModel::getField('first_name'))
+                    ->where(PersonModel::getField('for_audience'), 1)
+                    ->where(PersonLangModel::getField('lang_id'), \Core\APL\Language::getId())
+                    ->get()
+        );
+        
+        if ($id) {
+            $data['person_selected'] = $id;
+        }
+        
+
+        return Template::moduleView($this->module_name, 'views.chat-form', $data);
     }
 
 }

@@ -14,7 +14,7 @@
                     <p class="p_name"><?=$person->last_name;?></p>
                     <p class="tel"><?=$person->phone;?></p>
                     <p class="email"><a href="mailto:<?=$person->email;?>" target="_blank"><?=$person->email;?></a></p>
-                    <button class="chat_button">
+                    <button class="chat_button <?=$person->for_audience? 'active firechat-start-with':'';?>" data-personid="<?=$person->person_id;?>">
                         <span class="green">Chat</span><span class="violet">-online</span>
                         <span class="g_dot"></span>
                     </button>

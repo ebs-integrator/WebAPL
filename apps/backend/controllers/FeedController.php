@@ -18,6 +18,8 @@ class FeedController extends BaseController {
     protected $taxonomy;
 
     public function getIndex() {
+        User::onlyHas('feed-view');
+        
         $this->data['list'] = Feed::all();
 
         $this->layout->content = View::make('sections.feed.list', $this->data);
@@ -27,6 +29,8 @@ class FeedController extends BaseController {
      * Create new feed page
      */
     public function getCreate() {
+        User::onlyHas('feed-create');
+        
         $this->data['fields'] = FeedField::all();
 
         $this->layout->content = View::make('sections.feed.create', $this->data);
@@ -37,7 +41,8 @@ class FeedController extends BaseController {
      * @return redir
      */
     public function postTakecreate() {
-
+        User::onlyHas('feed-create');
+        
         $general = Input::get('general');
 
         $feed = new Feed;
@@ -69,6 +74,8 @@ class FeedController extends BaseController {
      * @param type $id
      */
     public function getEdit($id) {
+        User::onlyHas('feed-edit');
+        
         $this->data['feed'] = Feed::find($id);
 
         if ($this->data['feed']) {
@@ -84,6 +91,8 @@ class FeedController extends BaseController {
      * @return redir
      */
     public function getNewpost($feed_id = 0) {
+        User::onlyHas('feedpost-edit');
+        
         $this->data['feed_id'] = $feed_id;
 
         $post = new Post;
@@ -116,6 +125,8 @@ class FeedController extends BaseController {
      * @param int $post_id
      */
     public function getEditpost($post_id) {
+        User::onlyHas('feedpost-edit');
+        
         $post = Post::find($post_id);
 
         $feedsID = Post::feedsID($post_id);
@@ -143,6 +154,8 @@ class FeedController extends BaseController {
      * @return array
      */
     public function postSave() {
+        User::onlyHas('feedpost-edit');
+        
         $id = Input::get('id');
         $general = Input::get('general');
 
@@ -170,6 +183,8 @@ class FeedController extends BaseController {
      * @return array
      */
     public function postPostsave() {
+        User::onlyHas('feedpost-edit');
+        
         $id = Input::get('id');
 
         $response = array();
@@ -224,6 +239,8 @@ class FeedController extends BaseController {
     }
 
     public function postLangpostsave() {
+        User::onlyHas('feedpost-edit');
+        
         $response = array();
 
         $id = Input::get('id');
@@ -275,6 +292,8 @@ class FeedController extends BaseController {
      * @return json
      */
     public function postPosts($feed_id) {
+        User::onlyHas('feedpost-view');
+        
         Session::put('feed_id', $feed_id);
 
         $jqgrid = new jQgrid(Post::$ftable);
@@ -296,6 +315,8 @@ class FeedController extends BaseController {
     }
     
     public function postAllposts() {
+        User::onlyHas('feedpost-view');
+        
         $jqgrid = new jQgrid(Post::$ftable);
         $jqgrid->use_populate_count = true;
         return $jqgrid->populate(function ($start, $limit) {
@@ -312,6 +333,8 @@ class FeedController extends BaseController {
     }
 
     public function postPostattach() {
+        User::onlyHas('feedpost-edit');
+        
         $post = Post::find(Input::get('post_id'));
         $post->feed_id = Input::get('id');
         $post->save();

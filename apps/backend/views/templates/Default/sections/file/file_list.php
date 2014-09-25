@@ -1,4 +1,4 @@
-<?php if (count($files) < $num || $num == 0) { ?>
+<?php if ((count($files) < $num || $num == 0) && User::has('file-upload')) { ?>
     <button type="button" class="click-trigger btn btn-success" data-for=".button_<?= $module_name; ?>_<?= $module_id; ?>"><i class="fa fa-upload"></i> Select file from Computer</button>
     <button type="button" class="click-trigger-sv btn btn-success" data-for=".path_<?= $module_name; ?>_<?= $module_id; ?>"><i class="fa fa-upload"></i> Select file from Server</button>
 <?php } ?>

@@ -1,4 +1,12 @@
 <script>
+    function checkbox_formatter(value) {
+        if (value) {
+            return "Enabled";
+        } else {
+            return "Disabled";
+        }
+    }
+    
     var languages_options = {
         url: '<?= url('home/langs') ?>',
         datatype: "json",
@@ -10,7 +18,7 @@
             {name: 'id', index: 'id', editable: false, editoptions: {readonly: true, size: 10}},
             {name: 'name', index: 'name', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
             {name: 'ext', index: 'ext', resizable: true, align: "left", sorttype: "text", editable: true, edittype: "text"},
-            {name: 'enabled', index: 'enabled', resizable: true, align: "left", sorttype: "text", editable: true, edittype: "text"},
+            {name: 'enabled', index: 'enabled', resizable: true, align: "left", sorttype: "text", editable: true, edittype:'checkbox'},
         ],
         rowNum: 15,
         multiselect: true,
