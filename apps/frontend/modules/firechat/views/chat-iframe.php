@@ -1,1 +1,1 @@
-<iframe src="<?=url('firechat/display');?>" width="336" height="527"></iframe>
+<iframe src="<?=url('firechat/display');?>" width="410" height="527"></iframe>
