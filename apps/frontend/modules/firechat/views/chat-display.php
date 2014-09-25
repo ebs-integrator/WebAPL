@@ -97,7 +97,7 @@
         color:#4c4c4c;
     }
     #firechat textarea{
-        height:110px;
+        height:60px;
         border: 1px solid #d9d9d9;
         padding: 10px;
         font: 13px 'open_sanssemibold_italic';

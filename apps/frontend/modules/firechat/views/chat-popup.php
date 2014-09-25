@@ -45,7 +45,7 @@
         var startChat = function(id) {
             $(".firechat-photo, .firechat-name").hide();
             jQuery.post('<?= url('firechat/getform'); ?>', {id: id}, function(data) {
-                $("#firechat .content").html(data);
+                $("#firechat .content").html(data).show();
                 $("#firechat").stop().slideToggle(500).animate({height: 630}, 500);
             });
         }
