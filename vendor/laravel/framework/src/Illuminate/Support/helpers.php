@@ -1069,3 +1069,12 @@ if (!function_exists('dinamic_field')) {
     }
 
 }
+
+
+if (!function_exists('varlang')) {
+
+    function varlang($key) {
+        return Core\APL\Language::getVar($key);
+    }
+
+}
