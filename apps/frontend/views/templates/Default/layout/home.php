@@ -28,7 +28,7 @@
                 <button class="home_chat firechat-start">
                     <div class="pot"></div>
                     <div class="pct">
-                        <p>Discută <span>online</span></p>
+                        <p><?=\Core\APL\Language::getVar('discuta');?><span>online</span></p>
                         <span>Offline</span>
                     </div>
                 </button>
@@ -52,7 +52,7 @@
                     </ul>
                     <ul class="social">
                         <p>(022) 22-32-53</p>
-                        <li><a href='javascript:;' class="fb">Facebook</a></li>
+                        <li><a href='<?=\Core\APL\Language::getVar('facebook_link');?>' class="fb"><?=\Core\APL\Language::getVar('facebook');?></a></li>
                         <li><a href='javascript:;' class="odno">Odnoklassniki</a></li>
                         <li><a href='javascript:;' class="vk">Vkontakte</a></li>
                         <li><a href='javascript:;' class="twitter">twitter</a></li>
