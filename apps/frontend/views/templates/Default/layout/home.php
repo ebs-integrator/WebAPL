@@ -28,8 +28,8 @@
                 <button class="home_chat firechat-start">
                     <div class="pot"></div>
                     <div class="pct">
-                        <p><?=varlang('discuta');?><span>online</span></p>
-                        <span>Offline</span>
+                        <p><?=varlang('discuta');?><span><?= varlang('online'); ?></span></p>
+                        <span><?= varlang('offline'); ?></span><!--<?= varlang('online'); ?>-->
                     </div>
                 </button>
             </div>
@@ -56,8 +56,8 @@
                         <li><a href='<?= varlang('odnoklassniki-link-1'); ?>' class="odno"><?=varlang('odnoklassniki');?></a></li>
                         <li><a href='<?= varlang('vkontakte-link'); ?>' class="vk"><?= varlang('vkontakte'); ?></a></li>
                         <li><a href='<?= varlang('twitter-link'); ?>' class="twitter"><?= varlang('twitter'); ?></a></li>
-                        <li><a href='<?=varlang('facebook_link');?>' class="gplus"><?=varlang('facebook');?></a></li>
-                        <li><a href='<?=varlang('facebook_link');?>' class="rsss"><?=varlang('facebook');?></a></li>
+                        <li><a href='<?= varlang('gplus-link'); ?>' class="gplus"><?= varlang('gplus'); ?></a></li>
+                        <li><a href='<?= varlang('rss-link'); ?>' class="rsss"><?= varlang('rss'); ?></a></li>
                     </ul>
                 </div>
             </div>

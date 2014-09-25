@@ -8,29 +8,29 @@
         </div>
         <?php } ?>
         <div class="left socials">
-            <a href="javascript:;"><span><img src="<?= res('assets/img/fb.png'); ?>"></span>Facebook</a>
-            <a href="javascript:;"><span><img src="<?= res('assets/img/ok.png'); ?>"></span>Odnoklassniki</a>
-            <a href="javascript:;"><span><img src="<?= res('assets/img/vk.png'); ?>"></span>Vkontakte</a>
+            <a href="<?=varlang('facebook_link');?>"><span><img src="<?= res('assets/img/fb.png'); ?>"></span><?=varlang('facebook');?></a>
+            <a href="<?= varlang('odnoklassniki-link-1'); ?>"><span><img src="<?= res('assets/img/ok.png'); ?>"></span><?=varlang('odnoklassniki');?></a>
+            <a href="<?= varlang('vkontakte-link'); ?>"><span><img src="<?= res('assets/img/vk.png'); ?>"></span><?= varlang('vkontakte'); ?></a>
         </div>
         <div class="left socials">
-            <a href="javascript:;"><span><img src="<?= res('assets/img/twitter.png'); ?>"></span>Twitter</a>
-            <a href="javascript:;"><span><img src="<?= res('assets/img/gplus.png'); ?>"></span>Google+</a>
-            <a href="<?= Language::url('rss'); ?>"><span><img src="<?= res('assets/img/rsss.png'); ?>" class="rsss"></span>RSS</a>
+            <a href="<?= varlang('twitter-link'); ?>"><span><img src="<?= res('assets/img/twitter.png'); ?>"></span><?= varlang('twitter'); ?></a>
+            <a href="<?= varlang('gplus-link'); ?>"><span><img src="<?= res('assets/img/gplus.png'); ?>"></span><?= varlang('gplus'); ?></a>
+            <a href="<?= varlang('rss-link'); ?>"><span><img src="<?= res('assets/img/rsss.png'); ?>" class="rsss"></span><?= varlang('rss'); ?></a>
         </div>
     </div>
     <div class="right">
         <div class="left search">
             <form action="<?= Language::url('search'); ?>" method="get">
-                <p>Căutare prin site</p>
+                <p><?= varlang('cautare'); ?></p>
                 <img src="<?= res('assets/img/search.png'); ?>">
                 <input type="text" name="words">
-                <input type="submit">
+                <input type="submit" value="<?= varlang('submit'); ?>">
             </form>
         </div>
         <?= Core\APL\Actions::call('bottom_widgets'); ?>
     </div>
     <div class="clearfix"> </div>
-    <p class="copy"><a href="javascript:;">Cititi mai multe</a> despre licențiere CC, sau <a href="javascript:;">utilizati licența</a> pentru propriul dvs. material.</p>
+    <p class="copy"><a href="javascript:;"><?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?></p>
 </footer>
 
 <?=\Core\APL\Actions::call('bottom_contructor');?>
