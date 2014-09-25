@@ -10,21 +10,15 @@ $(document).ready(function() {
         controls: true,
         adaptiveHeight: true
     });
-
+    $(".lang p,.overlay2").click(function(){
+        $(".lang ul,.overlay2").toggleClass('hidden');
+    });
 
     $('.orar_slider').bxSlider({
         pager: false,
         controls: true,
         adaptiveHeight: true,
         startSlide: typeof start_month !== 'undefined' ? start_month : 0
-    });
-    $( window ).scroll(function() {
-        if ($(this).scrollTop() <= 83) {
-                $('.home_menu').hide();
-            }
-            else {
-                $('.home_menu').show();
-            }
     });
 
     $('section').css('min-height', ($(window).height() - 326));
@@ -35,11 +29,7 @@ $(document).ready(function() {
         $('header .menu_content').toggleClass('hidden');
         $('.overlay3').toggleClass('hidden');
     });
-    $('.currency .s_c,.overlay2').click(function() {
-        $('.overlay2').toggleClass('hidden');
-        $('.currency .lang').toggleClass('hidden');
-
-    });
+    
     $('.cont .contact_us,.overlay').click(function() {
         $('.overlay').toggleClass('hidden');
         $('.cont .cont_form').toggleClass('hidden');

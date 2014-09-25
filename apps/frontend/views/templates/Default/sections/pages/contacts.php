@@ -35,30 +35,38 @@
 
             </div>
             <div class="chat"> 
-                <form action="" method="">
+                <!--                <form action="" method="">
+                                    <img src="<?= res('assets/img/chat_man.png'); ?>" class="mn">
+                                    <span class="chat_dot"></span>
+                                    <span class="green">Chat-</span><span class="violet">online</span>
+                                    <hr>
+                                    <p class="center">Vorbeste direct cu un reprezentant al primariei</p>
+                                    <div class="cont">
+                                        <label>Functionar *</label>
+                                        <select>
+                                            <option>ghjghjghj</option>
+                                            <option>ghjghjghjgh</option>
+                                            <option>ghjghjghjgh</option>
+                                            <option>ghjghjgh</option>
+                                        </select>
+                                        <label>Numele Prenumele * </label>
+                                        <input type="text" >
+                                        <label>Email*</label>
+                                        <input type="text" >    
+                                        <label>Cod de verificare*</label>
+                                        <input class="code" type="text">
+                                        <img src="<?= res('assets/img/code.png'); ?>">
+                                        <input type="submit" value="trimite"/>
+                                    </div>
+                                </form>-->
+                <a href="javascript:;">
                     <img src="<?= res('assets/img/chat_man.png'); ?>" class="mn">
                     <span class="chat_dot"></span>
                     <span class="green">Chat-</span><span class="violet">online</span>
                     <hr>
                     <p class="center">Vorbeste direct cu un reprezentant al primariei</p>
-                    <div class="cont">
-                        <label>Functionar *</label>
-                        <select>
-                            <option>ghjghjghj</option>
-                            <option>ghjghjghjgh</option>
-                            <option>ghjghjghjgh</option>
-                            <option>ghjghjgh</option>
-                        </select>
-                        <label>Numele Prenumele * </label>
-                        <input type="text" >
-                        <label>Email*</label>
-                        <input type="text" >    
-                        <label>Cod de verificare*</label>
-                        <input class="code" type="text">
-                        <img src="<?= res('assets/img/code.png'); ?>">
-                        <input type="submit" value="trimite"/>
-                    </div>
-                </form>
+                </a>
+
             </div>
         </div>
         <div class='left contact_r'>
