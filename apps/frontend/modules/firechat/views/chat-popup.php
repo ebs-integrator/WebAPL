@@ -24,41 +24,47 @@
         <hr>
     </div>
     <div class="content">
-
         <?php if ($session_exist) { ?>
             <?= Core\APL\Template::moduleView('firechat', 'views.chat-iframe'); ?>
         <?php } else { ?>
-            <div class="form green">
-                <form class="firechat-register" action="" method="">
-                    <div class="contenta">
-                        <label>Functionar *</label>
-                        <select name="person_id">
-                            <?php foreach ($persons as $person) { ?>
-                                <option value="<?= $person->id; ?>"><?= $person->first_name; ?> <?= $person->last_name; ?></option>
-                            <?php } ?>
-                        </select>
-                        <label>Numele Prenumele * </label>
-                        <input name="name" type="text" >
-                        <label>Email*</label>
-                        <input name="email" type="text" >    
-                        <input type="submit" value="trimite">
-                        <div class="clearfix"></div>
-                    </div>
-                </form>
-            </div>
-        <?php } ?>
+            <?=
+            Core\APL\Template::moduleView('firechat', 'views.chat-form', array(
+                'persons' => $persons
+            ));
+            ?>
+<?php } ?>
     </div>
 </div>
 
 <script>
     $(document).ready(function($) {
         //$("#firechat")
+
+        var current_person = <?=isset($chat) && $chat->active ? $chat->person_id : 0;?>;
+
+        var startChat = function(id) {
+            $(".firechat-photo, .firechat-name").hide();
+            jQuery.post('<?= url('firechat/getform'); ?>', {id: id}, function(data) {
+                $("#firechat .content").html(data);
+                $("#firechat").stop().slideToggle(500).animate({height: 630}, 500);
+            });
+        }
+
+        $("body").on('click', '.firechat-start-with', function() {
+            var person = $(this).data('personid');
+            if (current_person != person) {
+                startChat(person);
+            }
+        });
+
         $("body").on("click", ".firechat-start", function() {
-            $("#firechat").stop().slideToggle(500).animate({height: 630}, 500);
+            startChat(0);
         });
 
         $("body").on("click", ".firechat-close", function() {
+            current_person = 0;
             $("#firechat").slideToggle(500);
+            
             jQuery.post('<?= url('firechat/close'); ?>', {});
         });
 
@@ -84,6 +90,8 @@
                     $(".firechat-photo img").attr('src', data.person.photo);
 
                     $(".firechat-photo, .firechat-name").show();
+                    
+                    current_person = data.person.id;
                 } else {
                     alert('Chat error!');
                     //window.location.reload();

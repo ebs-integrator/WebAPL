@@ -15,6 +15,8 @@ class HomeController extends BaseController {
     protected $layout = 'layout.main';
 
     public function postLangs() {
+        User::onlyHas('lang-view');
+        
         $jqgrid = new jQgrid('apl_lang');
         echo $jqgrid->populate(function ($start, $limit) {
             return DB::table('apl_lang')->get();
@@ -23,6 +25,8 @@ class HomeController extends BaseController {
     }
 
     public function postEditlang() {
+        User::onlyHas('lang-view');
+        
         $oper = Input::get('oper');
         $id = Input::get('id');
 
@@ -50,6 +54,8 @@ class HomeController extends BaseController {
     }
 
     public function getLanguages() {
+        User::onlyHas('lang-view');
+        
         $this->layout->content = View::make('sections.language.list');
     }
 

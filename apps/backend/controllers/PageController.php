@@ -36,6 +36,8 @@ class PageController extends BaseController {
      * @param int $page_id
      */
     public function getIndex($page_id = 0) {
+        User::onlyHas("page-view");
+        
         if ($page_id) {
             $this->data['page'] = Post::findTax($page_id, $this->taxonomy->id);
             if ($this->data['page']) {
@@ -62,6 +64,8 @@ class PageController extends BaseController {
      * @return Redirect
      */
     public function postCreate() {
+        User::onlyHas("page-create");
+        
         $parent = Input::get('parent');
 
         $page = new Post;
@@ -90,6 +94,8 @@ class PageController extends BaseController {
      * @return type
      */
     public function postSave() {
+        User::onlyHas("page-edit");
+        
         $page_id = Input::get('id');
         $page = Input::get('page');
         $page_lang = Input::get('lang');
@@ -151,6 +157,8 @@ class PageController extends BaseController {
     }
 
     public function postSavefilesdata() {
+        User::onlyHas("page-edit");
+        
         $page_id = Input::get('id');
         $post = Post::find($page_id);
         $post->show_files = Input::has('data.show_files') ? 1 : 0;
@@ -186,7 +194,8 @@ class PageController extends BaseController {
     }
 
     public function getMove($page_id, $up) {
-
+        User::onlyHas("page-order");
+        
         $page = Post::find($page_id);
 
         if ($page) {
@@ -212,6 +221,7 @@ class PageController extends BaseController {
     }
 
     public function getDelete($id) {
+        User::onlyHas("page-delete");
         
     }
     

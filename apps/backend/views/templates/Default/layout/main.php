@@ -116,9 +116,15 @@
 
                             <!-- .nav -->
                             <ul class="nav navbar-nav">
+                                <?php if (User::has("modules-view")) { ?>
                                 <li> <a href="<?= url('module'); ?>">Extensions</a></li>
+                                <?php } ?>
+                                
                                 <li> <a href="<?= url('user'); ?>">Users</a></li>
-                                <li> <a href="<?= url('home/languages'); ?>">Languages</a></li>
+
+                                <?php if (User::has('lang-view')) { ?>
+                                    <li> <a href="<?= url('home/languages'); ?>">Languages</a></li>
+                                <?php } ?>
                                 <?php if (User::has('log-view')) { ?>
                                     <li> <a href="<?= url('log'); ?>">Log</a></li>
                                 <?php } ?> 
@@ -144,8 +150,12 @@
                 <ul id="menu" class="bg-blue dker">
                     <li class="nav-header">Menu</li>
                     <li class="nav-divider"></li>
-                    <li><a href="<?= url('page'); ?>"><i class="fa"></i><span class="link-title">&nbsp;<?= Language::getVar('pages'); ?></span></a></li>
-                    <li><a href="<?= url('feed'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Feeds</span></a></li>
+                    <?php if (User::has("page-view")) { ?>
+                        <li><a href="<?= url('page'); ?>"><i class="fa"></i><span class="link-title">&nbsp;<?= Language::getVar('pages'); ?></span></a></li>
+                    <?php } ?>
+                    <?php if (User::has('feed-view')) { ?>
+                        <li><a href="<?= url('feed'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Feeds</span></a></li>
+                    <?php } ?>
                     <li><a href="<?= url('var'); ?>"><i class="fa"></i><span class="link-title">&nbsp;Var</span></a></li>
                     <?= Actions::call('construct_left_menu'); ?>
                 </ul><!-- /#menu -->

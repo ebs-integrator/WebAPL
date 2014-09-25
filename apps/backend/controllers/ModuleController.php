@@ -15,12 +15,15 @@ class ModuleController extends BaseController {
     protected $layout = 'layout.main';
 
     public function getIndex() {
+        User::onlyHas("modules-view");
+        
         $this->data['modules'] = Module::all();
 
         $this->layout->content = View::make('sections.module.list')->with($this->data);
     }
 
     public function postInstall() {
+        User::onlyHas("modules-view");
 
         if (isset($_FILES['module'])) {
             $zip = new ZipArchive;
@@ -64,6 +67,8 @@ class ModuleController extends BaseController {
     }
 
     public function getEnable($id) {
+        User::onlyHas("modules-view");
+        
         Module::changeState($id, 1);
 
         Log::info("Enable module #{$id}");
@@ -72,6 +77,8 @@ class ModuleController extends BaseController {
     }
 
     public function getDisable($id) {
+        User::onlyHas("modules-view");
+        
         Module::changeState($id, 0);
 
         Log::info("Disable module #{$id}");
@@ -80,6 +87,8 @@ class ModuleController extends BaseController {
     }
 
     public function getZip() {
+        User::onlyHas("modules-view");
+        
         global $_SERVER;
         $zip = new ZipArchive;
 
