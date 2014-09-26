@@ -16,8 +16,8 @@
 
     <div class="tab-pane active" id="posts">
         <div class="c10"></div>
-        <?= View::make('sections.feed.block-posts')->with('feed',$feed); ?>
-        <div class="c10"></div>
         <a href="<?=url('feed/newpost/'.$feed->id);?>" class="btn btn-success">Add new post</a>
+        <div class="c10"></div>
+        <?= View::make('sections.feed.block-posts')->with('feed',$feed); ?>
     </div>
 </div>

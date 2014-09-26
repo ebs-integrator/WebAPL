@@ -11,9 +11,9 @@
             {name: 'title', index: 'title', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
             {name: 'date', index: 'date', resizable: true, align: "left", sorttype: "text", editable: true, edittype: "text"},
         ],
-        rowNum: 15,
+        rowNum: 30,
         multiselect: false,
-        rowList: [15, 30, 45],
+        rowList: [30, 50, 100],
         pager: '',
         altRows: true,
         //sortname: 'id',
@@ -23,7 +23,7 @@
         width: $('#content').width() - 70,
         caption: "",
         loadComplete: function() {
-            $("#add_list, #edit_list, #del_list").hide();
+            $("#pager-feedpost_left table").hide();
         },
         onSelectRow: function(rowid) {
             window.location.href = '<?= url('feed/editpost') ?>/'+rowid;
@@ -31,4 +31,4 @@
     }
 </script>
 
-<?= View::make('sections/jqgrid/form')->with('options', 'post_options'); ?>
+<?= View::make('sections/jqgrid/form')->with('options', 'post_options')->with('id', 'feedpost'); ?>

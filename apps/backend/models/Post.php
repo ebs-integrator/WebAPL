@@ -45,5 +45,19 @@ class Post extends Eloquent {
         }
         return $query;
     }
+    
+    public static function addLang($lang_id) {
+        $pages = Post::all();
+        foreach ($pages as $item) {
+            $page_lang = new PostLang;
+            $page_lang->lang_id = $lang_id;
+            $page_lang->post_id = $item->id;
+            $page_lang->save();
+        }
+    }
+    
+    public static function removeLang($lang_id) {
+        PostLang::where('lang_id', $lang_id)->delete();
+    }
 
 }

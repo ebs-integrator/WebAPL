@@ -9,13 +9,13 @@
 
 <div class="tab-content">
     <div class="tab-pane active" id="posts">
- 
+        <div class="c20"></div>
         <?= View::make('sections/feed/allposts'); ?>
-        
     </div>
     <div class="tab-pane" id="feeds">
-
-
+        <div class="c20"></div>
+        <a href="<?= url('feed/create'); ?>" class="btn btn-success">Create new feed</a>
+        <div class="c20"></div>
         <table class="table table-bordered">
             <tr>
                 <th>#</th>
@@ -40,10 +40,5 @@
                 </tr>
             <?php } ?>
         </table>
-
-        <div class="c20"></div>
-
-        <a href="<?= url('feed/create'); ?>" class="btn btn-success">Create new feed</a>
-
     </div>
 </div>

@@ -97,7 +97,7 @@ class UserController extends BaseController {
         return [];
     }
     
-    public function postSavepassword() {
+    public function postChangepassword() {
         User::onlyHas('user-chpwd');
         
         $password = trim(Input::get('password'));
@@ -108,6 +108,8 @@ class UserController extends BaseController {
             $user->save();
             
         }
+        
+        return [];
     }
 
 }
