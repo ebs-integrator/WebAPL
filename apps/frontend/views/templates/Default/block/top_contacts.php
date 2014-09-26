@@ -69,7 +69,7 @@
         </div>
         <?php
         foreach (Core\APL\Language::getList() as $lang) {
-            if (Core\APL\Language::ext() != $lang->ext) {
+            if (Core\APL\Language::ext() != $lang->ext && $lang->enabled == 1) {
                 ?>
                 <p><a href="<?= url('language/' . $lang->ext . '/' . (isset($active_page_id) ? $active_page_id : '')); ?>"><?= $lang->name; ?></a></p>
                 <?php

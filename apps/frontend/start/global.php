@@ -61,7 +61,8 @@ App::error(function(Exception $exception, $code) {
         $page = PostProperty::postWithProperty('error_404');
         if ($page) {
             $uri = Post::getFullURI($page->id, false);
-            return App::make('PageController')->route($uri);
+            $contents = App::make('PageController')->route($uri);
+            return Response::make($contents, $code);
         }
     }
     

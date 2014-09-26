@@ -25,6 +25,7 @@ class Newsletter extends \Core\APL\ExtensionController {
         Actions::get('newsletter/send', array('before' => 'auth', array($this, 'send_message')));
         
         Actions::register('construct_left_menu', array($this, 'left_menu_item'));
+        Actions::register('feed_post_bottom', array($this, 'sendemails'));
 
         $this->layout = Template::mainLayout();
     }
@@ -74,6 +75,11 @@ class Newsletter extends \Core\APL\ExtensionController {
         $this->layout->content = Template::moduleView($this->module_name, 'views.list');
 
         return $this->layout;
+    }
+    
+    public function sendemails($post) {
+        
+        return Template::moduleView($this->module_name, 'views.send_email');
     }
 
 }

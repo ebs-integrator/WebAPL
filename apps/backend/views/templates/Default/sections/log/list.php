@@ -15,7 +15,7 @@
             <td><?= Str::limit($log->message, 100); ?></td>
             <td>
                 <?php if ($log->user_id) { ?>
-                    #<?= $log->user_id; ?>
+                    <b><?= $log->username; ?></b>
                 <?php } else { ?>
                     <i>Anonim</i>
                 <?php } ?>

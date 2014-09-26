@@ -50,3 +50,7 @@
         </tr>
     <?php } ?>
 </table>
+
+<?php
+    Core\APL\Actions::call('feed_post_bottom', isset($post) ? $post : []);
+?>

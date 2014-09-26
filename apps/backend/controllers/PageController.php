@@ -257,4 +257,27 @@ class PageController extends BaseController {
         return [];
     }
     
+    public function getExport() {
+        
+        $buffer = "";
+        
+        $pages = Post::where('taxonomy_id', 1)->get();
+        
+        foreach ($pages as $page) {
+            $langs = PostLang::where('post_id', $page->id)->get();
+            foreach ($langs as $plang) {
+                $langname = Core\APL\Language::getItem($plang->lang_id)->name;
+                $buffer .= "{$plang->id},{$langname},\"{$plang->title}\"\n";
+            }
+            $buffer .= "\n";
+        }
+        
+        header('Content-Encoding: UTF-8');
+        header('Content-type: text/csv; charset=UTF-8');
+        header('Content-Disposition: attachment; filename=Customers_Export.csv');
+        echo "\xEF\xBB\xBF"; // UTF-8 BOM
+
+        return $buffer;
+    }
+    
 }

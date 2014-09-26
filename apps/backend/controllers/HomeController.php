@@ -41,9 +41,15 @@ class HomeController extends BaseController {
 
         if ($oper == 'add') {
             \Core\APL\Actions::call('language_created', $result);
+            
+            Post::addLang($result);
+            VarLangModel::addLang($result);
         }
         if ($oper == 'del') {
             \Core\APL\Actions::call('language_deleted', $id);
+            
+            Post::removeLang($id);
+            VarLangModel::removeLang($id);
         }
 
         Log::info("Lang operation {$oper} #{$id}");

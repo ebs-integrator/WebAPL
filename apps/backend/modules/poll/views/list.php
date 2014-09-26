@@ -16,9 +16,9 @@
                     return value === 'Enabled' ? 1 : 0;
                 }}
         ],
-        rowNum: 15,
+        rowNum: 30,
         multiselect: true,
-        rowList: [15, 30, 45],
+        rowList: [30, 50, 100],
         pager: '',
         altRows: true,
         sortname: 'id',

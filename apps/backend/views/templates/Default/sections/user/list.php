@@ -11,9 +11,9 @@
             {name: 'username', index: 'username', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
             {name: 'email', index: 'email', resizable: true, align: "left", sorttype: "text", editable: true, edittype: "text"}
         ],
-        rowNum: 15,
+        rowNum: 30,
         multiselect: true,
-        rowList: [15, 30, 45],
+        rowList: [30, 50, 100],
         pager: '',
         altRows: true,
         sortname: 'id',

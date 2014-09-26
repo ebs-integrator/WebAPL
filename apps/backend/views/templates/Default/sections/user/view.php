@@ -21,7 +21,11 @@
     </form>
 <?php } ?>
 
-<?php if (User::has('user-chpwd')) { ?>
+<?php
+$uroles = User::extractRoles($user->id);
+?>
+ 
+<?php if (User::has('user-chpwd') && (!User::has('user-ptpsw', $uroles))) { ?>
     <form action="<?= url('user/changepassword'); ?>" method="post" class="ajax-auto-submit">
         <h4>Change password:</h4>
 
@@ -38,15 +42,13 @@
     </form>
 <?php } ?>
 
-<?php if (User::has('user-roles')) { ?>
+<?php if (User::has('user-roles') && !User::has('user-ptroles', $uroles)) { ?>
     <form action="<?= url('user/saveroles'); ?>" method="post" class="ajax-auto-submit">
 
         <h4>This user can:</h4>
 
         <input type="hidden" name="id" value="<?= $user->id; ?>" />
-        <?php
-        $uroles = User::extractRoles($user->id);
-        ?>
+
         <select name="roles[]" class="chzn-select" multiple>
             <?php foreach ($roles as $role) { ?>
                 <option value="<?= $role->id; ?>" <?= User::has($role->key, $uroles) ? 'selected' : ''; ?>><?= $role->name; ?></option>

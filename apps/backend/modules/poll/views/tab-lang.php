@@ -25,9 +25,9 @@
                 {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}, width: 10},
                 {name: 'answer', index: 'answer', height: 50, resizable: true, align: "left", editable: true, edittype: "text"}
             ],
-            rowNum: 15,
+            rowNum: 30,
             multiselect: true,
-            rowList: [15, 30, 45],
+            rowList: [30, 50, 100],
             pager: '',
             altRows: true,
             sortname: 'id',

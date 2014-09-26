@@ -95,13 +95,13 @@ class PageController extends BaseController {
                         return $this->loadPage();
                     }
                 } else {
-                    throw new Exception("Query '{$query}' is not valid");
+                    throw new Exception("Query '{$query}' is not valid", 404);
                 }
             } else {
-                throw new Exception("Page with uri '{$uri}' not found");
+                throw new Exception("Page with uri '{$uri}' not found", 404);
             }
         } else {
-            throw new Exception("No valid page URI");
+            throw new Exception("No valid page URI", 404);
         }
     }
 
