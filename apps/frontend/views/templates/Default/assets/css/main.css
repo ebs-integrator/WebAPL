@@ -432,6 +432,7 @@ button.chat_button{
 }
 header button.chat span.g_dot,button.chat_button span.g_dot,button.vice_button span.g_dot{
     display:inline-block;
+    display: -moz-inline-box;
     width:18px;
     height:18px;
     border-radius: 50%;
@@ -764,6 +765,7 @@ header .contact .cont .cont_form input[type=submit]{
     padding-bottom: 59px;
     position: relative;
     overflow: hidden;
+    max-height:228px;
 }
 .menu img.backg{
     position:absolute;
@@ -775,11 +777,12 @@ header .contact .cont .cont_form input[type=submit]{
 }
 .menu .box{
     width:260px;
-    min-height:225px;
+    height:225px;
     background-color:#fff;
     margin-top:62px;
     margin-right:75px;
     display: inline-block;
+    display: -moz-inline-box;
 }
 .menu .box:last-child{
     margin-right:0px;
@@ -861,7 +864,8 @@ section > .wrap {
     height: 229px;
     border: 2px solid #f7f7f7;
     border-left: 3px solid #cfd7a6;
-    display: inline-block;
+    display: inline-block;        
+    display: -moz-inline-box;
     background-color: #fcfcfc;
 
 }
@@ -884,7 +888,8 @@ article.atn .more{
     margin-top:15px;
     margin-bottom: 20px;
 }
-.right > article.atn .data p{
+.right > article.atn .data p{    
+    display: -moz-inline-box;
     display: inline-block;
     background: #673167;
     color:#fff;
@@ -937,6 +942,7 @@ section > .wrap > .left{
     height:auto;
     border:2px solid #f7f7f7;
     display: inline-block;
+    display: -moz-inline-box;
     margin-top:25px;
     background-color:#fcfcfc;
     border-left:0px;
@@ -1196,6 +1202,7 @@ footer .socials a span{
     width:20px;
     height:19px;
     display:inline-block;
+    display: -moz-inline-box;
     text-align: center;
     margin-right:10px;
 }
@@ -1697,6 +1704,7 @@ section > .wrap >  .left.contact_r{
 .contact_r .prp{
     width:auto;
     display:inline-block;
+    display: -moz-inline-box;
     padding:0px 60px 0px 19px;
     margin:30px 0;
 }
@@ -1911,7 +1919,8 @@ section > .wrap >  .left.contact_r{
     margin-right:8px;
 }
 .form .content .radio_b label{
-    display:inline-block;        
+    display:inline-block;   
+    display: -moz-inline-box;     
     margin:0 20px 20px -5px;
 }
 .contact.right.form .right{
@@ -1989,7 +1998,7 @@ ul.social p{
     color: #fff;
     padding:17px 0px 17px 65px;
     border-bottom:1px solid #7c4d7c;
-    font: 16px "open_sansregular";
+    font: 20px "open_sansregular";
 }
 .a_box{
     width:100%;
@@ -2155,6 +2164,7 @@ ul.a_n li a p{
     width:20px;
     border-right:1px solid #d0d0d0;
     display: inline-block;
+    display: -moz-inline-box;
     font:12px 'open_sanssemibold';
     text-align: center;
     color:#74b45a;
@@ -2289,6 +2299,7 @@ section  .map_cont .h_list > li{
     padding-left:25px;        
     margin-bottom:35px;
     display: inline-block;
+    display: -moz-inline-box;
     width:100%;
 }
 
@@ -2346,6 +2357,7 @@ ul.faq .subt{
 .compl_list li a .compl_title{
     font: 18px 'open_sansbold';
     display:inline-block;
+    display: -moz-inline-box;
     color:#7c4d7c;
     margin-left:15px;
     margin-bottom:0px;
@@ -2625,6 +2637,7 @@ table.atz tr td ol{
 }
 section > .wrap > .left > ul > li > span{
     display:inline-block;
+    display: -moz-inline-box;
     padding-right:40px;
     font:16px 'open_sansbold';
     color:#4c4c4c;
@@ -2672,6 +2685,7 @@ ul.mda > li > a,ul.atz  > li a,.dcr_dwnl{
     width:19px;
     height:19px;
     display:inline-block;
+    display: -moz-inline-box;
     float:right;
     margin-top:10px;
 }
@@ -3043,10 +3057,12 @@ ul.dcr  > li .dcr_box ul li{
 ul.dcr  > li .dcr_box .ul_title span{
     width:61%; 
     display:inline-block;
+    display: -moz-inline-box;
 }
 ul.dcr  > li .dcr_box ul li span:first-child{
     width:59%;
     display: inline-block;
+    display: -moz-inline-box;
 }
 .city_dt{
     margin-bottom:25px;
@@ -3104,6 +3120,7 @@ ul.dcr  > li .dcr_box:after{
     font:20px 'open_sanssemibold_italic';
     color:#4c4c4c;
     display: inline-block;
+    display: -moz-inline-box;
     width:309px;
     margin-bottom:65px;
 }
@@ -3399,6 +3416,7 @@ div.fb-like.fb_iframe_widget{
 }
 .bl_fr{
     display:inline-block;
+    display: -moz-inline-box;
 }
 table.reg_tb tbody tr td:first-child{
     min-width:240px;
@@ -3848,6 +3866,7 @@ table.plcu .word,table.plcu .doc,table.plcu .pdf,table.plcu .docx,table.plcu .xl
     color:#4c4c4c;
     font:17px 'open_sanssemibold';
     display:inline-block;
+    display: -moz-inline-box;
     height:33px;
     line-height:33px;
     margin-top:0px;
@@ -4292,6 +4311,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
 }
 .video_d span{
     display:inline-block;
+    display: -moz-inline-box;
     padding:0 7px;
     height:21px;
     line-height:21px;
@@ -4584,6 +4604,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         width: 200px;
         min-height: 185px;
         margin-right: 40px;
+        max-height:185px;
     }
     .menu .box .menu_img{
         height: 120px;
@@ -4859,8 +4880,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     .menu .box{
         width: 160px;
-        min-height: 160px;
         margin-right: 25px;
+        height: 160px;
+        
     }
     .menu .box .menu_img{
         height: 100px;
@@ -5421,6 +5443,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         margin-left: -21px;
         width: 17px;
         display: inline-block;
+    display: -moz-inline-box;
     }
     .bgr .info > ul > li .left,.bgr .info > ul > li .right{
         float:none;
@@ -5436,6 +5459,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .bgr .info > ul > li .left{
         min-width:60px;
         display: inline-block;
+    display: -moz-inline-box;
         padding-bottom: 0;
     }
     ul.dcr.smpl > li a.dcr_dwnl{

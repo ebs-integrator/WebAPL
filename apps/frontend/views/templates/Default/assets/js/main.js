@@ -29,7 +29,7 @@ $(document).ready(function() {
 
     $('section').css('min-height', ($(window).height() - 326));
     $('.l_a.m_t_n').css('min-height', ($(window).height() - 413));
-    $('.menu_content').height($(window).height() - 83);
+    $('.menu_content').height($(window).height() - 83).css('min-height','430px');
 
     $('.head_list,.overlay3').click(function() {
         $('header .menu_content').toggleClass('hidden');
