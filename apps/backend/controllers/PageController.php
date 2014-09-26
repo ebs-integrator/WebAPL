@@ -223,6 +223,38 @@ class PageController extends BaseController {
     public function getDelete($id) {
         User::onlyHas("page-delete");
         
+        $trash_folder = 270;
+        
+        if ($id != $trash_folder) {
+            $page = Post::find($id);
+            $page->parent = $trash_folder;
+            $page->save();
+        }
+        
+        return Redirect::to($_SERVER['HTTP_REFERER']);
+    }
+    
+    public function getClear() {
+        
+        return '---';
+        
+        $parent = 270;
+        
+        $pages = Post::where('parent', $parent)->get();
+        
+        echo "<pre>";
+        
+        foreach ($pages as $page) {
+            $pagelang = PostLang::where('post_id', $page->id)->get();
+            echo "#{$page->id}\n";
+            foreach ($pagelang as $pagel) {
+                echo "   #{$pagel->id}\n";
+                $pagel->delete();
+            }
+            $page->delete();
+        }
+        
+        return [];
     }
     
 }

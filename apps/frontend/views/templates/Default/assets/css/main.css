@@ -3322,7 +3322,7 @@ div.fb-like.fb_iframe_widget{
 }
 .dop{
     width:412px;
-    height:535px !important;
+    /*height:535px !important;*/
     -webkit-box-shadow: 0px 1px 40px 0px rgba(210, 195, 210, 0.5);
     -moz-box-shadow:    0px 1px 40px 0px rgba(210, 195, 210, 0.5);
     box-shadow:         0px 1px 40px 0px rgba(210, 195, 210, 0.5);

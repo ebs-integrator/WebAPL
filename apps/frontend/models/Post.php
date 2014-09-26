@@ -24,8 +24,8 @@ class Post extends Eloquent {
         return $list;
     }
 
-    public static function treePosts($parent = 0) {
-        $list = Post::prepareQuery()->where(Post::getField('parent'), $parent)->orderBy('ord_num', 'asc')->get();
+    public static function treePosts($parent = 0, $begin_where = array()) {
+        $list = Post::prepareQuery()->where(Post::getField('parent'), $parent)->where($begin_where)->orderBy('ord_num', 'asc')->get();
 
         foreach ($list as &$item) {
             $item['list'] = Post::treePosts($item->id);
@@ -92,7 +92,7 @@ class Post extends Eloquent {
     public static function findHomePosts($modView) {
         $current_tax = static::$taxonomy;
         static::$taxonomy = 2;
-        $post = Post::prepareQuery(1)->where('view_mod', $modView)->first();
+        $post = Post::prepareQuery(1)->where('view_mod', $modView)->take(2)->first();
 
         if ($post) {
             $list = Post::prepareQuery()

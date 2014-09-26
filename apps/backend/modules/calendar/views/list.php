@@ -15,7 +15,7 @@
                 loadonce: false,
                 colNames: ['ID', 'EventDate', 'Title', 'Period', 'Enabled'],
                 colModel: [
-                    {name: 'id', index: 'id', editable: false, editoptions: {readonly: true, size: 10}},
+                    {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
                     {name: 'event_date', index: 'event_date', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
                     {name: 'title', index: 'title', resizable: true, align: "left", sorttype: "text", editable: false, edittype: "text"},
                     {name: 'period', index: 'period', resizable: true, align: "left", sorttype: "text", editable: false, edittype: "text"},
@@ -89,7 +89,7 @@
                 loadonce: false,
                 colNames: ['ID', 'Name'],
                 colModel: [
-                    {name: 'id', index: 'id', editable: false, editoptions: {readonly: true, size: 10}},
+                    {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
                     {name: 'name', index: 'name', height: 50, resizable: true, align: "left", editable: true, edittype: "text"}
                 ],
                 rowNum: 15,

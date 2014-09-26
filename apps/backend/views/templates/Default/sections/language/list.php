@@ -15,7 +15,7 @@
         loadonce: false,
         colNames: ['ID', 'Name', 'Ext', 'Enabled'],
         colModel: [
-            {name: 'id', index: 'id', editable: false, editoptions: {readonly: true, size: 10}},
+            {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
             {name: 'name', index: 'name', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
             {name: 'ext', index: 'ext', resizable: true, align: "left", sorttype: "text", editable: true, edittype: "text"},
             {name: 'enabled', index: 'enabled', resizable: true, align: "left", sorttype: "text", editable: true, edittype:'checkbox'},

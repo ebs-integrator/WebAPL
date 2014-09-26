@@ -6,8 +6,8 @@
         autoencode: true,
         loadonce: false,
         colNames: ['ID', 'Consilier', 'Nume', 'Telefon', 'Email', 'Data'],
-        colModel: [
-            {name: 'id', index: 'id', editable: false, editoptions: {readonly: true, size: 10}},
+        colModel: [ 
+            {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
             {name: 'full_name', index: 'full_name', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
             {name: 'name', index: 'name', resizable: true, align: "left", sorttype: "text", editable: false, edittype: "text"},
             {name: 'phone', index: 'last_name', resizable: true, align: "left", sorttype: "text", editable: false, edittype: "text"},

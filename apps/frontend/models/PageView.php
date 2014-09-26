@@ -395,9 +395,18 @@ class PageView {
 
     public static function mapPage($data) {
 
-        $wdata['tree'] = Post::treePosts(0);
+        $wdata['tree'] = Post::treePosts(0, array(
+                'general_node' => 1
+            ));
 
         $data['page']->text .= View::make('sections.pages.modview.map', $wdata);
+
+        return static::fullView($data);
+    }
+    
+    public static function notFound($data) {
+        $data['page']->title = '';
+        $data['page']->text = View::make('sections.pages.modview.error404');
 
         return static::fullView($data);
     }

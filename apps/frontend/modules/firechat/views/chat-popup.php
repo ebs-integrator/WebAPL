@@ -46,7 +46,7 @@
             $(".firechat-photo, .firechat-name").hide();
             jQuery.post('<?= url('firechat/getform'); ?>', {id: id}, function(data) {
                 $("#firechat .content").html(data).show();
-                $("#firechat").stop().slideToggle(500).animate({height: 630}, 500);
+                $("#firechat").stop().slideToggle(500).animate({height: 535}, 500);
             });
         }
 
@@ -76,7 +76,7 @@
 
         $("body").on("click", ".firechat-show", function() {
             $("#firechat .content").slideToggle(500);
-            $("#firechat").animate({height: 630}, 500);
+            $("#firechat").animate({height: 535}, 500);
             $(this).removeClass("firechat-show").addClass("firechat-hide");
         });
 
