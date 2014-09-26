@@ -28,6 +28,8 @@ class Firechat extends \Core\APL\ExtensionController {
         Actions::post('firechat/getform', array($this, 'getform'));
 
         Actions::register('bottom_contructor', array($this, 'popup'));
+        Actions::register('logo_contructor', array($this, 'topbutton'));
+        
     }
 
     public function display() {
@@ -96,6 +98,17 @@ class Firechat extends \Core\APL\ExtensionController {
         }
 
         echo Template::moduleView($this->module_name, 'views.chat-popup', $data);
+    }
+    
+    public function topbutton() {
+        
+        $personAcc = PersonModel::where(PersonModel::getField('for_audience'), 1)->count();
+        
+        $data = array(
+            'online' => $personAcc > 0
+        );
+        
+        echo Template::moduleView($this->module_name, 'views.chat-button', $data);
     }
 
     public function register() {

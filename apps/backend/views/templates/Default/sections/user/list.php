@@ -1,5 +1,5 @@
 <script>
-    var users_options = {
+    var users_options = { 
         url: '<?= url('user/lists') ?>',
         datatype: "json",
         mtype: 'POST',
@@ -7,7 +7,7 @@
         loadonce: false,
         colNames: ['ID', 'Username', 'Email'],
         colModel: [
-            {name: 'id', index: 'id', editable: false, editoptions: {readonly: true, size: 10}},
+            {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
             {name: 'username', index: 'username', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
             {name: 'email', index: 'email', resizable: true, align: "left", sorttype: "text", editable: true, edittype: "text"}
         ],

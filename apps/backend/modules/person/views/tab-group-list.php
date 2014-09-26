@@ -9,8 +9,8 @@
             'ID',
             'Name',
         ],
-        colModel: [
-            {name: 'id', index: 'id', editable: false, editoptions: {readonly: true, size: 10}},
+        colModel: [ 
+            {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
             {name: 'name', index: 'name', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
         ],
         rowNum: 15,

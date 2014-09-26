@@ -7,7 +7,7 @@
         loadonce: false,
         colNames: ['ID', 'Post', 'Name', 'CV', 'Date'],
         colModel: [
-            {name: 'id', index: 'id', editable: false, editoptions: {readonly: true, size: 10}},
+            {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
             {name: 'title', index: 'title', height: 50, resizable: true, align: "left", editable: false, edittype: "text"},
             {name: 'name', index: 'name', resizable: true, align: "left", sorttype: "text", editable: false, edittype: "text"},
             {name: 'cv_path', index: 'cv_path', resizable: true, align: "left", sorttype: "text", editable: false, edittype: "select", editoptions: {value: '0:Disabled;1:Enabled'}, formatter: function(value) {

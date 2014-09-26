@@ -6,8 +6,8 @@
         autoencode: true,
         loadonce: false,
         colNames: ['ID', 'Title', 'Date Created', 'Enabled'],
-        colModel: [
-            {name: 'id', index: 'id', editable: false, editoptions: {readonly: true, size: 10}},
+        colModel: [ 
+            {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
             {name: 'title', index: 'title', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
             {name: 'date_created', index: 'date_created', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
             {name: 'enabled', index: 'enabled', resizable: true, align: "left", sorttype: "text", editable: true, edittype: "select", editoptions: {value: '0:Disabled;1:Enabled'}, formatter: function(value) {
