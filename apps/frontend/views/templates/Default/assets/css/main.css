@@ -1373,7 +1373,8 @@ section .dirs_menu a:last-child{
 header .top_menu{
     float:left;
     margin-left:40px;
-    padding-top: 21px;
+    padding-top: 3px;
+    max-width: 175px;
 }
 .top_menu a.active .left.title{
     color:#7c4d7c;
@@ -1387,7 +1388,7 @@ header .top_menu{
     vertical-align: middle;
     height: 46px;
     float: none;
-    min-width: 100px;
+    min-width: 125px;
 }
 .cont_form .adv{
     text-align: center;
@@ -1402,7 +1403,7 @@ header .top_menu{
 
 }
 .top_menu .left.title.third{
-    max-width:100px;
+    max-width:210px;
 }
 .top_menu .left.title.second{
     line-height:40px;
@@ -1681,6 +1682,13 @@ section > .wrap >  .left.contact_r{
     color:#484848;
     float: left;
     margin-top: -2px;
+}
+.vice .home_chat{
+    margin-left:0px;
+}
+.top_menu a .left{
+    float: none;
+    text-align: center;
 }
 .contact_l .date_contact li p:last-child{
     font:17px 'open_sanssemibold';
@@ -1996,31 +2004,16 @@ section > .wrap >  .left.contact_r{
 ul.social p{
     background: url('../img/g_phone.png') no-repeat 36px center;
     color: #fff;
-    padding:17px 0px 17px 65px;
+    padding:17px 0px 17px 65px !important;
     border-bottom:1px solid #7c4d7c;
-    font: 20px "open_sansregular";
+    font: 20px "open_sansregular" !important;
 }
 .a_box{
     width:100%;
     border:2px solid #f7f7f7;
-    border-left:0;
     padding:25px 30px;
     position: relative;
     margin-bottom: 55px;
-}
-.a_box:before{
-    content:'';
-    position:absolute;
-    display:block;
-    left:-1px;
-    top:-2px;
-    bottom:-1px;
-}
-.a_box.v_g:before{
-    border-left:3px solid #b6c57e;
-}
-.a_box.g_g:before{
-    border-left:3px solid #cdcdcd;
 }
 .a_box .title{
     font:24px 'open_sansbold';
@@ -4371,7 +4364,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     header .top_menu{
         margin-left:15px;
-        max-width:150px;
+        max-width: 175px;
     }
     header .contact .currency span.s_c{
         margin-right:10px;
@@ -4491,11 +4484,17 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1269px){
-    .top_menu .left img,header .contact .contact_us{
+    .top_menu .left img,header .contact .contact_us,.left.title span{
         display:none;
+    }
+    header .top_menu{
+        padding-top:21px;
     }
     header .contact .tel{
         margin-right:10px;
+    }
+    .top_menu .left.title{
+        min-width:100px;
     }
     section > .wrap > .left{
         width: 65%;
@@ -4747,7 +4746,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px){
-    header .contact .contact_us,footer .right,.top_menu .left img,header .contact .tel{
+    header .contact .contact_us,footer .right,.top_menu .left img,header .contact .tel,.left.title span{
         display:none;
     }
     header .logo{
@@ -4770,6 +4769,12 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     section > .wrap{
         padding: 0px 10px;
         max-width:680px;
+    }
+    header .top_menu{
+        padding-top:21px;
+    }
+    .top_menu .left.title{
+        min-width:100px;
     }
     section > .wrap > .left{
         width:100%;
@@ -4876,13 +4881,13 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         margin: 60px 10px;
     }
     div .logo{
-        margin-top:20px;
+        margin-top:10px;
     }
     .menu .box{
         width: 160px;
         margin-right: 25px;
         height: 160px;
-        
+
     }
     .menu .box .menu_img{
         height: 100px;
@@ -4969,7 +4974,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     p{
         font-size:16px;
     }
-    header .left .top_menu,header .contact.right p.tel,header .cont .contact_us{
+    header .left .top_menu,header .contact.right p.tel,header .cont .contact_us,.home_menu{
         display:none;
     }
 
@@ -5443,7 +5448,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         margin-left: -21px;
         width: 17px;
         display: inline-block;
-    display: -moz-inline-box;
+        display: -moz-inline-box;
     }
     .bgr .info > ul > li .left,.bgr .info > ul > li .right{
         float:none;
@@ -5459,7 +5464,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .bgr .info > ul > li .left{
         min-width:60px;
         display: inline-block;
-    display: -moz-inline-box;
+        display: -moz-inline-box;
         padding-bottom: 0;
     }
     ul.dcr.smpl > li a.dcr_dwnl{
