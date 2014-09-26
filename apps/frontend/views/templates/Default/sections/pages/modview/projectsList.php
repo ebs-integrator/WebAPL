@@ -5,10 +5,10 @@
             <td><a href="<?=$page_url;?>?item=<?=$item->uri;?>"><?=$item->title;?></a></td>
             <td>
                 <table>
-                    <tr><td>Data de start și finalizare:</td><td><?=$item->pr_date_interval;?></td></tr>
-                    <tr><td>Domeniu:</td><td><?=$item->pr_domain;?></td></tr>
-                    <tr><td>Stadiul de realizare proiect:</td><td><?=$item->pr_state;?></td></tr>
-                    <tr><td>Valoarea proiectului:</td><td><?=$item->pr_value;?></td></tr>
+                    <tr><td><?= varlang('data-proiect'); ?>:</td><td><?=$item->pr_date_interval;?></td></tr>
+                    <tr><td><?= varlang('domeniu'); ?>:</td><td><?=$item->pr_domain;?></td></tr>
+                    <tr><td><?= varlang('stadiul'); ?>:</td><td><?=$item->pr_state;?></td></tr>
+                    <tr><td><?= varlang('valoarea-proiectului'); ?>:</td><td><?=$item->pr_value;?></td></tr>
                 </table>
                 <a class="more" href="<?=$page_url;?>?item=<?=$item->uri;?>"></a>
             </td>

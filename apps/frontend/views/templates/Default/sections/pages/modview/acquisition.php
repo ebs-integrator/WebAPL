@@ -11,14 +11,14 @@
         <?php if (time() < strtotime($post->date_point)) { ?> 
             <img src="<?= res('assets/img/stat_active.png'); ?>" class="stat_active">
             <div class="stat_info">
-                <span>Statut</span>
-                <span>Primim oferte</span>
+                <span><?= varlang('statut'); ?></span>
+                <span><?= varlang('oferte'); ?></span>
             </div>
         <?php } else { ?>
             <img src="<?= res('assets/img/stat_enable.png'); ?>" class="stat_active">
             <div class="stat_info">
-                <span>Statut</span>
-                <span>Oferta expirata</span>
+                <span><?= varlang('statut'); ?></span>
+                <span><?= varlang('oferte-expirate'); ?></span>
             </div>
         <?php } ?>
         <div class="clearfix"></div>
@@ -26,7 +26,7 @@
     
     <?php if ($post->docs) { ?>
         <ul class="dcr">
-            <li><a href='javascript:;'>Documente</a>
+            <li><a href='javascript:;'><?= varlang('documente'); ?></a>
                 <div class='dcr_box'>
                     <ul class="mda n_t">
                         <?php foreach ($post->docs as $file) { ?>

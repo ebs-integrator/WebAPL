@@ -4,7 +4,7 @@
 </div>
 <?php if (count($posts)) { ?>
     <div class="m_video">
-        <p>Toate ședințele</p>
+        <p><?= varlang('toate-sedinte'); ?></p>
         <?php
         foreach ($posts as $item) {
             preg_match('#(\.be/|/embed/|/v/|/watch\?v=)([A-Za-z0-9_-]{5,11})#', $item->text, $matches);

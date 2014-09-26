@@ -17,7 +17,7 @@
                     <button class="home_chat firechat-start <?= $person->for_audience ? 'active firechat-start-with' : ''; ?>" data-personid="<?= $person->person_id; ?>">
                         <div class="pot"></div>
                         <div class="pct">
-                            <p><?= varlang('discuta'); ?><span><?= varlang('online'); ?></span></p>
+                            <p><?= varlang('discuta'); ?> <span><?= varlang('online'); ?></span></p>
                             <span><?= $person->for_audience ? varlang('online') : varlang('offline'); ?></span>
                         </div>
                     </button>

@@ -1686,6 +1686,32 @@ section > .wrap >  .left.contact_r{
 .vice .home_chat{
     margin-left:0px;
 }
+.left article .ttl:hover a,.left article ul li:hover a,section .map_cont .h_list p:hover a{
+    text-decoration: underline;
+}
+.bgr .home_chat{
+    width: 270px;
+    height: 60px;
+    margin-left:0px;
+}
+.bgr .home_chat .pot{
+    width: 60px;
+    background-size: 40%;
+}
+.bgr .home_chat .pct{
+    width: 210px;
+}
+.bgr  .home_chat.active .pot{
+    background-size: 40%;
+}
+.bgr .home_chat .pct > span{
+    padding-left: 24px;
+    font: 16px 'open_sanssemibold';
+}
+.bgr .home_chat .pct > p{
+    font: 23px "open_sansbold";
+    margin-top:3px;
+}
 .top_menu a .left{
     float: none;
     text-align: center;
@@ -4573,6 +4599,15 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     .bgr .quote{
         width: 255px;
+    }
+    .bgr .home_chat {
+        width: 260px;
+    }
+    .bgr .home_chat .pct {
+        width: 200px;
+    }
+    .bgr .home_chat .pct > span{
+        padding-left:20px;
     }
     .bgr .info > ul > li .left{
         width: 25%;

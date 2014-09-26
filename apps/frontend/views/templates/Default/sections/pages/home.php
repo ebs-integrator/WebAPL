@@ -44,78 +44,10 @@
                 </article>
             <?php } ?>
         </div>
-        <div class="right global">
-            <!--            <article class="doc">
-                            <p class="ttl"><img src="<?= res('assets/img/doc.png'); ?>"><a href="javascript:;">Toate actele locale</a></p>
-                            <div class="hr"></div>
-                            <ul class="bxslider2">
-                                <li>
-                                    <table>
-                                        <tr>
-                                            <td> Denumire:</td>
-                                            <td>Cu privire la aprobarea Regulamentului privind organizarea educaţiei incluzive în instituţiile de învăţămînt preuniversitar din mun. Bălţi</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tipul Doc.:</td>
-                                            <td>Decizie</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Emis:</td>
-                                            <td>Primăria Strășeni</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Data emiterii:  </td>
-                                            <td>31.07.2014</td>
-                                        </tr>
-                                    </table>
-                                </li>
-
-                                <li>
-                                    <table>
-                                        <tr>
-                                            <td> Denumire:</td>
-                                            <td>Cu privire la aprobarea Regulamentului privind organizarea educaţiei incluzive în instituţiile de învăţămînt preuniversitar din mun. Bălţi</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tipul Doc.:</td>
-                                            <td>Decizie</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Emis:</td>
-                                            <td>Primăria Strășeni</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Data emiterii:  </td>
-                                            <td>31.07.2014</td>
-                                        </tr>
-                                    </table>
-                                </li>
-
-                                <li>
-                                    <table>
-                                        <tr>
-                                            <td> Denumire:</td>
-                                            <td>Cu privire la aprobarea Regulamentului privind organizarea educaţiei incluzive în instituţiile de învăţămînt preuniversitar din mun. Bălţi</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tipul Doc.:</td>
-                                            <td>Decizie</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Emis:</td>
-                                            <td>Primăria Strășeni</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Data emiterii:  </td>
-                                            <td>31.07.2014</td>
-                                        </tr>
-                                    </table>
-                                </li>
-                            </ul>
-                        </article>-->
+        <div class="right global">            
             <?php if (isset($home_ads) && $home_ads) { ?>
                 <article class="atn">
-                    <p class="ttl"><a href="javascript:;">Anunțuri</a></p>
+                    <p class="ttl"><a href="javascript:;"><?= varlang('anunturi'); ?></a></p>
                     <div class="hr"></div>
                     <ul class="bxslider2">
                         <?php foreach ($home_ads as $item) { ?>

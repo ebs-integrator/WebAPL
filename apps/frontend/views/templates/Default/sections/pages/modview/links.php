@@ -1,7 +1,7 @@
 <div class="cda">
     <p class="ul_title">
-        <span class="left">denumire / link</span>
-        <span class="right">Actualizat</span>
+        <span class="left"><?= varlang('denumire-link'); ?></span>
+        <span class="right"><?= varlang('actualizat'); ?></span>
     </p>
     <ul>
         <?php foreach ($posts as $item) { ?>
