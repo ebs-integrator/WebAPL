@@ -10,9 +10,12 @@ foreach ($groups as $group) {
             </div>
             <p class="vp_name"><?= $person->first_name; ?> <?= $person->last_name; ?></p>
             <span class='quote'><?= $person->motto; ?></span>
-            <button class="vice_button">
-                <span class="green">Chat</span><span class="violet">-online</span>
-                <span class="g_dot"></span>
+            <button class="home_chat firechat-start <?= $person->for_audience ? 'active firechat-start-with' : ''; ?>" data-personid="<?= $person->person_id; ?>">
+                <div class="pot"></div>
+                <div class="pct">
+                    <p><?= varlang('discuta'); ?><span><?= varlang('online'); ?></span></p>
+                    <span><?= $person->for_audience ? varlang('online') : varlang('offline'); ?></span>
+                </div>
             </button>
             <div class='clearfix'></div>
         </div>
@@ -60,10 +63,10 @@ foreach ($groups as $group) {
                     <div class='dcr_box'>
                         <ul>
                             <?php foreach ($folder->docs as $doc) { ?>
-                            <li class="<?=$doc->extension;?>">
-                                <span><a href="<?=url($doc->path);?>"><?= $doc->name; ?></a></span>
-                                <a href="<?=url($doc->path);?>" class="dcr_dwnl"></a>
-                            </li>
+                                <li class="<?= $doc->extension; ?>">
+                                    <span><a href="<?= url($doc->path); ?>"><?= $doc->name; ?></a></span>
+                                    <a href="<?= url($doc->path); ?>" class="dcr_dwnl"></a>
+                                </li>
                             <?php } ?>
                         </ul>
                     </div>
