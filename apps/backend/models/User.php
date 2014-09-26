@@ -49,11 +49,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         return static::$roles;
     }
 
-    public static function has($role, $roles = array()) {
-        if (empty($roles)) {
+    public static function has($role, $roles = 0) {
+        if ($roles === 0) {
             $roles = User::roles();
         }
-        
+                
         return in_array($role, $roles);
     }
     

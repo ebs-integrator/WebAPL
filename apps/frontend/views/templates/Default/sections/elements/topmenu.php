@@ -12,7 +12,7 @@ if (isset($general_pages)) {
                         <img src="<?= url($item->image_icon->path); ?>">
                     <?php } ?>
                 </div>
-                <div class="left title third"><?= $item->title; ?></div></a>
+                <div class="left title third"><?= strtok($item->title, " "); ?> <span><?= ltrim($item->title, strtok($item->title, " ")); ?></span></div></a>
         </div>
         <?php
     }

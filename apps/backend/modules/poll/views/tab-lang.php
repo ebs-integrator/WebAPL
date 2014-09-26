@@ -21,8 +21,8 @@
             autoencode: true,
             loadonce: false,
             colNames: ['ID', 'Answer'],
-            colModel: [
-                {name: 'id', index: 'id', editable: false, editoptions: {readonly: true, size: 10}, width: 10},
+            colModel: [ 
+                {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}, width: 10},
                 {name: 'answer', index: 'answer', height: 50, resizable: true, align: "left", editable: true, edittype: "text"}
             ],
             rowNum: 15,

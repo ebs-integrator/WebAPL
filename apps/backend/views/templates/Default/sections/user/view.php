@@ -44,11 +44,10 @@
         <h4>This user can:</h4>
 
         <input type="hidden" name="id" value="<?= $user->id; ?>" />
-
+        <?php
+        $uroles = User::extractRoles($user->id);
+        ?>
         <select name="roles[]" class="chzn-select" multiple>
-            <?php
-            $uroles = User::extractRoles($user->id);
-            ?>
             <?php foreach ($roles as $role) { ?>
                 <option value="<?= $role->id; ?>" <?= User::has($role->key, $uroles) ? 'selected' : ''; ?>><?= $role->name; ?></option>
             <?php } ?>

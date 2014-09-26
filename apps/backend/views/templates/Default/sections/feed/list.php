@@ -9,7 +9,7 @@
 
 <div class="tab-content">
     <div class="tab-pane active" id="posts">
-
+ 
         <?= View::make('sections/feed/allposts'); ?>
         
     </div>
