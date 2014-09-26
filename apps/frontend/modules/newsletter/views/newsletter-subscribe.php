@@ -20,11 +20,11 @@
         });
     </script>
 
-    <p>Aboneazate la Buletinul informativ al primăriei</p>
+    <p><?= varlang('aboneazatate-la-buletin'); ?></p>
     <img src="<?= res('assets/img/email.png'); ?>">
     <form class="newsletter_subscribe_form" action="<?= url('newsletter/subscribe'); ?>">
-        <input name="email" type="text" placeholder="Email-ul Dvs.">
-        <input type="submit">
+        <input name="email" type="text" placeholder="<?= varlang('email-dvs'); ?>">
+        <input type="submit" value="<?= varlang('submit'); ?>">
     </form>
 </div>
 

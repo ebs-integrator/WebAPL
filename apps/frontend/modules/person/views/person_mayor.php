@@ -23,19 +23,19 @@ foreach ($groups as $group) {
             <div class='info'> 
                 <ul>
                     <li>
-                        <div class="left">Data nasterii:</div>
+                        <div class="left"><?= varlang('data-nasterii'); ?>:</div>
                         <div class="right"><?= $person->date_birth; ?></div>
                     </li>
                     <li>
-                        <div class="left">Starea civila:</div>
+                        <div class="left"><?= varlang('starea-civila'); ?>:</div>
                         <div class="right"><?= $person->civil_state; ?></div>
                     </li>
                     <li>
-                        <div class="left">Studii:</div>
+                        <div class="left"><?= varlang('studii'); ?>:</div>
                         <div class="right"><?= $person->studies; ?></div>
                     </li>
                     <li>
-                        <div class="left">Activitate politica</div>
+                        <div class="left"><?= varlang('activitate-politica'); ?>:</div>
                         <div class="right"><?= $person->activity; ?></div>
                     </li>
                     <?php

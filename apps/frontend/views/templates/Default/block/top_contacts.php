@@ -31,7 +31,7 @@
         <div class="anp">
             <a href="javascript:;"><?= varlang('all-nr-phone'); ?></a>
         </div>   
-        <p class="title"><?= varlang('write-us'); ?></p>
+        <p class="title"><?= varlang('viziteaza'); ?></p>
         <div class="d_hr"></div>
         <div class="left">
             <div class="c_info">
@@ -49,7 +49,7 @@
     <div class="anp">
         <a href="<?= varlang('orar-link'); ?>"><?= varlang('orar-autobus'); ?></a>
     </div>
-    <p class="title"><?= varlang('write-us'); ?></p>
+    <p class="title"><?= varlang('scrieti-direct'); ?></p>
     <div class="d_hr"></div>
     <div class="contact_top_notif adv" style="display: none;"><?= varlang('success'); ?> </div>
     <form id="contact_top_form" action="<?= url(); ?>" method="post">

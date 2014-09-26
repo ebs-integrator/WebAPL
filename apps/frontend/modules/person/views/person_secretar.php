@@ -9,18 +9,18 @@ foreach ($groups as $group) {
         </div>
         <ul class="sec_details">
             <li>
-                <span class="sec_criteria">Nume, prenume:</span>
+                <span class="sec_criteria"><?= varlang('name-last-name'); ?>:</span>
                 <span class="crt_details"><?= $person->first_name; ?> <?= $person->last_name; ?></span>
             </li>
             <li>
-                <span class="sec_criteria">Data nasterii:</span>
+                <span class="sec_criteria"><?= varlang('data-nasterii'); ?>:</span>
                 <span class="crt_details"><?= $person->date_birth; ?></span>
             </li>
             <li>
-                <span class="sec_criteria">Studii:</span>
+                <span class="sec_criteria"><?= varlang('studii'); ?>:</span>
                 <span class="crt_details"><?= $person->studies; ?></span></li>
             <li>
-                <span class="sec_criteria">Date de contact:  </span>
+                <span class="sec_criteria"><?= varlang('contact'); ?>:  </span>
                 <span class="crt_details">
                     <span><?= $person->phone; ?></span>
                     <span><?= $person->email; ?></span>

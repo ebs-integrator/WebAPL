@@ -14,11 +14,10 @@
         </div>
         <div class="right firechat-name" style="display:<?= $session_exist ? 'block' : 'none'; ?>;">
             <p class="c_name">
-                Discută on-line cu
-                primarul <span class="firechat-person"><?= isset($person) ? $person->first_name . " " . $person->last_name : ''; ?></span>
+                <?= varlang('discuta-cu-primar'); ?> <span class="firechat-person"><?= isset($person) ? $person->first_name . " " . $person->last_name : ''; ?></span>
             </p>
             <p class="status on">
-                on-line
+                <?= varlang('online'); ?>
             </p>
         </div>
         <hr>

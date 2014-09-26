@@ -144,9 +144,10 @@ $(document).ready(function() {
 });
 
 
-var map, map2;
+var map, map2,map3;
 
 function initialize() {
+    var hidden_map = document.getElementById("map-canvas3");
     var big_map = document.getElementById("map-canvas2");
     var small_map = document.getElementById("map-canvas");
 
@@ -175,6 +176,18 @@ function initialize() {
         var marker2 = new google.maps.Marker({
             position: myLatlng,
             map: map2,
+            icon: iconBase
+        });
+    }
+    if (hidden_map !== null) {
+        map3 = new google.maps.Map(hidden_map, {
+            zoom: 14,
+            disableDefaultUI: true,
+            center: myLatlng
+        });
+        var marker3 = new google.maps.Marker({
+            position: myLatlng,
+            map: map3,
             icon: iconBase
         });
     }

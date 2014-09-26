@@ -2387,7 +2387,11 @@ section .wrap > .left .subt,ul.faq  .subt{
     height: 57px;
     line-height: 57px;
     width: 100%;
+    text-transform: uppercase;
     margin-bottom: 25px;
+}
+.contact_hidden,.ccc .ccc_hidden{
+    display:none;
 }
 ul.faq .subt{
     margin-bottom:18px;
@@ -4703,8 +4707,28 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     section > .wrap .left.global{
         width:50%;
     }
-    .contact.left.form{
+    .left.contact_r{
         display:none;
+    }
+    section > .wrap > .left.contact_r.contact_hidden{
+        display: block;
+        width:100%;
+        margin-bottom: 30px;
+    }
+    .ccc_hidden .map_info p span{
+        display:block;
+    }
+    .ccc_hidden .map_info{
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ececec;
+        margin-bottom:20px;
+    }
+    .map_info p:last-child{
+        margin-bottom:0px;
+    }
+    .ccc .ccc_hidden{
+        display:block;
+        margin-bottom: 50px;
     }
     .wrap .left.ccc{
         margin-right:50px;
