@@ -27,7 +27,7 @@ class PageController extends BaseController {
                     }
                 }
 
-
+                Template::clearBreadCrumbs();
                 Template::addBreadCrumb("/", "Home");
 
                 // Get pages resources
