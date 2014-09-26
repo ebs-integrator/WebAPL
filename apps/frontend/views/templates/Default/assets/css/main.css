@@ -764,6 +764,7 @@ header .contact .cont .cont_form input[type=submit]{
     padding-bottom: 59px;
     position: relative;
     overflow: hidden;
+    max-height:228px;
 }
 .menu img.backg{
     position:absolute;
@@ -775,11 +776,12 @@ header .contact .cont .cont_form input[type=submit]{
 }
 .menu .box{
     width:260px;
-    min-height:225px;
+    height:225px;
     background-color:#fff;
     margin-top:62px;
     margin-right:75px;
     display: inline-block;
+    display: -moz-inline-box;
 }
 .menu .box:last-child{
     margin-right:0px;
@@ -1989,7 +1991,7 @@ ul.social p{
     color: #fff;
     padding:17px 0px 17px 65px;
     border-bottom:1px solid #7c4d7c;
-    font: 16px "open_sansregular";
+    font: 20px "open_sansregular";
 }
 .a_box{
     width:100%;
@@ -4584,6 +4586,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         width: 200px;
         min-height: 185px;
         margin-right: 40px;
+        max-height:185px;
     }
     .menu .box .menu_img{
         height: 120px;
@@ -4859,8 +4862,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     .menu .box{
         width: 160px;
-        min-height: 160px;
         margin-right: 25px;
+        height: 160px;
+        
     }
     .menu .box .menu_img{
         height: 100px;
