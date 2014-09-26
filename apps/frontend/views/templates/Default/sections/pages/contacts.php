@@ -38,7 +38,7 @@
                 <a href="javascript:;">
                     <img src="<?= res('assets/img/chat_man.png'); ?>" class="mn">
                     <span class="chat_dot"></span>
-                    <span class="green"><?= varlang('chat'); ?>-</span><span class="violet">online</span>
+                    <span class="green"><?= varlang('discuta'); ?>-</span><span class="violet"><?= varlang('online'); ?></span>
                     <hr>
                     <p class="center"><?= varlang('vorbeste-direct'); ?></p>
                 </a>
@@ -47,7 +47,7 @@
         </div>
         <div class='left contact_r'>
             <p class='subt'><?= varlang('adresa'); ?></p>
-            <div id="map-canvas2" style="width:450px; height:450px;"></div>
+            <div id="map-canvas2" style="width:100%; height:300px;"></div>
             <div class="prp">
                 <img src="<?= res('assets/img/notebook.png'); ?>">
                 <a href="<?= varlang('orar-link'); ?>"><?= varlang('orar-autobus'); ?></a>
