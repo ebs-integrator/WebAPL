@@ -79,6 +79,7 @@
             <li><a href="/page/markup/traseu">Cum sa ajungi in oras</a></li>
             <li><a href="/page/markup/urgenta">Date de contact utile</a></li>
             <li><a href="/page/markup/viceprimarii">Viceprimarii</a></li>
+            <li><a href="/page/markup/404">error</a></li>
             
         </ul>
 
