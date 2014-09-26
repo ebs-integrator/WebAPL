@@ -17,7 +17,7 @@
                         <thead>
                             <tr><td colspan="7"><?= $months[$month]; ?> <?= $year; ?></td></tr>
                             <tr>
-                                <td>lu</td><td>ma </td><td>mi </td><td>jo</td><td>vi</td><td>si</td><td>du</td>
+                                <td><?= varlang('luni'); ?></td><td><?= varlang('marti'); ?> </td><td><?= varlang('miercuri'); ?> </td><td><?= varlang('joi'); ?></td><td><?= varlang('vineri'); ?></td><td><?= varlang('simbata'); ?></td><td><?= varlang('duminica'); ?></td>
                             </tr>
                         </thead>
                         <tbody>

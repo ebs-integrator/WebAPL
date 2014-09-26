@@ -1,10 +1,10 @@
 <form class="cv_form" action="<?= url('job/apply'); ?>" method="post">
 
     <input type="hidden" name="post_id" value="<?= $post_id; ?>" />
-    <input type='text' name="name" placeholder="Nume,Prenume"/>
-    <div class="upload">Incarca CV</div>
+    <input type='text' name="name" placeholder="<?= varlang('name-last-name'); ?>"/>
+    <div class="upload"><?= varlang('cv'); ?></div>
     <input type="file" name="upload" id='upload'/>
-    <input type='submit' value='Trimite'/>
+    <input type='submit' value='<?= varlang('submit'); ?>'/>
     <div class="clearfix"></div>
     <div class="form_error"></div>
 </form>

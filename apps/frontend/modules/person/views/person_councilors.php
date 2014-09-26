@@ -1,8 +1,8 @@
 <table class="cns_locali">
     <thead>
-        <tr><td>Numele, prenumele,
-                <span>Apartenenta politica, contacte</span></td>
-            <td>Sectorul</td>
+        <tr><td><?= varlang('name-last-name'); ?>,
+                <span><?= varlang('aparteneta'); ?></span></td>
+            <td><?= varlang('sectorul'); ?></td>
         </tr>
         <tr><td colspan="2"></td></tr>
     </thead>
@@ -27,7 +27,7 @@ foreach ($groups as $group) {
                     </div>
                 </td>
                 <td>
-                    <div class="sec_span">secretarul</div>
+                    <div class="sec_span"><?= varlang('secretarul'); ?></div>
                     <?= $person->text; ?>
                 </td>
             </tr>
