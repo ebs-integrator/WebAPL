@@ -403,6 +403,13 @@ class PageView {
 
         return static::fullView($data);
     }
+    
+    public static function notFound($data) {
+        $data['page']->title = '';
+        $data['page']->text = View::make('sections.pages.modview.error404');
+
+        return static::fullView($data);
+    }
 
     /**
      *    END PAGE VIEWS

@@ -117,6 +117,11 @@ class Template {
                 'name' => 'Harta',
                 'function' => array('PageView', 'mapPage'),
                 'support_item' => false
+            ),
+            'error404' => array(
+                'name' => 'Error 404',
+                'function' => array('PageView', 'notFound'),
+                'support_item' => false
             )
         )
     );
@@ -309,6 +314,10 @@ class Template {
 
     public static function getBreadCrumbs() {
         return self::$breadcrumbs;
+    }
+    
+    public static function clearBreadCrumbs() {
+        self::$breadcrumbs = array();
     }
 
     public static function setPageTitle($title, $override = false) {

@@ -234,4 +234,27 @@ class PageController extends BaseController {
         return Redirect::to($_SERVER['HTTP_REFERER']);
     }
     
+    public function getClear() {
+        
+        return '---';
+        
+        $parent = 270;
+        
+        $pages = Post::where('parent', $parent)->get();
+        
+        echo "<pre>";
+        
+        foreach ($pages as $page) {
+            $pagelang = PostLang::where('post_id', $page->id)->get();
+            echo "#{$page->id}\n";
+            foreach ($pagelang as $pagel) {
+                echo "   #{$pagel->id}\n";
+                $pagel->delete();
+            }
+            $page->delete();
+        }
+        
+        return [];
+    }
+    
 }
