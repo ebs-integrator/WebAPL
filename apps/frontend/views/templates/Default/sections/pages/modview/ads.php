@@ -42,5 +42,5 @@
 <?php } ?>
 
 <?php if (!isset($post) && !isset($posts)) { ?>
-    Nu sunt articole
+    <?= varlang('articole-null'); ?>
 <?php } ?>

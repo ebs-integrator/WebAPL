@@ -2,8 +2,8 @@
     <div class="search_files">
         <?php if ($page->show_file_search) { ?>
             <div class="search">
-                <input class="search_input" type="text" placeholder="Cauta modelul/formularul">
-                <input class="search_start" type="button" value="Caută">
+                <input class="search_input" type="text" placeholder="<?= varlang('modelul-formularul'); ?>">
+                <input class="search_start" type="button" value="<?= varlang('search'); ?>">
                 <div class="clearfix"></div>
             </div>
         <?php } ?>

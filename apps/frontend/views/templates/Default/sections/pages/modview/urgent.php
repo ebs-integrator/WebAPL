@@ -1,7 +1,7 @@
 <div class="emrg">
     <p class="ul_title">
-        <span class="left">Telefon	</span>
-        <span class="right">Serviciu</span>
+        <span class="left"><?= varlang('telefon'); ?>	</span>
+        <span class="right"><?= varlang('serviciu'); ?></span>
     </p>
     <ul>
         <?php foreach ($feedPosts as $item) { ?>

@@ -8,7 +8,7 @@
     <div class='p_i ldm_li'><?= Core\APL\Shortcodes::execute($post->text, array('post' => $post)); ?></div>
     <div class="ldm_middle">
         <p class="tda">
-            Termen limita de aplicare : <span><?= date('d-m-Y, H:i', strtotime($post->date_point)); ?></span>
+            <?= varlang('termen-limita'); ?> : <span><?= date('d-m-Y, H:i', strtotime($post->date_point)); ?></span>
         </p>
     </div>
     <hr>

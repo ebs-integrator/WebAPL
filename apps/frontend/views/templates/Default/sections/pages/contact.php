@@ -5,16 +5,16 @@
         <div class="right">
             <ul class='detail'>
                 <li class='email'>
-                    <a href='javascript:;'>info@straseni.gov.md</a>
+                    <a href='<?= varlang('email-address'); ?>'><?= varlang('email-address'); ?></a>
                 </li>
                 <li class='fax'>
-                    <a href='javascript:;'>(0-237) 55-66-77</a>
+                    <a href='<?= varlang('nr-fax'); ?>'><?= varlang('nr-fax'); ?></a>
                 </li>
                 <li class='chat'>
-                    <a href='javascript:;'>chat-online</a>
+                    <a href='javascript:;'><?= varlang('chat-online'); ?></a>
                 </li>
                 <li class='location'>
-                    <a href='contacte.php'>Cum ne găsiți</a>
+                    <a href='contacte.php'><?= varlang('cum-ne-gasiti'); ?></a>
                 </li>
             </ul>
         </div>

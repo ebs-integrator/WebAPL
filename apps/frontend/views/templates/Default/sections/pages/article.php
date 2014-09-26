@@ -4,7 +4,7 @@
         <p class="c_title"><?= $top_title; ?></p>
         <?php if (isset($years_list) && count($years_list)) { ?>
             <div class="right m_a">                
-                <p class='n_title'>arhivă</p>
+                <p class='n_title'><?= varlang('arhiva'); ?></p>
                 <ul class="right_menu">
                     <?php foreach ($years_list as $year) { ?>
                         <li class='<?= isset($current_year) && $current_year == $year->year ? 'active' : ''; ?>'><a href="<?= url($page_url . "?year=" . $year->year . "&month=1"); ?>"><?= $year->year; ?></a></li>
