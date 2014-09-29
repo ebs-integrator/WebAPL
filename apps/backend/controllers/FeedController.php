@@ -19,7 +19,7 @@ class FeedController extends BaseController {
 
     public function getIndex() {
         User::onlyHas('feed-view');
-        
+
         $this->data['list'] = Feed::all();
 
         $this->layout->content = View::make('sections.feed.list', $this->data);
@@ -30,7 +30,7 @@ class FeedController extends BaseController {
      */
     public function getCreate() {
         User::onlyHas('feed-create');
-        
+
         $this->data['fields'] = FeedField::all();
 
         $this->layout->content = View::make('sections.feed.create', $this->data);
@@ -42,7 +42,7 @@ class FeedController extends BaseController {
      */
     public function postTakecreate() {
         User::onlyHas('feed-create');
-        
+
         $general = Input::get('general');
 
         $feed = new Feed;
@@ -63,7 +63,7 @@ class FeedController extends BaseController {
                 $frel->save();
             }
         }
-        
+
         Log::info("Create new feed '{$general['name']}'");
 
         return Redirect::to('feed/edit/' . $feed->id);
@@ -75,7 +75,7 @@ class FeedController extends BaseController {
      */
     public function getEdit($id) {
         User::onlyHas('feed-edit');
-        
+
         $this->data['feed'] = Feed::find($id);
 
         if ($this->data['feed']) {
@@ -92,7 +92,7 @@ class FeedController extends BaseController {
      */
     public function getNewpost($feed_id = 0) {
         User::onlyHas('feedpost-edit');
-        
+
         $this->data['feed_id'] = $feed_id;
 
         $post = new Post;
@@ -114,7 +114,7 @@ class FeedController extends BaseController {
             $postlang->post_id = $post->id;
             $postlang->save();
         }
-        
+
         Log::info("Create new post #{$post->id}");
 
         return Redirect::to('feed/editpost/' . $post->id);
@@ -126,7 +126,7 @@ class FeedController extends BaseController {
      */
     public function getEditpost($post_id) {
         User::onlyHas('feedpost-edit');
-        
+
         $post = Post::find($post_id);
 
         $feedsID = Post::feedsID($post_id);
@@ -155,7 +155,7 @@ class FeedController extends BaseController {
      */
     public function postSave() {
         User::onlyHas('feedpost-edit');
-        
+
         $id = Input::get('id');
         $general = Input::get('general');
 
@@ -168,7 +168,7 @@ class FeedController extends BaseController {
             $feed->order_type = $general['order_type'];
             $feed->order_by = $general['order_by'];
             $feed->save();
-            
+
             Log::info("Edit feed #{$id}");
         } else {
             throw new Exception("Undefined Feed #{$id} DATA: " . serialize($general));
@@ -184,7 +184,7 @@ class FeedController extends BaseController {
      */
     public function postPostsave() {
         User::onlyHas('feedpost-edit');
-        
+
         $id = Input::get('id');
 
         $response = array();
@@ -195,10 +195,10 @@ class FeedController extends BaseController {
             $response['Post'] = 1;
 
             $post = Post::findTax($id, $this->taxonomy->id);
-            $post->created_at = $general['created_at'];    
+            $post->created_at = $general['created_at'];
             $post->to_home = isset($general['to_home']) ? 1 : 0;
             $post->save();
-            
+
             Log::info("Edit Post (article) #{$id}");
         }
 
@@ -217,7 +217,7 @@ class FeedController extends BaseController {
                 }
         }
 
-        // update dinamic post fields 
+        // update dinamic post fields
         $dinamic_post_fields = Input::get('dinamic_post');
         FeedFieldValue::where('post_id', $id)->where('lang_id', 0)->delete();
         if ($dinamic_post_fields) {
@@ -234,13 +234,13 @@ class FeedController extends BaseController {
                 $fieldValue->save();
             }
         }
-        
+
         return $response;
     }
 
     public function postLangpostsave() {
         User::onlyHas('feedpost-edit');
-        
+
         $response = array();
 
         $id = Input::get('id');
@@ -259,7 +259,7 @@ class FeedController extends BaseController {
                     $post_lang->text = $plang['text'];
                     $post_lang->enabled = isset($plang['enabled']) ? 1 : 0;
                     $post_lang->save();
-                    
+
                     Log::info("Edit PostLang (article) #{$plang_id}");
                 } else {
                     throw new Exception("Undefined PostLang #{$plang_id} DATA: " . serialize($plang));
@@ -293,17 +293,18 @@ class FeedController extends BaseController {
      */
     public function postPosts($feed_id) {
         User::onlyHas('feedpost-view');
-        
+
         Session::put('feed_id', $feed_id);
 
-        $jqgrid = new jQgrid(Post::$ftable);
+        $jqgrid = new jQgrid(Post::getTableName());
         $jqgrid->use_populate_count = true;
         echo $jqgrid->populate(function ($start, $limit) {
             $feed_id = Session::get('feed_id');
             $list = Post::prepareAll(true)
-                    ->select(Post::$ftable . '.id', PostLang::$ftable . '.title', Post::$ftable . '.created_at', Post::$ftable . '.views')
-                    ->where(Post::$ftable . '.taxonomy_id', $this->taxonomy->id)
-                    ->where(FeedPost::$ftable . ".feed_id", $feed_id);
+                    ->select(Post::getField('id'), PostLang::getField('title'), Post::getField('created_at'), Post::getField('views'))
+                    ->where(Post::getField('taxonomy_id'), $this->taxonomy->id)
+                    ->where(FeedPost::getField('feed_id'), $feed_id)
+                    ->where(Post::getField('is_trash'), 0);
 
             if ($limit) {
                 $list = $list->skip($start)->take($limit);
@@ -313,31 +314,97 @@ class FeedController extends BaseController {
         });
         $this->layout = null;
     }
-    
+
     public function postAllposts() {
         User::onlyHas('feedpost-view');
-        
-        $jqgrid = new jQgrid(Post::$ftable);
+
+        $jqgrid = new jQgrid(Post::getTableName());
         $jqgrid->use_populate_count = true;
         return $jqgrid->populate(function ($start, $limit) {
-            $list = Post::prepareAll()
-                    ->select(Post::$ftable . '.id', PostLang::$ftable . '.title', Post::$ftable . '.created_at', Post::$ftable . '.views')
-                    ->where(Post::$ftable . '.taxonomy_id', $this->taxonomy->id);
+                    $list = Post::prepareAll()
+                            ->select(Post::getField('id'), PostLang::getField('title'), Post::getField('created_at'), Post::getField('views'))
+                            ->where(Post::getField('taxonomy_id'), $this->taxonomy->id)
+                            ->where(Post::getField('is_trash'), 0);
 
-            if ($limit) {
-                $list = $list->skip($start)->take($limit);
-            }
+                    if ($limit) {
+                        $list = $list->skip($start)->take($limit);
+                    }
 
-            return $list->get($list);
-        });
+                    return $list->get($list);
+                });
+    }
+
+    public function postAlltrash() {
+        User::onlyHas('feedpost-view');
+
+        $jqgrid = new jQgrid(Post::getTableName());
+        $jqgrid->use_populate_count = true;
+        return $jqgrid->populate(function ($start, $limit) {
+                    $list = Post::prepareAll()
+                            ->select(Post::getField('id'), PostLang::getField('title'), Post::getField('created_at'), Post::getField('views'))
+                            ->where(Post::getField('taxonomy_id'), $this->taxonomy->id)
+                            ->where(Post::getField('is_trash'), 1);
+
+                    if ($limit) {
+                        $list = $list->skip($start)->take($limit);
+                    }
+
+                    return $list->get($list);
+                });
     }
 
     public function postPostattach() {
         User::onlyHas('feedpost-edit');
-        
+
         $post = Post::find(Input::get('post_id'));
         $post->feed_id = Input::get('id');
         $post->save();
+    }
+
+    public function getTrash($id) {
+
+        $post = Post::find($id);
+        if ($post) {
+            $post->is_trash = 1;
+            $post->save();
+        }
+
+        Log::warning("Move to tash post #{$id}");
+
+        return Redirect::to("feed/editpost/{$id}");
+    }
+
+    public function getRestore($id) {
+
+        $post = Post::find($id);
+        if ($post) {
+            $post->is_trash = 0;
+            $post->save();
+        }
+
+        Log::warning("Restore post #{$id}");
+
+        return Redirect::to("feed/editpost/{$id}");
+    }
+
+    public function postDelete() {
+        $id = Input::get('id');
+
+        $post = Post::find($id);
+        if ($post->is_trash === 1) {
+            PostLang::where('post_id', $id)->delete();
+            FeedFieldValue::where('post_id', $id)->delete();
+
+            Files::dropMultiple('post_cover', $id);
+            Files::dropMultiple('doc_post_lang', $id);
+            Files::dropMultiple('doc_post', $id);
+
+            $post->delete();
+
+            Log::warning("Drop post #{$id}");
+        }
+
+        return Redirect::to('feed');
     }
 
 }

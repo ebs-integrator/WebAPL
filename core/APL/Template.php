@@ -203,6 +203,12 @@ class Template {
         return View::make('layout.main');
     }
 
+    public static function viewModule($module, $callback) {
+        static::$module = $module;
+        $callback($module);
+        static::$module = null;
+    }
+    
     /**
      * 
      * 

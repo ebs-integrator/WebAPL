@@ -478,6 +478,29 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
     newMessageRef = self._messageRef.child(roomId).push();
     newMessageRef.setWithPriority(message, Firebase.ServerValue.TIMESTAMP, cb);
   };
+  
+  Firechat.prototype.sendSystemMessage = function(roomId, messageContent, messageType, cb) {
+    var self = this,
+        message = {
+          userId: "0",
+          name: "System",
+          timestamp: Firebase.ServerValue.TIMESTAMP,
+          message: messageContent,
+          type: messageType || 'default'
+        },
+        newMessageRef;
+
+    if (!self._user) {
+      self._onAuthRequired();
+      if (cb) {
+        cb(new Error('Not authenticated or user not set!'));
+      }
+      return;
+    }
+
+    newMessageRef = self._messageRef.child(roomId).push();
+    newMessageRef.setWithPriority(message, Firebase.ServerValue.TIMESTAMP, cb);
+  };
 
   Firechat.prototype.deleteMessage = function(roomId, messageId, cb) {
     var self = this;
