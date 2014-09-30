@@ -877,4 +877,44 @@ footer .left,footer .right{
 }
 footer .left{
     background:#333333;
+    height:100%;
+}
+footer .f_menu{
+    background:#2d2d2d ;
+    height:77px;
+}
+footer .f_menu ul li{
+    display:inline-block;
+}
+footer .f_menu ul li a{
+    display:inline-block;
+    height:100%;
+    color:#fff;
+    font:16px 'AvenirNext-DemiBold';
+    line-height: 77px;
+    text-transform: uppercase;
+    padding-right:34px;
+}
+footer .left .content{
+    width:640px;
+    float:right
+}
+footer .left > .content{
+    padding-top:30px;
+}
+footer .right .content{
+    width:640px;
+    float:left;
+}
+footer .f_social li{
+    display:inline-block;
+    margin-right:18px;    
+}
+footer .f_social li a{   
+    width:42px;
+    height:42px;
+    background:#bcbcbc;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }

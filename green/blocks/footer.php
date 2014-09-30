@@ -1,9 +1,29 @@
 <footer>    
     <div class="left">
-        
+        <div class="f_menu">
+            <div class="content">
+            <ul>
+                <li><a href="javascript:;">Orașul</a></li>
+                <li><a href="javascript:;">Harta site-ului</a></li>
+                <li><a href="javascript:;">Date de contact utile </a></li>
+            </ul>                
+            </div>
+        </div>
+        <div class="content">
+            <ul class="f_social">
+                <li><a href="javascript:;"><img src="img/fb.png"></a></li>
+                <li><a href="javascript:;"><img src="img/odno.png"></a></li>
+                <li><a href="javascript:;"><img src="img/vk.png"></a></li>
+                <li><a href="javascript:;"><img src="img/twitter.png"></a></li>
+                <li><a href="javascript:;"><img src="img/gplus.png"></a></li>
+                <li><a href="javascript:;"><img src="img/rss.png"></a></li>
+            </ul>
+        </div>
     </div>   
     <div class="right">
-        
+        <div class="content">
+            
+        </div>
     </div>
     <div class="clearfix"> </div>
 </footer>
