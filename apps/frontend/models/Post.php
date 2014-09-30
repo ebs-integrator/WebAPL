@@ -14,7 +14,7 @@ class Post extends Eloquent {
     }
 
     public static function tree($taxonomy_id, $parent = 0) {
-        $list = Post::where('parent', $parent)->where('taxonomy_id', $taxonomy_id)->orderBy('ord_num', 'asc')->get();
+        $list = Post::where('parent', $parent)->where(Post::getField('is_trash'), 0)->where('taxonomy_id', $taxonomy_id)->orderBy('ord_num', 'asc')->get();
 
         foreach ($list as &$item) {
             $item['lang'] = $item->langs()->where('lang_id', Language::getId())->first();
@@ -55,7 +55,8 @@ class Post extends Eloquent {
                 ->select(
                         Post::columns()
                 )
-                ->where(PostLang::$ftable . ".lang_id", Language::getId());
+                ->where(PostLang::$ftable . ".lang_id", Language::getId())
+                ->where(Post::getField('is_trash'), 0);
 
         if ($taxonomy_id) {
             $query = $query->where(Post::getField('taxonomy_id'), $taxonomy_id);
@@ -249,6 +250,7 @@ class Post extends Eloquent {
                     ->join(FeedPost::getTableName(), Post::getField("id"), '=', FeedPost::getField("post_id"))
                     ->where(FeedPost::getField("feed_id"), $feed_id)
                     ->where(PostLang::getField('enabled'), 1)
+                    ->where(Post::getField('is_trash'), 0)
                     ->select(
                     Post::columns() + array(FeedPost::getField("feed_id"))
             );

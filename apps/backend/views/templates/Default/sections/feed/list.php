@@ -4,6 +4,7 @@
 <ul class="nav nav-tabs" role="tablist" id="form-tabs">
     <li class="active"><a href="#posts" role="tab" data-toggle="tab">Posts</a></li>
     <li><a href="#feeds" role="tab" data-toggle="tab">Feeds</a></li>
+    <li><a href="#trash" role="tab" data-toggle="tab">Trash posts</a></li>
 </ul>
 
 
@@ -40,5 +41,9 @@
                 </tr>
             <?php } ?>
         </table>
+    </div>
+    <div class="tab-pane" id="trash">
+        <div class="c20"></div>
+        <?= View::make('sections/feed/alltrash'); ?>
     </div>
 </div>

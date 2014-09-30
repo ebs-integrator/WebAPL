@@ -18,6 +18,7 @@ use Core\APL\Actions,
     PollQuestionModel,
     Language,
     Redirect,
+    User,
     jQgrid;
 
 class Poll extends \Core\APL\ExtensionController {
@@ -60,6 +61,8 @@ class Poll extends \Core\APL\ExtensionController {
      * @return layout
      */
     public function poll_list() {
+        User::onlyHas('poll-view');
+
         $this->layout->content = Template::moduleView($this->module_name, 'views.list');
 
         return $this->layout;
@@ -70,6 +73,8 @@ class Poll extends \Core\APL\ExtensionController {
      * @return json
      */
     public function getlist() {
+        User::onlyHas('poll-view');
+
         $jqgrid = new jQgrid('apl_poll');
         return $jqgrid->populate(function($start, $limit) {
                     return PollModel::select('apl_poll.id', 'apl_poll_question.title', 'author_id', 'date_created', 'enabled')
@@ -88,6 +93,8 @@ class Poll extends \Core\APL\ExtensionController {
      * @return json
      */
     public function getlist_answer($poll_lang_id) {
+        User::onlyHas('poll-view');
+
         $jqgrid = new jQgrid('apl_poll_answer');
         return $jqgrid->populate(function($start, $limit) use($poll_lang_id) {
                     return PollAnswerModel::select('id', 'title')
@@ -104,6 +111,8 @@ class Poll extends \Core\APL\ExtensionController {
      * @return layout
      */
     public function form($id = 0) {
+        User::onlyHas('poll-edit');
+
         $data = array(
             'poll' => PollModel::find($id),
             'poll_question' => array(),
@@ -127,6 +136,8 @@ class Poll extends \Core\APL\ExtensionController {
      * @return array/json
      */
     public function save() {
+        User::onlyHas('poll-edit');
+
         $id = Input::get('id');
 
         if ($id) {
@@ -161,6 +172,8 @@ class Poll extends \Core\APL\ExtensionController {
      * @return array/json
      */
     public function save_lang() {
+        User::onlyHas('poll-edit');
+
         $poll_id = Input::get('poll_id');
         $poll_question_id = Input::get('poll_question_id');
 
@@ -200,6 +213,8 @@ class Poll extends \Core\APL\ExtensionController {
      * Edit item jqgrid
      */
     public function edititem($poll_question_id = 0) {
+        User::onlyHas('poll-edit');
+
         $jqgrid = new jQgrid('apl_poll_answer');
         $jqgrid->operation(array(
             'title' => Input::get('answer'),
@@ -211,10 +226,14 @@ class Poll extends \Core\APL\ExtensionController {
      * Action for left menu
      */
     public function left_menu_item() {
-        echo Template::moduleView($this->module_name, 'views.poll-menu');
+        if (User::has('poll-view')) {
+            echo Template::moduleView($this->module_name, 'views.poll-menu');
+        }
     }
 
     public function poll_del($id = 0) {
+        User::onlyHas('poll-edit');
+
         $questions = PollQuestionModel::where(array('poll_id' => $id))->get();
 
         PollModel::where(array('id' => $id))->delete();

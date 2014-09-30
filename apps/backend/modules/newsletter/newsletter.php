@@ -23,6 +23,7 @@ class Newsletter extends \Core\APL\ExtensionController {
         Actions::post('newsletter/getlist', array('before' => 'auth', array($this, 'getlist')));
         Actions::post('newsletter/edititem', array('before' => 'auth', array($this, 'edititem')));
         Actions::get('newsletter/send', array('before' => 'auth', array($this, 'send_message')));
+        Actions::post('newsletter/sendarticle', array('before' => 'auth', array($this, 'sendarticle')));
         
         Actions::register('construct_left_menu', array($this, 'left_menu_item'));
         Actions::register('feed_post_bottom', array($this, 'sendemails'));
@@ -44,7 +45,7 @@ class Newsletter extends \Core\APL\ExtensionController {
 
     public function email_list() {
         \User::onlyHas('newsletter-view');
-        
+
         $this->layout->content = Template::moduleView($this->module_name, 'views.list');
 
         return $this->layout;
@@ -52,34 +53,53 @@ class Newsletter extends \Core\APL\ExtensionController {
 
     public function getlist() {
         \User::onlyHas('newsletter-view');
-        
+
         $jqgrid = new jQgrid('apl_newsletter');
         echo $jqgrid->populate(function ($start, $limit) {
-                    return NewsletterModel::select('id', 'email', 'subscribe_date', 'enabled')->skip($start)->take($limit)->get();
-                });
+            return NewsletterModel::select('id', 'email', 'subscribe_date', 'enabled')->skip($start)->take($limit)->get();
+        });
     }
 
     public function edititem() {
         \User::onlyHas('newsletter-view');
-        
+
         $jqgrid = new jQgrid('apl_newsletter');
         $jqgrid->operation(array(
             'email' => Input::get('email'),
             'enabled' => Input::get('enabled')
         ));
     }
-    
+
     public function send_message() {
         \User::onlyHas('newsletter-view');
-        
+
         $this->layout->content = Template::moduleView($this->module_name, 'views.list');
 
         return $this->layout;
     }
-    
+
     public function sendemails($post) {
-        
-        return Template::moduleView($this->module_name, 'views.send_email');
+        $data['post'] = $post;
+
+        return Template::moduleView($this->module_name, 'views.send_email', $data);
+    }
+
+    public function sendarticle() {
+        $post_id = Input::get('id');
+
+        $post = \PostLang::where('post_id', $post_id)->first();
+        if ($post) {
+
+            $data['post'] = $post;
+      
+            Template::viewModule($this->module_name, function () use ($data) {
+                \Mail::send('views.emails.post', $data, function($message) {
+                    $message->from('test@xbattle.ru', 'Laravel');
+
+                    $message->to('ngodina.ebs@gmail.com');
+                });
+            });
+        }
     }
 
 }
