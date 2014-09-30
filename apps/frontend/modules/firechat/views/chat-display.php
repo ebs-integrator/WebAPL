@@ -70,10 +70,16 @@
         font:15px 'open_sansbold';
         color:#713871;
     }
-    #firechat em{
+    #firechat em, .sendmail{
         color:#b9b9b9;
         font:13px 'open_sansregular';
         float:right;
+    }
+    .sendmail a {
+        color:#713871;
+    }
+    .sendmail {
+        margin-top: -30px;
     }
     #firechat .fourfifth{
         width:100%;
@@ -97,7 +103,7 @@
         color:#4c4c4c;
     }
     #firechat textarea{
-        height:60px;
+        height:55px;
         border: 1px solid #d9d9d9;
         padding: 10px;
         font: 13px 'open_sanssemibold_italic';
@@ -119,6 +125,9 @@
 </style>
 
 <div id="firechat-wrapper"></div>
+<div class="sendmail">Doriti sa salvati mesajele pe mail? <a href="javascript:;">click aici</a></div>
+
+
 <script type='text/javascript'>
     var to_person = <?= $chat->person_id; ?>;
 
@@ -164,8 +173,18 @@
     });
 
     window.leaveChat = function() {
-        chat._chat.sendSystemMessage(room.id, "<?= $chat->user_name; ?> a parasit chat-ul", 'default', function () {
+        chat._chat.sendSystemMessage(room.id, "<?= $chat->user_name; ?> a parasit chat-ul", 'default', function() {
             chat._chat.leaveRoom(room.id);
         });
     };
+
+    jQuery(".sendmail a").on('click', function() {
+        var conf = confirm('Sigur doriti sa expediati mesajele pe <?= $chat->user_email; ?>');
+        if (conf) {
+            var html = $('.chat').html();
+            jQuery.post('<?= url('firechat/sendmail'); ?>', {messages: html}, function() {
+                alert('Email-ul a fost trimis');
+            });
+        }
+    });
 </script>

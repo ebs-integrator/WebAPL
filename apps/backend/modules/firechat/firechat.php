@@ -22,7 +22,8 @@ class Firechat extends \Core\APL\ExtensionController {
         Actions::get('firechat/display', array('before' => 'auth', array($this, 'display')));
         Actions::post('firechat/closeroom', array('before' => 'auth', array($this, 'closeroom')));
         Actions::post('firechat/audience', array('before' => 'auth', array($this, 'audience')));
-
+        Actions::post('firechat/sendmail', array('before' => 'auth', array($this, 'sendmail')));
+        
         Actions::register('construct_left_menu', array($this, 'left_menu_item'));
 
         $this->layout = Template::mainLayout();
@@ -93,8 +94,28 @@ class Firechat extends \Core\APL\ExtensionController {
                 $person->save();
             }
         }
-        
+
         return [];
+    }
+
+    public function sendmail() {
+        $session_id = \Session::get('chat_session_id');
+
+        $html = \Input::get('messages');
+
+        if ($session_id) {
+            $chat = \FireChatSession::find($session_id);
+            if ($chat) {
+                $data['html'] = $html;
+                Template::viewModule($this->module_name, function () use ($data, $chat) {
+                    \Mail::send('views.email-mess', $data, function($message) use ($chat) {
+                        $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'Firechat');
+                        $message->subject("Recent chat messages");
+                        $message->to($chat->user_email);
+                    });
+                });
+            }
+        }
     }
 
 }

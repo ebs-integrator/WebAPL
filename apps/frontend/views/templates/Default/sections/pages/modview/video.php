@@ -6,7 +6,7 @@
     <div class="m_video">
         <p><?= varlang('toate-sedinte'); ?></p>
         <?php
-        foreach ($posts as $item) {
+        foreach ($posts as $k => $item) {
             preg_match('#(\.be/|/embed/|/v/|/watch\?v=)([A-Za-z0-9_-]{5,11})#', $item->text, $matches);
             if (isset($matches[2]) && $matches[2]) {
                 $YoutubeCode = $matches[2];
@@ -34,6 +34,9 @@
                     <p class="video_i"><?= $item->title; ?></p>
                 </a>
             </div>
+            <?php if (($k) % 2) { ?>
+                <span class="clearfix"></span>
+            <?php } ?>
             <?php
         }
         ?>

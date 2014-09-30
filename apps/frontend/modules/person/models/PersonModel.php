@@ -12,6 +12,16 @@ class PersonModel extends Eloquent {
         return $this->hasMany('PersonLangModel', 'person_id', 'id');
     }
 
+    protected static function personPrepare() {
+        return PersonModel::join(PersonLangModel::getTableName(), PersonLangModel::getField("person_id"), '=', PersonModel::getField("id"))
+                        ->join(PersonRelModel::getTableName(), PersonRelModel::getField("person_id"), '=', PersonModel::getField("id"))
+                        ->leftJoin(Files::getTableName(), function($join) {
+                            $join->on(Files::getField("module_id"), '=', PersonModel::getField("id"));
+                            $join->on(Files::getField("module_name"), '=', DB::raw("'person'"));
+                        })
+                        ->where(PersonLangModel::getField("lang_id"), \Core\APL\Language::getId());
+    }
+
     public static function getPostPersonGroups($post_id) {
         $groups = PersonGroup::join(PersonGroupPostModel::getTableName(), PersonGroupPostModel::getField("group_id"), '=', PersonGroup::getField("id"))
                 ->join(PersonGroupLang::getTableName(), PersonGroupLang::getField("group_id"), '=', PersonGroup::getField('id'))
@@ -21,13 +31,7 @@ class PersonModel extends Eloquent {
                 ->get();
         if ($groups) {
             foreach ($groups as &$group) {
-                $persons = PersonModel::join(PersonLangModel::getTableName(), PersonLangModel::getField("person_id"), '=', PersonModel::getField("id"))
-                        ->join(PersonRelModel::getTableName(), PersonRelModel::getField("person_id"), '=', PersonModel::getField("id"))
-                        ->leftJoin(Files::getTableName(), function($join) {
-                            $join->on(Files::getField("module_id"), '=', PersonModel::getField("id"));
-                            $join->on(Files::getField("module_name"), '=', DB::raw("'person'"));
-                        })
-                        ->where(PersonLangModel::getField("lang_id"), \Core\APL\Language::getId())
+                $persons = PersonModel::personPrepare()
                         ->where(PersonRelModel::getField("group_id"), $group->id)
                         ->get();
 
@@ -44,6 +48,20 @@ class PersonModel extends Eloquent {
         }
 
         return $groups;
+    }
+
+    public static function getPerson($id) {
+        $person = PersonModel::personPrepare()
+                ->where(PersonModel::getField('id'), $id)
+                ->first();
+        
+        if ($person->feed_id) {
+            $person['posts'] = \Post::postsFeed($person->feed_id);
+        } else {
+            $person['posts'] = array();
+        }
+        
+        return $person;
     }
 
 }

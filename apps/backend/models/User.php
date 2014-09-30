@@ -61,5 +61,13 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         if (!User::has($role))
             throw new Exception("Access denied!");
     }
+    
+    public static function withRole($role) {
+        return UserRole::join(Role::getTableName(), Role::getField('id'), '=', UserRole::getField('role_id'))
+                ->join(User::getTableName(), User::getField('id'), '=', UserRole::getField('user_id'))
+                ->select(User::getField('*'))
+                ->where(Role::getField('key'), $role)
+                ->get();
+    }
 
 }

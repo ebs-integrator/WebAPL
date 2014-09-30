@@ -125,6 +125,9 @@
                                 <?php if (User::has('lang-view')) { ?>
                                     <li> <a href="<?= url('home/languages'); ?>">Languages</a></li>
                                 <?php } ?>
+                                    <?php if (User::has('settings-view')) { ?>
+                                    <li> <a href="<?= url('settings'); ?>">Settings</a></li>
+                                <?php } ?>
                                 <?php if (User::has('log-view')) { ?>
                                     <li> <a href="<?= url('log'); ?>">Log</a></li>
                                 <?php } ?> 

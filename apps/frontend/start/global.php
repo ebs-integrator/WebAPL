@@ -52,9 +52,9 @@ App::error(function(Exception $exception, $code) {
     if ($code == 404) {
         $page_property = 'error_404';
     } elseif ($code >= 500) {
-        $page_property = 'error_500';
+        //$page_property = 'error_500';
     } else {
-        $page_property = 'error_other';
+        //$page_property = 'error_other';
     }
 
     if ($page_property) {
@@ -66,7 +66,7 @@ App::error(function(Exception $exception, $code) {
         }
     }
     
-    return "Undefined error!";
+    //return "Undefined error!";
 });
 
 Event::listen('APL.core.load', function() {

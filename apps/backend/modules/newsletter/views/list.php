@@ -43,4 +43,6 @@
     };
 </script>
 
+<a href="<?=url('newsletter/export');?>" class="btn btn-success">Export</a>
+<div class="c20"></div>
 <?= View::make('sections/jqgrid/form')->with('options', 'newsletter_options'); ?>

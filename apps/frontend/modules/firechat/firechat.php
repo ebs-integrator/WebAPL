@@ -26,10 +26,10 @@ class Firechat extends \Core\APL\ExtensionController {
         Actions::post('firechat/close', array($this, 'closesession'));
 
         Actions::post('firechat/getform', array($this, 'getform'));
+        Actions::post('firechat/sendmail', array($this, 'sendmail'));
 
         Actions::register('bottom_contructor', array($this, 'popup'));
         Actions::register('logo_contructor', array($this, 'topbutton'));
-        
     }
 
     public function display() {
@@ -99,15 +99,15 @@ class Firechat extends \Core\APL\ExtensionController {
 
         echo Template::moduleView($this->module_name, 'views.chat-popup', $data);
     }
-    
+
     public function topbutton() {
-        
+
         $personAcc = PersonModel::where(PersonModel::getField('for_audience'), 1)->count();
-        
+
         $data = array(
             'online' => $personAcc > 0
         );
-        
+
         echo Template::moduleView($this->module_name, 'views.chat-button', $data);
     }
 
@@ -172,9 +172,9 @@ class Firechat extends \Core\APL\ExtensionController {
 
     public function getform() {
         $this->closesession();
-        
+
         $id = \Input::get('id');
-        
+
         $data = array(
             'persons' => PersonModel::join(PersonLangModel::getTableName(), PersonLangModel::getField('person_id'), '=', PersonModel::getField('id'))
                     ->select(PersonModel::getField('id'), PersonLangModel::getField('first_name'), PersonLangModel::getField('last_name'))
@@ -183,13 +183,33 @@ class Firechat extends \Core\APL\ExtensionController {
                     ->where(PersonLangModel::getField('lang_id'), \Core\APL\Language::getId())
                     ->get()
         );
-        
+
         if ($id) {
             $data['person_selected'] = $id;
         }
-        
+
 
         return Template::moduleView($this->module_name, 'views.chat-form', $data);
+    }
+
+    public function sendmail() {
+        $session_id = \Session::get('chat_session_id');
+
+        $html = \Input::get('messages');
+
+        if ($session_id) {
+            $chat = \FireChatSession::find($session_id);
+            if ($chat) {
+                $data['html'] = $html;
+                Template::viewModule($this->module_name, function () use ($data, $chat) {
+                    \Mail::send('views.email-mess', $data, function($message) use ($chat) {
+                        $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'Firechat');
+                        $message->subject("Recent chat messages");
+                        $message->to($chat->user_email);
+                    });
+                });
+            }
+        }
     }
 
 }

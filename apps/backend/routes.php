@@ -31,6 +31,7 @@ Route::controller('feed', 'FeedController');
 Route::controller('log', 'LogController');
 Route::controller('var', 'VarController');
 Route::controller('user', 'UserController');
+Route::controller('settings', 'SettingsController');
 
 Route::get('/', 'HomeController@showDashboard');
 

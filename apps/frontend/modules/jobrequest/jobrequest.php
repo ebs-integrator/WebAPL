@@ -38,31 +38,58 @@ class Jobrequest extends \Core\APL\ExtensionController {
                         ), array(
                     'post_id' => 'required',
                     'name' => 'required',
-                    'upload' => 'required|mimes:pdf',
+                    'upload' => 'required',
         ));
-
+        
         $return = array(
             'message' => '',
             'error' => 0
         );
-
+        
         if ($validator->fails()) {
             $return['message'] = implode('<br>', $validator->messages()->all(':message'));
             $return['error'] = 1;
         } else {
             $post_id = Input::get('post_id');
 
+            $name =  Input::get('name');
+            
+            $filename = 'cv_' . $post_id . '_' . date("Y-m-d") . '_' . uniqid() . '.pdf';
+            $filepath = "/upload/cv/" ;
+
             $audience = new JobRequestModel;
             $audience->post_id = $post_id;
-            $audience->name = Input::get('name');
+            $audience->name = $name;
             $audience->save();
 
+            $attachFile = false;
+            
             if (Input::file('upload')->isValid()) {
-                Input::file('upload')->move($_SERVER['DOCUMENT_ROOT']."/upload/cv/", 'cv_' . $post_id . '_' . date("Y-m-d") . '_' . uniqid() . '.pdf');
+                $audience->cv_path = $filepath . $filename;
+                $audience->save();
+                $attachFile = $filepath . $filename;
+                Input::file('upload')->move($_SERVER['DOCUMENT_ROOT'] . $filepath, $filename);
             } else {
                 $return['message'] = 'Invalid file';
                 $return['error'] = 1;
             }
+            
+            Template::viewModule($this->module_name, function () use ($name, $attachFile) {
+                $sendToUsers = \User::withRole('user-getemails');
+                
+                $data['name'] = $name;
+                foreach ($sendToUsers as $user) {
+                    $data['user'] = $user;
+                    \Mail::send('views.email-request', $data, function($message) use ($user, $attachFile) {
+                        $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'SendMail');
+                        $message->subject("New job reqest");
+                        $message->to($user->email);
+                        if ($attachFile) {
+                            $message->attach($_SERVER['DOCUMENT_ROOT'] . $attachFile);
+                        }
+                    });
+                }
+            });
         }
 
         return $return;
