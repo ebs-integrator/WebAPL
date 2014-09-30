@@ -772,7 +772,109 @@ article:nth-child(3n-1){
     margin-left: 85px;
     margin-right:85px;
 }
-footer{
+.prefooter{
     width:100%;
     max-width:2580px;
+    height:403px;
+}
+footer {
+    height:500px;
+}
+.prefooter  .row1_l,.prefooter  .row1_r{
+    width:50%;
+    height:100%;
+    float: left;
+    position: relative;
+}
+.prefooter  .row1_l{
+    background:url('../img/foter_an.png')no-repeat right bottom #00bd9c;
+}
+.prefooter  .row1_r{
+    background-color:#fff;  
+}
+.prefooter  .row1_l .content,.prefooter  .row1_r .content{
+    width:640px;
+    padding-top:50px;
+    position:relative;
+    max-height: 355px;
+    overflow:hidden;
+    padding-bottom:20px;
+}
+.prefooter  .row1_l .content{
+    padding-right:70px;
+    float:right;
+    color:#fff;
+}
+.prefooter  .row1_r .content{
+    padding-left:65px;
+    padding-right:55px;
+}
+.prefooter .row1_l p.f_title,.prefooter .row1_r p.f_title{
+    font:35px 'AvenirNext-Bold';
+    text-transform: uppercase;
+    margin-bottom:15px;
+}
+.prefooter  .data{
+    font:12px 'AvenirNext-DemiBold';
+    height:30px;
+    display: inline-block;
+    padding:0px 10px;
+    line-height:30px;
+    color:#fff;
+    margin-bottom:10px;
+}
+.prefooter  .row1_l .data{    
+    background: #ff6577;
+}
+.prefooter .row1_r  .f_title{
+    color:#ff6577;
+}
+.prefooter  .row1_r .data{
+    background:#00d4d4;
+}
+.prefooter a.f_artc{
+    font:20px 'AvenirNext-DemiBold';
+    display:block;
+    margin-bottom:20px;
+    line-height:22px;
+}
+.prefooter a.f_artc:hover{
+    text-decoration:underline;
+}
+.prefooter .row1_l a.f_artc {
+    color:#fff;
+}
+.prefooter .row1_r a.f_artc {
+    color:#0382a0;
+}
+.prefooter .row1_r p{
+    font:17px 'open_sansregular';
+    line-height: 21px;
+    color:#797979;
+}
+.prefooter .row1_l p{
+    font:17px 'AvenirNext-Medium';
+    line-height: 21px;
+}
+.prefooter a.more{
+    display:block;
+    position:absolute;
+    width:22px;
+    height:16px;
+    margin-top:-3px;
+}
+.prefooter .row1_l a.more{
+    background:url('../img/white_arrow.png') no-repeat center;
+    right:90px;
+}
+.prefooter a.more{
+    background:url('../img/black_arrow.png') no-repeat center;
+    right:70px;
+}
+footer .left,footer .right{
+    width:50%;
+    float:left;
+}
+footer .left{
+    background:#333333;
 }
