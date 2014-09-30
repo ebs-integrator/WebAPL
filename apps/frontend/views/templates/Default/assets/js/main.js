@@ -42,6 +42,7 @@ $(document).ready(function() {
     });
     $('.cont .contact_us,.overlay').click(function() {
         $('.overlay').toggleClass('hidden');
+        $('header .contact .contact_us').toggleClass('active');
         $('.cont .cont_form').toggleClass('hidden');
     });
     $('.bxslider2').bxSlider({
