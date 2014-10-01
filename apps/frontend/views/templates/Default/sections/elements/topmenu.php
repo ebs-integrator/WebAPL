@@ -1,4 +1,8 @@
-<a href="<?= Language::url('/'); ?>"><img src="<?= res('assets/img/s_logo.png'); ?>" class="logo"></a>
+<?php if (isset($logo_home_sm) && $logo_home_sm) { ?>
+<a href="<?= Language::url('/'); ?>">
+    <img src="<?= url($logo_home_sm->path); ?>" title="<?= $logo_home_sm->name; ?>" alt="<?= $logo_home_sm->name; ?>" class="logo">
+</a>
+<?php } ?>
 <?php
 if (isset($general_pages)) {
     foreach ($general_pages as $item) {

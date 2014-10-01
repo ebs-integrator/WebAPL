@@ -18,11 +18,32 @@ class Newsletter extends \Core\APL\ExtensionController {
         $this->loadClass(array('NewsletterModel'));
 
         Actions::post('newsletter/subscribe', array($this, 'subscribe'));
+        Actions::get('newsletter/unsubscribe/{code}', array($this, 'unsubscribe'))->where(array('code' => '[A-Za-z0-9]+'));
+        
         Actions::register('bottom_widgets', array($this, 'widget'));
     }
 
     public function widget() {
         return Template::moduleView($this->module_name, 'views.newsletter-subscribe');
+    }
+    
+    public function unsubscribe($code) {
+        
+        \NewsletterModel::where('hash', $code)->update(array(
+            'enabled' => 1
+        ));
+        
+        return (new \PageController)->createPageFrom(function () {
+            
+                    Template::setPageTitle('Newsletter');
+                    Template::clearBreadCrumbs();
+                    Template::addBreadCrumb('/', 'Home');
+                    Template::addBreadCrumb('#', 'Newsletter');
+                    
+            return Template::moduleView($this->module_name, 'views.newsletter-unsubscribe');
+            
+        });
+        
     }
 
     public function subscribe() {

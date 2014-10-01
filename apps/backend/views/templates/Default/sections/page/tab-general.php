@@ -50,7 +50,7 @@
                             $state = '';
                         }
                         ?>
-                        <option value="<?= $view_key; ?>" <?= $state; ?>><?= $view_mod['name']; ?></option>
+                        <option data-src="sdfsdfd" value="<?= $view_key; ?>" <?= $state; ?>><?= $view_mod['name']; ?></option>
                     <?php } ?>
                     <?php if (!$finded && isset($page->view_mod) && $page->view_mod) { ?>
                         <option value="<?= $page->view_mod; ?>" selected>Undefined (<?= $page->view_mod; ?>):inactive</option>

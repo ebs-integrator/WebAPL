@@ -1,7 +1,7 @@
-<button class="home_chat firechat-start <?= $online ? 'active' : ''; ?>">
+<button class="home_chat <?= $online ? 'firechat-start active' : ''; ?>">
     <div class="pot"></div>
     <div class="pct">
         <p><?= varlang('discuta'); ?> <span><?= varlang('online'); ?></span></p>
-        <span><?= varlang('offline'); ?></span>
+        <span><?= $online ? varlang('online') : varlang('offline'); ?></span>
     </div>
 </button>

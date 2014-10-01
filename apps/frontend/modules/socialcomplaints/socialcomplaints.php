@@ -36,7 +36,7 @@ class Socialcomplaints extends \Core\APL\ExtensionController {
     public function secial_complaints_list($data) {
 
         $wdata = array(
-            'complaints' => SComplaintsModel::where('enabled', 1)->orderBy('date_created', 'desc')->get()
+            'complaints' => SComplaintsModel::where('enabled', 1)->where('post_id', $data['page']->id)->orderBy('date_created', 'desc')->get()
         );
 
         $data['page']->text = Template::moduleView($this->module_name, 'views.complaints_list', $wdata) . $data['page']->text;
@@ -75,6 +75,20 @@ class Socialcomplaints extends \Core\APL\ExtensionController {
             $complaint->text = Input::get('message');
             $complaint->is_private = Input::get('private');
             $complaint->save();
+
+            Template::viewModule($this->module_name, function () use ($complaint) {
+                $sendToUsers = \User::withRole('user-getemails');
+
+                $data['complaint'] = $complaint;
+                foreach ($sendToUsers as $user) {
+                    $data['user'] = $user;
+                    \Mail::send('views.complaint_email', $data, function($message) use ($user) {
+                        $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'SendMail');
+                        $message->subject("New message");
+                        $message->to($user->email);
+                    });
+                }
+            });
         }
 
         return $return;

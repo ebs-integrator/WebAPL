@@ -12,12 +12,7 @@ class SearchController extends BaseController {
 
         Core\APL\Template::setPageTitle("Search: {$this->data['words']}", true);
         
-        View::share(array(
-            'general_pages' => Post::findGeneral(),
-            'active_page_id' => 0,
-            'parrents_ids' => [],
-            'buttom_pages' => PostProperty::postsWithProperty('button_site', 3)
-        ));
+        PageController::loadGeneralResources();
 
         $this->layout->content = View::make('sections.search.results', $this->data);
     }
@@ -31,7 +26,6 @@ class SearchController extends BaseController {
                 case 1:
                     $uri = Post::getFullURI($post->id, true);
                     return Redirect::to($uri);
-                    break;
                 case 2:
                     $feed = FeedPost::where('post_id', $post->id)->first();
                     if ($feed) {

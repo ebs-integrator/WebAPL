@@ -44,7 +44,8 @@ class UploaderController extends BaseController {
         $data = array(
             'module_id' => Input::get('module_id'),
             'module_name' => Input::get('module_name'),
-            'num' => Input::get('num')
+            'num' => Input::get('num'),
+            'path' => Input::get('upath')
         );
         if (Input::hasFile('upload_file')) {
             $file = Input::file('upload_file');
@@ -54,6 +55,11 @@ class UploaderController extends BaseController {
 
             $filename = Core\APL\Actions::toAscii($name) . '_' . sha1(uniqid() . $name) . "." . $extension;
 
+//            $upath = Files::fullDir($data['path']);
+//            if (!file_exists($upath)) {
+//                mkdir($upath);
+//            }
+            
             $uploadSuccess = $file->move(Files::fullDir(), $filename);
 
             if ($uploadSuccess) {

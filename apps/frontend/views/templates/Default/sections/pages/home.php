@@ -1,6 +1,8 @@
 <div>
     <div class="logo">
-        <img src="<?= res('assets/img/logo.png'); ?>">
+        <?php if (isset($logo_home) && $logo_home) { ?>
+            <img src="<?= url($logo_home->path); ?>" title="<?= $logo_home->name; ?>" alt="<?= $logo_home->name; ?>">
+        <?php } ?>
     </div>
     <div class="menu">
 
@@ -21,7 +23,7 @@
                 </div>
             <?php } ?>
         </div>
-        
+
     </div>
 </div>
 <section>

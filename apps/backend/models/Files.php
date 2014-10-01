@@ -11,14 +11,15 @@ class Files extends Eloquent {
     );
     public static $upload_dir = 'upload';
 
-    public static function widget($module_name, $module_id, $num = 0, $accept = array()) {
+    public static function widget($module_name, $module_id, $num = 0, $path = '') {
         if (empty($accept)) {
             $accept = Files::$default_accept_extensions;
         }
         return View::make('sections.file.widget')->with(array(
                     'module_name' => $module_name,
                     'module_id' => $module_id,
-                    'num' => $num
+                    'num' => $num,
+                    'path' => $path
         ));
     }
 

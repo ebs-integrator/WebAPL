@@ -12,3 +12,9 @@
     </table>
 
 </form>
+
+<h4>Home logo</h4>
+<?=Files::widget('website_logo', 1, 1); ?>
+
+<h4>Home logo (small)</h4>
+<?=Files::widget('website_logo_sm', 1, 1); ?>
