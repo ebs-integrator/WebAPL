@@ -38,24 +38,28 @@
         <tr>
             <th>View mod:</th>
             <td>
-                <select name="page[view_mod]" class='chzn-select'>
-                    <option value="">Default</option>
-                    <?php $finded = false; ?>
-                    <?php
-                    foreach ($view_mods as $view_key => $view_mod) {
-                        if (isset($page->view_mod) && $page->view_mod == $view_key) {
-                            $state = 'selected';
-                            $finded = true;
-                        } else {
-                            $state = '';
-                        }
-                        ?>
-                        <option data-src="sdfsdfd" value="<?= $view_key; ?>" <?= $state; ?>><?= $view_mod['name']; ?></option>
-                    <?php } ?>
-                    <?php if (!$finded && isset($page->view_mod) && $page->view_mod) { ?>
-                        <option value="<?= $page->view_mod; ?>" selected>Undefined (<?= $page->view_mod; ?>):inactive</option>
-                    <?php } ?>
-                </select>
+                <div style="width: 90%; display: inline-block;">
+                    <select name="page[view_mod]" class='chzn-select'>
+                        <option value="">Default</option>
+                        <?php $finded = false; ?>
+                        <?php
+                        foreach ($view_mods as $view_key => $view_mod) {
+                            if (isset($page->view_mod) && $page->view_mod == $view_key) {
+                                $state = 'selected';
+                                $finded = true;
+                            } else {
+                                $state = '';
+                            }
+                            ?>
+                            <option data-src="sdfsdfd" value="<?= $view_key; ?>" <?= $state; ?>><?= $view_mod['name']; ?></option>
+                        <?php } ?>
+                        <?php if (!$finded && isset($page->view_mod) && $page->view_mod) { ?>
+                            <option value="<?= $page->view_mod; ?>" selected>Undefined (<?= $page->view_mod; ?>):inactive</option>
+                        <?php } ?>
+                    </select>
+                </div>
+
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#pageViewHelp"><i class="glyphicon glyphicon-asterisk"></i></button>
             </td>
         </tr>
         <tr>
@@ -104,3 +108,44 @@
         <button type="button" id="delete-menu" class="btn btn-danger pull-right">Delete</button>
     <?php } ?>
 </form>
+
+
+<!-- Modal -->
+<div class="modal fade" id="pageViewHelp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">View mod help</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <tr>
+                            <th>NUME</th>
+                            <th>INFO</th>
+                            <th>SCREEN</th>
+                        </tr>
+                    <?php
+                    foreach ($view_mods as $view_key => $view_mod) {
+                        ?>
+                        <tr>
+                            <th><?= $view_mod['name']; ?></th>
+                            <td><?=$view_mod['info'];?></td>
+                            <td>
+                            <?php if ($view_mod['screen']) { ?>
+                                <img src="<?=$view_mod['screen'];?>" style="max-width: 100px; max-height: 70px;" />
+                            <?php } ?>
+                            </td>
+                        </tr>
+                        <?php
+                    }
+                    ?>
+
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

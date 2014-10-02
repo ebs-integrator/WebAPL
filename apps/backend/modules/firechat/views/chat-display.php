@@ -50,4 +50,16 @@
             (new Firebase('https://aplchat.firebaseio.com/room-metadata/' + roomId)).child('closed').set(1);
             jQuery.post('<?= url('firechat/closeroom'); ?>', {roomId: roomId, person_id: '<?= $person->id; ?>'});
         });
+
+        chat._chat.on('room-exit-after', function(roomId) {
+            var save_messages = confirm('Send chat on email?');
+            if (save_messages) {
+                var html = $(".tab-content > .tab-pane.active .chat").html();
+                jQuery.post('<?= url('firechat/sendmail'); ?>', {messages: html, id:'<?= $person->id; ?>'}, function() {
+                    alert('Email-ul a fost trimis');
+                });
+            }
+
+            chat._chat.sendSystemMessage(roomId, uname + " a parasit chat-ul", 'default');
+        });
 </script>
