@@ -2,11 +2,11 @@
     <div class="left">
         <div class="f_menu">
             <div class="content">
-            <ul>
-                <li><a href="javascript:;">Orașul</a></li>
-                <li><a href="javascript:;">Harta site-ului</a></li>
-                <li><a href="javascript:;">Date de contact utile </a></li>
-            </ul>                
+                <ul>
+                    <li><a href="javascript:;">Orașul</a></li>
+                    <li><a href="javascript:;">Harta site-ului</a></li>
+                    <li><a href="javascript:;">Date de contact utile </a></li>
+                </ul>                
             </div>
         </div>
         <div class="content">
@@ -18,11 +18,30 @@
                 <li><a href="javascript:;"><img src="img/gplus.png"></a></li>
                 <li><a href="javascript:;"><img src="img/rss.png"></a></li>
             </ul>
+            <div class="clearfix50"></div>
+            <form method="" action="" class="search">
+                <label>Căutare prin site</label>
+                <input type="text">
+                <input type="submit" value="Căutare">
+            </form>
+            <form class="newsletter_subscribe_form" action="">
+                <label>Abonează-te la Buletinul informativ al primăriei</label>
+                <input name="email" type="text" placeholder="Email-dvs">
+                <input type="submit" value="Abonează-te">
+            </form>
+            <p class="copy"><a href="javascript:;">Cititi mai multe</a> despre licențiere CC, sau  <a href="javascript:;">utilizati licența</a> pentru propriul dvs. material.</p>
+
         </div>
+
     </div>   
     <div class="right">
+        <div id="map-canvas2" style="width:100%; height:500px;"></div>
         <div class="content">
-            
+            <p class="y_info">Adresa primăriei Orașului Strășeni</p>
+            <p class="w_info">
+                <span>Strada Ștefan cel Mare 24, MD 2034</span>
+                <span>Orașul Strășeni</span>
+            </p>
         </div>
     </div>
     <div class="clearfix"> </div>

@@ -348,6 +348,11 @@ textarea {
     content: " ";
     height: 100px;
 }
+.clearfix50{
+    clear: both;
+    content: " ";
+    height: 50px;
+}
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -917,4 +922,80 @@ footer .f_social li a{
     display: table-cell;
     vertical-align: middle;
     text-align: center;
+}
+footer label{
+    color:#767676;
+    font:14px 'AvenirNext-Medium';
+    display:block;
+    margin-bottom:3px;
+}
+footer input[type=text]{
+    height:34px;
+    width:220px;
+    font:14px 'AvenirNext-Medium';
+    color:#5e5e5e;
+    padding:0 12px;
+}
+footer .search input[type=submit]{
+    height:34px;
+    width:136px;
+    border:2px solid #00bd9c;
+    background:transparent;
+    color:#00bd9c;
+    font:14px 'AvenirNext-Bold';
+    text-transform: uppercase;
+}
+footer .newsletter_subscribe_form{
+    margin-top:25px;
+}
+footer .newsletter_subscribe_form input[type=submit]{
+    height:34px;
+    width:136px;
+    background:transparent;
+    border:2px solid #ff6477;
+    color:#ff6477;
+    font:14px 'AvenirNext-Bold';
+    text-transform: uppercase;
+}
+footer .copy{
+    color:#7b7b7b;
+    font:14px 'AvenirNext-Medium';
+    margin-top:85px;
+}
+footer .copy a{
+    color:#c5c5c5;
+    text-decoration: underline;
+}
+footer .right{
+    position:relative;
+    background:rgba(0,0,0,0.61);
+    height:500px;
+}
+footer #map-canvas2{
+    position:absolute;
+    z-index:-1;
+}
+footer .right p.y_info{
+    color:#fffe86;
+    font:35px 'AvenirNext-DemiBold';
+    margin-top:75px;
+    margin-left:62px;
+}
+footer .right p.w_info{
+    margin-top:50px;
+    color:#fff;
+    font:29px 'AvenirNext-Medium';
+    margin-left:62px;
+}
+footer .right p.w_info span{
+    display:block;
+}
+.page_header{
+    width:100%;
+    max-width:2580px;    
+    height:320px;
+    background: -webkit-linear-gradient(left,#f7f7f7,#f7f7f7 35%,white 35%,white);
+    background: linear-gradient(to right,#f7f7f7,#f7f7f7 35%,white 35%,white);
+    background: -o-linear-gradient(left, #f7f7f7,#f7f7f7 35,white 35,white); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,#f7f7f7,#f7f7f7 35%,white 35,white);
 }
