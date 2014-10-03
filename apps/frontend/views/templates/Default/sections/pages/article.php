@@ -29,15 +29,17 @@
                 12 => 'Decembrie'
             );
             ?>
-            <div class="m_criteria">
-                <?php if (isset($months[intval($current_month) - 1])) { ?>
-                    <a href="<?= $page_url; ?>?year=<?= $current_year; ?>&month=<?= intval($current_month) - 1; ?>" class="left"></a>
-                <?php } ?>
-                <span><?= $months[intval($current_month)]; ?> <?= $current_year; ?></span>
-                <?php if (isset($months[intval($current_month) + 1])) { ?>
-                    <a href="<?= $page_url; ?>?year=<?= $current_year; ?>&month=<?= intval($current_month) + 1; ?>" class="right"></a>
-                <?php } ?>
-            </div> 
+            <?php if (isset($current_month) && $current_month) { ?>
+                <div class="m_criteria">
+                    <?php if (isset($months[intval($current_month) - 1])) { ?>
+                        <a href="<?= $page_url; ?>?year=<?= $current_year; ?>&month=<?= intval($current_month) - 1; ?>" class="left"></a>
+                    <?php } ?>
+                    <span><?= $months[intval($current_month)]; ?> <?= $current_year; ?></span>
+                    <?php if (isset($months[intval($current_month) + 1])) { ?>
+                        <a href="<?= $page_url; ?>?year=<?= $current_year; ?>&month=<?= intval($current_month) + 1; ?>" class="right"></a>
+                    <?php } ?>
+                </div> 
+            <?php } ?>
 
             <?= Core\APL\Actions::call('page_top_container', $page); ?>
 
@@ -47,7 +49,7 @@
 
             <div class="clearfix50"></div>
             <?php if ($page->have_socials) { ?>
-                <?=View::make('sections.elements.socials', array('url' => $page_url));?>
+                <?= View::make('sections.elements.socials', array('url' => $page_url)); ?>
             <?php } ?>
             <div class="hr_grey"></div>
         </div>

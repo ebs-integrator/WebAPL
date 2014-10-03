@@ -8,7 +8,8 @@ $(document).ready(function() {
     $('.calendar_slider').bxSlider({
         pager: false,
         controls: true,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        startSlide: typeof start_month !== 'undefined' ? start_month : 0
     });
 
 

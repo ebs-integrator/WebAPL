@@ -5,6 +5,7 @@ namespace Core\APL\Modules;
 use Core\APL\Actions,
     Core\APL\Template,
     ActeLocaleModel,
+    Input,
     jQgrid;
 
 class Actelocale extends \Core\APL\ExtensionController {
@@ -23,9 +24,11 @@ class Actelocale extends \Core\APL\ExtensionController {
         Actions::get('actelocale/create', array('before' => 'auth', array($this, 'create')));
         Actions::get('actelocale/edit/{id}', array('before' => 'auth', array($this, 'editact')));
 
+        Actions::post('actelocale/save', array('before' => 'auth', array($this, 'save')));
+
         Actions::register('construct_left_menu', array($this, 'left_menu_item'));
 
-        //Template::registerViewMethod('page', $this->page_view_mod, 'Pagina calendar', null, true);
+        Template::registerViewMethod('page', 'acteList', 'Lista de actelocale', null, true);
 
         $this->layout = Template::mainLayout();
     }
@@ -69,10 +72,24 @@ class Actelocale extends \Core\APL\ExtensionController {
 
         if ($data['act']) {
             $this->layout->content = Template::moduleView($this->module_name, 'views.form', $data);
- 
+
             return $this->layout;
         } else {
             throw new Exception("Record not found");
+        }
+    }
+
+    public function save() {
+        $id = Input::get('id');
+
+        $item = \ActeLocaleModel::find($id);
+        if ($item) {
+            $item->doc_nr = Input::get('doc_nr');
+            $item->title = Input::get('title');
+            $item->date_upload = Input::get('date_upload');
+            $item->type = Input::get('type');
+            $item->emitent = Input::get('emitent');
+            $item->save();
         }
     }
 
