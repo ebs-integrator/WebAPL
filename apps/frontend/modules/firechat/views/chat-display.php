@@ -125,11 +125,11 @@
     var chatRef = new Firebase('https://aplchat.firebaseio.com');
     var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
 
-    var chatRun = function (uid) {
+    var chatRun = function(uid) {
 <?php if ($chat->roomId) { ?>
             chat._chat.enterRoom('<?= $chat->roomId; ?>');
 <?php } else { ?>
-            chat._chat.createRoom('With <?= $chat->user_name; ?>', 'private', function (roomId) {
+            chat._chat.createRoom('With <?= $chat->user_name; ?>', 'private', function(roomId) {
                 chat._chat.enterRoom(roomId);
 
                 var fredNameRef = new Firebase('https://aplchat.firebaseio.com/room-metadata/' + roomId);
@@ -138,18 +138,34 @@
 
                 jQuery.post('<?= url('firechat/newroom'); ?>', {roomId: roomId, userId: uid});
             });
+
+            chat._chat.on('room-enter', function(room) {
+                chat._chat.sendSystemMessage(room.id, "Acest chat se inregistreaza");
+            });
 <?php } ?>
+
     };
 
-    var simpleLogin = new FirebaseSimpleLogin(chatRef, function (err, user) {
+    var simpleLogin = new FirebaseSimpleLogin(chatRef, function(err, user) {
         if (user) {
             chat.setUser(user.id, '<?= $chat->user_name; ?>');
 
-            setTimeout(function () {
+            setTimeout(function() {
                 chatRun(user.id);
             }, 500);
         } else {
             simpleLogin.login('anonymous');
         }
     });
+
+    var room = null;
+    chat._chat.on('room-enter', function(r) {
+        room = r;
+    });
+
+    window.leaveChat = function() {
+        chat._chat.sendSystemMessage(room.id, "<?= $chat->user_name; ?> a parasit chat-ul", 'default', function () {
+            chat._chat.leaveRoom(room.id);
+        });
+    };
 </script>

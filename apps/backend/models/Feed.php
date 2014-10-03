@@ -2,6 +2,8 @@
 
 class Feed extends Eloquent {
 
+    use EloquentTrait;
+    
     protected $table = 'apl_feed';
     public $timestamps = false;
     
