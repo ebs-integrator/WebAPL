@@ -5,6 +5,10 @@ class InstallController extends BaseController {
     protected $layout = 'install::layout';
 
     public function getIndex() {
+        if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/install/installed')) {
+            return Illuminate\Support\Facades\Redirect::to('install/final');
+        }
+        
         $this->layout->step = 1;
         $this->layout->content = View::make('install::step1');
         return $this->layout;
@@ -67,31 +71,26 @@ class InstallController extends BaseController {
             $sql = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/install/res/dump.sql');
 
             $result = $dbh->exec($sql);
-            if ($result) {
 
-                $databaseFile = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/install/res/database.php');
+            $databaseFile = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/install/res/database.php');
 
-                $databaseFile = str_replace(array(
-                    '{DBHOST}',
-                    '{DBNAME}',
-                    '{DBUSER}',
-                    '{DBPASS}'
-                        ), array(
-                    $dbhost,
-                    $dbname,
-                    $dbuser,
-                    $dbpass
-                        ), $databaseFile);
+            $databaseFile = str_replace(array(
+                '{DBHOST}',
+                '{DBNAME}',
+                '{DBUSER}',
+                '{DBPASS}'
+                    ), array(
+                $dbhost,
+                $dbname,
+                $dbuser,
+                $dbpass
+                    ), $databaseFile);
 
-                file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/apps/frontend/config/database.php', $databaseFile);
-                file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/apps/backend/config/database.php', $databaseFile);
+            file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/apps/frontend/config/database.php', $databaseFile);
+            file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/apps/backend/config/database.php', $databaseFile);
 
-                Session::put('step3', true);
-                return Illuminate\Support\Facades\Redirect::to('install/step4');
-            } else {
-                Session::put('step3', false);
-                return Illuminate\Support\Facades\Redirect::to('install/step3')->with('conerror', 'Migrate database error');
-            }
+            Session::put('step3', true);
+            return Illuminate\Support\Facades\Redirect::to('install/step4');
         } catch (PDOException $ex) {
             Session::put('step3', false);
             return Illuminate\Support\Facades\Redirect::to('install/step3')->with('conerror', 'Invalid dates!');
@@ -183,21 +182,18 @@ class InstallController extends BaseController {
                 $urole->save();
             }
 
-            unlink($_SERVER['DOCUMENT_ROOT'] . "/install/uninstalled");
-
             Session::put('step5', true);
-            return Illuminate\Support\Facades\Redirect::to('install/step6');
+            
+            copy($_SERVER['DOCUMENT_ROOT'] . '/install/uninstalled', $_SERVER['DOCUMENT_ROOT'] . '/install/installed');
+            
+            return $this->getFinal();
         } else {
             Session::put('step5', false);
             return Illuminate\Support\Facades\Redirect::to('install/step5')->with('uerror', 'Password confirmation failed');
         }
     }
 
-    public function getStep6() { 
-        if (!Session::get('step5')) {
-            return Redirect::to('install/step5');
-        }
-
+    public function getFinal() {
         $this->layout->step = 6;
 
         $data = array();
@@ -205,7 +201,7 @@ class InstallController extends BaseController {
         $this->layout->content = View::make('install::step6', $data);
         return $this->layout;
     }
-    
+
     public function getRemove() {
         File::deleteDirectory($_SERVER['DOCUMENT_ROOT'] . "/install");
         return Illuminate\Support\Facades\Redirect::to('/');

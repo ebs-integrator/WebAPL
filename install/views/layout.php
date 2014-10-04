@@ -14,8 +14,9 @@
     <body>
 
         <div class="container-fluid">
-            <div class="row col-sm-6 col-sm-offset-3">
-                <nav class="navbar navbar-inverse" role="navigation">
+            <div class="col-sm-8"><br></div>
+            <div class="row col-sm-8 col-sm-offset-2">
+                <nav class="navbar navbar-default" role="navigation">
                     <div class="container-fluid">
                         <div class="navbar-header">
                             <span class="navbar-brand">INSTALARE PLATFORMA</span>
@@ -23,9 +24,12 @@
 
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
                             <ul class="nav navbar-nav">
-                                <li class="<?=isset($step) && $step == 1 ? 'active' : '';?>"><a href="#">Step 1</a></li>
-                                <li class="<?=isset($step) && $step == 2 ? 'active' : '';?>"><a href="#">Step 2</a></li>
-                                <li class="<?=isset($step) && $step == 3 ? 'active' : '';?>"><a href="#">Step 3</a></li>
+                                <li class="<?=isset($step) && $step == 1 ? 'active' : '';?>"><a>Welcome</a></li>
+                                <li class="<?=isset($step) && $step == 2 ? 'active' : '';?>"><a>Step 2</a></li>
+                                <li class="<?=isset($step) && $step == 3 ? 'active' : '';?>"><a>Step 3</a></li>
+                                <li class="<?=isset($step) && $step == 4 ? 'active' : '';?>"><a>Step 4</a></li>
+                                <li class="<?=isset($step) && $step == 5 ? 'active' : '';?>"><a>Step 5</a></li>
+                                <li class="<?=isset($step) && $step == 6 ? 'active' : '';?>"><a>Finish</a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.container-fluid -->

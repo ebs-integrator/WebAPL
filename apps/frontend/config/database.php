@@ -1,18 +1,13 @@
 <?php
 return array(
     'fetch' => PDO::FETCH_CLASS,
-    'default' => 'mysql',
+    'default' => 'sqlite',
     'connections' => array(
-        'mysql' => array(
-            'driver' => 'mysql',
-            'host' => 'sga.webhost1.ru',
-            'database' => 'kopceak1_apl',
-            'username' => 'kopceak1_apl',
-            'password' => 'apl42fl',
-            'charset' => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix' => '',
-        )
+        'sqlite' => array(
+			'driver'   => 'sqlite',
+			'database' => __DIR__.'/../database/production.sqlite',
+			'prefix'   => '',
+		)
     ),
     'migrations' => 'migrations',
     'redis' => array(
