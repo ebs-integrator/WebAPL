@@ -1,5 +1,5 @@
 <?php include "blocks/home.php"; ?>
-<section>
+<section class="global">
     <div class="wrap global">
         <article>
             <div class="acticle_img">

@@ -146,13 +146,17 @@ function initialize() {
     var myLatlng = new google.maps.LatLng(47.148306, 28.617051);
 
     var center = new google.maps.LatLng(47.151994, 28.610020);
-    map = new google.maps.Map(small_map, {
-        zoom: 14,
-        center: center,
-        disableDefaultUI: true
-    });
 
 
+
+    if (small_map !== null) {
+        map = new google.maps.Map(small_map, {
+            zoom: 14,
+            center: center,
+            disableDefaultUI: true
+        });
+
+    }
 
     if (big_map !== null) {
         map2 = new google.maps.Map(big_map, {
