@@ -810,6 +810,7 @@ header .contact .cont .cont_form input[type=submit]{
     left:0px;
     right:0px;
     bottom:0px;
+    margin:0 auto;
 }
 .menu .box{
     width:260px;

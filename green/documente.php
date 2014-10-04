@@ -54,14 +54,7 @@
                 <li class="pdf"><a href="javascript:;">Cerere de stabilire a sumei datorate pentru ocuparea domeniului public cu cale de acces  <span class="dwnl"></span></a></li>
                 <li class="doc"><a href="javascript:;">Cerere eliberare acord de functionare <span class="dwnl"></span></a></li>
             </ul>
-            <div class='pag'>
-                <span class='w_p'>Pagina</span>
-                <!--<span class='p_n'><a href='javascript:;'>Precedenta</a></span>-->
-                <ul>
-                    <?php echo $presenter->render(); ?>
-                </ul>
-                <!--<span class='n_p'><a href='javascript:;'>următoarea</a></span>-->
-            </div>
+            
             <div class="clearfix50"></div>
             <table>
                 <tr>
