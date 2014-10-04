@@ -200,7 +200,10 @@ class Template {
             );
         } else {
             foreach ($paths as &$path) {
-                $path = $path . '/' . self::$template . '/';
+                $tpath = $path . '/' . self::$template . '/';
+                if (file_exists($tpath)) {
+                    $path = $tpath;
+                }
             }
         }
         return $paths;
