@@ -278,6 +278,9 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
     _onLeaveRoom: function(roomId) {
       this._invokeEventCallbacks('room-exit', roomId);
     },
+    _onAfterLeaveRoom: function(roomId) {
+      this._invokeEventCallbacks('room-exit-after', roomId);
+    },
 
     // Event to listen for notifications from administrators and moderators.
     _onNotification: function(snapshot) {
@@ -436,6 +439,8 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
   Firechat.prototype.leaveRoom = function(roomId) {
     var self = this,
         userRoomRef = self._firebase.child('room-users').child(roomId);
+
+    self._onAfterLeaveRoom(roomId);
 
     // Remove listener for new messages to this room.
     self._messageRef.child(roomId).off();

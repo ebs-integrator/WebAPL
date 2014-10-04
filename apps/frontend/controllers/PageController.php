@@ -51,12 +51,9 @@ class PageController extends BaseController {
                 if ($realURI === $query) {
 
                     // get global data
-                    $this->data['general_pages'] = Post::findGeneral();
                     View::share(array(
-                        'general_pages' => $this->data['general_pages'],
                         'active_page_id' => $this->data['page']->id,
                         'parrents_ids' => $parrents_ids,
-                        'buttom_pages' => PostProperty::postsWithProperty('button_site', 3),
                     ));
 
                     // Verify if this page is clone
@@ -89,6 +86,7 @@ class PageController extends BaseController {
                     Post::oneView($this->data['page']['id']);
 
                     // load page
+                    PageController::loadGeneralResources();
                     if ($this->data['page']->general_node) {
                         return $this->loadHome();
                     } else {
@@ -115,6 +113,26 @@ class PageController extends BaseController {
         }
     }
 
+    public static function loadGeneralResources() {
+        View::share(array(
+            'general_pages' => Post::findGeneral(),
+            'buttom_pages' => PostProperty::postsWithProperty('button_site', 3),
+            'logo_home_sm' => Files::getfile('website_logo_sm', 1),
+            'phone_page' => PostProperty::postWithProperty('phone-page')
+        ));
+    }
+    
+    public function createPageFrom($function) {
+        $this->layout = 'layout/page';
+        $this->setupLayout();
+
+        PageController::loadGeneralResources();
+        
+        $this->layout->content = call_user_func($function);
+
+        return $this->layout;
+    }
+
     public function loadPage() {
         $this->layout = 'layout/page';
         $this->setupLayout();
@@ -127,6 +145,8 @@ class PageController extends BaseController {
     public function loadHome() {
         $this->layout = 'layout/home';
         $this->setupLayout();
+
+        View::share('logo_home', Files::getfile('website_logo', 1));
 
         $this->layout->content = PageView::run($this->data, 'homeView');
 

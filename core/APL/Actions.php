@@ -74,7 +74,7 @@ class Actions {
      * @param object $function
      */
     public static function get($tag, $function) {
-        Route::get($tag, $function);
+        return Route::get($tag, $function);
     }
 
     /**
@@ -83,7 +83,7 @@ class Actions {
      * @param object $function
      */
     public static function post($tag, $function) {
-        Route::post($tag, $function);
+        return Route::post($tag, $function);
     }
 
     public static function toAscii($str, $replace = array(), $delimiter = '-') {

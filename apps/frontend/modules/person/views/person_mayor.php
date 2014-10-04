@@ -10,13 +10,15 @@ foreach ($groups as $group) {
             </div>
             <p class="vp_name"><?= $person->first_name; ?> <?= $person->last_name; ?></p>
             <span class='quote'><?= $person->motto; ?></span>
-            <button class="home_chat firechat-start <?= $person->for_audience ? 'active firechat-start-with' : ''; ?>" data-personid="<?= $person->person_id; ?>">
-                <div class="pot"></div>
-                <div class="pct">
-                    <p><?= varlang('discuta'); ?> <span><?= varlang('online'); ?></span></p>
-                    <span><?= $person->for_audience ? varlang('online') : varlang('offline'); ?></span>
-                </div>
-            </button>
+            <?php if ($person->for_audience) { ?>
+                <button class="home_chat firechat-start <?= $person->for_audience ? 'active firechat-start-with' : ''; ?>" data-personid="<?= $person->person_id; ?>">
+                    <div class="pot"></div>
+                    <div class="pct">
+                        <p><?= varlang('discuta'); ?> <span><?= varlang('online'); ?></span></p>
+                        <span><?= $person->for_audience ? varlang('online') : varlang('offline'); ?></span>
+                    </div>
+                </button>
+            <?php } ?>
             <div class='clearfix'></div>
         </div>
         <div class="bgr">

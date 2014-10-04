@@ -7,6 +7,7 @@
     <input type="hidden" name="module_name" value="<?= $module_name; ?>" />
     <input type="hidden" name="module_id" value="<?= $module_id; ?>" />
     <input type="hidden" name="num" value="<?= $num; ?>" />
+    <input type="hidden" name="upath" value="<?= $path; ?>" />
     <input class="select_file button_<?= $module_name; ?>_<?= $module_id; ?> hidden" type="file" name="upload_file" />
 </form>
 <form action="<?= url('uploader/add'); ?>" method="post">

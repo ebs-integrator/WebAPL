@@ -31,7 +31,7 @@
                 'persons' => $persons
             ));
             ?>
-<?php } ?>
+        <?php } ?>
     </div>
 </div>
 
@@ -39,7 +39,7 @@
     $(document).ready(function($) {
         //$("#firechat")
 
-        var current_person = <?=isset($chat) && $chat->active ? $chat->person_id : 0;?>;
+        var current_person = <?= isset($chat) && $chat->active ? $chat->person_id : 0; ?>;
 
         var startChat = function(id) {
             $(".firechat-photo, .firechat-name").hide();
@@ -52,7 +52,7 @@
         $("body").on('click', '.firechat-start-with', function() {
             if (current_person > 0)
                 return alert('Chat session already open!');
-            
+
             var person = $(this).data('personid');
             if (current_person != person) {
                 startChat(person);
@@ -62,13 +62,16 @@
         $("body").on("click", ".firechat-start", function() {
             if (current_person > 0)
                 return alert('Chat session already open!');
-            
+
             startChat(0);
         });
 
         $("body").on("click", ".firechat-close", function() {
-            jQuery.post('<?= url('firechat/close'); ?>', {}, function () {
-                document.getElementById("firechatIframe").contentWindow.leaveChat();
+            jQuery.post('<?= url('firechat/close'); ?>', {}, function() {
+                var cframe = document.getElementById("firechatIframe");
+                if (cframe) {
+                    cframe.contentWindow.leaveChat();
+                }
                 current_person = 0;
                 $("#firechat").slideToggle(500);
             });
@@ -88,7 +91,7 @@
 
         $("body").on("submit", ".firechat-register", function(e) {
             e.preventDefault();
-            
+
             $.post('<?= url('firechat/register'); ?>', $(this).serialize(), function(data) {
                 if (data.error === 0) {
                     $("#firechat .content").html(data.html);
@@ -96,7 +99,7 @@
                     $(".firechat-photo img").attr('src', data.person.photo);
 
                     $(".firechat-photo, .firechat-name").show();
-                    
+
                     current_person = data.person.id;
                 } else {
                     alert('Chat error!');

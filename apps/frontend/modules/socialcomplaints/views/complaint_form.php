@@ -6,6 +6,7 @@
         <p class="ftb">Formular de completare</p>
         <div class="form_error"></div>
         <div class="content">
+            <input type="hidden" name="post_id" value="" />
             <div class="nmpm">
                 <label>Numele Prenume*</label>
                 <input name="name" type="text">

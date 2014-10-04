@@ -1,15 +1,10 @@
 <?php
 
-/*
-  |--------------------------------------------------------------------------
-  | Application Routes
-  |--------------------------------------------------------------------------
-  |
-  | Here is where you can register all of the routes for an application.
-  | It's a breeze. Simply tell Laravel the URIs it should respond to
-  | and give it the Closure to execute when that URI is requested.
-  |
- */
+$unistalled = Event::fire('APL.install.check');
+if ($unistalled) {
+    Event::fire('APL.install.run');
+    return;
+}
 
 Event::fire('APL.modules.load');
 

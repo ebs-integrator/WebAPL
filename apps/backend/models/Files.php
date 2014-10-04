@@ -11,14 +11,15 @@ class Files extends Eloquent {
     );
     public static $upload_dir = 'upload';
 
-    public static function widget($module_name, $module_id, $num = 0, $accept = array()) {
+    public static function widget($module_name, $module_id, $num = 0, $path = '') {
         if (empty($accept)) {
             $accept = Files::$default_accept_extensions;
         }
         return View::make('sections.file.widget')->with(array(
                     'module_name' => $module_name,
                     'module_id' => $module_id,
-                    'num' => $num
+                    'num' => $num,
+                    'path' => $path
         ));
     }
 
@@ -42,7 +43,7 @@ class Files extends Eloquent {
     }
 
     public static function fullDir($file = '') {
-        return $_SERVER['DOCUMENT_ROOT'] . '/' . Files::path($file);
+        return $_SERVER['DOCUMENT_ROOT'] . '/' . $file;
     }
 
     public static function path($filename) {
@@ -55,15 +56,15 @@ class Files extends Eloquent {
         }
     }
 
-    public static function register($name, $filename, $extension, $module_name, $module_id) {
+    public static function register($name, $filepath, $extension, $module_name, $module_id) {
         $file = new Files;
         $file->name = $name;
-        $file->path = Files::path($filename);
+        $file->path = $filepath;
         $file->extension = $extension;
         $file->type = Files::getType($extension);
         $file->module_name = $module_name;
         $file->module_id = $module_id;
-        $file->size = filesize(Files::fullDir($filename));
+        $file->size = filesize(Files::fullDir($filepath));
         $file->save();
         return $file->id;
     }

@@ -44,20 +44,28 @@ class UploaderController extends BaseController {
         $data = array(
             'module_id' => Input::get('module_id'),
             'module_name' => Input::get('module_name'),
-            'num' => Input::get('num')
+            'num' => Input::get('num'),
+            'path' => Core\APL\Actions::toAscii(Input::get('upath'))
         );
         if (Input::hasFile('upload_file')) {
-            $file = Input::file('upload_file');
+            $file = Input::file('upload_file'); 
 
             $extension = $file->getClientOriginalExtension();
             $name = $file->getClientOriginalName();
 
             $filename = Core\APL\Actions::toAscii($name) . '_' . sha1(uniqid() . $name) . "." . $extension;
 
-            $uploadSuccess = $file->move(Files::fullDir(), $filename);
+            $uploadDir = Files::$upload_dir . ($data['path'] ? "/" . $data['path'] : '');
+            $uploadFile = $uploadDir . "/" . $filename;
+            
+            if (!file_exists($uploadDir)) {
+                mkdir(Files::fullDir($uploadDir));
+            }
+            
+            $uploadSuccess = $file->move(Files::fullDir($uploadDir), $filename);
 
             if ($uploadSuccess) {
-                $fid = Files::register($name, $filename, $extension, $data['module_name'], $data['module_id']);
+                $fid = Files::register($name, $uploadFile, $extension, $data['module_name'], $data['module_id']);
 
                 $data['error'] = '0';
                 $data['succes'] = 'Uploaded!';
@@ -116,7 +124,7 @@ class UploaderController extends BaseController {
      */
     public function delete() {
         User::onlyHas('file-delete');
-        
+
         $id = Input::get('id');
         $data = array(
             'deleted' => 0

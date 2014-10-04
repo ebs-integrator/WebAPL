@@ -47,7 +47,7 @@ class Person extends \Core\APL\ExtensionController {
 
         return PageView::defaultView($data);
     }
-    
+
     public function councilors($data) {
         $groups = PersonModel::getPostPersonGroups($data['page']->id);
         if ($groups) {
@@ -67,9 +67,21 @@ class Person extends \Core\APL\ExtensionController {
     }
 
     public function vicemayor($data) {
+        
+        $item = Input::get('item');
+        if ($item) {
+            $person = \PersonModel::getPerson($item);
+            if ($person) {
+                $groups = [['persons' => [$person]]];
+                $data["page"]->text = Template::moduleView($this->module_name, "views.person_secretar", array('groups' => $groups));
+
+                return PageView::defaultView($data);
+            }
+        }
+
         $groups = PersonModel::getPostPersonGroups($data['page']->id);
         if ($groups) {
-            $data["page"]->text = Template::moduleView($this->module_name, "views.person_mayors", array('groups' => $groups));
+            $data["page"]->text = Template::moduleView($this->module_name, "views.person_mayors", array('groups' => $groups, 'page_url' => $data['page_url']));
         }
 
         return PageView::defaultView($data);

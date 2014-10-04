@@ -28,9 +28,11 @@
             </li>
         </ul>
         <div class="clearfix"></div>
-        <div class="anp">
-            <a href="javascript:;"><?= varlang('all-nr-phone'); ?></a>
-        </div>   
+        <?php if (isset($phone_page) && $phone_page) { ?>
+            <div class="anp">
+                <a href="<?= Core\APL\Language::url('topost/' . $phone_page->id); ?>"><?= varlang('all-nr-phone'); ?></a>
+            </div>   
+        <?php } ?>
         <p class="title"><?= varlang('viziteaza'); ?></p>
         <div class="d_hr"></div>
         <div class="left">

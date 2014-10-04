@@ -5,24 +5,20 @@
     <div style="width:700px;background-color:#fff;
          box-shadow: 0px 1px 13px 0px rgba(183,183,183,1);margin:0 auto;font-family: 'Open Sans', sans-serif;font-weight: 400">  
         <div style="width:95%;height:60px;border-bottom:1px solid #efefef;padding:0px 18px;">
-            <img alt="" style="float:left;margin-top:11px;margin-right:12px;"  src="http://globaldatabase.co.uk/img/logo.png" />
-            <p style=" float:left;margin:0px;font-weight:300;color:#33627c;font-size: 17px;margin-top:24px;padding-left: 12px;border-left:1px solid #efefef;" class="MsoNormal">Newsletter</p>
+            <p style=" float:left;margin:0px;font-weight:300;color:#33627c;font-size: 17px;margin-top:24px;padding-left: 12px;" class="MsoNormal">Newsletter</p>
         </div>
         <div style="width:77%;padding: 55px 80px 85px;">
-            <p style="color:#003d79;font-size:22px;margin:0px;font-weight: 600" class="MsoNormal">Title title title</p>
+            <p style="color:#003d79;font-size:22px;margin:0px;font-weight: 600" class="MsoNormal"><?=$post->title;?></p>
             
-            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">text text text text text texttext text texttext text texttext text texttext text texttext text texttext text texttext text texttext text texttext text texttext text texttext text texttext text texttext text texttext text texttext text texttext text texttext text texttext text texttext text texttext text text</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal"><?=Str::words(strip_tags($post->text), 50);?></p>
 
             <div>
                 <div style="height:30px;"></div>
-                <a href="#" target="_blank" style="background-color: #019ae6;border-bottom: 2px solid #247cab;color:#fff;font-size: 12px;text-decoration: none;font-weight: 700;padding:7px 18px;margin-right:20px;">Vezi articolul</a>
+                <a href="<?=$post_url;?>" target="_blank" style="background-color: #019ae6;border-bottom: 2px solid #247cab;color:#fff;font-size: 12px;text-decoration: none;font-weight: 700;padding:7px 18px;margin-right:20px;">Vezi articolul</a>
             </div>
 
-            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">
-                APL Engine
-            </p>
             <p style="margin-top: 22px;font-size: 11px;color:#a7a7a7;" class="MsoNormal">
-                To unsubscribe, please click <a href="" target="_blank" style="text-decoration: none;color:#a7a7a7;font-weight: 700">here</a>.
+                To unsubscribe, please click <a href="<?=$unsubscribe_link;?>" target="_blank" style="text-decoration: none;color:#a7a7a7;font-weight: 700">here</a>.
             </p>
         </div>
     </div>

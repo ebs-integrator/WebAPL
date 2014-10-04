@@ -1372,9 +1372,9 @@ section .dirs_menu a:last-child{
     margin-top: -3px;
     border-radius:3px;
 }
-.home_chat.active .pot,.home_chat.active .pct{
+/*.home_chat.active .pot,.home_chat.active .pct{
     display:none;
-}
+}*/
 .home_chat.active{
     background:url('../img/btn-hover.gif')no-repeat center;
 }
@@ -1402,6 +1402,14 @@ section .dirs_menu a:last-child{
     margin-top:-5px;
     text-transform: capitalize;
     font:13px 'open_sanssemibold';
+}
+
+.home_chat.active .pot{    
+    border-bottom:2px solid #b6c57f;
+    background:url('../img/btn-hover.gif') no-repeat left #e5e9d8;
+}
+.home_chat.active .pct > p{
+    color:#74b45a;
 }
 .home_chat .pct > p span{
     color:#5f5f5f;
