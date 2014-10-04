@@ -34,5 +34,29 @@
         <div class="overlay2 hidden"></div>
         <div class="overlay3 hidden"></div>
         <div class="page_header">
-
+            <div class="page_top_header">
+                <img class="top_back" src="img/top1.png">
+                <div class="page_top_content">
+                    <div class="row1">
+                        <div class="left">
+                            <a href="javascript:;" class="l_box">primăria strășeni</a>
+                        </div>
+                        <div class="right">
+                            <p class="tel">(022) 22-32-53</p>
+                        </div>
+                        <div class="clearfix"></div> 
+                    </div>                       
+                    <div class="row2">
+                        <div class="content">
+                            <ul>
+                                <li class="active"><a href="javascript:;">cetățeni și business</a></li>
+                                <li><a href="javascript:;">primăria</a></li>
+                                <li><a href="javascript:;">consiliul local</a></li>
+                                <li><a href="javascript:;">TRANSPARENȚĂ</a></li
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>  
+                </div>
+            </div>
         </div>
