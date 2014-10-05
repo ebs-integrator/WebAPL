@@ -39,6 +39,8 @@
     var res_url = "<?= res(''); ?>";
     var base_url = '<?= url(); ?>';
 
+    var loc_lat = <?=  SettingsModel::one('pos_lat') ? SettingsModel::one('pos_lat') : 0;?>;
+    var loc_long = <?=  SettingsModel::one('pos_long') ? SettingsModel::one('pos_long') : 0;?>;
 </script>
 
 <script src="<?= res('assets/js/plugins.js'); ?>"></script>

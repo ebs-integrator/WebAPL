@@ -7,9 +7,7 @@
                 var form = $(this);
                 $.post('<?= url('newsletter/subscribe'); ?>', $(this).serialize(), function(data) {
                     if (data.error == 0) {
-                        $(".email").fadeOut(400, function() {
-                            $(this).remove();
-                        });
+                        $(".email").text("Multumesc pentru abonare!");
                     } else {
                         alert(data.message);
                     }

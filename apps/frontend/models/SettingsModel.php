@@ -7,7 +7,7 @@ class SettingsModel extends Eloquent {
     protected $table = 'apl_setting';
     protected $primaryKey = 'key';
     public $timestamps = false;
-    private $settings = array();
+    protected static $settings = array();
 
     public static function getAll() {
         if (self::$settings) {

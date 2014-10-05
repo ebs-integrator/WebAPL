@@ -35,12 +35,10 @@
         <?php } ?>
         <p class="title"><?= varlang('viziteaza'); ?></p>
         <div class="d_hr"></div>
-        <div class="left">
+        <div class="left" onclick="window.open('https://www.google.ro/maps/dir//' + loc_lat + ',' + loc_long + '/@' + loc_lat + ',' + loc_long + ',14z');">
             <div class="c_info">
                 <p class="city"><?= varlang('address'); ?></p>            
-            </div>
-            <div class="c_info">
-                <p class="street"><?= varlang('street'); ?></p>
+                <p class="street2"><?= varlang('street'); ?></p>
                 <p class="street2"><?= varlang('city'); ?></p>
             </div>
         </div>
