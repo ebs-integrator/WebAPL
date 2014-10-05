@@ -2,7 +2,7 @@
 <html class="no-js">
     <head>
         <meta charset="UTF-8">
-        <title>Metis</title>
+        <title>Panou de publicare a continutului</title>
 
         <!--IE Compatibility modes-->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
