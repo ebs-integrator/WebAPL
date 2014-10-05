@@ -75,20 +75,8 @@ class Jobrequest extends \Core\APL\ExtensionController {
             }
             
             Template::viewModule($this->module_name, function () use ($name, $attachFile) {
-                $sendToUsers = \User::withRole('user-getemails');
-                
                 $data['name'] = $name;
-                foreach ($sendToUsers as $user) {
-                    $data['user'] = $user;
-                    \Mail::send('views.email-request', $data, function($message) use ($user, $attachFile) {
-                        $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'SendMail');
-                        $message->subject("New job reqest");
-                        $message->to($user->email);
-                        if ($attachFile) {
-                            $message->attach($_SERVER['DOCUMENT_ROOT'] . $attachFile);
-                        }
-                    });
-                }
+                \EmailModel::sendToAdmins("New job reqest", 'views.email-request', $data, $attachFile);
             });
         }
 

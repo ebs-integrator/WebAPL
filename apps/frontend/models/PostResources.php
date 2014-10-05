@@ -11,17 +11,20 @@ class PostResources {
     }
 
     public static function contactSubmit() {
-        $validator = Validator::make(array(
-                    'name' => Input::get('name'),
-                    'email' => Input::get('email'),
-                    'address' => Input::get('address'),
-                    'subject' => Input::get('subject'),
-                    'message' => Input::get('message'),
-                    'capcha' => SimpleCapcha::valid('contact', Input::get('capcha')) ? 1 : null
-                        ), array(
+
+        $data = array(
+            'name' => Input::get('name'),
+            'email' => Input::get('email'),
+            'address' => Input::get('address'),
+            'subject' => Input::get('subject'),
+            'messages' => Input::get('message'),
+            'capcha' => SimpleCapcha::valid('contact', Input::get('capcha')) ? 1 : null
+        );
+
+        $validator = Validator::make($data, array(
                     'name' => 'required',
                     'email' => 'email|required',
-                    'message' => 'required',
+                    'messages' => 'required',
                     'capcha' => 'required'
         ));
 
@@ -35,21 +38,26 @@ class PostResources {
             $return['error'] = 1;
         } else {
             SimpleCapcha::destroy('contact');
+            EmailModel::sendToAdmins("Contact form", 'email.contact', $data);
+            $return['html'] = "Mesajul dvs a fost receptionat";
         }
 
         return $return;
     }
-    
+
     public static function contactTopSubmit() {
-                $validator = Validator::make(array(
-                    'name' => Input::get('name'),
-                    'email' => Input::get('email'),
-                    'message' => Input::get('message'),
-                    'capcha' => SimpleCapcha::valid('contact_top', Input::get('capcha')) ? 1 : null
-                        ), array(
+
+        $data = array(
+            'name' => Input::get('name'),
+            'email' => Input::get('email'),
+            'messages' => Input::get('message'),
+            'capcha' => SimpleCapcha::valid('contact_top', Input::get('capcha')) ? 1 : null
+        );
+
+        $validator = Validator::make($data, array(
                     'name' => 'required',
                     'email' => 'email|required',
-                    'message' => 'required',
+                    'messages' => 'required',
                     'capcha' => 'required'
         ));
 
@@ -63,6 +71,8 @@ class PostResources {
             $return['error'] = 1;
         } else {
             SimpleCapcha::destroy('contact_top');
+            EmailModel::sendToAdmins("Contact form", 'email.contact', $data);
+            $return['html'] = "Mesajul dvs a fost receptionat";
         }
 
         return $return;
@@ -70,8 +80,8 @@ class PostResources {
 
     public static function rssPage() {
         $data['posts'] = Post::rssPosts();
-        
+
         return View::make('sections.others.rss', $data);
     }
-    
+
 }

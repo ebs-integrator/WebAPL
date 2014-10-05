@@ -19,18 +19,18 @@ $(document).ready(function() {
         adaptiveHeight: true,
         startSlide: typeof start_month !== 'undefined' ? start_month : 0
     });
-    $( window ).scroll(function() {
+    $(window).scroll(function() {
         if ($(this).scrollTop() <= 83) {
-                $('.home_menu').hide();
-            }
-            else {
-                $('.home_menu').show();
-            }
+            $('.home_menu').hide();
+        }
+        else {
+            $('.home_menu').show();
+        }
     });
 
     $('section').css('min-height', ($(window).height() - 326));
     $('.l_a.m_t_n').css('min-height', ($(window).height() - 413));
-    $('.menu_content').height($(window).height() - 83).css('min-height','430px');
+    $('.menu_content').height($(window).height() - 83).css('min-height', '430px');
 
     $('.head_list,.overlay3').click(function() {
         $('header .menu_content').toggleClass('hidden');
@@ -49,8 +49,8 @@ $(document).ready(function() {
     $('.bxslider2').bxSlider({
         pager: false,
         auto: true,
-        controls:true
-        //adaptiveHeight: true
+        controls: true
+                //adaptiveHeight: true
     });
     $("ul.faq  li a").click(function() {
         $('ul.faq li.active').removeClass('active');
@@ -143,10 +143,19 @@ $(document).ready(function() {
 
         return false;
     });
+
+//    $(".embeddedContent").each(function () {
+//        var fw = $(this).width();
+//        var fr = $(this).
+//        alert(fw + ' ' + screen.width);
+//        if (fw > screen.width && screen.width) {
+//            $(this).width(screen.width);
+//        }
+//    });
 });
 
 
-var map, map2,map3;
+var map, map2, map3;
 
 function initialize() {
     var hidden_map = document.getElementById("map-canvas3");
@@ -154,12 +163,12 @@ function initialize() {
     var small_map = document.getElementById("map-canvas");
 
     var iconBase = res_url + "assets/img/marker.png";
-    var myLatlng = new google.maps.LatLng(47.148306, 28.617051);
+    var myLatlng = new google.maps.LatLng(loc_lat, loc_long);
 
-    var center = new google.maps.LatLng(47.151994, 28.610020);
+    var center = new google.maps.LatLng(loc_lat, loc_long);
     map = new google.maps.Map(small_map, {
         zoom: 14,
-        center: center,
+        center: myLatlng,
         disableDefaultUI: true
     });
     var marker = new google.maps.Marker({
@@ -168,6 +177,9 @@ function initialize() {
         icon: iconBase
     });
 
+    google.maps.event.addListener(map, 'click', function() {
+        window.open('https://www.google.ro/maps/dir//' + loc_lat + ',' + loc_long + '/@' + loc_lat + ',' + loc_long + ',14z');
+    });
 
     if (big_map !== null) {
         map2 = new google.maps.Map(big_map, {

@@ -40,7 +40,7 @@
             $.post('<?= url('contact/submit'); ?>', $(this).serialize(), function(data) {
                 if (data.error == 0) {
                     form.fadeOut(400, function () {
-                        $(this).remove();
+                        $(this).html(data.html).fadeIn(300);
                     });
                 } else { 
                     form.find(".form_error").html(data.message);

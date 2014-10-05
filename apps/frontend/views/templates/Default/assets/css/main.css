@@ -6122,3 +6122,11 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         margin-bottom:21px;
     }
 }
+
+iframe, object, embed {
+        max-width: 100%;
+}
+
+.form_error p {
+    color: #ff6666;
+}

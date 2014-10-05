@@ -1,4 +1,4 @@
-<div id="firechat" class="dop" style="display: <?= $session_exist ? 'block' : 'none'; ?>;">
+<div id="firechat" class="dop" style="height: 535px; display: <?= $session_exist ? 'block' : 'none'; ?>;">
     <div class="top">
         <div class="left firechat-photo" style=" display: <?= $session_exist ? 'block' : 'none'; ?>;">
             <div class="photo">
@@ -9,6 +9,8 @@
         <div class="right" >
             <div class="buttons">
                 <button class="firechat-hide"><img src="<?= res('assets/img/save.png'); ?>"></button>
+                <button class="firechat-show" style="display: none;"><img src="<?= res('assets/img/unsave.png'); ?>"></button>
+
                 <button class="firechat-close"><img src="<?= res('assets/img/close.png'); ?>"></button>
             </div>
         </div>
@@ -49,9 +51,22 @@
             });
         }
 
+        var intick = false;
+        var tickChat = function(times, nr) {
+            intick = true;
+            $("#firechat .top").animate({'backgroundColor': nr ? '#7c4d7c' : '#AA79AA'}, 200);
+                    if (times > 0) {
+                setTimeout(function() {
+                    tickChat(times - 1, nr ? 0 : 1);
+                }, 600);
+            } else {
+                intick = false;
+            }
+        }
+
         $("body").on('click', '.firechat-start-with', function() {
             if (current_person > 0)
-                return alert('Chat session already open!');
+                return intick ? false : tickChat(7, 0);
 
             var person = $(this).data('personid');
             if (current_person != person) {
@@ -61,7 +76,7 @@
 
         $("body").on("click", ".firechat-start", function() {
             if (current_person > 0)
-                return alert('Chat session already open!');
+                return intick ? false : tickChat(7, 0);
 
             startChat(0);
         });
@@ -79,14 +94,24 @@
 
         $("body").on("click", ".firechat-hide", function() {
             $("#firechat .content").slideToggle(500);
-            $("#firechat").animate({height: 103}, 500);
-            $(this).removeClass("firechat-hide").addClass("firechat-show");
+            $("#firechat").animate({height: 40}, 500);
+            $(".firechat-hide").hide();
+            $(".firechat-show").show();
+            $("#firechat .top").animate({height: 40}, 500);
+            if (current_person) {
+                $("#firechat .top .firechat-photo, #firechat .top .firechat-name").hide();
+            }
         });
 
         $("body").on("click", ".firechat-show", function() {
             $("#firechat .content").slideToggle(500);
             $("#firechat").animate({height: 535}, 500);
-            $(this).removeClass("firechat-show").addClass("firechat-hide");
+            $(".firechat-show").hide();
+            $(".firechat-hide").show();
+            $("#firechat .top").animate({height: 103}, 500);
+            if (current_person) {
+                $("#firechat .top .firechat-photo, #firechat .top .firechat-name").show();
+            }
         });
 
         $("body").on("submit", ".firechat-register", function(e) {

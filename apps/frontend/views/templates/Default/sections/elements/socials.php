@@ -9,12 +9,6 @@ $socialID = uniqid();
 <table>
     <tr>
         <td>
-            
-            <!--- FACEBOOK --->
-            <div class="fb-like" data-href="<?= $link; ?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-
-        </td>
-        <td>
 
             <!--- TWITTER --->
             <a href="https://twitter.com/" class="twitter-share-button" data-url="<?= $link; ?>">Tweet</a>
@@ -43,6 +37,11 @@ $socialID = uniqid();
             </script>
 
         </td>
+        <td style="padding-left: 20px;">
+            <!--- FACEBOOK --->
+            <div class="fb-like" data-href="<?= $link; ?>" data-width="400" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+        </td>
     </tr>
+
 </table>
 
