@@ -33,9 +33,17 @@ class SettingsModel extends Eloquent {
     }
 
     public static function put($key, $value) {
-        SettingsModel::where('key', $key)->update(array(
-            'value' => $value
-        ));
+        $set = SettingsModel::where('key', $key)->first();
+        if ($set) {
+            SettingsModel::where('key', $key)->update(array(
+                'value' => $value
+            ));
+        } else {
+            SettingsModel::insert(array(
+                'value' => $value,
+                'key' => $key
+            ));
+        }
     }
 
 }

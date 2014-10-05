@@ -1,7 +1,6 @@
 <?php
 
-$unistalled = Event::fire('APL.install.check');
-if ($unistalled) {
+if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/install/uninstalled')) {
     Event::fire('APL.install.run');
     return;
 }

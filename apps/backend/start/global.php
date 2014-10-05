@@ -91,7 +91,7 @@ Event::listen('APL.modules.load', function() {
 
 
 App::before(function() {
-    Event::fire('APL.modules.load');
+    
 });
 
 /*

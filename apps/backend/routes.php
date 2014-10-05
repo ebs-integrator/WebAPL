@@ -1,17 +1,12 @@
 <?php
 
-/*
-  |--------------------------------------------------------------------------
-  | Application Routes
-  |--------------------------------------------------------------------------
-  |
-  | Here is where you can register all of the routes for an application.
-  | It's a breeze. Simply tell Laravel the URIs it should respond to
-  | and give it the Closure to execute when that URI is requested.
-  |
- */
+if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/install/uninstalled')) {
+    return Route::get('/', function () {
+        return Illuminate\Support\Facades\Redirect::to('../');
+    });
+}
 
-
+Event::fire('APL.modules.load');
 
 Route::get('page', 'HomeController@showPage');
 
