@@ -3,13 +3,23 @@
 <form action="<?= url('settings/save'); ?>" method="post" class="ajax-auto-submit">
 
     <table class="table table-bordered">
-        <tr>
-            <th>Site name</th>
-            <td>
-                <input class="form-control" type="text" name="set[name]" value="<?= isset($setts['name']) ? $setts['name'] : ''; ?>" />
-            </td>
-        </tr>
 
+        <?php
+        $colorSchemes = \Core\APL\Template::getColorSchemes();
+        ?>
+        <?php if ($colorSchemes) { ?>
+            <tr>
+                <th>Template color schema</th>
+                <td>
+                    <select class='form-control' name="set[templateSchema]">
+                        <option name=''>---</option>
+                        <?php foreach ($colorSchemes as $schemaKey => $schema) { ?>
+                            <option value='<?= $schemaKey; ?>' <?= isset($setts['templateSchema']) && $setts['templateSchema'] == $schemaKey ? 'selected' : ''; ?>><?= isset($schema['name']) ? $schema['name'] : 'undefined name'; ?></option>
+                        <?php } ?>
+                    </select>
+                </td>
+            </tr>
+        <?php } ?>
 
         <tr>
             <th>
@@ -17,7 +27,7 @@
                 <input type='hidden' name='set[pos_lat]' id="latbox" placeholder="Lat" class='form-control' value='<?= isset($setts['pos_lat']) ? $setts['pos_lat'] : ''; ?>'/><br>
                 <input type='hidden' name='set[pos_long]'id="longbox" placeholder="Long" class='form-control' value='<?= isset($setts['pos_long']) ? $setts['pos_long'] : ''; ?>'/>
             </th>
-            <td>
+            <td class='col-lg-8'>
                 <div style="overflow:hidden;height:300px;width:100%;">
                     <div id="gmap_canvas" style="height:300px;width:100%;"></div>
                     <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
@@ -36,7 +46,7 @@
 
 
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-                
+
 <script type="text/javascript">
     markers = [];
     function init_map() {

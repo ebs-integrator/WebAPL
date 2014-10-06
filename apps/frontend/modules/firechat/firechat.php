@@ -30,6 +30,17 @@ class Firechat extends \Core\APL\ExtensionController {
 
         Actions::register('bottom_contructor', array($this, 'popup'));
         Actions::register('logo_contructor', array($this, 'topbutton'));
+        Actions::register('contact_col1_contructor', array($this, 'contactbutton'));
+    }
+    
+    protected static $isOnline = 0;
+    public static function online() {
+        if (is_bool(static::$isOnline)) {
+            return static::$isOnline;
+        } else {
+            static::$isOnline = PersonModel::where(PersonModel::getField('for_audience'), 1)->count() > 0;
+            return static::$isOnline;
+        }
     }
 
     public function display() {
@@ -102,13 +113,20 @@ class Firechat extends \Core\APL\ExtensionController {
 
     public function topbutton() {
 
-        $personAcc = PersonModel::where(PersonModel::getField('for_audience'), 1)->count();
-
         $data = array(
-            'online' => $personAcc > 0
+            'online' => Firechat::online()
         );
 
         echo Template::moduleView($this->module_name, 'views.chat-button', $data);
+    }
+    
+    public function contactbutton() {
+
+        $data = array(
+            'online' => Firechat::online()
+        );
+
+        echo Template::moduleView($this->module_name, 'views.chat-big-button', $data);
     }
 
     public function register() {

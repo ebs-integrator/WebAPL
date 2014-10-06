@@ -45,16 +45,7 @@
                 </div>
 
             </div>
-            <div class="chat"> 
-                <a href="javascript:;">
-                    <img src="<?= res('assets/img/chat_man.png'); ?>" class="mn">
-                    <span class="chat_dot"></span>
-                    <span class="green"><?= varlang('discuta'); ?>-</span><span class="violet"><?= varlang('online'); ?></span>
-                    <hr>
-                    <p class="center"><?= varlang('vorbeste-direct'); ?></p>
-                </a>
-
-            </div>
+            <?= \Core\APL\Actions::call('contact_col1_contructor'); ?>
         </div>
         <div class='left contact_r'>
             <p class='subt'><?= varlang('adresa'); ?></p>
@@ -64,9 +55,11 @@
                 <a href="<?= varlang('orar-link'); ?>"><?= varlang('orar-autobus'); ?></a>
             </div>
             <div class="map_info"><?= $page->text; ?></div>
+            <?= \Core\APL\Actions::call('contact_col2_contructor'); ?>
         </div>
         <div class='left form contact'>
             <?= View::make('sections.pages.blocks.contactForm'); ?>
+            <?= \Core\APL\Actions::call('contact_col3_contructor'); ?>
         </div>
         <div class='clearfix140'></div>
         <?php if ($page->have_socials) { ?>

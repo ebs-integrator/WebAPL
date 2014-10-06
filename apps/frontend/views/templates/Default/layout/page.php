@@ -18,11 +18,13 @@
         <link rel="stylesheet" href="<?= res('assets/css/jquery.selectBoxIt.css'); ?>">
         <link href="<?= res('assets/js/square/red.css" rel="stylesheet'); ?>">
 
+        <?php Template::pullCurrentSchema(); ?>
+
         <script src="<?= res('assets/js/jquery-2.1.1.js'); ?>"></script>
     </head>
     <body>
         <div id="fb-root"></div>
-        <script>(function (d, s, id) {
+        <script>(function(d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0];
                 if (d.getElementById(id))
                     return;

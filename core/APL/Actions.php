@@ -86,6 +86,13 @@ class Actions {
         return Route::post($tag, $function);
     }
 
+    /**
+     * convert string to ascii (uri)
+     * @param type $str
+     * @param type $replace
+     * @param type $delimiter
+     * @return type
+     */
     public static function toAscii($str, $replace = array(), $delimiter = '-') {
         setlocale(LC_ALL, 'en_US.UTF8');
         if (!empty($replace)) {
