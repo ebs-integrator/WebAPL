@@ -34,34 +34,33 @@
             </div>
             <div class="header_mini ">
                 <div class="head_list"></div>
-                <div class="menu_content hidden">
-                    <ul class="menu_list">
-                        <?php
-                        if (isset($general_pages)) {
-                            foreach ($general_pages as $item) {
-                                ?>
-                                <li><a href='<?= $item->url; ?>'><?= $item->title; ?></a></li>
-                                <?php
-                            }
-                        }
-                        ?>
-                    </ul>
-                    <ul class="social">
-                        <p>(022) 22-32-53</p>
-                        <li><a href='<?= varlang('facebook_link'); ?>' class="fb"><?= varlang('facebook'); ?></a></li>
-                        <li><a href='<?= varlang('odnoklassniki-link-1'); ?>' class="odno"><?= varlang('odnoklassniki'); ?></a></li>
-                        <li><a href='<?= varlang('vkontakte-link'); ?>' class="vk"><?= varlang('vkontakte'); ?></a></li>
-                        <li><a href='<?= varlang('twitter-link'); ?>' class="twitter"><?= varlang('twitter'); ?></a></li>
-                        <li><a href='<?= varlang('gplus-link'); ?>' class="gplus"><?= varlang('gplus'); ?></a></li>
-                        <li><a href='<?= varlang('rss-link'); ?>' class="rsss"><?= varlang('rss'); ?></a></li>
-                    </ul>
-                </div>
             </div>
             <div class="contact right"><?= View::make('block.top_contacts'); ?></div>
             <div class="hr"></div>
         </header>
 
-
+        <div class="menu_content header_menu_content hidden">
+            <ul class="menu_list">
+                <?php
+                if (isset($general_pages)) {
+                    foreach ($general_pages as $item) {
+                        ?>
+                        <li><a href='<?= $item->url; ?>'><?= $item->title; ?></a></li>
+                        <?php
+                    }
+                }
+                ?>
+            </ul>
+            <ul class="social">
+                <p>(022) 22-32-53</p>
+                <li><a href='<?= varlang('facebook_link'); ?>' class="fb"><?= varlang('facebook'); ?></a></li>
+                <li><a href='<?= varlang('odnoklassniki-link-1'); ?>' class="odno"><?= varlang('odnoklassniki'); ?></a></li>
+                <li><a href='<?= varlang('vkontakte-link'); ?>' class="vk"><?= varlang('vkontakte'); ?></a></li>
+                <li><a href='<?= varlang('twitter-link'); ?>' class="twitter"><?= varlang('twitter'); ?></a></li>
+                <li><a href='<?= varlang('gplus-link'); ?>' class="gplus"><?= varlang('gplus'); ?></a></li>
+                <li><a href='<?= varlang('rss-link'); ?>' class="rsss"><?= varlang('rss'); ?></a></li>
+            </ul>
+        </div>
 
         <?= $content; ?> 
 

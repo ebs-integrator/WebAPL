@@ -472,18 +472,29 @@ header .contact .tel{
     margin-top:27px;
     background: url('../img/tel_v.png') no-repeat left center;
 }
+header.page{
+    position:fixed;
+    background:#fff;
+    top:0px;
+    z-index:997;
+    height:87px;
+    border-bottom:4px solid #673167;
+}
 section img{
     max-width:100%;
 }
 header .contact .contact_us{
     height:33px;
-    float:left;
     padding:0px 15px;
     border-bottom:2px solid  #7c4d7c;
     margin:24px 20px 0px 15px;
     font:13px 'open_sanssemibold';
     color:#fff;
     background:#8e588e;
+}
+.contact_us_btn {    
+    float:left;
+    height:83px;
 }
 header .contact .contact_us:hover,header .contact .contact_us.active{
     background:#b6c57e;
@@ -1174,6 +1185,10 @@ div.more{
 }
 section{
     max-width:2580px;
+    margin-top:83px;
+}
+.full_cont{
+
 }
 .bx-wrapper .bx-controls-direction a.disabled{
     display:block;
@@ -1246,9 +1261,6 @@ footer .socials a span{
     display: -moz-inline-box;
     text-align: center;
     margin-right:10px;
-}
-footer .socials img.rsss{
-    margin-top: -8px;
 }
 footer .right > .left{
     margin-right:55px;
@@ -1713,7 +1725,7 @@ section > .wrap >  .left.contact_r{
     padding-left: 18px;
     margin-bottom: 21px;
     width:205px;
-    height:46px;
+    height:40px;
     position: relative;
 }
 .contact_l .date_contact li:before{
@@ -1729,7 +1741,7 @@ section > .wrap >  .left.contact_r{
     margin:0px;
 }
 .contact_l .date_contact li p:first-child{
-    font:15px 'open_sanssemibold';
+    font:14px 'open_sanssemibold';
     color:#484848;
     float: left;
     margin-top: -2px;
@@ -1748,7 +1760,7 @@ section > .wrap >  .left.contact_r{
     text-align: center;
 }
 .contact_l .date_contact li p:last-child{
-    font:17px 'open_sanssemibold';
+    font:16px 'open_sanssemibold';
     color:#484848;
     clear:both;
 }
@@ -1761,7 +1773,7 @@ section > .wrap >  .left.contact_r{
     text-transform: uppercase;
 }
 .prp a {
-    font: 15px 'open_sansbold';
+    font: 14px 'open_sansbold';
     line-height: 40px;
     color: #8e7fab;
     padding-left :12px;
@@ -1772,13 +1784,13 @@ section > .wrap >  .left.contact_r{
     display: -moz-inline-box;
     padding:0px 10px 0px 19px;
     width: 100%;
-    margin:30px 0;
+    margin:25px 0;
 }
 .ccc_hidden .map_info p span{
     display:block;
 }
 .contact_r .map_info p{
-    margin-bottom:18px;
+    margin-bottom:14px;
 }
 .contact_r .map_info{
     border-bottom:1px solid #ececec;
@@ -1786,19 +1798,19 @@ section > .wrap >  .left.contact_r{
 
 .contact_r .map_info p:first-child{
     color:#484848;
-    font:15px 'open_sansbold';
+    font:14px 'open_sansbold';
 }
 .contact_r .map_info p:last-child{
     color:#484848;
-    font:15px 'open_sanssemibold';
+    font:14px 'open_sanssemibold';
 }
 .contact_r .map_info p span{
-    font:15px 'open_sansregular';
+    font:14px 'open_sansregular';
     display:block;
 }
 .wrap .left .chat {
     width:360px;
-    margin-top:50px;
+    margin-top:30px;
     border:2px solid #e6e6e6;
     padding:13px 16px;
 }
@@ -2386,10 +2398,10 @@ section  .map_cont .h_list ul li:hover a{
 }
 
 section .wrap > .left .subt,ul.faq  .subt{
-    font: 24px 'open_sansbold';
+    font: 22px 'open_sansbold';
     color: #232323;
-    height: 57px;
-    line-height: 57px;
+    height: 50px;
+    line-height: 44px;
     width: 100%;
     text-transform: uppercase;
     margin-bottom: 25px;
@@ -2467,7 +2479,7 @@ ul.faq .subt{
     width:100%;
 }
 .form .ftb{
-    font: 24px 'open_sansbold';
+    font: 22px 'open_sansbold';
     color:#7c4d7c;
     text-transform: uppercase;
     width:200px;
@@ -3401,9 +3413,9 @@ div.fb-like.fb_iframe_widget{
     box-shadow:         0px 1px 40px 0px rgba(210, 195, 210, 0.5);
     position:fixed;
     bottom:0px;
-    left:50%;
     background:#fff;
     z-index:888;
+    right:10px;
 }
 .dop .top{
     height:103px;
@@ -5086,6 +5098,11 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         margin-top:50px;
         width:360px;
     }
+    
+    .contact.left.form{
+        display: block;
+        margin-top: 30px;
+    }
 }
 @media only screen and (max-width: 767px){
     p{
@@ -5100,12 +5117,19 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     header .header_mini{
         float:right;
-        width:87px;
+        width:80px;
         height:100%;
         display:block;
         background: url('../img/menu_icon.png')no-repeat center #7c4d7c;
         cursor:pointer;
         position:relative;
+    }
+    header.page{
+        height:80px;
+        border-bottom: 4px solid #7c4d7c;
+    }
+    section{
+        margin-top: 100px;
     }
     .mini_contacte1{
         display:block;
@@ -5130,13 +5154,12 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         display:none;
     }
     section .dirs_menu{
-        height:4px;
-        background: #7c4d7c;
+        height:0;
     }
     header .logo {
-        max-width:200px;
+        max-width:180px;
     }
-    header .menu_list li{
+    .menu_list li{
         height:45px;
         border-bottom: 1px solid #835b83;
         font:14px 'open_sansbold';
@@ -5144,35 +5167,30 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         text-transform: uppercase;
         padding: 12px 25px;
     }
-    header .menu_list li a{        
+    .menu_list li a{        
         color:#fff;
     }
-    header .menu_list li:first-child{
-        display:table-cell;
-        vertical-align:middle;
-        line-height: 24px;
-
-    }
-    header .menu_content{
-        position:relative;
-        width:250px;
-        background:#7c4d7c;
-        right: 163px;
+    .header_menu_content{
+        position: fixed;
+        width: 250px;
+        background: #7c4d7c;
+        top: 83px;
+        right: 0px;
         z-index: 999;
-        cursor:initial;
+        cursor: initial;
     }
     section > .wrap > .left.contact_r{
         width:100%;
         float:none;
     }
-    header .menu_content .social{
+    .header_menu_content .social{
         bottom:5px;
         position:absolute;
         background:#784478;
         width:100%;
         padding-bottom:10px;
     }
-    header .menu_content .social a{
+    .header_menu_content .social a{
         color: #dfb7df;
         font: 11px 'open_sanssemibold';
         text-transform: uppercase;
@@ -5181,29 +5199,29 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         display: block;
         line-height:23px;
     }
-    header .menu_content .social  li{
+    .header_menu_content .social  li{
         line-height:30px;
         padding:0 35px;
     }
-    header .menu_content .social  li:nth-child(4){
+    .header_menu_content .social  li:nth-child(4){
         margin-bottom:10px;
     }
-    header .menu_content .social a.fb{
+    .header_menu_content .social a.fb{
         background: url('../img/fb_white.png') no-repeat 5px center;
     }
-    header .menu_content .social a.odno{
+    .header_menu_content .social a.odno{
         background: url('../img/ok_white.png') no-repeat left center;
     }
-    header .menu_content .social a.vk{
+    .header_menu_content .social a.vk{
         background: url('../img/vk_white.png') no-repeat left center;
     }
-    header .menu_content .social a.twitter{
+    .header_menu_content .social a.twitter{
         background: url('../img/twitter_white.png') no-repeat left center;
     }
-    header .menu_content .social a.rsss{
+    .header_menu_content .social a.rsss{
         background: url('../img/rsss_white.png') no-repeat left center;
     }
-    header .menu_content .social a.gplus{
+    .header_menu_content .social a.gplus{
         background: url('../img/gplus_white.png') no-repeat left center;
     }
     .c_title{
@@ -5263,7 +5281,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .ath p{
         padding-right:20px;
     }
-    section .wrap > .left .subt,.wrap .left .chat,.contact_r .prp,.contact.left.form,.a_box.v_g.m_an{
+    section .wrap > .left .subt,.wrap .left .chat,.contact_r .prp,.a_box.v_g.m_an{
         display:none;
     }
     .wrap .left.ccc{
@@ -5271,6 +5289,10 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     .contact_r .map_info{
         margin-top:22px;
+    }
+    .contact.left.form{
+        display: block;
+        margin-top: 30px; 
     }
     .n_title{
         margin-bottom: 1px;
@@ -5706,10 +5728,55 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .hide_on_mobile{
         display:none;
     }
+    section .map_cont .h_list > li{
+        display:block;
+    }
+    section .map_cont .h_list{
+        -webkit-column-count:auto;
+        -moz-column-count:auto;
+        column-count: auto;
+    }
+    section p.map_sub{
+        margin-left: 0px;
+    }
+    section .map_cont .h_list > li{
+        padding-left:15px;
+    }
+    header{
+        position:fixed;
+        top: 0px;
+        z-index: 997;
+        background: #fff;
+    }
 }
 @media only screen and (max-width: 639px){
     section > .wrap, section .dirs_menu .wrap {
         max-width: 320px;
+    }
+    header .right.contact{
+        height:80px;
+        overflow:hidden;
+    }
+    header{
+        position:fixed;
+        top: 0px;
+        z-index: 997;
+        background: #fff;
+        height:80px;
+    }
+    section .map_cont .h_list > li{
+        padding-left:15px;
+    }
+    section p.map_sub{
+        margin-left: 0px;
+    }
+    section .map_cont .h_list > li{
+        display:block;
+    }
+    section .map_cont .h_list{
+        -webkit-column-count:auto;
+        -moz-column-count:auto;
+        column-count: auto;
     }
     .right_menu{
         width:100%;
@@ -5728,6 +5795,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     ul.prom li {
         width: 100%;
+    }
+    header .logo{
+        margin-right:0px;
     }
     ul.prom li:nth-child(2n){
         margin-left:0px;
@@ -6121,10 +6191,17 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .prp{
         margin-bottom:21px;
     }
+    .mini_contacte, .mini_contacte1,.mini_contacte:hover, .mini_contacte1:hover{
+        background-size: 25px 27px; 
+    }
+    .contact.left.form{
+        width:100%;
+    }
+
 }
 
 iframe, object, embed {
-        max-width: 100%;
+    max-width: 100%;
 }
 
 .form_error p {
