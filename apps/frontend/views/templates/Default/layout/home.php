@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">
         <!--        <link rel="stylesheet" href="/css/jquery.selectBoxIt.css">-->
 
+        <?php Template::pullCurrentSchema(); ?>
+
         <script src="<?= res('assets/js/jquery-2.1.1.js'); ?>"></script>
     </head>
     <body>
@@ -25,10 +27,10 @@
         <header>
             <div class="left">
                 <a href="<?= Language::url('/'); ?>"><img src="<?= res('assets/img/s_logo.png'); ?>" class="logo logo_home"></a>
-                <?=Core\APL\Actions::call('logo_contructor');?>
+                <?= Core\APL\Actions::call('logo_contructor'); ?>
             </div>
             <div class="left home_menu">
-                <?=View::make('sections.elements.topmenu');?>
+                <?= View::make('sections.elements.topmenu'); ?>
             </div>
             <div class="header_mini ">
                 <div class="head_list"></div>
@@ -46,8 +48,8 @@
                     </ul>
                     <ul class="social">
                         <p>(022) 22-32-53</p>
-                        <li><a href='<?=varlang('facebook_link');?>' class="fb"><?=varlang('facebook');?></a></li>
-                        <li><a href='<?= varlang('odnoklassniki-link-1'); ?>' class="odno"><?=varlang('odnoklassniki');?></a></li>
+                        <li><a href='<?= varlang('facebook_link'); ?>' class="fb"><?= varlang('facebook'); ?></a></li>
+                        <li><a href='<?= varlang('odnoklassniki-link-1'); ?>' class="odno"><?= varlang('odnoklassniki'); ?></a></li>
                         <li><a href='<?= varlang('vkontakte-link'); ?>' class="vk"><?= varlang('vkontakte'); ?></a></li>
                         <li><a href='<?= varlang('twitter-link'); ?>' class="twitter"><?= varlang('twitter'); ?></a></li>
                         <li><a href='<?= varlang('gplus-link'); ?>' class="gplus"><?= varlang('gplus'); ?></a></li>
@@ -55,13 +57,13 @@
                     </ul>
                 </div>
             </div>
-            <div class="contact right"><?=View::make('block.top_contacts');?></div>
-        <div class="hr"></div>
-    </header>
+            <div class="contact right"><?= View::make('block.top_contacts'); ?></div>
+            <div class="hr"></div>
+        </header>
 
 
 
-    <?= $content; ?> 
+        <?= $content; ?> 
 
 
-    <?= View::make('block.footer'); ?>
+        <?= View::make('block.footer'); ?>

@@ -104,6 +104,11 @@ class Language {
         return url(self::ext() . '/' . $path);
     }
 
+    /**
+     * Set language
+     * @param string[2] $ext
+     * @throws Exception
+     */
     public static function setLanguage($ext) {
         $language = DB::table('apl_lang')->where('ext', $ext)->first();
         if (!$language) {
@@ -119,12 +124,20 @@ class Language {
         }
     }
 
+    /**
+     * Get var
+     * @param string $key
+     * @return string
+     */
     public static function getVar($key) {
         return isset(static::$vars[$key]) ? static::$vars[$key] : '';
     }
 
     protected static $vars = [];
 
+    /**
+     * Load Vars
+     */
     protected static function loadVars() {
         $vars = \VarModel::prepareQuery()->select(\VarModel::getField('key'), \VarLangModel::getField('value'))->get();
 

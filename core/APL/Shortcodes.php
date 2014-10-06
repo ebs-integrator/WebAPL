@@ -189,6 +189,11 @@ class Shortcodes {
         return $out;
     }
 
+    /**
+     * Strip all shortcodes from content
+     * @param string $content
+     * @return string
+     */
     public static function strip($content) {
         if (false === strpos($content, '[')) {
             return $content;
@@ -203,6 +208,11 @@ class Shortcodes {
         return preg_replace_callback("/$pattern/s", array('Shortcodes', 'strip_tag'), $content);
     }
 
+    /**
+     * Strip tag
+     * @param array $m
+     * @return string
+     */
     public static function strip_tag($m) {
         if ($m[1] == '[' && $m[6] == ']') {
             return substr($m[0], 1, -1);

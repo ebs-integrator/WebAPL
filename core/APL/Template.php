@@ -14,7 +14,8 @@ use View;
 
 class Template {
 
-    protected static $template = 'Default';
+    protected static $template;
+    protected static $defaultTemplate = 'Dafault';
     protected static $module = null;
     protected static $view_mods = array(
         'page' => array(
@@ -167,6 +168,7 @@ class Template {
             )
         )
     );
+    protected static $colorSchemes = array();
     protected static $page_title = '';
     protected static $breadcrumbs = array();
 
@@ -175,7 +177,14 @@ class Template {
      * This function is called on bootstrap
      */
     public static function __init() {
-        
+
+        $template = Template::findTemplate();
+        Template::setTemplate($template);
+
+        $startup_file = $_SERVER['DOCUMENT_ROOT'] . Template::path('startup.php', 'frontend');
+        if (file_exists($startup_file)) {
+            include $startup_file;
+        }
     }
 
     /**
@@ -210,6 +219,18 @@ class Template {
     }
 
     /**
+     * Search current template
+     * @return string
+     */
+    public static function findTemplate() {
+        try {
+            return \SettingsModel::one('template');
+        } catch (\Illuminate\Database\QueryException $e) {
+            return Template::$defaultTemplate;
+        }
+    }
+
+    /**
      * Set template
      * @param string $template
      */
@@ -222,8 +243,8 @@ class Template {
      * @param string $path
      * @return string
      */
-    public static function path($path = '') {
-        return "/apps/" . APP_FOLDER . "/views/templates/" . self::$template . "/" . $path;
+    public static function path($path = '', $app = '') {
+        return "/apps/" . ($app ? $app : APP_FOLDER) . "/views/templates/" . self::$template . "/" . $path;
     }
 
     /**
@@ -248,12 +269,17 @@ class Template {
         return View::make('layout.main');
     }
 
+    /**
+     * Load view with module prefix
+     * @param string $module
+     * @param function $callback
+     */
     public static function viewModule($module, $callback) {
         static::$module = $module;
         $callback($module);
         static::$module = null;
     }
-    
+
     /**
      * 
      * 
@@ -323,6 +349,10 @@ class Template {
         }
     }
 
+    /**
+     * Sort view mods (!)
+     * @param string $section
+     */
     protected static function sordViewMethods($section) {
         if (isset(self::$view_mods[$section])) {
             usort(self::$view_mods[$section], function($a, $b) {
@@ -352,11 +382,16 @@ class Template {
      * 
      * 
      */
-
     /**
      * 
      *   Breadcrumb
      * 
+     */
+
+    /**
+     * Add new node in BreadCrumbs
+     * @param str $url
+     * @param str $name
      */
     public static function addBreadCrumb($url, $name) {
         self::$breadcrumbs[] = array(
@@ -365,14 +400,26 @@ class Template {
         );
     }
 
+    /**
+     * Get BreadCrumbs list
+     * @return array
+     */
     public static function getBreadCrumbs() {
         return self::$breadcrumbs;
     }
-    
+
+    /**
+     * Clear BreadCrumbs list
+     */
     public static function clearBreadCrumbs() {
         self::$breadcrumbs = array();
     }
 
+    /**
+     * Set page title
+     * @param string $title
+     * @param boolean $override
+     */
     public static function setPageTitle($title, $override = false) {
         if (static::$page_title) {
             if ($override) {
@@ -383,8 +430,59 @@ class Template {
         }
     }
 
+    /**
+     * Get Page title
+     * @return string
+     */
     public static function getPageTitle() {
         return static::$page_title;
+    }
+
+    /*
+     * 
+     * COLOR SCHEMES
+     * 
+     * 
+     */
+
+    /**
+     * Set color schemes list
+     * @param array $schemeList
+     */
+    public static function setColorSchemes($schemeList) {
+        static::$colorSchemes = $schemeList;
+    }
+
+    /**
+     * Get currents color schemes from current template
+     * @return array
+     */
+    public static function getColorSchemes() {
+        return static::$colorSchemes;
+    }
+
+    /**
+     * Get current color schema
+     * @return boolean
+     */
+    public static function getCurrentSchema() {
+        $schema = \SettingsModel::one('templateSchema');
+
+        if ($schema && isset(static::$colorSchemes[$schema])) {
+            return static::$colorSchemes[$schema];
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Get html for current schema
+     */
+    public static function pullCurrentSchema() {
+        $currentSchema = \Core\APL\Template::getCurrentSchema();
+        if (isset($currentSchema['css']) && $currentSchema['css']) {
+            echo '<link rel="stylesheet" href="' . $currentSchema['css'] . '">';
+        }
     }
 
 }
