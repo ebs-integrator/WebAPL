@@ -9,11 +9,11 @@
         <p class="c_title"><?= varlang('contacts'); ?></p>
         <div class='left contact_r contact_hidden'>
             <p class='subt'><?= varlang('adresa'); ?></p>
+            <div class="map_info"><?= $page->text; ?></div>
             <div id="map-canvas3" style="width:100%; height:300px;"></div>            
         </div>
         <div class='left ccc'>
-            <div class="ccc_hidden">                
-                <div class="map_info"><?= $page->text; ?></div>
+            <div class="ccc_hidden">                             
                 <div class="prp">
                     <img src="<?= res('assets/img/notebook.png'); ?>">
                     <a href="<?= varlang('orar-link'); ?>"><?= varlang('orar-autobus'); ?></a>
