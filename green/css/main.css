@@ -1221,7 +1221,7 @@ section .search input[type=submit]{
 .docs li.pdf a{
     background:url('../img/pdf.png')no-repeat left 5px;
 }
-.docs li.docs a,.docs li.doc a{
+.docs li.docx a,.docs li.doc a{
     background:url('../img/doc.png')no-repeat left 5px;
 }
 .docs li a span{
@@ -1232,4 +1232,186 @@ section .search input[type=submit]{
     width:24px;
     height:24px;
     bottom:5px;
+}
+.pag {
+    margin-top: 25px;
+}
+.pag .w_p {
+    font: 14px 'AvenirNext-Bold';
+    color: #4b4b4b;
+}
+.pag ul li, .pag ul {
+    display: inline;
+}
+.pag ul li.active, .pag ul li.disabled {
+    color: #4b4b4b;
+    pointer-events: none;
+    cursor: default;
+}
+.pag ul li.disabled,.pag ul li:last-child a,.pag ul li:last-child{
+    border-right: 0px;
+}
+.pag ul li a, .pag ul li {
+    width: 20px;
+    border-right: 1px solid #d0d0d0;
+    display: inline-block;
+    display: -moz-inline-box;
+    font: 14px 'AvenirNext-Bold';
+    text-align: center;
+    color: #00bd9c;
+}
+.doc,.xls,.xlsx,.pdf,.docx{
+    display: table;
+    width: 100%;
+    margin-bottom:18px;
+}
+.docx a,.doc a {
+    background: url('../img/doc.png')no-repeat left 5px;
+}
+.pdf a {
+    background: url('../img/pdf.png')no-repeat left 5px;
+}
+.docx a span,.doc a span ,.pdf a span ,.xls a span ,.xlsx a span  {
+    position: absolute;
+    right: 0px;
+    background: url('../img/dwnl.png') no-repeat right 5px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    bottom: 5px;
+}
+.pdf a ,.docx a,.doc a,.xlsx a,.xlx a {
+    padding: 0px 60px 0px 50px;
+    display: table-cell;
+    vertical-align: middle;
+    color: #4c4c4c;
+    font: 17px 'AvenirNext-Medium';
+    height: 37px;
+    margin-top: 8px;
+    width: 99%;
+    position: relative;
+}
+.xls a,.xlsx a {
+    background: url('../img/xlsx.png')no-repeat left 5px;
+}
+table.atz{
+    margin-bottom: 110px;
+}
+table.atz, table.atz td {
+    border: 1px solid #e3e3e3;
+    vertical-align: top;
+    padding: 30px 25px;
+    font: 17px 'AvenirNext-Regular';
+    color: #4c4c4c;
+}
+table.atz tr td:first-child {
+    background: #fbfbfb;
+    width: 7%;
+}
+table.atz tr td:nth-child(2) {
+    font: 17px 'AvenirNext-DemiBold';
+    color: #008d74;
+}
+table.atz tr td:last-child {
+    width: 58%;
+}
+table.atz tr td ol {
+    padding-left: 25px;
+}
+table.atz tr td ol li {
+    list-style: decimal;
+    padding-left: 20px;
+    font: 17px 'AvenirNext-Regular';
+    color: #4c4c4c;
+}
+table.atz tr td a {
+    font: 17px 'AvenirNext-Regular';
+    color: #008d74;
+}
+table.atz tr td ol li a {
+    text-decoration: underline;
+}
+table.taxe {
+    width: 100% !important;
+    margin-bottom: 50px;
+}
+table.taxe thead {
+    border-collapse: collapse;
+}
+.left_block ul.menu li.active a{
+    color:#0382a1;
+    font:20px 'AvenirNext-Bold';
+}
+table.taxe thead tr {
+    border: 1px solid #ffc3ca;
+    border-bottom: 2px solid #ffc3ca;
+    padding-left: 30px;
+}
+table.taxe thead tr td {
+    border: 1px solid #ffc3ca;
+    font: 17px 'AvenirNext-DemiBold';
+    color: #ff6477;
+    height: 50px;
+    padding: 0px 20px;
+    text-transform: uppercase;
+}
+table.taxe tbody tr:nth-child(2n-1) {
+    background: #fbfbfb;
+}
+table.taxe tbody tr {
+    border: 1px solid #e3e3e3;
+}
+table.taxe tbody tr td:first-child {
+    font: 17px 'AvenirNext-DemiBold';
+    max-width: 250px;
+    color:#1a1a1a;
+}
+table.taxe tbody tr td {
+    color: #4c4c4c;
+    font: 17px 'AvenirNext-Regular';
+    border: 1px solid #e3e3e3;
+    padding: 10px 20px;
+    line-height: 19px;
+    min-width: 115px;
+}
+ul {
+    border: 0px;
+    padding: 0px;
+}
+ul.culture li {
+    width: 100%;
+    height: 110px;
+    border-bottom: 2px solid #f7f7f7;
+    margin-bottom: 40px;
+}
+ul.culture li .left.img {
+    width: 132px;
+    height: 89px;
+    overflow: hidden;
+}
+ul.culture li .left.img img {
+    margin-right: 20px;
+    max-width: 132px;
+    max-height: 89px;
+}
+ul.culture li .right {
+    float: left;
+    margin-left: 30px;
+}
+ul.culture li .right .box {
+    float: left;
+    border-left: 2px solid #dddddd;
+    min-width: 195px;
+    padding-top: 8px;
+    padding-left: 15px;
+}
+ul.culture li .right .box p, ul.culture li .right .box p a {
+    font: 15px 'AvenirNext-Medium';
+    color: #008d74;
+    margin-bottom: 0px;
+}
+ul.culture li .right >p {
+    font:20px 'AvenirNext-DemiBold';
+    color:#232323;
+    margin-bottom: 15px;
 }
