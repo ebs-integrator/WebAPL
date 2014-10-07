@@ -12,7 +12,7 @@
             <?php } ?>
         </div>
         <hr class="reg">
-        <p class="int_code">Introduceti codul, previne voturile automate</p>
+        <p class="int_code"><?= varlang('introduceti-codul-previne-voturile-automate'); ?></p>
 
         <div class="snd_code">
             <input type="text" name="capcha">

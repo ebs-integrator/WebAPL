@@ -60,7 +60,7 @@ class VarController extends BaseController {
 
         Log::info("Created new var '{$key}'");
         
-        return Illuminate\Support\Facades\Redirect::to('var/index/' . $key);
+        return Redirect::back();
     }
     
     public function postEdit() {

@@ -6,10 +6,10 @@
         <?php if ($group['persons']) { ?>
         <div class="com_list">
             <p class="ul_title">
-                <span class="nr">NR.</span>
-                <span class="name">Nume pRENUME</span>
-                <span class="fun">Functia</span>
-                <span class="soc">Apartenenta politică</span>
+                <span class="nr"><?= varlang('nr'); ?></span>
+                <span class="name"><?= varlang('nume-prenume'); ?></span>
+                <span class="fun"><?= varlang('functia'); ?></span>
+                <span class="soc"><?= varlang('apartenenta-politica'); ?></span>
             </p>
             <ul>
                 <?php

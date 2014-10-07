@@ -3,21 +3,21 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>Date: </th>
+            <th><?= varlang('date-3'); ?>: </th>
             <td>
                 <input type="text" name="post[created_at]" class='form-control datetimepicker' data-date-format="YYYY-MM-DD hh:mm:ss" value='<?= isset($post->created_at) ? $post->created_at : ''; ?>' />
             </td>
         </tr>
 
         <tr>
-            <th>To home page: </th>
+            <th><?= varlang('to-home-page'); ?>: </th>
             <td>
                 <input type="checkbox" name="post[to_home]" class='make-switch' <?= isset($post->to_home) && $post->to_home ? 'checked' : ''; ?> />
             </td>
         </tr>
 
         <tr>
-            <th>Feeds: </th>
+            <th><?= varlang('feeds-1'); ?>: </th>
             <td>
                 <input name='feed_post[]' value='0' type='hidden' />
                 <select name='feed_post[]' multiple='multiple' class='col-sm-12 chzn-select'>

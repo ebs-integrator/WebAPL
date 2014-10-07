@@ -43,7 +43,7 @@ class VarModel extends Eloquent {
             $key = Core\APL\Actions::toAscii($str);
         }
 
-        $count = VarModel::where("key", "like", $key)->count();
+        $count = VarModel::where("key", "like", "{$key}%")->count();
 
         if ($count) {
             return $key . '-' . $count;

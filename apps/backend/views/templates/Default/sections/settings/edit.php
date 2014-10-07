@@ -1,4 +1,4 @@
-<h3>Settings</h3>
+<h3><?= varlang('settings-1'); ?></h3>
 
 <form action="<?= url('settings/save'); ?>" method="post" class="ajax-auto-submit">
 
@@ -9,7 +9,7 @@
         ?>
         <?php if ($colorSchemes) { ?>
             <tr>
-                <th>Template color schema</th>
+                <th><?= varlang('template-color-schema'); ?></th>
                 <td>
                     <select class='form-control' name="set[templateSchema]">
                         <option name=''>---</option>
@@ -23,7 +23,7 @@
 
         <tr>
             <th>
-                Locatia:
+                <?= varlang('location'); ?>
                 <input type='hidden' name='set[pos_lat]' id="latbox" placeholder="Lat" class='form-control' value='<?= isset($setts['pos_lat']) ? $setts['pos_lat'] : ''; ?>'/><br>
                 <input type='hidden' name='set[pos_long]'id="longbox" placeholder="Long" class='form-control' value='<?= isset($setts['pos_long']) ? $setts['pos_long'] : ''; ?>'/>
             </th>

@@ -1,16 +1,16 @@
 <?php if ((count($files) < $num || $num == 0) && User::has('file-upload')) { ?>
-    <button type="button" class="click-trigger btn btn-success" data-for=".button_<?= $module_name; ?>_<?= $module_id; ?>"><i class="fa fa-upload"></i> Select file from Computer</button>
-    <button type="button" class="click-trigger-sv btn btn-success" data-for=".path_<?= $module_name; ?>_<?= $module_id; ?>"><i class="fa fa-upload"></i> Select file from Server</button>
+    <button type="button" class="click-trigger btn btn-success" data-for=".button_<?= $module_name; ?>_<?= $module_id; ?>"><i class="fa fa-upload"></i><?= varlang('-select-file-from-computer'); ?></button>
+    <button type="button" class="click-trigger-sv btn btn-success" data-for=".path_<?= $module_name; ?>_<?= $module_id; ?>"><i class="fa fa-upload"></i><?= varlang('-select-file-from-server'); ?></button>
 <?php } ?>
 <br><br>
 
 <table class="table table-bordered">
     <tr>
-        <th>Icon</th>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Size</th>
-        <th>Action</th>
+        <th><?= varlang('icon'); ?></th>
+        <th><?= varlang('name1'); ?></th>
+        <th><?= varlang('type'); ?></th>
+        <th><?= varlang('size'); ?></th>
+        <th><?= varlang('action-1'); ?></th>
     </tr> 
     <?php if (count($files)) { ?>
         <?php foreach ($files as $file) { ?>
@@ -32,7 +32,7 @@
         <?php } ?>
     <?php } else { ?>
         <tr>
-            <td colspan="5">No files</td>
+            <td colspan="5"><?= varlang('no-files'); ?></td>
         </tr>
     <?php } ?>
 </table>

@@ -1,12 +1,12 @@
-<h3>Log</h3>
+<h3><?= varlang('log-1'); ?></h3>
 
 <table class="table table-bordered">
 
     <tr>
-        <th>Date</th>
-        <th>Message</th>
-        <th>User</th>
-        <th>IP</th>
+        <th><?= varlang('date-4'); ?></th>
+        <th><?= varlang('message-1'); ?></th>
+        <th><?= varlang('user-2'); ?></th>
+        <th><?= varlang('ip'); ?></th>
     </tr>
 
     <?php foreach ($list as $log) { ?>
@@ -17,7 +17,7 @@
                 <?php if ($log->user_id) { ?>
                     <b><?= $log->username; ?></b>
                 <?php } else { ?>
-                    <i>Anonim</i>
+                    <i><?= varlang('anonim'); ?></i>
                 <?php } ?>
                 <div class="log-body" style="display: none;">
                     <pre><?= $log->url; ?></pre>
@@ -37,14 +37,14 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">Log item details</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"><?= varlang('close-1'); ?></span></button>
+                <h4 class="modal-title" id="myModalLabel"><?= varlang('log-item-details'); ?></h4>
             </div>
             <div class="modal-body">
                 ...
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal"><?= varlang('close-1'); ?></button>
             </div>
         </div>
     </div>

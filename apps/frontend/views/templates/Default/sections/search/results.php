@@ -1,12 +1,12 @@
 <section>
     <?= View::make('sections.elements.breadcrumbs'); ?>
     <div class="wrap">
-        <p class='c_title'>Rezultatul căutării</p>
+        <p class='c_title'><?= varlang('rezultatul-cautarii'); ?></p>
 
         <div class='left'>
             <div class="search_r">
-                <p class="search_t">Rezultatele căutării pentru <span>"<?= $words; ?>"</span></p>
-                <p class="search_p">Afisate <span><?= $results->getFrom() . " - " . $results->getTo(); ?></span> din <?= number_format($results->getTotal()); ?></p>
+                <p class="search_t"><?= varlang('rezultatele-cautarii-pentru-'); ?><span>"<?= $words; ?>"</span></p>
+                <p class="search_p"><?= varlang('afisate-'); ?> <span><?= $results->getFrom() . " - " . $results->getTo(); ?></span><?= varlang('-din-'); ?><?= number_format($results->getTotal()); ?></p>
                 <div class="clearfix"></div>
 
                 <ul class="search_li">
@@ -28,19 +28,18 @@
             <?= $results->appends(array('words' => $words))->links(); ?>
         </div>
         <div class="right">
-
             <ul class='detail'>
                 <li class='email'>
-                    <a href='javascript:;'>info@straseni.gov.md</a>
+                    <a href='<?= varlang('email-address'); ?>'><?= varlang('email-address'); ?></a>
                 </li>
                 <li class='fax'>
-                    <a href='javascript:;'>(0-237) 55-66-77</a>
+                    <a href='<?= varlang('nr-fax'); ?>'><?= varlang('nr-fax'); ?></a>
                 </li>
                 <li class='chat'>
-                    <a href='javascript:;'>chat-online</a>
+                    <a href='javascript:;'><?= varlang('chat-online'); ?></a>
                 </li>
                 <li class='location'>
-                    <a href='javascript:;'>Cum ne găsiți</a>
+                    <a href='contacte.php'><?= varlang('cum-ne-gasiti'); ?></a>
                 </li>
             </ul>
         </div>

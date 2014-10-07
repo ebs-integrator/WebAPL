@@ -18,13 +18,13 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>Afisare fisiere: </th>
+            <th><?= varlang('afisare-fisiere-'); ?></th>
             <td>
                 <input type="checkbox" name="data[show_files]" class='make-switch' <?= isset($page->show_files) && $page->show_files ? 'checked' : ''; ?> />
             </td>
         </tr>
         <tr>
-            <th>Afisare cautare: </th>
+            <th><?= varlang('afisare-cautare-'); ?></th>
             <td>
                 <input type="checkbox" name="data[show_file_search]" class='make-switch' <?= isset($page->show_file_search) && $page->show_file_search ? 'checked' : ''; ?> />
             </td>

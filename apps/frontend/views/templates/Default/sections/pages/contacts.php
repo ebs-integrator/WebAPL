@@ -1,8 +1,8 @@
 <section>
     <div class="dirs_menu">
         <div class="wrap">
-            <a href="javascript:;">Principala »</a>
-            <a href="javascript:;">Contacte</a>
+            <a href="javascript:;"><?= varlang('acasa'); ?> »</a>
+            <a href="javascript:;"><?= varlang('contacts'); ?></a>
         </div>
     </div>
     <div class='wrap'>

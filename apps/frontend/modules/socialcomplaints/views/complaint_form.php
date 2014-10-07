@@ -1,40 +1,40 @@
 <div class="av">
-    <p><span>ATENTIE ! </span>Petitiile anonime sau cele in care nu sunt trecute datele de identificare ale persoanei nu se iau în considerare si se claseaza, potrivit prezentei ordonante, administratorul site-ului rezervindu-si dreptul de a nu le face publice.</p>
+    <p><span><?= varlang('atentie-'); ?></span><?= varlang('atent-msg'); ?></p>
 </div>
 <div class="form compl">
     <form class="complaint_form" action="#" method="post">
-        <p class="ftb">Formular de completare</p>
+        <p class="ftb"><?= varlang('formular-de-completare'); ?></p>
         <div class="form_error"></div>
         <div class="content">
             <input type="hidden" name="post_id" value="" />
             <div class="nmpm">
-                <label>Numele Prenume*</label>
+                <label><?= varlang('numele-prenume'); ?></label>
                 <input name="name" type="text">
             </div>
             <div class="nmpm">
-                <label>Email*</label>
+                <label><?= varlang('email-1'); ?></label>
                 <input name="email" type="text" >
             </div>
             <div class='clearfix'></div>
             <div class='apt'>
-                <label>Adresa Postala/Telefon </label>
+                <label><?= varlang('adresa-postala-telefon-'); ?></label>
                 <input name="address" type="text" >
             </div>
-            <label>Subiect*</label>                 
+            <label><?= varlang('subiect-1'); ?></label>                 
             <input name="subject" type="text"  class="subj">
-            <label>Mesaj</label>
+            <label><?= varlang('mesaj'); ?></label>
             <textarea name="message"></textarea>
-            <label>Cod de verificare*</label>
+            <label><?= varlang('cod-de-verificare'); ?></label>
             <input name="capcha" class="code" type="text">
             <img src="<?= SimpleCapcha::make('complaint'); ?>" height="31">
             <div class="clearfix"></div>
             <div class='radio_b'>
                 <input type='radio' name='private' value="0" id='rad1' />
-                <label for='rad1'>Public</label>
+                <label for='rad1'><?= varlang('public'); ?></label>
                 <input type='radio' name='private' value="1" id='rad2' checked/>
-                <label for='rad2'>Privat</label>
+                <label for='rad2'><?= varlang('privat'); ?></label>
             </div>
-            <input type="submit" value="trimite">
+            <input type="submit" value="<?= varlang('trimite'); ?>">
             <div class="clearfix"></div>
         </div>
     </form>

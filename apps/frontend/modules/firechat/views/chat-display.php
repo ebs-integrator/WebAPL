@@ -125,7 +125,7 @@
 </style>
 
 <div id="firechat-wrapper"></div>
-<div class="sendmail">Doriti sa salvati mesajele pe mail? <a href="javascript:;">click aici</a></div>
+<div class="sendmail"><?= varlang('fire-save'); ?> <a href="javascript:;"><?= varlang('fire-click'); ?></a></div>
 
 
 <script type='text/javascript'>
@@ -149,7 +149,7 @@
             });
 
             chat._chat.on('room-enter', function(room) {
-                chat._chat.sendSystemMessage(room.id, "Acest chat se inregistreaza");
+                chat._chat.sendSystemMessage(room.id, "<?= varlang('fire-reg'); ?>");
             });
 <?php } ?>
 
@@ -173,17 +173,17 @@
     });
 
     window.leaveChat = function() {
-        chat._chat.sendSystemMessage(room.id, "<?= $chat->user_name; ?> a parasit chat-ul", 'default', function() {
+        chat._chat.sendSystemMessage(room.id, "<?= $chat->user_name; ?> <?= varlang('fire-out'); ?>", 'default', function() {
             chat._chat.leaveRoom(room.id);
         });
     };
 
     jQuery(".sendmail a").on('click', function() {
-        var conf = confirm('Sigur doriti sa expediati mesajele pe <?= $chat->user_email; ?>');
+        var conf = confirm('<?= varlang('fire-rlu'); ?> <?= $chat->user_email; ?>');
         if (conf) {
             var html = $('.chat').html();
             jQuery.post('<?= url('firechat/sendmail'); ?>', {messages: html}, function() {
-                alert('Email-ul a fost trimis');
+                alert('<?= varlang('fire-email'); ?>');
             });
         }
     });

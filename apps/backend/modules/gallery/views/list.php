@@ -1,5 +1,5 @@
 <h3>
-    Gallery list:
+    <?= varlang('gallery'); ?>
 </h3>
 
 <table class="table table-bordered">
@@ -16,7 +16,7 @@
 </table>
 
 <form action="<?=url('gallery/create');?>" method="post">
-    <input type="text" class="form-control col-xs-push-4" placeholder="Gallery name" name="name" />
+    <input type="text" class="form-control col-xs-push-4" placeholder="<?= varlang('name--3'); ?>" name="name" />
     <div class="c10"></div>
-    <input type="submit" class="btn btn-success" value="Create gallery" />
+    <input type="submit" class="btn btn-success" value="<?= varlang('create-gallery'); ?>" />
 </form>

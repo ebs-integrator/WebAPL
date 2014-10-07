@@ -1,3 +1,5 @@
+<h2><?= varlang('newsletter-2'); ?></h2>
+
 <script>
     var newsletter_options = {
         url: '<?= url('newsletter/getlist') ?>',
@@ -5,7 +7,7 @@
         mtype: 'POST',
         autoencode: true,
         loadonce: false,
-        colNames: ['ID', 'Email', 'Subscribe Date', 'Enabled'],
+        colNames: ['ID', '<?= varlang('email-5'); ?>', '<?= varlang('subscribe-date'); ?>', '<?= varlang('enabled-6'); ?>'],
         colModel: [
             {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
             {name: 'email', index: 'email', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
@@ -43,6 +45,6 @@
     };
 </script>
 
-<a href="<?=url('newsletter/export');?>" class="btn btn-success">Export</a>
+<a href="<?=url('newsletter/export');?>" class="btn btn-success"><?= varlang('export'); ?></a>
 <div class="c20"></div>
 <?= View::make('sections/jqgrid/form')->with('options', 'newsletter_options'); ?>

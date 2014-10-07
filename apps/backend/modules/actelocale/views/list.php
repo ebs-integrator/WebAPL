@@ -1,4 +1,4 @@
-<h3>Acte locale</h3>
+<h3><?= varlang('acte-locale'); ?></h3>
 
 <script>
     var actelocale_options = {
@@ -7,7 +7,7 @@
         mtype: 'POST',
         autoencode: true,
         loadonce: false,
-        colNames: ['ID', 'Nr', 'Title', 'Type', 'Date', 'Emitent'],
+        colNames: ['ID', '<?= varlang('nr-5'); ?>', '<?= varlang('title-5'); ?>', '<?= varlang('type-1'); ?>', '<?= varlang('date-6'); ?>', '<?= varlang('emitent'); ?>'],
         colModel: [
             {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
             {name: 'nr', index: 'nr', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
@@ -37,7 +37,7 @@
     };
 </script>
 
-<a href="<?= url('actelocale/create'); ?>" class="btn btn-success">New record</a>
+<a href="<?= url('actelocale/create'); ?>" class="btn btn-success"><?= varlang('new-record'); ?></a>
 <div class="c20"></div>
 <?=
 View::make('sections/jqgrid/form')->with(array(

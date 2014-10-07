@@ -37,14 +37,14 @@ class PageController extends BaseController {
      */
     public function getIndex($page_id = 0) {
         User::onlyHas("page-view");
-        
+
         if ($page_id) {
             $this->data['page'] = Post::findTax($page_id, $this->taxonomy->id);
             if ($this->data['page']) {
                 $this->data['view_mods'] = Template::getViewMethodList('page');
                 $this->data['page_langs'] = $this->data['page']->langs()->get();
                 $this->data['page_properties_all'] = PostProperty::where('taxonomy_id', 1)->orderBy('name', 'asc')->get();
-                
+
                 $properties = PostPropertyRel::where('post_id', $page_id)->get();
                 $this->data['page_properties'] = [];
                 foreach ($properties as $property) {
@@ -65,7 +65,7 @@ class PageController extends BaseController {
      */
     public function postCreate() {
         User::onlyHas("page-create");
-        
+
         $parent = Input::get('parent');
 
         $page = new Post;
@@ -80,10 +80,10 @@ class PageController extends BaseController {
             $pageLang->post_id = $page->id;
             $pageLang->save();
         }
-        
+
         $page->ord_num = $page->id;
         $page->save();
-        
+
         Log::info("Create page #{$page->id}");
 
         return Redirect::to('page/index/' . $page->id);
@@ -95,7 +95,7 @@ class PageController extends BaseController {
      */
     public function postSave() {
         User::onlyHas("page-edit");
-        
+
         $page_id = Input::get('id');
         $page = Input::get('page');
         $page_lang = Input::get('lang');
@@ -134,7 +134,7 @@ class PageController extends BaseController {
                 $post_lang->save();
             }
         }
-        
+
         $properties = Input::get('properties');
         PostPropertyRel::where('post_id', $page_id)->delete();
         if (is_array($properties)) {
@@ -149,7 +149,7 @@ class PageController extends BaseController {
         if (isset($post->clone_id) && $post->clone_id) {
             $this->clonePageLangData($post->clone_id, $post->id);
         }
-        
+
         Log::info("Edit page #{$page_id}");
 
         return array(
@@ -158,7 +158,7 @@ class PageController extends BaseController {
 
     public function postSavefilesdata() {
         User::onlyHas("page-edit");
-        
+
         $page_id = Input::get('id');
         $post = Post::find($page_id);
         $post->show_files = Input::has('data.show_files') ? 1 : 0;
@@ -166,7 +166,7 @@ class PageController extends BaseController {
         $post->save();
 
         Log::info("Edit page file settings #{$page_id}");
-        
+
         return array();
     }
 
@@ -195,7 +195,7 @@ class PageController extends BaseController {
 
     public function getMove($page_id, $up) {
         User::onlyHas("page-order");
-        
+
         $page = Post::find($page_id);
 
         if ($page) {
@@ -210,11 +210,11 @@ class PageController extends BaseController {
 
                 $spage->ord_num = $ord_num;
                 $spage->save();
-                
+
                 Log::info("Move page ord,  #{$page->id} - #{$spage->id}");
             }
-                                   
-            return Redirect::to($_SERVER['HTTP_REFERER']);
+
+            return Redirect::back();
         } else {
             throw new Exception("Page not found #{$page_id}, move action");
         }
@@ -222,28 +222,28 @@ class PageController extends BaseController {
 
     public function getDelete($id) {
         User::onlyHas("page-delete");
-        
+
         $trash_folder = 270;
-        
+
         if ($id != $trash_folder) {
             $page = Post::find($id);
             $page->parent = $trash_folder;
             $page->save();
         }
-        
-        return Redirect::to($_SERVER['HTTP_REFERER']);
+
+        return Redirect::back();
     }
-    
+
     public function getClear() {
-        
+
         return '---';
-        
+
         $parent = 270;
-        
+
         $pages = Post::where('parent', $parent)->get();
-        
+
         echo "<pre>";
-        
+
         foreach ($pages as $page) {
             $pagelang = PostLang::where('post_id', $page->id)->get();
             echo "#{$page->id}\n";
@@ -253,16 +253,16 @@ class PageController extends BaseController {
             }
             $page->delete();
         }
-        
+
         return [];
     }
-    
+
     public function getExport() {
-        
+
         $buffer = "";
-        
+
         $pages = Post::where('taxonomy_id', 1)->get();
-        
+
         foreach ($pages as $page) {
             $langs = PostLang::where('post_id', $page->id)->get();
             foreach ($langs as $plang) {
@@ -271,7 +271,7 @@ class PageController extends BaseController {
             }
             $buffer .= "\n";
         }
-        
+
         header('Content-Encoding: UTF-8');
         header('Content-type: text/csv; charset=UTF-8');
         header('Content-Disposition: attachment; filename=Customers_Export.csv');
@@ -279,5 +279,38 @@ class PageController extends BaseController {
 
         return $buffer;
     }
-    
+
+    public function getImport() {
+        $xsdstring = $_SERVER['DOCUMENT_ROOT'] . "/import.xml";
+
+        
+        die;
+        
+        $excel = new XML2003Parser($xsdstring);
+
+        $table = $excel->getTableData();
+
+        function mb_ucfirst($str, $enc = 'utf-8') {
+            return mb_strtoupper(mb_substr($str, 0, 1, $enc), $enc) . mb_substr($str, 1, mb_strlen($str, $enc), $enc);
+        }
+
+        foreach ($table["table_contents"] as $row) {
+            if (isset($row["row_contents"][2]) && isset($row["row_contents"][0])) {
+                $id = $row["row_contents"][0]['value'];
+                $value = trim(mb_ucfirst(mb_strtolower(($row["row_contents"][2]['value']))));
+                $postlang = PostLang::find($id);
+                if ($postlang) {
+                    $postlang->title = $value;
+                    $postlang->uri = PostLang::uniqURI($id, $value);
+                    $postlang->save();
+                } else {
+                    echo "undefined {$id} <br>";
+                }
+
+                //echo  "$id  $value<br><br><br>";
+            }
+        }
+        return [];
+    }
+
 }

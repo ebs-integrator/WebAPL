@@ -1,1 +1,1 @@
-New job request, name: <?=$name;?>
+<?= varlang('jobreq'); ?> <?=$name;?>

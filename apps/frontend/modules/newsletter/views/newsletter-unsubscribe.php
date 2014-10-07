@@ -1,9 +1,9 @@
 <section>
     <?= View::make('sections.elements.breadcrumbs'); ?>
     <div class="wrap">
-        <p class='c_title'>Newsletter unsubscribe</p>
+        <p class='c_title'><?= varlang('news-dez'); ?></p>
         <div class='left'>
-            Your email is unsubscribed from website newsletter
+            <?= varlang('newsletter-msg'); ?>
         </div>
         <div class='clearfix'></div>
         <div class='hr_grey'></div>

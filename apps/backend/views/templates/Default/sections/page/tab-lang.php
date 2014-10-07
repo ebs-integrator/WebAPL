@@ -3,7 +3,7 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>Frontend link: </th>
+            <th><?= varlang('frontend-link-'); ?></th>
             <td>
                 <?php
                 $link = "/" . (Language::getItem($plang->lang_id)->ext) . "/topost/" . (isset($page['id']) ? $page['id'] : 0);
@@ -12,25 +12,25 @@
             </td>
         </tr>
         <tr>
-            <th>Title: </th>
+            <th><?= varlang('title--3'); ?></th>
             <td>
                 <input type="text" name="lang[<?= $plang->id; ?>][title]" class='form-control' value='<?= isset($plang->title) ? $plang->title : ''; ?>' />
             </td>
         </tr>
         <tr>
-            <th>Uri: </th>
+            <th><?= varlang('uri-'); ?></th>
             <td>
                 <input type="text" name="lang[<?= $plang->id; ?>][uri]" class='form-control' value='<?= isset($plang->uri) ? $plang->uri : ''; ?>' />
             </td>
         </tr>
         <tr>
-            <th>Text: </th>
+            <th><?= varlang('text-'); ?></th>
             <td>
                 <textarea name="lang[<?= $plang->id; ?>][text]" class='ckeditor-run'><?= isset($plang->text) ? $plang->text : ''; ?></textarea>
             </td>
         </tr>
         <tr>
-            <th>Enabled: </th>
+            <th><?= varlang('enabled--1'); ?></th>
             <td>
                 <input type="checkbox" name="lang[<?= $plang->id; ?>][enabled]" class='make-switch' <?= isset($plang->enabled) && $plang->enabled ? 'checked' : ''; ?> />
             </td>

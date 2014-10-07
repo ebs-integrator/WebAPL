@@ -39,7 +39,13 @@ $months = array(
                 <table>
                     <thead>
                         <tr><td colspan="5"><?= $month; ?> <?= $current_year; ?></td></tr>
-                        <tr><td>nr.</td><td>Titlu </td><td>Tip </td><td>Emitent</td><td>Data</td></tr>
+                        <tr>
+                            <td><?= varlang('acte-nr'); ?></td>
+                            <td><?= varlang('acte-title'); ?></td>
+                            <td><?= varlang('acte-tip'); ?></td>
+                            <td><?= varlang('acte-emitent'); ?></td>
+                            <td><?= varlang('acte-data'); ?></td>
+                        </tr>
                     </thead>
                     <tbody>
                         <?php if (isset($list[$month_num])) { ?>
@@ -56,7 +62,7 @@ $months = array(
                     </tbody>
                 </table>
                 <div class="jspages pag">
-                    <span class="w_p">Pagina</span>
+                    <span class="w_p"><?= varlang('acte-search'); ?></span>
                     <ul></ul>
                 </div>
                 <div class="clearfix10"></div>

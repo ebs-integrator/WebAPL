@@ -3,7 +3,7 @@
     <div class="col-lg-4">
         <div class="box">
             <header>
-                <h5>Pages</h5>
+                <h5><?= varlang('pages-2'); ?></h5>
             </header>
             <div class="body">
                 <ul class="treeview treeview-gray">
@@ -15,7 +15,7 @@
         <?php if (User::has("page-create")) { ?>
         <div class="box">
             <header>
-                <h5>Create new page</h5>
+                <h5><?= varlang('create-new-page'); ?></h5>
             </header>
             <div class="body">
                 <form action="<?= url('page/create'); ?>" method="post">
@@ -24,7 +24,7 @@
                         <?= View::make('sections.page.element-tree-option', array('level' => 1, 'items' => $tree_pages)); ?>
                     </select>
                     <div class='c10'></div>
-                    <input type='submit' value="Create" class='btn btn-success pull-right' />
+                    <input type='submit' value="<?= varlang('create-3'); ?>" class='btn btn-success pull-right' />
                     <div class='clearfix'></div>
                 </form>
             </div>
@@ -35,7 +35,7 @@
         <div class="col-lg-8">
             <div class="box">
                 <header>
-                    <h5>Form</h5> <a href='<?= url('page/delete/' . $page->id); ?>' onclick='return confirm("Delete this page? ");' class='label label-danger pull-right' style='line-height: 38px'>DELETE</a>
+                    <h5><?= varlang('form-3'); ?></h5> <a href='<?= url('page/delete/' . $page->id); ?>' onclick='return confirm("Delete this page? ");' class='label label-danger pull-right' style='line-height: 38px'><?= varlang('delete'); ?></a>
                 </header>
                 <div class="body">
                     <?= View::make('sections.page.block-form'); ?>

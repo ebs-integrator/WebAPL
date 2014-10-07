@@ -1,4 +1,4 @@
-<p class="adv">Raspunsurile dumneavoastra au fost inregistrate cu succes! Va multumim! Puteti urmari rezultatele curente ale sondajului:</p>
+<p class="adv"><?= varlang('poll-msg-succ'); ?></p>
 <p class="snd_title"><?=$poll->title;?></p>
 
 <table class="sondaje">
@@ -9,7 +9,7 @@
             <td>
                 <progress value="<?=(int)($total_votes ? $answer->count / $total_votes * 100 : 0);?>" max="100"></progress>
                 <span><?=(int)($total_votes ? $answer->count / $total_votes * 100 : 0);?>%</span>
-            </td><td><?=$answer->count;?> raspunsuri</td>
+            </td><td><?=$answer->count;?> <?= varlang('poll-raspunsuri'); ?></td>
         </tr>
         <?php } ?>
     </tbody>

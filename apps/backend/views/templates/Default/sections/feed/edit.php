@@ -1,8 +1,8 @@
-<h3>Edit feed: <?=$feed->name;?></h3>
+<h3><?= varlang('edit-feed'); ?>: <?=$feed->name;?></h3>
 
 <ul class="nav nav-tabs" role="tablist" id="form-tabs">
-    <li><a href="#general" role="tab" data-toggle="tab">General</a></li>
-    <li class="active"><a href="#posts" role="tab" data-toggle="tab">Posts</a></li>
+    <li><a href="#general" role="tab" data-toggle="tab"><?= varlang('edit-feed'); ?></a></li>
+    <li class="active"><a href="#posts" role="tab" data-toggle="tab"><?= varlang('post-list'); ?></a></li>
 </ul>
 
 <div class="tab-content">
@@ -16,7 +16,7 @@
 
     <div class="tab-pane active" id="posts">
         <div class="c10"></div>
-        <a href="<?=url('feed/newpost/'.$feed->id);?>" class="btn btn-success">Add new post</a>
+        <a href="<?=url('feed/newpost/'.$feed->id);?>" class="btn btn-success"><?= varlang('create-new-post'); ?></a>
         <div class="c10"></div>
         <?= View::make('sections.feed.block-posts')->with('feed',$feed); ?>
     </div>

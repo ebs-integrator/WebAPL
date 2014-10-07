@@ -6,21 +6,21 @@
     <?php } ?>
 </h3>
 
-<a href='<?= url('feed'); ?>'>Feeds</a> / Edit post
+<a href='<?= url('feed'); ?>'><?= varlang('feeds-1'); ?></a> / <?= varlang('edit-post'); ?>
 
 
 
 <div class='c10'></div>
 
 <ul class="nav nav-tabs" role="tablist" id="form-tabs">
-    <li class="active"><a href="#general" role="tab" data-toggle="tab">General</a></li>
+    <li class="active"><a href="#general" role="tab" data-toggle="tab"><?= varlang('general'); ?></a></li>
     <?php
     foreach (Language::getList() as $lang)
         if (isset($post_langs[$lang->id])) {
             ?>
-            <li><a href="#lang<?= $lang->id; ?>" role="tab" data-toggle="tab">Language <?= $lang->name; ?></a></li>
+            <li><a href="#lang<?= $lang->id; ?>" role="tab" data-toggle="tab"><?= varlang('varianta-in'); ?> <?= $lang->name; ?></a></li>
         <?php } ?>
-    <li><a href="#media" role="tab" data-toggle="tab">Media</a></li>
+    <li><a href="#media" role="tab" data-toggle="tab"><?= varlang('media'); ?></a></li>
 </ul>
 
 <div class="tab-content">

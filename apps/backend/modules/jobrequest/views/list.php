@@ -1,3 +1,5 @@
+<h2><?= varlang('recrut'); ?></h2>
+
 <script>
     var jobrequest_options = {
         url: '<?= url('jobrequest/getlist') ?>',
@@ -5,12 +7,12 @@
         mtype: 'POST',
         autoencode: true,
         loadonce: false,
-        colNames: ['ID', 'Post', 'Name', 'CV', 'Date'],
+        colNames: ['ID', '<?= varlang('post-1'); ?>', '<?= varlang('name-6'); ?>', '<?= varlang('cv-2'); ?>', '<?= varlang('date-7'); ?>'],
         colModel: [
             {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
             {name: 'title', index: 'title', height: 50, resizable: true, align: "left", editable: false, edittype: "text"},
             {name: 'name', index: 'name', resizable: true, align: "left", sorttype: "text", editable: false, edittype: "text"},
-            {name: 'cv_path', index: 'cv_path', resizable: true, align: "left", sorttype: "text", editable: false, edittype: "select", editoptions: {value: '0:Disabled;1:Enabled'}, formatter: function(value) {
+            {name: 'cv_path', index: 'cv_path', resizable: true, align: "left", sorttype: "text", editable: false, edittype: "select", editoptions: {value: '0:<?= varlang('disabled'); ?>;1:<?= varlang('enabled-5'); ?>'}, formatter: function(value) {
                     return "<a href='" + value + "' target='_blank'>CV</a>";
                 }},
             {name: 'date_created', index: 'date_created', resizable: true, align: "left", sorttype: "text", editable: false, edittype: "text"},
