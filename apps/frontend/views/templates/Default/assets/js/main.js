@@ -20,7 +20,7 @@ $(document).ready(function () {
         startSlide: typeof start_month !== 'undefined' ? start_month : 0
     });
     $(window).scroll(function () {
-        if ($(window).width>740){
+        if ($(window).width() > 740){
             if ($(this).scrollTop() <= 83) {
                 $('.home_menu').hide();
             }

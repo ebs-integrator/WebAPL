@@ -2240,7 +2240,7 @@ ul.a_n li a p{
     pointer-events: none;
     cursor: default;
 }
-.pag ul li.disabled{
+.pag ul li.disabled,.pag ul li:last-child,.pag ul li:last-child a{
     border-right:0px;
 }
 .m_a.right .more{
@@ -5098,7 +5098,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         margin-top:50px;
         width:360px;
     }
-    
+
     .contact.left.form{
         display: block;
         margin-top: 30px;
@@ -6193,11 +6193,29 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     .mini_contacte, .mini_contacte1,.mini_contacte:hover, .mini_contacte1:hover{
         background-size: 25px 27px; 
+        height: 33px;
+        margin: 20px 7px;
     }
     .contact.left.form{
         width:100%;
     }
-
+    header .contact .currency span.s_c span{
+        padding: 0px 12px 0px 8px;
+    }
+    header .logo{
+        margin: 8px 10px;
+        margin-top:15px;
+    }
+    .mini_contacte, .mini_contacte1{
+        width: 24px;
+    }
+    header{
+        line-height: 74px;
+        height: 74px;
+    }
+    header .contact .currency span.s_c{
+        margin-right:8px;
+    }
 }
 
 iframe, object, embed {
