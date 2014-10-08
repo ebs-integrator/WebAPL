@@ -1415,3 +1415,53 @@ ul.culture li .right >p {
     color:#232323;
     margin-bottom: 15px;
 }
+.right_block nav{
+    float:left;
+    border:2px solid #f7f7f7;
+    margin-bottom:45px;
+}
+.right_block nav:nth-child(2n){
+    margin-right:50px;
+}
+.city {
+    width: 100%;
+}
+.city_box {
+    height: 115px;
+    width: 100%;
+    border-bottom: 2px solid #efefef;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+.city_info {
+    float: left;
+    width: 80%;
+}
+.city_box .img {
+    float: left;
+    margin-right: 18px;
+    width: 96px;
+}
+.city_box .img  img{    
+    max-width: 96px;
+}
+.city_box .title {
+    font: 24px 'AvenirNext-Medium';
+    color: #008d74;
+    margin-bottom: 0px;
+    margin-top: -3px;
+}
+.city_box .info {
+    font: 17px 'AvenirNext-Regular';
+    color: #4b4b4b;
+    margin-bottom: 0px;
+}
+.city_link {
+    text-align: right;
+    margin-top: 30px;
+    float: right;
+}
+.city_link a {
+    color: #9c9c9c;
+    font: 16px 'AvenirNext-MediumItalic';
+}
