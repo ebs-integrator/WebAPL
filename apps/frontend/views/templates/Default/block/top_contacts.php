@@ -12,20 +12,9 @@
             <div class="d_hr"></div>
             <ul>
                 <li>
-                    <p><?= varlang('phone-anti'); ?></p>
-                    <p><?= varlang('nr-anti'); ?></p>
-                </li>
-                <li>
-                    <p><?= varlang('email'); ?></p>
-                    <p><?= varlang('email-address'); ?></p>
-                </li>
-                <li>
-                    <p><?= varlang('relatii'); ?> </p>
-                    <p><?= varlang('nr-relatii'); ?></p>
-                </li>
-                <li>
-                    <p><?= varlang('fax'); ?></p>
-                    <p><?= varlang('nr-fax'); ?></p>
+                    <p><?= varlang('email'); ?> : <span> <?= varlang('email-address'); ?></span></p>
+                    <p><?= varlang('relatii'); ?> : <span><?= varlang('nr-relatii'); ?></span></p>
+                    <p><?= varlang('fax'); ?> : <span><?= varlang('nr-fax'); ?></span></p>
                 </li>
             </ul>
             <div class="clearfix"></div>
@@ -33,6 +22,9 @@
                 <div class="anp">
                     <a href="<?= Core\APL\Language::url('topost/' . $phone_page->id); ?>"><?= varlang('all-nr-phone'); ?></a>
                 </div>   
+                <div class="anp">
+                    <a href="<?= varlang('orar-link'); ?>"><?= varlang('orar-autobus'); ?></a>
+                </div>
             <?php } ?>
             <p class="title"><?= varlang('viziteaza'); ?></p>
             <div class="d_hr"></div>
@@ -46,10 +38,8 @@
             <div class="left map">
                 <div id="map-canvas" style="width:158px; height:119px;"/></div>
         </div>        
-        <div class="clearfix25"></div>
-        <div class="anp">
-            <a href="<?= varlang('orar-link'); ?>"><?= varlang('orar-autobus'); ?></a>
-        </div>
+        <div class="clearfix10"></div>
+
         <p class="title"><?= varlang('scrieti-direct'); ?></p>
         <div class="d_hr"></div>
         <div class="contact_top_notif adv" style="display: none;"><?= varlang('success'); ?> </div>

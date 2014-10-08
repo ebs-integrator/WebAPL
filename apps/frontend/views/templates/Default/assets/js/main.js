@@ -172,7 +172,7 @@ function initialize() {
 
     var center = new google.maps.LatLng(loc_lat, loc_long);
     map = new google.maps.Map(small_map, {
-        zoom: 14,
+        zoom: 12,
         center: myLatlng,
         disableDefaultUI: true
     });
