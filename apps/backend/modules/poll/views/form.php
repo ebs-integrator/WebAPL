@@ -1,9 +1,9 @@
-<h3><a href="<?= url('poll/list'); ?>">Polls</a> / Poll form</h3>
+<h3><a href="<?= url('poll/list'); ?>"><?= varlang('polls'); ?></a> / <?= varlang('poll-form'); ?></h3>
 
 <ul class="nav nav-tabs" role="tablist" id="form-tabs">
-    <li class="active"><a href="#general" role="tab" data-toggle="tab">General</a></li>
+    <li class="active"><a href="#general" role="tab" data-toggle="tab"><?= varlang('general-6'); ?></a></li>
     <?php foreach (Language::getList() as $lang) { ?>
-        <li><a href="#lang<?= $lang->id; ?>" role="tab" data-toggle="tab">Language <?= $lang->name; ?></a></li>
+        <li><a href="#lang<?= $lang->id; ?>" role="tab" data-toggle="tab"><?= $lang->name; ?></a></li>
     <?php } ?>
 </ul>
 

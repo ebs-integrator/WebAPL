@@ -8,7 +8,7 @@
         mtype: 'POST',
         autoencode: true,
         loadonce: false,
-        colNames: ['ID', 'Page', 'Username', 'Email', 'Address', 'Title', 'Text', 'Response', 'Date', 'Private', 'Enabled'],
+        colNames: ['ID', '<?= varlang('page-4'); ?>', '<?= varlang('username-2'); ?>', '<?= varlang('email-8'); ?>', '<?= varlang('address-1'); ?>', '<?= varlang('title-8'); ?>', '<?= varlang('text-3'); ?>', '<?= varlang('response'); ?>', '<?= varlang('date-10'); ?>', '<?= varlang('private'); ?>', '<?= varlang('enabled-8'); ?>'],
         colModel: [
             {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
             {name: 'post_id', index: 'post_id', resizable: true, align: "left", sorttype: "text", editable: true, edittype: "select", editoptions: {value: pages_string}, formatter: function(value) {

@@ -77,7 +77,7 @@ class Poll extends \Core\APL\ExtensionController {
 
         $jqgrid = new jQgrid('apl_poll');
         return $jqgrid->populate(function($start, $limit) {
-                    return PollModel::select('apl_poll.id', 'apl_poll_question.title', 'author_id', 'date_created', 'enabled')
+                    return PollModel::select('apl_poll.id', 'apl_poll_question.title', 'date_created', 'enabled')
                                     ->skip($start)
                                     ->take($limit)
                                     ->leftjoin('apl_poll_question', 'apl_poll.id', '=', 'apl_poll_question.poll_id')

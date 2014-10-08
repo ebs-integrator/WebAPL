@@ -16,14 +16,18 @@ class ActeLocaleModel extends Eloquent {
                         ->get();
     }
 
+    public static function prepare() {
+        return ActeLocaleModel::join(Files::getTableName(), Files::getField('module_id'), '=', ActeLocaleModel::getField('id'))
+                        ->where(Files::getField('module_name'), ActeLocaleModel::$filesModule)
+                        ->select(ActeLocaleModel::getField("*"), Files::getField('path'), DB::raw("MONTH(" . ActeLocaleModel::getField('date_upload') . ") as date_month"))
+                        ->orderBy(ActeLocaleModel::getField('date_upload'), 'asc');
+    }
+
     public static function extract($year) {
-        $list = ActeLocaleModel::join(Files::getTableName(), Files::getField('module_id'), '=', ActeLocaleModel::getField('id'))
-                ->where(Files::getField('module_name'), ActeLocaleModel::$filesModule)
-                ->select(ActeLocaleModel::getField("*"), Files::getField('path'), DB::raw("MONTH(" . ActeLocaleModel::getField('date_upload') . ") as date_month"))
-                ->orderBy(ActeLocaleModel::getField('date_upload'), 'asc')
+        $list = ActeLocaleModel::prepare()
                 ->where(DB::raw("YEAR(" . ActeLocaleModel::getField('date_upload') . ")"), intval($year))
                 ->get();
-        
+
         $groups = [];
 
         foreach ($list as $item) {
@@ -33,7 +37,7 @@ class ActeLocaleModel extends Eloquent {
                 $groups[$item->date_month] = [$item];
             }
         }
-        
+
         return $groups;
     }
 

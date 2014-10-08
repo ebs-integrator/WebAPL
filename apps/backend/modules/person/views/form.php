@@ -1,12 +1,12 @@
 <h3><a href="<?=url('person/list');?>">Persons</a> / Person form</h3>
 
 <ul class="nav nav-tabs" role="tablist" id="form-tabs">
-    <li class="active"><a href="#general" role="tab" data-toggle="tab">General</a></li>
+    <li class="active"><a href="#general" role="tab" data-toggle="tab"><?= varlang('general-5'); ?></a></li>
     <?php foreach (Language::getList() as $lang) { ?>
-        <li><a href="#lang<?= $lang->id; ?>" role="tab" data-toggle="tab">Language <?= $lang->name; ?></a></li>
+        <li><a href="#lang<?= $lang->id; ?>" role="tab" data-toggle="tab"><?= $lang->name; ?></a></li>
     <?php } ?>
     <?php if ($person) { ?>
-        <li><a href="#dynamic" role="tab" data-toggle="tab">Dynamic fields</a></li>
+        <li><a href="#dynamic" role="tab" data-toggle="tab"><?= varlang('dynamic-fields'); ?></a></li>
     <?php } ?>
 </ul>
 

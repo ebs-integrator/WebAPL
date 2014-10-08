@@ -99,7 +99,7 @@
                             </div>
                             <div class="btn-group">
                                 <?php foreach (Core\APL\Language::getList() as $lang) { ?>
-                                    <a data-placement="bottom" data-original-title="E-mail" data-toggle="tooltip" href="<?=url("home/changelang/".$lang->ext);?>" class="btn btn-default btn-sm <?= $lang->id == Core\APL\Language::getId() ? 'active' : '' ?>">
+                                    <a data-placement="bottom" data-original-title="E-mail" data-toggle="tooltip" href="<?= url("home/changelang/" . $lang->ext); ?>" class="btn btn-default btn-sm <?= $lang->id == Core\APL\Language::getId() ? 'active' : '' ?>">
                                         <?= strtoupper($lang->ext); ?>
                                     </a>
                                 <?php } ?>
@@ -173,7 +173,7 @@
             </div><!-- /#content -->
         </div><!-- /#wrap -->
         <footer class="Footer bg-dark dker">
-            <p>2014 &copy; APL</p>
+            <p>2014 &copy; APL by <a href="http://ebs.md/?apl" target="_black">EBS</a></p>
         </footer><!-- /#footer -->
 
         <!-- Modal -->
@@ -197,6 +197,9 @@
         <!--Bootstrap -->
         <script src="<?= res('assets/lib/bootstrap/js/bootstrap.min.js'); ?>"></script>
 
+        <script>
+            window.langext = '<?= Language::ext(); ?>';
+        </script>
 
         <!-- module -->
         <script src="<?= res('assets/lib/jquery-ui/jquery-ui.min.js'); ?>" type="text/javascript"></script>

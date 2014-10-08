@@ -31,7 +31,12 @@ class PostProperty extends Eloquent {
                         ->first();
     }
 
+    public static $properties = array();
     public static function getPostProperties($id) {
+        if (isset(static::$properties[$id])) {
+            return static::$properties[$id];
+        }
+        
         $list = PostPropertyRel::join(PostProperty::getTableName(), PostProperty::getField('id'), '=', PostPropertyRel::getField('post_property_id'))
                 ->where(PostPropertyRel::getField('post_id'), $id)
                 ->get();
@@ -42,6 +47,7 @@ class PostProperty extends Eloquent {
             $names[] = $item->key;
         }
 
+        static::$properties[$id] = $names;
         return $names;
     }
 

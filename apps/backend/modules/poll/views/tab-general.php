@@ -4,29 +4,29 @@
     <table class="table table-bordered">
         <?php if (isset($poll->date_created)) { ?>
         <tr>
-            <th>Date created: </th>
+            <th><?= varlang('date-created'); ?></th>
             <td>
                 <input type="text" name="date_created" class='form-control' value='<?= isset($poll->date_created) ? $poll->date_created : ''; ?>' />
             </td>
         </tr>
         <?php } ?>
         <tr>
-            <th>Active: </th>
+            <th><?= varlang('active-1'); ?></th>
             <td>
                 <input type="checkbox" name="active" class='make-switch' <?= isset($poll->active) && $poll->active ? 'checked' : ''; ?> />
             </td>
         </tr>
         <tr>
-            <th>Enabled: </th>
+            <th><?= varlang('enabled-7'); ?></th>
             <td>
                 <input type="checkbox" name="enabled" class='make-switch' <?= isset($poll->enabled) && $poll->enabled ? 'checked' : ''; ?> />
             </td>
         </tr>
         <?php if (isset($poll->id)) { ?>
             <tr>
-                <th>Delete: </th>
+                <th><?= varlang('delete--1'); ?></th>
                 <td>
-                    <a href="<?= url('poll/del/'.$poll->id) ?>" id="delete-menu" class="btn btn-danger pull-right">Delete</a>
+                    <a href="<?= url('poll/del/'.$poll->id) ?>" id="delete-menu" class="btn btn-danger pull-right"><?= varlang('delete--1'); ?></a>
                 </td>
             </tr>
         <?php } ?>

@@ -1,9 +1,9 @@
-<h2>Persons</h2>
+<h2><?= varlang('persons'); ?></h2>
 
 <ul class="nav nav-tabs" role="tablist" id="form-tabs">
-    <li class="active"><a href="#plist" role="tab" data-toggle="tab">Persons</a></li>
-    <li><a href="#pgroups" role="tab" data-toggle="tab">Person Groups</a></li>
-    <li><a href="#audience" role="tab" data-toggle="tab">Audience</a></li>
+    <li class="active"><a href="#plist" role="tab" data-toggle="tab"><?= varlang('persons-1'); ?></a></li>
+    <li><a href="#pgroups" role="tab" data-toggle="tab"><?= varlang('person-groups'); ?></a></li>
+    <li><a href="#audience" role="tab" data-toggle="tab"><?= varlang('audience'); ?></a></li>
 </ul>
 
 

@@ -26,7 +26,7 @@
 
     </div>
 </div>
-<section>
+<section id="hm_scroll">
     <div class="wrap">
         <div class="left global">
             <?php foreach ($sub_pages as $item) { ?>
@@ -47,10 +47,13 @@
                 </article>
             <?php } ?>
         </div>
-        <div class="right global">            
+        <div class="right global">  
+
+            <?=Core\APL\Actions::call('home_right_top', $page);?>
+
             <?php if (isset($home_ads) && $home_ads) { ?>
                 <article class="atn">
-                    <p class="ttl"><a href="javascript:;"><?= varlang('anunturi'); ?></a></p>
+                    <p class="ttl"><a href="<?=Language::url('topage/adsList');?>"><?= varlang('anunturi'); ?></a></p>
                     <div class="hr"></div>
                     <ul class="bxslider2">
                         <?php foreach ($home_ads as $item) { ?>
@@ -69,7 +72,7 @@
 
             <?php if (isset($home_posts) && count($home_posts)) { ?>
                 <article class="news">
-                    <p class="ttl"><img src="<?= res('assets/img/stiri.png'); ?>"><a href="javascript:;">Știri</a></p>
+                    <p class="ttl"><img src="<?= res('assets/img/stiri.png'); ?>"><a href="<?=Language::url('topage/newsList');?>">Știri</a></p>
                     <div class="hr"></div>
                     <ul>
                         <?php foreach ($home_posts as $item) { ?>
@@ -96,6 +99,8 @@
                     <a href="<?= Language::url('topost/' . $home_page->id); ?>" class="more"></a>
                 </article>
             <?php } ?>
+            
+            <?=Core\APL\Actions::call('home_right_bottom', $page);?>
         </div>
     </div>
     <div class="clearfix"></div>

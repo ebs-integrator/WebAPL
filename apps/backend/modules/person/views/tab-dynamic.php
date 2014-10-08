@@ -8,11 +8,11 @@ $list = isset($person->dynamic_fields) ? @unserialize($person->dynamic_fields) :
     <table id="fields_list" class="table table-bordered">
         <thead>
             <tr>
-                <th>Drag</th>
-                <th>Nume</th>
-                <th>Lang</th>
-                <th>Valoare</th>
-                <th>Delete</th>
+                <th><?= varlang('drag'); ?></th>
+                <th><?= varlang('nume-3'); ?></th>
+                <th><?= varlang('lang-2'); ?></th>
+                <th><?= varlang('value'); ?></th>
+                <th><?= varlang('delete-1'); ?></th>
             </tr>
         </thead>
         <tbody>
@@ -20,14 +20,14 @@ $list = isset($person->dynamic_fields) ? @unserialize($person->dynamic_fields) :
                 <?php foreach ($list as $item) { ?>
                     <tr>
                         <td>
-                            <div type="button" class="dragbut btn btn-sm btn-info">DRAG</div>
+                            <div type="button" class="dragbut btn btn-sm btn-info"><?= varlang('drag-1'); ?></div>
                         </td>
                         <td>
                             <input type="text" name="field[][name]" class='form-control' value='<?= isset($item['name']) ? $item['name'] : ''; ?>' />
                         </td> 
                         <td>
                             <select name="field[][lang_id]" class='form-control'>
-                                <option value="0">No lang</option>
+                                <option value="0"><?= varlang('no-lang'); ?></option>
                                 <?php foreach (Language::getList()as $lang) { ?>
                                     <option value="<?= $lang->id; ?>" <?= isset($item['lang_id']) && $item['lang_id'] == $lang->id ? 'selected' : '' ?>><?= $lang->name; ?></option>
                                 <?php } ?>
@@ -44,14 +44,14 @@ $list = isset($person->dynamic_fields) ? @unserialize($person->dynamic_fields) :
             <?php } ?>
             <tr class="multiplier">
                 <td>
-                    <div type="button" class="dragbut btn btn-sm btn-info">DRAG</div>
+                    <div type="button" class="dragbut btn btn-sm btn-info"><?= varlang('drag-1'); ?></div>
                 </td>
                 <td>
                     <input type="text" name="field[][name]" class='form-control' />
                 </td> 
                 <td>
                     <select name="field[][lang_id]" class='form-control'>
-                        <option value="0">No lang</option>
+                        <option value="0"><?= varlang('no-lang'); ?></option>
                         <?php foreach (Language::getList()as $lang) { ?>
                             <option value="<?= $lang->id; ?>"><?= $lang->name; ?></option>
                         <?php } ?>

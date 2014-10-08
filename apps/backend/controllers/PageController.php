@@ -139,10 +139,17 @@ class PageController extends BaseController {
         PostPropertyRel::where('post_id', $page_id)->delete();
         if (is_array($properties)) {
             foreach ($properties as $property) {
-                $newproperty = new PostPropertyRel;
-                $newproperty->post_id = $page_id;
-                $newproperty->post_property_id = $property;
-                $newproperty->save();
+                $prop = PostProperty::find($property);
+                if ($prop) {
+                    if ($prop->is_unique) {
+                        PostPropertyRel::where('post_property_id', $prop->id)->delete();
+                    }
+                    
+                    $newproperty = new PostPropertyRel;
+                    $newproperty->post_id = $page_id;
+                    $newproperty->post_property_id = $property;
+                    $newproperty->save();
+                }
             }
         }
 
@@ -283,9 +290,9 @@ class PageController extends BaseController {
     public function getImport() {
         $xsdstring = $_SERVER['DOCUMENT_ROOT'] . "/import.xml";
 
-        
+
         die;
-        
+
         $excel = new XML2003Parser($xsdstring);
 
         $table = $excel->getTableData();

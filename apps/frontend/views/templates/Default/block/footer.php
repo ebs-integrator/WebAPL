@@ -8,14 +8,14 @@
         </div>
         <?php } ?>
         <div class="left socials">
-            <a href="<?=varlang('facebook_link');?>"><span><img src="<?= res('assets/img/fb.png'); ?>"></span><?=varlang('facebook');?></a>
-            <a href="<?= varlang('odnoklassniki-link-1'); ?>"><span><img src="<?= res('assets/img/ok.png'); ?>"></span><?=varlang('odnoklassniki');?></a>
-            <a href="<?= varlang('vkontakte-link'); ?>"><span><img src="<?= res('assets/img/vk.png'); ?>"></span><?= varlang('vkontakte'); ?></a>
+            <a target="_blank" href="<?=varlang('facebook_link');?>"><span><img src="<?= res('assets/img/fb.png'); ?>"></span><?=varlang('facebook');?></a>
+            <a target="_blank" href="<?= varlang('odnoklassniki-link-1'); ?>"><span><img src="<?= res('assets/img/ok.png'); ?>"></span><?=varlang('odnoklassniki');?></a>
+            <a target="_blank" href="<?= varlang('vkontakte-link'); ?>"><span><img src="<?= res('assets/img/vk.png'); ?>"></span><?= varlang('vkontakte'); ?></a>
         </div>
         <div class="left socials">
-            <a href="<?= varlang('twitter-link'); ?>"><span><img src="<?= res('assets/img/twitter.png'); ?>"></span><?= varlang('twitter'); ?></a>
-            <a href="<?= varlang('gplus-link'); ?>"><span><img src="<?= res('assets/img/gplus.png'); ?>"></span><?= varlang('gplus'); ?></a>
-            <a href="<?= varlang('rss-link'); ?>"><span><img src="<?= res('assets/img/rsss.png'); ?>" class="rsss"></span><?= varlang('rss'); ?></a>
+            <a target="_blank" href="<?= varlang('twitter-link'); ?>"><span><img src="<?= res('assets/img/twitter.png'); ?>"></span><?= varlang('twitter'); ?></a>
+            <a target="_blank" href="<?= varlang('gplus-link'); ?>"><span><img src="<?= res('assets/img/gplus.png'); ?>"></span><?= varlang('gplus'); ?></a>
+            <a target="_blank" href="<?= varlang('rss-link'); ?>"><span><img src="<?= res('assets/img/rsss.png'); ?>" class="rsss"></span><?= varlang('rss'); ?></a>
         </div>
     </div>
     <div class="right">

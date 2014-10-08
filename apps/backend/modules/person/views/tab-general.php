@@ -3,31 +3,31 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>Phone: </th>
+            <th><?= varlang('phone--1'); ?></th>
             <td>
                 <input type="text" name="phone" class='form-control' value='<?= isset($person->phone) ? $person->phone : ''; ?>' placeholder="077 111 111" />
             </td>
         </tr>
         <tr>
-            <th>Email: </th>
+            <th><?= varlang('email--5'); ?></th>
             <td>
                 <input type="text" name="email" class='form-control' value='<?= isset($person->email) ? $person->email : ''; ?>' placeholder="name@gmail.com" />
             </td>
         </tr>
         <tr>
-            <th>Birth date: </th>
+            <th><?= varlang('birth-date-'); ?></th>
             <td>
                 <input type="text" name="date_birth" class='form-control datetimepicker' data-date-format="YYYY-MM-DD" value='<?= isset($person->date_birth) ? $person->date_birth : date("Y-m-d"); ?>' />
             </td>
         </tr>
         <tr>
-            <th>Accesibil pentru audienta: </th>
+            <th><?= varlang('accesibil-pentru-audienta-'); ?></th>
             <td>
                 <input type="checkbox" class="make-switch" name="for_audience" class='form-control' <?= isset($person->for_audience) && $person->for_audience ? 'checked' : ''; ?> />
             </td>
         </tr>
         <tr>
-            <th>Feed: </th>
+            <th><?= varlang('feed-'); ?></th>
             <td>
                 <select name="feed_id" class="form-control">
                     <option value="0">---</option>
@@ -38,7 +38,7 @@
             </td>
         </tr>
         <tr>
-            <th>User: </th>
+            <th><?= varlang('user--1'); ?></th>
             <td>
                 <select name="user_id" class="form-control">
                     <option value="0">---</option>
@@ -56,7 +56,7 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>Groups: </th>
+            <th><?= varlang('groups-'); ?></th>
             <td>
                 <select id="attach_pgroup" name="groups[]" class="form-control chzn-select-deselect" multiple>
                     <option value="0">---</option>
@@ -72,13 +72,13 @@
 <table class="table table-bordered">
     <?php if (isset($person->id)) { ?>
         <tr>
-            <th>Photo:</th>
+            <th><?= varlang('photo'); ?></th>
             <td>
                 <?= Files::widget('person', $person->id, 1); ?>
             </td>
         </tr>
         <tr>
-            <th>Chat icon:</th>
+            <th><?= varlang('chat-icon'); ?></th>
             <td>
                 <?= Files::widget('person_chat', $person->id, 1); ?>
             </td>

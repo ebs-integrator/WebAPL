@@ -52,7 +52,7 @@ $months = array(
                             <?php foreach ($list[$month_num] as $doc) { ?>
                                 <tr>
                                     <td><?= $doc->doc_nr; ?></td>
-                                    <td class="searchin"><?= $doc->title; ?></td>
+                                    <td class="searchin"><a href="<?=url($doc->path);?>"><?= $doc->title; ?></a></td>
                                     <td><?= $doc->type; ?></td>
                                     <td><?= $doc->emitent; ?></td>
                                     <td><?= date("d.m.Y", strtotime($doc->date_upload)); ?></td>

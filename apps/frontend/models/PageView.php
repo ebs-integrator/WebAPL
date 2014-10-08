@@ -240,7 +240,7 @@ class PageView {
                 $data['home_page']['childrens'] = Post::findWithParent($selected_page->id);
             }
         }
-      
+        
         return View::make('sections.pages.home')->with($data);
     }
 

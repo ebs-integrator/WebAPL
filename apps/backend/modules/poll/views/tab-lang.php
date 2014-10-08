@@ -5,7 +5,7 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>Question: </th>
+            <th><?= varlang('question-'); ?></th>
             <td>
                 <input type="text" name="question" class='form-control' value='<?= isset($poll_question->title) ? $poll_question->title : ''; ?>' />
             </td>
@@ -20,7 +20,7 @@
             mtype: 'POST',
             autoencode: true,
             loadonce: false,
-            colNames: ['ID', 'Answer'],
+            colNames: ['ID', '<?= varlang('answer'); ?>'],
             colModel: [ 
                 {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}, width: 10},
                 {name: 'answer', index: 'answer', height: 50, resizable: true, align: "left", editable: true, edittype: "text"}
