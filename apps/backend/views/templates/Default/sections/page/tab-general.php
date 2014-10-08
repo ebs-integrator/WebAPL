@@ -3,7 +3,7 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>Parent: </th>
+            <th><?= varlang('parent-'); ?></th>
             <td>
                 <select name="page[parent]" class='form-control'>
                     <option value='0'>----</option>
@@ -12,7 +12,7 @@
             </td>
         </tr>
         <tr class="<?= isset($page->clone_id) && $page->clone_id ? 'label-warning' : ''; ?>">
-            <th>Clone: </th>
+            <th><?= varlang('clone-'); ?></th>
             <td>
                 <select name="page[clone_id]" class='form-control'>
                     <option value='0'>----</option>
@@ -24,7 +24,7 @@
             </td>
         </tr>
         <tr class="<?= isset($page->redirect_to) && $page->redirect_to ? 'label-warning' : ''; ?>">
-            <th>Redirect to: </th>
+            <th><?= varlang('redirect-to-'); ?></th>
             <td>
                 <select name="page[redirect_to]" class='form-control'>
                     <option value='0'>----</option>
@@ -36,7 +36,7 @@
             </td>
         </tr>
         <tr>
-            <th>View mod:</th>
+            <th><?= varlang('view-mod'); ?></th>
             <td>
                 <div style="width: 90%; display: inline-block;">
                     <select name="page[view_mod]" class='chzn-select'>
@@ -63,7 +63,7 @@
             </td>
         </tr>
         <tr>
-            <th>Properties:</th>
+            <th><?= varlang('properties'); ?></th>
             <td>
                 <select name="properties[]" class='chzn-select' multiple>
                     <?php foreach ($page_properties_all as $property) { ?>
@@ -73,31 +73,31 @@
             </td>
         </tr>
         <tr>
-            <th>Date: </th>
+            <th><?= varlang('date--4'); ?></th>
             <td>
                 <input type="text" name="page[created_at]" class='form-control datetimepicker' data-date-format="YYYY-MM-DD hh:mm:ss" value='<?= isset($page->created_at) ? $page->created_at : ''; ?>' />
             </td>
         </tr>
         <tr>
-            <th>General node: </th>
+            <th><?= varlang('general-node-'); ?></th>
             <td>
                 <input type="checkbox" name="page[general_node]" class='make-switch' <?= isset($page->general_node) && $page->general_node ? 'checked' : ''; ?> />
             </td>
         </tr>
         <tr>
-            <th>Home page: </th>
+            <th><?= varlang('home-page-'); ?></th>
             <td>
                 <input type="checkbox" name="page[is_home_page]" class='make-switch' <?= isset($page->is_home_page) && $page->is_home_page ? 'checked' : ''; ?> />
             </td>
         </tr>
         <tr>
-            <th>Have socials: </th>
+            <th><?= varlang('have-socials-'); ?></th>
             <td>
                 <input type="checkbox" name="page[have_socials]" class='make-switch' <?= isset($page->have_socials) && $page->have_socials ? 'checked' : ''; ?> />
             </td>
         </tr>
         <tr>
-            <th>Have comments: </th>
+            <th><?= varlang('have-comments'); ?></th>
             <td>
                 <input type="checkbox" name="page[have_comments]" class='make-switch' <?= isset($page->have_comments) && $page->have_comments ? 'checked' : ''; ?> />
             </td>
@@ -115,15 +115,15 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">View mod help</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"><?= varlang('close-2'); ?></span></button>
+                <h4 class="modal-title" id="myModalLabel"><?= varlang('view-mod-help'); ?></h4>
             </div>
             <div class="modal-body">
                 <table class="table table-bordered">
                     <tr>
-                            <th>NUME</th>
-                            <th>INFO</th>
-                            <th>SCREEN</th>
+                            <th><?= varlang('nume-2'); ?></th>
+                            <th><?= varlang('info-1'); ?></th>
+                            <th><?= varlang('screen'); ?></th>
                         </tr>
                     <?php
                     foreach ($view_mods as $view_key => $view_mod) {
@@ -144,7 +144,7 @@
                 </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal"><?= varlang('close-2'); ?></button>
             </div>
         </div>
     </div>

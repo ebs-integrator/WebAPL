@@ -1,13 +1,11 @@
 <ul class="nav nav-tabs" role="tablist" id="form-tabs">
-    <li class="active"><a href="#general" role="tab" data-toggle="tab">General</a></li>
+    <li class="active"><a href="#general" role="tab" data-toggle="tab"><?= varlang('general-1'); ?></a></li>
     <?php foreach ($page_langs as $plang) { ?>
-        <li><a href="#lang<?= $plang->id; ?>" role="tab" data-toggle="tab">Language <?= Language::getItem($plang->lang_id)->name; ?></a></li>
+        <li><a href="#lang<?= $plang->id; ?>" role="tab" data-toggle="tab"><?= varlang('language-1'); ?> <?= Language::getItem($plang->lang_id)->name; ?></a></li>
     <?php } ?>
-    <li><a href="#files" role="tab" data-toggle="tab">Files</a></li>
-    <!--<li><a href="#actelocale" role="tab" data-toggle="tab">Acte Locale</a></li>-->
-    <li><a href="#attachment" role="tab" data-toggle="tab">Attachment</a></li>
+    <li><a href="#files" role="tab" data-toggle="tab"><?= varlang('files-1'); ?></a></li>
+    <li><a href="#attachment" role="tab" data-toggle="tab"><?= varlang('attachment'); ?></a></li>
 </ul>
-
 
 <div class="tab-content">
     <div class="tab-pane active" id="general">

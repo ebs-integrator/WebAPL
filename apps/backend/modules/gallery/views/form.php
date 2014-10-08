@@ -1,8 +1,8 @@
-<h3>Gallery: <?= isset($gallery->name) ? $gallery->name : ''; ?></h3>
+<h3><?= varlang('gallery'); ?>: <?= isset($gallery->name) ? $gallery->name : ''; ?></h3>
 
 <ul class="nav nav-tabs" role="tablist" id="form-tabs">
-    <li class="active"><a href="#general" role="tab" data-toggle="tab">General</a></li>
-    <li><a href="#gfiles" role="tab" data-toggle="tab">General</a></li>
+    <li class="active"><a href="#general" role="tab" data-toggle="tab"><?= varlang('general-4'); ?></a></li>
+    <li><a href="#gfiles" role="tab" data-toggle="tab"><?= varlang('fisiere-1'); ?></a></li>
 </ul>
 
 
@@ -14,7 +14,7 @@
 
             <table class="table table-bordered">
                 <tr>
-                    <th>Name: </th>
+                    <th><?= varlang('name--3'); ?></th>
                     <td>
                         <input type="text" name="gallery[name]" class='form-control' value='<?= isset($gallery->name) ? $gallery->name : ''; ?>' />
                     </td>

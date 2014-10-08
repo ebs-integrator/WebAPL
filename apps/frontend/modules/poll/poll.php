@@ -119,11 +119,11 @@ class Poll extends \Core\APL\ExtensionController {
 
                     $return['html'] = Template::moduleView($this->module_name, 'views.pollResults', $wdata)->render();
                 } else {
-                    $return['message'] = 'You have already voted';
+                    $return['message'] = varlang('you-have-already-voted');
                     $return['error'] = 1;
                 }
             } else {
-                $return['message'] = 'Poll not found';
+                $return['message'] = varlang('poll-not-found');
                 $return['error'] = 1;
             }
         }

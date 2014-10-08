@@ -1,8 +1,8 @@
 <table class="table table-bordered">
         <tr>
-            <th>Newsletter: </th>
+            <th><?= varlang('newsletter-2'); ?>: </th>
             <td>
-                <button class="sendnewsletter btn btn-default">Send this post</button>
+                <button class="sendnewsletter btn btn-default"><?= varlang('send-this-post'); ?></button>
             </td>
         </tr>
 </table>

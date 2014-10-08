@@ -1,4 +1,4 @@
-<h3>Edit #<?= $act->title; ?></h3>
+<h3><?= $act->title; ?></h3>
 
 <form action="<?= url('actelocale/save'); ?>" method="post" class="ajax-auto-submit">
 
@@ -6,19 +6,19 @@
     
     <table class="table table-bordered">
         <tr>
-            <th>Nr</th>
+            <th><?= varlang('nr-5'); ?></th>
             <td>
                 <input type="text" value="<?= $act->doc_nr; ?>" name="doc_nr" class="form-control"/> 
             </td>
         </tr>
         <tr>
-            <th>Title</th>
+            <th><?= varlang('title-5'); ?></th>
             <td>
                 <input type="text" value="<?= $act->title; ?>" name="title" class="form-control"/> 
             </td>
         </tr>
         <tr>
-            <th>Date</th>
+            <th><?= varlang('date-6'); ?></th>
             <td>
                 <div class="input-group date datetimepicker">        
                     <input type="text" class="form-control" value="<?= $act->date_upload; ?>" name="date_upload" data-date-format="YYYY-MM-DD hh:mm:ss" />		
@@ -27,13 +27,13 @@
             </td>
         </tr>
         <tr>
-            <th>Type</th>
+            <th><?= varlang('type-1'); ?></th>
             <td>
                 <?=Form::select('type', array('Dispoziție' => 'Dispoziție', 'Decizie' => 'Decizie'), $act->type, array('class' => 'form-control'));?>
             </td>
         </tr>
         <tr>
-            <th>Emitent</th>
+            <th><?= varlang('emitent'); ?></th>
             <td>
                 <?=Form::select('emitent', array('Primaria' => 'Primaria', 'Consiliu Local' => 'Consiliu Local'), $act->type, array('class' => 'form-control'));?>
             </td>
@@ -42,6 +42,6 @@
 
 </form>
 
-<h4>Document</h4>
+<h4><?= varlang('document-1'); ?></h4>
 
 <?=Files::widget(ActeLocaleModel::$filesModule, $act->id, 1, ActeLocaleModel::$filesDir);?>

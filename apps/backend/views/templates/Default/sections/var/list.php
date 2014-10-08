@@ -48,10 +48,10 @@
 
 <form method="post" action='<?= url("var/create"); ?>'>
     <input type="hidden" name='parent_key' value='<?= $var_key; ?>' />
-    <input type='text' name='key' value='' placeholder='Key' class='form-control' />
+    <input type='text' name='key' value='' autocomplete="off" placeholder='Key' class='form-control' />
     <div class='c10'></div>
     <?php foreach (\Core\APL\Language::getList() as $lang) { ?>
-        <input type='text' name='text[<?= $lang->id; ?>]' value='' placeholder='Text in <?= $lang->name; ?>' class='form-control' />
+        <input type='text' autocomplete="off" name='text[<?= $lang->id; ?>]' value='' placeholder='Text in <?= $lang->name; ?>' class='form-control' />
         <div class='c10'></div>
     <?php } ?>
     <input type='submit' class='btn btn-success' value='Create' />

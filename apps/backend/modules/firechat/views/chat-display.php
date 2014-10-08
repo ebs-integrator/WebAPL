@@ -28,9 +28,9 @@
 
         chatRef.auth('<?= $token; ?>', function(error, user) {
             if (error) {
-                alert("Login Failed!");
+                alert("<?= varlang('login-failed'); ?>");
             } else {
-                console.log("Login Succeeded!", user, user.auth.id);
+                console.log("<?= varlang('login-succeeded'); ?>", user, user.auth.id);
 
                 chat.setUser(user.auth.uid, uname);
 
@@ -52,7 +52,7 @@
         });
 
         chat._chat.on('room-exit-after', function(roomId) {
-            var save_messages = confirm('Send chat on email?');
+            var save_messages = confirm('<?= varlang('send-chat-on-email'); ?>');
             if (save_messages) {
                 var html = $(".tab-content > .tab-pane.active .chat").html();
                 jQuery.post('<?= url('firechat/sendmail'); ?>', {messages: html, id:'<?= $person->id; ?>'}, function() {
@@ -60,6 +60,6 @@
                 });
             }
 
-            chat._chat.sendSystemMessage(roomId, uname + " a parasit chat-ul", 'default');
+            chat._chat.sendSystemMessage(roomId, uname + "<?= varlang('exitchat'); ?>", 'default');
         });
 </script>

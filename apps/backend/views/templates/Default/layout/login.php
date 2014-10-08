@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Login Page</title>
+        <title><?= varlang('title'); ?></title>
 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="<?= res('assets/lib/bootstrap/css/bootstrap.min.css'); ?>">
@@ -26,28 +26,14 @@
                             <?php if (Session::has('auth_error')) { ?>
                                 <?=Session::get('auth_error');?>
                             <?php } else { ?>
-                                Enter your username and password
+                                <?= varlang('enter-your-username-and-password'); ?>
                             <?php } ?>
                         </p>
-                        <input type="text" name="username" placeholder="Username" class="form-control">
-                        <input type="password" name="password" placeholder="Password" class="form-control">
-                        <button class="btn btn-lg btn-success btn-block" type="submit">Sign in</button>
+                        <input type="text" name="username" placeholder="<?= varlang('username'); ?>" class="form-control">
+                        <input type="password" name="password" placeholder="<?= varlang('password'); ?>" class="form-control">
+                        <button class="btn btn-lg btn-success btn-block" type="submit"><?= varlang('sign-in'); ?></button>
                     </form>
                 </div>
-                <div id="forgot" class="tab-pane">
-                    <form action="<?=url('auth/remember');?>" class="form-signin" method="post">
-                        <p class="text-muted text-center">Enter your valid e-mail</p>
-                        <input type="email" placeholder="mail@domain.com" required="required" class="form-control">
-                        <br>
-                        <button class="btn btn-lg btn-danger btn-block" type="submit">Recover Password</button>
-                    </form>
-                </div>
-            </div>
-            <div class="text-center">
-                <ul class="list-inline">
-                    <li> <a class="text-muted" href="#login" data-toggle="tab">Login</a>  </li>
-                    <li> <a class="text-muted" href="#forgot" data-toggle="tab">Forgot Password</a>  </li>
-                </ul>
             </div>
         </div><!-- /container -->
         <script src="<?= res('assets/lib/jquery/jquery.min.js'); ?>"></script>

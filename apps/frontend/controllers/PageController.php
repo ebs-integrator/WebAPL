@@ -28,7 +28,7 @@ class PageController extends BaseController {
                 }
 
                 Template::clearBreadCrumbs();
-                Template::addBreadCrumb("/", "Home");
+                Template::addBreadCrumb("/", varlang('acasa'));
 
                 // Get pages resources
                 $this->data['parents'] = Post::getParents($this->data['page']['parent']);

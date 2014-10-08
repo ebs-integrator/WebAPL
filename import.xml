@@ -1,0 +1,2938 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Godina Nicolae</Author>
+  <LastAuthor>RePack by Diakov</LastAuthor>
+  <Created>2014-09-26T14:52:37Z</Created>
+  <LastSaved>2014-10-06T16:10:17Z</LastSaved>
+  <Version>15.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>7755</WindowHeight>
+  <WindowWidth>20490</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s57">
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="import">
+  <Table ss:ExpandedColumnCount="3" ss:ExpandedRowCount="754" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="322.5"/>
+   <Row>
+    <Cell><Data ss:Type="Number">168</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Contacte</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">169</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Контактные данные</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">781</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">989</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Контакти</Data></Cell>
+   </Row>
+   <Row ss:Index="6">
+    <Cell><Data ss:Type="Number">182</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Eroare de sistem</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">183</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Системная ошибка</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">785</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">993</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Системна грешка</Data></Cell>
+   </Row>
+   <Row ss:Index="11">
+    <Cell><Data ss:Type="Number">184</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Cetățeni și bussiness</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">185</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">ГРАЖДАНЕ И БИЗНЕС</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">786</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">994</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">ГРАЖДАНИ И БИЗНЕС</Data></Cell>
+   </Row>
+   <Row ss:Index="16">
+    <Cell><Data ss:Type="Number">186</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Primăria</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">187</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">ПРИМЭРИЯ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">787</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">995</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">КМЕТСТВО</Data></Cell>
+   </Row>
+   <Row ss:Index="21">
+    <Cell><Data ss:Type="Number">188</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Consiliul local</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">189</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">МЕСТНЫЙ СОВЕТ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">788</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">996</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">ОБЩИНСКИ СЪВЕТ</Data></Cell>
+   </Row>
+   <Row ss:Index="26">
+    <Cell><Data ss:Type="Number">190</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Transparența</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">191</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">ПРОЗРАЧНОСТЬ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">789</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">997</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Прозрачност </Data></Cell>
+   </Row>
+   <Row ss:Index="31">
+    <Cell><Data ss:Type="Number">192</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Beneficii sociale și ajutoare</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">193</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Социальные льготы и помощь</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">790</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">998</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Социални обезщетения и помощи</Data></Cell>
+   </Row>
+   <Row ss:Index="36">
+    <Cell><Data ss:Type="Number">194</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Impozite și taxe locale</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">195</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Сборы и налоги</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">791</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">999</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Данъци и такси</Data></Cell>
+   </Row>
+   <Row ss:Index="41">
+    <Cell><Data ss:Type="Number">196</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Business și Antreprenoriat</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">197</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Бизнес и предпринимательская деятельность</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">792</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Бизнес и предприемачество</Data></Cell>
+   </Row>
+   <Row ss:Index="46">
+    <Cell><Data ss:Type="Number">198</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Autorizații și certificate</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">199</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Авторизации (разрешения) и сертификаты</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">793</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1001</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Разрешение и сертификати</Data></Cell>
+   </Row>
+   <Row ss:Index="51">
+    <Cell><Data ss:Type="Number">200</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Educație, Cultură, Turism și Sport</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">201</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Образование, культура, туризм и спорт</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">794</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1002</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Образование, култура, туризъм и спорт</Data></Cell>
+   </Row>
+   <Row ss:Index="56">
+    <Cell><Data ss:Type="Number">202</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Implicarea cetățenilor</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">203</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Вовлечение граждан</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">795</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1003</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Участие на гражданите</Data></Cell>
+   </Row>
+   <Row ss:Index="61">
+    <Cell><Data ss:Type="Number">204</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Audierea cetățenilor</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">205</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Приём граждан</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">796</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1004</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Прием на граждани</Data></Cell>
+   </Row>
+   <Row ss:Index="66">
+    <Cell><Data ss:Type="Number">206</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Modele de acte / formulare</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">207</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Образцы документов / бланков</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">797</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1005</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String"> документи / формуляри</Data></Cell>
+   </Row>
+   <Row ss:Index="71">
+    <Cell><Data ss:Type="Number">208</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Primăria</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">209</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Примэрия</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">798</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1006</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Кметство</Data></Cell>
+   </Row>
+   <Row ss:Index="76">
+    <Cell><Data ss:Type="Number">210</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Rapoarte și planuri de activitate</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">211</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Отчёты и планы действий</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">799</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1007</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Отчети и планове за действие</Data></Cell>
+   </Row>
+   <Row ss:Index="81">
+    <Cell><Data ss:Type="Number">212</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Întreprinderi  subordonate</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">213</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Подчинённые предприятия</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">800</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1008</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Общински предприятия</Data></Cell>
+   </Row>
+   <Row ss:Index="86">
+    <Cell><Data ss:Type="Number">214</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Consiliul local</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">215</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Местный Совет</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">801</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1009</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">ОБЩИНСКИ СЪВЕТ</Data></Cell>
+   </Row>
+   <Row ss:Index="91">
+    <Cell><Data ss:Type="Number">216</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Comisiile de specialitate</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">217</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Специализированные комиссии</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">802</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1010</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Постоянни комисии</Data></Cell>
+   </Row>
+   <Row ss:Index="96">
+    <Cell><Data ss:Type="Number">218</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Strategii, planuri și politici</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">219</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Стратегии, планы и политики</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">803</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1011</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Стратегии, общински план и политика</Data></Cell>
+   </Row>
+   <Row ss:Index="101">
+    <Cell><Data ss:Type="Number">220</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Ce este transparența?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">221</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Что такое прозрачность?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">804</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1012</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Какво е прозрачност?</Data></Cell>
+   </Row>
+   <Row ss:Index="106">
+    <Cell><Data ss:Type="Number">222</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Dialogul cu cetățenii</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">223</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Диалог с гражданами</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">805</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1013</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Диалог с гражданите</Data></Cell>
+   </Row>
+   <Row ss:Index="111">
+    <Cell><Data ss:Type="Number">224</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Informații de interes public</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">225</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Публичная информация</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">806</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1014</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Публична информация</Data></Cell>
+   </Row>
+   <Row ss:Index="116">
+    <Cell><Data ss:Type="Number">226</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Finanțele publice locale</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">227</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Местные государственные финансы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">807</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1015</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Общински държавни финанси</Data></Cell>
+   </Row>
+   <Row ss:Index="121">
+    <Cell><Data ss:Type="Number">228</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Consultări publice</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">229</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Общественные консультации</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">808</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1016</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Обществено допитване</Data></Cell>
+   </Row>
+   <Row ss:Index="126">
+    <Cell><Data ss:Type="Number">230</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Proiecte locale</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">231</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Местные проекты</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">809</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1017</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Общински проекти</Data></Cell>
+   </Row>
+   <Row ss:Index="131">
+    <Cell><Data ss:Type="Number">232</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Contacte și adrese utile</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">233</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">КОНТАКТЫ И ПОЛЕЗНЫЕ АДРЕСА</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">810</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1018</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Контакти и полезна информация</Data></Cell>
+   </Row>
+   <Row ss:Index="136">
+    <Cell><Data ss:Type="Number">234</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Harta saitului</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">235</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Карта сайта</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">811</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1019</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Карта на сайта</Data></Cell>
+   </Row>
+   <Row ss:Index="141">
+    <Cell><Data ss:Type="Number">236</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Declarații anuale de venituri și interese</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">237</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Заявления о доходах и имуществе</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">812</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1020</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Декларациите за доходите и имуществото</Data></Cell>
+   </Row>
+   <Row ss:Index="146">
+    <Cell><Data ss:Type="Number">238</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Erori</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">239</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Ошибки</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">813</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1021</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Грешки</Data></Cell>
+   </Row>
+   <Row ss:Index="151">
+    <Cell><Data ss:Type="Number">240</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Pagina nu a fost gasita</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">241</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Страница не найдена</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">814</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1022</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Страницата не е намерена</Data></Cell>
+   </Row>
+   <Row ss:Index="156">
+    <Cell><Data ss:Type="Number">242</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Ajutoare sociale familiale</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">243</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Социальная поддержка семей</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">815</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1023</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Сциална подкрепа на семейство</Data></Cell>
+   </Row>
+   <Row ss:Index="161">
+    <Cell><Data ss:Type="Number">244</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Bursa muncii / Ajutorul de șomaj</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">245</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Биржа труда / Пособие по безработице</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">816</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1024</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Трудова борса / Парично обезщетение за безработица</Data></Cell>
+   </Row>
+   <Row ss:Index="166">
+    <Cell><Data ss:Type="Number">246</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Pensionarea și ajutorul social</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">247</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Уход на пенсию и социальная помощь</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">817</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1025</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Пенсиониране и социално подпомагане</Data></Cell>
+   </Row>
+   <Row ss:Index="171">
+    <Cell><Data ss:Type="Number">248</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Consiliere socială</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">249</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Социальное консультирование</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">818</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1026</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Социално консултиране</Data></Cell>
+   </Row>
+   <Row ss:Index="176">
+    <Cell><Data ss:Type="Number">250</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Puncte medicale locale</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">251</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Местные медицинские учреждения</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">819</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1027</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Общински лечебни заведения</Data></Cell>
+   </Row>
+   <Row ss:Index="181">
+    <Cell><Data ss:Type="Number">252</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Decesul și ajutorul de deces</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">253</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Материальная помощь в связи со смертью</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">820</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1028</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Еднократна помощ при смърт</Data></Cell>
+   </Row>
+   <Row ss:Index="186">
+    <Cell><Data ss:Type="Number">254</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Adăposturi sociale și case de bătrâni</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">255</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Социальные приюты и дома для престарелых</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">821</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1029</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Социални приюти и домове за възрастни хора</Data></Cell>
+   </Row>
+   <Row ss:Index="191">
+    <Cell><Data ss:Type="Number">256</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Violența domestică / Cazuri de urgență</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">257</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Домашнее насилие / Экстренные случаи</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">822</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1030</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Домашно насилие / Извънредни ситуации</Data></Cell>
+   </Row>
+   <Row ss:Index="196">
+    <Cell><Data ss:Type="Number">258</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Raportează o fraudă socială</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">259</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Сообщите о социальном мошенничестве</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">823</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1031</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Сигнали за социална измама</Data></Cell>
+   </Row>
+   <Row ss:Index="201">
+    <Cell><Data ss:Type="Number">260</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Întrebări frecvente / Modele de cereri /Ghid de completare a cererii</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">261</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Часто задаваемые вопросы / Образцы заявлений</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">824</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1032</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Най-често задавани въпроси / Формуляри</Data></Cell>
+   </Row>
+   <Row ss:Index="206">
+    <Cell><Data ss:Type="Number">262</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Întrebări frecvente</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">263</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Часто задаваемые вопросы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">825</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1033</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Най-често задавани въпроси</Data></Cell>
+   </Row>
+   <Row ss:Index="211">
+    <Cell><Data ss:Type="Number">264</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Modele de cereri</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">265</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Образцы заявлений</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">826</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1034</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Формуляри</Data></Cell>
+   </Row>
+   <Row ss:Index="216">
+    <Cell><Data ss:Type="Number">266</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Ghid de completare a cererii</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">267</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Инструкция по заполнению заявления</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">827</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1035</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Указания за попълване на заявление</Data></Cell>
+   </Row>
+   <Row ss:Index="221">
+    <Cell><Data ss:Type="Number">268</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Impozite și taxe locale</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">269</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Сборы и налоги</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">828</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1036</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Данъци и такси</Data></Cell>
+   </Row>
+   <Row ss:Index="226">
+    <Cell><Data ss:Type="Number">270</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Taxa de publicitate</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">271</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Сбор за размещение рекламы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">829</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1037</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Такси за поставяне на рекламни съоръжения </Data></Cell>
+   </Row>
+   <Row ss:Index="231">
+    <Cell><Data ss:Type="Number">272</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Taxa de organizare a licitațiilor / loteriilor</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">273</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Сбор за организацию аукционов и лотерей</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">830</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1038</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Таксата за организиране на търгове и лотарии</Data></Cell>
+   </Row>
+   <Row ss:Index="236">
+    <Cell><Data ss:Type="Number">274</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Taxa pentru unități comerciale</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">275</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Сбор за объекты торговли</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">831</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1039</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Такса за издаване на разрешение за търговия</Data></Cell>
+   </Row>
+   <Row ss:Index="241">
+    <Cell><Data ss:Type="Number">276</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Taxa de piață</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">277</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Рыночный сбор</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">832</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1040</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Такса при пазаруване</Data></Cell>
+   </Row>
+   <Row ss:Index="246">
+    <Cell><Data ss:Type="Number">278</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Taxa de cazare</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">279</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Сбор за временное проживание</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">833</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1041</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Такса за временно пребиваване</Data></Cell>
+   </Row>
+   <Row ss:Index="251">
+    <Cell><Data ss:Type="Number">280</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Taxa de parcare</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">281</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Сбор за парковку автотранспорта</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">834</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1042</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Такса за паркиране на превозни средства</Data></Cell>
+   </Row>
+   <Row ss:Index="256">
+    <Cell><Data ss:Type="Number">282</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Taxa pentru unități stradale</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">283</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Сбор за уличные объекты </Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">835</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1043</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Такса за улични обекти</Data></Cell>
+   </Row>
+   <Row ss:Index="261">
+    <Cell><Data ss:Type="Number">284</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Impozitul pe bunuri imobiliare</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">285</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Налог на недвижимость</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">836</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1044</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Данък върху недвижимите имоти</Data></Cell>
+   </Row>
+   <Row ss:Index="266">
+    <Cell><Data ss:Type="Number">286</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Întrebări frecvente / Modele de documente / Ghid de taxe și impozitele</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">287</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Часто задаваемые вопросы / Образцы документов / Инструкция по заполнению расчетных документов для уплаты налогов и сборов</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">837</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1045</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Най-често задавани въпроси / Формуляри / Указания за попълване на документите за плащането на данъци и такси</Data></Cell>
+   </Row>
+   <Row ss:Index="271">
+    <Cell><Data ss:Type="Number">288</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Întrebări frecvente</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">289</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Часто задаваемые вопросы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">838</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1046</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Най-често задавани въпроси</Data></Cell>
+   </Row>
+   <Row ss:Index="276">
+    <Cell><Data ss:Type="Number">290</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Modele de documente</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">291</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Образцы документов</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">839</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1047</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Формуляри</Data></Cell>
+   </Row>
+   <Row ss:Index="281">
+    <Cell><Data ss:Type="Number">292</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Ghid de achitare a impozitelor</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">293</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Инструкция по заполнению расчетных документов для уплаты налогов и сборов</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">840</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1048</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Указания за попълване на документите за плащането на данъци и такси</Data></Cell>
+   </Row>
+   <Row ss:Index="286">
+    <Cell><Data ss:Type="Number">294</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Investește în orașul XXXXXXXXX</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">295</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Инвестируйте в город XXXXXXXXX</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">841</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1049</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Инвестирайте в град XXXXXXXXX</Data></Cell>
+   </Row>
+   <Row ss:Index="291">
+    <Cell><Data ss:Type="Number">296</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Cum să întregistrezi o societate comercială</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">297</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Как зарегистрировать компанию</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">842</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1050</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Как да регистрирам фирма</Data></Cell>
+   </Row>
+   <Row ss:Index="296">
+    <Cell><Data ss:Type="Number">298</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Cum să întregistrezi o gospodărie de fermeri</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">299</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Как зарегистрировать фермерское хозяйство</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">843</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1051</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Как да регистрирам фермерско стопанство</Data></Cell>
+   </Row>
+   <Row ss:Index="301">
+    <Cell><Data ss:Type="Number">300</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Cum să întregistrezi o întreprindere individuală</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">301</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Как зарегистрировать индивидуальное предприятие</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">844</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1052</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Как да регистрирам еднолична търговия</Data></Cell>
+   </Row>
+   <Row ss:Index="306">
+    <Cell><Data ss:Type="Number">302</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Incubatoare de afaceri și companii de consultanță</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">303</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Бизнес-инкубаторы и консалтинговые компании</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">845</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1053</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Бизнес инкубатори и консултантски фирми</Data></Cell>
+   </Row>
+   <Row ss:Index="311">
+    <Cell><Data ss:Type="Number">304</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Autorizația pentru unități comerciale</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">305</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Авторизация для размещения торгового объекта</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">846</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1054</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Наредба за извършване на търговска дейност</Data></Cell>
+   </Row>
+   <Row ss:Index="316">
+    <Cell><Data ss:Type="Number">306</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Autorizația de construcție</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">307</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Разрешение на строительство</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">847</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1055</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Разрешение за строеж</Data></Cell>
+   </Row>
+   <Row ss:Index="321">
+    <Cell><Data ss:Type="Number">308</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Autorizația de desființare</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">309</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Разрешение на снос</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">848</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1056</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Разрешение за разрушаване</Data></Cell>
+   </Row>
+   <Row ss:Index="326">
+    <Cell><Data ss:Type="Number">310</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Certificatul de urbanism pentru proiectare</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">311</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Градостроительный сертификат для проектирования</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">849</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1057</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Сертификат за проектиране на сгради, съоръжения и обекти на техническата инфраструктура</Data></Cell>
+   </Row>
+   <Row ss:Index="331">
+    <Cell><Data ss:Type="Number">312</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Certificat privind lipsa / existența restanțelor</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">313</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Сертификат об отсутствии / наличии задолженности</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">850</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1058</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Удостоверение за наличие / липса на задължение</Data></Cell>
+   </Row>
+   <Row ss:Index="336">
+    <Cell><Data ss:Type="Number">314</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Certificat privind componența familiei</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">315</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Удостоверение о составе семьи</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">851</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1059</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Удостоверение за семейно положение</Data></Cell>
+   </Row>
+   <Row ss:Index="341">
+    <Cell><Data ss:Type="Number">316</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Certificate necesare pentru construcția casei sau a unui obiectiv comercial</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">317</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Необходимые сертификаты для строительства дома или коммерческого объекта</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">852</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1060</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Необходими сертификати за строителство на къща или търговски обект</Data></Cell>
+   </Row>
+   <Row ss:Index="346">
+    <Cell><Data ss:Type="Number">320</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Biblioteca, Muzeul și Teatrul</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">321</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Библиотека, Музей и Театр</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">853</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1061</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Библиотека, Музей и Театър</Data></Cell>
+   </Row>
+   <Row ss:Index="351">
+    <Cell><Data ss:Type="Number">322</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Întrebări frecvente / Modele de cereri / Ghid completare a cererii</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">323</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Часто задаваемые вопросы / Образцы заявлений / Инструкция по заполнению заявления</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">854</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1062</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Най-често задавани въпроси / Формуляри / Указания за попълване на заявление</Data></Cell>
+   </Row>
+   <Row ss:Index="356">
+    <Cell><Data ss:Type="Number">324</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Întrebări frecvente</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">325</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Часто задаваемые вопросы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">855</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1063</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Най-често задавани въпроси</Data></Cell>
+   </Row>
+   <Row ss:Index="361">
+    <Cell><Data ss:Type="Number">326</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Modele de cereri</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">327</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Образцы заявлений</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">856</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1064</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Формуляри</Data></Cell>
+   </Row>
+   <Row ss:Index="366">
+    <Cell><Data ss:Type="Number">328</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Ghid completare a cererii</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">329</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Инструкция по заполнению заявления</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">857</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1065</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Указания за попълване на заявление</Data></Cell>
+   </Row>
+   <Row ss:Index="371">
+    <Cell><Data ss:Type="Number">330</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Grădinițe, gimnazii, licee</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">331</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Детские сады, гимназии, лицеи</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">858</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1066</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Детски градини, училища, лицеи</Data></Cell>
+   </Row>
+   <Row ss:Index="376">
+    <Cell><Data ss:Type="Number">332</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Colegiul și Universitatea</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">333</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Колледж и Университет</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">859</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1067</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Коледж и Висши Учебни Заведения</Data></Cell>
+   </Row>
+   <Row ss:Index="381">
+    <Cell><Data ss:Type="Number">334</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Parcuri, zone de odihnă și sport</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">335</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Парки, зоны отдыха и спорт</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">860</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1068</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Градини, отдих и спорт</Data></Cell>
+   </Row>
+   <Row ss:Index="386">
+    <Cell><Data ss:Type="Number">336</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Atracții turistice</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">337</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Достопримечательности</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">861</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1069</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Забележителности</Data></Cell>
+   </Row>
+   <Row ss:Index="391">
+    <Cell><Data ss:Type="Number">338</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Despre oraș</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">339</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell ss:StyleID="s57"><Data ss:Type="String">О городе</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">862</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1070</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">За града</Data></Cell>
+   </Row>
+   <Row ss:Index="396">
+    <Cell><Data ss:Type="Number">340</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Cum să ajungi în oraș / Amplasarea geografică</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">341</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Как попасть в город / Географическое расположение</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">863</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1071</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Карта на общината / Географско местоположение</Data></Cell>
+   </Row>
+   <Row ss:Index="401">
+    <Cell><Data ss:Type="Number">342</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Istoria orașului</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">343</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">История города</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">864</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1072</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">История на града</Data></Cell>
+   </Row>
+   <Row ss:Index="406">
+    <Cell><Data ss:Type="Number">344</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Personalități marcante</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">345</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Выдающиеся личности</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">865</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1073</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Почетни граждани</Data></Cell>
+   </Row>
+   <Row ss:Index="411">
+    <Cell><Data ss:Type="Number">346</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Orașe înfrățite</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">347</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Города побратимы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">866</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1074</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Побратимени градове</Data></Cell>
+   </Row>
+   <Row ss:Index="416">
+    <Cell><Data ss:Type="Number">348</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Consiliul cetățenilor</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">349</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Гражданский совет</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">867</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1075</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Обществен съвет</Data></Cell>
+   </Row>
+   <Row ss:Index="421">
+    <Cell><Data ss:Type="Number">350</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Consiliul tinerilor</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">351</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Молодежный совет</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">868</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1076</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Младежки съвет</Data></Cell>
+   </Row>
+   <Row ss:Index="426">
+    <Cell><Data ss:Type="Number">352</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Comitetele de cartier / de stradă</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">353</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Местные комитеты</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">869</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1077</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Общински комитети</Data></Cell>
+   </Row>
+   <Row ss:Index="431">
+    <Cell><Data ss:Type="Number">354</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Programează-te on-line pentru o audiență</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">355</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Зарегистрируйтесь онлайн на приём</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">870</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1078</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Регистрация онлайн приемна</Data></Cell>
+   </Row>
+   <Row ss:Index="436">
+    <Cell><Data ss:Type="Number">356</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Orarul audierilor</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">357</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">График приема граждан</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">871</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1079</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Приемни дни на граждани</Data></Cell>
+   </Row>
+   <Row ss:Index="441">
+    <Cell><Data ss:Type="Number">358</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Discută on-line cu primarul și consilieri locali</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">359</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Общайтесь в режиме онлайн с мэром и местными советниками</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">872</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1080</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Комуникирате онлайн с кмета и с общински съветници</Data></Cell>
+   </Row>
+   <Row ss:Index="446">
+    <Cell><Data ss:Type="Number">360</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Depune o plângere</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">361</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Подайте жалобу</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">873</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1081</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Оплаквания</Data></Cell>
+   </Row>
+   <Row ss:Index="451">
+    <Cell><Data ss:Type="Number">362</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Întrebări frecvente</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">363</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Часто задаваемые вопросы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">874</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1082</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Най-често задавани въпроси </Data></Cell>
+   </Row>
+   <Row ss:Index="456">
+    <Cell><Data ss:Type="Number">364</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Formulare de cereri</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">365</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Бланк заявления</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">875</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1083</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Формуляри</Data></Cell>
+   </Row>
+   <Row ss:Index="461">
+    <Cell><Data ss:Type="Number">366</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Formulare pentru certificate</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">367</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Бланк сертификата</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">876</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1084</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Формуляр на сертификата</Data></Cell>
+   </Row>
+   <Row ss:Index="466">
+    <Cell><Data ss:Type="Number">368</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Formulare pentru taxe</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">369</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Бланк для сборов и налогов</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">877</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1085</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Формуляр за данъци и такси</Data></Cell>
+   </Row>
+   <Row ss:Index="471">
+    <Cell><Data ss:Type="Number">370</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Modele de cereri / plângeri</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">371</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Образцы заявлений / жалоб</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">878</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1086</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Бланки за възражения и жалби</Data></Cell>
+   </Row>
+   <Row ss:Index="476">
+    <Cell><Data ss:Type="Number">372</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Primarul</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">373</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Примар</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">879</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1087</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Кмет</Data></Cell>
+   </Row>
+   <Row ss:Index="481">
+    <Cell><Data ss:Type="Number">374</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Viceprimari</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">375</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Заместитель Примара</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">880</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1088</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Заместник-кмет</Data></Cell>
+   </Row>
+   <Row ss:Index="486">
+    <Cell><Data ss:Type="Number">376</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Aparatul primăriei</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">377</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Аппарат Примэрии</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">881</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1089</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Общинска Администрация</Data></Cell>
+   </Row>
+   <Row ss:Index="491">
+    <Cell><Data ss:Type="Number">378</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Organigrama primăriei</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">379</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Схема организационной структуры Примэри</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">882</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1090</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Състав на Общината</Data></Cell>
+   </Row>
+   <Row ss:Index="496">
+    <Cell><Data ss:Type="Number">380</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Cadrul legal al APL</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">381</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Правовая база МОВ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">883</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1091</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Нормативна база</Data></Cell>
+   </Row>
+   <Row ss:Index="501">
+    <Cell><Data ss:Type="Number">382</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Regulamente interne</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">383</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Внутренние регламенты</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">884</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1092</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Вътрешни правила</Data></Cell>
+   </Row>
+   <Row ss:Index="506">
+    <Cell><Data ss:Type="Number">384</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Noutăți</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">385</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Новости</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">885</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1093</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Новини</Data></Cell>
+   </Row>
+   <Row ss:Index="511">
+    <Cell><Data ss:Type="Number">386</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Biografia primarului</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">387</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Биография Примара</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">886</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1094</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Автобиография на Кмета</Data></Cell>
+   </Row>
+   <Row ss:Index="516">
+    <Cell><Data ss:Type="Number">388</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Planuri de acțiuni pe anul curent</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">389</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">План действий на текущий год</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">887</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1095</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Програма за управление на общината за текущата година</Data></Cell>
+   </Row>
+   <Row ss:Index="521">
+    <Cell><Data ss:Type="Number">390</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Programul de activitate al primarului</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">391</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Программа действий Примара</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">888</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1096</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Програма за управление на Кмета</Data></Cell>
+   </Row>
+   <Row ss:Index="526">
+    <Cell><Data ss:Type="Number">392</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Raportul anual al primarului</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">393</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Годовой отчёт Примара</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">889</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1097</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Годишен доклад на Кмета</Data></Cell>
+   </Row>
+   <Row ss:Index="531">
+    <Cell><Data ss:Type="Number">398</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Planuri de acțiune</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">399</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Планы действий</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">890</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1098</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Програма за управление</Data></Cell>
+   </Row>
+   <Row ss:Index="536">
+    <Cell><Data ss:Type="Number">400</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Servicii comunale</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">401</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Коммунальные услуги</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">891</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1099</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Комунални услуги</Data></Cell>
+   </Row>
+   <Row ss:Index="541">
+    <Cell><Data ss:Type="Number">402</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Alte entități</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">403</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Другие субъекты</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">892</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1100</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Други субекти</Data></Cell>
+   </Row>
+   <Row ss:Index="546">
+    <Cell><Data ss:Type="Number">404</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Ce este consiliul local?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">405</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Что такое Местный Совет?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">893</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1101</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Какво е Общински Съвет?</Data></Cell>
+   </Row>
+   <Row ss:Index="551">
+    <Cell><Data ss:Type="Number">406</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Ședințele Consiliului</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">407</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Заседания Совета </Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">894</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1102</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Заседания на общинските съветници</Data></Cell>
+   </Row>
+   <Row ss:Index="556">
+    <Cell><Data ss:Type="Number">408</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Secretarul consiliului local</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">409</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Секретарь Местного Совета</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">895</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1103</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Секретар на Общината</Data></Cell>
+   </Row>
+   <Row ss:Index="561">
+    <Cell><Data ss:Type="Number">410</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Consilieri locali și domeniile de responsabilitate</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">411</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Местные советники и сферы ответственности</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">896</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1104</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Състав на Общински съвет и тяхната отговорност</Data></Cell>
+   </Row>
+   <Row ss:Index="566">
+    <Cell><Data ss:Type="Number">412</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Programul de audiență al consilierilor locali</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">413</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">График приёма местных советников</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">897</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1105</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Приемни дни на общинските съветници</Data></Cell>
+   </Row>
+   <Row ss:Index="571">
+    <Cell><Data ss:Type="Number">414</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Arhiva deciziilor anterioare</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">415</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Архив предыдущих решений</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">898</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1106</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Архив на взети решения</Data></Cell>
+   </Row>
+   <Row ss:Index="576">
+    <Cell><Data ss:Type="Number">416</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Ordinea de zi</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">417</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Повестка дня следующего заседания</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">899</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1107</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Дневен ред</Data></Cell>
+   </Row>
+   <Row ss:Index="581">
+    <Cell><Data ss:Type="Number">418</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Ședințe anterioare</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">419</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Предыдущие заседания</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">900</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1108</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Предишни заседания</Data></Cell>
+   </Row>
+   <Row ss:Index="586">
+    <Cell><Data ss:Type="Number">420</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Calendarul ședințelor viitoare</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">421</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">График будущих заседаний</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">901</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1109</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">График на заседанията</Data></Cell>
+   </Row>
+   <Row ss:Index="591">
+    <Cell><Data ss:Type="Number">422</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Privește on-line ședințele consiliului</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">423</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Смотрите в режиме онлайн заседания Совета</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">902</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1110</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Заседания онлайн </Data></Cell>
+   </Row>
+   <Row ss:Index="596">
+    <Cell><Data ss:Type="Number">424</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Comisia urbanism</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">425</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Комиссия по градостроительству</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">903</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1111</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Комисия по градоустройство</Data></Cell>
+   </Row>
+   <Row ss:Index="601">
+    <Cell><Data ss:Type="Number">426</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Comisia buget, finanțe și economie</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">427</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Комиссия по бюджету, финансам и экономике</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">904</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1112</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Комисия по бюджет, финански и економика</Data></Cell>
+   </Row>
+   <Row ss:Index="606">
+    <Cell><Data ss:Type="Number">428</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Comisia juridică</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">429</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Комиссия по правовым вопросам</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">905</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1113</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Правна комисия</Data></Cell>
+   </Row>
+   <Row ss:Index="611">
+    <Cell><Data ss:Type="Number">430</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Comisia socială</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">431</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Комиссия по социальным вопросам</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">906</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1114</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Комисия по социални дейности</Data></Cell>
+   </Row>
+   <Row ss:Index="616">
+    <Cell><Data ss:Type="Number">432</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Strategia de Dezvoltare Socio-economică a orașului</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">433</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Стратегия социально-экономического развития города</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">907</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1115</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Стратегия за социално-икономическо развитие </Data></Cell>
+   </Row>
+   <Row ss:Index="621">
+    <Cell><Data ss:Type="Number">434</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Planul Urbanistic General</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">435</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Генеральный план градостроительства</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">908</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1116</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Генерален план за градско развитие</Data></Cell>
+   </Row>
+   <Row ss:Index="626">
+    <Cell><Data ss:Type="Number">436</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Planul de acțiuni privind eficiența energatică</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">437</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Планы действий по энергоэффективности</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">909</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1117</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Планове за действие за енергийна ефективност</Data></Cell>
+   </Row>
+   <Row ss:Index="631">
+    <Cell><Data ss:Type="Number">438</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Programul local de eficiență energetică</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">439</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Местная программа энергоэффективности</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">910</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1118</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Общинна програма за енергийна ефективност</Data></Cell>
+   </Row>
+   <Row ss:Index="636">
+    <Cell><Data ss:Type="Number">440</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Politici de protecție a mediului</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">441</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Политики охраны окружающей среды</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">911</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1119</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Политика за опазване на околната среда</Data></Cell>
+   </Row>
+   <Row ss:Index="641">
+    <Cell><Data ss:Type="Number">442</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Planul de îmbunătățire a serviciului municipal</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">443</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">План улучшения муниципальной службы (услуги)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">912</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1120</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">План за подобряване на общински услуги</Data></Cell>
+   </Row>
+   <Row ss:Index="646">
+    <Cell><Data ss:Type="Number">444</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Politici de protecție a familiei și copilului </Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">445</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Политики защиты семьи и ребёнка</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">913</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1121</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Политики за защита на семейството и детето</Data></Cell>
+   </Row>
+   <Row ss:Index="651">
+    <Cell><Data ss:Type="Number">446</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Locuință și protecție socială</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">447</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Жильё и социальная защита</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">914</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1122</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Жилища и социална защита</Data></Cell>
+   </Row>
+   <Row ss:Index="656">
+    <Cell><Data ss:Type="Number">448</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Întrebări frecvente</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">449</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Часто задаваемые вопросы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">915</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1123</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Най-често задавани въпроси</Data></Cell>
+   </Row>
+   <Row ss:Index="661">
+    <Cell><Data ss:Type="Number">450</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Legislația privind transparența decizională și accesul la informații</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">451</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Законодательство о прозрачности и доступ к информации</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">916</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1124</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Законодателство в областта на прозрачността и достъпа до информация</Data></Cell>
+   </Row>
+   <Row ss:Index="666">
+    <Cell><Data ss:Type="Number">452</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Înregistrări video</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">453</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Видеозаписи</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">917</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1125</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Видеозаписи</Data></Cell>
+   </Row>
+   <Row ss:Index="671">
+    <Cell><Data ss:Type="Number">454</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Adresează o întrebare primarului</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">455</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Задайте вопрос Примару</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">918</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1126</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Въпроси към кмета</Data></Cell>
+   </Row>
+   <Row ss:Index="676">
+    <Cell><Data ss:Type="Number">456</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Noutăți și alerte</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">457</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Новости и Объявления</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">919</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1127</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Новини и Обяви</Data></Cell>
+   </Row>
+   <Row ss:Index="681">
+    <Cell><Data ss:Type="Number">458</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Anunțuri de achiziții publice</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">459</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Объявления о Государственных закупках товаров и услуг</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">920</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1128</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Обяви за обществените поръчки на стоки и услуги</Data></Cell>
+   </Row>
+   <Row ss:Index="686">
+    <Cell><Data ss:Type="Number">460</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Posturi vacante curente</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">461</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Текущие вакансии</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">921</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1129</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Кариери</Data></Cell>
+   </Row>
+   <Row ss:Index="691">
+    <Cell><Data ss:Type="Number">462</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Stagii și voluntariat în cadrul primăriei</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">463</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Стажировки и добровольчество в Примэрии</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">922</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1130</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Стажантски програми в Общината</Data></Cell>
+   </Row>
+   <Row ss:Index="696">
+    <Cell><Data ss:Type="Number">464</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Bugetul local (veniturile și cheltuielile orașului)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">465</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Местный бюджет (доходы и расходы города)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">923</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1131</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Бюджет на Общината (приходи и расходи)</Data></Cell>
+   </Row>
+   <Row ss:Index="701">
+    <Cell><Data ss:Type="Number">466</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Cum se cheltuie banii publici</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">467</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Как используются государственные деньги</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">924</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1132</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Как се исползват държавните пари</Data></Cell>
+   </Row>
+   <Row ss:Index="706">
+    <Cell><Data ss:Type="Number">468</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Cheltuielile pentru instituții subordonate</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">469</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Затраты на подведомственные учреждения</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">925</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1133</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Разходи за подчинени институции</Data></Cell>
+   </Row>
+   <Row ss:Index="711">
+    <Cell><Data ss:Type="Number">470</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Managementul proprietății publice</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">471</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Управление общественной собственностью</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">926</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1134</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Управление на публична собственост</Data></Cell>
+   </Row>
+   <Row ss:Index="716">
+    <Cell><Data ss:Type="Number">472</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Proiecte de decizii propuse spre consultare cu publicul și materialele aferente</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">473</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Проекты решений с соответствующими материалами, представленные на обсуждение с общественностью </Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">927</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1135</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Проекти на решения, представени за разглеждане от обществеността</Data></Cell>
+   </Row>
+   <Row ss:Index="721">
+    <Cell><Data ss:Type="Number">474</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Proiecte consultate, Sinteza recomandărilor recepționate, procesul verbal </Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">475</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Обсуждённые проекты, анализ полученных рекомендации, протокол</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">928</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1136</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Разглеждани проекти, анализ на препоръките, протокол</Data></Cell>
+   </Row>
+   <Row ss:Index="726">
+    <Cell><Data ss:Type="Number">476</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Dezbateri publice</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">477</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Общественные обсуждения</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">929</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1137</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Публични дебати</Data></Cell>
+   </Row>
+   <Row ss:Index="731">
+    <Cell><Data ss:Type="Number">478</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Sondaje on-line</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">479</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Онлайн опросы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">930</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1138</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Онлайн проучвания</Data></Cell>
+   </Row>
+   <Row ss:Index="736">
+    <Cell><Data ss:Type="Number">480</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Proiecte finalizate </Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">481</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Завершенные проекты</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">931</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1139</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Реализирани проекти</Data></Cell>
+   </Row>
+   <Row ss:Index="741">
+    <Cell><Data ss:Type="Number">482</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Proiecte curente</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">483</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Текущие проекты</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">932</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1140</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Текущи проекти</Data></Cell>
+   </Row>
+   <Row ss:Index="746">
+    <Cell><Data ss:Type="Number">502</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Rapoarte anuale</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">503</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Годовые отчёты</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">942</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1150</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Годишни доклади</Data></Cell>
+   </Row>
+   <Row ss:Index="751">
+    <Cell><Data ss:Type="Number">524</Data></Cell>
+    <Cell><Data ss:Type="String">Romanian</Data></Cell>
+    <Cell><Data ss:Type="String">Coș cu pagini șterse</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">525</Data></Cell>
+    <Cell><Data ss:Type="String">Russian</Data></Cell>
+    <Cell><Data ss:Type="String">Удаленные страницы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">948</Data></Cell>
+    <Cell><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1156</Data></Cell>
+    <Cell><Data ss:Type="String">Bulgara</Data></Cell>
+    <Cell><Data ss:Type="String">Изтрити страници</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>0</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>11</ActiveRow>
+     <ActiveCol>2</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

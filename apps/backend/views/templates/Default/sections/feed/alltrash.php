@@ -5,7 +5,7 @@
         mtype: 'POST',
         autoencode: true,
         loadonce: false,
-        colNames: ['ID', 'Title', 'Date'],
+        colNames: ['ID', '<?= varlang('title-1'); ?>', '<?= varlang('date'); ?>'],
         colModel: [
             {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
             {name: 'title', index: 'title', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},

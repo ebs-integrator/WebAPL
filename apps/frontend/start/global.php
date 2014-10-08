@@ -95,7 +95,7 @@ Event::listen('APL.core.prepare', function () use ($APLExtensions) {
 Event::listen('APL.modules.load', function() {
     Event::fire('APL.core.load');
     Event::fire('APL.core.prepare');
-
+    
     Module::where('enabled', '1')->get()->each(function($module) {
         ClassLoader::addDirectories(app_path() . '/modules/' . $module->extension . '/');
         ClassLoader::load($module->extension);

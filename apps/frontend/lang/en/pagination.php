@@ -13,8 +13,8 @@ return array(
 	|
 	*/
 
-	'previous' => '&laquo; Previous',
+	'previous' => varlang('previous'),
 
-	'next'     => 'Next &raquo;',
+	'next'     => varlang('next'),
 
 );

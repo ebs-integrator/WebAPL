@@ -1,5 +1,5 @@
 <tr>
-    <th>Gallery: </th>
+    <th><?= varlang('gallery'); ?>: </th>
     <td>
         <input type="hidden" id="page_id" value="<?=$page['id'];?>" />
         <select id="attach_gallery" class="form-control">

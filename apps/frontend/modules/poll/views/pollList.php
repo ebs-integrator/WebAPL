@@ -13,7 +13,7 @@ if ($voted || $poll->active == 0) {
 
 <?php if ($polls) { ?>
     <div class="hr_grey"></div>
-    <p class="e_sond">Alte sondaje</p>
+    <p class="e_sond"><?= varlang('alte-sondaje'); ?></p>
     <ul class="a_n">
     <?php foreach ($polls as $item) { ?>
             <li>

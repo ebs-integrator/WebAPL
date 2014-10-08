@@ -68,5 +68,11 @@ class HomeController extends BaseController {
     public function showPage() {
         echo 'test backend';
     }
+    
+    public function getChangelang($ext) {
+        Core\APL\Language::setLanguage($ext);
+
+        return Redirect::back();
+    }
 
 }

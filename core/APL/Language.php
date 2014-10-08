@@ -44,7 +44,7 @@ class Language {
     private static function _init_language() {
         $lang = Request::segment(1);
 
-        if (!$lang) {
+        if (!self::inList($lang)) {
             $lang = Session::get('lang');
         }
 
@@ -65,6 +65,23 @@ class Language {
      */
     public static function getId() {
         return self::$id;
+    }
+
+    /**
+     * 
+     * @param string $ext
+     * @return boolean
+     */
+    public static function inList($ext) {
+        $inList = false;
+
+        foreach (static::$list as $lang) {
+            if ($ext == $lang->ext) {
+                $inList = true;
+            }
+        }
+
+        return $inList;
     }
 
     /**
@@ -142,11 +159,11 @@ class Language {
         $vars = \VarModel::prepareQuery()->select(\VarModel::getField('key'), \VarLangModel::getField('value'))->get();
 
         $tmpv = array();
-        
+
         foreach ($vars as $var) {
             $tmpv[$var->key] = $var->value;
         }
-        
+
         static::$vars = $tmpv;
     }
 
