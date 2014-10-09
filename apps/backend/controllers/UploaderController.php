@@ -57,8 +57,8 @@ class UploaderController extends BaseController {
 
             $uploadDir = Files::$upload_dir . ($data['path'] ? "/" . $data['path'] : '');
             $uploadFile = $uploadDir . "/" . $filename;
-            
-            if (!file_exists($uploadDir)) {
+
+            if (!file_exists(Files::fullDir($uploadDir))) {
                 mkdir(Files::fullDir($uploadDir));
             }
             

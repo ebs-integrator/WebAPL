@@ -15,7 +15,10 @@
                         <p class='cont'></p>
                     </div>
                 </div>
-                <?= $post->text; ?>
+                <?= Core\APL\Shortcodes::execute($post->text); ?>
+                <?php if ($post->have_socials) { ?>
+                    <?= View::make('sections.elements.socials'); ?>
+                <?php } ?>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -39,6 +42,11 @@
         echo $posts->appends(array('year' => $current_year, 'month' => $current_month))->links();
     }
     ?>
+<?php } ?>
+
+<?php if (isset($post) && $post->have_comments) { ?>
+    <div class="c40"></div>
+    <?= View::make('sections.elements.comments'); ?>
 <?php } ?>
 
 <?php if (!isset($post) && !isset($posts)) { ?>

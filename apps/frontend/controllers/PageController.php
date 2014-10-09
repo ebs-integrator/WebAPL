@@ -44,8 +44,8 @@ class PageController extends BaseController {
                     Template::addBreadCrumb(Post::getURL(implode('/', $segments)), $parrent['title']);
                 }
                 $segments[] = $this->data['page']['uri'];
-                Template::addBreadCrumb($this->data['page']['url'], $this->data['page']['title']);
-                $realURI = implode('/', $segments);
+                Template::addBreadCrumb(Post::getURL($query), $this->data['page']['title']);
+                $realURI = implode('/', $segments); 
 
                 // Verify if real uri is correct
                 if ($realURI === $query) {
@@ -85,6 +85,12 @@ class PageController extends BaseController {
                     // register one view
                     Post::oneView($this->data['page']['id']);
 
+                    Template::setMetaMultiple(array(
+                        'og:title' => $this->data['page']->title,
+                        'description' => $this->data['page']->text,
+                        'og:description' => $this->data['page']->text
+                            ), true);
+
                     // load page
                     PageController::loadGeneralResources();
                     if ($this->data['page']->general_node) {
@@ -114,20 +120,29 @@ class PageController extends BaseController {
     }
 
     public static function loadGeneralResources() {
-        View::share(array(
+        $data = array(
             'general_pages' => Post::findGeneral(),
             'buttom_pages' => PostProperty::postsWithProperty('button_site', 3),
             'logo_home_sm' => Files::getfile('website_logo_sm', 1),
-            'phone_page' => PostProperty::postWithProperty('phone-page')
+            'phone_page' => PostProperty::postWithProperty('phone-page'),
+            'favicon' => Files::getfile('website_favicon', 1)
+        );
+
+        Template::setMetaMultiple(array(
+            'og:type' => 'page',
+            'og:image' => $data['logo_home_sm'] ? url($data['logo_home_sm']->path) : '',
+            'og:site_name' => SettingsModel::one('sitename')
         ));
+
+        View::share($data);
     }
-    
+
     public function createPageFrom($function) {
         $this->layout = 'layout/page';
         $this->setupLayout();
 
         PageController::loadGeneralResources();
-        
+
         $this->layout->content = call_user_func($function);
 
         return $this->layout;

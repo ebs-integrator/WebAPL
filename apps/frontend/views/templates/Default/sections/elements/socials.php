@@ -2,46 +2,22 @@
 <div class="clearfix10"></div>
 
 <?php
-$link = Request::url();
+$link = URL::full();
 $socialID = uniqid();
 ?>
 
-<table>
-    <tr>
-        <td>
-
-            <!--- TWITTER --->
-            <a href="https://twitter.com/" class="twitter-share-button" data-url="<?= $link; ?>">Tweet</a>
-
-        </td>
-        <td>
-
-            <!--- ODNOKLASSNIKI --->
-            <div id="ok_shareWidget<?= $socialID; ?>"></div>
-            <script>
-                !function(d, id, did, st) {
-                    var js = d.createElement("script");
-                    js.src = "http://connect.ok.ru/connect.js";
-                    js.onload = js.onreadystatechange = function() {
-                        if (!this.readyState || this.readyState == "loaded" || this.readyState == "complete") {
-                            if (!this.executed) {
-                                this.executed = true;
-                                setTimeout(function() {
-                                    OK.CONNECT.insertShareWidget(id, did, st);
-                                }, 0);
-                            }
-                        }
-                    };
-                    d.documentElement.appendChild(js);
-                }(document, "ok_shareWidget<?= $socialID; ?>", "<?= $link; ?>", "{width:145,height:30,st:'rounded',sz:20,ck:1}");
-            </script>
-
-        </td>
-        <td style="padding-left: 20px;">
-            <!--- FACEBOOK --->
-            <div class="fb-like" data-href="<?= $link; ?>" data-width="400" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
-        </td>
-    </tr>
-
-</table>
-
+<a rel="nofollow" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?=$link;?>">
+    <img class="opc-hover" src="<?=res('assets/img/socicons/share_fb.png');?>" />
+</a>
+<a rel="nofollow" target="_blank" href="http://www.odnoklassniki.ru/dk?st.cmd=anonymMain&st.redirect=%2Fdk%3Fst.cmd%3DuserStatuses%26amp%3Bst.disp.type%3Dlinks%26amp%3Bst.layer.cmd%3DPopLayerAddSharedResourceOuter%26amp%3Bst.layer.s%3D1%26amp%3Bst.layer._surl%3D<?=$link;?>">
+    <img class="opc-hover" src="<?=res('assets/img/socicons/share_odno.png');?>" />
+</a>
+<a rel="nofollow" target="_blank" href="http://vkontakte.ru/share.php?url=<?=$link;?>">
+    <img class="opc-hover" src="<?=res('assets/img/socicons/share_vk.png');?>" />
+</a>
+<a rel="nofollow" target="_blank" href="https://twitter.com/intent/tweet?text=&source=apl&related=apl&via=apl&url=<?=$link;?>">
+    <img class="opc-hover" src="<?=res('assets/img/socicons/share_tw.png');?>" />
+</a>
+<a rel="nofollow" target="_blank" href="mailto:?body=<?=$link;?>">
+    <img class="opc-hover" src="<?=res('assets/img/socicons/share_email.png');?>" />
+</a>

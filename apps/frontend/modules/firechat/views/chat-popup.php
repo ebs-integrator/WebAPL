@@ -2,7 +2,7 @@
     <div class="top">
         <div class="left firechat-photo" style=" display: <?= $session_exist ? 'block' : 'none'; ?>;">
             <div class="photo">
-                <img src="<?= isset($person_icon) ? $person_icon->path : ''; ?>">
+                <img src="<?= isset($person_icon) ? url($person_icon->path) : url('apps/frontend/modules/firechat/assets/chat.jpg'); ?>">
             </div>
         </div>
 
@@ -39,8 +39,6 @@
 
 <script>
     $(document).ready(function($) {
-        //$("#firechat")
-
         var current_person = <?= isset($chat) && $chat->active ? $chat->person_id : 0; ?>;
 
         var startChat = function(id) {

@@ -197,6 +197,9 @@ class FeedController extends BaseController {
             $post = Post::findTax($id, $this->taxonomy->id);
             $post->created_at = $general['created_at'];
             $post->to_home = isset($general['to_home']) ? 1 : 0;
+            $post->show_pcomment = isset($general['show_pcomment']) ? 1 : 0;
+            $post->have_comments = isset($general['have_comments']) ? 1 : 0;
+            $post->have_socials = isset($general['have_socials']) ? 1 : 0;
             $post->save();
 
             Log::info("Edit Post (article) #{$id}");

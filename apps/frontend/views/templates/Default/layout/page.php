@@ -8,9 +8,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title><?= Core\APL\Template::getPageTitle(); ?></title>
-        <meta name="description" content="">
+
+        <?php foreach (\Core\APL\Template::getMetas() as $metaName => $metaContent) { ?>
+            <meta name="<?= $metaName; ?>" content="<?= $metaContent; ?>">
+        <?php } ?>
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link href="<?= res('assets/css/jquery.bxslider.css'); ?>" rel="stylesheet" />
         <link rel="stylesheet" href="<?= res('assets/css/normalize.css'); ?>">
@@ -18,21 +21,30 @@
         <link rel="stylesheet" href="<?= res('assets/css/jquery.selectBoxIt.css'); ?>">
         <link href="<?= res('assets/js/square/red.css" rel="stylesheet'); ?>">
 
+        <?php if (isset($favicon) && $favicon) { ?>
+            <link rel="icon" href="<?= url($favicon->path); ?>" type="image/x-icon">
+        <?php } ?>
+
         <?php Template::pullCurrentSchema(); ?>
+
+        <script>
+            var res_url = "<?= res(''); ?>";
+            var base_url = '<?= url(); ?>';
+
+            var disqus_url = '<?= url(); ?>';
+            var disqus_shortname = 'aplkopceak';
+            var disqus_title = '<?= Core\APL\Template::getPageTitle(); ?>';
+            var disqus_config = function() {
+                this.language = "<?= Core\APL\Language::ext(); ?>";
+            };
+
+            var loc_lat = <?= SettingsModel::one('pos_lat') ? SettingsModel::one('pos_lat') : 0; ?>;
+            var loc_long = <?= SettingsModel::one('pos_long') ? SettingsModel::one('pos_long') : 0; ?>;
+        </script>
 
         <script src="<?= res('assets/js/jquery-2.1.1.js'); ?>"></script>
     </head>
     <body>
-        <div id="fb-root"></div>
-        <script>(function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id))
-                    return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/ro_RO/sdk.js#xfbml=1&version=v2.0";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
         <div class="overlay hidden"></div>
         <div class="overlay2 hidden"></div>
         <div class="overlay3 hidden"></div>

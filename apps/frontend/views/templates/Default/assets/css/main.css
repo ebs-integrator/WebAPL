@@ -6239,3 +6239,35 @@ iframe, object, embed {
     margin: 25px auto;
     float: none;
 }
+
+.opc-hover:hover {
+    opacity: 0.8;
+}
+
+.live_comment > p:hover, .live_comment > p.activecomm {
+    color: #673167;
+    cursor: pointer;
+}
+
+.live_comment_num {
+    background: url('../img/com.png');
+    float: right;
+    display: block;
+    width: 30px;
+    height: 34px;
+    padding-top: 2px;
+    color: white;
+    text-align: center;
+    margin-right: -40px;
+    margin-top: -15px;
+}
+
+.c20 {
+    clear: both;
+    height: 20px;
+}
+
+.c40 {
+    clear: both;
+    height: 40px;
+}

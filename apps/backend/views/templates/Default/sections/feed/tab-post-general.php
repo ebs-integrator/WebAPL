@@ -15,7 +15,28 @@
                 <input type="checkbox" name="post[to_home]" class='make-switch' <?= isset($post->to_home) && $post->to_home ? 'checked' : ''; ?> />
             </td>
         </tr>
-
+        
+        <tr>
+            <th><?= varlang('allow-pcomment'); ?>: </th>
+            <td>
+                <input type="checkbox" name="post[show_pcomment]" class='make-switch' <?= isset($post->show_pcomment) && $post->show_pcomment ? 'checked' : ''; ?> />
+            </td>
+        </tr>
+        
+        <tr>
+            <th><?= varlang('hovecomments'); ?>: </th>
+            <td>
+                <input type="checkbox" name="post[have_comments]" class='make-switch' <?= isset($post->have_comments) && $post->have_comments ? 'checked' : ''; ?> />
+            </td>
+        </tr>
+        
+        <tr>
+            <th><?= varlang('havesocials'); ?>: </th>
+            <td>
+                <input type="checkbox" name="post[have_socials]" class='make-switch' <?= isset($post->have_socials) && $post->have_socials ? 'checked' : ''; ?> />
+            </td>
+        </tr>
+        
         <tr>
             <th><?= varlang('feeds-1'); ?>: </th>
             <td>

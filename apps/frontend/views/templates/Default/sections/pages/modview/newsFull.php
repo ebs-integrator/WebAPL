@@ -10,12 +10,23 @@
         </p>
         <p class="cont"></p>
     </div>
-</div>                
+</div>
 <div class="clearfix"></div>
-<div class='cont'><?=$post->text;?></div>
 
-<?= View::make('sections.elements.socials'); ?>
+<?php if ($post->show_pcomment) { ?>
+    <div class='cont live_comment' data-pid="news<?= $post->id; ?>">
+        <?= Core\APL\Shortcodes::execute($post->text); ?>
+    </div>
+<?php } else { ?>
+    <div class='cont'><?= Core\APL\Shortcodes::execute($post->text); ?></div>
+<?php } ?>
 
+<?php if ($post->have_socials) { ?>
+    <?= View::make('sections.elements.socials'); ?>
+<?php } ?>
+    
 <div class="hr_grey"></div>
 
-<?= View::make('sections.elements.comments'); ?>
+<?php if ($post->have_comments) { ?>
+    <?= View::make('sections.elements.comments'); ?>
+<?php } ?>

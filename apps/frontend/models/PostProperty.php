@@ -25,10 +25,16 @@ class PostProperty extends Eloquent {
         return $instance->get();
     }
 
-    public static function postWithProperty($property) {
-        return PostProperty::prepare()
+    public static function postWithProperty($property, $with_url = false) {
+        $row = PostProperty::prepare()
                         ->where(PostProperty::getField('key'), $property)
                         ->first();
+                
+        if ($row && $with_url) {
+            $row['url'] = Post::getFullURI($row->id);
+        } 
+        
+        return $row;
     }
 
     public static $properties = array();

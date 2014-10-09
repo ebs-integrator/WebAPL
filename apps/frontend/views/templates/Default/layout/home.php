@@ -7,16 +7,38 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title><?= Core\APL\Template::getPageTitle(); ?></title>
-        <meta name="description" content="">
+
+        <?php foreach (\Core\APL\Template::getMetas() as $metaName => $metaContent) { ?>
+            <meta name="<?= $metaName; ?>" content="<?= $metaContent; ?>">
+        <?php } ?>
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link href="<?= res('assets/css/jquery.bxslider.css'); ?>" rel="stylesheet" />
         <link rel="stylesheet" href="<?= res('assets/css/normalize.css'); ?>">
         <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">
-        <!--        <link rel="stylesheet" href="/css/jquery.selectBoxIt.css">-->
+
+        <?php if (isset($favicon) && $favicon) { ?>
+            <link rel="icon" href="<?= url($favicon->path); ?>" type="image/x-icon">
+        <?php } ?>
 
         <?php Template::pullCurrentSchema(); ?>
+
+
+        <script>
+            var res_url = "<?= res(''); ?>";
+            var base_url = '<?= url(); ?>';
+
+            var disqus_url = '<?= url(); ?>';
+            var disqus_shortname = 'aplkopceak';
+            var disqus_title = '<?= Core\APL\Template::getPageTitle(); ?>';
+            var disqus_config = function() {
+                this.language = "<?=Core\APL\Language::ext();?>";
+            };
+
+            var loc_lat = <?= SettingsModel::one('pos_lat') ? SettingsModel::one('pos_lat') : 0; ?>;
+            var loc_long = <?= SettingsModel::one('pos_long') ? SettingsModel::one('pos_long') : 0; ?>;
+        </script>
 
         <script src="<?= res('assets/js/jquery-2.1.1.js'); ?>"></script>
     </head>
