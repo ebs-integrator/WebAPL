@@ -50,7 +50,7 @@
     height: 33px; /* Height of the drop down */
     line-height: 33px; /* Vertically positions the drop down text */
     display: block;
-    font: 13px 'open_sanssemibold_italic';
+    font: 13px 'AvenirNext-MediumItalic';
     line-height: 33px;
     padding-right: 0px !important;
 }
@@ -220,7 +220,7 @@
 .selectboxit-btn {
     background-color: #fff;
     border: 1px solid #d9d9d9;
-    border-left: 3px solid #d9d9d9;
+
 }
 
 .selectboxit-btn.selectboxit-enabled:hover,
@@ -257,7 +257,7 @@
 
 .selectboxit-list > .selectboxit-focus > .selectboxit-option-anchor {
     background-color: #e6e6e6;
-    
+
 }
 
 .selectboxit-list > .selectboxit-disabled > .selectboxit-option-anchor {

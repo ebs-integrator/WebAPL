@@ -12,9 +12,10 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link href="css/jquery.bxslider.css" rel="stylesheet" />
+        <link href="js/square/red.css" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <!--        <link rel="stylesheet" href="/css/jquery.selectBoxIt.css">-->
+        <link rel="stylesheet" href="css/jquery.selectBoxIt.css">
 
         <script src="js/jquery-2.1.1.js"></script>
     </head>

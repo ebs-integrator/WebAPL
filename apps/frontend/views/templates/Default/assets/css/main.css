@@ -586,9 +586,12 @@ header .contact .cont .cont_form ul li p{
     margin-top:-2px;
     margin-bottom:5px;
 }
-header .contact .cont .cont_form ul li p span{
+header .contact .cont .cont_form ul li p span,header .contact .cont .cont_form ul li p span a{
     color: #673167;
     font: 15px 'open_sansbold';
+}
+.left article ul li h3{
+    margin:0px;
 }
 .mini_contacte,.mini_contacte1{
     display:none;
@@ -2073,12 +2076,13 @@ section > .wrap >  .left.contact_r{
 .socials{
     margin-top:30px;
 }
-ul.social p{
+ul.social li:first-child{
     background: url('../img/g_phone.png') no-repeat 36px center;
     color: #fff;
     padding:17px 0px 17px 65px !important;
     border-bottom:1px solid #7c4d7c;
     font: 20px "open_sansregular" !important;
+    margin-bottom:10px;
 }
 .a_box{
     width:100%;
@@ -4337,7 +4341,6 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
 }
 .search_li li{
     display:block;
-    height:160px;
     border-bottom:2px solid #efefef;
     padding-top:40px;
     position:relative;
@@ -4356,7 +4359,6 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     display:block;
     color:#7c4d7c;
     font:24px 'open_sanssemibold';
-    margin:-5px 0 20px;
     padding-right: 20px;
 }
 .search_li li p{
@@ -6215,7 +6217,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     header .contact .currency span.s_c{
         margin-right:8px;
     }
-
+    .header_menu_content{
+        top:77px;
+    }
 }
 
 iframe, object, embed {

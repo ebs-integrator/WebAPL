@@ -31,13 +31,13 @@
         <div class="left global">
             <?php foreach ($sub_pages as $item) { ?>
                 <article>
-                    <p class="ttl"> <a href="<?= $item->url; ?>"><?= $item->title; ?></a></p>
+                    <h2 class="ttl"> <a href="<?= $item->url; ?>"><?= $item->title; ?></a></h2>
                     <ul>
                         <?php
                         foreach ($item['childrens'] as $k => $chitem) {
                             if ($k < 4) {
                                 ?>
-                                <li><a href="<?= $chitem->url; ?>"><?= $chitem->title; ?></a></li>
+                        <li><h3><a href="<?= $chitem->url; ?>"><?= $chitem->title; ?></a></h3></li>
                                 <?php
                             }
                         }
