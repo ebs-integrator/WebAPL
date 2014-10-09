@@ -2,7 +2,7 @@
 <section>
     <div class="wrap">
         <div class="left_block">
-            <p class="title">Consiliul local</p>
+            <p class="title">Orașul</p>
             <ul class="menu">
                 <li><a href="javascript:;">Cum să ajungi în oraș / Amplasarea geografică</a></li>
                 <li><a href="javascript:;">Istoria orașului</a></li>

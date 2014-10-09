@@ -12,7 +12,7 @@
             <div class="d_hr"></div>
             <ul>
                 <li>
-                    <p><?= varlang('email'); ?> : <span> <?= varlang('email-address'); ?></span></p>
+                    <p><?= varlang('email'); ?> : <span><a href="mailto:<?= varlang('email-address'); ?>"> <?= varlang('email-address'); ?></a></span></p>
                     <p><?= varlang('relatii'); ?> : <span><?= varlang('nr-relatii'); ?></span></p>
                     <p><?= varlang('fax'); ?> : <span><?= varlang('nr-fax'); ?></span></p>
                 </li>

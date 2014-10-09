@@ -58,7 +58,7 @@
                 ?>
             </ul>
             <ul class="social">
-                <p><?= varlang('nr-phone'); ?></p>
+                <li><?= varlang('nr-phone'); ?></li>
                 <li><a href='<?= varlang('facebook_link'); ?>' class="fb"><?= varlang('facebook'); ?></a></li>
                 <li><a href='<?= varlang('odnoklassniki-link-1'); ?>' class="odno"><?= varlang('odnoklassniki'); ?></a></li>
                 <li><a href='<?= varlang('vkontakte-link'); ?>' class="vk"><?= varlang('vkontakte'); ?></a></li>
