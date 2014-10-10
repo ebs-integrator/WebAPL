@@ -28,6 +28,13 @@ class PageView {
 
             if ($post) {
                 $wdata["post"] = Post::withDinamicFields($post);
+
+                Core\APL\Template::setMetaMultiple(array(
+                    'description' => $post->text,
+                    'og:description' => $post->text,
+                    'og:title' => $post->title
+                        ), true);
+
                 $posts_instance = Post::postsFeed($data['page']->feed_id, false, true)->where(Post::getField('id'), '<>', $wdata["post"]->id);
                 $wdata["posts"] = Post::setFeedPagination($posts_instance, $data['page']->feed_id);
                 $data["page"]->text .= View::make("sections.pages.modview.vacansions")->with($wdata);
@@ -45,6 +52,13 @@ class PageView {
             if ($item) {
                 $post = Post::findURI($item, 1);
                 if ($post) {
+
+                    Core\APL\Template::setMetaMultiple(array(
+                        'description' => $post->text,
+                        'og:description' => $post->text,
+                        'og:title' => $post->title
+                            ), true);
+
                     $wdata['post'] = Post::withDinamicFields($post);
                     $data["page"]->text .= View::make("sections.pages.modview.acquisition")->with($wdata);
                 } else {
@@ -67,6 +81,13 @@ class PageView {
             if ($item) {
                 $post = Post::findURI($item, 1);
                 if ($post) {
+
+                    Core\APL\Template::setMetaMultiple(array(
+                        'description' => $post->text,
+                        'og:description' => $post->text,
+                        'og:title' => $post->title
+                            ), true);
+
                     $wdata["post"] = Post::withDinamicFields($post);
                     $wdata["post_files"] = Files::file_list('doc_post_lang', $wdata["post"]->post_lang_id);
                     $data["page"]->text .= View::make("sections.pages.modview.project")->with($wdata);
@@ -163,6 +184,13 @@ class PageView {
             if ($item) {
                 $wdata['post'] = Post::findURI($item, 1);
                 if ($wdata['post']) {
+
+                    Core\APL\Template::setMetaMultiple(array(
+                        'description' => $wdata['post']->text,
+                        'og:description' => $wdata['post']->text,
+                        'og:title' => $wdata['post']->title
+                            ), true);
+
                     $wdata['post']['cover'] = Post::coverImage($wdata['post']->id);
                     $data["page"]->text = View::make("sections.pages.modview.articleFull")->with($wdata);
                 } else {
@@ -224,8 +252,8 @@ class PageView {
         $data['page']['background'] = Files::getfile('page_bg', $data['page']->id);
 
         $data['sub_pages'] = Post::subPosts($data['page']->id, 2);
-        
-        
+
+
         $data['page_properies'] = PostProperty::getPostProperties($data['page']->id);
         if (in_array('show_news', $data['page_properies'])) {
             $data['home_posts'] = Post::findHomePosts('newsList');
@@ -240,7 +268,7 @@ class PageView {
                 $data['home_page']['childrens'] = Post::findWithParent($selected_page->id);
             }
         }
-      
+
         return View::make('sections.pages.home')->with($data);
     }
 
@@ -326,6 +354,13 @@ class PageView {
             $data['years_list'] = Feed::getYears($data['page']->feed_id);
 
             if ($wdata["post"]) {
+
+                Core\APL\Template::setMetaMultiple(array(
+                    'description' => $wdata['post']->text,
+                    'og:description' => $wdata['post']->text,
+                    'og:title' => $wdata['post']->title
+                        ), true);
+
                 $data['current_year'] = date('Y', strtotime($wdata["post"]->created_at));
                 $data['current_month'] = date('m', strtotime($wdata["post"]->created_at));
 
@@ -360,6 +395,14 @@ class PageView {
 
                     $wdata["post"]->cover = Post::coverImage($wdata["post"]->id);
 
+                    Core\APL\Template::setMetaMultiple(array(
+                        'description' => $wdata['post']->text,
+                        'og:description' => $wdata['post']->text,
+                        'og:title' => $wdata['post']->title,
+                        'og:image' => $wdata["post"]->cover->path ? url($wdata["post"]->cover->path) : ''
+                            ), true);
+
+                    
                     $data["page"]->text .= View::make("sections.pages.modview.newsFull")->with($wdata);
 
                     return static::contactView($data);
@@ -396,14 +439,14 @@ class PageView {
     public static function mapPage($data) {
 
         $wdata['tree'] = Post::treePosts(0, array(
-                'general_node' => 1
-            ));
+                    'general_node' => 1
+        ));
 
         $data['page']->text .= View::make('sections.pages.modview.map', $wdata);
 
         return static::fullView($data);
     }
-    
+
     public static function notFound($data) {
         $data['page']->title = '';
         $data['page']->text = View::make('sections.pages.modview.error404');

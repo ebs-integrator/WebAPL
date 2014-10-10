@@ -1,8 +1,8 @@
-<h3><a href="<?= url('person/list'); ?>">Persons</a> / Edit person group</h3>
+<h3><a href="<?= url('person/list'); ?>"><?= varlang('persons'); ?></a> / <?= varlang('edit-person-group'); ?></h3>
 
 <ul class="nav nav-tabs" role="tablist" id="form-tabs">
     <?php foreach (Language::getList() as $lang) { ?>
-        <li><a href="#lang<?= $lang->id; ?>" role="tab" data-toggle="tab">Language <?= $lang->name; ?></a></li>
+        <li><a href="#lang<?= $lang->id; ?>" role="tab" data-toggle="tab"><?= $lang->name; ?></a></li>
     <?php } ?>
 </ul>
 
@@ -20,13 +20,13 @@
 
                 <table class="table table-bordered">
                     <tr>
-                        <th>Name:</th>
+                        <th><?= varlang('gname'); ?></th>
                         <td>
                             <input type="text" name="lang[name]" class="form-control" value="<?= isset($group_lang[$lang->id]->name) ? $group_lang[$lang->id]->name : ''; ?>" />
                         </td>
                     </tr>
                     <tr>
-                        <th>Description:</th>
+                        <th><?= varlang('gdescription'); ?></th>
                         <td>
                             <textarea name="lang[description]" class="form-control"><?= isset($group_lang[$lang->id]->description) ? $group_lang[$lang->id]->description : ''; ?></textarea>
                         </td>

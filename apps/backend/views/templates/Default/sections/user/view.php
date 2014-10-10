@@ -24,7 +24,7 @@
 <?php
 $uroles = User::extractRoles($user->id);
 ?>
- 
+
 <?php if (User::has('user-chpwd') && (!User::has('user-ptpsw', $uroles))) { ?>
     <form action="<?= url('user/changepassword'); ?>" method="post" class="ajax-auto-submit">
         <h4><?= varlang('change-password'); ?></h4>
@@ -55,5 +55,14 @@ $uroles = User::extractRoles($user->id);
             <?php } ?>
         </select>
 
+    </form>
+<?php } ?>
+
+<?php if (User::has('user-delete')) { ?>
+    <div class="c20"></div>
+    <form action="<?= url('user/delete'); ?>" method="post">
+        <input type="hidden" name="id" value="<?= $user->id; ?>" />
+
+        <button type="submit" onclick="return confirm('<?= varlang('delete-user'); ?>');" class="btn btn-danger pull-right"><i class="glyphicon glyphicon-remove"></i></button>
     </form>
 <?php } ?>

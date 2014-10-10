@@ -99,7 +99,7 @@
                             </div>
                             <div class="btn-group">
                                 <?php foreach (Core\APL\Language::getList() as $lang) { ?>
-                                    <a data-placement="bottom" data-original-title="E-mail" data-toggle="tooltip" href="<?=url("home/changelang/".$lang->ext);?>" class="btn btn-default btn-sm <?= $lang->id == Core\APL\Language::getId() ? 'active' : '' ?>">
+                                    <a data-placement="bottom" data-original-title="E-mail" data-toggle="tooltip" href="<?= url("home/changelang/" . $lang->ext); ?>" class="btn btn-default btn-sm <?= $lang->id == Core\APL\Language::getId() ? 'active' : '' ?>">
                                         <?= strtoupper($lang->ext); ?>
                                     </a>
                                 <?php } ?>
@@ -173,7 +173,7 @@
             </div><!-- /#content -->
         </div><!-- /#wrap -->
         <footer class="Footer bg-dark dker">
-            <p>2014 &copy; APL</p>
+            <p>2014 &copy; APL by <a href="http://ebs.md/?apl" target="_black">EBS</a></p>
         </footer><!-- /#footer -->
 
         <!-- Modal -->
@@ -193,10 +193,31 @@
                 </div>
             </div>
         </div>
+        
+        
+        <!-- Modal -->
+        <div class="modal fade bs-example-modal-lg" id="editfileModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog bs-example-modal-lg">
+                <div class="modal-content modal-lg">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"><?= varlang('close'); ?></span></button>
+                        <h4 class="modal-title"><?= varlang('editfiledetails'); ?></h4>
+                    </div>
+                    <div class="modal-body">...</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal"><?= varlang('save-1'); ?></button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><?= varlang('close'); ?></button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!--Bootstrap -->
         <script src="<?= res('assets/lib/bootstrap/js/bootstrap.min.js'); ?>"></script>
 
+        <script>
+            window.langext = '<?= Language::ext(); ?>';
+        </script>
 
         <!-- module -->
         <script src="<?= res('assets/lib/jquery-ui/jquery-ui.min.js'); ?>" type="text/javascript"></script>

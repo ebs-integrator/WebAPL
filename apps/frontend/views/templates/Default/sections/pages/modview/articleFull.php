@@ -12,4 +12,20 @@
     </div>
 </div>                
 <div class="clearfix"></div>
-<div class='cont'><?= Core\APL\Shortcodes::execute($post->text); ?></div>
+
+<?php if ($post->show_pcomment) { ?>
+    <div class='cont live_comment' data-pid="news<?= $post->id; ?>"><?= Core\APL\Shortcodes::execute($post->text); ?></div>
+<?php } else { ?>
+    <div class='cont'><?= Core\APL\Shortcodes::execute($post->text); ?></div>
+<?php } ?>
+
+<?php if ($post->have_socials) { ?>
+    <?= View::make('sections.elements.socials'); ?>
+    <div class='c20'></div>
+<?php } ?>
+    
+<div class="hr_grey"></div>
+
+<?php if ($post->have_comments) { ?>
+    <?= View::make('sections.elements.comments'); ?>
+<?php } ?>

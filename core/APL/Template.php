@@ -485,4 +485,68 @@ class Template {
         }
     }
 
+    /**
+     * 
+     * 
+     *    FACEBOOK META
+     * 
+     * 
+     */
+    protected static $meta = array(
+        'description' => '',
+        'og:title' => '',
+        'og:type' => '',
+        'og:site_name' => '',
+        'og:image' => '',
+        'og:description' => ''
+    );
+
+    /**
+     * Set meta value
+     * @param text $key
+     * @param text $value
+     * @param boolean $override
+     */
+    public static function setMeta($key, $value, $override = false) {
+        $value = \Str::words(strip_tags(trim(preg_replace('/\s\s+/', ' ', $value))), 40);
+        
+        if ($override) {
+            static::$meta[$key] = $value;
+        } else {
+            if (isset(static::$meta[$key])) {
+                static::$meta[$key] = $value;
+            }
+        }
+    }
+    
+    /**
+     * Set meta from array
+     * @param type $metas
+     * @param boolean $override
+     */
+    public static function setMetaMultiple($metas, $override = false) {
+        if (is_array($metas)) {
+            foreach ($metas as $key => $meta) {
+                static::setMeta($key, $meta, $override);
+            }
+        }
+    }
+    
+    /**
+     * Get meta
+     * @param string $key
+     * @return string
+     */
+    public static function getMeta($key) {
+        return isset(static::$meta[$key]) ? static::$meta[$key] : '';
+    }
+    
+    /**
+     * Get all meta
+     * @return array
+     */
+    public static function getMetas() {
+        return static::$meta;
+    }
+
 }

@@ -3,11 +3,14 @@
  * For licensing, see LICENSE.html or http://ckeditor.com/license
  */
 
-CKEDITOR.editorConfig = function( config ) {
-	// Define changes to default configuration here. For example:
-	// config.language = 'fr';
-    config.uiColor = '#4eb25c';
+CKEDITOR.editorConfig = function(config) {
+    // Define changes to default configuration here. For example:
+    if (typeof langext !== 'undenfined') {
+        config.language = langext;
+    }
     
+    config.uiColor = '#4eb25c';
+
     config.removePlugins = 'about,save,forms';
     config.extraPlugins = 'texttransform,wordcount,oembed,addmap';
     config.height = 400;

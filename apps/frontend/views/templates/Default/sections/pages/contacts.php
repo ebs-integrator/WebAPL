@@ -41,7 +41,7 @@
                 </ul>
                 <div class="prp">
                     <img src="<?= res('assets/img/phone_book.png'); ?>">
-                    <a href="urgenta.php"><?= varlang('all-nr-phone'); ?></a>
+                    <a href="<?=PostProperty::postWithProperty('more_contacts', true)->url;?>"><?= varlang('all-nr-phone'); ?></a>
                 </div>
 
             </div>

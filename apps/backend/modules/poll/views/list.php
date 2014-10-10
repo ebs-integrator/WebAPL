@@ -5,7 +5,7 @@
         mtype: 'POST',
         autoencode: true,
         loadonce: false,
-        colNames: ['ID', 'Title', 'Date Created', 'Enabled'],
+        colNames: ['ID', '<?= varlang('title-7'); ?>', '<?= varlang('date-created'); ?>', '<?= varlang('enabled-7'); ?>'],
         colModel: [ 
             {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
             {name: 'title', index: 'title', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
@@ -48,4 +48,4 @@
 
 <div class="c20"></div>
 
-<a href="<?= url('poll/form'); ?>" class="btn btn-success" type="submit">Create new poll</a>
+<a href="<?= url('poll/form'); ?>" class="btn btn-success" type="submit"><?= varlang('create-new-poll'); ?></a>

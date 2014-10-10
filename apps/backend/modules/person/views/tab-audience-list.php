@@ -5,7 +5,7 @@
         mtype: 'POST',
         autoencode: true,
         loadonce: false,
-        colNames: ['ID', 'Consilier', 'Nume', 'Telefon', 'Email', 'Data'],
+        colNames: ['ID', '<?= varlang('consilier'); ?>', '<?= varlang('name-8'); ?>', '<?= varlang('phone-2'); ?>', '<?= varlang('email-7'); ?>', '<?= varlang('date-8'); ?>'],
         colModel: [ 
             {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
             {name: 'full_name', index: 'full_name', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},

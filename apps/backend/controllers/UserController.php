@@ -23,7 +23,7 @@ class UserController extends BaseController {
 
     public function getIndex() {
         User::onlyHas('user-view');
-        
+
         $this->layout->content = View::make('sections.user.list', $this->data);
 
         return $this->layout;
@@ -31,7 +31,7 @@ class UserController extends BaseController {
 
     public function postCreate() {
         User::onlyHas('user-create');
-        
+
         $user = new User;
         $user->username = Input::get('username');
         $user->email = Input::get('email');
@@ -43,7 +43,7 @@ class UserController extends BaseController {
 
     public function postLists() {
         User::onlyHas('user-view');
-        
+
         $jqgrid = new jQgrid(User::getTableName());
         return $jqgrid->populate(function ($start, $limit) {
                     return User::select(User::getField('id'), User::getField('username'), User::getField('email'))
@@ -55,7 +55,7 @@ class UserController extends BaseController {
 
     public function getView($id) {
         User::onlyHas('user-edit');
-        
+
         $this->data['user'] = User::find($id);
         $this->data['roles'] = Role::orderBy('key', 'asc')->get();
 
@@ -70,7 +70,7 @@ class UserController extends BaseController {
 
     public function postSaveroles() {
         User::onlyHas('user-roles');
-        
+
         $id = Input::get('id');
         $roles = Input::get('roles');
 
@@ -86,30 +86,42 @@ class UserController extends BaseController {
 
         return [];
     }
-    
+
     public function postSave() {
         User::onlyHas('user-edit');
-        
+
         $user = User::find(Input::get('id'));
         $user->username = Input::get('username');
         $user->email = Input::get('email');
         $user->save();
         return [];
     }
-    
+
     public function postChangepassword() {
         User::onlyHas('user-chpwd');
-        
+
         $password = trim(Input::get('password'));
         if ($password) {
-            
+
             $user = User::find(Input::get('id'));
             $user->password = Hash::make($password);
             $user->save();
-            
         }
-        
+
         return [];
+    }
+
+    public function postDelete() {
+        $id = Input::get('id');
+
+        $user = User::find($id);
+        if ($user) {
+            $user->delete();
+            UserRole::where('user_id', $id)->delete();
+            return \Illuminate\Support\Facades\Redirect::to('user');
+        } else {
+            throw new Exception("Undefined user #{$id}");
+        }
     }
 
 }

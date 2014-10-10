@@ -11,7 +11,7 @@ class SearchController extends BaseController {
         $this->data['results'] = Post::search($keywords);
 
         Core\APL\Template::setPageTitle("Search: {$this->data['words']}", true);
-        
+
         PageController::loadGeneralResources();
 
         $this->layout->content = View::make('sections.search.results', $this->data);
@@ -55,6 +55,17 @@ class SearchController extends BaseController {
             }
         } else {
             throw new Exception("Post not found #{$id}");
+        }
+    }
+
+    public function topage($modview) {
+        $post = Post::where('view_mod', $modview)->first();
+
+        if ($post) {
+            $uri = Post::getFullURI($post->id, true);
+            return Redirect::to($uri);
+        } else {
+            throw new Exception("Post not found #{$modview}");
         }
     }
 

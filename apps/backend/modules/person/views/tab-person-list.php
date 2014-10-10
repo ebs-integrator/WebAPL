@@ -5,7 +5,7 @@
         mtype: 'POST',
         autoencode: true,
         loadonce: false,
-        colNames: ['ID', 'First Name', 'Last Name'],
+        colNames: ['ID', '<?= varlang('first-name-'); ?>', '<?= varlang('last-name-'); ?>'],
         colModel: [
             {name: 'person_id', index: 'person_id', editable: false, editoptions: {readonly: true, size: 10}},
             {name: 'first_name', index: 'first_name', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},

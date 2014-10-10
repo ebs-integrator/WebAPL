@@ -4,6 +4,13 @@
 
     <table class="table table-bordered">
 
+        <tr>
+            <th>Nume site</th>
+            <td>
+                <input type='text' name='set[sitename]' placeholder="Nume site" class='form-control' value='<?= isset($setts['sitename']) ? $setts['sitename'] : ''; ?>'/>
+            </td>
+        </tr>
+
         <?php
         $colorSchemes = \Core\APL\Template::getColorSchemes();
         ?>
@@ -37,6 +44,9 @@
     </table>
 
 </form>
+
+<h4>Favicon</h4>
+<?= Files::widget('website_favicon', 1, 1); ?>
 
 <h4>Home logo</h4>
 <?= Files::widget('website_logo', 1, 1); ?>

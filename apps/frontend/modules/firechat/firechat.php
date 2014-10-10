@@ -31,6 +31,7 @@ class Firechat extends \Core\APL\ExtensionController {
         Actions::register('bottom_contructor', array($this, 'popup'));
         Actions::register('logo_contructor', array($this, 'topbutton'));
         Actions::register('contact_col1_contructor', array($this, 'contactbutton'));
+        Actions::register('contact_right_list', array($this, 'buttonlist'));
     }
     
     protected static $isOnline = 0;
@@ -152,9 +153,9 @@ class Firechat extends \Core\APL\ExtensionController {
 
             $photo = \Files::getfile('person_chat', $person->id);
             if ($photo) {
-                $person['photo'] = $photo->path;
+                $person['photo'] = url($photo->path);
             } else {
-                $person['photo'] = '';
+                $person['photo'] = url('apps/frontend/modules/firechat/assets/chat.jpg');
             }
 
 
@@ -228,6 +229,14 @@ class Firechat extends \Core\APL\ExtensionController {
                 });
             }
         }
+    }
+    
+    public function buttonlist() {
+        $data = array(
+            'online' => Firechat::online()
+        );
+
+        echo Template::moduleView($this->module_name, 'views.chat-list-button', $data);
     }
 
 }

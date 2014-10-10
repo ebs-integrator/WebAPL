@@ -1,5 +1,5 @@
 <tr>
-    <th>Person groups: </th>
+    <th><?= varlang('person-groups'); ?>:</th>
     <td>
         <form id="attach_page_group">
             <input type="hidden" name="page_id" value="<?=$post['id'];?>" />

@@ -7,7 +7,7 @@
         loadonce: false,
         colNames: [
             'ID',
-            'Name',
+            '<?= varlang('gname'); ?>',
         ],
         colModel: [ 
             {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
@@ -43,12 +43,12 @@ View::make('sections/jqgrid/form')->with(array(
 
 <div class="c20"></div>
 <form action="<?=url('person/savegroup');?>" method="post">
-    <h3>Create new group</h3>
+    <h3><?= varlang('create-new-group'); ?></h3>
     <?php foreach (\Core\APL\Language::getList() as $lang) { ?>
-        Name in <?= $lang->name; ?>:<br>
+        <?= varlang('name-in'); ?><?= $lang->name; ?>:<br>
         <input type="text" class="form-control" name="lang[<?= $lang->id; ?>][name]" />
         <div class="c10"></div>
     <?php } ?>
 
-    <button class="btn btn-success">Create group</button>
+    <button class="btn btn-success"><?= varlang('create-group'); ?></button>
 </form>

@@ -10,12 +10,10 @@
                 <li class='fax'>
                     <a href='<?= varlang('nr-fax'); ?>'><?= varlang('nr-fax'); ?></a>
                 </li>
-                <li class='chat'>
-                    <a href='javascript:;'><?= varlang('chat-online'); ?></a>
-                </li>
                 <li class='location'>
-                    <a href='contacte.php'><?= varlang('cum-ne-gasiti'); ?></a>
+                    <a href='<?= Language::url('topage/contactsView'); ?>'><?= varlang('cum-ne-gasiti'); ?></a>
                 </li>
+                <?php Actions::call('contact_right_list');?>
             </ul>
         </div>
         <div class="left">
@@ -25,12 +23,14 @@
 
             <?= Core\APL\Actions::call('page_bottom_container', $page); ?>
 
-            <?= View::make('sections.pages.blocks.files', array(
+            <?=
+            View::make('sections.pages.blocks.files', array(
                 'page' => $page
-            ));?>
-            
+            ));
+            ?>
+
             <?php if ($page->have_socials) { ?>
-                <?=View::make('sections.elements.socials', array('url' => $page_url));?>
+                <?= View::make('sections.elements.socials', array('url' => $page_url)); ?>
             <?php } ?>
             <?php
             if ($page->have_comments) {

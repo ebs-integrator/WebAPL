@@ -40,11 +40,28 @@ class VarController extends BaseController {
         }
     }
 
+    public function postSearch() {
+        $query = Input::get('varname');
+
+        $list = VarLangModel::where(VarLangModel::getField('value'), 'like', "%{$query}%")->get();
+
+        $count = count($list);
+
+        if ($count == 0) {
+            return \Illuminate\Support\Facades\Redirect::back()->with('searchfail', 1);
+        } elseif ($count == 1) {
+            $item = $list[0];
+            return \Illuminate\Support\Facades\Redirect::to('var/index/' . $item->var_key);
+        } else {
+            return \Illuminate\Support\Facades\Redirect::back()->with('searchfail', 0)->with('searchresult', $list->toArray());
+        }
+    }
+
     public function postCreate() {
         $parent_key = Input::get('parent_key');
         $var_langs = Input::get('text');
-        $key = VarModel::uniqKey(Input::get('key'), Input::get('text.'.(\Core\APL\Language::getId())));
-        
+        $key = VarModel::uniqKey(Input::get('key'), Input::get('text.' . (\Core\APL\Language::getId())));
+
         $var = new VarModel;
         $var->key = $key;
         $var->parent_key = $parent_key;
@@ -59,19 +76,55 @@ class VarController extends BaseController {
         }
 
         Log::info("Created new var '{$key}'");
-        
+
         return Redirect::back();
     }
-    
+
     public function postEdit() {
         $id = Input::get('id');
         $value = Input::get('value');
-        
+
         $vlang = VarLangModel::find($id);
         $vlang->value = $value;
         $vlang->save();
-        
+
         return [];
+    }
+
+    public function getExport() {
+
+        $buffer = "";
+
+        $vars = VarModel::all();
+
+        $num = 0;
+
+        $vlang_ids = array();
+
+        foreach ($vars as $var) {
+            $langs = VarLangModel::where('var_key', $var->key)->get();
+            foreach ($langs as $vlang) {
+                $langname = Core\APL\Language::getItem($vlang->lang_id)->name;
+                $buffer .= "{$vlang->id},{$langname},\"{$vlang->value}\"\n";
+
+                $vlang_ids[] = $vlang->id;
+
+                $num++;
+            }
+            $buffer .= "\n";
+        }
+
+        $buffer .= "{$num}\n";
+
+        //var_dump(count($vlang_ids), VarLangModel::whereNotIn('id', $vlang_ids)->get());
+        //return [];
+
+        header('Content-Encoding: UTF-8');
+        header('Content-type: text/csv; charset=UTF-8');
+        header('Content-Disposition: attachment; filename=Customers_Export.csv');
+        echo "\xEF\xBB\xBF"; // UTF-8 BOM
+
+        return $buffer;
     }
 
 }
