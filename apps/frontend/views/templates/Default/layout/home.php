@@ -32,8 +32,8 @@
             var disqus_url = '<?= url(); ?>';
             var disqus_shortname = 'aplkopceak';
             var disqus_title = '<?= Core\APL\Template::getPageTitle(); ?>';
-            var disqus_config = function() {
-                this.language = "<?=Core\APL\Language::ext();?>";
+            var disqus_config = function () {
+                this.language = "<?= Core\APL\Language::ext(); ?>";
             };
 
             var loc_lat = <?= SettingsModel::one('pos_lat') ? SettingsModel::one('pos_lat') : 0; ?>;
@@ -43,6 +43,26 @@
         <script src="<?= res('assets/js/jquery-2.1.1.js'); ?>"></script>
     </head>
     <body>
+
+        <div class="n_alert">
+            <div class='cntn'>
+                <img src="<?= res('assets/img/alert.png'); ?>">
+                <p>alerte!</p>
+                <a href='javascript:;'></a>
+            </div>
+            <div class='n_info'>
+                <div class='n_data'>24 Iul 2014, 15:03</div>
+                <div class='clearfix'></div>
+                <p>Alerta de cod oranj de inghet</p>
+                <a href="javascript:;" class="more"></a>
+            </div>
+            <div class='n_footer'>
+                <input id="f_1" type='checkbox'>
+                <label for='f_1'>Am facut cunoștință</label>
+            </div>
+
+        </div>
+
         <div class="overlay hidden"></div>
         <div class="overlay2 hidden"></div>
         <div class="overlay3 hidden"></div>
