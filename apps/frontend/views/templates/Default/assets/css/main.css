@@ -408,7 +408,9 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+a{
+    color:#4c4c4c;
+}
 header{
     width:100%;
     max-width:2580px;
@@ -666,13 +668,14 @@ header .contact .cont .cont_form ul li p span,header .contact .cont .cont_form u
     float:left;
     position:relative;
 }
-.n_info p{
+.n_info p a{
     font:20px 'open_sansbold';
     color:#343434;
     margin-top:35px;
     max-height:191px;
     padding-right:35px;
     overflow:hidden;
+    display:block;
 }
 .n_footer{
     padding-left:35px;
@@ -6025,7 +6028,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         height: 50px;
     }
     ul.dcr > li .dcr_box ul li span:first-child {
-        width: 225px;
+        width: 199px;
     }
 
     .tel{
@@ -6273,7 +6276,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     .left article ul{
         padding-top:0px;
-        height:90px;
+        height:86px;
     }
     .left article ul li:nth-child(n+4){
         display:none;
@@ -6333,8 +6336,23 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .header_menu_content{
         top:77px;
     }
+    ul.dcr .dcr_box > ul > li, ul.atz > li {
+        padding-left: 38px;
+    }
+    ul.dcr > li .dcr_box ul li span:first-child{
+        display: table-cell;
+        vertical-align:middle;
+        height:50px;
+    }
+    .dcr_dwnl {
+        background: url('../img/a_dis.png') no-repeat 0px 10px;
+    }
+    table.c_l_u ul.dcr > li a.dcr_dwnl{
+        float:none;
+        margin-top:0px;
+        display:table-cell;
+    }
 }
-
 iframe, object, embed {
     max-width: 100%;
 }
