@@ -29,7 +29,7 @@
                 <div class="left">
                     <a href="javascript:;" class="l_box">primăria strășeni</a>
                 </div>
-                <div class="contact right"><p class="tel">(022) 22-32-53</p>
+                <div class="contact right"><p class="telef">(022) 22-32-53</p>
                     <div class="cont">
                         <a class="contact_us">Contactează-ne</a>
                         <div class="cont_form hidden">

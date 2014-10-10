@@ -241,7 +241,6 @@
                 </tr>
             </table>
         </div>
-        <div class="clearfix50"></div>
     </div>
 
 </section>

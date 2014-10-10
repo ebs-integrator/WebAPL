@@ -514,7 +514,7 @@ header .row1 > .left{
 .contact{
     margin-right:70px;
 }
-.tel{
+.telef{
     color:#fff;
     font:35px 'AvenirNext-Regular';
     margin-top: -5px;
@@ -1089,6 +1089,7 @@ section .left_block{
     width:357px;
     padding-top:45px;
     background: #f7f7f7;
+    position:relative;
 }
 section .right_block{
     float:right;
@@ -1103,7 +1104,39 @@ section .right_block{
     padding-right: 37px;
     margin-bottom:20px;
 }
-.left_block ul.menu li a{
+.sub_menu{
+    display:none;
+}
+.left_block ul.menu > li{
+    position:relative;
+}
+.left_block .sub_menu{
+    position:absolute;
+    background:#f0f0f0;
+    left:100%;
+    width:415px;
+    top: -1px;
+    height: 100%;
+}
+.left_block ul.menu > li:hover ul{
+    display:block;
+}
+.left_block ul.menu > li ul{
+    padding:0px 30px;
+    position:absolute;
+    left:100%;
+    display:none;
+    top:0px;
+    width:415px;
+    background:#f0f0f0;
+}
+.left_block ul.menu > li ul li a{
+    color:#0382a1;
+    font:20px 'AvenirNext-Medium';
+    padding:18px 0px;
+    display:block;
+}
+.left_block ul.menu > li > a{
     padding:15px 12px;
     font:20px 'AvenirNext-Medium';
     color:#595959;
@@ -1319,7 +1352,7 @@ section .search input[type=submit]{
     height: 24px;
     bottom: 5px;
 }
-.pdf a ,.docx a,.doc a,.xlsx a,.xlx a {
+.pdf a ,.docx a,.doc a,.xlsx a,.xls a {
     padding: 0px 60px 0px 50px;
     display: table-cell;
     vertical-align: middle;
@@ -2183,4 +2216,345 @@ table.orar .active ul li{
     font:17px 'AvenirNext-DemiBold';
     margin-top:15px;
     display:block;
+}
+table.cns_locali, table.c_l_u {
+    width: 100%;
+}
+.cns_locali td:first-child, .c_l_u td:first-child {
+    width: 72%;
+}
+.cns_locali thead tr td {
+    color: #008d74;
+    font: 17px 'AvenirNext-Bold';
+    text-transform: uppercase;
+    border: 1px solid #00bd9c;
+}
+.cns_locali tr td {
+    padding: 10px 20px;
+}
+.cns_locali tr:last-child td {
+    padding: 0px;
+    padding-top: 1px;
+}
+table.c_l_u tr:last-child {
+    background: #fbfbfb;
+}
+.c_l_u tr:first-child td {
+    border-top: 0px;
+}
+table.c_l_u td {
+    border: 1px solid #e5e5e5;
+    padding: 25px;
+}
+.clu_img {
+    float: left;
+    margin-right: 20px;
+}
+.clu_img img {
+    max-width: 140px;
+    max-height: 177px;
+}
+.clu_cont {
+    float: left;
+    max-width: 62%;
+}
+.clu_nume {
+    color: #ff6577;
+    font: 20px 'AvenirNext-DemiBold';
+}
+.clu_nume span {
+    font: 20px 'open_sansbold';
+    display: inline;
+    padding-left: 3px;
+}
+.clu_partid {
+    color: #4c4c4c;
+    font: 17px 'AvenirNext-Regular';
+    max-width: 175px;
+    margin:25px 0;
+}
+.tel {
+    padding-left: 30px;
+    background: url('../img/v_phone.png') no-repeat left center;
+    color: #4b4b4b;
+    font: 17px 'AvenirNext-DemiBold';
+    margin-bottom: 10px;
+}
+.email a {
+    padding-left: 30px;
+    background: url('../img/g_mail.png') no-repeat left center;
+    color: #4b4b4b;
+    font: 17px 'AvenirNext-DemiBold';
+    word-break: break-all;
+}
+table.c_l_u ul.dcr > li {
+    padding-top: 0px;
+}
+
+ul.dcr > li {
+    width: 100%;
+}
+table ul.dcr > li > a{
+    background: url('../img/dir.png') no-repeat 10px center transparent;
+}
+ul.dcr > li > a {
+    border: 0px;
+    padding-bottom: 0px;
+    font:17px 'AvenirNext-DemiBold';
+    color:#000000;
+    padding-left: 50px;
+    width: 100%;
+    display: block;
+    height: 43px;
+    line-height: 43px;    
+    background: url('../img/dir.png') no-repeat 10px center #f7f7f7;
+
+}
+ul.dcr span.more_dot{
+    margin-top: 10px;
+    margin-right:8px;
+}
+.c_l_u span {
+    display: block;
+}
+.dcr_dwnl {
+    background: url('../img/a_dis.png') no-repeat;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    display: -moz-inline-box;
+    float: right;
+    margin-top: 10px;
+}
+.dcr_box ul li {
+    padding-left:30px;
+}
+.dcr_box .doc,.dcr_box .xls,.dcr_box .xlsx,.dcr_box .pdf,.dcr_box .docx{
+    margin-bottom:5px;
+}
+
+.dcr_box .pdf a,.dcr_box .docx a,.dcr_box .doc a,.dcr_box .xlsx a,.dcr_box .xls a {
+    font: 14px 'AvenirNext-Medium';
+}
+.dcr_year{
+    width:7%;
+    margin-top:15px;
+    float:left;
+    font:15px 'AvenirNext-Bold';
+    color:#008d74;
+}
+section:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+table .dcr_box ul{
+    width:93%;
+}
+.dcr_box ul{
+    width:100%;
+    float:left;
+    display:block;
+}
+table .dcr_box ul{
+    border-bottom:1px solid #dfdfdf;    
+}
+.dcr_box ul:last-child{
+    border:0px;
+}
+.dcr_box{
+    margin-top:10px;
+    width: 100%;
+    display:none;
+}
+.dcr_box:after{
+    clear:both;
+    display:block;
+    content:"";
+}
+span.more_dot {
+    width: 30px;
+    height: 30px;
+    background: url('../img/more_dot.png')no-repeat center;
+    float: right;
+}
+.m_video {
+    margin-top: 65px;
+}
+.m_video > p {
+    color: #232323;
+    font: 24px 'AvenirNext-Bold';
+    margin-bottom:5px;
+}
+.m_video > div:nth-child(2n) {
+    margin-right: 85px;
+}
+.m_video > div {
+    width: 348px;
+    min-height: 340px;
+    float: left;
+}
+.video_d {
+    margin-top:8px;
+    height: 21px;
+    background: #ff6476;
+    color: #fff;
+    font: 12px 'AvenirNext-Regular';
+    line-height: 21px;
+    padding:0px 8px;
+    display:inline-block;
+}
+.video_i {
+    font: 17px 'AvenirNext-DemiBold';
+    color: #595959;
+    padding-right: 20px;
+    margin-top: 20px;
+    margin-bottom:40px;
+}
+.sec_details img{
+    max-width:210px;
+    float:left;
+}
+.sec_details .sec_label{
+    float:left;
+    width:75%;
+}
+.sec_details .sec_name{
+    text-transform: uppercase;
+    color:#008d74;
+    font:17px 'AvenirNext-DemiBold';
+}
+.sec_details td,.sec_details p{
+    font:17px 'AvenirNext-Regular';
+    color:#000;
+}
+.sec_details table{
+    width:100%;
+}
+.sec_details td{
+    padding-top: 28px;
+    vertical-align: top;
+    padding-left:25px;
+}
+.sec_details td:first-child{
+    font:17px 'AvenirNext-Bold';
+    color:#1c1c1c;    
+    border-right:2px solid #efefef;
+}
+.sec_details tr:first-child td{
+    padding-top:0px;
+}
+.secretar h1{
+    color:#1c1c1c;
+    font:24px 'AvenirNext-Bold';
+}
+.secretar p{
+    font:17px 'AvenirNext-Regular';
+    color:#4b4b4b;
+    margin-bottom:20px;
+}
+.secretar span{
+    color:#008d74;
+    font:17px 'AvenirNext-Regular';
+}
+.a_box {
+    width: 100%;
+    border: 2px solid #f7f7f7;
+    padding: 25px 30px;
+    position: relative;
+    margin-bottom: 55px;
+}
+.a_box .title {
+    margin-bottom: 8px;
+}
+.a_box .title a {
+    font: 24px 'AvenirNext-DemiBold';
+    color: #008d74;
+}
+.hr_dbl {
+    height: 3px;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 15px;
+}
+.a_box .left .img img{
+    max-width: 270px;
+}
+.a_box p.data {
+    background-color: #00d4d4;
+    color:#fff;
+    font:12px 'AvenirNext-Regular';
+    display:inline-block;
+    padding:0px 8px;
+    height:21px;
+    line-height:21px;
+    margin-bottom:10px;
+}
+.a_box .right {
+    max-width: 500px;
+}
+.a_box .info {
+    font: 17px 'AvenirNext-Regular';
+    color: #343434;
+    margin-top: -5px;
+    margin-bottom: 0px;
+    max-height: 235px;
+    overflow: hidden;
+}
+.a_box .more{
+    width: 30px;
+    height: 20px;
+    background: url('../img/more_dot.png')no-repeat center;
+    position: absolute;
+    bottom: 8px;
+    right: 20px;
+}
+table.plc {
+    border: 1px solid #e3e3e3;
+    vertical-align: top;
+    padding: 30px 25px;
+    font: 17px 'open_sansregular';
+    color: #4c4c4c;
+}
+table.plc > tbody > tr:last-child > td {
+    border-bottom-width: 1px;
+}
+table.plc > tbody > tr:last-child > td {
+    border-bottom-width: 1px;
+}
+table.plc > tbody > tr > td:nth-child(2) {
+    width: 35%;
+}
+table.plc > tbody > tr > td {
+    padding: 20px;
+    border: 1px solid #e3e3e3;
+    vertical-align: top;
+    border-bottom-width: 2px;
+}
+table.plc > tbody > tr > td > a{
+    color: #5a78ad;
+}
+table.plc table {
+    border: 0px;
+}
+table.plc .more {
+    width: 30px;
+    height: 20px;
+    background: url('../img/more.png')no-repeat center;
+    position: absolute;
+    bottom: 8px;
+    right: 20px;
+}
+table.plc table tr td:first-child {
+    border-left: 0;
+    font: 17px 'open_sanssemibold';
+    width: 50%;
+    border-top: 0;
+}
+table.plc table tr td:last-child {
+    border-right: 0;
+    padding-left: 15px;
+}
+table.plc table td {
+    border: 1px solid #ebebeb;
 }

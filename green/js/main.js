@@ -24,16 +24,18 @@ $(document).ready(function () {
     $('section').css('min-height', ($(window).height() - 326));
     $('.l_a.m_t_n').css('min-height', ($(window).height() - 413));
     $('.menu_content').height($(window).height() - 83);
+    $('.left_block').height($('section').height());
 
     $('.head_list,.overlay3').click(function () {
         $('header .menu_content').toggleClass('hidden');
         $('.overlay3').toggleClass('hidden');
     });
-
     $('.cont .contact_us,.overlay').click(function () {
         $('.overlay').toggleClass('hidden');
         $('.cont .cont_form').toggleClass('hidden');
     });
+    
+    
     $('.bxslider2').bxSlider({
         pager: false,
         auto: true,
@@ -56,18 +58,18 @@ $(document).ready(function () {
 
     $("ul.dcr > li > a").click(function () {
         $("ul.dcr  li.active").removeClass('active');
-        $('span.more').removeClass('hidden');
+        $('span.more_dot').removeClass('hidden');
         if ($(this).parent().find('.dcr_box').hasClass('active')) {
             $("ul.dcr li .dcr_box.active").slideToggle();
             $("ul.dcr li .dcr_box.active").removeClass('active');
-            $(this).find('span.more').removeClass('hidden');
+            $(this).find('span.more_dot').removeClass('hidden');
         }
         else {
             $("ul.dcr li .dcr_box.active").slideToggle();
             $("ul.dcr li .dcr_box.active").removeClass('active');
             $(this).parent().find('.dcr_box').addClass('active').slideToggle();
             $(this).parent().addClass('active');
-            $(this).find('span.more').addClass('hidden');
+            $(this).find('span.more_dot').addClass('hidden');
         }
     });
     $('.upload').click(function () {
@@ -98,12 +100,6 @@ $(document).ready(function () {
             $('.counter .total').text(count);
             $('.counter .current').text(current);
         }
-    });
-
-    $('input').iCheck({
-        checkboxClass: 'icheckbox_square-red',
-        radioClass: 'iradio_square-red',
-        increaseArea: '20%' // optional
     });
 
     $(".search_start").click(function () {
