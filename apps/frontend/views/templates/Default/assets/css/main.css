@@ -590,6 +590,111 @@ header .contact .cont .cont_form ul li p span,header .contact .cont .cont_form u
     color: #673167;
     font: 15px 'open_sansbold';
 }
+.n_alert{
+    width:618px;
+    min-height:343px;
+    border:1px solid #737373;
+    border-left:0px;
+    position: fixed;
+    z-index: 99999;
+    -webkit-box-shadow: -2px 3px 16px 0px rgba(190, 190, 190, 0.75);
+    -moz-box-shadow:    -2px 3px 16px 0px rgba(190, 190, 190, 0.75);
+    box-shadow:         -2px 3px 16px 0px rgba(190, 190, 190, 0.75);
+    right:10px;
+    background: #fff;
+    bottom:10px;
+}
+.n_alert:before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: -1px;
+    z-index: 1;
+    top: -1px;
+    bottom: -1px;
+    border-left: 4px solid #f32954;
+}
+.n_alert .cntn {
+    position:relative;
+    height:91px;
+    border-bottom:1px solid #f6f6f6;
+    margin-bottom:2px;
+    padding-left:35px;
+    padding-top:22px;
+}
+.n_alert .cntn p,.n_alert .cntn img{
+    float:left;
+}
+.n_alert .cntn p{
+    font:33px 'open_sansbold';
+    color:#db1e46;
+    text-transform: uppercase;
+    display:inline-block;
+    margin-left:15px;
+}
+.n_alert .cntn a{
+    background:url('../img/close_alert.png')no-repeat center;
+    width:14px;
+    height:13px;
+    position:absolute;
+    display:block;
+    top:11px;
+    right:8px;
+}
+.n_alert .n_info{
+    height:212px;
+    background:#f6f6f6;
+    padding-left:40px;
+    position:relative;
+    padding-top:33px;
+}
+.n_alert .more{
+    width: 30px;
+    height: 20px;
+    background: url('../img/more.png')no-repeat center;
+    position: absolute;
+    bottom: 8px;
+    right: 20px;
+}
+.n_alert .n_info .n_data{
+    height:21px;
+    background:#db1e46;
+    color:#fff;
+    font:12px 'open_sansbold';
+    line-height:21px;
+    padding:0px 10px;
+    float:left;
+    position:relative;
+}
+.n_info p{
+    font:20px 'open_sansbold';
+    color:#343434;
+    margin-top:35px;
+    max-height:191px;
+    padding-right:35px;
+    overflow:hidden;
+}
+.n_footer{
+    padding-left:35px;
+    height:36px;
+    line-height:36px;
+}
+.n_footer > *{
+    float:left;
+    margin-top:10px;
+}
+.n_footer label{
+    color:#4b4b4b;
+    margin-top:7px;
+    margin-left:12px;
+    font:13px 'open_sanssemibold';
+}
+.n_alert .n_info .n_data:before{
+    content: url('../img/alert_arrow.png');
+    display:block;
+    position:absolute;
+    right:-9px;
+}
 .left article ul li h3{
     margin:0px;
 }

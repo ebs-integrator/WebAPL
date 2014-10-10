@@ -36,7 +36,6 @@
 <?= \Core\APL\Actions::call('bottom_contructor'); ?>
 
 <script src="<?= res('assets/js/plugins.js'); ?>"></script>
-<script src="<?= res('assets/js/icheck.js'); ?>"></script>
 <script src="<?= res('assets/js/jquery.bxslider.min.js'); ?>"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 <script src="<?= res('assets/js/vendor/modernizr-2.6.2.min.js'); ?>"></script>
