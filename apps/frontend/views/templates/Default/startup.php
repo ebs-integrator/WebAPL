@@ -4,7 +4,7 @@
     
     'standard' => array(
         'name' => 'Standard',
-        'css' => res('assets/css/styles/styleOne.css' ,'frontend')
+        'css' => res('assets/css/styles/blue.css' ,'frontend')
     ),
     'custom' => array(
         'name' => 'Custom Theme',

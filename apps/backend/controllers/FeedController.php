@@ -200,6 +200,13 @@ class FeedController extends BaseController {
             $post->show_pcomment = isset($general['show_pcomment']) ? 1 : 0;
             $post->have_comments = isset($general['have_comments']) ? 1 : 0;
             $post->have_socials = isset($general['have_socials']) ? 1 : 0;
+            $post->is_alert = isset($general['is_alert']) ? 1 : 0;
+            $post->alert_expire = $general['alert_expire'];
+            
+            if ($post->is_alert) {
+                Post::where('is_alert', 1)->update(['is_alert' => 1]);
+            }
+            
             $post->save();
 
             Log::info("Edit Post (article) #{$id}");

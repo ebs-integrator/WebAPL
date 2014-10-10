@@ -1,0 +1,144 @@
+.home_chat.active .pct > p {
+    color: #99bddf;
+}
+
+
+header .hr {
+    background: #c9d8d1;
+}
+
+.home_menu {
+    border-bottom-color: #c9d8d1;
+}
+
+header .contact .contact_us {
+    border-bottom-color: #c5c5c5;
+    background: #e5e5e5;
+    color: #292929;
+}
+
+header .contact .tel {
+    background-image: url('../../img/tel_b.png');
+}
+
+.menu .box .menu_img{
+    border-bottom-color: #5a78ad;
+}
+
+.menu  .box .active .menu_title {
+    background-color:#5a78ad;
+}
+
+.ncd p.atn_viol, .stat_info span:last-child, .acz_details span, .tda span,.ldmbox p.tda span, table.orar thead tr:first-child,.search_t span,.search_li li p span, .video_i , .left article .ttl a, section  p.map_sub, .compl_list li a .compl_title,.av p span,.form .ftb,table.atz  tr td a,.emrg ul li .left,.vp_name,ul.vice li .name,.ncd p.sctg,.bgr .info > ul > li .left,.ldmbox  .ldm_li p strong,.l_a  li a span,.dop .top,section > .wrap > .left > ul > li > span.sec_criteria, .top_menu a.active .left.title, .form:before, .left .chat .violet, section .wrap .sub_title, section .wrap p.sub_title_s, .name, .city_box .title{
+    color: #79b9b8;
+}
+
+.snd_sbm, #firechat .green input[type=submit],table.sondaje progress[value]::-webkit-progress-value, .form  input[type=submit], .left .chat input[type="submit"]{
+    background-color: #79b9b8;
+}
+
+.contact_l .date_contact li:before{
+    border-left-color: #79b9b8;
+}
+
+ul.social li:first-child {
+    border-bottom-color: #79b9b8;
+}
+
+
+
+
+
+.search input[type=button], .u_a p.data, .a_box.g_g .details p.data, ul.a_n li a span, .green input[type=submit], footer .right > .left.search input[type=submit], .green_sub, .right article.news li span, footer .right > .left.search input[type=submit] {
+    background-color: #5a78ad;
+}
+
+.cl_pop, .right > article.news .hr, .pag .p_n a,.pag .n_p a{
+    border-color:#5a78ad;
+}
+
+.cns_locali thead tr td, .calendar_slider table thead tr:last-child td, .sort_b .selectboxit-container .selectboxit-options a, .sort_b .selectboxit-container span, .selectboxit-container .selectboxit-options a, table.taxe thead tr td, table.reg_tb thead tr td, table.plc > tbody > tr > td > a, ul.faq li.active a, ul.faq li a span, .av.green p span, .form.green .ftb, .pag ul li a,.pag ul li, ul.detail li a, .pag .p_n a,.pag .n_p a, .n_title, .home_chat.active .pct > p, .right article.doc table thead tr td, .right article.doc table tbody tr td{
+    color:#5a78ad;
+}
+
+ul.faq  li.active:before, ul.detail li a:before, .contact_r .subt:before, .contact.left.form:before, .form.green:before {
+    border-left-color: #5a78ad;
+}
+
+
+
+
+footer .copy a {
+    color: #99bddf;
+}
+
+
+
+.right article.news:before {
+    border-left-color: #99bcde;
+}
+
+
+.right > article.atn, .left > article:before {
+    border-left-color: #eae7e2;
+}
+
+.left > article:hover:before {
+    border-left-color: #eae7e2;
+}
+
+
+
+.a_box.g_g .details {
+    background-color: #cbd8a0;
+}
+
+
+
+header .contact .cont .cont_form ul li p span, header .contact .cont .cont_form ul li p span a {
+    color: #5a78ad;
+}
+
+
+
+
+.dop .right .buttons button, .ldmbox .data p.nr, .a_box.v_g .details p.data, section .dirs_menu, .right > article.atn .data p {
+    background-color: #5a78ad;
+}
+
+.snd_sbm, header.page, #firechat .green input[type=submit], .dop .top{
+    border-bottom-color: #5a78ad;
+}
+
+.live_comment > p:hover, .live_comment > p.activecomm, .snd_title, .crt p span,p.sub, .com_box .subtitle, ul.culture li .right .box p,ul.culture li .right .box p a, .left .chat input[type="submit"], .form  input[type=submit], header .contact .cont .cont_form ul li p span,header .contact .cont .cont_form ul li p span a{
+    color: #5a78ad;
+}
+
+
+
+
+section .dirs_menu a {
+    color: #b1c3e2;
+}
+
+
+
+
+header .contact .cont .cont_form ul li:before {
+    border-left-color: #5a78ad;
+}
+
+
+
+@media only screen and (max-width: 767px){
+    header .header_mini, .header_menu_content, header .hr {
+        background-color: #79b9b8;
+    }
+    header.page {
+        border-bottom-color: #79b9b8;
+    }
+
+    .c_l_u tr td:nth-child(2) .sec_span {
+        color:#5a78ad;
+    }
+}
