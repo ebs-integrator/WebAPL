@@ -5,8 +5,7 @@
         <img src="<?= url($post->cover['path']); ?>">
     <?php } ?>
     <div class="details">
-        <p class="data"><?= date("d-m-Y, H:i", strtotime($post->created_at)); ?>
-            <img src="<?= res('assets/img/gr_arrow.png'); ?>" class="arrow">
+        <p class="data"><?= date("d-m-Y, H:i", strtotime($post->created_at)); ?>            
         </p>
         <p class="cont"></p>
     </div>

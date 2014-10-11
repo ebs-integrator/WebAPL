@@ -1155,6 +1155,7 @@ section .right_block{
 }
 p{
     font:17px 'AvenirNext-Regular';
+    color:#4c4c4c;
 }
 .text p{
     font:17px 'AvenirNext-Regular';
@@ -2513,7 +2514,7 @@ table.plc {
     border: 1px solid #e3e3e3;
     vertical-align: top;
     padding: 30px 25px;
-    font: 17px 'open_sansregular';
+    font: 17px 'AvenirNext-Regular';
     color: #4c4c4c;
 }
 table.plc > tbody > tr:last-child > td {
@@ -2529,13 +2530,18 @@ table.plc > tbody > tr > td {
     padding: 20px;
     border: 1px solid #e3e3e3;
     vertical-align: top;
-    border-bottom-width: 2px;
+    border-bottom-width: 2px;    
+    position:relative;
+}
+table.plc > tbody > tr > td .more{
+    background: url('../img/more_dot.png')no-repeat center;
 }
 table.plc > tbody > tr > td > a{
-    color: #5a78ad;
+    color: #008d74;
+    font:17px 'AvenirNext-Bold';
 }
 table.plc table {
-    border: 0px;
+    border: 0px;    
 }
 table.plc .more {
     width: 30px;
@@ -2547,9 +2553,17 @@ table.plc .more {
 }
 table.plc table tr td:first-child {
     border-left: 0;
-    font: 17px 'open_sanssemibold';
+}
+table.plc table tr:first-child td{
+    border-top:0px;
+}table.plc table tr:last-child td{
+    border-bottom:0px;
+}
+
+table.plc table tr td{    
+    font: 16px 'AvenirNext-Medium';
+    color:#4c4c4c;
     width: 50%;
-    border-top: 0;
 }
 table.plc table tr td:last-child {
     border-right: 0;
@@ -2557,4 +2571,64 @@ table.plc table tr td:last-child {
 }
 table.plc table td {
     border: 1px solid #ebebeb;
+}
+.wrap:after{
+    clear:both;
+    display:block;
+    content:'';
+}
+table.plc > tbody > tr > td:first-child{
+    border-color:#00bd9c;
+    font:17px 'AvenirNext-DemiBold';
+    color:#4c4c4c;
+}
+
+table.plcu > thead > tr {
+    background: #fbfbfb;
+}
+table.plcu > thead > tr > th {
+    text-align: left;
+    border: 1px solid #e3e3e3;
+    padding: 30px;
+}
+table.plcu > tbody > tr > th, table.plcu > thead > tr > th {
+    font: 17px 'AvenirNext-DemiBold';
+    vertical-align: top;
+    color: #000;
+}
+table.plcu > thead > tr > td {
+    border: 1px solid #e3e3e3;
+    padding: 30px;
+    font: 17px 'AvenirNext-Bold';
+    color: #008d74;
+}
+table.plcu > tbody > tr > td, table.plcu > tbody > tr > th {
+    border: 1px solid #e3e3e3;
+    text-align: left;
+    padding: 30px;
+}
+table.plcu table {
+    width: 100%;
+    border: 0px;
+}
+table.plcu table tr td:first-child {
+    border-left: 0;
+}
+table.plcu table tr:first-child td {
+    border-top: 0;
+}
+table.plcu table tr td {
+    padding: 5px 0;
+    color: #4c4c4c;
+}
+table.plcu table tr td {
+    border: 1px solid #ebebeb;
+}
+table.plcu table tr td:last-child {
+    border-right: 0;
+    padding-left: 20px;
+}
+table.plcu > tbody > tr:last-child td, table.plcu > tbody > tr:last-child th {
+    background: #fbfbfb;
+    padding: 10px 30px;
 }

@@ -78,7 +78,6 @@
                         <?php foreach ($home_posts as $item) { ?>
                             <li>
                                 <span><?= date("d-m-Y", strtotime($item->created_at)); ?>
-                                    <img src="<?= res('assets/img/d_arrow.png'); ?>">
                                 </span>
                                 <a href="<?= Language::url('topost/' . $item->id); ?>"><?= $item->title; ?></a>
                             </li>

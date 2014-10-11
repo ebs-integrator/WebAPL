@@ -697,6 +697,7 @@ header .contact .cont .cont_form ul li p span,header .contact .cont .cont_form u
     display:block;
     position:absolute;
     right:-9px;
+    top:0px;
 }
 .left article ul li h3{
     margin:0px;
@@ -1063,6 +1064,12 @@ article.atn .more{
     float:left;
     padding-right:7px;
 }
+.a_box.v_g .details p.data:before{
+    content:url('../img/v_arrow.png');
+    position:absolute;
+    right:-9px;
+    top:0px;
+}
 .right > article.atn .data span{
     color:#fff;
     font:14px 'open_sansbold';
@@ -1172,6 +1179,12 @@ section > .wrap > .left{
     margin-right: 22px;
     float:left;
     margin-top: 6px;
+}
+.right article.news li span:before {
+    content: url('../img/d_arrow.png');
+    position: absolute;
+    right: -9px;
+    top: 0px;
 }
 .right article.news li a{
     float: left;
@@ -2300,6 +2313,12 @@ ul.a_n li a span{
     padding:0px 4px 0px 10px;
     margin-top:15px;
 }
+ul.a_n li a span:before{
+    content:url('../img/v_arrow.png');
+    position:absolute;
+    right:-9px;
+    top:0px;
+}
 ul.a_n li a span img{
     position: absolute;
     right: -9px;
@@ -2424,6 +2443,7 @@ ul.detail li.location a{
 .u_a .details{
     background: #cbd8a0;
     height: 21px;
+    margin-top: 1px;
 }
 .u_a p.data {
     padding: 0 8px;
@@ -2435,6 +2455,13 @@ ul.detail li.location a{
 }
 .a_box.g_g .details p.data{
     background-color: #74b45a;
+}
+.u_a p.data:after,.a_box.g_g .details p.data:after{
+    content: url('../img/gr_arrow.png');
+    display:block;
+    position:absolute;
+    right:-8px;
+    top:0px;
 }
 .u_a .data img{
     position: absolute;
@@ -2451,9 +2478,6 @@ ul.detail li.location a{
     max-width:100%;
     max-height:500px;
     height:auto;
-}
-.u_a .details {
-    margin-top:-1px;
 }
 .u_a .data{
     color:#fff;
@@ -3492,6 +3516,12 @@ table.taxe tbody tr td:first-child{
     padding: 0px 4px 0px 10px;
     margin-top: 15px;
 }
+.l_a  li a span:after{
+    position: absolute;
+    top:0px;
+    right:-8px;
+    content: url('../img/v_arrow_l.png');
+}
 .l_a li a span img {
     position: absolute;
     right: -9px;
@@ -4480,7 +4510,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
 .search_li li p{
     font:17px 'open_sansregular';
     color:#4b4b4b;
-    max-height:98px;
+    max-height:115px;
     overflow:hidden;
 }
 .m_video > p{

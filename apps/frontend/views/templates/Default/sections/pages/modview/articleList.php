@@ -10,7 +10,6 @@
             </div>
             <div class="details">
                 <p class="data"><?= date("d-m-Y, H:i", strtotime($item->created_at)); ?>
-                    <img src='<?= res("assets/img/gr_arrow.png"); ?>' class='arrow'>
                 </p>
                 <p class='cont'></p>
             </div>
