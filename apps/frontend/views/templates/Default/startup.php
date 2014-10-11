@@ -3,7 +3,7 @@
 \Core\APL\Template::setColorSchemes(array(
     
     'standard' => array(
-        'name' => 'Standard',
+        'name' => 'Blue',
         'css' => res('assets/css/styles/blue.css' ,'frontend')
     ),
     'custom' => array(
