@@ -44,25 +44,6 @@
     </head>
     <body>
 
-        <div class="n_alert">
-            <div class='cntn'>
-                <img src="<?= res('assets/img/alert.png'); ?>">
-                <p>alerte!</p>
-                <a href='javascript:;'></a>
-            </div>
-            <div class='n_info'>
-                <div class='n_data'>24 Iul 2014, 15:03</div>
-                <div class='clearfix'></div>
-                <p>Alerta de cod oranj de inghet</p>
-                <a href="javascript:;" class="more"></a>
-            </div>
-            <div class='n_footer'>
-                <input id="f_1" type='checkbox'>
-                <label for='f_1'>Am facut cunoștință</label>
-            </div>
-
-        </div>
-
         <div class="overlay hidden"></div>
         <div class="overlay2 hidden"></div>
         <div class="overlay3 hidden"></div>

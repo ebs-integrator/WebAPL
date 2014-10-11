@@ -38,6 +38,20 @@
         </tr>
         
         <tr>
+            <th><?= varlang('is-alert'); ?>: </th>
+            <td>
+                <input type="checkbox" name="post[is_alert]" class='make-switch' <?= isset($post->is_alert) && $post->is_alert ? 'checked' : ''; ?> />
+            </td>
+        </tr>
+        
+        <tr>
+            <th><?= varlang('data-expirarii-alertei'); ?>: </th>
+            <td>
+                <input type="text" name="post[alert_expire]" class='form-control datetimepicker' data-date-format="YYYY-MM-DD hh:mm:ss" value='<?= isset($post->alert_expire) ? $post->alert_expire : ''; ?>' />
+            </td>
+        </tr>
+        
+        <tr>
             <th><?= varlang('feeds-1'); ?>: </th>
             <td>
                 <input name='feed_post[]' value='0' type='hidden' />

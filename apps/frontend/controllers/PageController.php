@@ -125,7 +125,8 @@ class PageController extends BaseController {
             'buttom_pages' => PostProperty::postsWithProperty('button_site', 3),
             'logo_home_sm' => Files::getfile('website_logo_sm', 1),
             'phone_page' => PostProperty::postWithProperty('phone-page'),
-            'favicon' => Files::getfile('website_favicon', 1)
+            'favicon' => Files::getfile('website_favicon', 1),
+            'alert_post' => Post::findAlertPost()
         );
 
         Template::setMetaMultiple(array(

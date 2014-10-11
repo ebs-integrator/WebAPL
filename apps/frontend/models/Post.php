@@ -89,6 +89,13 @@ class Post extends Eloquent {
 
         return $list;
     }
+    
+    public static function findAlertPost() {
+        return Post::prepareQuery(2)
+                ->where(Post::getField('is_alert'), 1)
+                ->where(Post::getField('alert_expire'), '>', DB::raw('CURRENT_TIMESTAMP'))
+                ->first();
+    }
 
     public static function findHomePosts($modView) {
         $current_tax = static::$taxonomy;

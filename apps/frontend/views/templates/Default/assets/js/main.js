@@ -117,12 +117,6 @@ $(document).ready(function() {
         }
     });
 
-    $('input').iCheck({
-        checkboxClass: 'icheckbox_square-red',
-        radioClass: 'iradio_square-red',
-        increaseArea: '20%' // optional
-    });
-
     $(".search_start").click(function() {
         var block = $(this).closest(".search_files");
         var query = block.find(".search_input").val();
@@ -224,6 +218,22 @@ $(document).ready(function() {
     }
 
 
+    var alertbox = $("#alertbox");
+    if (alertbox.length > 0) {
+        var alertId = alertbox.data('alertid');
+        var alertShow = $.cookie('alert_' + alertId);
+        if (parseInt(alertShow) !== 1) {
+            setTimeout(function() {
+                alertbox.fadeIn(150);
+            }, 3000);
+        }
+        alertbox.find(".alertclose").click(function() {
+            alertbox.fadeOut(150);
+            if ($("#f_1").is(':checked')) {
+                $.cookie('alert_' + alertId, 1);
+            }
+        });
+    }
 });
 
 
