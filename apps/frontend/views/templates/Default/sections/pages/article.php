@@ -1,7 +1,6 @@
 <section>
     <?= View::make('sections.elements.breadcrumbs'); ?>
-    <div class="wrap">
-        <p class="c_title"><?= $top_title; ?></p>
+    <div class="wrap">        
         <?php if (isset($years_list) && count($years_list)) { ?>
             <div class="right m_a">                
                 <p class='n_title'><?= varlang('arhiva'); ?></p>
@@ -13,6 +12,7 @@
             </div>
         <?php } ?>
         <div class="left">
+            <p class="c_title"><?= $top_title; ?></p>
             <?php
             $months = array(
                 1 => 'Ianuarie',

@@ -1,7 +1,6 @@
 <section>
     <?= View::make('sections.elements.breadcrumbs'); ?>
     <div class="wrap">
-        <p class='c_title'><?= $top_title; ?></p>
         <div class="right">
             <?=
             View::make('sections.pages.blocks.right-menu')->with(array(
@@ -10,6 +9,7 @@
             ?>
         </div>
         <div class='left'>
+        <p class='c_title'><?= $top_title; ?></p>
             <?= Core\APL\Actions::call('page_top_container', $page); ?>
 
             <?= $page->text; ?>

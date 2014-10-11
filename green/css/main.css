@@ -736,6 +736,7 @@ section.global{
 .wrap{
     width:1280px;
     margin:0 auto;
+    padding-bottom:50px;
     padding-top:1px;
 }
 article{
@@ -1085,6 +1086,13 @@ section{
     background: -ms-linear-gradient(left,#f7f7f7,#f7f7f7 35%,white 35,white);
 }
 section .left_block{
+    float:left;
+    width:357px;
+    padding-top:45px;
+    background: #f7f7f7;
+    position:relative;
+}
+section .left_site{
     float:left;
     width:357px;
     padding-top:45px;
@@ -2631,4 +2639,388 @@ table.plcu table tr td:last-child {
 table.plcu > tbody > tr:last-child td, table.plcu > tbody > tr:last-child th {
     background: #fbfbfb;
     padding: 10px 30px;
+}
+table.plcu .doc, table.plcu .pdf, table.plcu .docx, table.plcu .xls, table.plcu .xlsx {
+    padding-left: 40px;
+    color: #000;
+    font: 17px 'AvenirNext-DemiBold';
+    height: 30px;
+    display: block;
+    line-height: 30px;
+}
+table.plcu .xls, table.plcu .xlsx {
+    background: url('../img/xlsx.png')no-repeat left center;
+
+}
+table.plcu .doc,  table.plcu .docx{
+
+    background: url('../img/doc.png')no-repeat left center;
+}
+table.plcu .pdf{
+    background: url('../img/pdf.png')no-repeat left center;
+
+}
+.m_t_n.l_a li a {
+    height: 70px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.l_a li a {
+    width: 100%;
+    display: block;
+    height: 50px;
+    border-bottom: 2px solid #f7f7f7;
+}
+.l_a li a span {
+    color: #fff;
+    font: 12px 'AvenirNext-Regular';
+    background-color: #ff6577;
+    height: 21px;
+    display: block;
+    float: left;
+    text-align: center;
+    position: relative;
+    line-height: 21px;
+    padding: 0px 10px;
+    margin-top: 15px;
+}
+.l_a li a p {
+    font: 17px 'AvenirNext-DemiBold';
+    color: #232323;
+    padding-left: 20px;
+    margin-bottom: 0px;
+    display: table-cell;
+    vertical-align: middle;
+    height: 50px;
+    line-height: 18px;
+}
+.ldmbox {
+    border: 2px solid #f7f7f7;
+    padding: 30px 40px;
+}
+.ath p {
+    font: 17px 'AvenirNext-Bold';
+    color: #ff6477;
+    max-width: 100%;
+}
+.ath p span{
+    color:#4c4c4c;
+}
+.acz_details p{
+    font:15px 'AvenirNext-Medium';
+    margin-bottom:15px;
+}
+.acz_details span{
+    color:#008d74;
+}
+.ldmbox .data{
+    border-top:1px solid #f7f7f7;
+    margin-top:20px;
+}
+.ldmbox .data:after{
+    clear:both;
+    content:'';
+    display:block;
+}
+.ldmbox .data p{
+    float:left;
+    background:#ff6577;
+    color:#fff;
+    font:12px 'AvenirNext-Regular';
+    height:21px;
+    line-height:21px;
+    padding:0px 10px;
+}
+.ldmbox .stats{
+    float:right;
+    margin-bottom:10px;
+}
+.ldmbox .stats img{
+    float:right;
+    margin-left:10px;
+}
+.ldmbox .stats .stat_info{
+    text-align: right;
+    float:right;
+}
+.stat_info span{
+    display:block;
+    font:17px 'AvenirNext-Regular';
+    color:#4c4c4c;
+}
+.stat_info span:last-child{
+    color:#00bd9c;
+    font:17px 'AvenirNext-Bold';
+}
+.acz_details{
+    margin-top:25px;
+}
+.snd_title {
+    background: #f8f8f8;
+    font: 17px 'AvenirNext-DemiBold';
+    color: #3c3c3c;
+    padding: 5px 20px;
+}
+.r_sond {
+    font: 17px 'AvenirNext-Medium';
+    color: #4c4c4c;
+    margin-left:20px;
+    margin-top:20px;
+}
+hr.reg {
+    height: 2px;
+    background: #f7f7f7;
+    border: 0px;
+    margin-bottom: 5px;
+}
+.int_code{
+    color:#4c4c4c;
+    font:13px 'AvenirNext-Regular';
+    margin-bottom:5px;
+}
+.snd_code input[type=text] {
+    height: 31px;
+    width: 92px;
+    border: 1px solid #ececec;
+    float: left;
+    margin-right: 35px;
+    padding:0px 5px;
+}
+.snd_code div {
+    float: left;
+}
+.snd_sbm {
+    min-width: 114px;
+    height: 33px;
+    color: #fff;
+    text-transform: uppercase;
+    font: 15px 'AvenirNext-Bold';
+    background: #ff6477;
+    margin-top: 15px;
+}
+.e_sond {
+    font: 24px 'AvenirNext-DemiBold';
+    color: #232323;
+    margin-top: 80px;
+    margin-bottom: 0px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f7f7f7;
+}
+ul.a_n li a {
+    width: 100%;
+    display: block;
+    height: 50px;
+    border-bottom: 2px solid #f7f7f7;
+}
+ul.a_n li a span {
+    color: #fff;
+    font: 12px 'AvenirNext-Regular';
+    background-color: #00bd9c;
+    height: 21px;
+    display: block;
+    float: left;
+    text-align: center;
+    line-height: 21px;
+    padding: 0px 10px;
+    margin-top: 15px;
+}
+ul.a_n li a p {
+    font: 17px 'AvenirNext-Medium';
+    color: #232323;
+    padding-left: 20px;
+    margin-bottom: 0px;
+    display: table-cell;
+    vertical-align: middle;
+    height: 50px;
+    line-height: 18px;
+}
+table.sondaje tr {
+    height: 40px;
+}
+table.sondaje tr td{
+    vertical-align: bottom;
+}
+table.sondaje td:first-child {
+    font: 17px 'AvenirNext-DemiBold';
+    color: #4c4c4c;
+    padding-right: 30px;
+}
+table.sondaje progress[value] {
+    -webkit-appearance: none;
+    height: 17px;
+    width: 375px;
+}
+table.sondaje progress[value]::-webkit-progress-bar {
+    background:#e8e8e8;
+}
+table.sondaje progress[value]::-webkit-progress-value{
+    background:#00d4d4;
+}
+table.sondaje td:nth-child(2) span {
+    padding-left: 12px;
+    font: 17px 'AvenirNext-DemiBold';
+    color: #0382a1;
+    padding-right: 80px;
+}
+table.sondaje td:last-child {
+    color: #4c4c4c;
+    font: 17px 'AvenirNext-Regular';
+}
+.adv {
+    width: 100%;
+    background: #f4fdfb;
+    border: 1px solid #caebe5;
+    font: 13px 'AvenirNext-MediumItalic';
+    color: #008d74;
+    padding: 10px 12px;
+    margin-bottom: 30px;
+}
+.ldmbox {
+    border: 2px solid #f7f7f7;
+    padding: 30px 0 30px 40px;
+    margin-bottom:50px;
+}
+.ldmbox .title {
+    font: 24px 'AvenirNext-Bold';
+    margin-bottom: 0px;
+    color:#0381a0;
+}
+.ldmbox .data {
+    border:0px;
+    margin-top:0px;
+    margin-bottom:20px;
+}
+.ldmbox p {
+    font: 15px 'AvenirNext-DemiBold';
+    max-width: 520px;
+    margin-bottom:10px;
+}
+.ldm_li p{
+    text-transform: uppercase;
+    color:#0382a1;
+    font:15px 'AvenirNext-Bold';
+    margin-top:20px;
+}
+.ldmbox .ldm_li ul li {
+    font: 14px 'AvenirNext-MediumItalic';
+    color: #343434;
+    background: url('../img/arcticle_li.png')no-repeat left 2px;
+    padding-left: 30px;
+    max-width: 560px;
+    min-height: 25px;
+}
+.ldm_middle {
+    width: 100%;
+    padding-right: 40px;
+}
+.ldmbox p.tda, .tda {
+    background: #f7f7f7;
+    font: 15px 'AvenirNext-DemiBold';
+    color: #343434;
+    padding: 0 15px;
+    height: 45px;
+    line-height: 45px;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 25px;
+}
+.tda span, .ldmbox p.tda span {
+    color: #ff6577;
+}
+.ldmbox hr {
+    background: #f7f7f7;
+    height: 2px;
+    border-top: 0px;
+    width: 95%;
+    margin: 35px 0;
+}
+.ldmbox input[type=text] {
+    height: 33px;
+    width: 240px;
+    border: 1px solid #d9d9d9;
+    font: 14px 'AvenirNext-Regular';
+    color: #525252;
+    padding: 0 12px;
+    float: left;
+}
+.ldmbox .upload {
+    width: 168px;
+    background: url('../img/file.png') no-repeat 12px center ;
+    cursor: pointer;
+    padding-left: 35px;
+    font: 14px 'AvenirNext-Bold';
+    color: #4c4c4c;
+    line-height: 33px;
+    margin: 0px 28px;
+    float: left;
+}
+.ldmbox .upload:hover{
+    text-decoration: underline;
+}
+
+.ldmbox form * {
+    height: 33px;
+}
+.ldmbox input[type=file] {
+    display: none;
+}
+.ldmbox input[type=submit] {
+    background: #00bd9c;
+    padding:0px 30px;
+    text-transform: uppercase;
+    color: #fff;
+    font: 14px 'AvenirNext-Bold';
+    float: left;
+}
+.a_box.v_g .title a{
+    color:#ff6477;
+}
+.a_box.v_g .info{
+    font:17px 'AvenirNext-Medium';
+}
+.a_box .info.unic {
+    max-height: 100%;
+}
+.info .img {
+    float: left;
+    margin-right: 30px;
+}
+.a_box.v_g a{
+    pointer-events: none;
+    cursor: default;
+}
+.s_title{
+    font:20px 'AvenirNext-Bold';
+    color:#008d74;
+    border-bottom:2px solid #e6e6e6;
+    padding-bottom:10px;
+    margin-right:35px;
+}
+.sitemap{
+    padding-top:40px;
+}
+.sitemap p a{
+    font:17px 'AvenirNext-Bold';
+    color:#000000;
+}
+.sitemap p{
+    margin-bottom:20px;
+}
+.sitemap > ul > li > a{
+    padding-left:20px;
+    background:url('../img/f_li.png')no-repeat left 4px;
+}
+.sitemap ul li a{
+    font:15px 'AvenirNext-Medium';
+    color:#545454;    
+}
+.sitemap > ul > li > ul > li > a{
+    margin-left:30px;
+    padding-left:20px;
+    background:url('../img/s_li.png')no-repeat left 4px;
+}
+.sitemap > ul > li > ul > li > ul > li > a{
+    margin-left:60px;
+    padding-left:20px;
+    background:url('../img/t_li.png')no-repeat left 4px;
 }

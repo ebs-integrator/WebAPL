@@ -34,8 +34,8 @@ $(document).ready(function () {
         $('.overlay').toggleClass('hidden');
         $('.cont .cont_form').toggleClass('hidden');
     });
-    
-    
+
+
     $('.bxslider2').bxSlider({
         pager: false,
         auto: true,
@@ -100,6 +100,11 @@ $(document).ready(function () {
             $('.counter .total').text(count);
             $('.counter .current').text(current);
         }
+    });
+    $('input[type=radio]').iCheck({
+        checkboxClass: 'icheckbox_square-red',
+        radioClass: 'iradio_square-red',
+        increaseArea: '20%'
     });
 
     $(".search_start").click(function () {

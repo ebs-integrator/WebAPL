@@ -1067,7 +1067,7 @@ article.atn .more{
 .a_box.v_g .details p.data:before{
     content:url('../img/v_arrow.png');
     position:absolute;
-    right:-9px;
+    right:-8px;
     top:0px;
 }
 .right > article.atn .data span{
@@ -2314,7 +2314,7 @@ ul.a_n li a span{
     margin-top:15px;
 }
 ul.a_n li a span:before{
-    content:url('../img/v_arrow.png');
+    content:url('../img/gr_arrow.png');
     position:absolute;
     right:-9px;
     top:0px;
@@ -2443,7 +2443,6 @@ ul.detail li.location a{
 .u_a .details{
     background: #cbd8a0;
     height: 21px;
-    margin-top: 1px;
 }
 .u_a p.data {
     padding: 0 8px;
@@ -3835,6 +3834,7 @@ hr.reg{
     border:1px solid #ececec;
     float:left;
     margin-right:35px;
+    padding:0px 5px;
 }
 .snd_code div{
     float:left;
@@ -4081,10 +4081,18 @@ table.plcu .word,table.plcu .doc,table.plcu .pdf,table.plcu .docx,table.plcu .xl
     padding-left:40px;
     color:#4c4c4c;
     font:17px 'open_sansbold';
-    background:url('../img/word.png')no-repeat left center;
     height:30px;
     display:block;
     line-height:30px;
+}
+table.plcu .xls,table.plcu .xlsx{
+    background:url('../img/icon.png')no-repeat left center;    
+}
+table.plcu .doc,table.plcu .docx{
+    background:url('../img/word.png')no-repeat left center;      
+}
+table.plcu .pdf{
+    background:url('../img/pdf.png')no-repeat left center;      
 }
 .sort_b{
     float:right;
