@@ -10,7 +10,6 @@
                     <?php } ?>
                     <div class="details">
                         <p class="data"><?= date("d-m-Y, H:i", strtotime($post->created_at)); ?>
-                            <img src="<?= res('assets/img/v_arrow.png'); ?>" class='arrow'>
                         </p>
                         <p class='cont'></p>
                     </div>
@@ -30,7 +29,7 @@
         <ul class='a_n'>
             <?php foreach ($posts as $item) { ?>
                 <li><a href='<?= $page_url; ?>?item=<?= $item->uri; ?>'>
-                        <span><?= date('d-m-Y', strtotime($item->created_at)); ?> <img src="<?= res('assets/img/d_arrow.png'); ?>"></span>
+                        <span><?= date('d-m-Y', strtotime($item->created_at)); ?> </span>
                         <p><?= $item->title; ?></p>
                     </a>
                 </li>

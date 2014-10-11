@@ -18,7 +18,7 @@ if ($voted || $poll->active == 0) {
     <?php foreach ($polls as $item) { ?>
             <li>
                 <a href="<?= $page_url; ?>?item=<?= $item->id; ?>">
-                    <span> <?= date('d-m-Y', strtotime($item->date_created)); ?> <img src="<?= res('assets/img/d_arrow.png'); ?>"></span>
+                    <span> <?= date('d-m-Y', strtotime($item->date_created)); ?> </span>
                     <p><?= $item->title; ?></p>
                 </a>
             </li>
