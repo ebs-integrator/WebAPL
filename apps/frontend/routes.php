@@ -7,9 +7,7 @@ if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/install/uninstalled')) {
 
 Event::fire('APL.modules.load');
 
-Route::get('/', function () {
-    return Redirect::to(Core\APL\Language::ext());
-});
+Route::get('/', 'PageController@home');
 
 Route::group(array('prefix' => Core\APL\Language::ext()), function() {
     Route::get('/', 'PageController@home');
