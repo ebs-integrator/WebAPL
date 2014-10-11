@@ -29,7 +29,7 @@ header .contact .tel {
     background-color:#5a78ad;
 }
 
-.ncd p.atn_viol, .stat_info span:last-child, .acz_details span, .tda span,.ldmbox p.tda span, table.orar thead tr:first-child,.search_t span,.search_li li p span, .video_i , .left article .ttl a, section  p.map_sub, .compl_list li a .compl_title,.av p span,.form .ftb,table.atz  tr td a,.emrg ul li .left,.vp_name,ul.vice li .name,.ncd p.sctg,.bgr .info > ul > li .left,.ldmbox  .ldm_li p strong,.l_a  li a span,.dop .top,section > .wrap > .left > ul > li > span.sec_criteria, .top_menu a.active .left.title, .form:before, .left .chat .violet, section .wrap .sub_title, section .wrap p.sub_title_s, .name, .city_box .title{
+.ncd p.atn_viol, .stat_info span:last-child, .acz_details span, .tda span,.ldmbox p.tda span, table.orar thead tr:first-child,.search_t span,.search_li li p span, .video_i , .left article .ttl a, section  p.map_sub, .compl_list li a .compl_title,.av p span,.form .ftb,table.atz  tr td a,.emrg ul li .left,.vp_name,ul.vice li .name,.ncd p.sctg,.bgr .info > ul > li .left,.ldmbox  .ldm_li p strong,.dop .top,section > .wrap > .left > ul > li > span.sec_criteria, .top_menu a.active .left.title, .form:before, .left .chat .violet, section .wrap .sub_title, section .wrap p.sub_title_s, .name, .city_box .title{
     color: #79b9b8;
 }
 
@@ -192,23 +192,40 @@ header .contact .contact_us.active {
     color: #fff;
 }
 
+header .contact .contact_us:hover,header .contact .contact_us.active {
+    border-bottom: 2px solid #3F6194;
+} 
+
+
 
 header .contact .cont .cont_form .relative p {
     background-image: url('../../img/g_arrow_bl.png');
 }
 
-header .contact .contact_us:hover,header .contact .contact_us.active {
-    border-bottom: 2px solid #3F6194;
-} 
-
 .right > article.atn .data{
     background: #b7d3d2;
 }
 
-.right > article.atn .data span:before, .ldmbox .data:after {
+.u_a p.data:after, .a_box.g_g .details p.data:after, .a_box.v_g .details p.data:before, ul.a_n li a span:before, .right > article.atn .data span:before, .right > article.atn .data span:before, .ldmbox .data:after {
     content: url('../../img/v_arrow_b.png');
 } 
 
+.ldmbox .data:after, .right article.news li span:before, .a_box.g_g .details p.data:after, .l_a li a span:after {
+    content: url('../../img/d_arrow_b.png');
+    color: #fff;
+}
+
+.ldmbox .data {
+    background: #b7d3d2;
+}
+
+.ath p {
+    color: #5a78ad;
+}
+
+.green input[type=submit] {
+    border-bottom: 2px solid #212F79;
+}
 
 ul.culture li .right .box {
     border-left: 2px solid #5a78ad;
@@ -237,12 +254,12 @@ ul.prom li:before {
 }
 
 section  .map_cont .h_list p a {
-     color: #5a78ad;
+    color: #5a78ad;
 } 
 
 
 header .contact .cont .cont_form .prp a, .prp a {
-     color: #5a78ad;
+    color: #5a78ad;
 } 
 
 .contact_l .subt:before, .contact_r .subt:before {
@@ -265,4 +282,9 @@ header .contact .cont .cont_form .prp a, .prp a {
     .c_l_u tr td:nth-child(2) .sec_span {
         color:#5a78ad;
     }
+}
+
+
+header .contact .currency .lang .relative p {
+    background: url('../img/g_arrow_b.png') no-repeat right #fff;
 }
