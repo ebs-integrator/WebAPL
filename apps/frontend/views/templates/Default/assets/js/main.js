@@ -117,7 +117,13 @@ $(document).ready(function() {
         }
     });
 
-    $(".search_start").click(function() {
+    $('input[type=radio]').iCheck({
+        checkboxClass: 'icheckbox_square-red',
+        radioClass: 'iradio_square-red',
+        increaseArea: '20%' 
+    });
+
+    $(".search_start").click(function () {
         var block = $(this).closest(".search_files");
         var query = block.find(".search_input").val();
 

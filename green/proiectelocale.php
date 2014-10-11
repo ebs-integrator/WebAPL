@@ -82,9 +82,7 @@
     </div>
 
 </section>
-<?php
-
-         include"blocks/footer.php"; ?>
+<?php         include"blocks/footer.php"; ?>
 
 
 
