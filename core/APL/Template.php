@@ -23,8 +23,8 @@ class Template {
                 'name' => 'Lista de posturi vacante',
                 'function' => array('PageView', 'posturiVacante'),
                 'support_item' => true,
-                'screen' => '',
-                'info' => ''
+                'screen' => '/upload/help/posturi_vacante.png',
+                'info' => 'Necesita feed cu cimpurile: Data'
             ),
             'promisiuni_primar' => array(
                 'name' => 'Lista de promisiuni a primarului (feed based)',

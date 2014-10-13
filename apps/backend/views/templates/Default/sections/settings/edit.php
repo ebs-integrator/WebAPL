@@ -48,7 +48,7 @@
             <td>
                 <input type="hidden" name="set[website_on]" value="0" />
                 <input type='checkbox' name='set[website_on]' class='make-switch' <?= isset($setts['website_on']) && $setts['website_on'] ? 'checked' : ''; ?>/>
-                <br><?= varlang('pentru-a-accesa-website-ul-folositi-linkul'); ?> <a href="<?=url('../?is_admin=1');?>"><?= varlang('click-aici'); ?></a>
+                <br><?= varlang('pentru-a-accesa-website-ul-folositi-linkul'); ?> <a href="<?=url('../?is_admin=1');?>" target="_blank"><?= varlang('click-aici'); ?></a>
             </td>
         </tr>
 

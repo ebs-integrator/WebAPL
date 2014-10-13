@@ -121,20 +121,24 @@
             <div class="modal-body">
                 <table class="table table-bordered">
                     <tr>
-                            <th><?= varlang('nume-2'); ?></th>
-                            <th><?= varlang('info-1'); ?></th>
-                            <th><?= varlang('screen'); ?></th>
-                        </tr>
+                        <th><?= varlang('nume-2'); ?></th>
+                        <th><?= varlang('screen'); ?></th>
+                    </tr>
                     <?php
                     foreach ($view_mods as $view_key => $view_mod) {
                         ?>
                         <tr>
-                            <th><?= $view_mod['name']; ?></th>
-                            <td><?=$view_mod['info'];?></td>
                             <td>
-                            <?php if ($view_mod['screen']) { ?>
-                                <img src="<?=$view_mod['screen'];?>" style="max-width: 100px; max-height: 70px;" />
-                            <?php } ?>
+                                <b><?= $view_mod['name']; ?></b>
+                                <?php if ($view_mod['info']) { ?>
+                                    <br>
+                                    <?= $view_mod['info']; ?>
+                                <?php } ?>
+                            </td>
+                            <td>
+                                <?php if ($view_mod['screen']) { ?>
+                                    <img src="<?= $view_mod['screen']; ?>" style="max-width: 100px; max-height: 70px;" />
+                                <?php } ?>
                             </td>
                         </tr>
                         <?php
