@@ -18,7 +18,7 @@
                 <a href="javascript:;">Principala »</a>
                 <a href="javascript:;">Primăria »</a>  
                 <a href="javascript:;">Viceprimarii și declarații »</a>  
-                <a href="javascript:;">Viceprimarii și declarații</a>
+                <a href="javascript:;">Planurile de acţiune pentru reducerea zgomotului</a>
             </div>
 
             <div class="t_block">

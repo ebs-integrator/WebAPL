@@ -139,7 +139,6 @@ li{
 }
 a{
     text-decoration: none;
-    word-break: break-all;
 }
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -3350,7 +3349,7 @@ ul.dcr  > li .dcr_box:after{
     color:#4c4c4c;
     display: inline-block;
     display: -moz-inline-box;
-    width:309px;
+    width:310px;
     margin-bottom:65px;
 }
 .bgr .quote:before{

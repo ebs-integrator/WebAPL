@@ -18,86 +18,6 @@
 
 
 
-
-@font-face {
-    font-family: 'open_sansbold_italic';
-    src: url('../font/opensans-bolditalic-webfont.eot');
-    src: url('../font/opensans-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../font/opensans-bolditalic-webfont.woff') format('woff'),
-        url('../font/opensans-bolditalic-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'open_sanssemibold_italic';
-    src: url('../font/opensans-semibolditalic-webfont.eot');
-    src: url('../font/opensans-semibolditalic-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../font/opensans-semibolditalic-webfont.woff') format('woff'),
-        url('../font/opensans-semibolditalic-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-@font-face {
-    font-family: 'roboto_slabregular';
-    src: url('../font/robotoslab-regular-webfont.eot');
-    src: url('../font/robotoslab-regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../font/robotoslab-regular-webfont.woff') format('woff'),
-        url('../font/robotoslab-regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'open_sansitalic';
-    src: url('../font/opensans-italic-webfont.eot');
-    src: url('../font/opensans-italic-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../font/opensans-italic-webfont.woff') format('woff'),
-        url('../font/opensans-italic-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'open_sanssemibold';
-    src: url('../font/opensans-semibold-webfont.eot');
-    src: url('../font/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../font/opensans-semibold-webfont.woff') format('woff'),
-        url('../font/opensans-semibold-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'open_sansregular';
-    src: url('../font/opensans-regular-webfont.eot');
-    src: url('../font/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../font/opensans-regular-webfont.woff') format('woff'),
-        url('../font/opensans-regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'open_sansbold';
-    src: url('../font/opensans-bold-webfont.eot');
-    src: url('../font/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../font/opensans-bold-webfont.woff') format('woff'),
-        url('../font/opensans-bold-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
 @font-face {
     font-family: 'AvenirNext-Bold';
     src: url('../font/AvenirNext-Bold.eot?#iefix') format('embedded-opentype'),  url('../font/AvenirNext-Bold.woff') format('woff'), url('../font/AvenirNext-Bold.ttf')  format('truetype'), url('../font/AvenirNext-Bold.svg#AvenirNext-Bold') format('svg');
@@ -190,7 +110,6 @@ li{
 }
 a{
     text-decoration: none;
-    word-break: break-all;
 }
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -737,7 +656,6 @@ section.global{
 .wrap{
     width:1280px;
     margin:0 auto;
-    padding-bottom:50px;
     padding-top:1px;
 }
 article{
@@ -882,7 +800,7 @@ footer {
     color:#0382a0;
 }
 .prefooter .row1_r p{
-    font:17px 'open_sansregular';
+    font:17px 'AvenirNext-Regular';
     line-height: 21px;
     color:#797979;
 }
@@ -1092,6 +1010,7 @@ section .left_block{
     padding-top:45px;
     background: #f7f7f7;
     position:relative;
+    padding-bottom:50px;
 }
 section .left_site{
     float:left;
@@ -1105,6 +1024,7 @@ section .right_block{
     width:868px;
     padding-top:5px;
     margin-left:55px;
+    padding-bottom:50px;
 }
 .left_block .title{
     color:#292929;
@@ -1813,7 +1733,7 @@ element.style {
 }
 .form .content textarea {
     width: 100%;
-    font: 13px 'open_sanssemibold_italic';
+    font: 13px 'AvenirNext-MediumItalic';
     color: #4c4c4c;
     padding: 5px 12px;
     resize: none;
@@ -1953,11 +1873,6 @@ p.descr {
     overflow: hidden;
     margin-bottom: 0px;
 }
-.ag_line:after{
-    clear:both;
-    display:block;
-    content:"";
-}
 .ag_line{
     width:610px;
     margin-bottom:26px;
@@ -2019,14 +1934,14 @@ p.descr {
     height: 17px;
 }
 .calendar_slider table thead tr:first-child td {
-    font: 17px 'open_sansbold';
+    font: 17px 'AvenirNext-Bold';
     background: #fbfbfb;
     text-transform: initial;
     text-align: center;
 }
 .calendar_slider table, .calendar_slider table a {
     width: 100%;
-    font: 15px 'open_sanssemibold';
+    font: 15px 'AvenirNext-DemiBold';
     color: #4c4c4c;
 }
 .calendar_slider table thead tr td {
@@ -2100,7 +2015,7 @@ table.orar td {
     padding: 12px;
 }
 table.orar thead tr:last-child {
-    font: 17px 'open_sansregular';
+    font: 17px 'AvenirNext-Regular';
     color: #4c4c4c;
     text-align: right;
 }
@@ -2125,7 +2040,7 @@ table.orar tbody tr td {
     top: -1px;
     right: -1px;
     color: #fff;
-    font: 17px 'open_sansbold';
+    font: 17px 'AvenirNext-Bold';
     text-align: center;
     padding-top: 5px;
 }
@@ -2135,7 +2050,7 @@ table.orar ul li {
     background: url('../img/li_clnd.png') no-repeat left 7px;
 }
 table.orar ul li > p {
-    font: 13px 'open_sanssemibold';
+    font: 13px 'AvenirNext-Regular';
     margin-bottom: 10px;
 }
 .cl_pop {
@@ -2151,10 +2066,10 @@ table.orar ul li > p {
     border: 1px solid #ff6477;
 }
 .cl_pop span {
-    font: 14px 'open_sanssemibold';
+    font: 14px 'AvenirNext-Regular';
 }
 .cl_pop p {
-    font: 14px 'open_sansbold';
+    font: 14px 'AvenirNext-Bold';
     margin: 0px;
 }
 .cl_time li:hover > p {
@@ -2283,7 +2198,7 @@ table.c_l_u td {
     font: 20px 'AvenirNext-DemiBold';
 }
 .clu_nume span {
-    font: 20px 'open_sansbold';
+    font: 20px 'AvenirNext-DemiBold';
     display: inline;
     padding-left: 3px;
 }
@@ -2366,7 +2281,7 @@ ul.dcr span.more_dot{
     font:15px 'AvenirNext-Bold';
     color:#008d74;
 }
-section:after{
+section:after,ul.vice li:after,.dcr_box:after,.wrap:after,.ag_line:after,.cda ul li:after ,.ldmbox .data:after,.bgr .info > ul > li:after{
     content:'';
     clear:both;
     display:block;
@@ -2389,11 +2304,6 @@ table .dcr_box ul{
     margin-top:10px;
     width: 100%;
     display:none;
-}
-.dcr_box:after{
-    clear:both;
-    display:block;
-    content:"";
 }
 span.more_dot {
     width: 30px;
@@ -2594,11 +2504,6 @@ table.plc table tr td:last-child {
 table.plc table td {
     border: 1px solid #ebebeb;
 }
-.wrap:after{
-    clear:both;
-    display:block;
-    content:'';
-}
 table.plc > tbody > tr > td:first-child{
     border-color:#00bd9c;
     font:17px 'AvenirNext-DemiBold';
@@ -2730,11 +2635,6 @@ table.plcu .pdf{
 .ldmbox .data{
     border-top:1px solid #f7f7f7;
     margin-top:20px;
-}
-.ldmbox .data:after{
-    clear:both;
-    content:'';
-    display:block;
 }
 .ldmbox .data p{
     float:left;
@@ -2891,7 +2791,7 @@ table.sondaje td:last-child {
 }
 .ldmbox {
     border: 2px solid #f7f7f7;
-    padding: 30px 0 30px 40px;
+    padding: 30px 40px;
     margin-bottom:50px;
 }
 .ldmbox .title {
@@ -2906,7 +2806,6 @@ table.sondaje td:last-child {
 }
 .ldmbox p {
     font: 15px 'AvenirNext-DemiBold';
-    max-width: 520px;
     margin-bottom:10px;
 }
 .ldm_li p{
@@ -3339,11 +3238,6 @@ p.ul_title *{
     width: inherit;
     max-width: 75%;
 }
-.cda ul li:after {
-    content: '';
-    display: block;
-    clear: both;
-}
 .cda ul li .left a {
     color: #008d74;
     font: 14px 'AvenirNext-Regular';
@@ -3362,4 +3256,116 @@ table.taxe thead tr td  {
 table.taxe thead tr {
     border: 1px solid #9be0d4;
     border-bottom: 2px solid #9be0d4;
+}
+ul.vice li {
+    margin-bottom: 60px;
+}
+.vice .img {
+    width: 210px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    max-height:260px;
+}
+.vice .img img{
+    max-width: 210px;
+}
+ul.vice li .left {
+    margin-left: 35px;
+    height: 264px;
+    border-bottom: 2px solid #efefef;
+    width: 555px;
+}
+ul.vice li .name {
+    font: 20px 'AvenirNext-Medium';
+    color: #008d74;
+    margin-bottom: 40px;
+}
+ul.vice li .p_name {
+    font: 20px 'AvenirNext-Bold';
+}
+.home_chat{
+    margin-top:25px;
+    background:#fff;
+    border:2px solid #00d4d4;
+    height:50px;
+}
+.home_chat .pct{
+    padding:0px 25px 0px 55px;
+    background:url('../img/chat_dots.png') no-repeat 8px center;
+}
+.home_chat p{
+    font:20px 'AvenirNext-Bold';
+    color:#00d4d4;
+    line-height:48px;
+}
+.home_chat p span{
+    color:#0381a0;
+    text-transform: capitalize;
+}
+.bgr .img img{
+    max-width:280px;
+}
+.bgr .img {
+    float:left;
+    margin-right:45px;
+}
+.bgr .quote {
+    max-width:355px;
+    display:block;
+    font:17px 'AvenirNext-DemiBold';
+    color:#4c4c4c;
+    float:left;
+    position:relative;
+    margin-bottom:50px;
+}
+
+.bgr .quote:after{
+    content: url('../img/q_b.png');
+    position:absolute;
+    margin-top:11px;
+    margin-left: 5px;
+}
+.bgr .quote:before{
+    content: url('../img/q_t.png');
+    margin-left: -20px;
+    margin-top: -9px;
+    float: left;
+}
+.bgr .info > ul > li .left {
+    width: 30%;
+    font: 17px 'AvenirNext-DemiBold';
+    color: #008d74;
+    padding-bottom: 8px;
+    width:23%;
+}
+.bgr .info > ul > li .left,.bgr .info > ul > li .right{
+    display:table-cell;
+    float:none;
+    vertical-align: top;
+    height:60px;
+}
+.bgr .info > ul > li .right.list:before {
+    content: url('../img/li.png') ;
+    position: absolute;
+    left: 25px;
+}
+.bgr .info > ul > li .right {
+    width: 70%;
+    font: 17px 'AvenirNext-Regular';
+    color: #000;
+    margin: 0px;
+    border-left:2px solid #efefef;
+    padding-left: 45px;
+}
+.bgr .info > ul > li{
+    display:table;
+    width:100%;
+}
+
+.bgr .info {
+    margin-top:45px;
+}
+.bgr .info > ul > li .right.list {
+    position: relative;
 }
