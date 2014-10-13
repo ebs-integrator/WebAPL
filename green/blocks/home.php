@@ -50,7 +50,7 @@
                                     <p>info@straseni.gov.md</p>
                                 </li>
                                 <li>
-                                    <img src="img/c_empty.png">
+                                    <img src="img/c_phone.png">
                                     <p>Relatii cu publicul </p>
                                     <p>(0-237) 22-33-44</p>
                                 </li>

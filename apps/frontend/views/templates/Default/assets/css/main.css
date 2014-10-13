@@ -677,6 +677,12 @@ header .contact .cont .cont_form ul li p span,header .contact .cont .cont_form u
     overflow:hidden;
     display:block;
 }
+.search_li li:after{
+    content:'';
+    display: block;
+    clear:both;
+    height:10px;
+}
 .n_footer{
     padding-left:35px;
     height:36px;
@@ -3343,7 +3349,7 @@ ul.dcr  > li .dcr_box:after{
     color:#4c4c4c;
     display: inline-block;
     display: -moz-inline-box;
-    width:309px;
+    width:310px;
     margin-bottom:65px;
 }
 .bgr .quote:before{
