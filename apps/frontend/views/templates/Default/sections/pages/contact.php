@@ -1,6 +1,7 @@
 <section>
     <?= View::make('sections.elements.breadcrumbs'); ?>
     <div class="wrap">
+        <p class="c_title"><?= $top_title; ?></p>
         <div class="right">
             <ul class='detail'>
                 <li class='email'>
@@ -16,7 +17,6 @@
             </ul>
         </div>
         <div class="left">
-        <p class="c_title"><?= $top_title; ?></p>
             <?= Core\APL\Actions::call('page_top_container', $page); ?>
 
             <?= $page->text; ?>

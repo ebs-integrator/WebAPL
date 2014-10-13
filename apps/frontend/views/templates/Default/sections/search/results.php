@@ -1,8 +1,9 @@
 <section>
     <?= View::make('sections.elements.breadcrumbs'); ?>
     <div class="wrap">
+        <p class='c_title'><?= varlang('rezultatul-cautarii'); ?></p>
+
         <div class='left'>
-            <p class='c_title'><?= varlang('rezultatul-cautarii'); ?></p>
             <div class="search_r">
                 <p class="search_t"><?= varlang('rezultatele-cautarii-pentru-'); ?><span>"<?= $words; ?>"</span></p>
                 <p class="search_p"><?= varlang('afisate-'); ?> <span><?= $results->getFrom() . " - " . $results->getTo(); ?></span><?= varlang('-din-'); ?><?= number_format($results->getTotal()); ?></p>

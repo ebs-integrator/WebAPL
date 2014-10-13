@@ -2489,7 +2489,7 @@ span.more_dot {
 .a_box .left .img img{
     max-width: 270px;
 }
-.a_box p.data {
+.a_box p.data ,.p_data{
     background-color: #00d4d4;
     color:#fff;
     font:12px 'AvenirNext-Regular';
@@ -3023,4 +3023,32 @@ table.sondaje td:last-child {
     margin-left:60px;
     padding-left:20px;
     background:url('../img/t_li.png')no-repeat left 4px;
+}
+.det_news{
+    color:#008d74;
+    font:24px 'AvenirNext-Bold';
+}
+.u_a img {
+    max-width: 100%;
+    max-height: 500px;
+    height: auto;
+}
+.cont p{
+    font:17px 'AvenirNext-Regular';
+    color:#4b4b4b;
+    margin-top:30px;
+}
+.cont h2,.cont strong{
+    color:#4b4b4b;
+    margin-top:30px;
+    font:17px 'AvenirNext-DemiBold';
+}
+.search_t {
+    color: #040404;
+    font: 20px 'open_sanssemibold';
+    height: 45px;
+    line-height: 45px;
+    padding: 0px 15px;
+    background: #fbfbfb;
+    border: 1px solid #e3e3e3;
 }
