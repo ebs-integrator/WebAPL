@@ -92,10 +92,21 @@ Event::listen('APL.core.prepare', function () use ($APLExtensions) {
     }
 });
 
+Event::listen('APL.website.check', function () {
+    if (Input::get('is_admin')) {
+        Cookie::put('is_admin', 1);
+    }
+    
+    if (!SettingsModel::one('website_on') && !Cookie::get('is_admin')) {
+        echo 'inactive';
+    }
+});
+
 Event::listen('APL.modules.load', function() {
     Event::fire('APL.core.load');
     Event::fire('APL.core.prepare');
-    
+    Event::fire('APL.website.check');
+
     Module::where('enabled', '1')->get()->each(function($module) {
         ClassLoader::addDirectories(app_path() . '/modules/' . $module->extension . '/');
         ClassLoader::load($module->extension);
@@ -109,7 +120,7 @@ Event::listen('APL.install.check', function () {
 
 Event::listen('APL.install.run', function () {
     Event::fire('APL.core.load');
-    
+
     ClassLoader::addDirectories(base_path() . '/install/');
 
     View::addNamespace('install', base_path() . '/install/views');

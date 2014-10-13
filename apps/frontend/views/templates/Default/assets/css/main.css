@@ -6436,3 +6436,9 @@ iframe, object, embed {
     clear: both;
     height: 40px;
 }
+
+@media only screen and (max-width: 767px){
+    #alertbox {
+        display:none !important;
+    }
+}
