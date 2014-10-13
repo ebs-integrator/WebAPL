@@ -44,6 +44,8 @@ class SettingsController extends BaseController {
                 $sett->save();
             }
         }
+        
+        return [];
     }
 
 }
