@@ -139,6 +139,7 @@ li{
 }
 a{
     text-decoration: none;
+    word-break: break-all;
 }
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -676,6 +677,12 @@ header .contact .cont .cont_form ul li p span,header .contact .cont .cont_form u
     padding-right:35px;
     overflow:hidden;
     display:block;
+}
+.search_li li:after{
+    content:'';
+    display: block;
+    clear:both;
+    height:10px;
 }
 .n_footer{
     padding-left:35px;

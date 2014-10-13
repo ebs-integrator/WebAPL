@@ -15,7 +15,7 @@
                 <a href="javascript:;">Principala »</a>
                 <a href="javascript:;">Rezultatul căutarii</a>
             </div>
-            
+
             <div class="search_r">
                 <p class="search_t">Rezultatele căutării pentru <span>"stiri Straseni"</span></p>
                 <p class="search_p">Pagina <span>1-10 </span>din 38</p>
@@ -39,7 +39,6 @@
                                 <span>Democrații vor face un anunț la ora 18:00 - Unimedia</span>
                                 2 Iul 2014 ... Democrații vor face un anunț la ora 18:00. Foto: privesc.eu. Biroul Permanent extins al PDM se întrunește astăzi, la orele 17.00. 
                             </p>
-                            <div class="more"></div>
                         </a>
                     </li>
                     <li>
@@ -49,7 +48,6 @@
                                 <span>ANUNŢ pentru presă</span>
                                 ANUNŢ pentru presă. Нравится. Mâine, 25 septembrie, la sediul central al PDM din strada Tighina, cu începere de la ora 12:00 va fi inaugurat Departamentul
                             </p>
-                            <div class="more"></div>
                         </a>
                     </li>
                     <li>
@@ -59,7 +57,6 @@
                                 Maşina primarului Dorin Chirtoacă, care urma să ducă daruri pentru elevii gimnaziului internat din Străşeni,
                                 a fost reţinută astăzi, 23 decembrie, de angajaţii Ministerului Afacerilor Interne, fără a oferi explicaţii referitor la acest caz. Pe agenda ...
                             </p>
-                            <div class="more"></div>
                         </a>
                     </li>
                     <li>
@@ -69,7 +66,6 @@
                                 Pe parcursul ultimelor două luni, oamenii legii au documentat activitatea unei grupări specializate în procurarea, păstrarea şi comercializarea ilegală a muniţiilor şi a armelor de foc, informează serviciul de presă 
 
                             </p>
-                            <div class="more"></div>
                         </a>
                     </li>
                     <li>
@@ -79,10 +75,14 @@
                                 <span>Efectul vizitei lui Merkel: „Leoni” ar putea investi în R. Moldova</span>
                                 ANUNŢ pentru presă. Нравится. Mâine, 25 septembrie, la sediul central al PDM
                             </p>
-                            <div class="more"></div>
                         </a>
                     </li>
                 </ul>
+            </div>
+            <div class="pag">
+                <span class="w_p">Pagina</span>
+                <ul>
+                    <li class="disabled"><span>«</span></li><li class="active"><span>1</span></li><li><a href="javascript:;">2</a></li><li><a href="javascript:;">3</a></li><li><a href="javascript:;">4</a></li><li><a href="javascript:;">5</a></li><li><a href="javascript:;" rel="next">»</a></li></ul>
             </div>
         </div>
     </div>

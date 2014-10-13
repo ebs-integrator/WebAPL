@@ -25,7 +25,7 @@
                 <img src="http://kopceak1.sga.webhost1.ru/upload/541324094d4e1_cc364f95febbe696e99ad340103571ca.png">                
             </div>
             <div class="clearfix"></div>
-            <div class='cont'>
+            <div class='conten'>
                 <h2>Focar de hepatita A în comuna Drăguşeni, raionul Străşeni. 23 de copii au ajuns la spital, după ce au băut apă contaminată din fântâni. Focar de hepatita A în comuna Drăguşeni, raionul Străşeni. 23 de copii au ajuns la spital, după ce au băut apă contaminată din fântâni. </h2>
                 <p>Medicii nu exclud că în următoarele zile numărul bolnavilor ar putea creşte.</p>
                 <p>„Perioada de incubare a bolii este de până la 45 de zile. Deci pe parcursul unei luni şi jumătate vor mai fi copii bolnavi. La moment starea copiilor este satisfăcătoare, se simt bine”, a declarat pentru Jurnal TV șefa secției Boli infecțioase a spitalului din Strășeni, Svetlana Cerlat.</p>
