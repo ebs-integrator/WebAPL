@@ -6,7 +6,7 @@
             <th><?= varlang('frontend-link-'); ?></th>
             <td>
                 <?php
-                $link = "/" . (Language::getItem($plang->lang_id)->ext) . "/topost/" . (isset($page['id']) ? $page['id'] : 0);
+                $link = "/" . (Language::getItem($plang->lang_id)->ext) . "/topost/" . (isset($page['id']) ? $page['id'] : 0) . '?is_admin=1';
                 ?>
                 <a href="<?=$link;?>" target="_blank"><?=$link;?></a>
             </td>

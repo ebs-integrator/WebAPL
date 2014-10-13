@@ -7,17 +7,24 @@ if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/install/uninstalled')) {
 
 Event::fire('APL.modules.load');
 
+if (Session::get('in_maintenance')) {
+    Route::any('{all}', function() {
+        return View::make('sections.others.maintenance');
+    })->where('all', '.*');
+    return;
+}
+
 Route::get('/', 'PageController@home');
 
 Route::group(array('prefix' => Core\APL\Language::ext()), function() {
     Route::get('/', 'PageController@home');
     Route::get('page/{furi}', 'PageController@route')->where(array('furi' => '[A-Za-z0-9-\/]+'));
     //Route::get('home/{furi}', 'PageController@route')->where(array('furi' => '[A-Za-z0-9-]+'));
-    
+
     Route::get('search', 'SearchController@results');
     Route::get('topost/{id}', 'SearchController@topost');
     Route::get('topage/{uri}', 'SearchController@topage')->where(array('uri' => '[A-Za-z0-9_-]+'));
-    
+
     Route::any('rss', array('PostResources', 'rssPage'));
 });
 
@@ -31,6 +38,6 @@ Route::get('language/{ext}/{id}', 'PageController@changeLanguage')->where(array(
 
 Route::get('markup', function () {
     return View::make('sections.show_page');
-}); 
+});
 Route::get('page/markup/{uri}', 'HomeController@page_markup')->where(array('uri' => '[A-Za-z0-9-]+'));
 Route::get('home/markup/{uri}', 'HomeController@home_markup')->where(array('uri' => '[A-Za-z0-9-]+'));
