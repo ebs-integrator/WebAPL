@@ -1,0 +1,333 @@
+.right > article:before {
+    border-left: 3px solid #695641;
+} 
+
+
+.left > article:hover:before, .right > article.atn {
+    border-left: 3px solid #f4f0c9;
+} 
+
+
+header .contact .contact_us:hover,header .contact .contact_us.active, header .hr {
+    background: #b4a67e;
+} 
+
+header .contact .cont .cont_form, header .contact .currency .lang {
+    border-top: 3px solid #b4a67e;
+} 
+
+.error_info p span, header .contact .cont .cont_form .form_title, .com_box .title {
+    color: #b4a67e;
+} 
+
+.home_menu {
+    border-bottom: 4px solid #b4a67e;
+} 
+
+
+.anp a {
+    color: #dfd39b;
+} 
+
+header .contact .cont .cont_form .form_title {
+    border-left: 3px solid #dfd39b;
+} 
+
+.home_chat.active .pot {
+    border-bottom: 2px solid #dfd39b;
+} 
+
+.compl_list li a span {
+    background-color: #dfd39b;
+} 
+
+
+section  .map_cont .h_list p a {
+    color: #90a553;
+} 
+
+
+.a_box.g_g .details, .u_a .details {
+    background: #b3a57e;
+} 
+
+
+.right article.doc table thead tr td {
+    border: 1px solid #f4f0c9;
+} 
+
+.right article.doc table thead tr td {
+    border-bottom: 2px solid #f4f0c9;
+} 
+
+
+.right article.news:before {
+    border-left: 3px solid #b3a57e;
+} 
+
+
+.green_sub, .search input[type=button] {
+    border-bottom: 2px solid #927756;
+} 
+
+
+.cda  ul li .left p.green a {
+    color: #927756;
+} 
+
+
+footer .copy a {
+    color: #b4a67e;
+} 
+
+
+section > .wrap.rpt > .left ul > li a:hover ,section > .wrap.rpt > .left > ul > li.active > a,ul.dcr > li a:hover,ul.dcr > li.active a {
+    color: #a1825c;
+} 
+
+
+.green_sub, footer .right > .left.search input[type=submit], .green input[type=submit], .search input[type=button] {
+    background: #b4a67e;
+} 
+
+.right article.news li span, ul.a_n li a span, .u_a p.data, .a_box.g_g .details p.data {
+    background-color: #b4a67e;
+} 
+
+.right > article.news .hr {
+    border-color: #b4a67e;
+} 
+
+.right article.doc table thead tr td, .right article.doc table tbody tr td, .home_chat.active .pct > p, .n_title, .pag .p_n a,.pag .n_p a, .pag ul li a,.pag ul li, ul.detail li a, .av.green p span, .form.green .ftb, ul.faq li.active a, ul.faq li a span, table.taxe thead tr td, table.reg_tb thead tr td, table.plc > tbody > tr > td > a, .sort_b .selectboxit-container span, .selectboxit-container .selectboxit-options a, .sort_b .selectboxit-container .selectboxit-options a, .calendar_slider table thead tr:last-child td, .cns_locali thead tr td {
+    color: #b4a67e;
+} 
+
+.contact_l .subt:before,.contact_r .subt:before, .contact.left.form:before, .form.green:before, ul.detail li a:before, ul.faq  li.active:before {
+    border-left: 3px solid #b4a67e;
+} 
+
+.pag .p_n a,.pag .n_p a, .cl_pop {
+    border: 1px solid #b4a67e;
+} 
+
+
+.m_criteria, table.taxe thead tr, table.taxe thead tr td, table.reg_tb thead tr td, .calendar_slider table thead td, .cns_locali thead tr td {
+    border: 1px solid #b3a57e;
+} 
+
+table.taxe thead tr {
+    border-bottom: 2px solid #b3a57e;
+} 
+
+
+table.plcu > thead > tr > td {
+    color: #a1825c;
+} 
+
+
+.search_p span {
+    color: #b3a57e;
+} 
+
+
+.green input[type=submit] {
+    border-bottom: 2px solid #745a3a;
+} 
+
+
+.city_link a {
+    color: #9e8c5a;
+} 
+
+
+.menu .box .menu_title {
+    color: #3a3a3a;
+} 
+
+
+::-moz-selection, ::selection {
+    background: #f4f0c9;
+} 
+
+
+.left > article:before {
+    border-left: 3px solid #f4f0c9;
+} 
+
+
+ul.prom li:before {
+    border-left: 3px solid #9e8c5a;
+} 
+
+ul.prom li .info, .real p, .real ul li {
+    color: #9e8c5a;
+} 
+
+
+header .contact .cont .cont_form .prp, .prp {
+    border: 2px solid #f4f0c9;
+} 
+
+
+header .contact .cont .cont_form .prp a, .prp a {
+    color: #b3a57e;
+} 
+
+
+.menu .box .menu_img {
+    border-bottom: 5px solid #685641;
+} 
+
+.menu  .box .active .menu_title {
+    background-color: #685641;
+} 
+
+
+section .dirs_menu a {
+    color: #f4f1c9;
+} 
+
+
+header .contact .contact_us, .right > article.atn .data, .a_box.v_g .details, .ldmbox .data {
+    background: #b3a57e;
+} 
+
+.ath p {
+    color: #b3a57e;
+} 
+
+
+.ldmbox .data p.term span {
+    color: #c0b28b;
+} 
+
+
+
+
+header .left button.chat .violet ,button.chat_button .violet,button.vice_button .violet, .left article .ttl a, .top_menu a.active .left.title, section .wrap .sub_title, section .wrap p.sub_title_s, .name, .city_box .title, .left .chat .violet, section  p.map_sub, .compl_list li a .compl_title, .av p span, .form .ftb, table.atz  tr td a, .emrg ul li .left, .vp_name, ul.vice li .name, ul.vice li .p_name, .ncd p.sctg, .bgr .info > ul > li .left, .ldmbox  .ldm_li p strong, section > .wrap > .left > ul > li > span.sec_criteria, .ncd p.atn_viol, .stat_info span:last-child, .acz_details span, .tda span,.ldmbox p.tda span, table.orar thead tr:first-child, .search_t span, .search_li li p span, .video_i {
+    color: #695741;
+} 
+
+ul.social li:first-child {
+    border-bottom: 1px solid #695741;
+} 
+
+header .contact .cont .cont_form ul li:before, .anp:before, header .contact .cont .cont_form .c_info:before, .contact_l .date_contact li:before, .form:before {
+    border-left: 3px solid #695741;
+} 
+
+#firechat .green input[type=submit], .form  input[type=submit], .dop .top, table.sondaje progress[value]::-webkit-progress-value, .snd_sbm {
+    background: #695741;
+} 
+
+.left .chat input[type="submit"], .l_a  li a span {
+    background-color: #695741;
+} 
+
+
+.dop .top .left .photo {
+    border: 1px solid #927756;
+} 
+
+
+.dop .top hr {
+    background: #ad906d;
+} 
+
+
+
+.snd_sbm {
+    border-bottom: 2px solid #685641;
+} 
+
+header .contact .cont .cont_form ul li p span,header .contact .cont .cont_form ul li p span a, ul.culture li .right .box p,ul.culture li .right .box p a, .crt p span,p.sub, .com_box .subtitle, .snd_title, .live_comment > p:hover, .live_comment > p.activecomm {
+    color: #685641;
+} 
+
+.right > article.atn .data p, section .dirs_menu, .ldmbox .data p.nr, .dop .right .buttons button {
+    background: #685641;
+} 
+
+.a_box.v_g .details p.data {
+    background-color: #685641;
+} 
+
+
+.n_alert .cntn p {
+    color: #db1e4a;
+} 
+
+.n_alert .n_info .n_data {
+    background: #db1e4a;
+} 
+
+
+
+
+
+
+.left article .ttl a {
+    color: #90a553;
+}
+
+.ldmbox .data:after, .u_a p.data:after, .a_box.g_g .details p.data:after, .l_a li a span:after, .a_box.v_g .details p.data:before, ul.a_n li a span:before, .right > article.atn .data span:before {
+    content: url('../../img/v_arrow_m.png');
+}
+
+ul.a_n li a span {
+    background-color: #685641;
+}
+
+.right article.news li span:before {
+    content: url('../../img/d_arrow_m.png');
+}
+
+header.page {
+    border-bottom: 4px solid #685641;
+}
+
+header .contact .tel {
+    background: url('../../img/tel_m.png') no-repeat left center;
+}
+
+header .contact .contact_us {
+    border-bottom: 2px solid #685641;
+}
+
+header .contact .contact_us.active {
+    color: #fff;
+}
+
+header .contact .contact_us:hover,header .contact .contact_us.active {
+    border-bottom: 2px solid #685641;
+} 
+
+header .contact .contact_us {
+    border-bottom-color: #c5c5c5;
+    background: #e5e5e5;
+    color: #292929;
+}
+
+header .contact .cont .cont_form, header .contact .currency .lang {
+    border-top: 3px solid #B5C57E;
+}
+
+footer .right > .left.search input[type=submit] {
+    background: #b7c789;
+}
+
+.a_box.g_g .details p.data, .u_a p.data, .header_menu_content, header .header_mini, header .hr, .header_menu_content .social {
+    background-color: #695741;
+}
+
+.menu_list li {
+    border-bottom-color: #b3a57e;
+}
+
+.header_menu_content .social a {
+    color: #b3a57e;
+}
+
+.right_menu li:hover {
+    background: url('../../img/right_active_m.png') 25px center no-repeat #f8f8f8;
+}
