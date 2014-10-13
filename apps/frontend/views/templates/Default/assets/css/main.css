@@ -1613,6 +1613,7 @@ header .top_menu{
     font:39px 'open_sansbold';
     text-transform: uppercase;
     margin:20px 0;
+    width:68%;
 }
 section .wrap .sub_title{
     font:24px 'open_sanssemibold';
@@ -4637,7 +4638,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     section > .wrap,section .dirs_menu .wrap{
         max-width:1235px;
     }
-    section > .wrap > .left{
+    section > .wrap > .left,.c_title{
         width:65%;
     }
     .wrap .left.ccc,section > .wrap > .left.contact_r{
@@ -4742,7 +4743,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .top_menu .left.title{
         min-width:100px;
     }
-    section > .wrap > .left{
+    section > .wrap > .left,.c_title{
         width: 65%;
     }
     section > .wrap > .right{
@@ -5051,7 +5052,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .top_menu .left.title{
         min-width:100px;
     }
-    section > .wrap > .left{
+    section > .wrap > .left,.c_title{
         width:100%;
     }
     section > .wrap .left article:nth-child(2n){
@@ -5936,7 +5937,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .right_menu{
         width:100%;
     }
-    section > .wrap > .left{
+    section > .wrap > .left,.c_title{
         width:100%;
     }
     .right article{
