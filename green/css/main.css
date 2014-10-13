@@ -1172,13 +1172,23 @@ p{
     margin-bottom:0px;
 }
 h1{
-    font:20px 'AvenirNext-Bold';
+    font:24px 'AvenirNext-Bold';
     color:#008d74;    
     margin:25px 0px 35px;
 }
+h1.reg{
+    color:#000;
+    margin-top:35px;
+}
 h2{
     color:#1c1c1c;
-    font:17px "AvenirNext-Bold";
+    font:20px "AvenirNext-Bold";
+}
+h2.colored{
+    color:#0382a1;
+}
+.t_block span{
+    display:block;
 }
 .attention p{
     margin:0px;
