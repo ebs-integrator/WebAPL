@@ -224,7 +224,7 @@ class Template {
      */
     public static function findTemplate() {
         try {
-            return \SettingsModel::one('template');
+            return \SettingsModel::one('template_' . strtolower(APP_FOLDER));
         } catch (\Illuminate\Database\QueryException $e) {
             return Template::$defaultTemplate;
         }
@@ -486,6 +486,28 @@ class Template {
     }
 
     /**
+     * get list of templates
+     * @param string $app
+     * @return array
+     */
+    public static function getTemplates($app = false) {
+        if ($app == false) {
+            $app = APP_FOLDER;
+        }
+
+        $templatesDirs = glob($_SERVER['DOCUMENT_ROOT'] . "/apps/{$app}/views/templates/*", GLOB_ONLYDIR);
+        if ($templatesDirs) {
+            $templates = [];
+            foreach ($templatesDirs as $dir) {
+                $templates[] = basename($dir);
+            }
+            return $templates;
+        } else {
+            return [];
+        }
+    }
+
+    /**
      * 
      * 
      *    FACEBOOK META
@@ -509,7 +531,7 @@ class Template {
      */
     public static function setMeta($key, $value, $override = false) {
         $value = \Str::words(strip_tags(trim(preg_replace('/\s\s+/', ' ', $value))), 40);
-        
+
         if ($override) {
             static::$meta[$key] = $value;
         } else {
@@ -518,7 +540,7 @@ class Template {
             }
         }
     }
-    
+
     /**
      * Set meta from array
      * @param type $metas
@@ -531,7 +553,7 @@ class Template {
             }
         }
     }
-    
+
     /**
      * Get meta
      * @param string $key
@@ -540,7 +562,7 @@ class Template {
     public static function getMeta($key) {
         return isset(static::$meta[$key]) ? static::$meta[$key] : '';
     }
-    
+
     /**
      * Get all meta
      * @return array
