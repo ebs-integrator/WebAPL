@@ -1067,6 +1067,14 @@ footer .right p.w_info span{
     background: -ms-linear-gradient(left,#f7f7f7,#f7f7f7 35%,white 35,white);
     padding-top:1px
 }
+
+.m_search{
+    display:none;
+    font:30px 'AvenirNext-Bold';
+    color:#000;
+    text-transform: uppercase;
+    margin-bottom:20px;
+}
 .page_top_header{
     width:1811px;
     height:263px;
@@ -2127,6 +2135,11 @@ p.descr {
 table.orar {
     width: 100%;
 }
+table.orar:after{
+    clear:both;
+    content: '';
+    display:block;
+}
 table.orar thead tr:first-child {
     background: #fbfbfb;
     text-align: center;
@@ -3157,6 +3170,8 @@ table.sondaje td:last-child {
     color: #00bd9c;
     font: 24px 'AvenirNext-Medium';
     padding-right: 20px;
+    max-height: 65px;
+    overflow: hidden;
 }
 .search_li li:after{
     content:'';
@@ -3507,7 +3522,9 @@ ul.vice li .p_name {
     .page_top_content .row1 > .left{
         width:17%;
     }
-
+    header{
+        height:500px;
+    }
     section,.page_header {
         background: -webkit-linear-gradient(left,#f7f7f7,#f7f7f7 33%,white 33%,white);
         background: linear-gradient(to right,#f7f7f7,#f7f7f7 33%,white 33%,white);
@@ -3543,7 +3560,21 @@ ul.vice li .p_name {
     .search_s input[type=text]{
         width: 220px;
     }
-
+    header{
+        height:440px;
+    }
+    .l_box{
+        max-width:200px;
+    }
+    .top_menu li{
+        padding-left:20px;
+    }
+    .menu_block{
+        padding-right:20px;
+    }
+    .contact{
+        margin-right:20px;
+    }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1279px){
     .wrap{
@@ -3551,6 +3582,15 @@ ul.vice li .p_name {
     }
     .page_top_header{
         width:100%;
+    }
+    article:nth-child(3n-1){
+        margin:88px 0px 0px;
+    }
+    article:nth-child(2n){
+        float:right;
+    }
+    header{
+        height:400px;
     }
     section,.page_header {
         background: -webkit-linear-gradient(left,#f7f7f7,#f7f7f7 35%,white 35%,white);
@@ -3617,7 +3657,7 @@ ul.vice li .p_name {
     .left_block ul.menu > li > a{
         font: 18px 'AvenirNext-Medium';
     }
-    footer .left .content, footer .right .content {
+    footer .left .content, footer .right .content ,.prefooter .row1_l .content, .prefooter .row1_r .content{
         width: 460px;
     }
     footer .f_menu ul li a{
@@ -3637,7 +3677,9 @@ ul.vice li .p_name {
     .search_s input[type=text]{
         width: 220px;
     }
-
+    .prefooter .row1_l .content, .prefooter .row1_r .content{
+        max-height: 324px;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px){
     footer .left{
@@ -3821,7 +3863,7 @@ ul.vice li .p_name {
     .ag_line p {
         width: 459px;
     }
-    table.taxe thead tr td:nth-child(3),table.taxe tbody tr td:nth-child(3){
+    table.taxe thead tr td:nth-child(3),table.taxe tbody tr td:nth-child(3),.search_p,.sort_b,.left_details,.search_img{
         display:none;
     }
     .search_s input[type=text] {
@@ -3855,6 +3897,9 @@ ul.vice li .p_name {
         font: 15px 'AvenirNext-MediumItalic';
     }
 
+    .m_search{
+        display:block;
+    }
 }
 
 @media only screen and (max-width: 639px){
@@ -4005,8 +4050,44 @@ ul.vice li .p_name {
         display: block;
         width: 100%;
     }
-    .cl_pop,table.orar tbody tr td:nth-child(5) .cl_pop, table.orar tbody tr td:nth-child(4) .cl_pop{
+    .cl_pop,table.orar tbody tr td:nth-child(5) .cl_pop, table.orar tbody tr td:nth-child(4) .cl_pop,table.orar tbody tr td:last-child .cl_pop, table.orar tbody tr td:nth-child(6) .cl_pop{
         left:auto;
         right:-13px;
+    }
+    table.orar tbody tr td:last-child .cl_pop:after, table.orar tbody tr td:nth-child(6) .cl_pop:after,table.orar tbody tr td:nth-child(4) .cl_pop:after, table.orar tbody tr td:nth-child(5) .cl_pop:after{
+        position: absolute;
+        left: -6px;
+        top: 17px;
+        content: url('../img/cln_arrow.png');
+    }
+    .search_t{
+        height: auto;
+        padding:10px;
+        font: 16px 'AvenirNext-Medium';
+    }
+    .search_t span{
+        font:16px 'AvenirNext-Bold'
+    }
+    .search_li li p span{
+        visibility:visible;
+        max-height: none;
+        text-indent: initial;
+        white-space: normal;
+        overflow: visible;
+        font: 17px 'AvenirNext-Medium';
+    }
+    .search_li li p{
+        visibility: hidden;
+        max-height: none;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size:0px;
+    }
+    .search_li li{
+        padding:10px 0px;
+    }
+
+    .m_search{
+        font:26px 'AvenirNext-Bold';
     }
 }
