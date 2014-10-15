@@ -1,9 +1,8 @@
-<?php include "blocks/home.php"; ?>
 <section class="global">
     <div class="wrap global">
         <article>
             <div class="acticle_img">
-                <img src="img/article1.png">
+                <img src="<?= res('assets/img/article1.png'); ?>">
             </div> 
             <p class="categ_title"><a href="javascript:;">Beneficii sociale și ajutoare</a> </p>
 
@@ -19,7 +18,7 @@
         </article>
         <article>
             <div class="acticle_img">
-                <img src="img/article2.png">
+                <img src="<?= res('assets/img/article2.png'); ?>">
             </div> 
             <p class="categ_title"><a href="javascript:;">Taxele și Impozite </a> </p>
 
@@ -35,7 +34,7 @@
         </article>
         <article>
             <div class="acticle_img">
-                <img src="img/article3.png">
+                <img src="<?= res('assets/img/article3.png'); ?>">
             </div> 
             <p class="categ_title"><a href="javascript:;">Business și Antreprenoriat</a> </p>
 
@@ -50,7 +49,7 @@
         </article>
         <article>
             <div class="acticle_img">
-                <img src="img/article4.png">
+                <img src="<?= res('assets/img/article4.png'); ?>">
             </div> 
             <p class="categ_title"><a href="javascript:;">Autorizații și certificate </a> </p>
 
@@ -66,7 +65,7 @@
         </article>
         <article>
             <div class="acticle_img">
-                <img src="img/article1.png">
+                <img src="<?= res('assets/img/article1.png'); ?>">
             </div> 
             <p class="categ_title"><a href="javascript:;">Educație, Cultură, Turism și Sport </a> </p>
 
@@ -82,7 +81,7 @@
         </article>
         <article>
             <div class="acticle_img">
-                <img src="img/article2.png">
+                <img src="<?= res('assets/img/article2.png'); ?>">
             </div> 
             <p class="categ_title"><a href="javascript:;">Implicarea cetățenilor</a> </p>
 
@@ -97,7 +96,7 @@
             <a href="javascript:;" class="more"></a>
         </article><article>
             <div class="acticle_img">
-                <img src="img/article2.png">
+                <img src="<?= res('assets/img/article2.png'); ?>">
             </div> 
             <p class="categ_title"><a href="javascript:;">Implicarea cetățenilor</a> </p>
 
@@ -113,7 +112,7 @@
         </article>
         <article>
             <div class="acticle_img">
-                <img src="img/article2.png">
+                <img src="<?= res('assets/img/article2.png'); ?>">
             </div> 
             <p class="categ_title"><a href="javascript:;">Implicarea cetățenilor</a> </p>
 
@@ -152,4 +151,3 @@
         </div>
     </div>
 </div>
-<?php include "blocks/footer.php"; ?>

@@ -1,4 +1,4 @@
-<?php include"blocks/page.php"; ?>
+
 <section>
     <div class="wrap">
         <div class="left_block">
@@ -21,7 +21,7 @@
             <div class="city">
                 <div class="city_box">
                     <div class="img">
-                        <img src="img/city.png">
+                        <img src="<?=res('assets/img/city.png');?>">
                     </div>
                     <div class="city_info">
                         <p class="title">Mun. Piatra Neamț</p>
@@ -31,7 +31,7 @@
                 </div>
                 <div class="city_box">
                     <div class="img">
-                        <img src="img/city2.png">
+                        <img src="<?=res('assets/img/city2.png');?>">
                     </div>
                     <div class="city_info">
                         <p class="title">Mun. Piatra Neamț</p>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="city_box">
                     <div class="img">
-                        <img src="img/city3.png">
+                        <img src="<?=res('assets/img/city3.png');?>">
                     </div>
                     <div class="city_info">
                         <p class="title">Mun. Piatra Neamț</p>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="city_box">
                     <div class="img">
-                        <img src="img/city4.png">
+                        <img src="<?=res('assets/img/city4.png');?>">
                     </div>
                     <div class="city_info">
                         <p class="title">Mun. Piatra Neamț</p>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="city_box">
                     <div class="img">
-                        <img src="img/city5.png">
+                        <img src="<?=res('assets/img/city5.png');?>">
                     </div>
                     <div class="city_info">
                         <p class="title">Mun. Piatra Neamț</p>
@@ -71,7 +71,7 @@
                 </div>
                 <div class="city_box">
                     <div class="img">
-                        <img src="img/city6.png">
+                        <img src="<?=res('assets/img/city6.png');?>">
                     </div>
                     <div class="city_info">
                         <p class="title">Mun. Piatra Neamț</p>

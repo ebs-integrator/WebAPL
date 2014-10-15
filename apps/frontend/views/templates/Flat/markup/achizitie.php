@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="stats">
-                    <img src="img/stat_off.png" class="stat_active">
+                    <img src="<?=res('assets/img/stat_off.png');?>" class="stat_active">
                     <div class="stat_info">
                         <span>Statut</span>
                         <span>Ofertă expirată</span>

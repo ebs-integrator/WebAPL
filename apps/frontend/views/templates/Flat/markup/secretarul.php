@@ -20,7 +20,7 @@
                 <a href="javascript:;">Secretarul consiliului local</a>
             </div>
             <div class="sec_details">
-                <img src="img/primar.png">
+                <img src="<?=res('assets/img/primar.png');?>">
                 <div class="sec_label">
                     <table>
                         <tr><td>Nume, prenume:</td><td><p class="sec_name">ION  MORARESCU</p></td></tr>

@@ -82,7 +82,6 @@
     </div>
 
 </section>
-<?php         include"blocks/footer.php"; ?>
 
 
 

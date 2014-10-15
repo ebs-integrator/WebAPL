@@ -22,7 +22,7 @@
                         <p>(0-237) 22-33-44</p>
                     </li>
                     <li>
-                        <img src="img/c_fx.png">
+                        <img src="<?=res('assets/img/c_fx.png');?>">
                         <p>Fax</p>
                         <p>(0-237) 55-66-77</p>
                     </li>
