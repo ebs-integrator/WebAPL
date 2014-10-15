@@ -13,17 +13,19 @@
         <?php } ?>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link href="<?= res('assets/css/jquery.bxslider.css'); ?>" rel="stylesheet" />
-        <link rel="stylesheet" href="<?= res('assets/css/normalize.css'); ?>">
-        <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <?php if (isset($favicon) && $favicon) { ?>
             <link rel="icon" href="<?= url($favicon->path); ?>" type="image/x-icon">
         <?php } ?>
 
-        <?php Template::pullCurrentSchema(); ?>
+        <link href="<?= res('assets/css/jquery.bxslider.css'); ?>" rel="stylesheet" />
+        <link href="<?= res('assets/js/square/red.css'); ?>" rel="stylesheet">
+        <link rel="stylesheet" href="<?= res('assets/css/normalize.css'); ?>">
+        <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">
+        <link rel="stylesheet" href="<?= res('assets/css/jquery.selectBoxIt.css'); ?>">
 
+        <?php Template::pullCurrentSchema(); ?>
 
         <script>
             var res_url = "<?= res(''); ?>";
@@ -32,7 +34,7 @@
             var disqus_url = '<?= url(); ?>';
             var disqus_shortname = 'aplkopceak';
             var disqus_title = '<?= Core\APL\Template::getPageTitle(); ?>';
-            var disqus_config = function () {
+            var disqus_config = function() {
                 this.language = "<?= Core\APL\Language::ext(); ?>";
             };
 
@@ -43,49 +45,53 @@
         <script src="<?= res('assets/js/jquery-2.1.1.js'); ?>"></script>
     </head>
     <body>
-
         <div class="overlay hidden"></div>
         <div class="overlay2 hidden"></div>
         <div class="overlay3 hidden"></div>
         <header>
-            <div class="left">
-                <a href="<?= Language::url('/'); ?>"><img src="<?= res('assets/img/s_logo.png'); ?>" class="logo logo_home"></a>
-                <?= Core\APL\Actions::call('logo_contructor'); ?>
+            <img src="<?= res('assets/img/backgr1.png'); ?>" class="background">
+            <div class="row1">
+                <div class="left">
+                    <a href="<?= Language::url('/'); ?>" class="l_box">primăria strășeni</a>
+                </div>
+                <div class="contact right"><?= View::make('block.top_contacts'); ?></div>
+                <div class="clearfix"></div>
             </div>
-            <div class="left home_menu">
-                <?= View::make('sections.elements.topmenu'); ?>
+            <div class="row2">
+                <div class="menu_block">
+                    <ul class="top_menu">
+                        <?php
+                        if (isset($general_pages)) {
+                            foreach ($general_pages as $item) {
+                                ?>
+                                <li><a href='<?= $item->url; ?>'><?= $item->title; ?></a></li>
+                                <?php
+                            }
+                        }
+                        ?>
+                    </ul>
+                    <div class="top_el">
+                        <?= Core\APL\Actions::call('logo_contructor'); ?>
+                        <div class="lang">
+                            <p><?= Core\APL\Language::ext(); ?></p>
+                            <ul class="hidden">
+                                <?php
+                                foreach (Core\APL\Language::getList() as $lang) {
+                                    if (Core\APL\Language::ext() != $lang->ext && $lang->enabled == 1) {
+                                        ?>
+                                        <li><a href="<?= url('language/' . $lang->ext . '/' . (isset($active_page_id) ? $active_page_id : '')); ?>"><?= $lang->ext; ?></a></li>
+                                        <?php
+                                    }
+                                }
+                                ?>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="header_mini ">
-                <div class="head_list"></div>
-            </div>
-            <div class="contact right"><?= View::make('block.top_contacts'); ?></div>
-            <div class="hr"></div>
+            <div class="clearfix"></div>
         </header>
 
-        <div class="menu_content header_menu_content hidden">
-            <ul class="menu_list">
-                <?php
-                if (isset($general_pages)) {
-                    foreach ($general_pages as $item) {
-                        ?>
-                        <li><a href='<?= $item->url; ?>'><?= $item->title; ?></a></li>
-                        <?php
-                    }
-                }
-                ?>
-            </ul>
-            <ul class="social">
-                <li>(022) 22-32-53</li>
-                <li><a href='<?= varlang('facebook_link'); ?>' class="fb"><?= varlang('facebook'); ?></a></li>
-                <li><a href='<?= varlang('odnoklassniki-link-1'); ?>' class="odno"><?= varlang('odnoklassniki'); ?></a></li>
-                <li><a href='<?= varlang('vkontakte-link'); ?>' class="vk"><?= varlang('vkontakte'); ?></a></li>
-                <li><a href='<?= varlang('twitter-link'); ?>' class="twitter"><?= varlang('twitter'); ?></a></li>
-                <li><a href='<?= varlang('gplus-link'); ?>' class="gplus"><?= varlang('gplus'); ?></a></li>
-                <li><a href='<?= varlang('rss-link'); ?>' class="rsss"><?= varlang('rss'); ?></a></li>
-            </ul>
-        </div>
-
         <?= $content; ?> 
-
 
         <?= View::make('block.footer'); ?>
