@@ -655,6 +655,11 @@ section.global{
     max-width:2580px;
     width:100%;
 }
+.sort_b:after{
+    clear:both;
+    display:block;
+    content:'';
+}
 .wrap{
     width:1280px;
     margin:0 auto;
@@ -2077,10 +2082,13 @@ p.descr {
 .calendar_slider tbody td:nth-child(2){    
     font:15px 'AvenirNext-DemiBold';
 }
+.clndr {
+    clear:both;
+}
 .clndr .bx-wrapper .bx-controls-direction a, .orsl .bx-wrapper .bx-controls-direction a {
     width: 12px;
     height: 20px;
-    top: 70px;
+    top: 16px;
     margin-top: 0px;
 }
 .orsl .bx-wrapper .bx-controls-direction a{
@@ -3357,6 +3365,7 @@ p.ul_title *{
 .cda ul li .left a {
     color: #008d74;
     font: 14px 'AvenirNext-Regular';
+    word-break: break-all;
 }
 .cda p{    
     font:17px 'AvenirNext-Medium';
@@ -3528,6 +3537,10 @@ ul.vice li .p_name {
         background: -o-linear-gradient(left, #f7f7f7,#f7f7f7 30,white 30,white);
         background: -ms-linear-gradient(left,#f7f7f7,#f7f7f7 30%,white 30,white);
     }
+    .search_s input[type=text]{
+        width: 220px;
+    }
+
 }
 @media only screen and (min-width: 1024px) and (max-width: 1279px){
     .wrap{
@@ -3536,6 +3549,13 @@ ul.vice li .p_name {
     .page_top_header{
         width:100%;
     }
+    section,.page_header {
+        background: -webkit-linear-gradient(left,#f7f7f7,#f7f7f7 35%,white 35%,white);
+        background: linear-gradient(to right,#f7f7f7,#f7f7f7 35%,white 35%,white);
+        background: -o-linear-gradient(left, #f7f7f7,#f7f7f7 35,white 35,white);
+        background: -ms-linear-gradient(left,#f7f7f7,#f7f7f7 35%,white 35,white);
+    }
+
     .page_top_content .row2{
         width:80%;
     }
@@ -3562,7 +3582,13 @@ ul.vice li .p_name {
         width:550px;
     }
     section .left_block{
-        width:33%;
+        width:31%;
+    }
+    .bgr .quote {
+        max-width: 290px;
+    }
+    .bgr .info > ul > li .left, .bgr .info > ul > li .right{
+        padding-right:10px;
     }
     section .right_block{
         margin-left: 30px;
@@ -3595,6 +3621,9 @@ ul.vice li .p_name {
     }
     footer .right p.w_info{
         font: 26px 'AvenirNext-Medium';
+    }
+    .search_s input[type=text]{
+        width: 220px;
     }
 
 }
@@ -3668,6 +3697,9 @@ ul.vice li .p_name {
         max-width: 150px;
         font: 20px "AvenirNext-Bold";
         line-height: 1.115;
+    }
+    .bgr .quote {
+        max-width: 345px;
     }
     .telef {
         font: 25px 'AvenirNext-Regular';
@@ -3751,6 +3783,48 @@ ul.vice li .p_name {
     .stat_info span:last-child {
         font: 15px 'AvenirNext-Bold';
     }
+
+    .ag_line{
+        width:100%;
+    }
+
+    .ag_line p {
+        width: 459px;
+    }
+    table.taxe thead tr td:nth-child(3),table.taxe tbody tr td:nth-child(3){
+        display:none;
+    }
+    .search_s input[type=text] {
+        width: 180px;
+    }
+    .calendar_slider table thead tr:nth-child(2) td:first-child,.calendar_slider table thead tr:nth-child(2) td:nth-child(3),.calendar_slider table tbody tr td:first-child,.calendar_slider table tbody tr td:nth-child(3){
+        display:none;
+    }
+    .atz p,table.atz tr td ol li,table.atz tr td ol li a,table.atz tr td a{
+        font:15px 'AvenirNext-Regular';
+    }
+    table.atz, table.atz td{
+        padding:20px;
+    }
+    table.atz tr td:nth-child(2) {
+        font: 16px 'AvenirNext-DemiBold';
+    }
+    table.atz tr td:first-child,.bgr .quote,.home_chat{
+        display:none;
+    }
+    h1 {
+        font: 22px 'AvenirNext-Bold';
+    }
+    .text p ,.attention ul li{
+        font: 15px 'AvenirNext-Regular';
+    }
+    .attention p.title {
+        font: 22px 'AvenirNext-DemiBold';
+    }
+    .attention span {
+        font: 15px 'AvenirNext-MediumItalic';
+    }
+    
 }
 
 @media only screen and (max-width: 639px){
@@ -3783,6 +3857,7 @@ ul.vice li .p_name {
     }
     .pdf a, .docx a, .doc a, .xlsx a, .xls a{
         padding: 0px 60px 0px 40px;
+        font: 15px 'AvenirNext-Medium';
     }
     .dcr_box ul li {
         padding-left: 15px;
@@ -3800,5 +3875,89 @@ ul.vice li .p_name {
     }
     footer .f_menu{
         padding-top:15px;
+    }
+    .l_a li a p{
+        font: 15px 'AvenirNext-DemiBold';
+        clear:both;
+        display:block;
+        padding:0px;
+        height:auto;
+    }
+    .ag_line p{
+        width:100%;
+    }
+    .ag_line p, .ag_line span{
+        font: 15px 'AvenirNext-DemiBold';
+        line-height: 36px;
+    }
+    .info .img{
+        margin-right:0px;
+    }
+    .a_box .left .img img{
+        max-width:100%;
+        margin-bottom:20px;
+    }
+    .a_box{
+        padding:20px;
+    }
+    ul.a_n li a,ul.a_n li a p{
+        height:auto;
+    }
+    ul.a_n li a p{
+        display:block;
+        clear:both;
+        margin:10px 0px;
+        padding:0px;
+        font: 15px 'AvenirNext-Medium';
+    }
+    ul.a_n li a span{
+        float:none;
+        display:inline-block;
+    }
+    table.taxe thead tr td:nth-child(2),table.taxe tbody tr td:nth-child(2){
+        display:none;
+    }
+    .calendar_slider table thead tr td:nth-child(2),.calendar_slider table tbody tr td:nth-child(2){
+        display:none;
+    }
+    .sort_b {
+        float: none;
+        margin-top: 20px;
+    }
+    .search_s.left{
+        float:none;
+    }
+    .form .ftb {
+        font: 20px 'AvenirNext-Bold';
+    }
+    .form.green .ftb{
+        width:100%;
+    }
+    .form form {
+        padding: 0px 25px 40px;
+    }
+    .av p {
+        font: 13px 'AvenirNext-MediumItalic';
+    }
+    .av.pink p span {
+        font: 13px 'AvenirNext-BoldItalic';
+    }
+    table.atz, table.atz td{
+        display:block;
+    }
+    table.atz tr td:last-child{
+        width:100%;
+    }
+    table.atz{        
+        padding:0px;
+    }
+    table.atz td{
+        border:0px;
+    }
+    table.atz tr{
+        border-bottom:1px solid #e3e3e3;
+    }
+    table.atz tr td:nth-child(2){
+        padding-bottom:0px;
     }
 }
