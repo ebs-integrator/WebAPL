@@ -6,7 +6,7 @@
             <p class="title">Informații publice</p>
             <ul class="menu">
                 <li><a href="javascript:;">Anunțuri</a></li>
-                <li><a href="javascript:;">Achiziții publice </a></li>
+                <li class="active"><a href="javascript:;">Achiziții publice </a></li>
                 <li><a href="javascript:;">Posturi vacante curente</a></li>
                 <li><a href="javascript:;">Stagii și voluntariat în cadrul primăriei</a></li>
             </ul>

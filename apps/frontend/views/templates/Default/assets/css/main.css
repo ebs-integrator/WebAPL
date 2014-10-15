@@ -5387,7 +5387,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         background: url('../img/gplus_white.png') no-repeat left center;
     }
     .c_title{
-        font-size:38px;
+        font-size:30px;
     }
     .right_menu li{
         border-bottom: 1px solid #e3e3e3;
@@ -5404,6 +5404,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     section > .wrap > .right{
         float:left;
+    }
+    .c_title{
+        width:100%;
     }
     section > .wrap > .left{
         width:580px;
@@ -5909,6 +5912,13 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         top: 0px;
         z-index: 997;
         background: #fff;
+    }
+    .right > article.atn .data span{
+        float:none;
+    }
+    section > .wrap > .right article,section > .wrap .right .doc,.right > article.news{
+        width:360px;
+        margin-left:0px;
     }
 }
 @media only screen and (max-width: 639px){

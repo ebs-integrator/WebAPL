@@ -24,10 +24,11 @@ $(document).ready(function () {
     $('section').css('min-height', ($(window).height() - 326));
     $('.l_a.m_t_n').css('min-height', ($(window).height() - 413));
     $('.menu_content').height($(window).height() - 83);
-    $('.left_block').height($('section').height());
 
-    $('.head_list,.overlay3').click(function () {
-        $('header .menu_content').toggleClass('hidden');
+    
+
+    $('.mh_button,.overlay3').click(function () {
+        $('.mini_header .content').toggleClass('hidden');
         $('.overlay3').toggleClass('hidden');
     });
     $('.cont .contact_us,.overlay').click(function () {
