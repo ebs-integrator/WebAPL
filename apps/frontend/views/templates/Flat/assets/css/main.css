@@ -2282,6 +2282,9 @@ table.cns_locali, table.c_l_u {
 .cns_locali td:first-child, .c_l_u td:first-child {
     width: 72%;
 }
+.c_l_u .dcr{
+    margin:0px;
+}
 .cns_locali thead tr td {
     color: #008d74;
     font: 17px 'AvenirNext-Bold';
@@ -3584,6 +3587,15 @@ ul.vice li .p_name {
     section .left_block{
         width:31%;
     }
+    table.orar tbody tr td:nth-child(5) .cl_pop,table.orar tbody tr td:nth-child(4) .cl_pop {
+        left: -210px;
+    }
+    table.orar tbody tr td:nth-child(5)  .cl_pop:after, table.orar tbody tr td:nth-child(4) .cl_pop:after {
+        position: absolute;
+        left: 100%;
+        top: 17px;
+        content: url('../img/cln_arrow-r.png');
+    }
     .bgr .quote {
         max-width: 290px;
     }
@@ -3716,6 +3728,15 @@ ul.vice li .p_name {
         float:none;
         margin-left:0px;
     }
+    table.orar tbody tr td:nth-child(5) .cl_pop,table.orar tbody tr td:nth-child(4) .cl_pop {
+        left: -210px;
+    }
+    table.orar tbody tr td:nth-child(5)  .cl_pop:after, table.orar tbody tr td:nth-child(4) .cl_pop:after {
+        position: absolute;
+        left: 100%;
+        top: 17px;
+        content: url('../img/cln_arrow-r.png');
+    }
 }
 @media only screen and (max-width: 767px){
     .page_header{
@@ -3740,6 +3761,15 @@ ul.vice li .p_name {
         margin:0px;
         width: 580px;
         margin: 0 auto;
+    }
+    table.orar tbody tr td:nth-child(5) .cl_pop,table.orar tbody tr td:nth-child(4) .cl_pop {
+        left: -210px;
+    }
+    table.orar tbody tr td:nth-child(5)  .cl_pop:after, table.orar tbody tr td:nth-child(4) .cl_pop:after {
+        position: absolute;
+        left: 100%;
+        top: 17px;
+        content: url('../img/cln_arrow-r.png');
     }
     .l_box{
         font:22px 'AvenirNext-Bold';
@@ -3824,7 +3854,7 @@ ul.vice li .p_name {
     .attention span {
         font: 15px 'AvenirNext-MediumItalic';
     }
-    
+
 }
 
 @media only screen and (max-width: 639px){
@@ -3910,28 +3940,36 @@ ul.vice li .p_name {
         padding:0px;
         font: 15px 'AvenirNext-Medium';
     }
+    .cda p{
+        font: 15px 'AvenirNext-Medium';
+    }
+    .cda ul li .left a{
+        font: 13px 'AvenirNext-Regular';
+    }
     ul.a_n li a span{
         float:none;
         display:inline-block;
     }
-    table.taxe thead tr td:nth-child(2),table.taxe tbody tr td:nth-child(2){
-        display:none;
+    p.ul_title * {
+        font: 13px 'AvenirNext-Bold';
+        line-height: 33px;
     }
-    .calendar_slider table thead tr td:nth-child(2),.calendar_slider table tbody tr td:nth-child(2){
+    table.taxe thead tr td:nth-child(2),table.taxe tbody tr td:nth-child(2),.calendar_slider table thead tr td:nth-child(2),.calendar_slider table tbody tr td:nth-child(2),.cda .ul_title .right,.cda ul li .right{
         display:none;
     }
     .sort_b {
         float: none;
         margin-top: 20px;
     }
-    .search_s.left{
+    .search_s.left,.cda ul li .left{
         float:none;
     }
     .form .ftb {
         font: 20px 'AvenirNext-Bold';
     }
-    .form.green .ftb{
+    .form.green .ftb,.cda ul li .left{
         width:100%;
+        max-width: 100%;
     }
     .form form {
         padding: 0px 25px 40px;
@@ -3959,5 +3997,16 @@ ul.vice li .p_name {
     }
     table.atz tr td:nth-child(2){
         padding-bottom:0px;
+    }
+    table.orar thead tr:last-child,.w_line{
+        display:none;
+    }
+    table.orar tbody tr td {
+        display: block;
+        width: 100%;
+    }
+    .cl_pop,table.orar tbody tr td:nth-child(5) .cl_pop, table.orar tbody tr td:nth-child(4) .cl_pop{
+        left:auto;
+        right:-13px;
     }
 }

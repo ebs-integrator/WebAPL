@@ -20,7 +20,7 @@
                 <a href="javascript:;">Organigrama primăriei</a>
             </div>
            
-            <img src="img/organigrama.png">
+            <img src="<?=res('assets/img/organigrama.png');?>">
             
 
 

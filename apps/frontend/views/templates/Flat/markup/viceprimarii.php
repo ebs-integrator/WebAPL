@@ -24,7 +24,7 @@
             <ul class="vice">
                 <li>
                     <div class="img">
-                        <img width="210" src="img/pers.png">
+                        <img width="210" src="<?=res('assets/img/pers.png');?>">
                     </div>
                     <div class="left">
                         <a href="javascript:;">
@@ -41,7 +41,7 @@
                 </li>
                 <li>
                     <div class="img">
-                        <img width="210" src="img/primar.png">
+                        <img width="210" src="<?=res('assets/img/primar.png');?>">
                     </div>
                     <div class="left">
                         <a href="javascript:;">
@@ -59,7 +59,7 @@
                 </li>
                 <li>
                     <div class="img">
-                        <img width="210" src="img/b_news.png">
+                        <img width="210" src="<?=res('assets/img/b_news.png');?>">
                     </div>
                     <div class="left">
                         <a href="javascript:;">

@@ -1,4 +1,4 @@
-<?php include"blocks/page.php"; ?>
+
 <section>
     <div class="wrap">
         <div class="left_block">

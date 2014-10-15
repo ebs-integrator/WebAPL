@@ -25,7 +25,7 @@
                 <div class="hr_dbl"></div>
                 <div class="left">
                     <div class="img">
-                        <img src="img/b_news.png" width="347">
+                        <img src="<?=res('assets/img/b_news.png');?>" width="347">
                     </div>
 
                 </div>

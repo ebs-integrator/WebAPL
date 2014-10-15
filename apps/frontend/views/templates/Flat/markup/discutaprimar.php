@@ -1,18 +1,17 @@
-<?php include"blocks/page.php"; ?>
 <div id="firechat" class="dop" style="height: 535px;">
     <div class="top">
         <div class="left firechat-photo" >
             <div class="photo">
-                <img src="img/small_p.png">
+                <img src="<?=res('assets/img/small_p.png');?>">
             </div>
         </div>
 
         <div class="right">
             <div class="buttons">
-                <button class="firechat-hide"><img src="img/save.png"></button>
-                <button class="firechat-show" style="display: none;"><img src="img/unsave.png"></button>
+                <button class="firechat-hide"><img src="<?=res('assets/img/save.png');?>"></button>
+                <button class="firechat-show" style="display: none;"><img src="<?=res('assets/img/unsave.png');?>"></button>
 
-                <button class="firechat-close"><img src="img/close.png"></button>
+                <button class="firechat-close"><img src="<?=res('assets/img/close.png');?>"></button>
             </div>
         </div>
         <div class="right firechat-name">

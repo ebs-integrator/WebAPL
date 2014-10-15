@@ -12,11 +12,11 @@
         <div class="content">
             <ul class="f_social">
                 <li><a href="javascript:;"><img src="<?=res('assets/img/fb.png');?>"></a></li>
-                <li><a href="javascript:;"><img src="img/odno.png"></a></li>
-                <li><a href="javascript:;"><img src="img/vk.png"></a></li>
-                <li><a href="javascript:;"><img src="img/twitter.png"></a></li>
-                <li><a href="javascript:;"><img src="img/gplus.png"></a></li>
-                <li><a href="javascript:;"><img src="img/rss.png"></a></li>
+                <li><a href="javascript:;"><img src="<?=res('assets/img/odno.png');?>"></a></li>
+                <li><a href="javascript:;"><img src="<?=res('assets/img/vk.png');?>"></a></li>
+                <li><a href="javascript:;"><img src="<?=res('assets/img/twitter.png');?>"></a></li>
+                <li><a href="javascript:;"><img src="<?=res('assets/img/gplus.png');?>"></a></li>
+                <li><a href="javascript:;"><img src="<?=res('assets/img/rss.png');?>"></a></li>
             </ul>
             <div class="clearfix50"></div>
             <form method="" action="" class="search">
@@ -48,13 +48,13 @@
 </footer>
 
 <script src="<?=res('assets/js/plugins.js');?>"></script>
-<script src="js/icheck.js"></script>
-<script src="js/jquery.bxslider.min.js"></script>
+<script src="<?=res('assets/js/icheck.js');?>"></script>
+<script src="<?=res('assets/js/jquery.bxslider.min.js');?>"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+<script src="<?=res('assets/js/vendor/modernizr-2.6.2.min.js');?>"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-<script src="js/jquery.selectBoxIt.min.js"></script>
-<script src="js/main.js"></script>
+<script src="<?=res('assets/js/jquery.selectBoxIt.min.js');?>"></script>
+<script src="<?=res('assets/js/main.js');?>"></script>
 <script type="text/javascript" src="//vk.com/js/api/openapi.js?115"></script>
 
 <script type="text/javascript">

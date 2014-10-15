@@ -1,4 +1,4 @@
-<?php include"blocks/page.php"; ?>
+
 <section>
     <div class="wrap">
         <div class="left_block">
@@ -24,7 +24,7 @@
                 <a href="javascript:;">Cetățeni și Business »</a>  
                 <a href="javascript:;">Taxe și impozite </a>
             </div>
-            <table class="taxe" style="border-collapse:collapse; border-spacing:0px; box-sizing:border-box; color:rgb(34, 34, 34); font-family:open_sansregular; font-size:16px; line-height:22.3999996185303px; margin-bottom:50px">
+            <table class="taxe">
                 <thead>
                     <tr>
                         <td style="height:50px">Impozite</td>

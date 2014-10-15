@@ -7,17 +7,7 @@
             <p class="title">Consiliul local</p>
             <ul class="menu">
                 <li><a href="javascript:;">Ce este consiliul local?</a></li>
-                <li>
-                    <a href="javascript:;">Ședințele Consiliului </a>                    
-                    <!--                        <ul>
-                                                <li><a href="javascript:;">Agenda următoarei ședințe</a></li>
-                                                <li><a href="javascript:;">Agendele ședințelor anterioare</a></li>
-                                                <li><a href="javascript:;">Calendarul ședințelor viitoare</a></li>
-                                                <li><a href="javascript:;">Privește on-line ședințele consiliului </a></li>
-                                            </ul>-->
-
-
-                </li>
+                <li> <a href="javascript:;">Ședințele Consiliului </a>  </li>
                 <li><a href="javascript:;">Secretarul consiliului local</a></li>
                 <li class="active"><a href="javascript:;">Consilierii locali și domeniile de responsabilitate</a></li>
                 <li><a href="javascript:;">Programul de audiență al consilierilor locali </a></li>

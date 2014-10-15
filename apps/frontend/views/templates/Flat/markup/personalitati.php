@@ -21,7 +21,7 @@
             </div>
             <div class="personal">
                 <div class="img">
-                    <img src="img/pers.png">
+                    <img src="<?=res('assets/img/pers.png');?>">
                 </div>
                 <div class="left">
                     <p class="name">Nume</p>
@@ -32,7 +32,7 @@
             </div>
             <div class="personal">
                 <div class="img">
-                    <img src="img/pers.png">
+                    <img src="<?=res('assets/img/pers.png');?>">
                 </div>
                 <div class="left">
                     <p class="name">Nume</p>
@@ -43,7 +43,7 @@
             </div>
             <div class="personal">
                 <div class="img">
-                    <img src="img/pers.png">
+                    <img src="<?=res('assets/img/pers.png');?>">
                 </div>
                 <div class="left">
                     <p class="name">Nume</p>
@@ -54,7 +54,7 @@
             </div>
             <div class="personal">
                 <div class="img">
-                    <img src="img/pers.png">
+                    <img src="<?=res('assets/img/pers.png');?>">
                 </div>
                 <div class="left">
                     <p class="name">Nume</p>
@@ -65,7 +65,7 @@
             </div>
             <div class="personal">
                 <div class="img">
-                    <img src="img/pers.png">
+                    <img src="<?=res('assets/img/pers.png');?>">
                 </div>
                 <div class="left">
                     <p class="name">Nume</p>

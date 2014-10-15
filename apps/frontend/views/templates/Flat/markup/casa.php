@@ -44,7 +44,7 @@
                 <h1>Inainte de a face primul pas este foarte util sa va ginditi si la urmatoarele:</h1>
                 <p>Stabiliti-va un buget</p>
                 <p>Alegeti zona unde doriti sa construiti – tineti cont de: – vecini, aproprierea de servici, scoala, posibilitati aprovizionare, acces rapid la mijloace de transport, unitati sanitare,politie,etc -si apoi cautati un teren convenabil.</p>
-                <img src="img/slide3.png">
+                <img src="<?=res('assets/img/slide3.png');?>">
             </div>
             <div class="clearfix50"></div>
             <table>
