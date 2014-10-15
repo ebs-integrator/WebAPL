@@ -1,39 +1,33 @@
 <Files ~ "^.*\.([Hh][Tt][Aa])">
- order allow,deny
- deny from all
- satisfy all
+    order allow,deny
+    deny from all
+    satisfy all
 </Files>
 
 <Files ~ "\.(htm|html|css|js|php)$">
-   AddDefaultCharset UTF-8
-   DefaultLanguage en-US
+    AddDefaultCharset UTF-8
+    DefaultLanguage en-US
 </Files>
 
-
 <IfModule mod_rewrite.c>
-DirectoryIndex index.php
-RewriteEngine on
-RewriteCond $1 !^(index\.php|images|css|js|robots\.txt|favicon\.ico)
+    DirectoryIndex index.php
+    RewriteEngine on
+    RewriteCond $1 !^(index\.php|images|css|js|robots\.txt|favicon\.ico)
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
 
-RewriteRule ^(.*)$ index.php?/$1 [L,QSA]
-
+    RewriteRule ^(.*)$ index.php?/$1 [L,QSA]
 </IfModule>
 
 <IfModule !mod_rewrite.c>
-    # If we don't have mod_rewrite installed, all 404's
-    # can be sent to index.php, and everything works as normal.
-
     ErrorDocument 404 /index.php
 </IfModule>
 
-#php_value output_handler ob_gzhandler
-
 <ifmodule mod_php4.c>
-php_value zlib.output_compression 16386
+    php_value zlib.output_compression 16386
 </ifmodule>
 
-
-
+php_flag xcache.cacher Off
+php_flag xcache.size 0
+php_flag xcache.stat Off
