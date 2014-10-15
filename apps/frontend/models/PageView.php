@@ -252,7 +252,9 @@ class PageView {
         $data['page']['background'] = Files::getfile('page_bg', $data['page']->id);
 
         $data['sub_pages'] = Post::subPosts($data['page']->id, 2);
-
+        foreach ($data['sub_pages'] as &$item) {
+            $item['image_icon_big'] = Files::getfile('page_icon_big', $item->id);
+        }
 
         $data['page_properies'] = PostProperty::getPostProperties($data['page']->id);
         if (in_array('show_news', $data['page_properies'])) {
