@@ -11,7 +11,7 @@
         </div>
         <div class="content">
             <ul class="f_social">
-                <li><a href="javascript:;"><img src="img/fb.png"></a></li>
+                <li><a href="javascript:;"><img src="<?=res('assets/img/fb.png');?>"></a></li>
                 <li><a href="javascript:;"><img src="img/odno.png"></a></li>
                 <li><a href="javascript:;"><img src="img/vk.png"></a></li>
                 <li><a href="javascript:;"><img src="img/twitter.png"></a></li>

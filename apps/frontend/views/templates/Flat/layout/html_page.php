@@ -36,7 +36,7 @@
         <div class="overlay3 hidden"></div>
         <div class="page_header">
             <div class="page_top_header">
-                <img class="top_back" src="img/top1.png">
+                <img class="top_back" src="<?=res('assets/img/top1.png');?>">
                 <div class="page_top_content">
                     <div class="row1">
                         <div class="left">
