@@ -11,20 +11,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link href="<?=res('assets/css/jquery.bxslider.css');?>" rel="stylesheet" />
-        <link href="<?=res('assets/js/square/red.css');?>" rel="stylesheet">
-        <link rel="stylesheet" href="<?=res('assets/css/normalize.css');?>">
-        <link rel="stylesheet" href="<?=res('assets/css/main.css');?>">
-        <link rel="stylesheet" href="<?=res('assets/css/jquery.selectBoxIt.css');?>">
+        <link href="<?= res('assets/css/jquery.bxslider.css'); ?>" rel="stylesheet" />
+        <link href="<?= res('assets/js/square/red.css'); ?>" rel="stylesheet">
+        <link rel="stylesheet" href="<?= res('assets/css/normalize.css'); ?>">
+        <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">
+        <link rel="stylesheet" href="<?= res('assets/css/jquery.selectBoxIt.css'); ?>">
 
-        <script src="<?=res('assets/js/jquery-2.1.1.js');?>"></script>
+        <script src="<?= res('assets/js/jquery-2.1.1.js'); ?>"></script>
     </head>
     <body>
         <div class="overlay hidden"></div>
         <div class="overlay2 hidden"></div>
         <div class="overlay3 hidden"></div>
         <header>
-            <img src="<?=res('assets/img/backgr1.png');?>" class="background">
+            <img src="<?= res('assets/img/backgr1.png'); ?>" class="background">
             <div class="row1">
                 <div class="left">
                     <a href="javascript:;" class="l_box">primăria strășeni</a>
@@ -34,28 +34,28 @@
                         <a class="contact_us">Contactează-ne</a>
                         <div class="cont_form hidden">
                             <div class="relative">
-                                <img src="<?=res('assets/img/c_arrow.png');?>">
+                                <img src="<?= res('assets/img/c_arrow.png'); ?>">
                             </div>
                             <p class="title">Contacte</p>
                             <div class="d_hr"></div>
                             <ul>
                                 <li>
-                                    <img src="<?=res('assets/img/c_phone.png');?>">
+                                    <img src="<?= res('assets/img/c_phone.png'); ?>">
                                     <p>Telefon Anticameră</p>
                                     <p>(0-237) 22-33-44</p>
                                 </li>
                                 <li>
-                                    <img src="<?=res('assets/img/c_mail.png');?>">
+                                    <img src="<?= res('assets/img/c_mail.png'); ?>">
                                     <p>Email</p>
                                     <p>info@straseni.gov.md</p>
                                 </li>
                                 <li>
-                                    <img src="<?=res('assets/img/c_phone.png');?>">
+                                    <img src="<?= res('assets/img/c_phone.png'); ?>">
                                     <p>Relatii cu publicul </p>
                                     <p>(0-237) 22-33-44</p>
                                 </li>
                                 <li>
-                                    <img src="<?=res('assets/img/c_fx.png');?>">
+                                    <img src="<?= res('assets/img/c_fx.png'); ?>">
                                     <p>Fax</p>
                                     <p>(0-237) 55-66-77</p>
                                 </li>
@@ -102,7 +102,11 @@
                         <li><a href="javascript:;">transparență</a></li>
                     </ul>
                     <div class="top_el">
-                        <a href="javascript:;" class="chat_b">Chat-online</a>
+                        <button class="home_chat" >
+                            <div class="pct">
+                                <p>Discută <span>online</span></p>
+                            </div>
+                        </button>
                         <div class="lang">
                             <p>ro</p>
                             <ul class="hidden">

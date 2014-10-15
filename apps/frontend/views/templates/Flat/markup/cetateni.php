@@ -133,20 +133,24 @@
 <div class="prefooter">
     <div class="row1_l">
         <div class="content">
-            <p class="f_title">Știri</p>
-            <div class="data">18 Sept 2014</div>
-            <a href="javascript:;" class="f_artc">Clădirea maternității din Cojușna între „atac raider” și vânzare prin licitațíe</a>
-            <p>Vineri, 12 septembrie, Consiliul raional Strășeni este convocat în ședință ordinară.</p>
-            <p>Printre proiectele de decizii ce urmează a fi puse la vot, este și unul privind vânzarea unuv ti imobil prin licitație, proiect ce a nemulțumit administrația publică locală din Cojușna și o parte a locuitorilor acestui sat.</p>
+            <div class="fcc">
+                <p class="f_title">Știri</p>
+                <div class="data">18 Sept 2014</div>
+                <a href="javascript:;" class="f_artc">Clădirea maternității din Cojușna între „atac raider” și vânzare prin licitațíe</a>
+                <p>Vineri, 12 septembrie, Consiliul raional Strășeni este convocat în ședință ordinară.</p>
+                <p>Printre proiectele de decizii ce urmează a fi puse la vot, este și unul privind vânzarea unuv ti imobil prin licitație, proiect ce a nemulțumit administrația publică locală din Cojușna și o parte a locuitorilor acestui sat.</p>
+            </div>
             <a href="javascript:;" class="more"></a>
         </div>
     </div>
     <div class="row1_r">
         <div class="content">
-            <p class="f_title">Anunțuri</p>
-            <div class="data">18 Sept 2014</div>
-            <a href="javascript:;" class="f_artc">Urgent apartament in or.Straseni!</a>
-            <p>Apartament cu 3 odai, etajul 7/9, seria 143, 2 balcoane,reparatie recenta, incalzire autonoma, telefon/internet/televiziune digitala, ferestre termopan. Pret negociabil!!!!!</p>
+            <div class="fcc">
+                <p class="f_title">Anunțuri</p>
+                <div class="data">18 Sept 2014</div>
+                <a href="javascript:;" class="f_artc">Urgent apartament in or.Straseni!</a>
+                <p>Apartament cu 3 odai, etajul 7/9, seria 143, 2 balcoane,reparatie recenta, incalzire autonoma, telefon/internet/televiziune digitala, ferestre termopan. Pret negociabil!!!!!</p>
+            </div>
             <a href="javascript:;" class="more"></a>
         </div>
     </div>

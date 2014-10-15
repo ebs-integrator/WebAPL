@@ -751,20 +751,32 @@ footer {
 .prefooter  .row1_r{
     background-color:#fff;  
 }
-.prefooter  .row1_l .content,.prefooter  .row1_r .content{
+.prefooter  .row1_l .content,.prefooter  .row1_r .content,.fcc{
     width:640px;
     padding-top:50px;
     position:relative;
     max-height: 355px;
-    overflow:hidden;
     padding-bottom:20px;
+}
+.pot,.pct > span:last-child{
+    display:none;
+}
+.top_el .home_chat{
+    margin:0px;
+    border-color:#fff;
+    margin-right:15px;
+    height:64px;
+}
+.fcc{
+    overflow:hidden;
+    padding-top:0px;
 }
 .prefooter  .row1_l .content{
     padding-right:70px;
     float:right;
     color:#fff;
 }
-.prefooter  .row1_r .content{
+.fcc{
     padding-left:65px;
     padding-right:55px;
 }
@@ -3657,7 +3669,7 @@ ul.vice li .p_name {
     .left_block ul.menu > li > a{
         font: 18px 'AvenirNext-Medium';
     }
-    footer .left .content, footer .right .content ,.prefooter .row1_l .content, .prefooter .row1_r .content{
+    footer .left .content, footer .right .content ,.prefooter .row1_l .content, .prefooter .row1_r .content,.fcc{
         width: 460px;
     }
     footer .f_menu ul li a{
