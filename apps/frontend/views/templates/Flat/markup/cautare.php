@@ -15,7 +15,7 @@
                 <a href="javascript:;">Principala »</a>
                 <a href="javascript:;">Rezultatul căutarii</a>
             </div>
-
+            <p class="m_search">Cautare</p>
             <div class="search_r">
                 <p class="search_t">Rezultatele căutării pentru <span>"stiri Straseni"</span></p>
                 <p class="search_p">Pagina <span>1-10 </span>din 38</p>

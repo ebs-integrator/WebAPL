@@ -7,17 +7,17 @@
                 <p class="subt">Legatură directă</p>
                 <ul class="date_contact">
                     <li>
-                        <img src="img/c_phone.png">
+                        <img src="<?=res('assets/img/c_phone.png');?>">
                         <p>Telefon Anticameră</p>
                         <p>(0-237) 22-33-44</p>
                     </li>
                     <li>
-                        <img src="img/c_mail.png">
+                        <img src="<?=res('assets/img/c_mail.png');?>">
                         <p>Email</p>
                         <p><a href="mailto:info@straseni.gov.md">info@straseni.gov.md</a></p>
                     </li>
                     <li>
-                        <img src="img/c_phone.png">
+                        <img src="<?=res('assets/img/c_phone.png');?>">
                         <p>Relatii cu publicul </p>
                         <p>(0-237) 22-33-44</p>
                     </li>

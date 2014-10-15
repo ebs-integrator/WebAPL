@@ -24,7 +24,7 @@
         <div class="overlay2 hidden"></div>
         <div class="overlay3 hidden"></div>
         <header>
-            <img src="img/backgr1.png" class="background">
+            <img src="<?=res('assets/img/backgr1.png');?>" class="background">
             <div class="row1">
                 <div class="left">
                     <a href="javascript:;" class="l_box">primăria strășeni</a>
@@ -34,28 +34,28 @@
                         <a class="contact_us">Contactează-ne</a>
                         <div class="cont_form hidden">
                             <div class="relative">
-                                <img src="img/c_arrow.png">
+                                <img src="<?=res('assets/img/c_arrow.png');?>">
                             </div>
                             <p class="title">Contacte</p>
                             <div class="d_hr"></div>
                             <ul>
                                 <li>
-                                    <img src="img/c_phone.png">
+                                    <img src="<?=res('assets/img/c_phone.png');?>">
                                     <p>Telefon Anticameră</p>
                                     <p>(0-237) 22-33-44</p>
                                 </li>
                                 <li>
-                                    <img src="img/c_mail.png">
+                                    <img src="<?=res('assets/img/c_mail.png');?>">
                                     <p>Email</p>
                                     <p>info@straseni.gov.md</p>
                                 </li>
                                 <li>
-                                    <img src="img/c_phone.png">
+                                    <img src="<?=res('assets/img/c_phone.png');?>">
                                     <p>Relatii cu publicul </p>
                                     <p>(0-237) 22-33-44</p>
                                 </li>
                                 <li>
-                                    <img src="img/c_fx.png">
+                                    <img src="<?=res('assets/img/c_fx.png');?>">
                                     <p>Fax</p>
                                     <p>(0-237) 55-66-77</p>
                                 </li>
