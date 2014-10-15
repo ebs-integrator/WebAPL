@@ -60,7 +60,7 @@ Event::listen('APL.website.check', function () {
     if (Input::get('is_admin')) {
         Session::put('is_admin', true);
     }
-    
+
     Session::put('in_maintenance', !SettingsModel::one('website_on') && !Session::get('is_admin'));
 });
 

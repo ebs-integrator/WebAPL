@@ -1,15 +1,33 @@
+<Files ~ "^.*\.([Hh][Tt][Aa])">
+    order allow,deny
+    deny from all
+    satisfy all
+</Files>
+
+<Files ~ "\.(htm|html|css|js|php)$">
+    AddDefaultCharset UTF-8
+    DefaultLanguage en-US
+</Files>
+
 <IfModule mod_rewrite.c>
-    <IfModule mod_negotiation.c>
-        Options -MultiViews
-    </IfModule>
+    DirectoryIndex index.php
+    RewriteEngine on
+    RewriteCond $1 !^(index\.php|images|css|js|robots\.txt|favicon\.ico)
 
-    RewriteEngine On
-
-    # Redirect Trailing Slashes...
-    RewriteRule ^(.*)/$ /$1 [L,R=301]
-
-    # Handle Front Controller...
-    RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.php [L]
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    RewriteRule ^(.*)$ index.php?/$1 [L,QSA]
 </IfModule>
+
+<IfModule !mod_rewrite.c>
+    ErrorDocument 404 /index.php
+</IfModule>
+
+<ifmodule mod_php4.c>
+    php_value zlib.output_compression 16386
+</ifmodule>
+
+php_flag xcache.cacher Off
+php_flag xcache.size 0
+php_flag xcache.stat Off
