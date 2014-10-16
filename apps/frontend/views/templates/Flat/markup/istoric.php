@@ -11,6 +11,7 @@
                 <li><a href="javascript:;">Orașe înfrățite</a></li>
             </ul>
         </div>
+        <div class="resp_menu"></div>
         <div class="right_block">
             <div class="dirs_menu">
                 <a href="javascript:;">Principala »</a>
@@ -26,7 +27,7 @@
                     Odată cu apariția localității, de la cuvântul străgeri s-a tras toponimul Strășeni.
 
                     Localitatea, începând cu a doua jumătate a sec. XX, s-a dezvoltat intens, devenind un centru industrial important din republică.</p>
-                <img src="<?=res('assets/img/logo.png');?>">
+                <img src="<?= res('assets/img/logo.png'); ?>">
                 <p>Din spusele celui mai bătrân locuitor din oraș I. Țurcanu în vârstă de 98 de ani, care a auzit din mărturisirile bunicului său, că undeva pe dealul Coșnei, un oarecare Teofan, străger, a construit o casă în care stăteau străgerii ce vegheau Chișinăul. Cu toți străgerii conducea însăși Teofan. Odată cu apariția localității, de la cuvântul străgeri s-a tras toponimul Strășeni.</p>
                 <p>Localitatea, începând cu a doua jumătate a sec. XX, s-a dezvoltat intens, devenind un centru industrial important din republică.</p>
                 <p>În orașul Strășeni sunt înregistrați circa 2780 agenți economici, dintre care cel mai mare număr îl constituie gospodăriile țărănești – 1.590. Întreprinderile cu dreptul de persoane juridice alcătuiesc 305 unități. Un loc de frunte ocupă industria alimentară, mai ales cea vinicolă. Strășeniul se bucură de un spectru bogat al celor mai bune soiuri de poamă europeană: Aligote, Pinot, Cabernet, Izabelle, Risling de Italia, coniacuri, din care se obține șampanie, vinuri seci ordinare și dulci de calitate superioară și sucuri naturale. Partea industrială a orașului este amplasată în regiunea de nord-vest a orașului și este despărțită de sectorul locativ prin calea ferată. Punctul de vinificație, secția de cărămidă a fabricii de materiale de construcție se află în partea de nord a orașului. În domeniul comerțului activează 96 întreprinderi, sistemul de alimentație publică este format de 25 întreprinderi. Deservirea socială este asigurată de 17 unități de deservire.</p>
@@ -34,10 +35,10 @@
                 <p>Este dezvoltată producția de vinuri: . Se produc conserve din fructe și legume și produse de panificație. Fabrica materialelor de construcție produce țiglă roșie, faianță. La 6 km spre sud-vest funcționează antena TV de lângă Strășeni.</p>
                 <div class="gal">
                     <ul class='gallery bxslider g_slide'>
-                        <li><img  src="<?=res('assets/img/gal1.png');?>"></li>                    
-                        <li><img  src="<?=res('assets/img/gal2.png');?>"></li>                    
-                        <li><img  src="<?=res('assets/img/gal1.png');?>"></li>                    
-                        <li><img  src="<?=res('assets/img/gal2.png');?>"></li>
+                        <li><img  src="<?= res('assets/img/gal1.png'); ?>"></li>                    
+                        <li><img  src="<?= res('assets/img/gal2.png'); ?>"></li>                    
+                        <li><img  src="<?= res('assets/img/gal1.png'); ?>"></li>                    
+                        <li><img  src="<?= res('assets/img/gal2.png'); ?>"></li>
                     </ul>
                     <p class="counter"><span class='current'></span>/<span class='total'></span></p>
                 </div>

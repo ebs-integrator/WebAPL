@@ -291,6 +291,11 @@ textarea {
     content: " ";
     height: 100px;
 }
+.clearfix20{
+    clear: both;
+    content: " ";
+    height: 20px;
+}
 .clearfix50{
     clear: both;
     content: " ";
@@ -448,6 +453,9 @@ header .row1 > .left{
 header .row2{
     float:right;
     width: 85%;
+}
+img{
+    max-width:100%;
 }
 .menu_block{
     height:77px;
@@ -1075,9 +1083,15 @@ footer .right{
     background:rgba(0,0,0,0.61);
     height:500px;
 }
-footer #map-canvas2{
+footer #map-canvas3{
     position:absolute;
     z-index:-1;
+}
+.gal p span{
+    display:inline;
+}
+ul.culture li .right .box p a{
+    word-break: break-all;
 }
 footer .right p.y_info{
     color:#fffe86;
@@ -1104,7 +1118,9 @@ footer .right p.w_info span{
     background: -ms-linear-gradient(left,#f7f7f7,#f7f7f7 35%,white 35,white);
     padding-top:1px
 }
-
+.sec_span{
+    dispaly:none;
+}
 .m_search{
     display:none;
     font:30px 'AvenirNext-Bold';
@@ -1393,15 +1409,7 @@ section .search input[type=submit]{
     width:99%;
     position:relative;
 }
-.docs li.xls a,.docs li.xlsx a{
-    background:url('../img/xlsx.png')no-repeat left 5px;
-}
-.docs li.pdf a{
-    background:url('../img/pdf.png')no-repeat left 5px;
-}
-.docs li.docx a,.docs li.doc a{
-    background:url('../img/doc.png')no-repeat left 5px;
-}
+
 .docs li a span{
     position:absolute;
     right:0px;
@@ -2357,6 +2365,7 @@ table.c_l_u tr:last-child {
 table.c_l_u td {
     border: 1px solid #e5e5e5;
     padding: 25px;
+    word-break: break-word;
 }
 .clu_img {
     float: left;
@@ -3271,7 +3280,6 @@ table.sondaje td:last-child {
     background: url('../img/chat_dot_active.png') no-repeat center;
 }
 .left_block .chat .chat_dot.active {
-    background: url('../img/chat_dot.png') no-repeat center;
     display: block;
     width:18px;
     height: 61px;
@@ -3624,8 +3632,39 @@ ul.vice li .p_name {
     .wrap{
         width:980px;
     }
+    .left_block nav{
+        width:270px;
+    }
+    ul.culture li .right .box{
+        width:205px;
+    }
+    ul.culture li:after{
+        clear:both;
+        display: block;
+        content:'';
+    }
+    .personal {
+        width: 100%;
+    }
+    p.descr {
+        max-width: 380px;
+    }
+    ul.culture li{
+        padding-bottom: 10px;
+        height: auto;
+        display: block;
+    }
+    .left_block nav p {
+        padding: 0px 30% 0 3px;
+    }
     .page_top_header{
         width:100%;
+    }
+    ul.culture li .left.img{
+        display:none;
+    }
+    ul.culture li .right{
+        margin-left:0px;
     }
     article:nth-child(3n-1),.wrap.global article{
         margin:88px 55px 0px;
@@ -3634,6 +3673,10 @@ ul.vice li .p_name {
     article:nth-child(2n){
         float:right;
     }
+    .dcr_year {
+        width: 10%;
+    }
+
     header{
         height:400px;
     }
@@ -3745,6 +3788,41 @@ ul.vice li .p_name {
     .prefooter .row1_l .content, .prefooter .row1_r .content{
         max-height: 324px;
     }
+    .contact_r{
+        float:none;
+        width:100%;
+    }
+    .contact_f{
+        width:330px;
+        float:none;
+        margin-top:40px;
+
+    }
+    .left_block .chat .mn {
+        width: 28px;
+        margin-right: 8px;
+        background-size: 100%;
+    }
+    .left_block .chat .green,.left_block .chat .violet{
+        font-size:25px;
+    }
+    .left_block .chat .chat_dot{
+        width: 15px;
+        height: 61px;
+        background-size: 100%;        
+        background: url('../img/chat_dot.png') no-repeat center;
+    }
+    .contact_l .prp{
+        padding:0px 10px;
+    }
+    .contact_l .prp a{
+        padding-left:30px;
+        font: 13px 'AvenirNext-Bold';
+        line-height: 42px;
+    }
+    div#map-canvas2 {
+        height: 350px !important;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px){
     footer .left{
@@ -3754,8 +3832,31 @@ ul.vice li .p_name {
     footer .right,.dirs_menu *{
         display:none;
     }
+    .left_block nav span,.left_block nav .more{
+        display:none;
+    }
+    .page_top_header .top_back {
+        height: 100%;
+        width:100%;
+        max-width: none;
+    }
+    div#map-canvas2 {
+        height: 350px !important;
+    }
     footer .f_menu ul li a{
         line-height:64px;
+    }
+    .left_block nav{
+        width:100%;
+        padding:0px;
+        height: auto;
+        border-bottom: 2px solid #ececec;
+        margin-bottom: 0px;
+    }
+    .left_block  nav p{
+        font: 18px 'AvenirNext-Medium';
+        color: #595959;
+        padding: 15px 12px;
     }
     footer .f_menu{
         height:64px;
@@ -3765,6 +3866,10 @@ ul.vice li .p_name {
         font:30px 'AvenirNext-Bold';
         color:#000;
     }
+    .dcr_year {
+        width: 10%;
+    }
+
     article,article:nth-child(3n-1){
         float:none;
         margin-left: auto;
@@ -3779,6 +3884,13 @@ ul.vice li .p_name {
     }
     footer{
         height:430px;
+    }
+
+    .personal {
+        width: 100%;
+    }
+    p.descr {
+        max-width: 380px;
     }
     footer .right p.y_info{
         font: 30px 'AvenirNext-DemiBold';
@@ -3831,6 +3943,18 @@ ul.vice li .p_name {
     .page_top_content .row1 > .left{
         width:25%;        
     }
+    .contact_r,.contact_f{
+        width:100%;
+        float:none;
+    }
+    .contact_r .prp{
+        width:auto;
+        display:inline-block;
+    }
+    .contact_f{
+        width:330px;
+        margin-top:40px;
+    }
     .l_box {
         padding: 8px 35px 5px 23px;
         max-width: 150px;
@@ -3864,6 +3988,25 @@ ul.vice li .p_name {
         top: 17px;
         content: url('../img/cln_arrow-r.png');
     }
+    ul.culture li .right .box{
+        width:205px;
+    }
+    ul.culture li:after{
+        clear:both;
+        display: block;
+        content:'';
+    }
+    ul.culture li{
+        padding-bottom: 10px;
+        height: auto;
+        display: block;
+    }
+    ul.culture li .left.img{
+        display:none;
+    }
+    ul.culture li .right{
+        margin-left:0px;
+    }
 }
 @media only screen and (max-width: 767px){
     .page_header{
@@ -3877,12 +4020,118 @@ ul.vice li .p_name {
     .wrap{
         width:580px;
     }
+    .com_table thead tr{
+        height:50px;
+        line-height:normal;
+    }
+
+    .personal {
+        width: 100%;
+    }
+    p.descr {
+        max-width: 350px;
+    }
+    .com_box .title{
+        font: 22px 'AvenirNext-Bold';
+    }
+    .dcr_year {
+        width: 100%;
+    }
+    .clu_nume {
+        font: 17px 'AvenirNext-DemiBold';
+    }
+    .clu_partid {
+        font: 15px 'AvenirNext-Regular';
+    }
+
+    .contact_r,.contact_f{
+        width:100%;
+        float:none;
+    }
+    .contact_r .prp{
+        width:auto;
+        display:inline-block;
+    }
+    .contact_f{
+        width:330px;
+        margin-top:40px;
+    }
+    ul.culture li .right .box{
+        width:190px;
+        min-width:0px;
+    }
+    ul.culture li:after{
+        clear:both;
+        display: block;
+        content:'';
+    }
+    ul.culture li{
+        padding-bottom: 10px;
+        height: auto;
+        display: block;
+    }
+    ul.culture li .left.img{
+        display:none;
+    }
+    ul.culture li .right{
+        margin-left:0px;
+    }
+    .cns_locali thead tr td {
+        font: 15px 'AvenirNext-Bold';
+    }
+    .clu_img img {
+        max-width: 120px;
+    }
+    .clu_cont{
+        max-width: none;
+        width:73%;
+    }
+    .cns_locali thead tr td:last-child{
+        display:none;
+    }
+    .sec_span{
+        display:block;
+        color:#008d74;
+        font:15px 'AvenirNext-Bold';
+        text-transform: uppercase;
+    }
+    .cns_locali  tr td,.cns_locali  tr,.c_l_u  tr,.cns_locali  ,.cns_locali td:first-child, .c_l_u td:first-child,.c_l_u td,.cns_locali thead{
+        display:block;
+        width:100%;
+    }
+    .c_l_u td:first-child:after{
+        clear:both;
+        display: block;
+        content:'';
+    }
+    form .selectboxit-container .selectboxit{
+        width: 269px !important;
+    }
+    .form .ftb{
+        font: 22px 'AvenirNext-Bold';
+    }
+    p{
+        font: 15px 'AvenirNext-Regular';
+    }
+    .com_box span,.tel ,.email a{
+        font: 15px 'AvenirNext-DemiBold';
+    }
+
+    .com_table tr td:first-child,.clu_img,.search{
+        display:none;
+    }
     footer .right,.top_back,.page_top_content .row2 ,.page_top_content .row1 > .right,.dirs_menu *,footer .left > .content{
         display:none;
     }
     footer .left,.page_top_content .row1 > .left{
         float:none;
         width:100%;
+    }
+    .left_block nav span,.left_block nav .more{
+        display:none;
+    }
+    .docs li a{
+        font: 15px 'AvenirNext-Medium';
     }
     .page_top_content .row1{
         margin:0px;
@@ -3917,7 +4166,21 @@ ul.vice li .p_name {
     section.global{
         background:#fff;
     }
-
+    .page_top_header .page_top_content{
+        position:static;
+    }
+    .left_block nav{
+        width:100%;
+        padding:0px;
+        height: auto;
+        border-bottom: 2px solid #ececec;
+        margin-bottom: 0px;
+    }
+    .left_block    nav p{
+        font: 18px 'AvenirNext-Medium';
+        color: #595959;
+        padding: 15px 12px;
+    }
     article{
         -webkit-box-shadow: 0px 1px 1px 0px rgba(238, 239, 244, 1);
         -moz-box-shadow:    0px 1px 1px 0px rgba(238, 239, 244, 1);
@@ -4031,9 +4294,39 @@ ul.vice li .p_name {
         font:25px 'AvenirNext-Bold';
         color:#000;
     }
+
+    div#map-canvas2 {
+        height: 300px !important;
+    }
+    ul.faq li a ,ul.faq li a span{
+        font: 19px 'AvenirNext-Medium';
+    }
+    .city_box .title {
+        font: 22px 'AvenirNext-Medium';
+    }
+    .city_box .info {
+        font: 16px 'AvenirNext-Regular';
+    }
+    .city_link a {
+        font: 15px 'AvenirNext-MediumItalic';
+    }
+
+    .right_block nav,.right_block nav:nth-child(2n){
+        margin:30px auto;
+        float:none;
+    }
 }
 
 @media only screen and (max-width: 639px){
+    .city_box .title {
+        font: 20px 'AvenirNext-Medium';
+    }
+    .city_link a {
+        font: 15px 'AvenirNext-MediumItalic';
+    }
+    .city_box .info {
+        font: 15px 'AvenirNext-Regular';
+    }
     .wrap{
         width:320px;
     }
@@ -4042,6 +4335,7 @@ ul.vice li .p_name {
     }
     .left_block .title{
         font: 24px 'AvenirNext-Bold';
+        padding:0px;
     }
     .left_block ul.menu > li > a {
         padding: 11px 12px;
@@ -4061,10 +4355,12 @@ ul.vice li .p_name {
         font: 15px 'AvenirNext-DemiBold';
         line-height: 43px;
     }
-    .pdf a, .docx a, .doc a, .xlsx a, .xls a{
+    .pdf a, .docx a, .doc a, .xlsx a, .xls a,.docs li a{
         padding: 0px 60px 0px 40px;
         font: 15px 'AvenirNext-Medium';
+        background-size: 7%;
     }
+
     .dcr_box ul li {
         padding-left: 15px;
     }
@@ -4217,11 +4513,30 @@ ul.vice li .p_name {
     .search_li li{
         padding:10px 0px;
     }
-
+    .com_table tbody tr td ,.com_table tr td:last-child,.com_table tbody tr {
+        display: block;
+        width: 100%;
+        text-align:left;
+        height:auto;
+    }
+    .com_table tbody tr {
+        padding:10px 0px;
+    }
+    .com_table tbody tr{
+        border-bottom:1px solid #efefef;
+    }
+    .com_table tbody tr td:nth-child(2){
+        font: 14px 'AvenirNext-DemiBold';
+    }
+    .com_table tbody tr:last-child{
+        border:0px;
+    }
     .m_search{
         font:26px 'AvenirNext-Bold';
     }
-
+    .com_table thead,.com_box span{
+        display:none;
+    }
     .dirs_menu a:last-child{
         display:block;
         font:20px 'AvenirNext-Bold';
@@ -4235,5 +4550,61 @@ ul.vice li .p_name {
         padding: 0px 20px;
         border: solid 20px transparent;
         width:100%;
+    }
+    .contact_r .prp a {
+        font: 13px 'AvenirNext-Bold';
+        line-height: 42px;
+    }
+    .contact_r .prp{
+        width:100%;
+        display:block;
+        padding:0px 10px;
+    }
+    .subt{
+        font: 22px 'AvenirNext-DemiBold';
+    }
+    .contact_r .map_info p:first-child{
+        font: 16px 'AvenirNext-Bold';
+    }
+    .contact_r .map_info p:last-child {
+        font: 15px 'AvenirNext-Regular';
+    }
+    ul.culture li{
+        padding-bottom:0px;
+    }
+    ul.culture li .right .box{
+        padding-bottom:10px;
+        width:100%;
+    }
+    ul.culture li .right >p {
+        font: 18px 'AvenirNext-DemiBold';
+    }
+    ul.culture li .right .box p, ul.culture li .right .box p a {
+        font: 14px 'AvenirNext-Medium';
+    }
+    ul.faq li a, ul.faq li a span {
+        font: 16px 'AvenirNext-Medium';
+    }
+    .city_box .img img {
+        max-width: 60px;
+    }
+    .city_box .img {
+        margin-right: 10px;
+        width: 60px;
+    }
+    .city_info{
+        width:78%;
+    }
+    .personal .left {
+        margin-left: 0px;
+        margin-top:15px;
+    }
+    .personal{
+        padding-bottom: 10px; 
+        border-bottom:2px solid #e5e5e5;
+        margin-bottom: 30px;
+    }
+    .function{
+        margin-top:10px;
     }
 }

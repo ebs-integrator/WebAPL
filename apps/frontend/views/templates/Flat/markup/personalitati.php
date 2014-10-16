@@ -11,6 +11,7 @@
                 <li><a href="javascript:;">Orașe înfrățite</a></li>
             </ul>
         </div>
+        <div class="resp_menu"></div>
         <div class="right_block">
             <div class="dirs_menu">
                 <a href="javascript:;">Principala »</a>
@@ -21,7 +22,7 @@
             </div>
             <div class="personal">
                 <div class="img">
-                    <img src="<?=res('assets/img/pers.png');?>">
+                    <img src="<?= res('assets/img/pers.png'); ?>">
                 </div>
                 <div class="left">
                     <p class="name">Nume</p>
@@ -32,7 +33,7 @@
             </div>
             <div class="personal">
                 <div class="img">
-                    <img src="<?=res('assets/img/pers.png');?>">
+                    <img src="<?= res('assets/img/pers.png'); ?>">
                 </div>
                 <div class="left">
                     <p class="name">Nume</p>
@@ -43,7 +44,7 @@
             </div>
             <div class="personal">
                 <div class="img">
-                    <img src="<?=res('assets/img/pers.png');?>">
+                    <img src="<?= res('assets/img/pers.png'); ?>">
                 </div>
                 <div class="left">
                     <p class="name">Nume</p>
@@ -54,7 +55,7 @@
             </div>
             <div class="personal">
                 <div class="img">
-                    <img src="<?=res('assets/img/pers.png');?>">
+                    <img src="<?= res('assets/img/pers.png'); ?>">
                 </div>
                 <div class="left">
                     <p class="name">Nume</p>
@@ -65,7 +66,7 @@
             </div>
             <div class="personal">
                 <div class="img">
-                    <img src="<?=res('assets/img/pers.png');?>">
+                    <img src="<?= res('assets/img/pers.png'); ?>">
                 </div>
                 <div class="left">
                     <p class="name">Nume</p>

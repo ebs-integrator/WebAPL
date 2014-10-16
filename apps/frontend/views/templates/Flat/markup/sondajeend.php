@@ -12,6 +12,7 @@
                 <li><a href="javascript:;">Sondaje on-line</a></li>
             </ul>
         </div>
+        <div class="resp_menu"></div>
         <div class="right_block">
             <div class="dirs_menu">
                 <a href="javascript:;">Principala »</a>

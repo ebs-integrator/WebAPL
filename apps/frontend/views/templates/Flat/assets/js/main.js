@@ -27,8 +27,7 @@ $(document).ready(function () {
 
     $('.resp_menu').click(function(){
         $('.resp_menu').toggleClass('active');
-        $('.left_block').toggle('slow');
-        $('.dirs_menu a:last-child').toggle('100');
+        $('.left_block,.dirs_menu a:last-child').toggle('slow');
     });
 
     $('.mh_button,.overlay3').click(function () {

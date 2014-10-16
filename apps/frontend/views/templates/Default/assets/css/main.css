@@ -4884,11 +4884,15 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
 
     section > .wrap .right.global{
-        margin:0px;
-        width:365px;
+        margin:0 auto;
+        width:780px;
+        float:none;
     }
     section > .wrap .left.global{
-        width:50%;
+        width:780px;
+        margin: 0 auto;
+        float: none;
+        clear: both;
     }
     .left.contact_r{
         display:none;
@@ -4898,6 +4902,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     .ccc_hidden .map_info p span{
         display:block;
+    }
+    section > .wrap .right.global{
+        float:left;
     }
     .ccc_hidden .map_info{
         padding-bottom: 10px;
@@ -5016,7 +5023,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         margin-top:20px;
     }
     section > .wrap .left article:nth-child(2n){
-        margin-left:0px;
+        margin-left:50px;
     }
 
     .city_link{
@@ -5952,6 +5959,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     .right_menu{
         width:100%;
+    }
+    section > .wrap > .right article, section > .wrap .right .doc, .right > article.news{
+        max-width:300px;
     }
     section > .wrap > .left,.c_title{
         width:100%;

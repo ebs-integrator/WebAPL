@@ -10,6 +10,7 @@
                 <li class="active"><a href="javascript:;">Orașe înfrățite</a></li>
             </ul>
         </div>
+        <div class="resp_menu"></div>
         <div class="right_block">
             <div class="dirs_menu">
                 <a href="javascript:;">Principala »</a>
@@ -21,7 +22,7 @@
             <div class="city">
                 <div class="city_box">
                     <div class="img">
-                        <img src="<?=res('assets/img/city.png');?>">
+                        <img src="<?= res('assets/img/city.png'); ?>">
                     </div>
                     <div class="city_info">
                         <p class="title">Mun. Piatra Neamț</p>
@@ -31,7 +32,7 @@
                 </div>
                 <div class="city_box">
                     <div class="img">
-                        <img src="<?=res('assets/img/city2.png');?>">
+                        <img src="<?= res('assets/img/city2.png'); ?>">
                     </div>
                     <div class="city_info">
                         <p class="title">Mun. Piatra Neamț</p>
@@ -41,7 +42,7 @@
                 </div>
                 <div class="city_box">
                     <div class="img">
-                        <img src="<?=res('assets/img/city3.png');?>">
+                        <img src="<?= res('assets/img/city3.png'); ?>">
                     </div>
                     <div class="city_info">
                         <p class="title">Mun. Piatra Neamț</p>
@@ -51,7 +52,7 @@
                 </div>
                 <div class="city_box">
                     <div class="img">
-                        <img src="<?=res('assets/img/city4.png');?>">
+                        <img src="<?= res('assets/img/city4.png'); ?>">
                     </div>
                     <div class="city_info">
                         <p class="title">Mun. Piatra Neamț</p>
@@ -61,7 +62,7 @@
                 </div>
                 <div class="city_box">
                     <div class="img">
-                        <img src="<?=res('assets/img/city5.png');?>">
+                        <img src="<?= res('assets/img/city5.png'); ?>">
                     </div>
                     <div class="city_info">
                         <p class="title">Mun. Piatra Neamț</p>
@@ -71,7 +72,7 @@
                 </div>
                 <div class="city_box">
                     <div class="img">
-                        <img src="<?=res('assets/img/city6.png');?>">
+                        <img src="<?= res('assets/img/city6.png'); ?>">
                     </div>
                     <div class="city_info">
                         <p class="title">Mun. Piatra Neamț</p>

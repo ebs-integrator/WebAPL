@@ -35,7 +35,7 @@
 
     </div>   
     <div class="right">
-        <div id="map-canvas2" style="width:100%; height:500px;"></div>
+        <div id="map-canvas3" style="width:100%; height:500px;"></div>
         <div class="content">
             <p class="y_info">Adresa primăriei Orașului Strășeni</p>
             <p class="w_info">

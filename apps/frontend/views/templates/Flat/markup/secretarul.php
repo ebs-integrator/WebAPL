@@ -13,6 +13,7 @@
                 <li><a href="javascript:;">Arhiva deciziilor anterioare </a></li>
             </ul>
         </div>
+        <div class="resp_menu"></div>
         <div class="right_block">
             <div class="dirs_menu">
                 <a href="javascript:;">Principala »</a>
@@ -20,7 +21,7 @@
                 <a href="javascript:;">Secretarul consiliului local</a>
             </div>
             <div class="sec_details">
-                <img src="<?=res('assets/img/primar.png');?>">
+                <img src="<?= res('assets/img/primar.png'); ?>">
                 <div class="sec_label">
                     <table>
                         <tr><td>Nume, prenume:</td><td><p class="sec_name">ION  MORARESCU</p></td></tr>

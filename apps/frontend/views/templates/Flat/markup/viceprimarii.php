@@ -13,6 +13,7 @@
                 <li><a href="javascript:;">Noutăți  </a></li>
             </ul>
         </div>
+        <div class="resp_menu"></div>
         <div class="right_block">
             <div class="dirs_menu">
                 <a href="javascript:;">Principala »</a>
@@ -24,7 +25,7 @@
             <ul class="vice">
                 <li>
                     <div class="img">
-                        <img width="210" src="<?=res('assets/img/pers.png');?>">
+                        <img width="210" src="<?= res('assets/img/pers.png'); ?>">
                     </div>
                     <div class="left">
                         <a href="javascript:;">
@@ -41,7 +42,7 @@
                 </li>
                 <li>
                     <div class="img">
-                        <img width="210" src="<?=res('assets/img/primar.png');?>">
+                        <img width="210" src="<?= res('assets/img/primar.png'); ?>">
                     </div>
                     <div class="left">
                         <a href="javascript:;">
@@ -59,7 +60,7 @@
                 </li>
                 <li>
                     <div class="img">
-                        <img width="210" src="<?=res('assets/img/b_news.png');?>">
+                        <img width="210" src="<?= res('assets/img/b_news.png'); ?>">
                     </div>
                     <div class="left">
                         <a href="javascript:;">
