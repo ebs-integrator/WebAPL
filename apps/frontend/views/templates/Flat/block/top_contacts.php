@@ -39,7 +39,7 @@
             <p class="street"><?= varlang('city'); ?></p>
         </div>
         <div class="right map">
-            ico
+            <div id="map-canvas" style="width: 158px; height: 119px;"></div>
         </div>
         <div class="clearfix"></div>
         <p class="form_title"><?= varlang('scrieti-direct'); ?></p>

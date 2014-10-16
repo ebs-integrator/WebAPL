@@ -1,15 +1,16 @@
 <section>
-    <?= View::make('sections.elements.breadcrumbs'); ?>
     <div class="wrap">
-        <p class='c_title'><?= $top_title; ?></p>
-        <div class="right">
+        <div class="left_block">
             <?=
             View::make('sections.pages.blocks.right-menu')->with(array(
-                'colevels' => $colevels
+                'colevels' => $colevels,
+                'top_title' => $top_title
             ));
             ?>
         </div>
-        <div class='left'>
+        <div class="right_block">
+            <?= View::make('sections.elements.breadcrumbs'); ?>
+
             <?= Core\APL\Actions::call('page_top_container', $page); ?>
 
             <?= $page->text; ?>
@@ -22,16 +23,19 @@
             ));
             ?>
 
-            <?php 
-            if ($page->have_socials) { 
-                echo View::make('sections.elements.socials', array('url' => $page_url));  
-            } 
+            <?php
+            if ($page->have_socials) {
+                echo View::make('sections.elements.socials', array('url' => $page_url));
+            }
             if ($page->have_comments) {
-               echo View::make('sections.elements.comments');
+                echo View::make('sections.elements.comments');
             }
             ?>
         </div>
-        <div class='clearfix'></div>
-        <div class='hr_grey'></div>
     </div>
+
 </section>
+
+
+
+
