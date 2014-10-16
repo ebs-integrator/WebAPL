@@ -2,16 +2,16 @@
     <div class="top">
         <div class="left firechat-photo" >
             <div class="photo">
-                <img src="<?=res('assets/img/small_p.png');?>">
+                <img src="<?= res('assets/img/small_p.png'); ?>">
             </div>
         </div>
 
         <div class="right">
             <div class="buttons">
-                <button class="firechat-hide"><img src="<?=res('assets/img/save.png');?>"></button>
-                <button class="firechat-show" style="display: none;"><img src="<?=res('assets/img/unsave.png');?>"></button>
+                <button class="firechat-hide"><img src="<?= res('assets/img/save.png'); ?>"></button>
+                <button class="firechat-show" style="display: none;"><img src="<?= res('assets/img/unsave.png'); ?>"></button>
 
-                <button class="firechat-close"><img src="<?=res('assets/img/close.png');?>"></button>
+                <button class="firechat-close"><img src="<?= res('assets/img/close.png'); ?>"></button>
             </div>
         </div>
         <div class="right firechat-name">
@@ -54,6 +54,7 @@
                 <li><a href="javascript:;">Întrebări frecvente </a></li>
             </ul>
         </div>
+        <div class="resp_menu"></div>
         <div class="right_block">
             <div class="dirs_menu">
                 <a href="javascript:;">Principala »</a>

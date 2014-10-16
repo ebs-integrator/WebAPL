@@ -14,6 +14,7 @@
                 <li><a href="javascript:;">Arhiva deciziilor anterioare </a></li>
             </ul>
         </div>
+        <div class="resp_menu"></div>
         <div class="right_block">
             <div class="dirs_menu">
                 <a href="javascript:;">Principala »</a>
@@ -44,7 +45,7 @@
                             </div>
                         </td>
                         <td>
-                            <div class="sec_span">secretarul</div>
+                            <div class="sec_span">Sectorul</div>
                             <p>fgh 11111111dfghdfg dfgdf gdfgsdf gsdgsdfnvbnc vbnvnvbcv</p>
                         </td>
                     </tr>
@@ -92,7 +93,7 @@
                             </div>
                         </td>
                         <td>
-                            <div class="sec_span">secretarul</div>
+                            <div class="sec_span">Sectorul</div>
                             <p>fgh 11111111dfghdfg dfgdf gdfgsdf gsdgsdfnvbnc vbnvnvbcv</p>
                         </td>
                     </tr>

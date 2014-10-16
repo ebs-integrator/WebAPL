@@ -11,6 +11,7 @@
                 <li><a href="javascript:;">Comisia socială</a></li>
             </ul>
         </div>
+        <div class="resp_menu"></div>
         <div class="right_block">
             <div class="dirs_menu">
                 <a href="javascript:;">Principala »</a>
@@ -23,7 +24,7 @@
                 <hr>
                 <p class="subtitle"></p>
                 <span>Comisia pentru prognoză şi programe de dezvoltare economică, buget, finanţe, agricultură, administrarea domeniului public şi privat al municipiului:
-</span>
+                </span>
                 <table class="com_table">
                     <thead>
                         <tr><td>NR.</td><td>Nume Prenume</td><td>Functia</td><td>Apartenenta politică</td></tr>
@@ -35,7 +36,7 @@
                         <tr><td>4</td><td>Nume Prenume</td><td>        Presedinte   </td><td>USL</td></tr>
                         <tr><td>5</td><td>Nume Prenume</td><td>        Presedinte   </td><td>USL </td></tr>
                         <tr><td>6</td><td>Nume Prenume</td><td>        Presedinte   </td><td> USL</td></tr>
-                        
+
                     </tbody>
                 </table>
             </div>

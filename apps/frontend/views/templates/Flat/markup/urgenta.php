@@ -9,6 +9,7 @@
                 <a href="javascript:;" class="l_map">cum ne găsiți</a>
             </div>
         </div>
+        <div class="resp_menu"></div>
         <div class="right_block">
             <div class="dirs_menu">
                 <a href="javascript:;">Principala »</a>

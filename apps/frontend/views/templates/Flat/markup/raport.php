@@ -13,6 +13,7 @@
                 <li><a href="javascript:;">Noutăți  </a></li>
             </ul>
         </div>
+        <div class="resp_menu"></div>
         <div class="right_block">
             <div class="dirs_menu">
                 <a href="javascript:;">Principala »</a>
@@ -20,7 +21,7 @@
                 <a href="javascript:;">Primarul »</a>  
                 <a href="javascript:;">Raportul anual al primarului</a>
             </div>
-           
+
             <ul class="dcr">
                 <li class=""><a href="javascript:;">Declaratii 2010<span class="more_dot"></span></a>
                     <div class="dcr_box" style="display: none;">
@@ -96,7 +97,7 @@
                     </div>
                 </li>
             </ul>
-            
+
 
 
         </div>
