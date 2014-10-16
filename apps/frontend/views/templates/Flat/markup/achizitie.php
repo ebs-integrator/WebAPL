@@ -11,6 +11,7 @@
                 <li><a href="javascript:;">Stagii și voluntariat în cadrul primăriei</a></li>
             </ul>
         </div>
+        <div class="resp_menu"></div>
         <div class="right_block">
             <div class="dirs_menu">
                 <a href="javascript:;">Principala »</a>
@@ -29,7 +30,7 @@
                 </div>
 
                 <div class="stats">
-                    <img src="<?=res('assets/img/stat_off.png');?>" class="stat_active">
+                    <img src="<?= res('assets/img/stat_off.png'); ?>" class="stat_active">
                     <div class="stat_info">
                         <span>Statut</span>
                         <span>Ofertă expirată</span>

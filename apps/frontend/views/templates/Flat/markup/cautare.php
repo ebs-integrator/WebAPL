@@ -10,6 +10,7 @@
                 <a href="javascript:;" class="l_map">cum ne găsiți</a>
             </div>
         </div>
+        <div class="resp_menu"></div>
         <div class="right_block">
             <div class="dirs_menu">
                 <a href="javascript:;">Principala »</a>
@@ -34,7 +35,7 @@
                 <ul class="search_li">
                     <li>
                         <a href="javascript:;">
-                            <div class="search_img"><img src="<?=res('assets/img/edu2.png');?>"></div>
+                            <div class="search_img"><img src="<?= res('assets/img/edu2.png'); ?>"></div>
                             <p>
                                 <span>Democrații vor face un anunț la ora 18:00 - Unimedia</span>
                                 2 Iul 2014 ... Democrații vor face un anunț la ora 18:00. Foto: privesc.eu. Biroul Permanent extins al PDM se întrunește astăzi, la orele 17.00. 
@@ -43,7 +44,7 @@
                     </li>
                     <li>
                         <a href="javascript:;">
-                            <div class="search_img"><img src="<?=res('assets/img/edu3.png');?>"></div>
+                            <div class="search_img"><img src="<?= res('assets/img/edu3.png'); ?>"></div>
                             <p>
                                 <span>ANUNŢ pentru presă</span>
                                 ANUNŢ pentru presă. Нравится. Mâine, 25 septembrie, la sediul central al PDM din strada Tighina, cu începere de la ora 12:00 va fi inaugurat Departamentul
@@ -70,7 +71,7 @@
                     </li>
                     <li>
                         <a href="javascript:;">
-                            <div class="search_img"><img src="<?=res('assets/img/edu.png');?>"></div>
+                            <div class="search_img"><img src="<?= res('assets/img/edu.png'); ?>"></div>
                             <p>
                                 <span>Efectul vizitei lui Merkel: „Leoni” ar putea investi în R. Moldova</span>
                                 ANUNŢ pentru presă. Нравится. Mâine, 25 septembrie, la sediul central al PDM

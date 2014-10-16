@@ -18,6 +18,7 @@
                 <li><a href="javascript:;">Întrebări frecvente / Modele de documente / Ghid de taxe și impozitele </a></li>
             </ul>
         </div>
+        <div class="resp_menu"></div>
         <div class="right_block">
             <div class="dirs_menu">
                 <a href="javascript:;">Principala »</a>

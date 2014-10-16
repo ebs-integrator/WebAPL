@@ -11,6 +11,7 @@
                 <li><a href="javascript:;">Stagii și voluntariat în cadrul primăriei</a></li>
             </ul>
         </div>
+        <div class="resp_menu"></div>
         <div class="right_block">
             <div class="dirs_menu">
                 <a href="javascript:;">Principala »</a>
@@ -25,7 +26,7 @@
                 <div class="hr_dbl"></div>
                 <div class="left">
                     <div class="img">
-                        <img src="<?=res('assets/img/b_news.png');?>" width="347">
+                        <img src="<?= res('assets/img/b_news.png'); ?>" width="347">
                     </div>
 
                 </div>

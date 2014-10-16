@@ -13,6 +13,7 @@
                 <li><a href="javascript:;">Martie 2014</a></li>
             </ul>
         </div>
+        <div class="resp_menu"></div>
         <div class="right_block">
             <div class="dirs_menu">
                 <a href="javascript:;">Principala »</a>
@@ -24,9 +25,9 @@
                 <div class="hr_dbl"></div>
                 <div class="left">
                     <div class="img">
-                        <img src="<?=res('assets/img/b_news.png');?>" width="347">
+                        <img src="<?= res('assets/img/b_news.png'); ?>" width="347">
                     </div>
-                    
+
                 </div>
                 <div class="right">
                     <p class="info">Lorem Ipsum&nbsp;este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective. Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia electronică practic neschimbată. A fost popularizată în anii '60 odată cu ieşirea colilor Letraset care conţineau pasaje&nbsp;
@@ -41,9 +42,9 @@
                 <div class="hr_dbl"></div>
                 <div class="left">
                     <div class="img">
-                        <img src="<?=res('assets/img/b_news.png');?>" width="347">
+                        <img src="<?= res('assets/img/b_news.png'); ?>" width="347">
                     </div>
-                    
+
                 </div>
                 <div class="right">
                     <p class="info">Lorem Ipsum&nbsp;este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective. Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia electronică practic neschimbată. A fost popularizată în anii '60 odată cu ieşirea colilor Letraset care conţineau pasaje&nbsp;
@@ -58,9 +59,9 @@
                 <div class="hr_dbl"></div>
                 <div class="left">
                     <div class="img">
-                        <img src="<?=res('assets/img/b_news.png');?>" width="347">
+                        <img src="<?= res('assets/img/b_news.png'); ?>" width="347">
                     </div>
-                    
+
                 </div>
                 <div class="right">
                     <p class="info">Lorem Ipsum&nbsp;este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective. Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia electronică practic neschimbată. A fost popularizată în anii '60 odată cu ieşirea colilor Letraset care conţineau pasaje&nbsp;

@@ -20,6 +20,7 @@
                         Ghid de completare</a></li>
             </ul>
         </div>
+        <div class="resp_menu"></div>
         <div class="right_block">
             <div class="dirs_menu">
                 <a href="javascript:;">Principala »</a>
@@ -61,7 +62,7 @@
                         <a href="https://twitter.com/" class="twitter-share-button" >Tweet</a>
                     </td>
                     <td>
-                    <div id="ok_shareWidget"></div>                       
+                        <div id="ok_shareWidget"></div>                       
 
                     </td>
                 </tr>
