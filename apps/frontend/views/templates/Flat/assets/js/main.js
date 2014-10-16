@@ -25,7 +25,11 @@ $(document).ready(function () {
     $('.l_a.m_t_n').css('min-height', ($(window).height() - 413));
     $('.menu_content').height($(window).height() - 83);
 
-    
+    $('.resp_menu').click(function(){
+        $('.resp_menu').toggleClass('active');
+        $('.left_block').toggle('slow');
+        $('.dirs_menu a:last-child').toggle('100');
+    });
 
     $('.mh_button,.overlay3').click(function () {
         $('.mini_header .content').toggleClass('hidden');
