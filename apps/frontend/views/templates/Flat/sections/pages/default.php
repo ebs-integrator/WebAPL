@@ -9,6 +9,7 @@
             ));
             ?>
         </div>
+        <div class="resp_menu"></div>
         <div class="right_block <?=$page->view_mod;?>">
             <?= View::make('sections.elements.breadcrumbs'); ?>
 

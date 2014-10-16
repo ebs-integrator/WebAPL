@@ -3,7 +3,7 @@
         <?php foreach ($complaints as $item) { ?>
             <li>
                 <a href='javascript:;'>
-                    <span><?= date('Y-m-d', strtotime($item['date_created'])); ?><img src="<?= res('assets/img/p_gr_arrow.png'); ?>"></span>
+                    <span><?= date('Y-m-d', strtotime($item['date_created'])); ?></span>
                     <p class="compl_title"><?= $item['title']; ?></p>
                     <p class="compl_info">
                         <?= $item['text']; ?>

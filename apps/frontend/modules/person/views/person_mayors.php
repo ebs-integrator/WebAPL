@@ -11,8 +11,7 @@
                 </div>
                 <div class="left">
                     <a href="<?= $page_url; ?>/?item=<?= $person->person_id; ?>">
-                        <p class="name"><?= $person->first_name; ?></p>
-                        <p class="p_name"><?= $person->last_name; ?></p>
+                        <p class="name"><?= $person->first_name; ?>  <span class="p_name"><?= $person->last_name; ?></span></p>
                     </a>
                     <p class="tel"><?= $person->phone; ?></p>
                     <p class="email"><a href="mailto:<?= $person->email; ?>" target="_blank"><?= $person->email; ?></a></p>
