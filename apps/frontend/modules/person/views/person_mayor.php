@@ -8,19 +8,37 @@ foreach ($groups as $group) {
                     <img src='<?= url($person->path); ?>'>
                 <?php } ?>
             </div>
-            <p class="vp_name"><?= $person->first_name; ?> <?= $person->last_name; ?></p>
-            <span class='quote'><?= $person->motto; ?></span>
+            <p class="subt"><?= $person->first_name; ?> <?= $person->last_name; ?></p>
+            <span class="quote"><?= $person->motto; ?></span>
+
             <?php if ($person->for_audience) { ?>
-                <button class="home_chat firechat-start <?= $person->for_audience ? 'active firechat-start-with' : ''; ?>" data-personid="<?= $person->person_id; ?>">
-                    <span class="pot"></span>
-                    <span class="pct">
+                <button class="home_chat firechat-start <?= $person->for_audience ? 'active firechat-start-with' : ''; ?>" data-personid="<?= $person->person_id; ?>" >
+                    <div class="pct">
                         <p><?= varlang('discuta'); ?> <span><?= varlang('online'); ?></span></p>
-                        <span><?= $person->for_audience ? varlang('online') : varlang('offline'); ?></span>
-                    </span>
+                    </div>
                 </button>
             <?php } ?>
             <div class='clearfix'></div>
         </div>
+
+        <div class="clearfix50"></div>
+
+        <ul class="dcr">
+            <?php foreach ($person->posts as $folder) { ?>
+                <li><a href='javascript:;'><?= $folder->title; ?><span class="more"></span></a>
+                    <div class='dcr_box'>
+                        <ul>
+                            <?php foreach ($folder->docs as $doc) { ?>
+                                <li class="<?=$doc->extension;?>">
+                                    <a href="<?= url($doc->path); ?>"><?= $doc->name; ?> <span class="dcr_dwnl"></span></a>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                </li>
+            <?php } ?>
+        </ul>
+
         <div class="bgr">
             <div class='info'> 
                 <ul>
@@ -59,22 +77,6 @@ foreach ($groups as $group) {
             </div>
 
         </div>
-        <ul class="dcr">
-            <?php foreach ($person->posts as $folder) { ?>
-                <li><a href='javascript:;'><?= $folder->title; ?><span class="more"></span></a>
-                    <div class='dcr_box'>
-                        <ul>
-                            <?php foreach ($folder->docs as $doc) { ?>
-                                <li class="<?= $doc->extension; ?>">
-                                    <span><a href="<?= url($doc->path); ?>"><?= $doc->name; ?></a></span>
-                                    <a href="<?= url($doc->path); ?>" class="dcr_dwnl"></a>
-                                </li>
-                            <?php } ?>
-                        </ul>
-                    </div>
-                </li>
-            <?php } ?>
-        </ul>
         <?php
     }
 }

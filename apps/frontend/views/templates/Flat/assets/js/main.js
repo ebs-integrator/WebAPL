@@ -115,8 +115,8 @@ $(document).ready(function () {
         var block = $(this).closest(".search_files");
         var query = block.find(".search_input").val();
 
-        block.find(".mda li").hide();
-        block.find('.mda li span:contains("' + query + '")').closest("li").show();
+        block.find(".docs li").hide();
+        block.find('.docs li a:contains("' + query + '")').closest("li").show();
     });
 
     $("#contact_top_form").submit(function (e) {

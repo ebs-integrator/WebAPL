@@ -13,11 +13,11 @@
                 <?php } ?>
             </select>
             <label><?= varlang('name-last-name'); ?> * </label>
-            <input type="text" name="<?= varlang('name-last-name'); ?>" >
+            <input type="text" name="name" >
             <label><?= varlang('telefon'); ?> *</label>
-            <input type="text" name="<?= varlang('telefon'); ?>" >  
+            <input type="text" name="phone" >  
             <label><?= varlang('email'); ?> *</label>
-            <input type="text" name="<?= varlang('email'); ?>" >  
+            <input type="text" name="email" >  
             <label><?= varlang('cod-verificare'); ?> *</label>
             <input class="code" name="capcha" type="text">
             <img src="<?= SimpleCapcha::make('person_subscribe'); ?>" height="31">

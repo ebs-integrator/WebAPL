@@ -42,9 +42,8 @@ foreach ($groups as $group) {
                                 <div class='dcr_box'>
                                     <ul>
                                         <?php foreach ($folder->docs as $doc) { ?>
-                                            <li class="<?= $doc->extension; ?>">
-                                                <span><a href="<?= url($doc->path); ?>"><?= $doc->name; ?></a></span>
-                                                <a href="<?= url($doc->path); ?>" class="dcr_dwnl"></a>
+                                            <li class="<?=$doc->extension;?>">
+                                                <a href="<?= url($doc->path); ?>"><?= $doc->name; ?> <span class="dcr_dwnl"></span></a>
                                             </li>
                                         <?php } ?>
                                     </ul>

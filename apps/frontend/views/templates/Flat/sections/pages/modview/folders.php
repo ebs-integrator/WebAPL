@@ -1,13 +1,12 @@
 <ul class="dcr">
     <?php foreach ($posts as $item) { ?>
-        <li><a href='javascript:;'><?= $item->title; ?></a>
-            <div class='dcr_box'>
+        <li><a href='javascript:;'><?= $item->title; ?><span class="more_dot"></span></a>
+            <div class='dcr_box' style="display: none;">
                 <?= $item->text; ?>
                 <ul>
                     <?php foreach ($item->docs as $file) { ?>
                         <li class="<?= $file->extension; ?>">
-                            <span><a href="<?=url($file->path);?>"><?= $file->name; ?></a></span>
-                            <a href="<?=url($file->path);?>" class="dcr_dwnl"></a>
+                            <a href="<?=url($file->path);?>"><?= $file->name; ?> <span class="dcr_dwnl"></span></a>
                         </li>
                     <?php } ?>
                 </ul>

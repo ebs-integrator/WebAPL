@@ -1,12 +1,10 @@
-<ul class="prom">
-    <?php foreach ($posts as $item) { ?>
-        <li>
-            <a href="<?= $item['url']; ?>">
-                <p class="ttl"><?= $item->title; ?></p>
-                <p class="info"><?= Str::words(strip_tags($item->text), 40); ?></p>
-            </a>
-        </li>
-    <?php } ?>
-</ul>
-
+<?php foreach ($posts as $item) { ?>
+    <nav>
+        <a href="<?= $item['url']; ?>">
+            <p><?= $item->title; ?></p>
+            <span><?= Str::words(strip_tags($item->text), 40); ?></span>
+            <div class="more"></div>
+        </a>
+    </nav>
+<?php } ?>
 <div class="clearfix"></div>
