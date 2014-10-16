@@ -1186,6 +1186,9 @@ section{
     background: -ms-linear-gradient(left,#f7f7f7,#f7f7f7 35%,white 35,white);
     max-width: 2850px;
 }
+table.plcu table tr:last-child > td{
+    border-bottom:0px; 
+}
 section .left_block{
     float:left;
     width:357px;
@@ -1319,7 +1322,7 @@ h2.colored{
 nav p{
     color:#008d74;
     font:24px "AvenirNext-Bold";
-    padding:3px 50% 0 3px;
+    padding:3px 5px 0 3px;
     line-height: 27px;
 }
 
@@ -1334,6 +1337,7 @@ nav{
 nav > a{
     display:block;
     overflow:hidden;
+    max-height: 110px;
 }
 nav span{
     display:block;
@@ -1701,7 +1705,7 @@ ul.faq li p:last-child{
     color: #4b4b4b;
     margin: 7px 0;
 }
-.av.pink p span {
+.av.green p span {
     font:15px  'AvenirNext-BoldItalic';
     color: #ff6477;
 }
@@ -2719,6 +2723,7 @@ table.plcu > tbody > tr > td, table.plcu > tbody > tr > th {
     text-align: left;
     padding: 30px;
 }
+
 table.plcu table {
     width: 100%;
     border: 0px;
@@ -2772,7 +2777,7 @@ table.plcu .pdf{
 .l_a li a {
     width: 100%;
     display: block;
-    height: 50px;
+    min-height: 50px;
     border-bottom: 2px solid #f7f7f7;
 }
 .l_a li a span {
@@ -3654,13 +3659,19 @@ ul.vice li .p_name {
         display: block;
     }
     .left_block nav p {
-        padding: 0px 30% 0 3px;
+        padding: 0px 3px 0 3px;
     }
     .page_top_header{
         width:100%;
     }
     ul.culture li .left.img{
         display:none;
+    }
+    nav{
+        width: 286px;
+    }
+    .right_block nav:nth-child(2n) {
+        margin-right: 45px;
     }
     ul.culture li .right{
         margin-left:0px;
@@ -3704,7 +3715,7 @@ ul.vice li .p_name {
     .ldmbox input[type=text]{
         padding: 0 12px;
         width: 210px;
-        
+
     }
     section,.page_header {
         background: -webkit-linear-gradient(left,#f7f7f7,#f7f7f7 35%,white 35%,white);
@@ -3871,6 +3882,9 @@ ul.vice li .p_name {
     }
     footer .f_menu{
         height:64px;
+    }
+    table.plc > tbody > tr > td:first-child{
+        display:none;
     }
     .dirs_menu a:last-child{
         display:block;
@@ -4044,6 +4058,32 @@ ul.vice li .p_name {
 
     .personal {
         width: 100%;
+    }
+    .ldmbox{
+        padding: 30px 20px;
+    }
+    table.plc > tbody > tr > td:first-child{
+        display:none;
+    }
+    table.plc,table.plc tr,table.plc td,table.plc > tbody > tr > td:nth-child(2){
+        display: block;
+        width:100%;
+    }
+    table.plc{
+        padding:0px;
+    }
+    table.plc table tr td,table.plc table tr td p{
+        width: auto;
+        display: inline;
+    }
+    table.plc >tbody > tr{
+        border: 1px solid #e3e3e3;
+    }
+    table.plc >tbody > tr:nth-child(2){
+        background:#fbfbfb;
+    }
+    table.plc > tbody > tr > td,table.plc table td{
+        border:0px;
     }
     p.descr {
         max-width: 350px;
@@ -4332,6 +4372,16 @@ ul.vice li .p_name {
         margin:30px auto;
         float:none;
     }
+    .ldmbox .upload{
+        min-width: 140px;
+        width:auto;
+        margin: 0px 20px;
+    }
+    .ldmbox input[type=text]{
+        padding: 0 12px;
+        width: 200px;
+
+    }
 }
 
 @media only screen and (max-width: 639px){
@@ -4466,7 +4516,7 @@ ul.vice li .p_name {
     .av p {
         font: 13px 'AvenirNext-MediumItalic';
     }
-    .av.pink p span {
+    .av.green p span {
         font: 13px 'AvenirNext-BoldItalic';
     }
     table.atz, table.atz td{
@@ -4624,4 +4674,31 @@ ul.vice li .p_name {
     .function{
         margin-top:10px;
     }
+    .ldm_middle{
+        padding-right:0px;
+    }
+    .tda span{
+        display: block;
+    }
+    .ldmbox p.tda, .tda{
+        display: table-cell;
+        vertical-align: middle;
+        width:300px;
+        font: 14px 'AvenirNext-DemiBold';
+    }
+    .ldm_middle{
+        margin-top:20px;
+    }
+    .ldmbox .upload,.ldmbox input[type=text]{
+        float:none;
+        margin:10px 0px;
+    }
+    .l_a li a{
+        padding-bottom: 10px;
+    }
+
+    .l_a li a span{
+        margin-bottom: 10px;
+    }
+
 }
