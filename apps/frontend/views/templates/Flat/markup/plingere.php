@@ -55,7 +55,7 @@
                 <ul>
                     <li class="disabled"><span>«</span></li><li class="active"><span>1</span></li><li><a href="javascript:;">2</a></li><li><a href="javascript:;">3</a></li><li><a href="javascript:;">4</a></li><li><a href="javascript:;">5</a></li><li><a href="javascript:;" rel="next">»</a></li></ul>
             </div>
-            <div class="av pink">
+            <div class="av green">
                 <p><span>ATENTIE ! </span>Pentru a solicita o audiență la unul din functionar vă rugăm să completați formularul de cerere, iar noi vă vom comunica prin e-mail data și ora audienței programate.</p>
             </div>
             <div class="form compl">

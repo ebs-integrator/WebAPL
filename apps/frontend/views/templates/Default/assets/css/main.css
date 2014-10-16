@@ -6002,7 +6002,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .prp a{
         font-size:12px
     }
-    .right > article,section > .wrap .left article, section > .wrap .left article:nth-child(2n){
+    .right > article,section > .wrap .left article, section > .wrap .left article:nth-child(2n),section > .wrap > .right article{
         width:300px;
         margin:0 auto;
         margin-top:25px;
