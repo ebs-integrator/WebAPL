@@ -39,7 +39,7 @@
                         </td></tr>
                     <tr><th>Obiectivele proiectului</th><td><p>88888</p>
                         </td></tr>
-                    <tr><th>Valoarea totală a proiectului</th><td><table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+                    <tr><th>Valoarea totală a proiectului</th><td><table >
                                 <tbody>
                                     <tr>
                                         <td>vbx cvb cxv</td>

@@ -25,7 +25,7 @@
                 <p>Confirmarea programării audienței va fi facută telefonic la numărul de telefon indicat de dvs. 
                     o Receptionarea documentelor, care urmeaza a fi examinate în termen de – 1 ora, 24 ore, 5 zile si 15 zile, se va realize fara programare prealabila.</p>
             </div>
-            <div class="av pink">
+            <div class="av green">
                 <p><span>ATENTIE ! </span>Pentru a solicita o audiență la unul din functionar vă rugăm să completați formularul de cerere, iar noi vă vom comunica prin e-mail data și ora audienței programate.</p>
             </div>
             <div class="form green">
