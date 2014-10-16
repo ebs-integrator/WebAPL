@@ -1,5 +1,4 @@
-<div class="clearfix10"></div>
-<div class="clearfix10"></div>
+<div class="clearfix20"></div>
 
 <?php
 $link = URL::full();

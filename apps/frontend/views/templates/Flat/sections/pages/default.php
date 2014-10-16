@@ -4,11 +4,12 @@
             <?=
             View::make('sections.pages.blocks.right-menu')->with(array(
                 'colevels' => $colevels,
-                'top_title' => $top_title
+                'top_title' => $top_title,
+                'parent' => $parent
             ));
             ?>
         </div>
-        <div class="right_block">
+        <div class="right_block <?=$page->view_mod;?>">
             <?= View::make('sections.elements.breadcrumbs'); ?>
 
             <?= Core\APL\Actions::call('page_top_container', $page); ?>

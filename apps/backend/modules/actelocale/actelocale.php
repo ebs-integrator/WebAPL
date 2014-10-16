@@ -24,7 +24,12 @@ class Actelocale extends \Core\APL\ExtensionController {
         Actions::get('actelocale/create', array('before' => 'auth', array($this, 'create')));
         Actions::get('actelocale/edit/{id}', array('before' => 'auth', array($this, 'editact')));
 
+        Actions::get('actelocale/parse', array('before' => 'auth', array($this, 'parse')));
+
+
         Actions::post('actelocale/save', array('before' => 'auth', array($this, 'save')));
+
+
 
         Actions::register('construct_left_menu', array($this, 'left_menu_item'));
 
@@ -91,6 +96,35 @@ class Actelocale extends \Core\APL\ExtensionController {
             $item->emitent = Input::get('emitent');
             $item->save();
         }
+    }
+
+    public function parse() {
+        //
+
+        $datain = '01.10.2008';
+        $dataout = '08.10.2014';
+        $lang = 'ro';
+        $primarii = '182+152+158+153+154+155+156+157';
+
+
+
+        $data = file_get_contents("http://www.actelocale.md/actspublish.php?datain={$datain}&dataout={$dataout}&selPrimarie={$primarii}&selDomen=0&u=0&decizii=1&dispozitii=1&tablestyle=1&l={$lang}");
+
+        $dom = new \DOMDocument();
+        $dom->preserveWhiteSpace = false;
+        $dom->formatOutput = true;
+        @$dom->loadHTML($data);
+
+        $domList = $dom->getElementsByTagName("tr");
+
+        foreach ($domList as $tr) {
+            $subnodes = $tr->getElementsByTagName('td');
+            if ($subnodes->length === 6) {
+                
+            }
+        }
+
+        return [];
     }
 
 }
