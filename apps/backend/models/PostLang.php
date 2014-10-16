@@ -9,7 +9,7 @@ class PostLang extends Eloquent {
     public $timestamps = false;
 
     public static function uniqURI($id, $title = '') {
-        $uri = Core\APL\Actions::toAscii($title);
+        $uri = urigen($title);
 
         $clear_count = PostLang::whereRaw("uri like ? AND id <> ?", array($uri, $id))->count();
 

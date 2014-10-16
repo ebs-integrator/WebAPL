@@ -52,35 +52,32 @@ App::error(function(Exception $exception, $code)
 });
 
 
-Event::listen('APL.core.load', function() {
+$APLExtensions = array(
+    'Modules', 'Shortcodes', 'Template', 'Language', 'ExtensionController'
+);
 
+Event::listen('APL.core.load', function() use ($APLExtensions) {
     ClassLoader::addDirectories(base_path() . '/core/APL/');
-
-    $APLExtensions = array(
-        'Modules', 'Actions', 'Shortcodes', 'Template', 'Language', 'ExtensionController'
-    );
 
     foreach ($APLExtensions as $Extension) {
         if (!ClassLoader::load($Extension)) {
             throw new Exception("'{$Extension}' load failed!");
         }
-        
-        $full_class = "Core\APL\\".$Extension;
-        $full_class::__init();
     }
-    
-    //var_dump(get_declared_classes());
-    
-    class_alias('Core\APL\Modules', 'Modules');
-    class_alias('Core\APL\Actions', 'Actions');
-    class_alias('Core\APL\Shortcodes', 'Shortcodes');
-    class_alias('Core\APL\Template', 'Template');
-    class_alias('Core\APL\Language', 'Language');
+});
+
+Event::listen('APL.core.prepare', function () use ($APLExtensions) {
+    foreach ($APLExtensions as $Extension) {
+        $full_class = "Core\APL\\" . $Extension;
+        $full_class::__init();
+        class_alias($full_class, $Extension);
+    }
 });
 
 
 Event::listen('APL.modules.load', function() {
     Event::fire('APL.core.load');
+    Event::fire('APL.core.prepare');
 
     Module::where('enabled', '1')->get()->each(function($module) {
         ClassLoader::addDirectories(app_path() . '/modules/' . $module->extension . '/');

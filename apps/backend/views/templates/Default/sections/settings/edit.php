@@ -10,6 +10,13 @@
                 <input type='text' name='set[sitename]' placeholder="Nume site" class='form-control' value='<?= isset($setts['sitename']) ? $setts['sitename'] : ''; ?>'/>
             </td>
         </tr>
+        
+        <tr>
+            <th>Cache life (min)</th>
+            <td>
+                <input type='text' name='set[cachelife]' placeholder="Cache life" class='form-control' value='<?= isset($setts['cachelife']) ? $setts['cachelife'] : ''; ?>'/>
+            </td>
+        </tr>
 
         <?php
         $colorSchemes = \Core\APL\Template::getColorSchemes();

@@ -7,6 +7,8 @@ use Core\APL\Actions,
     Core\APL\Shortcodes,
     Input,
     Validator,
+        Route,
+        Event,
     JobRequestModel;
 
 class Jobrequest extends \Core\APL\ExtensionController {
@@ -20,8 +22,8 @@ class Jobrequest extends \Core\APL\ExtensionController {
         $this->loadClass(array('JobRequestModel'));
 
         Shortcodes::register('cv_form', array($this, 'cv_form'));
-        Actions::register('cv_form', array($this, 'cv_form'));
-        Actions::post('job/apply', array($this, 'cv_form_submit'));
+        Event::listen('cv_form', array($this, 'cv_form'));
+        Route::post('job/apply', array($this, 'cv_form_submit'));
     }
 
     public function cv_form($attr) {

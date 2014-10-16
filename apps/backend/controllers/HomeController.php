@@ -40,13 +40,13 @@ class HomeController extends BaseController {
         $this->layout = null;
 
         if ($oper == 'add') {
-            \Core\APL\Actions::call('language_created', $result);
+            Event::fire('language_created', $result);
             
             Post::addLang($result);
             VarLangModel::addLang($result);
         }
         if ($oper == 'del') {
-            \Core\APL\Actions::call('language_deleted', $id);
+            Event::fire('language_deleted', $id);
             
             Post::removeLang($id);
             VarLangModel::removeLang($id);

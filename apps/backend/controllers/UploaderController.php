@@ -45,7 +45,7 @@ class UploaderController extends BaseController {
             'module_id' => Input::get('module_id'),
             'module_name' => Input::get('module_name'),
             'num' => Input::get('num'),
-            'path' => Core\APL\Actions::toAscii(Input::get('upath'))
+            'path' => urigen(Input::get('upath'))
         );
         if (Input::hasFile('upload_file')) {
             $file = Input::file('upload_file'); 
@@ -53,7 +53,7 @@ class UploaderController extends BaseController {
             $extension = $file->getClientOriginalExtension();
             $name = $file->getClientOriginalName();
 
-            $filename = Core\APL\Actions::toAscii($name) . '_' . sha1(uniqid() . $name) . "." . $extension;
+            $filename = urigen($name) . '_' . sha1(uniqid() . $name) . "." . $extension;
 
             $uploadDir = Files::$upload_dir . ($data['path'] ? "/" . $data['path'] : '');
             $uploadFile = $uploadDir . "/" . $filename;

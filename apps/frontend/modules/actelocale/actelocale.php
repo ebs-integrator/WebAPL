@@ -6,6 +6,7 @@ use Core\APL\Actions,
     Core\APL\Template,
     PageView,
     Input,
+    Event,
     ActeLocaleModel;
 
 class Actelocale extends \Core\APL\ExtensionController {
@@ -18,7 +19,7 @@ class Actelocale extends \Core\APL\ExtensionController {
 
         $this->loadClass(array('ActeLocaleModel'));
 
-        Actions::register('home_right_top', array($this, 'loadHome'));
+        Event::listen('home_right_top', array($this, 'loadHome'));
 
         Template::registerViewMethod('page', 'acteList', 'Lista de actelocale', array($this, 'acteList'), true);
     }

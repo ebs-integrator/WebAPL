@@ -14,6 +14,7 @@ use Core\APL\Actions,
     Core\APL\Template,
     GalleryModel,
     Files,
+        Event,
     GalleryPost;
 
 class Gallery extends \Core\APL\ExtensionController {
@@ -28,7 +29,7 @@ class Gallery extends \Core\APL\ExtensionController {
 
         $this->loadClass(array('GalleryModel', 'GalleryPost'));
         // Register actions
-        Actions::register('page_bottom_container', array($this, 'page_bottom_gallery'));
+        Event::listen('page_bottom_container', array($this, 'page_bottom_gallery'));
     }
 
     public function page_bottom_gallery($page) {

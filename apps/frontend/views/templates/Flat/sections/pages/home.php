@@ -30,7 +30,7 @@
 </section>
 
 <div class="prefooter">
-    <?= Core\APL\Actions::call('home_right_top', $page); ?>
+    <?php Event::fire('home_right_top', $page); ?>
 
     <?php if (isset($home_posts) && count($home_posts)) { ?>
         <div class="row1_l">
@@ -63,5 +63,5 @@
         </div>
     <?php } ?>
 
-    <?= Core\APL\Actions::call('home_right_bottom', $page); ?>
+    <?php Event::fire('home_right_bottom', $page); ?>
 </div>

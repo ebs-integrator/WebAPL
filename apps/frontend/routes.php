@@ -41,3 +41,5 @@ Route::get('markup', function () {
 });
 Route::get('page/markup/{uri}', 'HomeController@page_markup')->where(array('uri' => '[A-Za-z0-9-]+'));
 Route::get('home/markup/{uri}', 'HomeController@home_markup')->where(array('uri' => '[A-Za-z0-9-]+'));
+
+Route::get('ccache', 'HomeController@clearcache');

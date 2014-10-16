@@ -36,10 +36,6 @@ class ExtensionController extends \BaseController {
                 });
     }
 
-    public static function edit() {
-        throw new Exception('Edit controller not defined');
-    }
-
     /**
      * Load class from module directory with ClassLoader
      * @param mixed $model

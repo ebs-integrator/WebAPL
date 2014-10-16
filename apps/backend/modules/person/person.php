@@ -16,7 +16,9 @@ use Core\APL\Actions,
     DB,
     Redirect,
     PersonAudienceModel,
-        User,
+    Route,
+    User,
+    Event,
     Exception;
 
 class Person extends \Core\APL\ExtensionController {
@@ -36,36 +38,36 @@ class Person extends \Core\APL\ExtensionController {
         ));
 
         // Set settings page
-        Actions::get('person/settings', array('before' => 'auth', array($this, 'settings')));
+        Route::get('person/settings', array('before' => 'auth', array($this, 'settings')));
 
         // Set others routes
-        Actions::get('person/list', array('before' => 'auth', array($this, 'list_persons')));
-        Actions::post('person/getlist', array('before' => 'auth', array($this, 'getlist')));
+        Route::get('person/list', array('before' => 'auth', array($this, 'list_persons')));
+        Route::post('person/getlist', array('before' => 'auth', array($this, 'getlist')));
 
-        Actions::post('person/getgroups', array('before' => 'auth', array($this, 'list_groups')));
-        Actions::get('person/editgroup/{id}', array('before' => 'auth', array($this, 'edit_group')));
-        Actions::post('person/savegroup', array('before' => 'auth', array($this, 'save_group')));
+        Route::post('person/getgroups', array('before' => 'auth', array($this, 'list_groups')));
+        Route::get('person/editgroup/{id}', array('before' => 'auth', array($this, 'edit_group')));
+        Route::post('person/savegroup', array('before' => 'auth', array($this, 'save_group')));
 
-        Actions::get('person/emptyperson', array('before' => 'auth', array($this, 'emptyperson')));
+        Route::get('person/emptyperson', array('before' => 'auth', array($this, 'emptyperson')));
 
-        Actions::get('person/form', array('before' => 'auth', array($this, 'form')));
-        Actions::get('person/form/{id}', array('before' => 'auth', array($this, 'form')));
+        Route::get('person/form', array('before' => 'auth', array($this, 'form')));
+        Route::get('person/form/{id}', array('before' => 'auth', array($this, 'form')));
 
-        Actions::post('person/save', array('before' => 'auth', array($this, 'save')));
-        Actions::post('person/save_lang', array('before' => 'auth', array($this, 'save_lang')));
-        Actions::post('person/save_dynamic_fields', array('before' => 'auth', array($this, 'save_dynamic_fields')));
+        Route::post('person/save', array('before' => 'auth', array($this, 'save')));
+        Route::post('person/save_lang', array('before' => 'auth', array($this, 'save_lang')));
+        Route::post('person/save_dynamic_fields', array('before' => 'auth', array($this, 'save_dynamic_fields')));
 
-        Actions::post('person/save_post_attach', array('before' => 'auth', array($this, 'save_post_attach')));
-        Actions::post('person/save_person_groups', array('before' => 'auth', array($this, 'save_person_groups')));
+        Route::post('person/save_post_attach', array('before' => 'auth', array($this, 'save_post_attach')));
+        Route::post('person/save_person_groups', array('before' => 'auth', array($this, 'save_person_groups')));
 
-        Actions::post('person/getaudiences', array('before' => 'auth', array($this, 'getaudiences')));
+        Route::post('person/getaudiences', array('before' => 'auth', array($this, 'getaudiences')));
 
         // Register new action
-        Actions::register('construct_left_menu', array($this, 'left_menu_item'));
-        Actions::register('page_attachment', array($this, 'page_group_attachment'));
+        Event::listen('construct_left_menu', array($this, 'left_menu_item'));
+        Event::listen('page_attachment', array($this, 'page_group_attachment'));
 
-        Actions::register('language_created', array($this, 'language_created'));
-        Actions::register('language_deleted', array($this, 'language_deleted'));
+        Event::listen('language_created', array($this, 'language_created'));
+        Event::listen('language_deleted', array($this, 'language_deleted'));
 
         Template::registerViewMethod('page', 'persons_list', 'Tabel persoane (nume, apartenenta, contacte, sector)', null, true);
         Template::registerViewMethod('page', 'group_with_persons', 'Grupe de persoane', null, true);
@@ -104,7 +106,7 @@ class Person extends \Core\APL\ExtensionController {
      */
     public function list_persons() {
         User::onlyHas('person-view');
-        
+
         $data = array(
             'module' => $this->module_name
         );
@@ -120,7 +122,7 @@ class Person extends \Core\APL\ExtensionController {
      */
     public function getlist() {
         User::onlyHas('person-view');
-        
+
         $jqgrid = new jQgrid('apl_person', 'person_id');
         echo $jqgrid->populate(function ($start, $limit) {
             return PersonLangModel::select('person_id', 'first_name', 'last_name')
@@ -133,7 +135,7 @@ class Person extends \Core\APL\ExtensionController {
 
     public function getaudiences() {
         User::onlyHas('person-view');
-        
+
         $jqgrid = new jQgrid(PersonAudienceModel::getTableName(), PersonAudienceModel::getField('id'));
         echo $jqgrid->populate(function ($start, $limit) {
             return PersonAudienceModel::select(PersonAudienceModel::getField('id'), DB::raw('CONCAT(first_name, " ", last_name) AS full_name'), PersonAudienceModel::getField('name'), PersonAudienceModel::getField('phone'), PersonAudienceModel::getField('email'), PersonAudienceModel::getField('date_created'))
@@ -152,7 +154,7 @@ class Person extends \Core\APL\ExtensionController {
      */
     public function list_groups() {
         User::onlyHas('person-view');
-        
+
         $jqgrid = new jQgrid('apl_person_group', 'id');
         echo $jqgrid->populate(function ($start, $limit) {
             return DB::table('apl_person_group')
@@ -172,7 +174,7 @@ class Person extends \Core\APL\ExtensionController {
      */
     public function edit_group($group_id = 0) {
         User::onlyHas('person-group-edit');
-        
+
         $data = array(
             'group' => PersonGroup::find($group_id),
             'group_lang' => array()
@@ -198,7 +200,7 @@ class Person extends \Core\APL\ExtensionController {
      */
     public function save_group() {
         User::onlyHas('person-group-edit');
-        
+
         $id = Input::get('id');
         $langs = Input::get('lang');
         $glang_id = Input::get('glang_id');
@@ -251,7 +253,7 @@ class Person extends \Core\APL\ExtensionController {
      */
     public function form($id = 0) {
         User::onlyHas('person-edit');
-        
+
         $data = array(
             'person' => PersonModel::find($id),
             'person_lang' => array(),
@@ -283,7 +285,7 @@ class Person extends \Core\APL\ExtensionController {
 
     public function save_person_groups() {
         User::onlyHas('person-group-edit');
-        
+
         $person_id = Input::get('id');
         $groups = Input::get('groups');
         PersonRelModel::where('person_id', $person_id)->delete();
@@ -297,7 +299,7 @@ class Person extends \Core\APL\ExtensionController {
 
     public function emptyperson() {
         User::onlyHas('person-edit');
-        
+
         $person = new PersonModel;
         $person->save();
 
@@ -317,7 +319,7 @@ class Person extends \Core\APL\ExtensionController {
      */
     public function save() {
         User::onlyHas('person-edit');
-        
+
         $id = Input::get('id');
 
 
@@ -357,7 +359,7 @@ class Person extends \Core\APL\ExtensionController {
      */
     public function save_lang() {
         User::onlyHas('person-edit');
-        
+
         $person_id = Input::get('person_id');
         $person_lang_id = Input::get('person_lang_id');
         $new_person_id = 0;
@@ -407,7 +409,7 @@ class Person extends \Core\APL\ExtensionController {
      */
     public function save_dynamic_fields() {
         User::onlyHas('person-edit');
-        
+
         $person_id = Input::get('person_id');
         $fields = Input::get('field');
 

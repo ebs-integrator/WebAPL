@@ -13,11 +13,11 @@
         <div class="right_block <?=$page->view_mod;?>">
             <?= View::make('sections.elements.breadcrumbs'); ?>
 
-            <?= Core\APL\Actions::call('page_top_container', $page); ?>
+            <?php Event::fire('page_top_container', $page); ?>
 
             <?= $page->text; ?>
 
-            <?= Core\APL\Actions::call('page_bottom_container', $page); ?>
+            <?php Event::fire('page_bottom_container', $page); ?>
 
             <?=
             View::make('sections.pages.blocks.files', array(

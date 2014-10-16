@@ -15,6 +15,7 @@ use Core\APL\Actions,
     Validator,
     Input,
     SimpleCapcha,
+        Route,
     PageView;
 
 class Person extends \Core\APL\ExtensionController {
@@ -36,7 +37,7 @@ class Person extends \Core\APL\ExtensionController {
 
         Shortcodes::register('person_subscribe', array($this, 'subscribe'));
 
-        Actions::post('person/subscribe_to_audience', array($this, 'subscribe_to_audience'));
+        Route::post('person/subscribe_to_audience', array($this, 'subscribe_to_audience'));
     }
 
     public function group_list($data) {

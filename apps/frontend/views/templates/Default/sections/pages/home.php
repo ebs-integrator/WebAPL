@@ -49,7 +49,7 @@
         </div>
         <div class="right global">  
 
-            <?=Core\APL\Actions::call('home_right_top', $page);?>
+            <?php Event::fire('home_right_top', $page);?>
 
             <?php if (isset($home_ads) && $home_ads) { ?>
                 <article class="atn">
@@ -99,7 +99,7 @@
                 </article>
             <?php } ?>
             
-            <?=Core\APL\Actions::call('home_right_bottom', $page);?>
+            <?php Event::fire('home_right_bottom', $page);?>
         </div>
     </div>
     <div class="clearfix"></div>

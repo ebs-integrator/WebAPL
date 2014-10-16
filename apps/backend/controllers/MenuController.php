@@ -23,9 +23,9 @@ class MenuController extends BaseController {
         $this->data['menu'] = Menu::find($id);
         $this->data['menuItems'] = Menu::treeItems($id);
         
-        Actions::register('create_menu_items_form', array($this, 'itemsAddLink'));
-        Actions::register('create_menu_items_form', array($this, 'itemsAddPage'));
-        Actions::register('create_menu_items_form', array($this, 'itemsAddCategory'));
+        Event::listen('create_menu_items_form', array($this, 'itemsAddLink'));
+        Event::listen('create_menu_items_form', array($this, 'itemsAddPage'));
+        Event::listen('create_menu_items_form', array($this, 'itemsAddCategory'));
         
         View::share($this->data);
         $this->layout->content = View::make('sections.menu.form');

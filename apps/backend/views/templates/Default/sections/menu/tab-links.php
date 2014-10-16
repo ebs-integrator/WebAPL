@@ -1,7 +1,7 @@
 <div class="col-sm-6">
     <h3>Create link:</h3>
     <div class="panel-group" id="accordion">
-        <?= Actions::call('create_menu_items_form'); ?>
+        <?php Event::fire('create_menu_items_form'); ?>
     </div>
 </div>
 

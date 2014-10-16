@@ -24,7 +24,7 @@
     </div>
     <div class="tab-pane" id="attachment">
         <table class="table table-bordered">
-            <?= Actions::call('page_attachment', $page); ?>
+            <?php Event::fire('page_attachment', $page); ?>
         </table>
     </div>
 </div>

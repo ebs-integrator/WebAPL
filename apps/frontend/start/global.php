@@ -35,7 +35,7 @@ App::error(function(Exception $exception, $code) {
 });
 
 $APLExtensions = array(
-    'Modules', 'Actions', 'Shortcodes', 'Template', 'Language', 'ExtensionController'
+    'Modules', 'Shortcodes', 'Template', 'Language', 'ExtensionController'
 );
 
 Event::listen('APL.core.load', function() use ($APLExtensions) {

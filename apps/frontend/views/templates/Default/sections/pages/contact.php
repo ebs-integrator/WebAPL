@@ -13,15 +13,15 @@
                 <li class='location'>
                     <a href='<?= Language::url('topage/contactsView'); ?>'><?= varlang('cum-ne-gasiti'); ?></a>
                 </li>
-                <?php Actions::call('contact_right_list');?>
+                <?php Event::fire('contact_right_list');?>
             </ul>
         </div>
         <div class="left">
-            <?= Core\APL\Actions::call('page_top_container', $page); ?>
+            <?php Event::fire('page_top_container', $page); ?>
 
             <?= $page->text; ?>
 
-            <?= Core\APL\Actions::call('page_bottom_container', $page); ?>
+            <?php Event::fire('page_bottom_container', $page); ?>
 
             <?=
             View::make('sections.pages.blocks.files', array(

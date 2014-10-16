@@ -9,7 +9,7 @@ class Newmodule extends \Core\APL\ExtensionController {
     public function __construct() {
         parent::__construct();
 
-        Actions::get('newmodule', function () {
+        \Route::get('newmodule', function () {
             echo "Backend New Module enabled";
         });
     }

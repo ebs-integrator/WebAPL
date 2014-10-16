@@ -16,6 +16,8 @@ use Core\APL\Actions,
     GalleryPost,
     Files,
     Redirect,
+    Route,
+    Event,
     GalleryModel;
 
 class Gallery extends \Core\APL\ExtensionController {
@@ -31,17 +33,17 @@ class Gallery extends \Core\APL\ExtensionController {
 
         $this->loadClass(array('GalleryModel', 'GalleryPost'));
 
-        Actions::get('gallery/settings', array('before' => 'auth', array($this, 'settings')));
-        Actions::get('gallery/delete/{id}', array('before' => 'auth', array($this, 'gallery_delete')));
-        Actions::get('gallery/edit/{id}', array('before' => 'auth', array($this, 'gallery_edit')));
-        Actions::post('gallery/create', array('before' => 'auth', array($this, 'gallery_create')));
-        Actions::post('gallery/save', array('before' => 'auth', array($this, 'gallery_save')));
-        Actions::get('gallery/list', array('before' => 'auth', array($this, 'gallery_list')));
-        Actions::post('gallery/save_post_attach', array('before' => 'auth', array($this, 'save_post_attach')));
+        Route::get('gallery/settings', array('before' => 'auth', array($this, 'settings')));
+        Route::get('gallery/delete/{id}', array('before' => 'auth', array($this, 'gallery_delete')));
+        Route::get('gallery/edit/{id}', array('before' => 'auth', array($this, 'gallery_edit')));
+        Route::post('gallery/create', array('before' => 'auth', array($this, 'gallery_create')));
+        Route::post('gallery/save', array('before' => 'auth', array($this, 'gallery_save')));
+        Route::get('gallery/list', array('before' => 'auth', array($this, 'gallery_list')));
+        Route::post('gallery/save_post_attach', array('before' => 'auth', array($this, 'save_post_attach')));
 
         // Register actions
-        Actions::register('construct_left_menu', array($this, 'left_menu_item'));
-        Actions::register('page_attachment', array($this, 'page_attachment'));
+        Event::listen('construct_left_menu', array($this, 'left_menu_item'));
+        Event::listen('page_attachment', array($this, 'page_attachment'));
 
         $this->layout = Template::mainLayout();
     }
@@ -155,7 +157,7 @@ class Gallery extends \Core\APL\ExtensionController {
      */
     public function save_post_attach() {
         \User::onlyHas('gallery-view');
-        
+
         $id = Input::get('id');
         $post_id = Input::get('post_id');
 

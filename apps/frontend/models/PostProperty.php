@@ -22,29 +22,32 @@ class PostProperty extends Eloquent {
             $instance = $instance->take($take);
         }
 
-        return $instance->get();
+        return $instance->remember(SettingsModel::one('cachelife'))->get();
     }
 
     public static function postWithProperty($property, $with_url = false) {
         $row = PostProperty::prepare()
-                        ->where(PostProperty::getField('key'), $property)
-                        ->first();
-                
+                ->where(PostProperty::getField('key'), $property)
+                ->remember(SettingsModel::one('cachelife'))
+                ->first();
+
         if ($row && $with_url) {
             $row['url'] = Post::getFullURI($row->id);
-        } 
-        
+        }
+
         return $row;
     }
 
     public static $properties = array();
+
     public static function getPostProperties($id) {
         if (isset(static::$properties[$id])) {
             return static::$properties[$id];
         }
-        
+
         $list = PostPropertyRel::join(PostProperty::getTableName(), PostProperty::getField('id'), '=', PostPropertyRel::getField('post_property_id'))
                 ->where(PostPropertyRel::getField('post_id'), $id)
+                ->remember(SettingsModel::one('cachelife'))
                 ->get();
 
         $names = array();

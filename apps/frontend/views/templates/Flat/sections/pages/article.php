@@ -41,11 +41,11 @@
                 </div> 
             <?php } ?>
 
-            <?= Core\APL\Actions::call('page_top_container', $page); ?>
+            <?php Event::fire('page_top_container', $page); ?>
 
             <?= $page->text; ?>
 
-            <?= Core\APL\Actions::call('page_bottom_container', $page); ?>
+            <?php Event::fire('page_bottom_container', $page); ?>
 
             <div class="clearfix50"></div>
             <?php if ($page->have_socials) { ?>

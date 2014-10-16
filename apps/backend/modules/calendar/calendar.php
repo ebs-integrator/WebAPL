@@ -13,6 +13,8 @@ use Core\APL\Actions,
     Language,
     Post,
     PostLang,
+    Route,
+    Event,
     CalendarPostModel,
     jQgrid;
 
@@ -27,23 +29,23 @@ class Calendar extends \Core\APL\ExtensionController {
 
         $this->loadClass(array('CalendarModel', 'CalendarLangModel', 'CalendarGroup'));
 
-        Actions::get('calendar/list', array('before' => 'auth', array($this, 'calendar_list')));
-        Actions::post('calendar/getlist', array('before' => 'auth', array($this, 'getlist')));
-        Actions::get('calendar/edit/{id}', array('before' => 'auth', array($this, 'edit_item')));
-        Actions::post('calendar/create', array('before' => 'auth', array($this, 'create_item')));
+        Route::get('calendar/list', array('before' => 'auth', array($this, 'calendar_list')));
+        Route::post('calendar/getlist', array('before' => 'auth', array($this, 'getlist')));
+        Route::get('calendar/edit/{id}', array('before' => 'auth', array($this, 'edit_item')));
+        Route::post('calendar/create', array('before' => 'auth', array($this, 'create_item')));
 
-        Actions::post('calendar/getgroups', array('before' => 'auth', array($this, 'getgroups')));
-        Actions::post('calendar/editgroup', array('before' => 'auth', array($this, 'editgroup')));
+        Route::post('calendar/getgroups', array('before' => 'auth', array($this, 'getgroups')));
+        Route::post('calendar/editgroup', array('before' => 'auth', array($this, 'editgroup')));
 
-        Actions::post('calendar/save', array('before' => 'auth', array($this, 'save')));
-        Actions::post('calendar/save_lang', array('before' => 'auth', array($this, 'save_lang')));
+        Route::post('calendar/save', array('before' => 'auth', array($this, 'save')));
+        Route::post('calendar/save_lang', array('before' => 'auth', array($this, 'save_lang')));
 
-        Actions::register('page_attachment', array($this, 'page_group_attachment'));
-        Actions::post('calendar/save_post_attach', array('before' => 'auth', array($this, 'save_post_attach')));
+        Event::listen('page_attachment', array($this, 'page_group_attachment'));
+        Route::post('calendar/save_post_attach', array('before' => 'auth', array($this, 'save_post_attach')));
 
-        Actions::register('construct_left_menu', array($this, 'left_menu_item'));
-        Actions::register('language_created', array($this, 'language_created'));
-        Actions::register('language_deleted', array($this, 'language_deleted'));
+        Event::listen('construct_left_menu', array($this, 'left_menu_item'));
+        Event::listen('language_created', array($this, 'language_created'));
+        Event::listen('language_deleted', array($this, 'language_deleted'));
 
         Template::registerViewMethod('page', $this->page_view_mod, 'Pagina calendar', null, true);
 
@@ -58,7 +60,7 @@ class Calendar extends \Core\APL\ExtensionController {
 
     public function calendar_list() {
         \User::onlyHas('calendar-view');
-        
+
         $data['groups'] = \CalendarGroup::orderBy('name', 'asc')->get();
 
         $this->layout->content = Template::moduleView($this->module_name, 'views.list', $data);
@@ -68,7 +70,7 @@ class Calendar extends \Core\APL\ExtensionController {
 
     public function edit_item($id = 0) {
         \User::onlyHas('calendar-view');
-        
+
         $data = array(
             'calendar' => CalendarModel::find($id)
         );
@@ -102,7 +104,7 @@ class Calendar extends \Core\APL\ExtensionController {
 
     public function getlist() {
         \User::onlyHas('calendar-view');
-        
+
         $jqgrid = new jQgrid('apl_calendar_item');
         echo $jqgrid->populate(function ($start, $limit) {
             return CalendarModel::select(CalendarModel::$ftable . '.id', CalendarModel::$ftable . '.event_date', CalendarLangModel::$ftable . '.title', CalendarModel::$ftable . '.period', CalendarModel::$ftable . '.enabled')
@@ -116,7 +118,7 @@ class Calendar extends \Core\APL\ExtensionController {
 
     public function getgroups() {
         \User::onlyHas('calendar-view');
-        
+
         $jqgrid = new jQgrid(\CalendarGroup::getTableName());
         echo $jqgrid->populate(function ($start, $limit) {
             return CalendarGroup::select(\CalendarGroup::getField('id'), \CalendarGroup::getField('name'))
@@ -126,7 +128,7 @@ class Calendar extends \Core\APL\ExtensionController {
 
     public function editgroup() {
         \User::onlyHas('calendar-view');
-        
+
         $jqgrid = new jQgrid(\CalendarGroup::getTableName());
         $jqgrid->operation(array(
             'name' => Input::get('name')
@@ -135,7 +137,7 @@ class Calendar extends \Core\APL\ExtensionController {
 
     public function create_item() {
         \User::onlyHas('calendar-view');
-        
+
         $item = new CalendarModel;
         $item->period = Input::get("general.period");
         $item->event_date = Input::get("general.date");
@@ -156,7 +158,7 @@ class Calendar extends \Core\APL\ExtensionController {
 
     public function save() {
         \User::onlyHas('calendar-view');
-        
+
         $id = Input::get('id');
 
         $item = CalendarModel::find($id);
@@ -173,7 +175,7 @@ class Calendar extends \Core\APL\ExtensionController {
 
     public function save_lang() {
         \User::onlyHas('calendar-view');
-        
+
         $langs = Input::get('lang');
 
         foreach ($langs as $id => $lang) {
@@ -204,7 +206,7 @@ class Calendar extends \Core\APL\ExtensionController {
 
     public function save_post_attach() {
         \User::onlyHas('calendar-view');
-        
+
         $page_id = Input::get('page_id');
         $groups = Input::get('calendar_groups');
         CalendarPostModel::where('post_id', $page_id)->delete();

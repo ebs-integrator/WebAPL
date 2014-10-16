@@ -7,6 +7,8 @@ use Core\APL\Actions,
     Input,
     NewsletterModel,
     jQgrid,
+    Route,
+    Event,
     Mail;
 
 class Newsletter extends \Core\APL\ExtensionController {
@@ -19,16 +21,16 @@ class Newsletter extends \Core\APL\ExtensionController {
 
         $this->loadClass(array('NewsletterModel'));
 
-        Actions::get('newsletter/settings', array('before' => 'auth', array($this, 'settings')));
-        Actions::get('newsletter/list', array('before' => 'auth', array($this, 'email_list')));
-        Actions::post('newsletter/getlist', array('before' => 'auth', array($this, 'getlist')));
-        Actions::post('newsletter/edititem', array('before' => 'auth', array($this, 'edititem')));
-        Actions::get('newsletter/send', array('before' => 'auth', array($this, 'send_message')));
-        Actions::post('newsletter/sendarticle', array('before' => 'auth', array($this, 'sendarticle')));
-        Actions::get('newsletter/export', array('before' => 'auth', array($this, 'getExport')));
+        Route::get('newsletter/settings', array('before' => 'auth', array($this, 'settings')));
+        Route::get('newsletter/list', array('before' => 'auth', array($this, 'email_list')));
+        Route::post('newsletter/getlist', array('before' => 'auth', array($this, 'getlist')));
+        Route::post('newsletter/edititem', array('before' => 'auth', array($this, 'edititem')));
+        Route::get('newsletter/send', array('before' => 'auth', array($this, 'send_message')));
+        Route::post('newsletter/sendarticle', array('before' => 'auth', array($this, 'sendarticle')));
+        Route::get('newsletter/export', array('before' => 'auth', array($this, 'getExport')));
 
-        Actions::register('construct_left_menu', array($this, 'left_menu_item'));
-        Actions::register('feed_post_bottom', array($this, 'sendemails'));
+        Event::listen('construct_left_menu', array($this, 'left_menu_item'));
+        Event::listen('feed_post_bottom', array($this, 'sendemails'));
 
         $this->layout = Template::mainLayout();
     }
@@ -125,7 +127,7 @@ class Newsletter extends \Core\APL\ExtensionController {
         header('Content-Encoding: UTF-8');
         header('Content-type: text/csv; charset=UTF-8');
         header('Content-Disposition: attachment; filename=NewsLetterExport.csv');
-        echo "\xEF\xBB\xBF". $buffer;
+        echo "\xEF\xBB\xBF" . $buffer;
         die;
     }
 

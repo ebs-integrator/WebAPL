@@ -20,7 +20,7 @@ class PageController extends BaseController {
 
         $this->taxonomy = Taxonomy::get('page');
 
-        Actions::register('page_attachment', function ($page) {
+        Event::listen('page_attachment', function ($page) {
             echo View::make('sections.feed.attachment-page', array(
                 'post' => $page->toArray(),
                 'list' => Feed::orderBy('name', 'asc')->get()

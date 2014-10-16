@@ -45,7 +45,7 @@
                 </div>
 
             </div>
-            <?= \Core\APL\Actions::call('contact_col1_contructor'); ?>
+            <?php Event::fire('contact_col1_contructor'); ?>
         </div>
         <div class='left contact_r'>
             <p class='subt'><?= varlang('adresa'); ?></p>
@@ -55,11 +55,11 @@
                 <a href="<?= varlang('orar-link'); ?>"><?= varlang('orar-autobus'); ?></a>
             </div>
             <div class="map_info"><?= $page->text; ?></div>
-            <?= \Core\APL\Actions::call('contact_col2_contructor'); ?>
+            <?php Event::fire('contact_col2_contructor'); ?>
         </div>
         <div class='left form contact'>
             <?= View::make('sections.pages.blocks.contactForm'); ?>
-            <?= \Core\APL\Actions::call('contact_col3_contructor'); ?>
+            <?php Event::fire('contact_col3_contructor'); ?>
         </div>
         <div class='clearfix140'></div>
         <?php if ($page->have_socials) { ?>

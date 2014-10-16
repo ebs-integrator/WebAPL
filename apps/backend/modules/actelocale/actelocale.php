@@ -6,6 +6,8 @@ use Core\APL\Actions,
     Core\APL\Template,
     ActeLocaleModel,
     Input,
+    Route,
+    Event,
     jQgrid;
 
 class Actelocale extends \Core\APL\ExtensionController {
@@ -18,20 +20,20 @@ class Actelocale extends \Core\APL\ExtensionController {
 
         $this->loadClass(array('ActeLocaleModel'));
 
-        Actions::get('actelocale/list', array('before' => 'auth', array($this, 'acte_list')));
-        Actions::post('actelocale/getlist', array('before' => 'auth', array($this, 'getlist')));
+        Route::get('actelocale/list', array('before' => 'auth', array($this, 'acte_list')));
+        Route::post('actelocale/getlist', array('before' => 'auth', array($this, 'getlist')));
 
-        Actions::get('actelocale/create', array('before' => 'auth', array($this, 'create')));
-        Actions::get('actelocale/edit/{id}', array('before' => 'auth', array($this, 'editact')));
+        Route::get('actelocale/create', array('before' => 'auth', array($this, 'create')));
+        Route::get('actelocale/edit/{id}', array('before' => 'auth', array($this, 'editact')));
 
-        Actions::get('actelocale/parse', array('before' => 'auth', array($this, 'parse')));
-
-
-        Actions::post('actelocale/save', array('before' => 'auth', array($this, 'save')));
+        Route::get('actelocale/parse', array('before' => 'auth', array($this, 'parse')));
 
 
+        Route::post('actelocale/save', array('before' => 'auth', array($this, 'save')));
 
-        Actions::register('construct_left_menu', array($this, 'left_menu_item'));
+
+
+        Event::listen('construct_left_menu', array($this, 'left_menu_item'));
 
         Template::registerViewMethod('page', 'acteList', 'Lista de actelocale', null, true);
 
