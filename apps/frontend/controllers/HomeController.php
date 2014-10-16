@@ -41,5 +41,11 @@ class HomeController extends BaseController {
 
         return $this->layout;
     }
+    
+    public function clearcache() {
+        Cache::flush();
+        
+        return [];
+    }
 
 }

@@ -159,7 +159,7 @@
                     <?php } ?>
                     <li><a href="<?= url('var'); ?>"><i class="fa"></i><span class="link-title">&nbsp;<?= varlang('var'); ?></span></a></li>
 
-                    <?= Actions::call('construct_left_menu'); ?>
+                    <?php Event::fire('construct_left_menu'); ?>
                 </ul><!-- /#menu -->
             </div><!-- /#left -->
             <div id="content">

@@ -12,7 +12,7 @@
         </p>
     </div>
     <hr>
-    <?=Core\APL\Actions::call('cv_form', array('post'=>$post));?>
+    <?= Event::fire('cv_form', array('post'=>$post), true);?>
     <div class='clearfix'></div>
     <?= View::make('sections.elements.socials'); ?>
     <div class="hr_grey"></div>

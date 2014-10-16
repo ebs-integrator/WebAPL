@@ -30,22 +30,22 @@
 </section>
 
 <div class="prefooter">
-    <?= Core\APL\Actions::call('home_right_top', $page); ?>
+    <?php Event::fire('home_right_top', $page); ?>
 
     <?php if (isset($home_posts) && count($home_posts)) { ?>
-    <div class="row1_l">
+        <div class="row1_l">
             <div class="content">
                 <div class="fcc">
                     <p class="f_title"><?= varlang('stiri'); ?></p>
                     <?php foreach ($home_posts as $item) { ?>
                         <div class="data"><?= date('d-m-Y', strtotime($item->created_at)); ?></div>
-                        <a href="<?= $item->url; ?>" class="f_artc"><?= $item->title; ?></a>
+                        <a href="<?= Language::url('topost/' . $item->id); ?>" class="f_artc"><?= $item->title; ?></a>
                         <p><?= Str::words(strip_tags($item->text), 30); ?></p>
                     <?php } ?>
                 </div>
                 <a href="<?= Language::url('topage/newsList'); ?>" class="more"></a>
             </div>
-    </div>
+        </div>
     <?php } ?>
     <?php if (isset($home_ads) && $home_ads) { ?>
         <div class="row1_r">
@@ -54,7 +54,7 @@
                     <p class="f_title"><?= varlang('anunturi'); ?></p>
                     <?php foreach ($home_ads as $item) { ?>
                         <div class="data"><?= date('d-m-Y', strtotime($item->created_at)); ?></div>
-                        <a href="<?= $item->url; ?>" class="f_artc"><?= $item->title; ?></a>
+                        <a href="<?= Language::url('topost/' . $item->id); ?>" class="f_artc"><?= $item->title; ?></a>
                         <p><?= Str::words(strip_tags($item->text), 30); ?></p>
                     <?php } ?>
                 </div>
@@ -62,6 +62,6 @@
             </div>
         </div>
     <?php } ?>
-    
-    <?= Core\APL\Actions::call('home_right_bottom', $page); ?>
+
+    <?php Event::fire('home_right_bottom', $page); ?>
 </div>

@@ -8,6 +8,7 @@ use Core\APL\Actions,
     PageView,
     Input,
     Validator,
+    Route,
     SComplaintsModel;
 
 class Socialcomplaints extends \Core\APL\ExtensionController {
@@ -24,7 +25,7 @@ class Socialcomplaints extends \Core\APL\ExtensionController {
 
         // Set settings page
         Shortcodes::register('complaint_form', array($this, 'complaint_form'));
-        Actions::post("create_complaint", array($this, 'create_complaint'));
+        Route::post("create_complaint", array($this, 'create_complaint'));
 
         Template::registerViewMethod('page', 'secial_complaints_list', 'Lista cu plingeri', array($this, 'secial_complaints_list'), true);
     }

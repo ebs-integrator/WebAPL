@@ -13,11 +13,11 @@ class Files extends Eloquent {
     );
 
     public static function file_list($module_name, $module_id) {
-        return Files::where('module_name', $module_name)->where('module_id', intval($module_id))->get();
+        return Files::where('module_name', $module_name)->where('module_id', intval($module_id))->remember(SettingsModel::one('cachelife'))->get();
     }
 
     public static function getfile($module_name, $module_id) {
-        return Files::where('module_name', $module_name)->where('module_id', intval($module_id))->first();
+        return Files::where('module_name', $module_name)->where('module_id', intval($module_id))->remember(SettingsModel::one('cachelife'))->first();
     }
 
 

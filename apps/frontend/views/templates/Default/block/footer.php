@@ -1,21 +1,21 @@
 <?php if (isset($alert_post) && $alert_post) { ?>
-<div class="n_alert" id="alertbox" style="display: none;" data-alertid="<?=$alert_post->id;?>">
-    <div class='cntn'>
-        <img src="<?= res('assets/img/alert.png'); ?>">
-        <p>alerte!</p>
-        <a href='javascript:;' class="alertclose"></a>
+    <div class="n_alert" id="alertbox" style="display: none;" data-alertid="<?= $alert_post->id; ?>">
+        <div class='cntn'>
+            <img src="<?= res('assets/img/alert.png'); ?>">
+            <p>alerte!</p>
+            <a href='javascript:;' class="alertclose"></a>
+        </div>
+        <div class='n_info'>
+            <div class='n_data'><?= date('d-m-Y, H:i', strtotime($alert_post->created_at)); ?></div>
+            <div class='clearfix'></div>
+            <p><a href="<?= Language::url('topost/' . $alert_post->id); ?>"><?= $alert_post->title; ?></a></p>
+            <a href="<?= Language::url('topost/' . $alert_post->id); ?>" class="more"></a>
+        </div>
+        <div class='n_footer'>
+            <input id="f_1" type='checkbox'>
+            <label for='f_1'>Am facut cunoștință</label>
+        </div>
     </div>
-    <div class='n_info'>
-        <div class='n_data'><?=date('d-m-Y, H:i', strtotime($alert_post->created_at));?></div>
-        <div class='clearfix'></div>
-        <p><a href="<?=Language::url('topost/'. $alert_post->id);?>"><?=$alert_post->title;?></a></p>
-        <a href="<?=Language::url('topost/'. $alert_post->id);?>" class="more"></a>
-    </div>
-    <div class='n_footer'>
-        <input id="f_1" type='checkbox'>
-        <label for='f_1'>Am facut cunoștință</label>
-    </div>
-</div>
 <?php } ?>
 
 <footer>
@@ -47,13 +47,13 @@
                 <input type="submit" value="<?= varlang('submit'); ?>">
             </form>
         </div>
-        <?= Core\APL\Actions::call('bottom_widgets'); ?>
+        <?php Event::fire('bottom_widgets'); ?>
     </div>
     <div class="clearfix"> </div>
     <p class="copy"><a href="javascript:;"><?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?></p>
 </footer>
 
-<?= \Core\APL\Actions::call('bottom_contructor'); ?>
+<?php Event::fire('bottom_contructor'); ?>
 
 <script src="<?= res('assets/js/plugins.js'); ?>"></script>
 <script src="<?= res('assets/js/icheck.js'); ?>"></script>

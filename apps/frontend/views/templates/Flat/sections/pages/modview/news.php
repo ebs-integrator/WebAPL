@@ -1,19 +1,16 @@
 <?php if (isset($posts)) { ?>
     <?php foreach ($posts as $item) { ?>
-        <div class="a_box g_g">
+        <div class="a_box">
             <p class="title"><a href="<?= $page_url; ?>?item=<?= $item->uri; ?>"><?= $item->title; ?></a></p>
+            <p class="data"><?= date("d-m-Y, H:i", strtotime($item->created_at)); ?></p>
             <div class="hr_dbl"></div>
             <div class="left">
                 <div class="img">
                     <?php if ($item->cover) { ?>
-                        <img src="<?= url($item->cover['path']); ?>">
+                        <img src="<?= url($item->cover['path']); ?>" width="347">
                     <?php } ?>
                 </div>
-                <div class="details">
-                    <p class="data"><?= date("d-m-Y, H:i", strtotime($item->created_at)); ?>
-                    </p>
-                    <p class='cont'></p>
-                </div>
+
             </div>
             <div class="right">
                 <p class="info"><?= Str::words(strip_tags($item->text), 55); ?></p>

@@ -6,6 +6,8 @@ use Core\APL\Actions,
     Core\APL\Template,
     PersonModel,
     PersonLangModel,
+        Route,
+        Event,
     FireChatSession;
 
 class Firechat extends \Core\APL\ExtensionController {
@@ -20,18 +22,18 @@ class Firechat extends \Core\APL\ExtensionController {
 
         $this->loadClass(array('PersonModel', 'PersonLangModel'), 'person');
 
-        Actions::get('firechat/display', array($this, 'display'));
-        Actions::post('firechat/register', array($this, 'register'));
-        Actions::post('firechat/newroom', array($this, 'newroom'));
-        Actions::post('firechat/close', array($this, 'closesession'));
+        Route::get('firechat/display', array($this, 'display'));
+        Route::post('firechat/register', array($this, 'register'));
+        Route::post('firechat/newroom', array($this, 'newroom'));
+        Route::post('firechat/close', array($this, 'closesession'));
 
-        Actions::post('firechat/getform', array($this, 'getform'));
-        Actions::post('firechat/sendmail', array($this, 'sendmail'));
+        Route::post('firechat/getform', array($this, 'getform'));
+        Route::post('firechat/sendmail', array($this, 'sendmail'));
 
-        Actions::register('bottom_contructor', array($this, 'popup'));
-        Actions::register('logo_contructor', array($this, 'topbutton'));
-        Actions::register('contact_col1_contructor', array($this, 'contactbutton'));
-        Actions::register('contact_right_list', array($this, 'buttonlist'));
+        Event::listen('bottom_contructor', array($this, 'popup'));
+        Event::listen('logo_contructor', array($this, 'topbutton'));
+        Event::listen('contact_col1_contructor', array($this, 'contactbutton'));
+        Event::listen('contact_right_list', array($this, 'buttonlist'));
     }
     
     protected static $isOnline = 0;

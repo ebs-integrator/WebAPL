@@ -50,7 +50,7 @@
         <header>
             <div class="left">
                 <a href="<?= Language::url('/'); ?>"><img src="<?= res('assets/img/s_logo.png'); ?>" class="logo logo_home"></a>
-                <?= Core\APL\Actions::call('logo_contructor'); ?>
+                <?php Event::fire('logo_contructor'); ?>
             </div>
             <div class="left home_menu">
                 <?= View::make('sections.elements.topmenu'); ?>

@@ -38,9 +38,9 @@ class VarModel extends Eloquent {
 
     public static function uniqKey($key, $str) {
         if ($key) {
-            $key = Core\APL\Actions::toAscii($key);
+            $key = urigen($key);
         } else {
-            $key = Core\APL\Actions::toAscii($str);
+            $key = urigen($str);
         }
 
         $count = VarModel::where("key", "like", "{$key}%")->count();

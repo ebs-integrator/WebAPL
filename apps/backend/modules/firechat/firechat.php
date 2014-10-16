@@ -6,6 +6,8 @@ use Core\APL\Actions,
     Core\APL\Template,
     FireBaseAuth,
     JWT,
+    Route,
+    Event,
     FireChatSession;
 
 class Firechat extends \Core\APL\ExtensionController {
@@ -18,13 +20,13 @@ class Firechat extends \Core\APL\ExtensionController {
 
         $this->loadClass(array('FireChatSession', 'FireBaseAuth'));
 
-        Actions::get('firechat', array('before' => 'auth', array($this, 'view')));
-        Actions::get('firechat/display', array('before' => 'auth', array($this, 'display')));
-        Actions::post('firechat/closeroom', array('before' => 'auth', array($this, 'closeroom')));
-        Actions::post('firechat/audience', array('before' => 'auth', array($this, 'audience')));
-        Actions::post('firechat/sendmail', array('before' => 'auth', array($this, 'sendmail')));
+        Route::get('firechat', array('before' => 'auth', array($this, 'view')));
+        Route::get('firechat/display', array('before' => 'auth', array($this, 'display')));
+        Route::post('firechat/closeroom', array('before' => 'auth', array($this, 'closeroom')));
+        Route::post('firechat/audience', array('before' => 'auth', array($this, 'audience')));
+        Route::post('firechat/sendmail', array('before' => 'auth', array($this, 'sendmail')));
 
-        Actions::register('construct_left_menu', array($this, 'left_menu_item'));
+        Event::listen('construct_left_menu', array($this, 'left_menu_item'));
 
         $this->layout = Template::mainLayout();
     }

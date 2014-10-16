@@ -1,18 +1,18 @@
 <section>
-    <?= View::make('sections.elements.breadcrumbs'); ?>
-    <div class="wrap">        
-        <p class="c_title"><?= $top_title; ?></p>
-        <?php if (isset($years_list) && count($years_list)) { ?>
-            <div class="right m_a">                
-                <p class='n_title'><?= varlang('arhiva'); ?></p>
-                <ul class="right_menu">
+    <div class="wrap">
+        <div class="left_block">
+            <?php if (isset($years_list) && count($years_list)) { ?>
+                <p class='title'><?= varlang('arhiva'); ?></p>
+                <ul class="menu">
                     <?php foreach ($years_list as $year) { ?>
                         <li class='<?= isset($current_year) && $current_year == $year->year ? 'active' : ''; ?>'><a href="<?= url($page_url . "?year=" . $year->year . "&month=1"); ?>"><?= $year->year; ?></a></li>
                     <?php } ?>
                 </ul>
-            </div>
-        <?php } ?>
-        <div class="left">
+            <?php } ?>
+        </div>
+        <div class="resp_menu"></div>
+        <div class="right_block">
+            <?= View::make('sections.elements.breadcrumbs'); ?>
             <?php
             $months = array(
                 1 => 'Ianuarie',
@@ -41,18 +41,18 @@
                 </div> 
             <?php } ?>
 
-            <?= Core\APL\Actions::call('page_top_container', $page); ?>
+            <?php Event::fire('page_top_container', $page); ?>
 
             <?= $page->text; ?>
 
-            <?= Core\APL\Actions::call('page_bottom_container', $page); ?>
+            <?php Event::fire('page_bottom_container', $page); ?>
 
             <div class="clearfix50"></div>
             <?php if ($page->have_socials) { ?>
                 <?= View::make('sections.elements.socials', array('url' => $page_url)); ?>
             <?php } ?>
-            <div class="hr_grey"></div>
+
         </div>
     </div>
-    <div class="clearfix"> </div>
 </section>
+

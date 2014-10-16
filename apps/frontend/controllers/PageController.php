@@ -77,7 +77,7 @@ class PageController extends BaseController {
                                     'module_name' => 'page',
                                     'module_id' => $this->data['page']->id,
                                     'type' => 'document'
-                                ))->get();
+                                ))->remember(SettingsModel::one('cachelife'))->get();
                     } else {
                         $this->data['page']['files'] = array();
                     }

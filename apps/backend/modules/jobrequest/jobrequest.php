@@ -7,6 +7,8 @@ use Core\APL\Actions,
     Input,
     JobRequestModel,
     PostLang,
+    Route,
+    Event,
     jQgrid;
 
 class Jobrequest extends \Core\APL\ExtensionController {
@@ -19,11 +21,11 @@ class Jobrequest extends \Core\APL\ExtensionController {
 
         $this->loadClass(array('JobRequestModel'));
 
-        Actions::get('jobrequest/list', array('before' => 'auth', array($this, 'requests_list')));
-        Actions::post('jobrequest/getlist', array('before' => 'auth', array($this, 'getlist')));
-        Actions::post('jobrequest/edititem', array('before' => 'auth', array($this, 'edititem')));
+        Route::get('jobrequest/list', array('before' => 'auth', array($this, 'requests_list')));
+        Route::post('jobrequest/getlist', array('before' => 'auth', array($this, 'getlist')));
+        Route::post('jobrequest/edititem', array('before' => 'auth', array($this, 'edititem')));
 
-        Actions::register('construct_left_menu', array($this, 'left_menu_item'));
+        Event::listen('construct_left_menu', array($this, 'left_menu_item'));
 
         $this->layout = Template::mainLayout();
     }
@@ -36,7 +38,7 @@ class Jobrequest extends \Core\APL\ExtensionController {
 
     public function requests_list() {
         \User::onlyHas('jobrequest-view');
-        
+
         $this->layout->content = Template::moduleView($this->module_name, 'views.list');
 
         return $this->layout;
@@ -44,7 +46,7 @@ class Jobrequest extends \Core\APL\ExtensionController {
 
     public function getlist() {
         \User::onlyHas('jobrequest-view');
-        
+
         $jqgrid = new jQgrid(\JobRequestModel::getTableName());
         echo $jqgrid->populate(function ($start, $limit) {
             return \JobRequestModel::join(PostLang::getTableName(), \PostLang::getField('post_id'), '=', \JobRequestModel::getField('post_id'))
@@ -58,7 +60,7 @@ class Jobrequest extends \Core\APL\ExtensionController {
 
     public function edititem() {
         \User::onlyHas('jobrequest-view');
-        
+
         $jqgrid = new jQgrid(\JobRequestModel::getTableName());
         $jqgrid->operation(array());
     }

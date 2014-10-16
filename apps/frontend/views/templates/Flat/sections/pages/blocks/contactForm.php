@@ -1,5 +1,5 @@
 <form class="contact_sub_form" action="contact/submit" method="post">
-    <p class="ftb"><?= varlang('scrieti-direct'); ?></p>
+    <p class="subt"><?= varlang('scrieti-direct'); ?></p>
     <div class="content green">
         <div class="form_error"></div>
         <div class="nmpm">
@@ -11,7 +11,7 @@
             <input name="email" type="text" >
         </div>
         <div class='clearfix'></div>
-        <div class='apt'>
+        <div class='nmpm'>
             <label><?= varlang('adresa-telefon'); ?> </label>
             <input name="address" type="text" >
         </div>
@@ -39,10 +39,10 @@
 
             $.post('<?= url('contact/submit'); ?>', $(this).serialize(), function(data) {
                 if (data.error == 0) {
-                    form.fadeOut(400, function () {
+                    form.fadeOut(400, function() {
                         $(this).html(data.html).fadeIn(300);
                     });
-                } else { 
+                } else {
                     form.find(".form_error").html(data.message);
                 }
             });

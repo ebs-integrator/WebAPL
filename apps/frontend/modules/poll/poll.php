@@ -20,6 +20,7 @@ use Core\APL\Actions,
     PageView,
     Validator,
     SimpleCapcha,
+    Route,
     Redirect;
 
 class Poll extends \Core\APL\ExtensionController {
@@ -33,7 +34,7 @@ class Poll extends \Core\APL\ExtensionController {
         $this->loadClass(array('PollModel'));
 
         Template::registerViewMethod('page', 'pollList', 'Lista de sondaje', array($this, 'pollList'), true);
-        Actions::post('poll/register', array($this, 'pollRegister'));
+        Route::post('poll/register', array($this, 'pollRegister'));
 
         \Core\APL\Shortcodes::register('poll', array($this, 'pollShortcode'));
     }
@@ -65,7 +66,7 @@ class Poll extends \Core\APL\ExtensionController {
         if ($wdata['poll']) {
             Template::setPageTitle($wdata['poll']->title, true);
         }
-        
+
         $data['page']->text .= Template::moduleView($this->module_name, 'views.pollList', $wdata);
 
         return PageView::defaultView($data);
@@ -140,7 +141,7 @@ class Poll extends \Core\APL\ExtensionController {
 
         if (PollModel::ivoted($params['id'])) {
             $wdata['total_votes'] = \PollVotesModel::where('poll_id', $wdata['poll']->id)->count();
-            
+
             return Template::moduleView($this->module_name, 'views.pollResults', $wdata);
         } else {
             return Template::moduleView($this->module_name, 'views.pollItem', $wdata);

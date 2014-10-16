@@ -64,7 +64,7 @@ class Post extends Eloquent {
             $query = $query->where(Post::getField('taxonomy_id'), self::$taxonomy);
         }
 
-        return $query;
+        return $query->remember(SettingsModel::one('cachelife'));
     }
 
     public static function registerInCache($row) {
@@ -137,14 +137,15 @@ class Post extends Eloquent {
             $row = $row->where(PostLang::$ftable . ".enabled", 1);
         }
 
-        return $row->where($where)->get()->first();
+        return $row->where($where)->first();
     }
 
     public static function findWithParent($parent_id) {
         $query = Post::prepareQuery();
         $list = $query->where(array(
                     'parent' => $parent_id
-                ))->orderBy('ord_num', 'asc')->get();
+                ))->orderBy('ord_num', 'asc')
+                ->get();
 
         foreach ($list as &$item) {
             $item['url'] = Post::getFullURI($item['id']);
@@ -235,6 +236,7 @@ class Post extends Eloquent {
                 ->join(FeedRel::getTableName(), FeedRel::getField('feed_field_id'), '=', FeedField::getField('id'))
                 ->join(FeedPost::getTableName(), FeedPost::getField('feed_id'), '=', FeedRel::getField('feed_id'))
                 ->where(FeedPost::getField('post_id'), '=', $post->id)
+                ->remember(SettingsModel::one('cachelife'))
                 ->get();
         foreach ($fields as $field) {
             if ($field->get_filter && method_exists('DinamicFields', $field->get_filter)) {
@@ -297,7 +299,9 @@ class Post extends Eloquent {
         return Files::where(array(
                     'module_name' => 'post_cover',
                     'module_id' => $id
-                ))->get()->first();
+                ))
+                ->remember(SettingsModel::one('cachelife'))
+                ->first();
     }
 
     public static function applyDate($post_instance, $year = '', $month = '', $day = '') {

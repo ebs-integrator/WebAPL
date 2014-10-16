@@ -71,7 +71,7 @@
                         ?>
                     </ul>
                     <div class="top_el">
-                        <?= Core\APL\Actions::call('logo_contructor'); ?>
+                        <?php Event::fire('logo_contructor'); ?>
                         <div class="lang">
                             <p><?= Core\APL\Language::ext(); ?></p>
                             <ul class="hidden">

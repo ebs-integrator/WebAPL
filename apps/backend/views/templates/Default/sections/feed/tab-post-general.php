@@ -87,5 +87,5 @@
 </table>
 
 <?php
-    Core\APL\Actions::call('feed_post_bottom', isset($post) ? $post : []);
+   Event::fire('feed_post_bottom', (isset($post) ? $post : []));
 ?>

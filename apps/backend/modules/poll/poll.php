@@ -19,6 +19,8 @@ use Core\APL\Actions,
     Language,
     Redirect,
     User,
+    Route,
+    Event,
     jQgrid;
 
 class Poll extends \Core\APL\ExtensionController {
@@ -31,25 +33,25 @@ class Poll extends \Core\APL\ExtensionController {
 
         $this->loadClass(array('PollModel'));
 
-        Actions::get('poll/list', array('before' => 'auth', array($this, 'poll_list')));
-        Actions::post('poll/getlist', array('before' => 'auth', array($this, 'getlist')));
-        Actions::get('poll/form', array('before' => 'auth', array($this, 'form')));
-        Actions::get('poll/form/{id}', array('before' => 'auth', array($this, 'form')));
-        Actions::post('poll/save', array('before' => 'auth', array($this, 'save')));
-        Actions::post('poll/save_lang', array('before' => 'auth', array($this, 'save_lang')));
-        Actions::post('poll/edititem', array('before' => 'auth', array($this, 'edititem')));
-        Actions::post('poll/edititem/{poll_lang_id}', array('before' => 'auth', array($this, 'edititem')));
-        Actions::post('poll/add', array('before' => 'auth', array($this, 'poll_add')));
+        Route::get('poll/list', array('before' => 'auth', array($this, 'poll_list')));
+        Route::post('poll/getlist', array('before' => 'auth', array($this, 'getlist')));
+        Route::get('poll/form', array('before' => 'auth', array($this, 'form')));
+        Route::get('poll/form/{id}', array('before' => 'auth', array($this, 'form')));
+        Route::post('poll/save', array('before' => 'auth', array($this, 'save')));
+        Route::post('poll/save_lang', array('before' => 'auth', array($this, 'save_lang')));
+        Route::post('poll/edititem', array('before' => 'auth', array($this, 'edititem')));
+        Route::post('poll/edititem/{poll_lang_id}', array('before' => 'auth', array($this, 'edititem')));
+        Route::post('poll/add', array('before' => 'auth', array($this, 'poll_add')));
 
-        Actions::get('poll/del', array('before' => 'auth', array($this, 'poll_del')));
-        Actions::get('poll/del/{id}', array('before' => 'auth', array($this, 'poll_del')));
+        Route::get('poll/del', array('before' => 'auth', array($this, 'poll_del')));
+        Route::get('poll/del/{id}', array('before' => 'auth', array($this, 'poll_del')));
 
-        Actions::post('poll/list/answer', array('before' => 'auth', array($this, 'getlist_answer')));
-        Actions::post('poll/list/answer/{poll_lang_id}', array('before' => 'auth', array($this, 'getlist_answer')));
+        Route::post('poll/list/answer', array('before' => 'auth', array($this, 'getlist_answer')));
+        Route::post('poll/list/answer/{poll_lang_id}', array('before' => 'auth', array($this, 'getlist_answer')));
 
-        Actions::register('construct_left_menu', array($this, 'left_menu_item'));
-        Actions::register('language_created', array($this, 'language_created'));
-        Actions::register('language_deleted', array($this, 'language_deleted'));
+        Event::listen('construct_left_menu', array($this, 'left_menu_item'));
+        Event::listen('language_created', array($this, 'language_created'));
+        Event::listen('language_deleted', array($this, 'language_deleted'));
 
         Template::registerViewMethod('page', 'pollList', 'Lista de sondaje', null, true);
 

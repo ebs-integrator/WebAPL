@@ -6,7 +6,9 @@ use Core\APL\Actions,
     Core\APL\Shortcodes,
     jQgrid,
     SComplaintsModel,
-        Input,
+    Input,
+    Route,
+    Event,
     Core\APL\Template;
 
 class Socialcomplaints extends \Core\APL\ExtensionController {
@@ -24,13 +26,13 @@ class Socialcomplaints extends \Core\APL\ExtensionController {
         // Set settings page
         Shortcodes::register('scomplaint', array());
 
-        Actions::get('socialcomplaints/list', array('before' => 'auth', array($this, 'soclist')));
-        Actions::post('socialcomplaints/getlist', array('before' => 'auth', array($this, 'getlist')));
-        Actions::post('socialcomplaints/edititem', array('before' => 'auth', array($this, 'edititem')));
+        Route::get('socialcomplaints/list', array('before' => 'auth', array($this, 'soclist')));
+        Route::post('socialcomplaints/getlist', array('before' => 'auth', array($this, 'getlist')));
+        Route::post('socialcomplaints/edititem', array('before' => 'auth', array($this, 'edititem')));
 
         Template::registerViewMethod('page', 'secial_complaints_list', 'Lista cu plingeri', null, true);
 
-        Actions::register('construct_left_menu', array($this, 'left_menu_item'));
+        Event::listen('construct_left_menu', array($this, 'left_menu_item'));
 
         // Set layout
         $this->layout = Template::mainLayout();
