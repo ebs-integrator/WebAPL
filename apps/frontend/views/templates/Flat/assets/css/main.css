@@ -1118,8 +1118,15 @@ footer .right p.w_info span{
     background: -ms-linear-gradient(left,#f7f7f7,#f7f7f7 35%,white 35,white);
     padding-top:1px
 }
+.left_details .chat{
+    margin-top: 0px;
+    padding:0px;
+}
 .sec_span{
-    dispaly:none;
+    display:none;
+}
+.dirs_menu .wrap {
+    width: auto;
 }
 .m_search{
     display:none;
@@ -1954,7 +1961,7 @@ element.style {
 .l_fax{
     background:url('../img/l_fax.png')no-repeat 20px center;
 }
-.l_chat{
+.l_chat,left_details .chat a{
     background:url('../img/l_chat.png')no-repeat 20px center;
 }
 .l_map{
@@ -4380,7 +4387,30 @@ ul.vice li .p_name {
     .ldmbox input[type=text]{
         padding: 0 12px;
         width: 200px;
+    }
 
+    .plcu,.plcu tr,.plcu tr td,.plcu tr th, table.plcu table tr, table.plcu table, table.plcu table tbody{
+        display:block;
+        width: 100%;
+    }
+    table.plcu > tbody > tr > td, table.plcu > tbody > tr > th,table.plcu > thead > tr > td, table.plcu > thead > tr > th{
+        border:0px;
+    }
+    table.plcu  tr{
+        border: 1px solid #e3e3e3;
+    }
+    table.plcu > thead > tr > th, table.plcu > tbody > tr > th{
+        padding-bottom: 0px;
+    }
+    table.plcu > tbody > tr > td,table.plcu > thead > tr > td{
+        padding-top:0px;
+    }
+    table.plcu table tr td{
+        border:0px;
+        display:inline;
+    }
+    table.plcu table tr{
+        border:0px;
     }
 }
 
@@ -4604,10 +4634,13 @@ ul.vice li .p_name {
     .com_table thead,.com_box span{
         display:none;
     }
-    .dirs_menu a:last-child{
+    .dirs_menu a:last-child,.dirs_menu a:last-child span{
         display:block;
         font:20px 'AvenirNext-Bold';
         color:#000;
+    }
+    .dirs_menu .wrap{
+        display: block;
     }
     article{
         width:320px;
@@ -4700,5 +4733,14 @@ ul.vice li .p_name {
     .l_a li a span{
         margin-bottom: 10px;
     }
-
+    table.plcu > thead > tr > td {
+        font: 14px 'AvenirNext-Bold';
+    }
+    table.plcu > tbody > tr > th, table.plcu > thead > tr > th{
+        font: 15px 'AvenirNext-DemiBold';
+    }
+    table.plcu .doc, table.plcu .pdf, table.plcu .docx, table.plcu .xls, table.plcu .xlsx{
+        font: 15px 'AvenirNext-DemiBold';
+        line-height:normal;
+    }
 }
