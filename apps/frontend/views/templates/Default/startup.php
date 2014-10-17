@@ -16,3 +16,7 @@
     )
     
 ));
+
+Event::listen('firechat_top', function () {
+    echo HTML::style(res('assets/css/firechat.css'));
+});

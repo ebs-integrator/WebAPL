@@ -7,13 +7,15 @@ use Core\APL\Actions,
     Input,
     Validator,
     Route,
-        Event,
+    Event,
+    View,
     NewsletterModel;
 
 class Newsletter extends \Core\APL\ExtensionController {
 
     protected $module_name = 'newsletter';
     protected $layout;
+    public static $view_widget = 'newsletter::newsletter-subscribe';
 
     public function __construct() {
         parent::__construct();
@@ -24,10 +26,12 @@ class Newsletter extends \Core\APL\ExtensionController {
         Route::get('newsletter/unsubscribe/{code}', array($this, 'unsubscribe'))->where(array('code' => '[A-Za-z0-9]+'));
 
         Event::listen('bottom_widgets', array($this, 'widget'));
+
+        View::addNamespace('newsletter', app_path('/modules/newsletter/views'));
     }
 
     public function widget() {
-        return Template::moduleView($this->module_name, 'views.newsletter-subscribe');
+        echo View::make(Newsletter::$view_widget);
     }
 
     public function unsubscribe($code) {
