@@ -4165,6 +4165,9 @@ ul.vice li .p_name {
     .bgr .info > ul > li .left,.bgr .info > ul > li .right{
         font-size:16px;
     }
+    .subt{
+        font-size:22px;
+    }
     .sec_details img {
         max-width: 165px;
     }
@@ -4645,6 +4648,9 @@ ul.vice li .p_name {
         height:auto;
         margin-top:10px;
         padding-bottom:10px;
+    }
+    .subt{
+        font-size:20px;
     }
     .city_box .info {
         font: 15px 'AvenirNext-Regular';
