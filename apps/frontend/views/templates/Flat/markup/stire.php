@@ -25,7 +25,6 @@
             <div class="u_a">
                 <img src="http://kopceak1.sga.webhost1.ru/upload/541324094d4e1_cc364f95febbe696e99ad340103571ca.png">                
             </div>
-            <div class="clearfix"></div>
             <div class='conten'>
                 <h2>Focar de hepatita A în comuna Drăguşeni, raionul Străşeni. 23 de copii au ajuns la spital, după ce au băut apă contaminată din fântâni. Focar de hepatita A în comuna Drăguşeni, raionul Străşeni. 23 de copii au ajuns la spital, după ce au băut apă contaminată din fântâni. </h2>
                 <p>Medicii nu exclud că în următoarele zile numărul bolnavilor ar putea creşte.</p>

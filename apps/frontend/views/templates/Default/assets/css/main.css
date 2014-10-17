@@ -2954,6 +2954,9 @@ cda  ul li .left p{
     font:17px 'open_sanssemibold';
     color:#4c4c4c;
 }
+.emrg ul li .right{
+    width:550px;
+}
 .dop .right.firechat-name{
     width:235px;
 }
@@ -3805,11 +3808,16 @@ table.sondaje td:first-child{
     color:#4c4c4c;
     padding-right:30px;
 }
+table.sondaje{
+    width:100%;
+}
 table.sondaje td:nth-child(2) span{
     padding-left:12px;
     font:17px 'open_sanssemibold';
     color:#acbe6b;
-    padding-right:80px;
+}
+table.sondaje tr td:nth-child(2) {
+    min-width: 354px;
 }
 table.sondaje td:last-child{
     color:#4c4c4c;
@@ -4584,7 +4592,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         width: 200px;
     }
     .emrg ul li .left{
-        width:28%;
+        width:auto;
     }
     section > .wrap .right{
         margin-right:25px;
@@ -4724,13 +4732,13 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         width: 425px;
     }
     .emrg .ul_title .left{
-        width: 270px;
+        max-width: 220px;
     }
     .emrg .ul_title .right,.emrg ul li .right{
         width: 539px;
     }
     .emrg ul li .left{
-        width:250px;
+        max-width:220px;
     }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1269px){
@@ -4746,6 +4754,10 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .mini_contacte{
         display:block;
     }
+    table.sondaje progress[value]{
+        width:250px;
+    }
+
     .top_menu .left.title{
         min-width:100px;
     }
@@ -4982,8 +4994,8 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .prg{
         font-size:22px;
     }
-    table.sondaje tbody tr td:nth-child(2){
-        width:450px;
+    table.sondaje tbody tr td:nth-child(2) {
+        width: 324px;
     }
     table.sondaje td:nth-child(2) span{
         padding:0px 5px;
@@ -5058,6 +5070,14 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     section > .wrap{
         padding: 0px 10px;
         max-width:680px;
+    }
+
+    table.sondaje progress[value] {
+        width: 250px;
+    }
+    
+    table.sondaje tbody tr td:nth-child(2) {
+        width: 324px;
     }
     header .top_menu{
         padding-top:21px;
@@ -5284,6 +5304,11 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     section > .wrap,section .dirs_menu .wrap{
         padding:0 20px;
     }
+    .emrg ul li .right{
+        width:100%;
+        padding:0px;
+        margin-top:10px;
+    }
     header .header_mini{
         float:right;
         width:80px;
@@ -5318,6 +5343,15 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     div div.logo{
         display:none;
+    }
+    table.sondaje tbody tr{
+        padding: 10px;
+        border-bottom: 1px solid #ececec;
+    }
+    table.sondaje tr td:nth-child(2){
+        width:100%;
+        min-width:0px;
+        max-width:100%;
     }
     .menu{
         display:none;
@@ -5872,7 +5906,15 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         max-width: 340px;
     }
     table.sondaje progress[value]{
-        width:250px;
+        width:240px;
+    }
+    table.sondaje td,table.sondaje tr,table.sondaje,table.sondaje tbody{
+        display:block;
+        width: 100%;
+        height:auto;
+    }
+    table.sondaje td:nth-child(2) span{
+        font: 15px 'open_sanssemibold';
     }
     .a_box .info{
         font-size:15px;
