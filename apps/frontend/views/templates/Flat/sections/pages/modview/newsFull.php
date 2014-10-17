@@ -4,8 +4,8 @@
 <div class="u_a">
     <?php if ($post->cover) { ?>
         <img src="<?= url($post->cover['path']); ?>">
-    <?php } ?></div>
-<div class="clearfix"></div>
+    <?php } ?>
+</div>
 <div class='conten'>
     <?php if ($post->show_pcomment) { ?>
         <div class='cont live_comment' data-pid="news<?= $post->id; ?>">
