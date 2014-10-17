@@ -15,13 +15,20 @@ use Core\APL\Actions,
     Validator,
     Input,
     SimpleCapcha,
-        Route,
+    Route,
+    View,
     PageView;
 
 class Person extends \Core\APL\ExtensionController {
 
     protected $module_name = 'person';
     protected $layout;
+    public static $view_group_with_persons = 'person::person_groups';
+    public static $view_persons_with_photo = 'person::person_photos';
+    public static $view_persons_big = 'person::person_mayors';
+    public static $view_persons_mayor = 'person::person_mayor';
+    public static $view_persons_secretar = 'person::person_secretar';
+    public static $view_city_councilors = 'person::person_councilors';
 
     public function __construct() {
         parent::__construct();
@@ -38,12 +45,14 @@ class Person extends \Core\APL\ExtensionController {
         Shortcodes::register('person_subscribe', array($this, 'subscribe'));
 
         Route::post('person/subscribe_to_audience', array($this, 'subscribe_to_audience'));
+
+        View::addNamespace('person', app_path('/modules/person/views'));
     }
 
     public function group_list($data) {
         $groups = PersonModel::getPostPersonGroups($data['page']->id);
         if ($groups) {
-            $data["page"]->text = Template::moduleView($this->module_name, "views.person_groups", array('groups' => $groups));
+            $data["page"]->text = View::make(Person::$view_group_with_persons, array('groups' => $groups));
         }
 
         return PageView::defaultView($data);
@@ -52,7 +61,7 @@ class Person extends \Core\APL\ExtensionController {
     public function councilors($data) {
         $groups = PersonModel::getPostPersonGroups($data['page']->id);
         if ($groups) {
-            $data["page"]->text = Template::moduleView($this->module_name, "views.person_councilors", array('groups' => $groups));
+            $data["page"]->text = View::make(Person::$view_city_councilors, array('groups' => $groups));
         }
 
         return PageView::defaultView($data);
@@ -61,28 +70,27 @@ class Person extends \Core\APL\ExtensionController {
     public function photo_persons($data) {
         $groups = PersonModel::getPostPersonGroups($data['page']->id);
         if ($groups) {
-            $data["page"]->text = Template::moduleView($this->module_name, "views.person_photos", array('groups' => $groups));
+            $data["page"]->text = View::make(Person::$view_persons_with_photo, array('groups' => $groups));
         }
 
         return PageView::defaultView($data);
     }
 
     public function vicemayor($data) {
-        
+
         $item = Input::get('item');
         if ($item) {
             $person = \PersonModel::getPerson($item);
             if ($person) {
                 $groups = [['persons' => [$person]]];
-                $data["page"]->text = Template::moduleView($this->module_name, "views.person_secretar", array('groups' => $groups));
-
+                $data["page"]->text = View::make(Person::$view_persons_secretar, array('groups' => $groups));
                 return PageView::defaultView($data);
             }
         }
 
         $groups = PersonModel::getPostPersonGroups($data['page']->id);
         if ($groups) {
-            $data["page"]->text = Template::moduleView($this->module_name, "views.person_mayors", array('groups' => $groups, 'page_url' => $data['page_url']));
+            $data["page"]->text = View::make(Person::$view_persons_big, array('groups' => $groups, 'page_url' => $data['page_url']));
         }
 
         return PageView::defaultView($data);
@@ -91,7 +99,7 @@ class Person extends \Core\APL\ExtensionController {
     public function mayor($data) {
         $groups = PersonModel::getPostPersonGroups($data['page']->id);
         if ($groups) {
-            $data["page"]->text = Template::moduleView($this->module_name, "views.person_mayor", array('groups' => $groups));
+            $data["page"]->text = View::make(Person::$view_persons_mayor, array('groups' => $groups));
         }
 
         return PageView::defaultView($data);
@@ -100,7 +108,7 @@ class Person extends \Core\APL\ExtensionController {
     public function secretar($data) {
         $groups = PersonModel::getPostPersonGroups($data['page']->id);
         if ($groups) {
-            $data["page"]->text = Template::moduleView($this->module_name, "views.person_secretar", array(
+            $data["page"]->text = View::make(Person::$view_persons_secretar, array(
                         'groups' => $groups
             ));
         }
@@ -117,7 +125,7 @@ class Person extends \Core\APL\ExtensionController {
                     ->where(PersonLangModel::getField('lang_id'), \Core\APL\Language::getId())
                     ->get()
         );
-        return Template::moduleView($this->module_name, 'views.block_subscribe', $data);
+        return View::make('person::block_subscribe', $data);
     }
 
     public function subscribe_to_audience() {

@@ -69,11 +69,15 @@ Event::listen('APL.modules.load', function() {
     Event::fire('APL.core.prepare');
     Event::fire('APL.website.check');
 
+    Event::fire('APL.modules.beforeload');
+    
     Module::where('enabled', '1')->get()->each(function($module) {
         ClassLoader::addDirectories(app_path() . '/modules/' . $module->extension . '/');
         ClassLoader::load($module->extension);
         Modules::addInstance($module->extension);
     });
+    
+    Event::fire('APL.modules.afterload');
 });
 
 Event::listen('APL.install.check', function () {

@@ -1,5 +1,3 @@
-
-
 <section>
     <div class="wrap">
         <div class="left_block">
@@ -36,9 +34,4 @@
             <?= $results->appends(array('words' => $words))->links(); ?>
         </div>
     </div>
-
 </section>
-
-
-
-

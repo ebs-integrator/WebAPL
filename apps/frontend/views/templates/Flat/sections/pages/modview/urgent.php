@@ -1,17 +1,14 @@
-<div class="emrg">
-    <p class="ul_title">
-        <span class="left"><?= varlang('telefon'); ?>	</span>
-        <span class="right"><?= varlang('serviciu'); ?></span>
-    </p>
-    <ul>
+<table class="urg">
+    <thead><tr><td><?= varlang('telefon'); ?></td><td><?= varlang('serviciu'); ?></td></tr></thead>
+    <tbody>
         <?php foreach ($feedPosts as $item) { ?>
-            <li>
-                <div class="left"><?= isset($item->phone_one) ? $item->phone_one : ''; ?></div>
-                <div class="right"><?= $item['title']; ?></div>
-            </li>
+        <tr>
+            <td><?= isset($item->phone_one) ? $item->phone_one : ''; ?></td>
+            <td><?= $item['title']; ?></td>
+        </tr> 
         <?php } ?>
-    </ul>
-</div>
+    </tbody>
+</table>
 
 <?php
 if (method_exists($feedPosts, 'links')) {
