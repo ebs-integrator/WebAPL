@@ -53,6 +53,8 @@ class SettingsController extends BaseController {
             }
         }
         
+        Log::info('Edit settings');
+        
         return [];
     }
 
