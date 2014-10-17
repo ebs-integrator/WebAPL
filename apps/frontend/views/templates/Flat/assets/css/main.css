@@ -2920,7 +2920,7 @@ hr.reg {
 ul.a_n li a {
     width: 100%;
     display: block;
-    height: 50px;
+    min-height: 50px;
     border-bottom: 2px solid #f7f7f7;
 }
 ul.a_n li a span {
@@ -2948,8 +2948,18 @@ ul.a_n li a p {
 table.sondaje tr {
     height: 40px;
 }
+table.sondaje{
+    width:100%;
+}
 table.sondaje tr td{
     vertical-align: bottom;
+}
+table.sondaje tr td:last-child{
+    text-align: center;
+}
+table.sondaje tr td:nth-child(2){
+    min-width: 354px;
+
 }
 table.sondaje td:first-child {
     font: 17px 'AvenirNext-DemiBold';
@@ -2971,7 +2981,6 @@ table.sondaje td:nth-child(2) span {
     padding-left: 12px;
     font: 17px 'AvenirNext-DemiBold';
     color: #0382a1;
-    padding-right: 80px;
 }
 table.sondaje td:last-child {
     color: #4c4c4c;
@@ -3005,10 +3014,16 @@ table.sondaje td:last-child {
     font: 15px 'AvenirNext-DemiBold';
     margin-bottom:10px;
 }
-.ldm_li p{
+.ldm_li b{
     text-transform: uppercase;
     color:#0382a1;
     font:15px 'AvenirNext-Bold';
+    margin-top:20px;
+}
+.ldm_li p{
+    text-transform: uppercase;
+    color:#4c4c4c;
+    font:15px 'AvenirNext-Medium';
     margin-top:20px;
 }
 .ldmbox .ldm_li ul li {
@@ -3123,6 +3138,7 @@ table.sondaje td:last-child {
 .sitemap ul li a{
     font:15px 'AvenirNext-Medium';
     color:#545454;    
+    display: block;
 }
 .sitemap > ul > li > ul > li > a{
     margin-left:30px;
@@ -3142,6 +3158,10 @@ table.sondaje td:last-child {
     max-width: 100%;
     max-height: 500px;
     height: auto;
+}
+.u_a{
+    float: left;
+    margin-right: 20px;
 }
 .conten p{
     font:17px 'AvenirNext-Regular';
@@ -3630,10 +3650,10 @@ ul.vice li .p_name {
     .contact{
         margin-right:20px;
     }
-    .home_chat p {
+    header    .home_chat p {
         display: none;
     }
-    .home_chat .pct {
+    header    .home_chat .pct {
         height: 64px;
         padding: 0 25px;
         background: url('../img/chat_dots.png') no-repeat center;
@@ -3649,13 +3669,25 @@ ul.vice li .p_name {
     ul.culture li .right .box{
         width:205px;
     }
+    .u_a img{
+        max-height:400px;
+    }
     ul.culture li:after{
         clear:both;
         display: block;
         content:'';
     }
+    table.sondaje progress[value]{
+        width:270px;
+    }
+    section .left_site{
+        width:30%;
+    }
     .personal {
         width: 100%;
+    }
+    .r_sond {
+        font: 15px 'AvenirNext-Medium';
     }
     p.descr {
         max-width: 380px;
@@ -3674,9 +3706,25 @@ ul.vice li .p_name {
     ul.culture li .left.img{
         display:none;
     }
+    .sec_details td{
+        padding-top:0px;
+    }
+    .sec_details td:first-child{
+        padding-top:15px;
+    }
     nav{
         width: 286px;
     }
+    .sec_label table tr,.sec_label table tr td,.sec_label table {
+        display:block;
+    }
+    .sec_details td:first-child{
+        border:0px;
+    }
+    .sec_details .sec_label{
+        width:65%;
+    }
+
     .right_block nav:nth-child(2n) {
         margin-right: 45px;
     }
@@ -3703,10 +3751,10 @@ ul.vice li .p_name {
     .contact {
         margin-right: 15px;
     }
-    .home_chat p{
+    header .home_chat p{
         display:none;
     }
-    .home_chat .pct{
+    header    .home_chat .pct{
         height: 64px;
         padding:0 25px;
         background: url('../img/chat_dots.png') no-repeat center;
@@ -3852,6 +3900,23 @@ ul.vice li .p_name {
     div#map-canvas2 {
         height: 350px !important;
     }
+
+    .a_box .left .img img {
+        max-width: 220px;
+    }
+    .a_box .right {
+        max-width: 320px;
+    }
+    .a_box .info {
+        font: 15px 'AvenirNext-Regular';
+        max-height: 240px;
+    }
+    ul.vice li .left{
+        width: 360px;
+    }
+    .vice .img img {
+        max-width: 190px;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px){
     footer .left{
@@ -3861,7 +3926,19 @@ ul.vice li .p_name {
     footer .right,.dirs_menu *{
         display:none;
     }
+    ul.vice li .left{
+        width: 360px;
+    }
+    .vice .img img {
+        max-width: 190px;
+    }
+    .u_a img{
+        max-height:300px;
+    }
     .left_block nav span,.left_block nav .more{
+        display:none;
+    }
+    table.taxe tbody tr td:nth-child(2), table.taxe thead tr td:nth-child(2){
         display:none;
     }
     .page_top_header .top_back {
@@ -3875,12 +3952,25 @@ ul.vice li .p_name {
     footer .f_menu ul li a{
         line-height:64px;
     }
+    table.sondaje progress[value]{
+        width: 270px;
+    }
+    .sec_details img {
+        max-width: 165px;
+    }
     .left_block nav{
         width:100%;
         padding:0px;
         height: auto;
         border-bottom: 2px solid #ececec;
         margin-bottom: 0px;
+    }
+    section .left_site{
+        float:none;
+        background:#fff;
+    }
+    .sitemap{
+        padding-left: 40px;
     }
     .left_block  nav p{
         font: 18px 'AvenirNext-Medium';
@@ -4042,13 +4132,109 @@ ul.vice li .p_name {
     .apt input[type=text]{
         width:100%;
     }
+    .a_box .left .img img {
+        max-width: 230px;
+    }
+    .a_box .right {
+        max-width: 360px;
+    }
+    .a_box .info {
+        font: 15px 'AvenirNext-Regular';
+    }
+    .a_box .title a {
+        font: 20px 'AvenirNext-DemiBold';
+    }
 }
 @media only screen and (max-width: 767px){
     .page_header{
         background:#f7f7f7;
     }
+    .a_box .title a {
+        font: 18px 'AvenirNext-DemiBold';
+    }
     .apt input[type=text]{
         width:100%;
+    }
+    .vice .img img,.vice .img{
+        max-width:180px;
+    }
+    ul.vice li .left{
+        margin-left:20px;
+        width:380px;
+    }
+    .bgr .info > ul > li .left,.bgr .info > ul > li .right{
+        font-size:16px;
+    }
+    .sec_details img {
+        max-width: 165px;
+    }
+    .sec_details td{
+        padding-top:0px;
+    }
+
+    .a_box .left .img img {
+        max-width: 200px;
+    }
+    .a_box .right {
+        max-width: 300px;
+    }
+    .a_box .info {
+        font: 15px 'AvenirNext-Regular';
+    }
+    .u_a img{
+        max-height:200px;
+    }
+    .sec_details td:first-child{
+        padding-top:15px;
+    }
+    section .left_site{
+        float:none;
+        background:#fff;
+    }
+    .r_sond {
+        font: 15px 'AvenirNext-Medium';
+    }
+    table.sondaje progress[value]{
+        width: 250px;
+    }
+    table.taxe tbody tr td:nth-child(2), table.taxe thead tr td:nth-child(2), table.taxe tbody tr td:nth-child(3), table.taxe thead tr td:nth-child(3),table.taxe tbody tr td:nth-child(4), table.taxe thead tr td:nth-child(4){
+        display:none;
+    }
+    table.sondaje td,table.sondaje tr,table.sondaje,table.sondaje tbody{
+        display:block;
+        width: 100%;
+        height:auto;
+    }
+    .adv{
+        font: 12px 'AvenirNext-MediumItalic';
+    }
+    table.sondaje td:nth-child(2) span {
+        padding-left: 12px;
+        font: 15px 'AvenirNext-DemiBold';
+    }
+    table.sondaje tr{
+        padding:10px 0px;
+        border-bottom:1px solid #ececec;
+    }
+    table.sondaje td:first-child {
+        font: 15px 'AvenirNext-DemiBold';
+    }
+    table.sondaje tr td:last-child{
+        text-align:left;
+        font: 13px 'AvenirNext-Regular';
+    }
+    .sitemap{
+        padding-left: 40px;
+    }
+
+    .sec_label table tr,.sec_label table tr td,.sec_label table {
+        display:block;
+    }
+    .sec_details td:first-child{
+        border:0px;
+    }
+    .sec_details .sec_label{
+        width:65%;
     }
     .page_top_header,.page_header{
         width:100%;
@@ -4313,7 +4499,7 @@ ul.vice li .p_name {
     .ag_line p {
         width: 459px;
     }
-    table.taxe thead tr td:nth-child(3),table.taxe tbody tr td:nth-child(3),.search_p,.sort_b,.left_details,.search_img{
+    table.taxe thead tr td:nth-child(3),table.taxe tbody tr td:nth-child(3),.search_p,.sort_b,.search_img{
         display:none;
     }
     .search_s input[type=text] {
@@ -4331,8 +4517,16 @@ ul.vice li .p_name {
     table.atz tr td:nth-child(2) {
         font: 16px 'AvenirNext-DemiBold';
     }
-    table.atz tr td:first-child,.bgr .quote,.home_chat{
+    table.atz tr td:first-child,.home_chat{
         display:none;
+    }
+    .bgr .quote{
+        font: 16px 'AvenirNext-DemiBold';
+        max-width: 330px;
+
+    }
+    .bgr .img img{
+        max-width:200px
     }
     h1 {
         font: 22px 'AvenirNext-Bold';
@@ -4412,20 +4606,54 @@ ul.vice li .p_name {
     table.plcu table tr{
         border:0px;
     }
+    .det_news {
+        font: 20px 'AvenirNext-Bold';
+    }
+    .conten h2, .conten strong {
+        font: 16px 'AvenirNext-DemiBold';
+    }
+    .conten p {
+        font: 16px 'AvenirNext-Regular';
+    }
+
 }
 
 @media only screen and (max-width: 639px){
     .city_box .title {
         font: 20px 'AvenirNext-Medium';
     }
+    .conten p {
+        font: 15px 'AvenirNext-Regular';
+    }
+    .det_news {
+        font: 18px 'AvenirNext-Bold';
+    }
     .city_link a {
         font: 15px 'AvenirNext-MediumItalic';
+    }
+    .tel{
+        margin-top:10px;
+    }
+    ul.vice li .name,ul.vice li .p_name{
+        display:inline;
+        font: 18px 'AvenirNext-Medium';
+        color: #008d74;
+    }
+    ul.vice li .left{
+        margin-left:0px;
+        width:100%;
+        height:auto;
+        margin-top:10px;
+        padding-bottom:10px;
     }
     .city_box .info {
         font: 15px 'AvenirNext-Regular';
     }
     .wrap{
         width:320px;
+    }
+    .conten h2, .conten strong {
+        font: 15px 'AvenirNext-DemiBold';
     }
     .page_top_content .row1{
         width:90%;
@@ -4523,7 +4751,7 @@ ul.vice li .p_name {
         font: 13px 'AvenirNext-Bold';
         line-height: 33px;
     }
-    table.taxe thead tr td:nth-child(2),table.taxe tbody tr td:nth-child(2),.calendar_slider table thead tr td:nth-child(2),.calendar_slider table tbody tr td:nth-child(2),.cda .ul_title .right,.cda ul li .right{
+    .calendar_slider table thead tr td:nth-child(2),.calendar_slider table tbody tr td:nth-child(2),.cda .ul_title .right,.cda ul li .right{
         display:none;
     }
     .sort_b {
@@ -4742,5 +4970,75 @@ ul.vice li .p_name {
     table.plcu .doc, table.plcu .pdf, table.plcu .docx, table.plcu .xls, table.plcu .xlsx{
         font: 15px 'AvenirNext-DemiBold';
         line-height:normal;
+    }
+    .sec_details img {
+        max-width: 210px;
+        margin-bottom:15px;
+    }
+    .sec_details td{
+        padding-left:0px;
+    }
+    .sec_details .sec_label{
+        width:100%;
+    }
+    .sec_label table tr{
+        border-bottom: 2px solid #efefef;
+        padding-bottom:5px;
+    }
+    .secretar h1 {
+        font: 18px 'AvenirNext-Bold';
+    }
+    .secretar p {
+        font: 15px 'AvenirNext-Regular';
+    }
+    .secretar span {
+        font: 15px 'AvenirNext-Regular';
+    }
+    .sec_details td:first-child {
+        font: 15px 'AvenirNext-Bold';
+    }
+    .sec_details .sec_name {
+        font: 15px 'AvenirNext-DemiBold';
+    }
+    .sec_details td, .sec_details p {
+        font: 15px 'AvenirNext-Regular';
+    }
+    .s_title {
+        font: 18px 'AvenirNext-Bold';
+        margin-right:0px;
+    }
+    .sitemap ul li a {
+        font: 14px 'AvenirNext-Medium';
+    }
+    section .left_site{
+        width:100%;
+    }
+    .e_sond {
+        font: 20px 'AvenirNext-DemiBold';
+    }
+    .urg tbody tr td,.urg tbody tr ,.urg tbody ,.urg,.urg tbody tr td:first-child,.urg thead,.urg thead tr, .urg thead td{
+        display:block;
+        width: 100%;
+        height:auto;
+    }
+    .urg tbody tr td{
+        border:0px;
+    }
+    .urg tbody tr{
+        border-bottom: 2px solid #efefef;
+    }
+    .urg thead tr td{
+        line-height: 33px;
+    }
+    .urg tbody tr td:last-child{
+        padding:0px;
+        padding-left:35px;
+        font: 15px 'AvenirNext-Regular';
+    }
+    .urg tbody tr td:first-child {
+        font: 16px 'AvenirNext-Medium';
+    }
+    .urg thead tr td:last-child{
+        display:none;
     }
 }
