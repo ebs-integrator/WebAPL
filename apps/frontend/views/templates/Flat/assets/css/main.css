@@ -2529,7 +2529,7 @@ table.c_l_u tr:last-child {
 table.c_l_u td {
     border: 1px solid #e5e5e5;
     padding: 25px;
-    word-break: break-word;
+    word-break:break-all;
 }
 .clu_img {
     float: left;
