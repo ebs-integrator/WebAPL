@@ -1,0 +1,203 @@
+
+.lang p {
+    background: #e1fbcc;
+} 
+
+
+.contact a.contact_us, footer .right p.y_info {
+    color: #D2FEAE;
+} 
+
+
+
+
+.adv {
+    border: 1px solid #efb4cd;
+} 
+
+
+.sec_span, h1, .attention span, nav p, .city_box .title, .form .ftb,  .name, .sort_b .selectboxit-container span,.selectboxit-container .selectboxit-options a, .calendar_slider table thead tr:first-child td,  .com_box .title,.sec_details .sec_name, .secretar span, table.plc > tbody > tr > td > a, .adv, .s_title, .det_news, .search_t span, .search_p span, .cda ul li .left a, ul.vice li .name, .bgr .info > ul > li .left {
+    color: #f03081;
+} 
+.calendar_slider table thead tr td,.compl_list li a .compl_title{
+    color:#434584;
+}
+section .search input[type=submit] {
+    background: #f03081;
+} 
+ul.culture li .right .box p,ul.culture li .right .box p a{
+    color:#434584;
+}
+.dop .top {
+    border-bottom: 4px solid #f03081;
+} 
+
+
+
+
+.l_box, .lang p, .chat_b, header .cont_form .prp a,  .mini_header .m_lang li a, .form.green .ftb, .stat_info span:last-child, .search_li li p span, .contact_l .prp a, .contact_r .prp a {
+    color: #F15295;
+} 
+footer .search input[type=submit]{
+    color:#B9C66A;
+    border-color:#B9C66A;
+}
+
+.l_box, table.plc > tbody > tr > td:first-child {
+    border-color: #F15295;
+} 
+
+.menu_block, .cont_form input[type="submit"], .mini_header .content, .page_top_content .row2 .content, .green input[type=submit], .dop .top, .ldmbox input[type=submit] {
+    background: #F15295;
+} 
+
+.contact_l .prp, .contact_r .prp {
+    border: 2px solid #F15295;
+} 
+
+ul.a_n li a span {
+    background-color: #F15295;
+} 
+
+
+table.taxe thead tr, table.taxe thead tr td {
+    border: 1px solid #efb4cd;
+} 
+
+
+
+.dop .top hr {
+    background: #ef73a7;
+} 
+
+
+
+.compl_list li a span, .a_box p.data,.p_data {
+    background-color: #ef73a7;
+} 
+
+.left_block .chat .green, .home_chat p {
+    color: #ef73a7;
+} 
+
+.home_chat {
+    border: 2px solid #373984;
+} 
+
+
+.left_block ul.menu > li ul li a, .left_block ul.menu li.active a, .ag_line p,.ag_line span, .ldm_li b {
+    color: #4A4C88;
+} 
+
+.ag_line span {
+    border: 2px solid #4A4C88;
+} 
+
+.home_chat p span{
+    color:#373984;
+}
+.left_block .chat .violet {
+    color: #434584;
+} 
+
+
+
+.n_alert .cntn p {
+    color: #373984;
+} 
+
+.n_alert .n_info .n_data {
+    background: #373984;
+} 
+
+
+footer .newsletter_subscribe_form input[type=submit] {
+    border: 2px solid #4A4C85;
+} 
+
+footer .newsletter_subscribe_form input[type=submit], .attention p.title, table.taxe thead tr td, .ath p, .subt {
+    color: #4A4C85;
+} 
+
+.search_s input[type=submit], .snd_sbm {
+    background: #4A4C85;
+} 
+
+
+article .categ_title a, table.orar thead tr:first-child, .clu_nume {
+    color: #4A4C85;
+} 
+
+.l_a li a span {
+    background-color: #4A4C85;
+} 
+
+.ldmbox .data p {
+    background: #4A4C85;
+} 
+
+
+table.taxe thead tr {
+    border-bottom: 2px solid #8587b3;
+} 
+
+
+p.form_title, ul.faq li a span {
+    color: #4A4C85;
+} 
+
+article .categ_title a:hover, .form .content input[type=submit], .video_d {
+    background: #4A4C85;
+} 
+
+
+
+
+.menu_block,.page_top_content .row2 .content{
+    background: #F15295;
+}
+.lang p,.home_chat p{
+    color: #F15295;
+}
+footer .newsletter_subscribe_form input[type=submit]{
+    border:2px solid #F15295;
+    color: #F15295;
+}
+.pag ul li a, .pag ul li {
+    color: #F15295;
+}
+h1,table.taxe thead tr td{
+    color:#4A4C85;
+}
+table.taxe thead tr td{
+    border: 1px solid #4A4C85;
+}
+.prefooter .row1_l{
+    background: url('../img/foter_an.png')no-repeat right bottom #4B4D86;
+}
+.prefooter .row1_r .f_title{
+    color:#BAC66E;
+}
+.prefooter .row1_r .data{
+    background: #373984;
+}
+.prefooter .row1_r a.f_artc{
+    color:#373984;
+}
+.prefooter .row1_l p.f_title,.prefooter .row1_l p{
+    color:#fff;
+}
+.prefooter .row1_l .data {
+    background: #F45097;
+}
+
+.l_box{
+    border-color: #fff;
+    color:#fff;
+}
+.a_box .title a{
+    color:#4A4C88;
+}
+.a_box p.data, .p_data{
+    background-color: #B9C66C;
+}
