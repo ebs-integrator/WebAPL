@@ -1,6 +1,6 @@
 <?php
 
-\Core\APL\Template::setColorSchemes(array(
+Core\APL\Template::setColorSchemes(array(
     
     'blue' => array(
         'name' => 'Blue',

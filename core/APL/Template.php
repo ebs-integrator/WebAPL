@@ -181,7 +181,7 @@ class Template {
         $template = Template::findTemplate();
         Template::setTemplate($template);
 
-        $startup_file = $_SERVER['DOCUMENT_ROOT'] . Template::path('startup.php', 'frontend');
+        $startup_file = $_SERVER['DOCUMENT_ROOT'] . Template::path('startup.php', 'frontend', \SettingsModel::one('template_frontend'));
         if (file_exists($startup_file)) {
             include $startup_file;
         }
@@ -243,8 +243,8 @@ class Template {
      * @param string $path
      * @return string
      */
-    public static function path($path = '', $app = '') {
-        return "/apps/" . ($app ? $app : APP_FOLDER) . "/views/templates/" . self::$template . "/" . $path;
+    public static function path($path = '', $app = '', $template = '') {
+        return "/apps/" . ($app ? $app : APP_FOLDER) . "/views/templates/" . ($template ? $template : self::$template) . "/" . $path;
     }
 
     /**
