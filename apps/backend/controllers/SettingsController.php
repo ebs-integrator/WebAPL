@@ -29,14 +29,6 @@ class SettingsController extends BaseController {
         
         $this->layout->content = View::make('sections.settings.edit', $this->data);
     }
-    
-    public function getTemplate() {
-        User::onlyHas("settings-view");
-
-        $this->data['setts'] = SettingsModel::getAll();
-        
-        $this->layout->content = View::make('sections.settings.template', $this->data);
-    }
 
     public function postSave() {
         $settings = Input::get('set');
