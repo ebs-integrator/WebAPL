@@ -1,0 +1,97 @@
+
+h1, .attention span, nav p, ul.culture li .right .box p,ul.culture li .right .box p a, .city_box .title, .form .ftb, .compl_list li a .compl_title, .name, .sort_b .selectboxit-container span,.selectboxit-container .selectboxit-options a, .calendar_slider table thead tr:first-child td, .calendar_slider table thead tr td, .com_box .title, .cns_locali thead tr td, .sec_details .sec_name, .secretar span, table.plc > tbody > tr > td > a, .adv, .s_title, .det_news, .search_t span, .search_p span, .cda ul li .left a, ul.vice li .name, .bgr .info > ul > li .left {
+     color: green;
+} 
+
+section .search input[type=submit] {
+     background: green;
+} 
+
+.dop .top {
+     border-bottom: 4px solid green;
+} 
+
+
+
+
+.menu_block, .cont_form input[type="submit"], .mini_header .content, .page_top_content .row2 .content, .green input[type=submit], .dop .top, .ldmbox input[type=submit] {
+     background: white;
+} 
+
+.lang p, .chat_b, header .cont_form .prp a, footer .search input[type=submit], .mini_header .m_lang li a, .form.green .ftb, .stat_info span:last-child, .search_li li p span, .contact_l .prp a, .contact_r .prp a {
+     color: white;
+} 
+
+.contact_l .prp, .contact_r .prp {
+     border: 2px solid white;
+} 
+
+table.plc > tbody > tr > td:first-child {
+     border-color: white;
+} 
+
+ul.a_n li a span {
+     background-color: white;
+} 
+
+
+table.taxe thead tr, table.taxe thead tr td {
+     border: 1px solid red;
+} 
+
+
+.compl_list li a span, .a_box p.data,.p_data {
+     background-color: green;
+} 
+
+.left_block .chat .green, .home_chat p {
+     color: green;
+} 
+
+.home_chat {
+     border: 2px solid green;
+} 
+
+
+
+.left_block ul.menu > li ul li a, .left_block ul.menu li.active a, .ag_line p,.ag_line span, .ldm_li b {
+     color: red;
+} 
+
+.ag_line span {
+     border: 2px solid red;
+} 
+
+
+.left_block .chat .violet, .home_chat p span {
+     color: red;
+} 
+
+
+
+
+footer .newsletter_subscribe_form input[type=submit] {
+     border: 2px solid red;
+} 
+
+footer .newsletter_subscribe_form input[type=submit], .attention p.title, table.taxe thead tr td, .ath p, .subt {
+     color: red;
+} 
+
+.search_s input[type=submit], .snd_sbm {
+     background: red;
+} 
+
+
+article .categ_title a, table.orar thead tr:first-child, .clu_nume {
+     color: red;
+} 
+
+.l_a li a span {
+     background-color: red;
+} 
+
+.ldmbox .data p {
+     background: red;
+} 
+
