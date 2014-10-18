@@ -13,12 +13,12 @@
         </div>
         <div class="content">
             <ul class="f_social">
-                <li><a target="_blank" href="<?= varlang('facebook_link'); ?>"><img src="<?=res('assets/img/fb.png');?>"></a></li>
-                <li><a target="_blank" href="<?= varlang('odnoklassniki-link-1'); ?>"><img src="<?=res('assets/img/odno.png');?>"></a></li>
-                <li><a target="_blank" href="<?= varlang('vkontakte-link'); ?>"><img src="<?=res('assets/img/vk.png');?>"></a></li>
-                <li><a target="_blank" href="<?= varlang('twitter-link'); ?>"><img src="<?=res('assets/img/twitter.png');?>"></a></li>
-                <li><a target="_blank" href="<?= varlang('gplus-link'); ?>"><img src="<?=res('assets/img/gplus.png');?>"></a></li>
-                <li><a target="_blank" href="<?= varlang('rss-link'); ?>"><img src="<?=res('assets/img/rss.png');?>"></a></li>
+                <li><a target="_blank" class="f_fb" href="<?= varlang('facebook_link'); ?>"><img src="<?=res('assets/img/fb.png');?>"></a></li>
+                <li><a target="_blank" class="f_odno" href="<?= varlang('odnoklassniki-link-1'); ?>"><img src="<?=res('assets/img/odno.png');?>"></a></li>
+                <li><a target="_blank" class="f_vk"b href="<?= varlang('vkontakte-link'); ?>"><img src="<?=res('assets/img/vk.png');?>"></a></li>
+                <li><a target="_blank" class="f_twitter" href="<?= varlang('twitter-link'); ?>"><img src="<?=res('assets/img/twitter.png');?>"></a></li>
+                <li><a target="_blank" class="f_gplus" href="<?= varlang('gplus-link'); ?>"><img src="<?=res('assets/img/gplus.png');?>"></a></li>
+                <li><a target="_blank" class="f_rss" href="<?= varlang('rss-link'); ?>"><img src="<?=res('assets/img/rss.png');?>"></a></li>
             </ul>
             <div class="clearfix50"></div>
             <form method="get" action="<?= Language::url('search'); ?>" class="search">

@@ -43,7 +43,23 @@
         <script src="<?= res('assets/js/jquery-2.1.1.js'); ?>"></script>
     </head>
     <body>
-
+        <div class="n_alert" id="alertbox" data-alertid="279">
+            <div class="cntn">
+                <img src="/apps/frontend/views/templates/Default/assets/img/alert.png">
+                <p>alerte!</p>
+                <a href="javascript:;" class="alertclose"></a>
+            </div>
+            <div class="n_info">
+                <div class="n_data">03-10-2014, 15:24</div>
+                <div class="clearfix"></div>
+                <p><a href="http://lpa.devebs.net/ro/topost/279">Obligaţiile beneficiarilor de ajutor social</a></p>
+                <a href="http://lpa.devebs.net/ro/topost/279" class="more"></a>
+            </div>
+            <div class="n_footer">
+                <input id="f_1" type="checkbox">
+                <label for="f_1">Am facut cunoștință</label>
+            </div>
+        </div>
         <div class="overlay hidden"></div>
         <div class="overlay2 hidden"></div>
         <div class="overlay3 hidden"></div>

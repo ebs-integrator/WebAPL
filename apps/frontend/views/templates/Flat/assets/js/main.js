@@ -10,9 +10,6 @@ $(document).ready(function () {
         controls: true,
         adaptiveHeight: true
     });
-    $(".lang p,.overlay2").click(function () {
-        $(".lang ul,.overlay2").toggleClass('hidden');
-    });
 
     $('.orar_slider').bxSlider({
         pager: false,
@@ -33,10 +30,6 @@ $(document).ready(function () {
     $('.mh_button,.overlay3').click(function () {
         $('.mini_header .content').toggleClass('hidden');
         $('.overlay3').toggleClass('hidden');
-    });
-    $('.cont .contact_us,.overlay').click(function () {
-        $('.overlay').toggleClass('hidden');
-        $('.cont .cont_form').toggleClass('hidden');
     });
 
 

@@ -781,6 +781,10 @@ header .contact .currency .lang{
     -moz-box-shadow:    0px 0px 8px 0px rgba(174, 174, 174, 0.75);
     box-shadow:         0px 0px 8px 0px rgba(174, 174, 174, 0.75);
     z-index: 999;
+    display:none;
+}
+header .contact .currency:hover .lang{
+    display:block;
 }
 header .contact .currency .lang p{
     margin:0px;
@@ -2481,7 +2485,7 @@ ul.detail li.location a{
     font:24px 'open_sansbold';
 }
 .u_a img{
-    max-width:100%;
+    width:auto;
     max-height:500px;
     height:auto;
 }
@@ -5075,7 +5079,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     table.sondaje progress[value] {
         width: 250px;
     }
-    
+
     table.sondaje tbody tr td:nth-child(2) {
         width: 324px;
     }

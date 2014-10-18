@@ -64,7 +64,7 @@
             <span><?= Core\APL\Language::ext(); ?></span>
             <img src="<?= res('assets/img/line_dot.png'); ?>">
         </span>
-        <div class="lang hidden">
+        <div class="lang">
             <div class="relative">
                 <p></p>
             </div>
