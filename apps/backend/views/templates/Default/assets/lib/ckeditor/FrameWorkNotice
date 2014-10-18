@@ -1,0 +1,97 @@
+APL Framework modificari.
+
+
+
+
+1.
+vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php
+135:
+<<<
+        $paths = \Core\APL\Template::preparePaths($paths);
+		foreach ($paths as $path)
+>>>
+
+
+
+2.
+vendor\laravel\framework\src\Illuminate\Support\helpers.php
+1020:
+<<<
+
+if (!function_exists('res')) {
+
+    /**
+     * Generate an template path for the template.
+     *
+     * @param  string  $path
+     * @param  bool    $secure
+     * @return string
+     */
+    function res($path) {
+
+        return (\Core\APL\Template::path($path));
+    }
+
+}
+
+if (!function_exists('humanFileSize')) {
+
+    function humanFileSize($size, $unit = "") {
+        if ((!$unit && $size >= 1 << 30) || $unit == "GB")
+            return number_format($size / (1 << 30), 2) . "GB";
+        if ((!$unit && $size >= 1 << 20) || $unit == "MB")
+            return number_format($size / (1 << 20), 2) . "MB";
+        if ((!$unit && $size >= 1 << 10) || $unit == "KB")
+            return number_format($size / (1 << 10), 2) . "KB";
+        return number_format($size) . " bytes";
+    }
+
+}
+
+
+if (!function_exists('areplace')) {
+
+    /**
+     * Return the given object. Useful for chaining.
+     *
+     * @param  mixed  $object
+     * @return mixed
+     */
+    function areplace($array, $string, &$count = 0) {
+        foreach ($array as $find => $replace) {
+            $string = str_replace($find, $replace, $string, $q);
+            $count+=$q;
+        }
+        return $string;
+    }
+
+}
+
+
+if (!function_exists('dinamic_field')) {
+
+    /**
+     * Return the given object. Useful for chaining.
+     *
+     * @param  mixed  $object
+     * @return mixed
+     */
+    function dinamic_field($field, $points = array()) {
+        if (isset($points['{value}']) && $field->value_filter) {
+            if (method_exists('DinamicFields', $field->value_filter))
+                $points['{value}'] = call_user_func(array('DinamicFields', $field->value_filter), $points['{value}']);
+        }
+        return areplace($points, $field->field_html);
+    }
+
+}
+
+>>>
+
+
+
+
+3. 
+vendor\composer\autoload_classmap.php
+
+frontend ---> ' . APP_FOLDER . '

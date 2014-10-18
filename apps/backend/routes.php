@@ -27,6 +27,7 @@ Route::controller('log', 'LogController');
 Route::controller('var', 'VarController');
 Route::controller('user', 'UserController');
 Route::controller('settings', 'SettingsController');
+Route::controller('template', 'TemplateController');
 
 Route::get('/', 'HomeController@showDashboard');
 
