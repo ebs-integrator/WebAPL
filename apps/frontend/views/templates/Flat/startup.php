@@ -33,5 +33,12 @@ Event::listen('APL.modules.afterload', function () {
         Core\APL\Modules\Person::$view_persons_secretar = 'sections.persons.person_secretar';
         Core\APL\Modules\Person::$view_city_councilors = 'sections.persons.person_councilors';
     }
+
+    if (class_exists('Core\APL\Modules\Newsletter')) {
+        Core\APL\Modules\Newsletter::$view_widget = 'sections.newsletter.subscribe';
+    }
 });
 
+Event::listen('firechat_top', function () {
+    echo HTML::style(res('assets/css/firechat.css'));
+});

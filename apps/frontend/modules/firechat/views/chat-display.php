@@ -7,47 +7,6 @@
 <link rel="stylesheet" href="/apps/backend/modules/firechat/assets/firechat-default.css" />
 <script src="/apps/backend/modules/firechat/assets/firechat-default.js"></script>
 <style>
-
-    @font-face {
-        font-family: 'open_sansbold';
-        src: url("<?= res('assets/font/opensans-bold-webfont.eot'); ?>");
-        src: url("<?= res('assets/font/opensans-bold-webfont.eot?#iefix'); ?>") format('embedded-opentype'),
-            url("<?= res('assets/font/opensans-bold-webfont.woff'); ?>") format('woff'),
-            url("<?= res('assets/font/opensans-bold-webfont.ttf'); ?>") format('truetype');
-        font-weight: normal;
-        font-style: normal;
-
-    }
-    @font-face {
-        font-family: 'open_sansregular';
-        src: url("<?= res('assets/font/opensans-regular-webfont.eot'); ?>");
-        src: url("<?= res('assets/font/opensans-regular-webfont.eot?#iefix'); ?>") format('embedded-opentype'),
-            url("<?= res('assets/font/opensans-regular-webfont.woff'); ?>") format('woff'),
-            url("<?= res('assets/font/opensans-regular-webfont.ttf'); ?>") format('truetype');
-        font-weight: normal;
-        font-style: normal;
-
-    }
-    @font-face {
-        font-family: 'open_sanssemibold';
-        src: url("<?= res('assets/font/opensans-semibold-webfont.eot'); ?>");
-        src: url("<?= res('assets/font/opensans-semibold-webfont.eot?#iefix'); ?>") format('embedded-opentype'),
-            url("<?= res('assets/font/opensans-semibold-webfont.woff'); ?>") format('woff'),
-            url("<?= res('assets/font/opensans-semibold-webfont.ttf'); ?>") format('truetype');
-        font-weight: normal;
-        font-style: normal;
-
-    }
-    @font-face {
-        font-family: 'open_sanssemibold_italic';
-        src: url("<?= res('assets/font/opensans-semibolditalic-webfont.eot'); ?>");
-        src: url("<?= res('assets/font/opensans-semibolditalic-webfont.eot?#iefix'); ?>") format('embedded-opentype'),
-            url("<?= res('assets/font/opensans-semibolditalic-webfont.woff'); ?>") format('woff'),
-            url("<?= res('assets/font/opensans-semibolditalic-webfont.ttf'); ?>") format('truetype');
-        font-weight: normal;
-        font-style: normal;
-
-    }
     #firechat-wrapper {
         width: 100%;
         margin: 0px auto;
@@ -124,9 +83,12 @@
 
 </style>
 
+<?php Event::fire('firechat_top'); ?>
+
 <div id="firechat-wrapper"></div>
 <div class="sendmail"><?= varlang('fire-save'); ?> <a href="javascript:;"><?= varlang('fire-click'); ?></a></div>
 
+<?php Event::fire('firechat_bottom'); ?>
 
 <script type='text/javascript'>
     var to_person = <?= $chat->person_id; ?>;
@@ -174,17 +136,17 @@
 
     window.leaveChat = function() {
         chat._chat.sendSystemMessage(room.id, "<?= $chat->user_name; ?> <?= varlang('fire-out'); ?>", 'default', function() {
-            chat._chat.leaveRoom(room.id);
-        });
-    };
+                    chat._chat.leaveRoom(room.id);
+                });
+            };
 
-    jQuery(".sendmail a").on('click', function() {
-        var conf = confirm('<?= varlang('fire-rlu'); ?> <?= $chat->user_email; ?>');
-        if (conf) {
-            var html = $('.chat').html();
-            jQuery.post('<?= url('firechat/sendmail'); ?>', {messages: html}, function() {
-                alert('<?= varlang('fire-email'); ?>');
-            });
-        }
-    });
+            jQuery(".sendmail a").on('click', function() {
+                var conf = confirm('<?= varlang('fire-rlu'); ?> <?= $chat->user_email; ?>');
+                        if (conf) {
+                            var html = $('.chat').html();
+                            jQuery.post('<?= url('firechat/sendmail'); ?>', {messages: html}, function() {
+                                alert('<?= varlang('fire-email'); ?>');
+                            });
+                        }
+                    });
 </script>
