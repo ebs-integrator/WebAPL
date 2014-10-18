@@ -2,34 +2,32 @@
     <div class="left">
         <div class="f_menu">
             <div class="content">
+                <?php if (isset($buttom_pages) && count($buttom_pages)) { ?>
                 <ul>
-                    <li><a href="javascript:;">Orașul</a></li>
-                    <li><a href="javascript:;">Harta site-ului</a></li>
-                    <li><a href="javascript:;">Date de contact utile </a></li>
-                </ul>                
+                    <?php foreach ($buttom_pages as $item) { ?>
+                    <li><a href="<?= Language::url('topost/' . $item->id); ?>"><?= $item->title; ?></a></li>
+                    <?php } ?>
+                </ul>   
+                <?php } ?>
             </div>
         </div>
         <div class="content">
             <ul class="f_social">
-                <li><a href="javascript:;" class="f_fb"><img src="<?=res('assets/img/fb.png');?>"></a></li>
-                <li><a href="javascript:;" class="f_odno"><img src="<?=res('assets/img/odno.png');?>"></a></li>
-                <li><a href="javascript:;" class="f_vk"><img src="<?=res('assets/img/vk.png');?>"></a></li>
-                <li><a href="javascript:;" class="f_twitter"><img src="<?=res('assets/img/twitter.png');?>"></a></li>
-                <li><a href="javascript:;" class="f_gplus"><img src="<?=res('assets/img/gplus.png');?>"></a></li>
-                <li><a href="javascript:;" class="f_rss"><img src="<?=res('assets/img/rss.png');?>"></a></li>
+                <li><a target="_blank" class="f_fb" href="<?= varlang('facebook_link'); ?>"><img src="<?=res('assets/img/fb.png');?>"></a></li>
+                <li><a target="_blank" class="f_odno" href="<?= varlang('odnoklassniki-link-1'); ?>"><img src="<?=res('assets/img/odno.png');?>"></a></li>
+                <li><a target="_blank" class="f_vk"b href="<?= varlang('vkontakte-link'); ?>"><img src="<?=res('assets/img/vk.png');?>"></a></li>
+                <li><a target="_blank" class="f_twitter" href="<?= varlang('twitter-link'); ?>"><img src="<?=res('assets/img/twitter.png');?>"></a></li>
+                <li><a target="_blank" class="f_gplus" href="<?= varlang('gplus-link'); ?>"><img src="<?=res('assets/img/gplus.png');?>"></a></li>
+                <li><a target="_blank" class="f_rss" href="<?= varlang('rss-link'); ?>"><img src="<?=res('assets/img/rss.png');?>"></a></li>
             </ul>
             <div class="clearfix50"></div>
-            <form method="" action="" class="search">
-                <label>Căutare prin site</label>
-                <input type="text">
-                <input type="submit" value="Căutare">
+            <form method="get" action="<?= Language::url('search'); ?>" class="search">
+                <label><?= varlang('cautare'); ?></label>
+                <input type="text" name="words">
+                <input type="submit" value="<?= varlang('submit'); ?>">
             </form>
-            <form class="newsletter_subscribe_form" action="">
-                <label>Abonează-te la Buletinul informativ al primăriei</label>
-                <input name="email" type="text" placeholder="Email-dvs">
-                <input type="submit" value="Abonează-te">
-            </form>
-            <p class="copy"><a href="javascript:;">Cititi mai multe</a> despre licențiere CC, sau  <a href="javascript:;">utilizati licența</a> pentru propriul dvs. material.</p>
+            <?php Event::fire('bottom_widgets'); ?>
+            <p class="copy"><a href="javascript:;"><?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?></p>
 
         </div>
 
@@ -37,15 +35,17 @@
     <div class="right">
         <div id="map-canvas3" style="width:100%; height:500px;"></div>
         <div class="content">
-            <p class="y_info">Adresa primăriei Orașului Strășeni</p>
+            <p class="y_info"><?= varlang('address'); ?></p>
             <p class="w_info">
-                <span>Strada Ștefan cel Mare 24, MD 2034</span>
-                <span>Orașul Strășeni</span>
+                <span><?= varlang('street'); ?></span>
+                <span><?= varlang('city'); ?></span>
             </p>
         </div>
     </div>
     <div class="clearfix"> </div>
 </footer>
+
+<?php Event::fire('bottom_contructor'); ?>
 
 <script src="<?=res('assets/js/plugins.js');?>"></script>
 <script src="<?=res('assets/js/icheck.js');?>"></script>
