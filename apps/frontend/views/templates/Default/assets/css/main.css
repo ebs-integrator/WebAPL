@@ -789,9 +789,19 @@ header .contact .currency:hover .lang{
 header .contact .currency .lang p{
     margin:0px;
     padding-left:0px;
-    line-height: 1.533;
     font:15px 'open_sanssemibold';
     cursor:pointer;
+    height: 30px;
+    width:85%;
+    margin:0 auto;
+    line-height: 30px;
+    margin-top:5px;
+}
+header .contact .currency .lang p:first-child{
+    margin-top:0px;
+}
+header .contact .currency .lang p:hover{
+    background: #ececed;
 }
 header .contact .currency .lang p a{
     color:rgb( 72, 72, 72 );
