@@ -2,9 +2,13 @@
 
 // Set template color schemes
 Core\APL\Template::setColorSchemes(array(
-    'red' => array(
-        'name' => 'Red',
-        'css' => res('assets/css/style.red.css', 'frontend')
+    'pink-violet' => array(
+        'name' => 'Pink-Violet',
+        'css' => res('assets/css/style.pink.violet.css', 'frontend')
+    ),
+    'brown' => array(
+        'name' => 'Brown',
+        'css' => res('assets/css/style.brown.css', 'frontend')
     )
 ));
 
