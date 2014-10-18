@@ -23,7 +23,7 @@ class TemplateController extends BaseController {
     protected $layout = 'layout.main';
 
     public function getIndex() {
-        User::onlyHas("settings-view");
+        User::onlyHas("template-edit");
 
         $this->data['setts'] = SettingsModel::getAll();
 
@@ -31,12 +31,12 @@ class TemplateController extends BaseController {
     }
 
     public function postInstall() {
-        User::onlyHas("settings-view");
+        User::onlyHas("template-install");
 
         $extract_path = Files::fullDir("upload/tmp/tpl/");
 
         if (file_exists($extract_path) === FALSE) {
-            @mkdir($extract_path, 0777, true);
+            mkdir($extract_path, 0777, true);
         }
 
         $returnData = [];
@@ -57,38 +57,57 @@ class TemplateController extends BaseController {
                     $config = require_once $extract_path . 'install.php';
 
                     if (isset($config['app']) && file_exists(Files::fullDir('apps/' . $config['app'] . '/'))) {
-                        if (isset($config['name']) && !file_exists(Files::fullDir('apps/' . $config['app'] . '/views/template/' . $config['name'] . '/'))) {
+                        $template_newfolder = Files::fullDir('apps/' . $config['app'] . '/views/templates/' . $config['name'] . '/');
+                        if (isset($config['name']) && file_exists($template_newfolder) === FALSE) {
                             $template_folder = $extract_path . $config['name'] . '/';
                             if (file_exists($template_folder)) {
-                                rename($template_folder, Files::fullDir('apps/' . $config['app'] . '/views/template/' . $config['name'] . '/'));
+                                mkdir($template_newfolder);
 
-                                $returnData['message'] = "Succeful";
+                                rename($template_folder, $template_newfolder);
+
+                                $returnData['message'] = varlang('tpl-succeful');
                                 $returnData['message_type'] = 'alert-success';
                             } else {
-                                $returnData['message'] = "Template not found in zip";
+                                $returnData['message'] = varlang('template-not-found-in-zip');
                                 $returnData['message_type'] = 'alert-danger';
                             }
                         } else {
-                            $returnData['message'] = "Undefined template name or already exists";
+                            $returnData['message'] = varlang('undefined-template-name-or-already-exists');
                             $returnData['message_type'] = 'alert-danger';
                         }
                     } else {
-                        $returnData['message'] = "Undefined app name";
+                        $returnData['message'] = varlang('undefined-app-name');
                         $returnData['message_type'] = 'alert-danger';
                     }
 
                     File::deleteDirectory($extract_path);
                 } else {
-                    $returnData['message'] = "INSTALL.PHP is required";
+                    $returnData['message'] = varlang('installphp-is-required');
                     $returnData['message_type'] = 'alert-danger';
                 }
                 $zip->close();
             } else {
-                $returnData['message'] = "Invalid zip";
+                $returnData['message'] = varlang('invalid-zip');
                 $returnData['message_type'] = 'alert-danger';
             }
         } else {
-            $returnData['message'] = "Invalid file";
+            $returnData['message'] = varlang('invalid-file');
+            $returnData['message_type'] = 'alert-danger';
+        }
+
+        return Redirect::to('template')->with($returnData);
+    }
+
+    public function getDelete($app, $template) {
+        User::onlyHas('template-delete');
+        
+        $templateDir = Files::fullDir('apps/' . $app . '/views/templates/' . $template . '/');
+        if (file_exists($templateDir)) {
+            File::deleteDirectory($templateDir);
+            $returnData['message'] = varlang('template-deleted');
+            $returnData['message_type'] = 'alert-success';
+        } else {
+            $returnData['message'] = varlang('template-not-found-1');
             $returnData['message_type'] = 'alert-danger';
         }
 

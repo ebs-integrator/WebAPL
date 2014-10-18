@@ -16,22 +16,34 @@ if ($message) {
         <tr>
             <th><?= varlang('template-2'); ?></th>
             <td>
-                <select class='form-control' name="set[template_frontend]">
+                <table class="table">
                     <?php foreach (\Core\APL\Template::getTemplates('frontend') as $template) { ?>
-                        <option value='<?= $template; ?>' <?= isset($setts['template_frontend']) && $setts['template_frontend'] == $template ? 'selected' : ''; ?>><?= $template; ?></option>
+                        <tr>
+                            <td class="col-lg-1"><input id="tpl<?= $template; ?>" type="radio" name="set[template_frontend]" value='<?= $template; ?>' <?= isset($setts['template_frontend']) && $setts['template_frontend'] == $template ? 'checked' : ''; ?>></td>
+                            <td><label for="tpl<?= $template; ?>"><?= $template; ?></label></td>
+                            <?php if (User::has('template-delete')) { ?>
+                                <td class="col-lg-1"><a href="<?= url('template/delete/frontend/' . $template); ?>" onclick="return confirm('<?= varlang('confirm-tpl'); ?>');" class="btn btn-sm btn-danger">x</a></td>
+                            <?php } ?>
+                        </tr>
                     <?php } ?>
-                </select>
+                </table>
             </td>
         </tr>
 
         <tr>
             <th><?= varlang('template-b'); ?></th>
             <td>
-                <select class='form-control' name="set[template_backend]">
+                <table class="table">
                     <?php foreach (\Core\APL\Template::getTemplates('backend') as $template) { ?>
-                        <option value='<?= $template; ?>' <?= isset($setts['template_backend']) && $setts['template_backend'] == $template ? 'selected' : ''; ?>><?= $template; ?></option>
+                        <tr>
+                            <td class="col-lg-1"><input id="tpl<?= $template; ?>" type="radio" name="set[template_backend]" value='<?= $template; ?>' <?= isset($setts['template_backend']) && $setts['template_backend'] == $template ? 'checked' : ''; ?>></td>
+                            <td><label for="tpl<?= $template; ?>"><?= $template; ?></label></td>
+                            <?php if (User::has('template-delete')) { ?>
+                                <td class="col-lg-1"><a href="<?= url('template/delete/backend/' . $template); ?>" onclick="return confirm('<?= varlang('confirm-tpl'); ?>');" class="btn btn-sm btn-danger">x</a></td>
+                            <?php } ?>
+                        </tr>
                     <?php } ?>
-                </select>
+                </table>
             </td>
         </tr>
 
@@ -39,7 +51,9 @@ if ($message) {
 
 </form>
 
-
-<form action="<?= url('template/install'); ?>" method="post" enctype="multipart/form-data">
-    <input type="file" name="template" onchange="this.form.submit()" class="pull-left btn-success btn" />
-</form>
+<?php if (User::has('template-install')) { ?>
+    <h3><?= varlang('upload-new-template'); ?></h3>
+    <form action="<?= url('template/install'); ?>" method="post" enctype="multipart/form-data">
+        <input type="file" name="template" onchange="this.form.submit()" class="pull-left btn-success btn" />
+    </form>
+<?php } ?>

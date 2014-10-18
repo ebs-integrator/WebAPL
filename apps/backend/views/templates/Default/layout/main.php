@@ -129,6 +129,9 @@
                                 <?php if (User::has('log-view')) { ?>
                                     <li> <a href="<?= url('log'); ?>"><?= varlang('log'); ?></a></li>
                                 <?php } ?>
+                                <?php if (User::has('template-edit')) { ?>
+                                    <li> <a href="<?= url('template'); ?>"><?= varlang('template-4'); ?></a></li>
+                                <?php } ?>
                                 <li><img id="loading" style="display: none;margin-top: 14px;" src="<?= res('assets/img/ajax-loader.gif'); ?>" /></li>
                             </ul><!-- /.nav -->
                         </div>
@@ -193,8 +196,8 @@
                 </div>
             </div>
         </div>
-        
-        
+
+
         <!-- Modal -->
         <div class="modal fade bs-example-modal-lg" id="editfileModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog bs-example-modal-lg">
