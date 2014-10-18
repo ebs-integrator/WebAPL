@@ -1,7 +1,7 @@
 <p class="telef"><?= varlang('nr-phone'); ?></p>
 <div class="cont">
     <a class="contact_us"><?= varlang('contact-us'); ?></a>
-    <div class="cont_form hidden">
+    <div class="cont_form">
         <div class="relative">
             <img src="<?= res('assets/img/c_arrow.png'); ?>">
         </div>

@@ -11,12 +11,12 @@
         </div>
         <div class="content">
             <ul class="f_social">
-                <li><a href="javascript:;"><img src="<?=res('assets/img/fb.png');?>"></a></li>
-                <li><a href="javascript:;"><img src="<?=res('assets/img/odno.png');?>"></a></li>
-                <li><a href="javascript:;"><img src="<?=res('assets/img/vk.png');?>"></a></li>
-                <li><a href="javascript:;"><img src="<?=res('assets/img/twitter.png');?>"></a></li>
-                <li><a href="javascript:;"><img src="<?=res('assets/img/gplus.png');?>"></a></li>
-                <li><a href="javascript:;"><img src="<?=res('assets/img/rss.png');?>"></a></li>
+                <li><a href="javascript:;" class="f_fb"><img src="<?=res('assets/img/fb.png');?>"></a></li>
+                <li><a href="javascript:;" class="f_odno"><img src="<?=res('assets/img/odno.png');?>"></a></li>
+                <li><a href="javascript:;" class="f_vk"><img src="<?=res('assets/img/vk.png');?>"></a></li>
+                <li><a href="javascript:;" class="f_twitter"><img src="<?=res('assets/img/twitter.png');?>"></a></li>
+                <li><a href="javascript:;" class="f_gplus"><img src="<?=res('assets/img/gplus.png');?>"></a></li>
+                <li><a href="javascript:;" class="f_rss"><img src="<?=res('assets/img/rss.png');?>"></a></li>
             </ul>
             <div class="clearfix50"></div>
             <form method="" action="" class="search">

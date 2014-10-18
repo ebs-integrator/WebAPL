@@ -39,11 +39,6 @@ $(document).ready(function() {
         $('.menu_content').toggleClass('hidden');
         $('.overlay3').toggleClass('hidden');
     });
-    $('.currency .s_c,.overlay2').click(function() {
-        $('.overlay2').toggleClass('hidden');
-        $('.currency .lang').toggleClass('hidden');
-
-    });
     $('.cont .contact_us_btn').hover(function() {
         $('header .contact .contact_us').toggleClass('active');
         $('.cont .cont_form').toggleClass('hidden');
