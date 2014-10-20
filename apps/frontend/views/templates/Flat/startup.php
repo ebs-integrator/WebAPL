@@ -9,6 +9,18 @@ Core\APL\Template::setColorSchemes(array(
     'brown' => array(
         'name' => 'Brown',
         'css' => res('assets/css/style.brown.css', 'frontend')
+    ),
+    'red' => array(
+        'name' => 'Red',
+        'css' => res('assets/css/style.red.css', 'frontend')
+    ),
+    'red_brown' => array(
+        'name' => 'Red-brown',
+        'css' => res('assets/css/style.red.brown.css', 'frontend')
+    ),
+    'violet_green_yellow' => array(
+        'name' => 'Violet-green-yellow',
+        'css' => res('assets/css/style.violet.green.yellow.css', 'frontend')
     )
 ));
 

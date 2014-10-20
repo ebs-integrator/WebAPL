@@ -226,7 +226,7 @@ function initialize() {
     var small_map = document.getElementById("map-canvas");
 
 //    var iconBase = "/img/marker.png";
-    var myLatlng = new google.maps.LatLng(47.148306, 28.617051);
+    var myLatlng = new google.maps.LatLng(loc_lat, loc_long);
 
     var center = new google.maps.LatLng(47.151994, 28.610020);
 
