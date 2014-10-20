@@ -10,7 +10,7 @@
         <tr>
             <td><?= $module->name; ?></td>
             <td>
-                <?php if ($module->enabled === 1) { ?>
+                <?php if ($module->enabled == 1) { ?>
                     <?php if ($module->settings_page) { ?>
                     [ <?= HTML::link($module->settings_page, 'Edit'); ?> ] 
                     <?php } ?>
@@ -22,8 +22,3 @@
         </tr>
     <?php } ?>
 </table>
-
-<!--
-<form action="<?= url('module/install'); ?>" method="post" enctype="multipart/form-data">
-    <input type="file" name="module" onchange="this.form.submit()" class="pull-left btn-success btn" />
-</form>-->

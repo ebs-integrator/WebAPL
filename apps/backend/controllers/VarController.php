@@ -127,4 +127,31 @@ class VarController extends BaseController {
         return $buffer;
     }
 
+    public function getImport() {
+        $xsdstring = $_SERVER['DOCUMENT_ROOT'] . "/vars.xml";
+        die;
+        $excel = new XML2003Parser($xsdstring);
+
+        $table = $excel->getTableData();
+
+        foreach ($table["table_contents"] as $row) {
+            if (isset($row["row_contents"][2]) && isset($row["row_contents"][0])) {
+                $id = $row["row_contents"][0]['value'];
+                if ($id) {
+                    $value = $row["row_contents"][2]['value'];
+                    $varlang = VarLangModel::find($id);
+                    if ($varlang) {
+                        $varlang->value = $value;
+                        $varlang->save();
+                    } else {
+                        echo "undefined {$id} <br>";
+                    }
+                } else {
+                    echo "clear<br>";
+                }
+            }
+        }
+        return [];
+    }
+
 }

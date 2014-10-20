@@ -15,18 +15,18 @@
         loadonce: false,
         colNames: ['ID', 'Name', 'Ext', 'Enabled'],
         colModel: [
-            {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
+            {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 30}},
             {name: 'name', index: 'name', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
             {name: 'ext', index: 'ext', resizable: true, align: "left", sorttype: "text", editable: true, edittype: "text"},
-            {name: 'enabled', index: 'enabled', resizable: true, align: "left", sorttype: "text", editable: true, edittype: "select", editoptions: {value: '0:Disabled;1:Enabled'}, formatter: function(value) {
+            {name: 'enabled', index: 'enabled', resizable: true, align: "left", sorttype: "text", editable: true, edittype: "select", editoptions: {value: '0:Disabled;1:Enabled', size: 1}, formatter: function(value) {
                     return "<center data-value='" + value + "'>" + (value ? '<span class="label label-success">Enabled</span>' : '<span class="label label-danger">Disabled</span>') + "</center>";
                 }, unformat: function(value) {
                     return value === 'Enabled' ? 1 : 0;
                 }},
         ],
         rowNum: 30,
-        multiselect: true,
-        rowList: [30, 50, 100],
+        multiselect: false,
+        rowList: [30, 50, 100, 200, 500],
         pager: '',
         altRows: true,
         sortname: 'id',

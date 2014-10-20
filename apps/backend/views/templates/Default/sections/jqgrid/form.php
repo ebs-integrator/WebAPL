@@ -17,7 +17,12 @@
         jQuery("#list-<?=$uniq_id;?>").jqGrid(<?= $options; ?>);
 
         jQuery("#list-<?=$uniq_id;?>").jqGrid('navGrid', '#pager-<?=$uniq_id;?>', {search: false},
-        {width: 400, reloadAfterSubmit: true, closeOnEscape: true, closeAfterEdit: true,
+        {
+            width: 450, 
+            reloadAfterSubmit: true, 
+            closeOnEscape: true, 
+            closeAfterEdit: true, 
+            recreateForm: true,
             beforeShowForm: function() {
             },
             afterShowForm: function($form) {
@@ -25,7 +30,12 @@
             onclickSubmit: function(params, postdata) {
             }
         },
-        {width: 400, reloadAfterSubmit: true, closeOnEscape: true, closeAfterAdd: true, //insert
+        {
+            width: 450, 
+            reloadAfterSubmit: true, 
+            closeOnEscape: true, 
+            closeAfterAdd: true, 
+            recreateForm: true,
             beforeShowForm: function() {
             },
             afterShowForm: function() {

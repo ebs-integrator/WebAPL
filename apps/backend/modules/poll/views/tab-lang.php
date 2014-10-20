@@ -26,8 +26,8 @@
                 {name: 'answer', index: 'answer', height: 50, resizable: true, align: "left", editable: true, edittype: "text"}
             ],
             rowNum: 30,
-            multiselect: true,
-            rowList: [30, 50, 100],
+            multiselect: false,
+            rowList: [30, 50, 100, 200, 500],
             pager: '',
             altRows: true,
             sortname: 'id',

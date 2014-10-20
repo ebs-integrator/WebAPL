@@ -132,7 +132,7 @@ jQuery(document).ready(function($) {
     ;
 
 
-    setTimeout(function () {
+    setTimeout(function() {
         for (var i in CKEDITOR.instances) {
             CKEDITOR.instances[i].on('blur', updateCkeditorElement);
             CKEDITOR.instances[i].on('focus', lock_window);
@@ -145,15 +145,23 @@ jQuery(document).ready(function($) {
 
 
     $('.datetimepicker').datetimepicker({
-      language: 'en'
+        language: 'en'
     });
-    
-    $("#ccache").click(function () {
+
+    $("#ccache").click(function() {
         var button = $(this);
         button.text('...');
-        $.get('/ccache', {}, function () {
+        $.get('/ccache', {}, function() {
             button.text('Success');
         });
+    });
+
+    $("#feedFilds").on('change', function() {
+        var val = $(this).val();
+        $('.feedField').prop('checked', false);
+        if (val) {
+            $('.feedField[data-groups*="' + val + '"]').prop('checked', true);
+        }
     });
 
 });

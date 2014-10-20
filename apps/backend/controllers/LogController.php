@@ -17,7 +17,7 @@ class LogController extends BaseController {
     public function getIndex() {
         User::onlyHas('log-view');
         
-        $this->data['list'] = LogModel::leftJoin(User::getTableName(), User::getField('id'), '=', LogModel::getField('user_id'))->orderBy('event_date', 'desc')->take(100)->get();
+        $this->data['list'] = LogModel::leftJoin(User::getTableName(), User::getField('id'), '=', LogModel::getField('user_id'))->orderBy('event_date', 'desc')->get();
 
         $this->layout->content = View::make('sections.log.list', $this->data);
     }
