@@ -56,6 +56,17 @@ class HomeController extends BaseController {
     }
 
     public function showDashboard() {
+//        
+//        PostLang::where('title', '<>', '')->update(array(
+//            'uri' => ''
+//        ));
+//        
+//        $postlangs = PostLang::all();
+//        foreach ($postlangs as $pl) {
+//            $pl->uri = PostLang::uniqURI($pl->id, $pl->title);
+//            $pl->save();
+//        }
+
         $this->layout->content = View::make('hello');
     }
 

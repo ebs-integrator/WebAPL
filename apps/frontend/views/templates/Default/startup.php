@@ -17,6 +17,10 @@ Core\APL\Template::setColorSchemes(array(
     
 ));
 
+Config::set('template.logo', true);
+Config::set('template.logo_multilang', true);
+Config::set('template.logo_small', true);
+
 Event::listen('firechat_top', function () {
     echo HTML::style(res('assets/css/firechat.css'));
 });

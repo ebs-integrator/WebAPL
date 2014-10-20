@@ -12,6 +12,10 @@ Core\APL\Template::setColorSchemes(array(
     )
 ));
 
+Config::set('template.logo', false);
+Config::set('template.logo_multilang', false);
+Config::set('template.logo_small', false);
+
 if (APP_FOLDER === 'frontend') {
 
     class TemplateViews {

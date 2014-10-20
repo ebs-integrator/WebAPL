@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title><?= Core\APL\Template::getPageTitle(); ?></title>
+        <title><?= Core\APL\Template::getPageTitle(isset($page) ? $page : null); ?></title>
 
         <?php foreach (\Core\APL\Template::getMetas() as $metaName => $metaContent) { ?>
             <meta name="<?= $metaName; ?>" content="<?= $metaContent; ?>">
@@ -30,9 +30,9 @@
             var base_url = '<?= url(); ?>';
 
             var disqus_url = '<?= url(); ?>';
-            var disqus_shortname = 'aplkopceak';
-            var disqus_title = '<?= Core\APL\Template::getPageTitle(); ?>';
-            var disqus_config = function () {
+            var disqus_shortname = '<?= SettingsModel::one('disqus_shortname'); ?>';
+            var disqus_title = '<?= Core\APL\Template::getPageTitle(isset($page) ? $page : null); ?>';
+            var disqus_config = function() {
                 this.language = "<?= Core\APL\Language::ext(); ?>";
             };
 
@@ -43,29 +43,14 @@
         <script src="<?= res('assets/js/jquery-2.1.1.js'); ?>"></script>
     </head>
     <body>
-        <div class="n_alert" id="alertbox" data-alertid="279">
-            <div class="cntn">
-                <img src="/apps/frontend/views/templates/Default/assets/img/alert.png">
-                <p>alerte!</p>
-                <a href="javascript:;" class="alertclose"></a>
-            </div>
-            <div class="n_info">
-                <div class="n_data">03-10-2014, 15:24</div>
-                <div class="clearfix"></div>
-                <p><a href="http://lpa.devebs.net/ro/topost/279">Obligaţiile beneficiarilor de ajutor social</a></p>
-                <a href="http://lpa.devebs.net/ro/topost/279" class="more"></a>
-            </div>
-            <div class="n_footer">
-                <input id="f_1" type="checkbox">
-                <label for="f_1">Am facut cunoștință</label>
-            </div>
-        </div>
         <div class="overlay hidden"></div>
         <div class="overlay2 hidden"></div>
         <div class="overlay3 hidden"></div>
         <header>
             <div class="left">
-                <a href="<?= Language::url('/'); ?>"><img src="<?= res('assets/img/s_logo.png'); ?>" class="logo logo_home"></a>
+                <?php if (Files::extract('website_logo_sm_' . Core\APL\Language::ext(), 1, 'path')) { ?>
+                    <a href="<?= Language::url('/'); ?>"><img src="<?= url(Files::extract('website_logo_sm_' . Core\APL\Language::ext(), 1, 'path')); ?>" title="<?= Files::extract('website_logo_sm_' . Core\APL\Language::ext(), 1, 'name'); ?>" alt="<?= Files::extract('website_logo_sm_' . Core\APL\Language::ext(), 1, 'name'); ?>" class="logo logo_home"></a>
+                <?php } ?>
                 <?php Event::fire('logo_contructor'); ?>
             </div>
             <div class="left home_menu">
@@ -91,7 +76,7 @@
                 ?>
             </ul>
             <ul class="social">
-                <li>(022) 22-32-53</li>
+                <li><?= varlang('nr-phone'); ?></li>
                 <li><a href='<?= varlang('facebook_link'); ?>' class="fb"><?= varlang('facebook'); ?></a></li>
                 <li><a href='<?= varlang('odnoklassniki-link-1'); ?>' class="odno"><?= varlang('odnoklassniki'); ?></a></li>
                 <li><a href='<?= varlang('vkontakte-link'); ?>' class="vk"><?= varlang('vkontakte'); ?></a></li>

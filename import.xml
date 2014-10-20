@@ -9,7 +9,7 @@
   <Author>Godina Nicolae</Author>
   <LastAuthor>RePack by Diakov</LastAuthor>
   <Created>2014-09-26T14:52:37Z</Created>
-  <LastSaved>2014-10-06T16:10:17Z</LastSaved>
+  <LastSaved>2014-10-19T23:13:22Z</LastSaved>
   <Version>15.00</Version>
  </DocumentProperties>
  <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
@@ -35,8 +35,11 @@
   <Style ss:ID="s57">
    <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
   </Style>
+  <Style ss:ID="s58">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
+  </Style>
  </Styles>
- <Worksheet ss:Name="import">
+ <Worksheet ss:Name="Customers_Export (3)">
   <Table ss:ExpandedColumnCount="3" ss:ExpandedRowCount="754" x:FullColumns="1"
    x:FullRows="1" ss:DefaultRowHeight="15">
    <Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="75"/>
@@ -54,6 +57,7 @@
    <Row>
     <Cell><Data ss:Type="Number">781</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Contacts</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">989</Data></Cell>
@@ -73,6 +77,7 @@
    <Row>
     <Cell><Data ss:Type="Number">785</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">System error</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">993</Data></Cell>
@@ -82,21 +87,22 @@
    <Row ss:Index="11">
     <Cell><Data ss:Type="Number">184</Data></Cell>
     <Cell><Data ss:Type="String">Romanian</Data></Cell>
-    <Cell><Data ss:Type="String">Cetățeni și bussiness</Data></Cell>
+    <Cell><Data ss:Type="String">Cetățeni și business</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">185</Data></Cell>
     <Cell><Data ss:Type="String">Russian</Data></Cell>
-    <Cell><Data ss:Type="String">ГРАЖДАНЕ И БИЗНЕС</Data></Cell>
+    <Cell><Data ss:Type="String">Граждане и  бизнес</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">786</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Citizens and business</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">994</Data></Cell>
     <Cell><Data ss:Type="String">Bulgara</Data></Cell>
-    <Cell><Data ss:Type="String">ГРАЖДАНИ И БИЗНЕС</Data></Cell>
+    <Cell><Data ss:Type="String">Граждани и бизнес</Data></Cell>
    </Row>
    <Row ss:Index="16">
     <Cell><Data ss:Type="Number">186</Data></Cell>
@@ -106,16 +112,17 @@
    <Row>
     <Cell><Data ss:Type="Number">187</Data></Cell>
     <Cell><Data ss:Type="String">Russian</Data></Cell>
-    <Cell><Data ss:Type="String">ПРИМЭРИЯ</Data></Cell>
+    <Cell><Data ss:Type="String">Примэрия</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">787</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Mayoralty</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">995</Data></Cell>
     <Cell><Data ss:Type="String">Bulgara</Data></Cell>
-    <Cell><Data ss:Type="String">КМЕТСТВО</Data></Cell>
+    <Cell><Data ss:Type="String">Кметство</Data></Cell>
    </Row>
    <Row ss:Index="21">
     <Cell><Data ss:Type="Number">188</Data></Cell>
@@ -125,16 +132,17 @@
    <Row>
     <Cell><Data ss:Type="Number">189</Data></Cell>
     <Cell><Data ss:Type="String">Russian</Data></Cell>
-    <Cell><Data ss:Type="String">МЕСТНЫЙ СОВЕТ</Data></Cell>
+    <Cell><Data ss:Type="String">Местный Совет</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">788</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Local Council</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">996</Data></Cell>
     <Cell><Data ss:Type="String">Bulgara</Data></Cell>
-    <Cell><Data ss:Type="String">ОБЩИНСКИ СЪВЕТ</Data></Cell>
+    <Cell><Data ss:Type="String">Общински Съвет</Data></Cell>
    </Row>
    <Row ss:Index="26">
     <Cell><Data ss:Type="Number">190</Data></Cell>
@@ -144,11 +152,12 @@
    <Row>
     <Cell><Data ss:Type="Number">191</Data></Cell>
     <Cell><Data ss:Type="String">Russian</Data></Cell>
-    <Cell><Data ss:Type="String">ПРОЗРАЧНОСТЬ</Data></Cell>
+    <Cell><Data ss:Type="String">Прозрачность</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">789</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Transparency</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">997</Data></Cell>
@@ -168,6 +177,7 @@
    <Row>
     <Cell><Data ss:Type="Number">790</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Social benefits and aid</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">998</Data></Cell>
@@ -187,6 +197,7 @@
    <Row>
     <Cell><Data ss:Type="Number">791</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Local fees and taxes</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">999</Data></Cell>
@@ -196,7 +207,7 @@
    <Row ss:Index="41">
     <Cell><Data ss:Type="Number">196</Data></Cell>
     <Cell><Data ss:Type="String">Romanian</Data></Cell>
-    <Cell><Data ss:Type="String">Business și Antreprenoriat</Data></Cell>
+    <Cell><Data ss:Type="String">Business și antreprenoriat</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">197</Data></Cell>
@@ -206,6 +217,7 @@
    <Row>
     <Cell><Data ss:Type="Number">792</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Business and entrepreneurship  </Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1000</Data></Cell>
@@ -225,6 +237,7 @@
    <Row>
     <Cell><Data ss:Type="Number">793</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Permits and certificates</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1001</Data></Cell>
@@ -234,7 +247,7 @@
    <Row ss:Index="51">
     <Cell><Data ss:Type="Number">200</Data></Cell>
     <Cell><Data ss:Type="String">Romanian</Data></Cell>
-    <Cell><Data ss:Type="String">Educație, Cultură, Turism și Sport</Data></Cell>
+    <Cell><Data ss:Type="String">Educație, cultură, turism și sport</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">201</Data></Cell>
@@ -244,6 +257,7 @@
    <Row>
     <Cell><Data ss:Type="Number">794</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Education, culture, tourism and sport</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1002</Data></Cell>
@@ -263,6 +277,7 @@
    <Row>
     <Cell><Data ss:Type="Number">795</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Citizens involvement</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1003</Data></Cell>
@@ -282,6 +297,7 @@
    <Row>
     <Cell><Data ss:Type="Number">796</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Citizens consultation</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1004</Data></Cell>
@@ -301,11 +317,12 @@
    <Row>
     <Cell><Data ss:Type="Number">797</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Samples of documents/blank forms</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1005</Data></Cell>
     <Cell><Data ss:Type="String">Bulgara</Data></Cell>
-    <Cell><Data ss:Type="String"> документи / формуляри</Data></Cell>
+    <Cell><Data ss:Type="String"> Документи / формуляри</Data></Cell>
    </Row>
    <Row ss:Index="71">
     <Cell><Data ss:Type="Number">208</Data></Cell>
@@ -320,6 +337,7 @@
    <Row>
     <Cell><Data ss:Type="Number">798</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Mayoralty</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1006</Data></Cell>
@@ -339,6 +357,7 @@
    <Row>
     <Cell><Data ss:Type="Number">799</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Reports and Action Plans</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1007</Data></Cell>
@@ -358,6 +377,7 @@
    <Row>
     <Cell><Data ss:Type="Number">800</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Subordinated enterprises</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1008</Data></Cell>
@@ -367,7 +387,7 @@
    <Row ss:Index="86">
     <Cell><Data ss:Type="Number">214</Data></Cell>
     <Cell><Data ss:Type="String">Romanian</Data></Cell>
-    <Cell><Data ss:Type="String">Consiliul local</Data></Cell>
+    <Cell><Data ss:Type="String">Consiliul Local</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">215</Data></Cell>
@@ -377,11 +397,12 @@
    <Row>
     <Cell><Data ss:Type="Number">801</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Local Council</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1009</Data></Cell>
     <Cell><Data ss:Type="String">Bulgara</Data></Cell>
-    <Cell><Data ss:Type="String">ОБЩИНСКИ СЪВЕТ</Data></Cell>
+    <Cell><Data ss:Type="String">Общински Съвет</Data></Cell>
    </Row>
    <Row ss:Index="91">
     <Cell><Data ss:Type="Number">216</Data></Cell>
@@ -396,6 +417,7 @@
    <Row>
     <Cell><Data ss:Type="Number">802</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Specialized committees</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1010</Data></Cell>
@@ -415,6 +437,7 @@
    <Row>
     <Cell><Data ss:Type="Number">803</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Strategies, plans and policies</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1011</Data></Cell>
@@ -434,6 +457,7 @@
    <Row>
     <Cell><Data ss:Type="Number">804</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">What is transparency?</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1012</Data></Cell>
@@ -453,6 +477,7 @@
    <Row>
     <Cell><Data ss:Type="Number">805</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Dialogue with citizens</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1013</Data></Cell>
@@ -472,6 +497,7 @@
    <Row>
     <Cell><Data ss:Type="Number">806</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Public information</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1014</Data></Cell>
@@ -491,6 +517,7 @@
    <Row>
     <Cell><Data ss:Type="Number">807</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Local public finances</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1015</Data></Cell>
@@ -510,6 +537,7 @@
    <Row>
     <Cell><Data ss:Type="Number">808</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Public consultation</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1016</Data></Cell>
@@ -529,6 +557,7 @@
    <Row>
     <Cell><Data ss:Type="Number">809</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Local projects</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1017</Data></Cell>
@@ -543,11 +572,12 @@
    <Row>
     <Cell><Data ss:Type="Number">233</Data></Cell>
     <Cell><Data ss:Type="String">Russian</Data></Cell>
-    <Cell><Data ss:Type="String">КОНТАКТЫ И ПОЛЕЗНЫЕ АДРЕСА</Data></Cell>
+    <Cell><Data ss:Type="String">Контакты и полезные адреса</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">810</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Contacts and usefull addresses</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1018</Data></Cell>
@@ -567,6 +597,7 @@
    <Row>
     <Cell><Data ss:Type="Number">811</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Site map</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1019</Data></Cell>
@@ -586,6 +617,7 @@
    <Row>
     <Cell><Data ss:Type="Number">812</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Annual income and interest statement</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1020</Data></Cell>
@@ -605,6 +637,7 @@
    <Row>
     <Cell><Data ss:Type="Number">813</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Errors</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1021</Data></Cell>
@@ -624,6 +657,7 @@
    <Row>
     <Cell><Data ss:Type="Number">814</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Page not found</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1022</Data></Cell>
@@ -643,6 +677,7 @@
    <Row>
     <Cell><Data ss:Type="Number">815</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Social benefits for families</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1023</Data></Cell>
@@ -662,6 +697,7 @@
    <Row>
     <Cell><Data ss:Type="Number">816</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Labor registry office/ Unemployment benefits</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1024</Data></Cell>
@@ -681,6 +717,7 @@
    <Row>
     <Cell><Data ss:Type="Number">817</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Retirement and social support</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1025</Data></Cell>
@@ -700,6 +737,7 @@
    <Row>
     <Cell><Data ss:Type="Number">818</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Social advisory </Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1026</Data></Cell>
@@ -719,6 +757,7 @@
    <Row>
     <Cell><Data ss:Type="Number">819</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Local medical facilities</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1027</Data></Cell>
@@ -738,6 +777,7 @@
    <Row>
     <Cell><Data ss:Type="Number">820</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Death and benefits</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1028</Data></Cell>
@@ -757,6 +797,7 @@
    <Row>
     <Cell><Data ss:Type="Number">821</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Shelter-care facilities and homes for elderly</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1029</Data></Cell>
@@ -776,6 +817,7 @@
    <Row>
     <Cell><Data ss:Type="Number">822</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Domestic violence / Emergency cases</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1030</Data></Cell>
@@ -795,6 +837,7 @@
    <Row>
     <Cell><Data ss:Type="Number">823</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Report a social fraud</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1031</Data></Cell>
@@ -814,6 +857,7 @@
    <Row>
     <Cell><Data ss:Type="Number">824</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">FAQ/Application samples/Guide for filling application form</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1032</Data></Cell>
@@ -833,6 +877,7 @@
    <Row>
     <Cell><Data ss:Type="Number">825</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">FAQ</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1033</Data></Cell>
@@ -852,6 +897,7 @@
    <Row>
     <Cell><Data ss:Type="Number">826</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Application samples</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1034</Data></Cell>
@@ -871,6 +917,7 @@
    <Row>
     <Cell><Data ss:Type="Number">827</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Guide for filling application form</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1035</Data></Cell>
@@ -890,6 +937,7 @@
    <Row>
     <Cell><Data ss:Type="Number">828</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Local fees and taxes</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1036</Data></Cell>
@@ -909,6 +957,7 @@
    <Row>
     <Cell><Data ss:Type="Number">829</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s58"><Data ss:Type="String">Advertising fee</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1037</Data></Cell>
@@ -928,6 +977,7 @@
    <Row>
     <Cell><Data ss:Type="Number">830</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s58"><Data ss:Type="String">Fee for tenders/lotteries organisation</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1038</Data></Cell>
@@ -947,6 +997,7 @@
    <Row>
     <Cell><Data ss:Type="Number">831</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s58"><Data ss:Type="String">Fee for commercial establishments</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1039</Data></Cell>
@@ -966,6 +1017,7 @@
    <Row>
     <Cell><Data ss:Type="Number">832</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s58"><Data ss:Type="String">Market fee</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1040</Data></Cell>
@@ -985,6 +1037,7 @@
    <Row>
     <Cell><Data ss:Type="Number">833</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Accommodation fee</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1041</Data></Cell>
@@ -1004,6 +1057,7 @@
    <Row>
     <Cell><Data ss:Type="Number">834</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s58"><Data ss:Type="String">Parking fee</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1042</Data></Cell>
@@ -1023,6 +1077,7 @@
    <Row>
     <Cell><Data ss:Type="Number">835</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Fee for street establishments</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1043</Data></Cell>
@@ -1042,6 +1097,7 @@
    <Row>
     <Cell><Data ss:Type="Number">836</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Tax on real estate</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1044</Data></Cell>
@@ -1051,7 +1107,7 @@
    <Row ss:Index="266">
     <Cell><Data ss:Type="Number">286</Data></Cell>
     <Cell><Data ss:Type="String">Romanian</Data></Cell>
-    <Cell><Data ss:Type="String">Întrebări frecvente / Modele de documente / Ghid de taxe și impozitele</Data></Cell>
+    <Cell><Data ss:Type="String">Întrebări frecvente / Modele de documente / Ghid de taxe și impozite</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">287</Data></Cell>
@@ -1061,6 +1117,7 @@
    <Row>
     <Cell><Data ss:Type="Number">837</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">FAQ/ Samples of documents/ Guide on fees and taxes</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1045</Data></Cell>
@@ -1080,6 +1137,7 @@
    <Row>
     <Cell><Data ss:Type="Number">838</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">FAQ</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1046</Data></Cell>
@@ -1099,6 +1157,7 @@
    <Row>
     <Cell><Data ss:Type="Number">839</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Samples of documents</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1047</Data></Cell>
@@ -1118,6 +1177,7 @@
    <Row>
     <Cell><Data ss:Type="Number">840</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Guide on fees and taxes</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1048</Data></Cell>
@@ -1137,6 +1197,7 @@
    <Row>
     <Cell><Data ss:Type="Number">841</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Invest in XXXXXXXXX town</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1049</Data></Cell>
@@ -1146,7 +1207,7 @@
    <Row ss:Index="291">
     <Cell><Data ss:Type="Number">296</Data></Cell>
     <Cell><Data ss:Type="String">Romanian</Data></Cell>
-    <Cell><Data ss:Type="String">Cum să întregistrezi o societate comercială</Data></Cell>
+    <Cell><Data ss:Type="String">Cum să înregistrezi o societate comercială</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">297</Data></Cell>
@@ -1156,6 +1217,7 @@
    <Row>
     <Cell><Data ss:Type="Number">842</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">How to register a company</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1050</Data></Cell>
@@ -1165,7 +1227,7 @@
    <Row ss:Index="296">
     <Cell><Data ss:Type="Number">298</Data></Cell>
     <Cell><Data ss:Type="String">Romanian</Data></Cell>
-    <Cell><Data ss:Type="String">Cum să întregistrezi o gospodărie de fermeri</Data></Cell>
+    <Cell><Data ss:Type="String">Cum să înregistrezi o gospodărie de fermeri</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">299</Data></Cell>
@@ -1175,6 +1237,7 @@
    <Row>
     <Cell><Data ss:Type="Number">843</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">How to register a farm</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1051</Data></Cell>
@@ -1184,7 +1247,7 @@
    <Row ss:Index="301">
     <Cell><Data ss:Type="Number">300</Data></Cell>
     <Cell><Data ss:Type="String">Romanian</Data></Cell>
-    <Cell><Data ss:Type="String">Cum să întregistrezi o întreprindere individuală</Data></Cell>
+    <Cell><Data ss:Type="String">Cum să înregistrezi o întreprindere individuală</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">301</Data></Cell>
@@ -1194,6 +1257,7 @@
    <Row>
     <Cell><Data ss:Type="Number">844</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">How to register a sole proprietorship</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1052</Data></Cell>
@@ -1213,6 +1277,7 @@
    <Row>
     <Cell><Data ss:Type="Number">845</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Business hubs and consulting companies</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1053</Data></Cell>
@@ -1232,6 +1297,7 @@
    <Row>
     <Cell><Data ss:Type="Number">846</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Permit for commercial establishments</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1054</Data></Cell>
@@ -1251,6 +1317,7 @@
    <Row>
     <Cell><Data ss:Type="Number">847</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Building permit</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1055</Data></Cell>
@@ -1270,6 +1337,7 @@
    <Row>
     <Cell><Data ss:Type="Number">848</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Demolition permit</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1056</Data></Cell>
@@ -1289,6 +1357,7 @@
    <Row>
     <Cell><Data ss:Type="Number">849</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Certificate for urban design</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1057</Data></Cell>
@@ -1308,6 +1377,7 @@
    <Row>
     <Cell><Data ss:Type="Number">850</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Certificate of lack / existence of arrears </Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1058</Data></Cell>
@@ -1327,6 +1397,7 @@
    <Row>
     <Cell><Data ss:Type="Number">851</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Family composition certificate</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1059</Data></Cell>
@@ -1346,6 +1417,7 @@
    <Row>
     <Cell><Data ss:Type="Number">852</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Certificate required for house or commercial establishment construction</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1060</Data></Cell>
@@ -1365,6 +1437,7 @@
    <Row>
     <Cell><Data ss:Type="Number">853</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Library, Museum and Theatre</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1061</Data></Cell>
@@ -1384,6 +1457,7 @@
    <Row>
     <Cell><Data ss:Type="Number">854</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">FAQ / Application samples / Guide for filling application form</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1062</Data></Cell>
@@ -1403,6 +1477,7 @@
    <Row>
     <Cell><Data ss:Type="Number">855</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">FAQ</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1063</Data></Cell>
@@ -1422,6 +1497,7 @@
    <Row>
     <Cell><Data ss:Type="Number">856</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Application samples</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1064</Data></Cell>
@@ -1441,6 +1517,7 @@
    <Row>
     <Cell><Data ss:Type="Number">857</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Guide for filling application form</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1065</Data></Cell>
@@ -1460,6 +1537,7 @@
    <Row>
     <Cell><Data ss:Type="Number">858</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Kindergartens, schools, highschools</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1066</Data></Cell>
@@ -1479,6 +1557,7 @@
    <Row>
     <Cell><Data ss:Type="Number">859</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">College and University</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1067</Data></Cell>
@@ -1498,6 +1577,7 @@
    <Row>
     <Cell><Data ss:Type="Number">860</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Parks, recreation areas and sport</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1068</Data></Cell>
@@ -1517,6 +1597,7 @@
    <Row>
     <Cell><Data ss:Type="Number">861</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Tourist attractions</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1069</Data></Cell>
@@ -1536,6 +1617,7 @@
    <Row>
     <Cell><Data ss:Type="Number">862</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">About town</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1070</Data></Cell>
@@ -1555,6 +1637,7 @@
    <Row>
     <Cell><Data ss:Type="Number">863</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">How to get to town / Geographical location</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1071</Data></Cell>
@@ -1574,6 +1657,7 @@
    <Row>
     <Cell><Data ss:Type="Number">864</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">History of the town</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1072</Data></Cell>
@@ -1593,6 +1677,7 @@
    <Row>
     <Cell><Data ss:Type="Number">865</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Famous personalities</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1073</Data></Cell>
@@ -1612,6 +1697,7 @@
    <Row>
     <Cell><Data ss:Type="Number">866</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Sister towns</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1074</Data></Cell>
@@ -1631,6 +1717,7 @@
    <Row>
     <Cell><Data ss:Type="Number">867</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Citizens council</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1075</Data></Cell>
@@ -1650,6 +1737,7 @@
    <Row>
     <Cell><Data ss:Type="Number">868</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Youth council</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1076</Data></Cell>
@@ -1669,6 +1757,7 @@
    <Row>
     <Cell><Data ss:Type="Number">869</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Local committees</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1077</Data></Cell>
@@ -1688,6 +1777,7 @@
    <Row>
     <Cell><Data ss:Type="Number">870</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Register yourself online for consultation</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1078</Data></Cell>
@@ -1707,6 +1797,7 @@
    <Row>
     <Cell><Data ss:Type="Number">871</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Citizen consultation schedule</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1079</Data></Cell>
@@ -1726,6 +1817,7 @@
    <Row>
     <Cell><Data ss:Type="Number">872</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Talk online with the mayor and local councilors</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1080</Data></Cell>
@@ -1745,6 +1837,7 @@
    <Row>
     <Cell><Data ss:Type="Number">873</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">File a complaint</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1081</Data></Cell>
@@ -1764,6 +1857,7 @@
    <Row>
     <Cell><Data ss:Type="Number">874</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">FAQ</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1082</Data></Cell>
@@ -1778,11 +1872,12 @@
    <Row>
     <Cell><Data ss:Type="Number">365</Data></Cell>
     <Cell><Data ss:Type="String">Russian</Data></Cell>
-    <Cell><Data ss:Type="String">Бланк заявления</Data></Cell>
+    <Cell><Data ss:Type="String">Бланки заявления</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">875</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Application samples</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1083</Data></Cell>
@@ -1797,11 +1892,12 @@
    <Row>
     <Cell><Data ss:Type="Number">367</Data></Cell>
     <Cell><Data ss:Type="String">Russian</Data></Cell>
-    <Cell><Data ss:Type="String">Бланк сертификата</Data></Cell>
+    <Cell><Data ss:Type="String">Бланки сертификата</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">876</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Certificate samples</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1084</Data></Cell>
@@ -1816,11 +1912,12 @@
    <Row>
     <Cell><Data ss:Type="Number">369</Data></Cell>
     <Cell><Data ss:Type="String">Russian</Data></Cell>
-    <Cell><Data ss:Type="String">Бланк для сборов и налогов</Data></Cell>
+    <Cell><Data ss:Type="String">Бланки для сборов и налогов</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">877</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Taxes and fees document samples</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1085</Data></Cell>
@@ -1840,6 +1937,7 @@
    <Row>
     <Cell><Data ss:Type="Number">878</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Application / complaint samples</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1086</Data></Cell>
@@ -1859,6 +1957,7 @@
    <Row>
     <Cell><Data ss:Type="Number">879</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Mayor</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1087</Data></Cell>
@@ -1878,6 +1977,7 @@
    <Row>
     <Cell><Data ss:Type="Number">880</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Vice-mayors</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1088</Data></Cell>
@@ -1897,6 +1997,7 @@
    <Row>
     <Cell><Data ss:Type="Number">881</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Mayoralty apparatus</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1089</Data></Cell>
@@ -1911,11 +2012,12 @@
    <Row>
     <Cell><Data ss:Type="Number">379</Data></Cell>
     <Cell><Data ss:Type="String">Russian</Data></Cell>
-    <Cell><Data ss:Type="String">Схема организационной структуры Примэри</Data></Cell>
+    <Cell><Data ss:Type="String">Схема организационной структуры Примэрии</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">882</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Mayoralty organisational chart </Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1090</Data></Cell>
@@ -1935,6 +2037,7 @@
    <Row>
     <Cell><Data ss:Type="Number">883</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Legal framework of the LG</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1091</Data></Cell>
@@ -1954,6 +2057,7 @@
    <Row>
     <Cell><Data ss:Type="Number">884</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Internal regulations</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1092</Data></Cell>
@@ -1973,6 +2077,7 @@
    <Row>
     <Cell><Data ss:Type="Number">885</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">News</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1093</Data></Cell>
@@ -1992,6 +2097,7 @@
    <Row>
     <Cell><Data ss:Type="Number">886</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Mayor's biography </Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1094</Data></Cell>
@@ -2011,6 +2117,7 @@
    <Row>
     <Cell><Data ss:Type="Number">887</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Action plans for current year</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1095</Data></Cell>
@@ -2030,6 +2137,7 @@
    <Row>
     <Cell><Data ss:Type="Number">888</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Mayor's activity program</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1096</Data></Cell>
@@ -2049,6 +2157,7 @@
    <Row>
     <Cell><Data ss:Type="Number">889</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Mayor's annual report</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1097</Data></Cell>
@@ -2068,6 +2177,7 @@
    <Row>
     <Cell><Data ss:Type="Number">890</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Action plans</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1098</Data></Cell>
@@ -2087,6 +2197,7 @@
    <Row>
     <Cell><Data ss:Type="Number">891</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Public services</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1099</Data></Cell>
@@ -2106,6 +2217,7 @@
    <Row>
     <Cell><Data ss:Type="Number">892</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Other entities</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1100</Data></Cell>
@@ -2115,7 +2227,7 @@
    <Row ss:Index="546">
     <Cell><Data ss:Type="Number">404</Data></Cell>
     <Cell><Data ss:Type="String">Romanian</Data></Cell>
-    <Cell><Data ss:Type="String">Ce este consiliul local?</Data></Cell>
+    <Cell><Data ss:Type="String">Ce este Consiliul Local?</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">405</Data></Cell>
@@ -2125,6 +2237,7 @@
    <Row>
     <Cell><Data ss:Type="Number">893</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">What is Local Council?</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1101</Data></Cell>
@@ -2144,6 +2257,7 @@
    <Row>
     <Cell><Data ss:Type="Number">894</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Council's sessions</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1102</Data></Cell>
@@ -2153,7 +2267,7 @@
    <Row ss:Index="556">
     <Cell><Data ss:Type="Number">408</Data></Cell>
     <Cell><Data ss:Type="String">Romanian</Data></Cell>
-    <Cell><Data ss:Type="String">Secretarul consiliului local</Data></Cell>
+    <Cell><Data ss:Type="String">Secretarul Consiliului Local</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">409</Data></Cell>
@@ -2163,6 +2277,7 @@
    <Row>
     <Cell><Data ss:Type="Number">895</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Secretary of Local Council</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1103</Data></Cell>
@@ -2182,6 +2297,7 @@
    <Row>
     <Cell><Data ss:Type="Number">896</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Local councilors and areas of responsibility</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1104</Data></Cell>
@@ -2201,6 +2317,7 @@
    <Row>
     <Cell><Data ss:Type="Number">897</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Consultation schedule of local councilors</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1105</Data></Cell>
@@ -2220,6 +2337,7 @@
    <Row>
     <Cell><Data ss:Type="Number">898</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Archive of previous decisions</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1106</Data></Cell>
@@ -2239,6 +2357,7 @@
    <Row>
     <Cell><Data ss:Type="Number">899</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Session agenda</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1107</Data></Cell>
@@ -2258,6 +2377,7 @@
    <Row>
     <Cell><Data ss:Type="Number">900</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Previous sessions</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1108</Data></Cell>
@@ -2277,6 +2397,7 @@
    <Row>
     <Cell><Data ss:Type="Number">901</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Schedule of future sessions</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1109</Data></Cell>
@@ -2286,7 +2407,7 @@
    <Row ss:Index="591">
     <Cell><Data ss:Type="Number">422</Data></Cell>
     <Cell><Data ss:Type="String">Romanian</Data></Cell>
-    <Cell><Data ss:Type="String">Privește on-line ședințele consiliului</Data></Cell>
+    <Cell><Data ss:Type="String">Privește on-line ședințele Consiliului</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">423</Data></Cell>
@@ -2296,6 +2417,7 @@
    <Row>
     <Cell><Data ss:Type="Number">902</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Watch online the Local Council's session</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1110</Data></Cell>
@@ -2315,6 +2437,7 @@
    <Row>
     <Cell><Data ss:Type="Number">903</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Commission on  urban planning</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1111</Data></Cell>
@@ -2334,6 +2457,7 @@
    <Row>
     <Cell><Data ss:Type="Number">904</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Commission on budget, finances and economy</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1112</Data></Cell>
@@ -2353,6 +2477,7 @@
    <Row>
     <Cell><Data ss:Type="Number">905</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Commission on legal affairs</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1113</Data></Cell>
@@ -2372,6 +2497,7 @@
    <Row>
     <Cell><Data ss:Type="Number">906</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Commission on social affairs</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1114</Data></Cell>
@@ -2381,7 +2507,7 @@
    <Row ss:Index="616">
     <Cell><Data ss:Type="Number">432</Data></Cell>
     <Cell><Data ss:Type="String">Romanian</Data></Cell>
-    <Cell><Data ss:Type="String">Strategia de Dezvoltare Socio-economică a orașului</Data></Cell>
+    <Cell><Data ss:Type="String">Strategia de dezvoltare socio-economică a orașului</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">433</Data></Cell>
@@ -2391,6 +2517,7 @@
    <Row>
     <Cell><Data ss:Type="Number">907</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Socio-economic development startegy of the town</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1115</Data></Cell>
@@ -2400,7 +2527,7 @@
    <Row ss:Index="621">
     <Cell><Data ss:Type="Number">434</Data></Cell>
     <Cell><Data ss:Type="String">Romanian</Data></Cell>
-    <Cell><Data ss:Type="String">Planul Urbanistic General</Data></Cell>
+    <Cell><Data ss:Type="String">Planul urbanistic general</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">435</Data></Cell>
@@ -2410,6 +2537,7 @@
    <Row>
     <Cell><Data ss:Type="Number">908</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">General urban plan</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1116</Data></Cell>
@@ -2429,6 +2557,7 @@
    <Row>
     <Cell><Data ss:Type="Number">909</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Action plans on energy efficiency</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1117</Data></Cell>
@@ -2448,6 +2577,7 @@
    <Row>
     <Cell><Data ss:Type="Number">910</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Local program on energy efficiency</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1118</Data></Cell>
@@ -2467,6 +2597,7 @@
    <Row>
     <Cell><Data ss:Type="Number">911</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Environment protection policies</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1119</Data></Cell>
@@ -2486,6 +2617,7 @@
    <Row>
     <Cell><Data ss:Type="Number">912</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Public service improvement plan</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1120</Data></Cell>
@@ -2505,6 +2637,7 @@
    <Row>
     <Cell><Data ss:Type="Number">913</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Familiy and children protection policies</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1121</Data></Cell>
@@ -2524,6 +2657,7 @@
    <Row>
     <Cell><Data ss:Type="Number">914</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Social housing and protection</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1122</Data></Cell>
@@ -2543,6 +2677,7 @@
    <Row>
     <Cell><Data ss:Type="Number">915</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">FAQ</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1123</Data></Cell>
@@ -2562,6 +2697,7 @@
    <Row>
     <Cell><Data ss:Type="Number">916</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Legislation on decisional transparency and access to information</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1124</Data></Cell>
@@ -2581,6 +2717,7 @@
    <Row>
     <Cell><Data ss:Type="Number">917</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Video recording</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1125</Data></Cell>
@@ -2600,6 +2737,7 @@
    <Row>
     <Cell><Data ss:Type="Number">918</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Address a question to Mayor</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1126</Data></Cell>
@@ -2619,6 +2757,7 @@
    <Row>
     <Cell><Data ss:Type="Number">919</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">News and announcements</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1127</Data></Cell>
@@ -2638,6 +2777,7 @@
    <Row>
     <Cell><Data ss:Type="Number">920</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Announcements on public procurements</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1128</Data></Cell>
@@ -2657,6 +2797,7 @@
    <Row>
     <Cell><Data ss:Type="Number">921</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Current vacancies</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1129</Data></Cell>
@@ -2676,6 +2817,7 @@
    <Row>
     <Cell><Data ss:Type="Number">922</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Internships and volunteering at the Mayoralty</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1130</Data></Cell>
@@ -2695,6 +2837,7 @@
    <Row>
     <Cell><Data ss:Type="Number">923</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Local budget (town's revenues and expenditures)</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1131</Data></Cell>
@@ -2714,6 +2857,7 @@
    <Row>
     <Cell><Data ss:Type="Number">924</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">How are the public money spent</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1132</Data></Cell>
@@ -2733,6 +2877,7 @@
    <Row>
     <Cell><Data ss:Type="Number">925</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Expenditures for subordinated institutions</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1133</Data></Cell>
@@ -2752,6 +2897,7 @@
    <Row>
     <Cell><Data ss:Type="Number">926</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Public asset management</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1134</Data></Cell>
@@ -2771,6 +2917,7 @@
    <Row>
     <Cell><Data ss:Type="Number">927</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Draft decisions and related materials submitted for public consultation </Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1135</Data></Cell>
@@ -2790,6 +2937,7 @@
    <Row>
     <Cell><Data ss:Type="Number">928</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Discussed projects, analysis of the received recommendations, minutes</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1136</Data></Cell>
@@ -2809,6 +2957,7 @@
    <Row>
     <Cell><Data ss:Type="Number">929</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Public debates</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1137</Data></Cell>
@@ -2828,6 +2977,7 @@
    <Row>
     <Cell><Data ss:Type="Number">930</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Online surveys</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1138</Data></Cell>
@@ -2847,6 +2997,7 @@
    <Row>
     <Cell><Data ss:Type="Number">931</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Completed projects</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1139</Data></Cell>
@@ -2866,6 +3017,7 @@
    <Row>
     <Cell><Data ss:Type="Number">932</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Current projects</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1140</Data></Cell>
@@ -2885,6 +3037,7 @@
    <Row>
     <Cell><Data ss:Type="Number">942</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Annual reports</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1150</Data></Cell>
@@ -2904,6 +3057,7 @@
    <Row>
     <Cell><Data ss:Type="Number">948</Data></Cell>
     <Cell><Data ss:Type="String">English</Data></Cell>
+    <Cell><Data ss:Type="String">Deleted pages</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">1156</Data></Cell>
@@ -2924,10 +3078,11 @@
     <VerticalResolution>0</VerticalResolution>
    </Print>
    <Selected/>
+   <TopRowVisible>740</TopRowVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>11</ActiveRow>
+     <ActiveRow>750</ActiveRow>
      <ActiveCol>2</ActiveCol>
     </Pane>
    </Panes>

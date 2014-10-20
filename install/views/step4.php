@@ -1,6 +1,6 @@
 <h3>Template</h3>
 
-<p>bla bla bla bla bla bla bla blabla bla bla blabla bla bla blabla bla bla bla</p>
+<p>Selectati tema site-ului</p>
 
 <form action="<?= url('install/checktpl'); ?>" method="post">
 
@@ -11,8 +11,11 @@
     <label>
         <input type="radio" name="tpl" value="Default" checked /> Default
     </label>
+    <label>
+        <input type="radio" name="tpl" value="Flat" checked /> Flat
+    </label>
 
-        <hr/>
-        
+    <hr/>
+
     <button class="btn btn-info btn-lg">Urmatorul pas</button>
 </form>

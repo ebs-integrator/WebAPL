@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title><?= Core\APL\Template::getPageTitle(); ?></title>
+        <title><?= Core\APL\Template::getPageTitle(isset($page) ? $page : null); ?></title>
 
         <?php foreach (\Core\APL\Template::getMetas() as $metaName => $metaContent) { ?>
             <meta name="<?= $metaName; ?>" content="<?= $metaContent; ?>">
@@ -32,8 +32,8 @@
             var base_url = '<?= url(); ?>';
 
             var disqus_url = '<?= url(); ?>';
-            var disqus_shortname = 'aplkopceak';
-            var disqus_title = '<?= Core\APL\Template::getPageTitle(); ?>';
+            var disqus_shortname = '<?= SettingsModel::one('disqus_shortname');?>';
+            var disqus_title = '<?= Core\APL\Template::getPageTitle(isset($page) ? $page : null); ?>';
             var disqus_config = function() {
                 this.language = "<?= Core\APL\Language::ext(); ?>";
             };

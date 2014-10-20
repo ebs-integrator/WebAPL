@@ -1,77 +1,182 @@
 <h3><?= varlang('settings-1'); ?></h3>
 
-<form action="<?= url('settings/save'); ?>" method="post" class="ajax-auto-submit">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active"><a href="#general" role="tab" data-toggle="tab"><?= varlang('general-7'); ?></a></li>
+    <li><a href="#apparence" role="tab" data-toggle="tab"><?= varlang('aparenta'); ?></a></li>
+    <li><a href="#location" role="tab" data-toggle="tab"><?= varlang('location-1'); ?></a></li>
+    <li><a href="#comments" role="tab" data-toggle="tab"><?= varlang('comments'); ?></a></li>
+    <li><a href="#ment" role="tab" data-toggle="tab"><?= varlang('inca'); ?></a></li>
+</ul>
 
-    <table class="table table-bordered">
+<div class="tab-content">
+    <div class="tab-pane active" id="general">
 
-        <tr>
-            <th>Nume site</th>
-            <td>
-                <input type='text' name='set[sitename]' placeholder="Nume site" class='form-control' value='<?= isset($setts['sitename']) ? $setts['sitename'] : ''; ?>'/>
-            </td>
-        </tr>
-        
-        <tr>
-            <th>Cache life (min)</th>
-            <td>
-                <input type='text' name='set[cachelife]' placeholder="Cache life" class='form-control' value='<?= isset($setts['cachelife']) ? $setts['cachelife'] : ''; ?>'/>
-            </td>
-        </tr>
 
-        <?php
-        $colorSchemes = \Core\APL\Template::getColorSchemes();
-        ?>
-        <?php if ($colorSchemes) { ?>
-            <tr>
-                <th><?= varlang('template-color-schema'); ?></th>
-                <td>
-                    <select class='form-control' name="set[templateSchema]">
-                        <option name=''>---</option>
-                        <?php foreach ($colorSchemes as $schemaKey => $schema) { ?>
-                            <option value='<?= $schemaKey; ?>' <?= isset($setts['templateSchema']) && $setts['templateSchema'] == $schemaKey ? 'selected' : ''; ?>><?= isset($schema['name']) ? $schema['name'] : 'undefined name'; ?></option>
-                        <?php } ?>
-                    </select>
-                </td>
-            </tr>
+        <form action="<?= url('settings/save'); ?>" method="post" class="ajax-auto-submit">
+
+            <table class="table table-bordered">
+
+                <?php foreach (Core\APL\Language::getList() as $lang) { ?>
+                <tr>
+                    <th><?= varlang('sitename'); ?> (<?=$lang->name;?>):</th>
+                    <td>
+                        <input type='text' name='set[sitename_<?=$lang->ext;?>]' class='form-control' value='<?= isset($setts['sitename_' . $lang->ext]) ? $setts['sitename_' . $lang->ext] : ''; ?>'/>
+                    </td>
+                </tr>
+                <?php } ?>
+
+                <tr>
+                    <th><?= varlang('cachelife'); ?></th>
+                    <td>
+                        <input type='number' name='set[cachelife]' class='form-control' value='<?= isset($setts['cachelife']) ? $setts['cachelife'] : ''; ?>'/>
+                        <br><br>
+                        <button type='button' id='ccache' class='btn btn-success'>Clear cache</button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+    </div>
+
+    <div class="tab-pane" id="apparence">
+
+
+        <form action="<?= url('settings/save'); ?>" method="post" class="ajax-auto-submit">
+
+            <table class="table table-bordered">
+
+                <?php
+                $colorSchemes = \Core\APL\Template::getColorSchemes();
+                ?>
+                <?php if ($colorSchemes) { ?>
+                    <tr>
+                        <th><?= varlang('template-color-schema'); ?></th>
+                        <td>
+                            <select class='form-control' name="set[templateSchema]">
+                                <option name=''>---</option>
+                                <?php foreach ($colorSchemes as $schemaKey => $schema) { ?>
+                                    <option value='<?= $schemaKey; ?>' <?= isset($setts['templateSchema']) && $setts['templateSchema'] == $schemaKey ? 'selected' : ''; ?>><?= isset($schema['name']) ? $schema['name'] : 'undefined name'; ?></option>
+                                <?php } ?>
+                            </select>
+                        </td>
+                    </tr>
+                <?php } ?>
+
+            </table>
+
+        </form>
+
+        <?php if (Config::get('template.logo')) { ?>
+            <?php if (Config::get('template.logo_multilang')) { ?>
+                <?php foreach (Core\APL\Language::getList() as $lang) { ?>
+                    <h4><?= varlang('home-logo-in-'); ?> <?= $lang->name; ?></h4>
+                    <?= Files::widget('website_logo_' . $lang->ext, 1, 1); ?>
+                    <?php if (Config::get('template.logo_small')) { ?>
+                        <h5><?= varlang('home-logo-small'); ?></h5>
+                        <?= Files::widget('website_logo_sm_' . $lang->ext, 1, 1); ?>
+                    <?php } ?>
+                <?php } ?>
+            <?php } else { ?>
+                <h4><?= varlang('logo'); ?></h4>
+                <?= Files::widget('website_logo', 1, 1); ?>
+                <?php if (Config::get('template.logo_small')) { ?>
+                    <h4><?= varlang('home-logo-small'); ?></h4>
+                    <?= Files::widget('website_logo_sm', 1, 1); ?>
+                <?php } ?>
+            <?php } ?>
         <?php } ?>
 
-        <tr>
-            <th>
-                <?= varlang('location'); ?>
-                <input type='hidden' name='set[pos_lat]' id="latbox" placeholder="Lat" class='form-control' value='<?= isset($setts['pos_lat']) ? $setts['pos_lat'] : ''; ?>'/><br>
-                <input type='hidden' name='set[pos_long]'id="longbox" placeholder="Long" class='form-control' value='<?= isset($setts['pos_long']) ? $setts['pos_long'] : ''; ?>'/>
-            </th>
-            <td class='col-lg-8'>
-                <div style="overflow:hidden;height:300px;width:100%;">
-                    <div id="gmap_canvas" style="height:300px;width:100%;"></div>
-                    <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
-                </div>
-            </td>
-        </tr>
-        
-        
-        <tr>
-            <th><?= varlang('website-activ'); ?></th>
-            <td>
-                <input type="hidden" name="set[website_on]" value="0" />
-                <input type='checkbox' name='set[website_on]' class='make-switch' <?= isset($setts['website_on']) && $setts['website_on'] ? 'checked' : ''; ?>/>
-                <br><?= varlang('pentru-a-accesa-website-ul-folositi-linkul'); ?> <a href="<?=url('../?is_admin=1');?>" target="_blank"><?= varlang('click-aici'); ?></a>
-            </td>
-        </tr>
+        <h4><?= varlang('favicon'); ?></h4>
+        <?= Files::widget('website_favicon', 1, 1); ?>
+    </div>
 
 
-    </table>
+    <div class="tab-pane" id="location">
 
-</form>
 
-<h4>Favicon</h4>
-<?= Files::widget('website_favicon', 1, 1); ?>
 
-<h4>Home logo</h4>
-<?= Files::widget('website_logo', 1, 1); ?>
+        <form action="<?= url('settings/save'); ?>" method="post" class="ajax-auto-submit">
 
-<h4>Home logo (small)</h4>
-<?= Files::widget('website_logo_sm', 1, 1); ?>
+            <table class="table table-bordered">
+
+                <tr>
+                    <th>
+                        <?= varlang('location'); ?>
+                        <input type='hidden' name='set[pos_lat]' id="latbox" placeholder="Lat" class='form-control' value='<?= isset($setts['pos_lat']) ? $setts['pos_lat'] : ''; ?>'/><br>
+                        <input type='hidden' name='set[pos_long]'id="longbox" placeholder="Long" class='form-control' value='<?= isset($setts['pos_long']) ? $setts['pos_long'] : ''; ?>'/>
+                    </th>
+                    <td class='col-lg-8'>
+                        <div style="overflow:hidden;height:300px;width:100%;">
+                            <div id="gmap_canvas" style="height:300px;width:100%;"></div>
+                            <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+                        </div>
+                    </td>
+                </tr>
+
+
+            </table>
+
+        </form>
+
+    </div>
+    <div class="tab-pane" id="comments">
+
+        <form action="<?= url('settings/save'); ?>" method="post" class="ajax-auto-submit">
+
+            <table class="table table-bordered">
+
+                <tr>
+                    <th><?= varlang('disqus-shortname'); ?></th>
+                    <td>
+                        <input type='text' name='set[disqus_shortname]' class='form-control' value='<?= isset($setts['disqus_shortname']) ? $setts['disqus_shortname'] : ''; ?>'/>
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+    </div>
+    <div class="tab-pane" id="ment">
+
+
+        <form action="<?= url('settings/save'); ?>" method="post" class="ajax-auto-submit">
+
+            <table class="table table-bordered">
+
+                <tr>
+                    <th><?= varlang('website-activ'); ?></th>
+                    <td>
+                        <input type="hidden" name="set[website_on]" value="0" />
+                        <input type='checkbox' name='set[website_on]' class='make-switch' <?= isset($setts['website_on']) && $setts['website_on'] ? 'checked' : ''; ?>/>
+                        <br><?= varlang('pentru-a-accesa-website-ul-folositi-linkul'); ?> <a href="<?= url('../?is_admin=1'); ?>" target="_blank"><?= varlang('click-aici'); ?></a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th><?= varlang('ment-text'); ?></th>
+                    <td>
+                        <textarea name='set[inactive_text]' class='ckeditor-run'><?= isset($setts['inactive_text']) ? $setts['inactive_text'] : ''; ?></textarea>
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
 
 
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
@@ -173,7 +278,16 @@
         document.getElementById("longbox").value = point.lng().toFixed(6);
         $("#latbox").change();
     }
-    google.maps.event.addDomListener(window, 'load', init_map);
+    //google.maps.event.addDomListener(window, 'load', init_map);
+    var loadedmap = false;
+    $(document).ready(function() {
+        $('a[href="#location"]').click(function() {
+            if (loadedmap === false) {
+                init_map();
+                loadedmap = true;
+            }
+        });
+    });
 
 
 

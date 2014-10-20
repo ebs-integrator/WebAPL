@@ -5413,3 +5413,24 @@ ul.vice li .p_name {
     }
 
 }
+
+
+
+.live_comment > p:hover, .live_comment > p.activecomm {
+    color: #673167;
+    cursor: pointer;
+}
+
+.live_comment_num {
+    background: url('../img/com.png');
+    float: right;
+    display: block;
+    width: 30px;
+    height: 34px;
+    padding-top: 2px;
+    color: white;
+    text-align: center;
+    margin-right: -25px;
+    margin-top: -15px;
+    font: 15px 'AvenirNext-Regular';
+}

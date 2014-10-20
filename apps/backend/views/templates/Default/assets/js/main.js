@@ -147,5 +147,13 @@ jQuery(document).ready(function($) {
     $('.datetimepicker').datetimepicker({
       language: 'en'
     });
+    
+    $("#ccache").click(function () {
+        var button = $(this);
+        button.text('...');
+        $.get('/ccache', {}, function () {
+            button.text('Success');
+        });
+    });
 
 });

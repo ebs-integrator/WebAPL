@@ -34,7 +34,10 @@ class PageController extends BaseController {
                 $this->data['parents'] = Post::getParents($this->data['page']['parent']);
                 $this->data['parent'] = Post::findID($this->data['page']['parent'], 1);
                 $this->data['colevels'] = Post::findWithParent($this->data['page']['parent']);
-
+                $this->data['super_parent'] = array_first($this->data['parents'], function ($key, $item) {
+                    return $item['parent'] == 0;
+                });
+                
                 // get real page URI
                 $segments = array();
                 $parrents_ids = array();
@@ -54,6 +57,7 @@ class PageController extends BaseController {
                     View::share(array(
                         'active_page_id' => $this->data['page']->id,
                         'parrents_ids' => $parrents_ids,
+                        'super_parent' => $this->data['super_parent']
                     ));
 
                     // Verify if this page is clone
@@ -93,6 +97,7 @@ class PageController extends BaseController {
 
                     // load page
                     PageController::loadGeneralResources();
+                    View::share('page', $this->data['page']);
                     if ($this->data['page']->general_node) {
                         return $this->loadHome();
                     } else {
@@ -123,7 +128,6 @@ class PageController extends BaseController {
         $data = array(
             'general_pages' => Post::findGeneral(),
             'buttom_pages' => PostProperty::postsWithProperty('button_site', 3),
-            'logo_home_sm' => Files::getfile('website_logo_sm', 1),
             'phone_page' => PostProperty::postWithProperty('phone-page'),
             'favicon' => Files::getfile('website_favicon', 1),
             'alert_post' => Post::findAlertPost()
@@ -131,7 +135,7 @@ class PageController extends BaseController {
 
         Template::setMetaMultiple(array(
             'og:type' => 'page',
-            'og:image' => $data['logo_home_sm'] ? url($data['logo_home_sm']->path) : '',
+            'og:image' => Files::extract('website_logo_' . Core\APL\Language::ext(), 1, 'path'),
             'og:site_name' => SettingsModel::one('sitename')
         ));
 
@@ -161,8 +165,6 @@ class PageController extends BaseController {
     public function loadHome() {
         $this->layout = 'layout/home';
         $this->setupLayout();
-
-        View::share('logo_home', Files::getfile('website_logo', 1));
 
         $this->layout->content = PageView::run($this->data, 'homeView');
 

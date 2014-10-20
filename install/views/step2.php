@@ -1,7 +1,5 @@
 <h3>Cerinte tehnice</h3>
 
-<p>bla bla bla bla bla bla bla blabla bla bla blabla bla bla blabla bla bla bla</p>
-
 <table class="table table-bordered">
     <tr>
         <td>PHP 5.4+</td>
@@ -40,6 +38,52 @@
                 <label class="label label-success">Accesibil</label>
             <?php } else { ?>
                 <label class="label label-danger">Inaccesibil</label>
+            <?php } ?>
+        </td>
+    </tr>
+    
+</table>
+
+<h3>Drepturi de scriere</h3>
+
+<table class="table table-bordered">
+    <tr>
+        <td>/apps/frontend/storage/</td>
+        <td>
+            <?php if ($req['wr_fr_storage']) { ?>
+                <label class="label label-success">writable</label>
+            <?php } else { ?>
+                <label class="label label-danger">non-whitable</label>
+            <?php } ?>
+        </td>
+    </tr>
+    <tr>
+        <td>/apps/backend/storage/</td>
+        <td>
+            <?php if ($req['wr_bk_storage']) { ?>
+                <label class="label label-success">writable</label>
+            <?php } else { ?>
+                <label class="label label-danger">non-whitable</label>
+            <?php } ?>
+        </td>
+    </tr>
+    <tr>
+        <td>/upload/</td>
+        <td>
+            <?php if ($req['wr_upload']) { ?>
+                <label class="label label-success">writable</label>
+            <?php } else { ?>
+                <label class="label label-danger">non-whitable</label>
+            <?php } ?>
+        </td>
+    </tr>
+    <tr>
+        <td>/install/</td>
+        <td>
+            <?php if ($req['wr_install']) { ?>
+                <label class="label label-success">writable</label>
+            <?php } else { ?>
+                <label class="label label-danger">non-whitable</label>
             <?php } ?>
         </td>
     </tr>
