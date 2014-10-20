@@ -1,21 +1,28 @@
 <section>
-    <?= View::make('sections.elements.breadcrumbs'); ?>
-    <div class='wrap site_map'>
-        <p class='c_title'><?= $page->title; ?></p>
+    <div class="wrap">
+        <div class="left_block">
 
-        <?php Event::fire('page_top_container', $page); ?>
+        </div>
+        <div class="resp_menu"></div>
+        <div class="right_block <?= $page->view_mod; ?>">
 
-        <?= $page->text; ?>
+            <?php Event::fire('page_top_container', $page); ?>
 
-        <?php Event::fire('page_bottom_container', $page); ?>
+            <?= $page->text; ?>
 
-        <?=
-        View::make('sections.pages.blocks.files', array(
-            'page' => $page
-        ));
-        ?>
+            <?php Event::fire('page_bottom_container', $page); ?>
 
+            <?=
+            View::make('sections.pages.blocks.files', array(
+                'page' => $page
+            ));
+            ?>
 
-        <div class='clearfix'></div>
+        </div>
     </div>
+
 </section>
+
+
+
+

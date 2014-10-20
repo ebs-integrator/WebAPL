@@ -10,7 +10,7 @@
             ?>
         </div>
         <div class="resp_menu"></div>
-        <div class="right_block <?=$page->view_mod;?>">
+        <div class="right_block t_block <?=$page->view_mod;?>">
             <?= View::make('sections.elements.breadcrumbs'); ?>
 
             <?php Event::fire('page_top_container', $page); ?>

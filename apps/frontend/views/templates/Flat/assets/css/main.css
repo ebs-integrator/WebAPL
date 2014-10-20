@@ -770,8 +770,20 @@ article:nth-child(3n-1){
     height:43px;
     margin-top:0px;
 }
-
-
+.error_info p span{
+    font:19px 'AvenirNext-Medium';
+    color:#008d74;
+}
+img.img_error{
+    margin-top:100px;
+}
+.error_info{
+    margin-bottom:100px;
+}
+.error_info p{
+    color:#a2a2a2;
+    font:19px 'AvenirNext-Regular';
+}
 .prefooter{
     width:100%;
     max-width:2580px;
@@ -1323,7 +1335,7 @@ h2{
 h2.colored{
     color:#0382a1;
 }
-.t_block span{
+.t_block > span{
     display:block;
 }
 .attention p{
@@ -1889,10 +1901,10 @@ ul.faq li p:last-child{
     max-width:100%;
     margin:40px 0;
 }
-.t_block p{
+.t_block > p{
     margin-bottom: 25px;
 }
-.t_block img{
+.t_block > img{
     max-width:100%;
     margin:40px 0px;
 }
