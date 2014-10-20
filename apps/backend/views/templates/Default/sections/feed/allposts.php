@@ -13,7 +13,7 @@
         ],
         rowNum: 30,
         multiselect: false,
-        rowList: [30, 50, 100],
+        rowList: [30, 50, 100, 200, 500],
         pager: '',
         altRows: true,
         //sortname: 'id',

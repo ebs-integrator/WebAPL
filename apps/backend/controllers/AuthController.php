@@ -8,6 +8,11 @@ class AuthController extends BaseController {
     }
 
     public function postTake() {
+        $capcha = Input::get('capcha');
+        if (SimpleCapcha::valid('login_admin', $capcha) === false) {
+            return Redirect::intended('auth/index')->with('auth_error', 'Invalid Capcha');
+        }
+        
         if (Auth::attempt(array('username' => Input::get('username'), 'password' => Input::get('password')))) {
             Log::info('User login');
             return Redirect::intended('/');

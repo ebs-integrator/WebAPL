@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="<?= res('assets/lib/font-awesome/css/font-awesome.min.css'); ?>">
 
         <!-- Metis core stylesheet -->
-        <link rel="stylesheet" href="<?= res('assets/css/main.min.css'); ?>">
+        <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">
         <link rel="stylesheet" href="<?= res('assets/lib/magic/magic.css'); ?>">
     </head>
     <body class="login">
@@ -29,8 +29,11 @@
                                 <?= varlang('enter-your-username-and-password'); ?>
                             <?php } ?>
                         </p>
-                        <input type="text" name="username" placeholder="<?= varlang('username'); ?>" class="form-control">
-                        <input type="password" name="password" placeholder="<?= varlang('password'); ?>" class="form-control">
+                        <input required="" type="text" name="username" placeholder="<?= varlang('username'); ?>" class="form-control">
+                        <input required="" type="password" name="password" placeholder="<?= varlang('password'); ?>" class="form-control">
+                        <input required="" type="number" name="capcha" placeholder="" class="form-control pull-left" style="max-width: 225px;">
+                        <img src="<?=SimpleCapcha::make('login_admin');?>" class="pull-right" style="border-radius: 4px;height: 34px;" />
+                        <br><br><br>
                         <button class="btn btn-lg btn-success btn-block" type="submit"><?= varlang('sign-in'); ?></button>
                     </form>
                 </div>
