@@ -1,0 +1,281 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 20, 2014, 3:08:50 PM
+    Author     : AlionaL
+*/
+
+
+.lang p {
+    background: #f3e1be;
+} 
+
+
+.contact a.contact_us, footer .right p.y_info {
+    color: #EAD3A4;
+} 
+
+
+
+
+.adv {
+    background: #e8e5e6;
+} 
+
+
+.adv {
+    border: 1px solid #b0abad;
+} 
+
+
+.sec_span, h1, .attention span, nav p, ul.culture li .right .box p,ul.culture li .right .box p a, .city_box .title, .form .ftb, .compl_list li a .compl_title, .name, .sort_b .selectboxit-container span,.selectboxit-container .selectboxit-options a, .calendar_slider table thead tr:first-child td, .calendar_slider table thead tr td, .com_box .title, .cns_locali thead tr td, .sec_details .sec_name, .secretar span, table.plc > tbody > tr > td > a, .adv, .s_title, .det_news, .search_t span, .search_p span, .cda ul li .left a, ul.vice li .name, .bgr .info > ul > li .left {
+    color: #706569;
+} 
+
+section .search input[type=submit] {
+    background: #706569;
+} 
+
+.dop .top {
+    border-bottom: 4px solid #706569;
+} 
+
+
+
+
+.lang p, .chat_b, header .cont_form .prp a,.mini_header .m_lang li a, .form.green .ftb, .stat_info span:last-child, .search_li li p span, .contact_l .prp a, .contact_r .prp a {
+    color: #494043;
+} 
+footer .search input[type=submit]{
+    color:#EBD5A6;
+    border-color:#EBD5A6;
+}
+
+@media only screen and (max-width: 767px){
+    .l_box{
+        color: #494043;
+        border-color: #494043;
+    }
+}
+table.plc > tbody > tr > td:first-child {
+    border-color: #494043;
+} 
+
+.menu_block, .cont_form input[type="submit"], .mini_header .content, .page_top_content .row2 .content, .green input[type=submit], .dop .top, .ldmbox input[type=submit] {
+    background: #494043;
+} 
+
+.contact_l .prp, .contact_r .prp {
+    border: 2px solid #494043;
+} 
+
+ul.a_n li a span {
+    background-color: #494043;
+} 
+
+
+table.taxe thead tr, table.taxe thead tr td {
+    border: 1px solid #938d8f;
+} 
+
+
+
+.dop .top hr {
+    background: #8f7a81;
+} 
+
+
+
+.compl_list li a span, .a_box p.data,.p_data {
+    background-color: #EF5E63;
+} 
+
+.left_block .chat .green{
+    color: #EF5E63;
+} 
+
+.home_chat {
+    border: 2px solid #EF5E63;
+} 
+
+
+
+.left_block ul.menu > li ul li a, .left_block ul.menu li.active a, .ag_line p,.ag_line span, .ldm_li b ,.av.green p span{
+    color: #D23339;
+} 
+
+.ag_line span {
+    border: 2px solid #D23339;
+} 
+
+
+.left_block .chat .violet {
+    color: #bd2d33;
+} 
+
+
+footer .newsletter_subscribe_form input[type=submit] {
+    border: 2px solid #D4343C;
+} 
+
+footer .newsletter_subscribe_form input[type=submit], .attention p.title, table.taxe thead tr td, .ath p, .subt {
+    color: #D4343C;
+} 
+
+.search_s input[type=submit], .snd_sbm {
+    background: #D4343C;
+} 
+
+
+article .categ_title a{
+    color:#6E6568;
+}
+table.orar thead tr:first-child, .clu_nume {
+    color: #EBD5A4;
+} 
+
+.l_a li a span {
+    background-color: #EBD5A4;
+} 
+
+.ldmbox .data p {
+    background: #EBD5A4;
+} 
+
+
+table.taxe thead tr {
+    border-bottom: 2px solid #a5a5a5;
+} 
+
+
+p.form_title, ul.faq li a span {
+    color: #6E6568;
+} 
+
+article .categ_title a:hover, .form .content input[type=submit], .video_d {
+    background: #6E6568;
+} 
+table.atz tr td:nth-child(2){
+    color: #6E6568;
+}
+.prefooter .row1_l {
+    background: url('../img/foter_an_red.png')no-repeat right bottom #D4333B;
+}
+.prefooter .row1_l p.f_title,.prefooter .row1_l p,.home_chat p , .home_chat p span{
+    color:#fff;
+}
+.prefooter .row1_l .data{
+    background:#F0D5A8;
+}
+.prefooter .row1_r .f_title{
+    color:#D4333D;
+}
+.prefooter .row1_r .data{
+    background:#6E6568;
+}
+.prefooter .row1_r a.f_artc{
+    color:#6E6468;
+}
+.top_el .home_chat, .home_chat{
+    background:#D4343E;
+    border-color:#D4343E;
+}
+.home_chat .pct{
+    background: url('../img/chat_dots_red.png') no-repeat 8px center;
+}
+.lang ul li:first-child {
+    background:#bfb2b6;
+}
+.lang ul li:nth-child(2) {
+    background: #807b81;
+}
+.lang ul li:last-child {
+    background: #4a403e;
+}
+header .cont_form .prp{
+    border-color: #494043;
+}
+.contact_l .prp a{
+    background: url('../img/phone_book_red.png')no-repeat left center;
+}
+.contact_r .prp a{
+    background: url('../img/bus_red.png')no-repeat left top;
+}
+.left_block .chat .mn{
+    background: url('../img/chat_man_red.png') no-repeat center;
+}
+.sitemap > ul > li > a{
+    background: url('../img/f_li_red.png')no-repeat left 4px;
+}
+.sitemap > ul > li > ul > li > a {
+    background: url('../img/s_li_red.png')no-repeat left 4px;
+}
+article .sub_list ul li {
+    background: url('../img/arcticle_li_red.png') no-repeat left 5px;
+}
+.urg thead tr {
+    background: #d4343c;
+}
+.urg tbody tr td:first-child {
+    background: url('../img/g_phone_red.png') no-repeat left 30px;
+}
+.bgr .info > ul > li .right.list:before {
+    content: url('../img/f_li_red.png');
+}
+.dop .right .status.on {
+    background: url('../img/chat_dots_red2.png') no-repeat left center;
+}
+.dop .right .buttons button.firechat-hide{
+    background:url('../img/save_red.png')no-repeat center #fff;
+}
+.dop .right .buttons button.firechat-close{
+    background:url('../img/close_red.png')no-repeat center #fff;
+}
+.dop .right .buttons button.firechat-show{
+    background:url('../img/unsave_red.png')no-repeat center #fff;
+}
+.cns_locali thead tr td{
+    border-color:#706569;
+}
+.pag ul li a, .pag ul li{
+    color:#EAD4A3;
+}
+.tda span, .ldmbox p.tda span{
+    color:#D4343C;
+}
+.a_box .title a,.a_box .title{
+    color:#6b5d61;
+}
+footer .left{
+    background:#494043;
+}
+.f_fb{
+    background:url('../img/fb_red.png')no-repeat center #BCBCBC;
+}
+.f_odno{
+    background:url('../img/odno_red.png')no-repeat center #BCBCBC;
+}
+.f_vk{
+    background:url('../img/vk_red.png')no-repeat center #BCBCBC;
+}
+.f_twitter{
+    background:url('../img/twitter_red.png')no-repeat center #BCBCBC;
+}
+.f_rss{
+    background:url('../img/rss_red.png')no-repeat center #BCBCBC;
+}
+.f_gplus{
+    background:url('../img/gplus_red.png')no-repeat center #BCBCBC;
+}
+footer .f_menu {
+    background: #393335;
+}
+.m_criteria{
+    border-color: #494043;
+}
+.calendar_slider table thead tr td {
+    border: 1px solid #78583f
+}

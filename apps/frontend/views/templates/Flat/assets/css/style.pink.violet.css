@@ -29,13 +29,20 @@ ul.culture li .right .box p,ul.culture li .right .box p a{
     color:#434584;
 }
 .dop .top {
-    border-bottom: 4px solid #f03081;
+    border-bottom: 4px solid #4A4C88;
 } 
+#firechat.dop .content {
+    border: 1px solid #f1bfd4;
+}
+article .sub_list ul li{
+    background: url('../img/arcticle_li_green.png') no-repeat left 4px;
+}
 
+.home_chat .pct{
+    background: url('../img/chat_dots_green.png') no-repeat 8px center;
+}
 
-
-
-.l_box, .lang p, .chat_b, header .cont_form .prp a,  .mini_header .m_lang li a, .form.green .ftb, .stat_info span:last-child, .search_li li p span, .contact_l .prp a, .contact_r .prp a {
+.lang p, .chat_b, header .cont_form .prp a,  .mini_header .m_lang li a, .form.green .ftb, .stat_info span:last-child, .search_li li p span, .contact_l .prp a, .contact_r .prp a {
     color: #F15295;
 } 
 footer .search input[type=submit]{
@@ -43,10 +50,15 @@ footer .search input[type=submit]{
     border-color:#B9C66A;
 }
 
-.l_box, table.plc > tbody > tr > td:first-child {
+table.plc > tbody > tr > td:first-child,header .cont_form .prp {
     border-color: #F15295;
 } 
-
+@media only screen and (max-width: 767px){
+    .l_box {
+        color: #F15295;
+        border-color: #F15295;
+    }
+}
 .menu_block, .cont_form input[type="submit"], .mini_header .content, .page_top_content .row2 .content, .green input[type=submit], .dop .top, .ldmbox input[type=submit] {
     background: #F15295;
 } 
@@ -173,7 +185,7 @@ table.taxe thead tr td{
     border: 1px solid #4A4C85;
 }
 .prefooter .row1_l{
-    background: url('../img/foter_an.png')no-repeat right bottom #4B4D86;
+    background: url('../img/foter_an_pink.png')no-repeat right bottom #4B4D86;
 }
 .prefooter .row1_r .f_title{
     color:#BAC66E;
@@ -190,14 +202,59 @@ table.taxe thead tr td{
 .prefooter .row1_l .data {
     background: #F45097;
 }
-
-.l_box{
-    border-color: #fff;
-    color:#fff;
-}
-.a_box .title a{
+.a_box .title a,.a_box .title{
     color:#4A4C88;
 }
 .a_box p.data, .p_data{
     background-color: #B9C66C;
+}
+.contact_l .prp a{
+    background: url('../img/phone_book_pink.png')no-repeat left center;
+}
+.contact_r .prp a{
+    background: url('../img/bus_pink.png')no-repeat left top;
+}
+.left_block .chat .mn{
+    background:url('../img/chat_man_pink.png') no-repeat center;
+    background-size: 100%;
+}
+.sitemap > ul > li > a{
+    background: url('../img/f_li_pink.png')no-repeat left 4px;
+}
+.sitemap > ul > li > ul > li > a{
+    background: url('../img/s_li_pink.png')no-repeat left 4px;
+}
+.dop .right .status.on {
+    background: url('../img/chat_dots_pink.png') no-repeat left center;
+}
+.dop .right .buttons button.firechat-hide{
+    background:url('../img/save_pink.png')no-repeat center #fff;
+}
+.dop .right .buttons button.firechat-close{
+    background:url('../img/close_pink.png')no-repeat center #fff;
+}
+.dop .right .buttons button.firechat-show{
+    background:url('../img/unsave_pink.png')no-repeat center #fff;
+}
+.urg thead tr {
+    background: #4a4c88;
+}
+.urg tbody tr td:first-child{
+    background: url('../img/g_phone_pink.png') no-repeat left 30px;
+}
+.bgr .info > ul > li .right.list:before {
+    content: url('../img/f_li_pink.png');
+}
+.cns_locali thead tr td{
+    color:#4A4C88;
+    border-color: #4A4C88;
+}
+.m_criteria{
+    border-color:#4A4C88;
+}
+.calendar_slider table thead tr td {
+    border: 1px solid #78583f
+}
+.adv{
+    background-color:#fef2f7;
 }

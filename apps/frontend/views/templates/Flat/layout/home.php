@@ -20,10 +20,8 @@
         <?php } ?>
 
         <link href="<?= res('assets/css/jquery.bxslider.css'); ?>" rel="stylesheet" />
-        <link href="<?= res('assets/js/square/red.css'); ?>" rel="stylesheet">
         <link rel="stylesheet" href="<?= res('assets/css/normalize.css'); ?>">
         <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">
-        <link rel="stylesheet" href="<?= res('assets/css/jquery.selectBoxIt.css'); ?>">
 
         <?php Template::pullCurrentSchema(); ?>
 

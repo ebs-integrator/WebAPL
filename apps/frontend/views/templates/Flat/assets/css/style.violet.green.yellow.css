@@ -1,0 +1,192 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 20, 2014, 7:00:49 PM
+    Author     : AlionaL
+*/
+
+footer .left {
+    background: #472347;
+} 
+
+
+footer .f_menu {
+    background: #401C40;
+} 
+
+
+footer .copy {
+    color: #755776;
+} 
+
+
+footer .copy a {
+    color: #914E60;
+} 
+
+
+.lang p {
+    background: #9cf1de;
+} 
+
+
+.contact a.contact_us, footer .right p.y_info {
+    color: #6DCAB5;
+} 
+
+
+
+
+.sec_span, h1, .attention span, nav p, ul.culture li .right .box p,ul.culture li .right .box p a, .city_box .title, .form .ftb, .compl_list li a .compl_title, .name, .sort_b .selectboxit-container span,.selectboxit-container .selectboxit-options a, .calendar_slider table thead tr:first-child td, .calendar_slider table thead tr td, .com_box .title, .cns_locali thead tr td, .sec_details .sec_name, .secretar span, table.plc > tbody > tr > td > a, .adv, .s_title, .det_news, .search_t span, .search_p span, .cda ul li .left a, ul.vice li .name, .bgr .info > ul > li .left {
+    color: #472347;
+} 
+
+section .search input[type=submit] {
+    background: #472347;
+} 
+
+.dop .top {
+    border-bottom: 4px solid #472347;
+} 
+
+
+
+
+.lang p, .chat_b, header .cont_form .prp a,.mini_header .m_lang li a, .form.green .ftb, .stat_info span:last-child, .search_li li p span, .contact_l .prp a, .contact_r .prp a {
+    color: #472347;
+} 
+
+table.plc > tbody > tr > td:first-child {
+    border-color: #472347;
+} 
+
+.menu_block, .cont_form input[type="submit"], .mini_header .content, .page_top_content .row2 .content, .green input[type=submit], .dop .top, .ldmbox input[type=submit] {
+    background: #472347;
+} 
+
+.contact_l .prp, .contact_r .prp {
+    border: 2px solid #472347;
+} 
+
+ul.a_n li a span {
+    background-color: #472347;
+} 
+
+
+table.taxe thead tr, table.taxe thead tr td {
+    border: 1px solid #968196;
+} 
+
+
+
+.dop .top hr {
+    background: #af82af;
+} 
+
+
+
+.compl_list li a span, .a_box p.data,.p_data {
+    background-color: #E16C5A;
+} 
+
+.left_block .chat .green, .home_chat p {
+    color: #E16C5A;
+} 
+
+.home_chat {
+    border: 2px solid #E16C5A;
+} 
+
+
+
+.left_block ul.menu > li ul li a, .left_block ul.menu li.active a, .ag_line p,.ag_line span, .ldm_li b {
+    color: #5BB29E;
+} 
+
+.ag_line span {
+    border: 2px solid #5BB29E;
+} 
+
+
+.left_block .chat .violet, .home_chat p span {
+    color: #389c85;
+} 
+
+
+
+.n_alert .cntn p {
+    color: #c76502;
+} 
+
+.n_alert .n_info .n_data {
+    background: #c76502;
+} 
+
+
+footer .newsletter_subscribe_form input[type=submit] {
+    border: 2px solid #EEA459;
+} 
+
+footer .newsletter_subscribe_form input[type=submit], .attention p.title, table.taxe thead tr td, .ath p, .subt {
+    color: #EEA459;
+} 
+
+.search_s input[type=submit], .snd_sbm {
+    background: #EEA459;
+} 
+
+
+article .categ_title a, table.orar thead tr:first-child, .clu_nume {
+    color: #AE626F;
+} 
+
+.l_a li a span {
+    background-color: #AE626F;
+} 
+
+.ldmbox .data p {
+    background: #AE626F;
+} 
+
+
+p.form_title, ul.faq li a span {
+    color: #ca5f71;
+} 
+
+article .categ_title a:hover, .form .content input[type=submit], .video_d {
+    background: #ca5f71;
+} 
+
+
+.bgr .info > ul > li .right.list:before {
+    content: url('../img/f_li_vgy.png');
+}
+.a_box .title a,table.atz tr td:nth-child(2) {
+    color: #008d74;/*inchis*/
+}
+.pag ul li a, .pag ul li{
+    color:#AD626F;
+}
+.av.green p span{
+    color:#dfdfdf;/*Alerta*/
+}
+.calendar_slider table thead tr td {
+    border: 1px solid #78583f
+}
+.adv{
+    background-color:#dfgfdf;/*info de la sondaje*/
+    border-color:#fgfgfg;
+}
+@media only screen and (max-width: 767px){
+    .l_box {
+        color: #472347;
+        border-color: #472347;
+    }
+}
+footer .search input[type=submit]{
+    color:#00bd9c;
+    border-color:#00bd9c;
+}

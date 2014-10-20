@@ -8,10 +8,10 @@
 
         <div class="right" >
             <div class="buttons">
-                <button class="firechat-hide"><img src="<?= res('assets/img/save.png'); ?>"></button>
-                <button class="firechat-show" style="display: none;"><img src="<?= res('assets/img/unsave.png'); ?>"></button>
+                <button class="firechat-hide"></button>
+                <button class="firechat-show" style="display: none;"></button>
 
-                <button class="firechat-close"><img src="<?= res('assets/img/close.png'); ?>"></button>
+                <button class="firechat-close"></button>
             </div>
         </div>
         <div class="right firechat-name" style="display:<?= $session_exist ? 'block' : 'none'; ?>;">

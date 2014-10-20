@@ -1,40 +1,40 @@
 
 @font-face {
     font-family: 'open_sansbold';
-    src: url("<?= res('assets/font/opensans-bold-webfont.eot'); ?>");
-    src: url("<?= res('assets/font/opensans-bold-webfont.eot?#iefix'); ?>") format('embedded-opentype'),
-        url("<?= res('assets/font/opensans-bold-webfont.woff'); ?>") format('woff'),
-        url("<?= res('assets/font/opensans-bold-webfont.ttf'); ?>") format('truetype');
+    src: url("../font/opensans-bold-webfont.eot");
+    src: url("../font/opensans-bold-webfont.eot?#iefix") format('embedded-opentype'),
+        url("../font/opensans-bold-webfont.woff") format('woff'),
+        url("../font/opensans-bold-webfont.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'open_sansregular';
-    src: url("<?= res('assets/font/opensans-regular-webfont.eot'); ?>");
-    src: url("<?= res('assets/font/opensans-regular-webfont.eot?#iefix'); ?>") format('embedded-opentype'),
-        url("<?= res('assets/font/opensans-regular-webfont.woff'); ?>") format('woff'),
-        url("<?= res('assets/font/opensans-regular-webfont.ttf'); ?>") format('truetype');
+    src: url("../font/opensans-regular-webfont.eot");
+    src: url("../font/opensans-regular-webfont.eot?#iefix") format('embedded-opentype'),
+        url("../font/opensans-regular-webfont.woff") format('woff'),
+        url("../font/opensans-regular-webfont.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'open_sanssemibold';
-    src: url("<?= res('assets/font/opensans-semibold-webfont.eot'); ?>");
-    src: url("<?= res('assets/font/opensans-semibold-webfont.eot?#iefix'); ?>") format('embedded-opentype'),
-        url("<?= res('assets/font/opensans-semibold-webfont.woff'); ?>") format('woff'),
-        url("<?= res('assets/font/opensans-semibold-webfont.ttf'); ?>") format('truetype');
+    src: url("../font/opensans-semibold-webfont.eot");
+    src: url("../font/opensans-semibold-webfont.eot?#iefix") format('embedded-opentype'),
+        url("../font/opensans-semibold-webfont.woff") format('woff'),
+        url("../font/opensans-semibold-webfont.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'open_sanssemibold_italic';
-    src: url("<?= res('assets/font/opensans-semibolditalic-webfont.eot'); ?>");
-    src: url("<?= res('assets/font/opensans-semibolditalic-webfont.eot?#iefix'); ?>") format('embedded-opentype'),
-        url("<?= res('assets/font/opensans-semibolditalic-webfont.woff'); ?>") format('woff'),
-        url("<?= res('assets/font/opensans-semibolditalic-webfont.ttf'); ?>") format('truetype');
+    src: url("../font/opensans-semibolditalic-webfont.eot");
+    src: url("../font/opensans-semibolditalic-webfont.eot?#iefix") format('embedded-opentype'),
+        url("../font/opensans-semibolditalic-webfont.woff") format('woff'),
+        url("../font/opensans-semibolditalic-webfont.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
 

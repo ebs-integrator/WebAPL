@@ -598,7 +598,7 @@ header .contact .cont .cont_form ul li p span,header .contact .cont .cont_form u
     border:1px solid #737373;
     border-left:0px;
     position: fixed;
-    z-index: 99999;
+    z-index: 999;
     -webkit-box-shadow: -2px 3px 16px 0px rgba(190, 190, 190, 0.75);
     -moz-box-shadow:    -2px 3px 16px 0px rgba(190, 190, 190, 0.75);
     box-shadow:         -2px 3px 16px 0px rgba(190, 190, 190, 0.75);
@@ -1659,7 +1659,7 @@ section .wrap p.sub_title_s{
     width: 30px;
     height: 30px;
     text-indent: -9999px;
-    z-index: 9999;
+    z-index: 999;
 }
 .gal .bx-wrapper .bx-prev ,.slider .bx-wrapper .bx-prev{
     left: 18px;
@@ -1969,8 +1969,14 @@ section > .wrap >  .left.contact_r{
 .ccc > .chat > a{
     display:block;
 }
-.left .chat img.mn{
-    float:left;
+.left .chat .mn{
+     float: left;
+    margin-top:6px;
+    margin-right:5px;
+    background:url('../img/chat_man.png') no-repeat center;
+    width:44px;
+    height:44px;
+    background-size: 100%;
 }
 .left .chat .chat_dot{
     width:18px;
@@ -3645,10 +3651,17 @@ div.fb-like.fb_iframe_widget{
 .dop .right .buttons button{
     height:25px;
     width:25px;
-    background:#673167;
     margin-left:-2px;
 }
-
+.dop .right .buttons button.firechat-hide{
+    background:url('../img/save.png')no-repeat center #673167;
+}
+.dop .right .buttons button.firechat-close{
+    background:url('../img/close.png')no-repeat center #673167;
+}
+.dop .right .buttons button.firechat-show{
+    background:url('../img/unsave.png')no-repeat center #673167;
+}
 .dop .right .buttons button img {
     margin-top:-4px;
 }

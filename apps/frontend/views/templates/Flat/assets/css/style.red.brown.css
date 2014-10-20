@@ -1,0 +1,292 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 20, 2014, 5:13:05 PM
+    Author     : AlionaL
+*/
+
+footer .copy {
+    color: #82898F;
+} 
+
+
+footer .copy a {
+    color: #A1BE90;
+} 
+
+
+.lang p {
+    background: #fff;
+} 
+
+
+.contact a.contact_us, footer .right p.y_info {
+    color: #b6e8a6;
+} 
+
+
+
+
+.sec_span, h1, .attention span, nav p, ul.culture li .right .box p,ul.culture li .right .box p a, .city_box .title, .form .ftb, .compl_list li a .compl_title, .name, .sort_b .selectboxit-container span,.selectboxit-container .selectboxit-options a, .calendar_slider table thead tr:first-child td, .calendar_slider table thead tr td, .com_box .title, .cns_locali thead tr td, .sec_details .sec_name, .secretar span, table.plc > tbody > tr > td > a, .adv, .s_title, .det_news, .search_t span, .search_p span, .cda ul li .left a, ul.vice li .name, .bgr .info > ul > li .left {
+    color: #921e29;
+} 
+
+section .search input[type=submit] {
+    background: #921e29;
+} 
+
+.dop .top {
+    border-bottom: 4px solid #921e29;
+} 
+
+
+
+
+.lang p, .chat_b, header .cont_form .prp a, .mini_header .m_lang li a, .form.green .ftb, .stat_info span:last-child, .search_li li p span, .contact_l .prp a, .contact_r .prp a {
+    color: #CF5560;
+} 
+
+table.plc > tbody > tr > td:first-child {
+    border-color: #CF5560;
+} 
+
+.menu_block, .cont_form input[type="submit"], .mini_header .content, .page_top_content .row2 .content, .green input[type=submit], .dop .top, .ldmbox input[type=submit] {
+    background: #CF5560;
+} 
+
+.contact_l .prp, .contact_r .prp {
+    border: 2px solid #CF5560;
+} 
+
+ul.a_n li a span {
+    background-color: #CF5560;
+} 
+
+
+.dop .top hr {
+    background: #eb4e5c;
+} 
+
+
+
+.compl_list li a span, .a_box p.data,.p_data {
+    background-color: #A08E81;
+} 
+
+.left_block .chat .green{
+    color: #A08E81;
+} 
+
+.home_chat {
+    border: 2px solid #A08E81;
+} 
+
+
+
+.left_block ul.menu > li ul li a, .left_block ul.menu li.active a, .ag_line p,.ag_line span, .ldm_li b {
+    color: #CD5860;
+} 
+
+.ag_line span {
+    border: 2px solid #CD5860;
+} 
+
+
+.left_block .chat .violet {
+    color: #be565d;
+} 
+
+
+
+.n_alert .cntn p {
+    color: #78583f;
+} 
+
+.n_alert .n_info .n_data {
+    background: #78583f;
+} 
+
+
+footer .newsletter_subscribe_form input[type=submit] {
+    border: 2px solid #E5E1A4;
+} 
+
+footer .newsletter_subscribe_form input[type=submit], .attention p.title,  .ath p, .subt {
+    color: #E5E1A4;
+} 
+table.taxe thead tr td{
+    color:#c4bcb5;
+}
+table.taxe thead tr, table.taxe thead tr td {
+    border-color:#c4bcb5;
+}
+.search_s input[type=submit], .snd_sbm {
+    background: #E5E1A4;
+} 
+
+
+article .categ_title a, table.orar thead tr:first-child, .clu_nume {
+    color: #A28F80;
+} 
+
+.l_a li a span {
+    background-color: #A28F80;
+} 
+
+.ldmbox .data p {
+    background: #A28F80;
+} 
+
+
+table.taxe thead tr {
+    border-bottom: 2px solid #c4bcb5;
+} 
+
+
+p.form_title, ul.faq li a span {
+    color: #A28F80;
+} 
+
+article .categ_title a:hover, .form .content input[type=submit], .video_d {
+    background: #A28F80;
+} 
+
+
+.pag ul li a, .pag ul li{
+    color:#e6e656;
+}
+@media only screen and (max-width: 767px){
+    .l_box {
+        color: #CF5560;
+        border-color: #CF5560;
+    }
+}
+footer .search input[type=submit]{
+    color:#CEF5BC;
+    border-color:#CEF5BC;
+}
+footer .f_menu {
+    background: #444D54;
+}
+footer .left {
+    background: #505960;
+}
+.f_fb{
+    background:url('../img/fb_rb.png')no-repeat center #CF5560;
+}
+.f_odno{
+    background:url('../img/odno_rb.png')no-repeat center #CF5560;
+}
+.f_vk{
+    background:url('../img/vk_rb.png')no-repeat center #CF5560;
+}
+.f_twitter{
+    background:url('../img/twitter_rb.png')no-repeat center #CF5560;
+}
+.f_rss{
+    background:url('../img/rss_rb.png')no-repeat center #CF5560;
+}
+.f_gplus{
+    background:url('../img/gplus_rb.png')no-repeat center #CF5560;
+}
+.home_chat .pct {
+    background: url('../img/chat_dots_rb.png') no-repeat 8px center;
+}
+.top_el .home_chat, .home_chat{
+    border-color:#50595E;
+    background-color: #50595E;
+}
+.home_chat p ,.home_chat p span{
+    color:#fff;
+}
+.prefooter .row1_l {
+    background: url('../img/foter_an_rb.png')no-repeat right bottom #CF5560;
+}
+.prefooter .row1_l .data{
+    background-color:#e2e19e;
+    color:#CF5560;
+}
+.prefooter .row1_l p.f_title,.prefooter .row1_l p{
+    color:#fff;
+}
+article .sub_list ul li {
+    background: url('../img/article_li_rb.png') no-repeat left 5px;
+}
+.lang ul li:first-child {
+    background: #f7aeb5;
+}
+.lang ul li:nth-child(2) {
+    background: #CF5560;
+}
+.lang ul li:last-child {
+    background: #921e29;
+}
+.left_block .chat .mn {
+    background: url('../img/chat_man_rb.png') no-repeat center;
+}
+.contact_r .prp a {
+    background: url('../img/bus_rb.png')no-repeat left top;
+}
+.contact_l .prp a {
+    background: url('../img/phone_book_rb.png')no-repeat left center;
+}
+.sitemap > ul > li > a {
+    background: url('../img/f_li_rb.png')no-repeat left 4px;
+}
+.sitemap > ul > li > ul > li > a {
+    background: url('../img/s_li_rb.png')no-repeat left 4px;
+}
+header .cont_form .prp{
+    border-color:#CF5560;
+}
+.urg thead tr {
+    background: #78583f;
+}
+.urg tbody tr td:first-child {
+    background: url('../img/g_phone_rb.png') no-repeat left 30px;
+}
+.tda span, .ldmbox p.tda span{
+    color:#A1BE90;
+}
+.prefooter .row1_r p.f_title{
+    color:#D05660;
+}
+.prefooter .row1_r .data {
+    background: #4F585F;
+}
+.prefooter .row1_r a.f_artc {
+    color: #4F585F;
+}
+.bgr .info > ul > li .right.list:before {
+    content: url('../img/f_li_rb.png');
+}
+.a_box .title a,table.atz tr td:nth-child(2) {
+    color: #921e29;
+}
+.av.green p span{
+    color:#b6e8a6;
+}
+
+.dop .right .status.on {
+    background: url('../img/chat_dots_rb.png') no-repeat left center;
+}
+.dop .right .buttons button.firechat-hide{
+    background:url('../img/save_rb.png')no-repeat center #fff;
+}
+.dop .right .buttons button.firechat-close{
+    background:url('../img/close_rb.png')no-repeat center #fff;
+}
+.dop .right .buttons button.firechat-show{
+    background:url('../img/unsave_rb.png')no-repeat center #fff;
+}
+.calendar_slider table thead tr td {
+    border: 1px solid #78583f
+}
+.adv{
+    border-color:#9be0d4;
+    background-color:#f4fdfb;
+    color:#00a487;
+}
