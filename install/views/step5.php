@@ -1,6 +1,6 @@
 <h3>Admin account</h3>
 
-<p>bla bla bla bla bla bla bla blabla bla bla blabla bla bla blabla bla bla bla</p>
+<p>Introduceti datele administratorului</p>
 
 <form action="<?= url('install/checkadmin'); ?>" method="post">
 

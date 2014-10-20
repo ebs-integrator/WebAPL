@@ -291,7 +291,6 @@ class PageController extends BaseController {
         $xsdstring = $_SERVER['DOCUMENT_ROOT'] . "/import.xml";
 
 
-        die;
 
         $excel = new XML2003Parser($xsdstring);
 

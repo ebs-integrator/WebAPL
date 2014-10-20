@@ -17,12 +17,7 @@ class PostLang extends Eloquent {
             return $uri;
         }
 
-        $count = PostLang::whereRaw("uri like '{$uri}%' AND id <> ?", array($id))->count();
-        if ($count) {
-            return $uri . '-' . $count;
-        } else {
-            return $uri;
-        }
+        return ($uri ? $uri . '-' : '') . $id;
     }
 
 }

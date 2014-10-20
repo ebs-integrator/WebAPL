@@ -1,7 +1,7 @@
 <div>
     <div class="logo">
-        <?php if (isset($logo_home) && $logo_home) { ?>
-            <img src="<?= url($logo_home->path); ?>" title="<?= $logo_home->name; ?>" alt="<?= $logo_home->name; ?>">
+        <?php if (Files::extract('website_logo_' . Core\APL\Language::ext(), 1, 'path')) { ?>
+            <img src="<?= url(Files::extract('website_logo_' . Core\APL\Language::ext(), 1, 'path')); ?>" title="<?= Files::extract('website_logo_' . Core\APL\Language::ext(), 1, 'name'); ?>" alt="<?= Files::extract('website_logo_' . Core\APL\Language::ext(), 1, 'name'); ?>">
         <?php } ?>
     </div>
     <div class="menu">

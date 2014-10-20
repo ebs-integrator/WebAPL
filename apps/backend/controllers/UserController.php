@@ -38,6 +38,8 @@ class UserController extends BaseController {
         $user->password = Hash::make(Input::get('password'));
         $user->save();
 
+        Log::info('Create user: ' . Input::get('username'));
+
         return Illuminate\Support\Facades\Redirect::to('user/view/' . $user->id);
     }
 
@@ -74,6 +76,8 @@ class UserController extends BaseController {
         $id = Input::get('id');
         $roles = Input::get('roles');
 
+        Log::info('Change roles user#' . $id);
+
         UserRole::where('user_id', $id)->delete();
         if (is_array($roles)) {
             foreach ($roles as $role_id) {
@@ -90,6 +94,8 @@ class UserController extends BaseController {
     public function postSave() {
         User::onlyHas('user-edit');
 
+        Log::info('Change user ' . Input::get('username'));
+        
         $user = User::find(Input::get('id'));
         $user->username = Input::get('username');
         $user->email = Input::get('email');
@@ -107,6 +113,8 @@ class UserController extends BaseController {
             $user->password = Hash::make($password);
             $user->save();
         }
+        
+        Log::info('Change password #' . Input::get('id'));
 
         return [];
     }
@@ -118,6 +126,9 @@ class UserController extends BaseController {
         if ($user) {
             $user->delete();
             UserRole::where('user_id', $id)->delete();
+            
+            Log::info('Delete user #' . $id);
+            
             return \Illuminate\Support\Facades\Redirect::to('user');
         } else {
             throw new Exception("Undefined user #{$id}");

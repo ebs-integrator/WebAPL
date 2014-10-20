@@ -21,11 +21,12 @@
             <?php if (isset($phone_page) && $phone_page) { ?>
                 <div class="anp">
                     <a href="<?= Core\APL\Language::url('topost/' . $phone_page->id); ?>"><?= varlang('all-nr-phone'); ?></a>
-                </div>   
-                <div class="anp">
-                    <a href="<?= varlang('orar-link'); ?>"><?= varlang('orar-autobus'); ?></a>
-                </div>
+                </div>  
             <?php } ?>
+            <div class="anp">
+                <a href="<?= varlang('orar-link'); ?>"><?= varlang('orar-autobus'); ?></a>
+            </div>
+            <div class='clearfix'></div>
             <p class="title"><?= varlang('viziteaza'); ?></p>
             <div class="d_hr"></div>
             <div class="left" onclick="window.open('https://www.google.ro/maps/dir//' + loc_lat + ',' + loc_long + '/@' + loc_lat + ',' + loc_long + ',14z');">

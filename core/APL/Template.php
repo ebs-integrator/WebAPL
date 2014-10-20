@@ -434,8 +434,10 @@ class Template {
      * Get Page title
      * @return string
      */
-    public static function getPageTitle() {
-        return static::$page_title;
+    public static function getPageTitle($page = null) {
+        $title = (isset($page['is_home_page']) && $page['is_home_page'] ? '' : static::$page_title . ' :: ');
+        $title_g = \SettingsModel::one('sitename_' . Language::ext());
+        return $title . $title_g;
     }
 
     /*

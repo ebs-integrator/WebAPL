@@ -62,7 +62,9 @@
             }
         }
 
-        $("body").on('click', '.firechat-start-with', function() {
+        $("body").on('click', '.firechat-start-with', function(e) {
+            e.preventDefault();
+            
             if (current_person > 0)
                 return intick ? false : tickChat(7, 0);
 
@@ -70,13 +72,19 @@
             if (current_person != person) {
                 startChat(person);
             }
+            
+            return false;
         });
 
-        $("body").on("click", ".firechat-start", function() {
+        $("body").on("click", ".firechat-start", function(e) {
+            e.preventDefault();
+            
             if (current_person > 0)
                 return intick ? false : tickChat(7, 0);
 
             startChat(0);
+            
+            return false;
         });
 
         $("body").on("click", ".firechat-close", function() {

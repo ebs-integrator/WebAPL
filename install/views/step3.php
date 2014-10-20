@@ -1,6 +1,6 @@
 <h3>Baza de date</h3>
 
-<p>bla bla bla bla bla bla bla blabla bla bla blabla bla bla blabla bla bla bla</p>
+<p>Introduceti datele de conectare la baza de date</p>
 
 <form action="<?= url('install/checkdb'); ?>" method="post">
     

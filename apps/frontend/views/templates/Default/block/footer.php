@@ -2,7 +2,7 @@
     <div class="n_alert" id="alertbox" style="display: none;" data-alertid="<?= $alert_post->id; ?>">
         <div class='cntn'>
             <img src="<?= res('assets/img/alert.png'); ?>">
-            <p>alerte!</p>
+            <p><?= varlang('alerte'); ?></p>
             <a href='javascript:;' class="alertclose"></a>
         </div>
         <div class='n_info'>
@@ -13,7 +13,7 @@
         </div>
         <div class='n_footer'>
             <input id="f_1" type='checkbox'>
-            <label for='f_1'>Am facut cunoștință</label>
+            <label for='f_1'><?= varlang('confirm-alert'); ?></label>
         </div>
     </div>
 <?php } ?>

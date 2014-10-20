@@ -1,6 +1,6 @@
-<?php if (isset($logo_home_sm) && $logo_home_sm) { ?>
+<?php if (Files::extract('website_logo_sm_' . Core\APL\Language::ext(), 1, 'path')) { ?>
 <a href="<?= Language::url('/'); ?>">
-    <img src="<?= url($logo_home_sm->path); ?>" title="<?= $logo_home_sm->name; ?>" alt="<?= $logo_home_sm->name; ?>" class="logo">
+    <img src="<?= url(Files::extract('website_logo_sm_' . Core\APL\Language::ext(), 1, 'path')); ?>" title="<?= Files::extract('website_logo_sm_' . Core\APL\Language::ext(), 1, 'name'); ?>" alt="<?= Files::extract('website_logo_sm_' . Core\APL\Language::ext(), 1, 'name'); ?>" class="logo">
 </a>
 <?php } ?>
 <?php

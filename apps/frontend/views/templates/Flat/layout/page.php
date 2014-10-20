@@ -7,14 +7,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title><?= Core\APL\Template::getPageTitle(); ?></title>
+        <title><?= Core\APL\Template::getPageTitle(isset($page) ? $page : null); ?></title>
 
         <?php foreach (\Core\APL\Template::getMetas() as $metaName => $metaContent) { ?>
             <meta name="<?= $metaName; ?>" content="<?= $metaContent; ?>">
         <?php } ?>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <?php if (isset($favicon) && $favicon) { ?>
             <link rel="icon" href="<?= url($favicon->path); ?>" type="image/x-icon">
@@ -33,8 +32,8 @@
             var base_url = '<?= url(); ?>';
 
             var disqus_url = '<?= url(); ?>';
-            var disqus_shortname = 'aplkopceak';
-            var disqus_title = '<?= Core\APL\Template::getPageTitle(); ?>';
+            var disqus_shortname = '<?= SettingsModel::one('disqus_shortname'); ?>';
+            var disqus_title = '<?= Core\APL\Template::getPageTitle(isset($page) ? $page : null); ?>';
             var disqus_config = function() {
                 this.language = "<?= Core\APL\Language::ext(); ?>";
             };
@@ -52,11 +51,11 @@
 
         <div class="page_header">
             <div class="page_top_header">
-                <img class="top_back" src="<?= res('assets/img/top1.png'); ?>">
+                <img class="top_back" src="<?= (isset($super_parent['id']) && $bg_parent = Files::extract('page_bg', $super_parent['id'], 'path')) ? url($bg_parent) : res('assets/img/top1.png'); ?>">
                 <div class="page_top_content">
                     <div class="row1">
                         <div class="left">
-                            <a href="<?= Language::url('/'); ?>" class="l_box">primăria strășeni</a>
+                            <a href="<?= Language::url('/'); ?>" class="l_box"><?=SettingsModel::one('sitename_' . Language::ext());?></a>
 
                             <div class="mini_header">
                                 <div class="mh_button"></div>
@@ -82,7 +81,7 @@
                                     </ul>
                                     <ul class="m_lang">
                                         <?php foreach (Core\APL\Language::getList() as $lang) { ?>
-                                        <li><a href="<?= url('language/' . $lang->ext . '/' . (isset($active_page_id) ? $active_page_id : '')); ?>"><?=$lang->ext;?></a></li>
+                                            <li><a href="<?= url('language/' . $lang->ext . '/' . (isset($active_page_id) ? $active_page_id : '')); ?>"><?= $lang->ext; ?></a></li>
                                         <?php } ?>
                                     </ul>
                                     <div class="m_footer">

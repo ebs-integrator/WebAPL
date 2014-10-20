@@ -21,6 +21,10 @@ class InstallController extends BaseController {
         $data['req']['mcrypt'] = extension_loaded('mcrypt');
         $data['req']['pdo'] = extension_loaded('pdo_mysql');
         $data['req']['rewrite'] = in_array('mod_rewrite', apache_get_modules());
+        $data['req']['wr_fr_storage'] = is_writable($_SERVER['DOCUMENT_ROOT'] . '/apps/frontend/storage/');
+        $data['req']['wr_bk_storage'] = is_writable($_SERVER['DOCUMENT_ROOT'] . '/apps/backend/storage/');
+        $data['req']['wr_upload'] = is_writable($_SERVER['DOCUMENT_ROOT'] . '/upload/');
+        $data['req']['wr_install'] = is_writable($_SERVER['DOCUMENT_ROOT'] . '/install/');
 
         $data['valid_step'] = true;
         foreach ($data['req'] as $valid) {
