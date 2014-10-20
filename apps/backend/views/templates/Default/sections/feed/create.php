@@ -6,8 +6,18 @@
 
     <h3><?= varlang('set-aditional-fields'); ?></h3>
 
+
+    <select id="feedFilds" class="form-control">
+        <option value="">---</option>
+        <?php foreach ($fields_groups as $group) { ?>
+            <option value="<?= $group->key; ?>"><?= $group->name; ?></option>
+        <?php } ?>
+    </select>
+
+    <br>
+    
     <?php foreach ($fields as $field) { ?>
-    <label><input type="checkbox" name="fields[]" value="<?= $field->id; ?>" /> <?= $field->title; ?></label><br>
+        <label class="col-lg-3"><input class="feedField" type="checkbox" data-groups="<?= $field->gkeys; ?>" name="fields[]" value="<?= $field->id; ?>" /> <?= $field->title; ?></label>
     <?php } ?>
 
     <input type="submit" class="btn btn-success pull-right"/>

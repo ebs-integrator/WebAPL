@@ -125,11 +125,11 @@ class XML2003Parser {
                 }
 
                 // get all cell and data attributes				
-                $cell_attrs = $cell->xpath('@ss:*');
-                $cell_attrs_arr = $this->getAttributes($cell_attrs);
-                $data_attrs = $cell->Data->xpath('@ss:*');
-                $data_attrs_arr = $this->getAttributes($data_attrs);
-                $cell_datatype = $data_attrs_arr['Type'];
+//                $cell_attrs = $cell->xpath('@ss:*');
+//                $cell_attrs_arr = $this->getAttributes($cell_attrs);
+//                $data_attrs = $cell->Data->xpath('@ss:*');
+//                $data_attrs_arr = $this->getAttributes($data_attrs);
+//                $cell_datatype = $data_attrs_arr['Type'];
 
                 // extract data from cell
                 $cell_value = (string) $cell->Data;
@@ -142,7 +142,7 @@ class XML2003Parser {
                 array_push($row_arr, array(
                     'row_num' => $row_num,
                     'col_num' => $col_num,
-                    'datatype' => $cell_datatype,
+                    //'datatype' => $cell_datatype,
                     'value' => $cell_value,
                         //'cell_attrs' => $cell_attrs_arr,
                         //'data_attrs' => $data_attrs_arr

@@ -31,6 +31,7 @@ class FeedController extends BaseController {
     public function getCreate() {
         User::onlyHas('feed-create');
 
+        $this->data['fields_groups'] = FeedFieldGroup::all();
         $this->data['fields'] = FeedField::all();
 
         $this->layout->content = View::make('sections.feed.create', $this->data);

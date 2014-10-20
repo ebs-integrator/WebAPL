@@ -26,6 +26,7 @@ class ExtensionController extends \BaseController {
 
         Log::listen(function($level, $message, $context) {
                     $user = Auth::user();
+                    DB::table('apl_logs')->where('event_date', '<', date("Y-m-d H:i:s", time() - 172800))->delete();
                     DB::table('apl_logs')->insert(array(
                         'level' => $level,
                         'message' => $message,

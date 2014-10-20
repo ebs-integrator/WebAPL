@@ -1,0 +1,4083 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>RePack by Diakov</Author>
+  <LastAuthor>RePack by Diakov</LastAuthor>
+  <Created>2014-10-20T16:57:38Z</Created>
+  <Company>diakov.net</Company>
+  <Version>15.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>7755</WindowHeight>
+  <WindowWidth>20490</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s64" ss:Name="Hyperlink">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#0563C1"
+    ss:Underline="Single"/>
+  </Style>
+  <Style ss:ID="s62">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s65" ss:Parent="s64">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Underline="Single"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s66">
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="11"/>
+   <Interior/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="3" ss:ExpandedRowCount="800" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Saitul oficial</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Веб-сайт</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">300</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Website</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">400</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Pagina de administrare a conținutului</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Интерфейс управле́ния контентом</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">301</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Content management interface</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">401</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Meniu</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Меню</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">302</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Menu</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">402</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Pagini</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Страницы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">303</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Pages</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">403</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Machetă amplasare</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Макет</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">304</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Layout</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">404</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Discută</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">13</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Обсудите</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">305</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Discuss</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">405</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Instrumente de socializare</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">16</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Социальные инструменты</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">306</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Socialization tools</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">406</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Facebook</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">19</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Facebook</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">307</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Facebook</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">407</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Facebook</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">21</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://www.facebook.com/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">22</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://www.facebook.com/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">308</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://www.facebook.com/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">408</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://www.facebook.com/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">24</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Odnoklassniki</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Odnoklassniki</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">309</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Odnoklassniki</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">409</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Odnoklassniki</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">310</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">410</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">http://www.odnoklassniki.ru/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">31</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">http://www.odnoklassniki.ru/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">311</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">http://www.odnoklassniki.ru/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">411</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">http://www.odnoklassniki.ru/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">33</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Vkontakte</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">34</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Vkontakte</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">312</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Vkontakte</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">412</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Vkontakte</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">36</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://vk.com/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">37</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://vk.com/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">313</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://vk.com/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">413</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://vk.com/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">39</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Twitter</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Twitter</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">314</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Twitter</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">414</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Twitter</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">42</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://twitter.com/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">43</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://twitter.com/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">315</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://twitter.com/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">415</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://twitter.com/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">45</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Google+</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">46</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Google+</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">316</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Google+</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">416</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Google+</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">48</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://plus.google.com/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">49</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://plus.google.com/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">317</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://plus.google.com/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">417</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://plus.google.com/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">51</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Rss</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">52</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Rss</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">318</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Rss</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">418</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Rss</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">54</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">/ro/rss</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">55</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">/ru/rss</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">319</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">/en/rss</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">419</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">/bg/rss</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">57</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Online</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">58</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Oн-лайн</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">320</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Online</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">420</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">60</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Offline</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">61</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Oф-лайн</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">321</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Offline</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">421</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">63</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">(0-2xx) xx-xx-xx</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">64</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">(0-2xx) xx-xx-xx</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">322</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">(0-2xx) xx-xx-xx</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">422</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">(0-2xx) xx-xx-xx</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">66</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Căutare prin site</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">67</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Поиск</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">323</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Searching</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">423</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">72</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Citiți mai multe</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">73</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Подробнее </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">324</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Read more</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">424</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">75</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">despre licențiere CC, sau</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">76</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">прочитаете как </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">325</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">about how to</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">425</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">78</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">utilizați licența</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">79</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">использывать лицензию</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">326</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">use the license</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">426</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">81</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://www.google.md/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">82</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://www.google.md/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">327</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://www.google.md/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">427</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">https://www.google.md/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">84</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">pentru propriul dvs. material.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">85</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">для вашего собственного материала.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">328</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">for your own material.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">428</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">87</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Trimite</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">88</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Отправить</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">329</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Send</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">429</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">90</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Contact</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">91</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Контакт</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">330</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Contact</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">430</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">93</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Contactează-ne</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">94</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Cвяжитесь с нами</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">331</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Contact us</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">431</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">96</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Contacte</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">97</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Контакты</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">332</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Contacts</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">432</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">99</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Telefon Anticameră</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Телефон Приёмная</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">333</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Outer office telephone</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">433</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">102</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">(0-2xx) xx-xx-xx</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">103</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">(0-2xx) xx-xx-xx</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">334</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">(0-2xx) xx-xx-xx</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">434</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">(0-2xx) xx-xx-xx</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">105</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Email</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">106</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Емейл</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">335</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Email</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">435</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">108</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s65" ss:HRef="mailto:info@xxxxxxxx.md"><Data ss:Type="String">info@xxxxxxxx.md</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">109</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s65" ss:HRef="mailto:info@xxxxxxxxxxx.md"><Data
+      ss:Type="String">info@xxxxxxxxxxx.md</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">336</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s65" ss:HRef="mailto:info@xxxxxxxxxxxx.md"><Data
+      ss:Type="String">info@xxxxxxxxxxxx.md</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">436</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s65" ss:HRef="mailto:info@xxxxxxxxxx.md"><Data
+      ss:Type="String">info@xxxxxxxxxx.md</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">111</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Relații cu publicul</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">112</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Cвязи с общественностью</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">337</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Public relations</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">437</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">114</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">(0-2xx) xx-xx-xx</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">115</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">(0-2xx) xx-xx-xx</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">338</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">(0-2xx) xx-xx-xx</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">438</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">(0-2xx) xx-xx-xx</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">117</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Fax</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">118</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Факс</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">339</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Fax</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">439</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">120</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">(0-2xx) xx-xx-xx</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">121</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">(0-2xx) xx-xx-xx</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">340</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">(0-2xx) xx-xx-xx</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">440</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">(0-2xx) xx-xx-xx</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">123</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Mai multe date de contact</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">124</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Другие контактные данные</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">341</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">More contact details</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">441</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">126</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Orarul rutelor de autobus</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">127</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Расписание рейсов автобусов</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">342</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Bus routes schedule</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">442</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">129</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40">Adresa primăriei Orașului XXXXXX</ss:Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">130</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Адрес Примэрии города XXXXXX</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">343</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Address of XXXXXX Mayoralty</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">443</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">132</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40">Strada xxxxxxxxx</ss:Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">133</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Улица xxxxxxxxxxxxxx</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">344</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">xxxxxxxxx street, xxxxxxxxx</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">444</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">135</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Orașul XXXXXX</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">136</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Город XXXXXX</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">345</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">XXXXXX town</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">445</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">138</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Formular de contact</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">139</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Форма обратной связи</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">346</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Contact form</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">446</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">141</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Scrieți-ne direct</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">142</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Напишите нам непосредственно</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">347</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Write to us directly</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">447</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">144</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Mesajul dumneavoastră a fost expediat cu succes</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">145</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Ваше сообщение было успешно отправлено</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">348</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Your message has been successfully sent</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">448</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">147</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Nume Prenume</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">148</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Фамилия Имя</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">349</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Name First name</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">449</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">150</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Mesaj</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">151</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Сообщение</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">350</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Message</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">450</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">153</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">http://www.autogara.md/orar/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">154</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">http://www.autogara.md/orar/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">351</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">http://www.autogara.md/orar/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">451</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">http://www.autogara.md/orar/</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">156</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Pagini</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">157</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Страницы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">352</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Pages</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">452</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">159</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Statut</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">160</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Статус</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">353</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Statut</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">453</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">162</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Primim oferte</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">163</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Прием предложений</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">354</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Receiving an offer</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">454</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">165</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Ofertă expirată</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">166</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Предложение истекло</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">355</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Offer has expired</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">455</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">168</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Documente</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">169</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Документы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">356</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Documents</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">456</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">171</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Nu sunt articole</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">172</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Запрашиваемая статья не найдена</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">357</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">No articles found</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">457</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">174</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Eroare</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">175</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Ошибка</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">358</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Error</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">458</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">177</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Ne pare rău</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">178</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Нам жаль</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">359</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">We're sorry</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">459</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">180</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">pagina solicitată, nu a putut fi găsită!</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">181</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">запрашиваемая страница не найдена!</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">360</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">no pages found!</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">460</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">183</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">link</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">184</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">ссылка</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">361</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">link</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">461</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">186</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Actualizat</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">187</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Oбновленный</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">362</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Updated</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">462</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">189</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Data</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">190</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Число</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">363</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Date</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">463</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">192</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Ora</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">193</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Время</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">364</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Time</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">464</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">195</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Locația</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">196</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Место</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">365</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Location</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">465</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">198</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Denumire proiect</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">199</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Название проекта</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">366</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Project name</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">466</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">201</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">proiect</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">202</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">проект</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">367</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">project</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">467</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">204</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Data de start și finalizare</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">205</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Даты начала и завершения</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">368</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Start and completion date</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">468</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">207</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Domeniu</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">208</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Область</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">369</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Field</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">469</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">210</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Stadiul de realizare proiect</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">211</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Стадия реализации проекта</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">370</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Stage of project implementation</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">470</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">213</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Valoarea proiectului</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">214</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Cтоимость проекта</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">371</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Project value</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">471</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">216</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Parteneri</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">217</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Партнёры</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">372</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Partners</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">472</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">219</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Relevanța și impactul regional al proiectului</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">220</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Региональная значимость и влияние проекта</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">373</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Regional relevance and impact of the project</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">473</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">222</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Activități principale</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">223</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Основные виды деятельности</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">374</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Main activities</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">474</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">225</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Produsele proiectului	</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">226</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Продукты проекта</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">375</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Project output</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">475</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">228</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Rezultatele proiectului</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">229</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Результаты проекта</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">376</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Project results</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">476</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">231</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Obiectivele proiectului</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">232</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Задачи проекта</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">377</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Project objectives</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">477</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">234</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Valoarea totală a proiectului</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">235</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Общая стоимость проекта</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">378</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Total value of the project</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">478</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">237</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Fișiere</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">238</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Файлы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">379</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Files</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">479</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">240</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Telefon</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">241</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Телефон</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">380</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Telephone</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">480</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">243</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Serviciu</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">244</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Услуга</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">381</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Service</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">481</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">246</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Termen limita de aplicare </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">247</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Срок подачи заявок</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">382</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Application deadline</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">482</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">249</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Toate ședințele</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">250</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Все заседания</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">383</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">All sessions</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">483</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">252</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">arhivă</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">253</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">архив</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">384</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">archive</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">484</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">255</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">chat-online</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">256</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">онлайн-чат</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">385</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">online chat</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">485</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">258</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Cum ne găsiți</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">259</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Как нас найти </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">386</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">How to find us</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">486</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">261</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Datele de contact ale primariei</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">262</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Контактная информация о примэрии</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">387</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Contacts of mayoralty</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">487</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">264</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">adresa</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">265</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">адрес</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">388</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">address</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">488</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">267</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Vorbeste direct cu un reprezentant al primăriei</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">268</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Поговорите непосредственно с представителем примэрии</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">389</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Talk directly to a representative of the mayoralty</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">489</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">270</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Discută on-line</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">271</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Общайтесь в режиме онлайн</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">390</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Online chat</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">490</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">273</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Anunțuri</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">274</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Объявления</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">391</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Announcements</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">491</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">276</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Raportează un abuz</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">277</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Информируйте о нарушении</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">392</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Report a fraud</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">492</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">279</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Scrieți-ne un mesaj</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">280</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Оставьте нам сообщение</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">393</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Write us a message</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">493</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">282</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Adresa Poștală / Telefon</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">283</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Почтовый адрес / </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">394</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Mailing address / Telephone</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">494</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">285</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Subiect</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">286</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Тема</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">395</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Subject</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">495</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">288</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Cod de verificare</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">289</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Код подтверждения</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">396</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Verification Code</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">496</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">291</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Caută</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">292</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Поиск</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">397</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Search</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">497</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">294</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Caută modelul / formularul</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">295</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Поиск образца / бланка</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">398</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Search for sample / form</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">498</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">297</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">datele de Contact ale primăriei</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">298</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Контактные данные примэрии</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">399</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Contact details of the mayoralty</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">499</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">500</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Vizitează-ne</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">501</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Как найти нас</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">502</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">How to reach us</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">503</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">504</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Module</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">505</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Модули</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">506</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Modules</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">507</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">508</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Calendar</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">509</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Календарь</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">510</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Calendar</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">511</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">512</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">lu</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">513</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">пн</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">514</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">m</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">515</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">516</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">ma</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">517</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">вт</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">518</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">t</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">519</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">520</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">mi</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">521</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">ср</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">522</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">w</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">523</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">524</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">jo</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">525</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">чт</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">526</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">th</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">527</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">528</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">vi</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">529</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">пт</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">530</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">f</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">531</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">532</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">sâ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">533</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">сб</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">534</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">sa</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">535</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">536</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">du</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">537</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">вс</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">538</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">s</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">539</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">540</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Discută on-line</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">541</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Общайтесь в режиме онлайн</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">542</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Online chat</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">543</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">544</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Funcționar</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">545</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Государственный служащий</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">546</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Public offical</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">547</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">548</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Discută on-line cu primarul</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">549</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Общайтесь с примаром в режиме онлайн</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">550</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Chst with the mayor online</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">551</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">552</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">CV </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">553</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Резюме</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">554</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">CV</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">555</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">556</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Încarcă CV</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">557</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Загрузка резюме</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">558</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Upload CV</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">559</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">560</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Buletin informativ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">561</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Информационный бюллетень</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">562</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Newsletter</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">563</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">564</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Abonează-te la buletinul informativ al primăriei</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">565</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Подписаться на информационный бюллетень примэрии</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">566</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Subscribe to the mayoralty newsletter</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">567</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">568</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Email-ul Dvs.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">569</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Электронная почта</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">570</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Email</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">571</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">572</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Persoane</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">573</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Человек</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">574</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Persons</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">575</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">576</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">ATENȚIE !</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">577</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">ВНИМАНИЕ!</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">578</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">WARNING!</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">579</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">580</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Pentru a solicita o audiență la unul din functionari, vă rugăm să completați formularul de cerere, iar noi vă vom comunica prin e-mail data și ora audienței programate.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">581</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Чтобы записаться на приём к государственному служащему,пожалуйста, заполните форму заявки, и мы сообщим по электронной почте дату и время запланированной встрече.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">582</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">To request an audience with one of the public officials, please complete the application form and we will communicate you via email the date and time of the scheduled audience.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">583</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">584</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Programează-te online pentru o audiență</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">585</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Онлайн регистрация на приём</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">586</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Online registration for an audience</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">587</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">588</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Apartenență politică, contacte</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">589</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Политическая принадлежность, контакты</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">590</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Political affiliation, contacts</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">591</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">592</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Sectorul</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">593</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Сектор</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">594</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">District</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">595</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">596</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Secretarul</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">597</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Секретарь</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">598</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Secretary</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">599</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">600</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Data nașterii</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">601</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Дата рождения</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">602</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Date of birth</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">603</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">604</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Starea civilă</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">605</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Гражданскоео состояние</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">606</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Civil status</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">607</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">608</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Studii</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">609</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Образование</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">610</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Education</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">611</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">612</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Activitate politică</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">613</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Политическая деятельность</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">614</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Political activity</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">615</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">616</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Date de contact</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">617</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Контактные данные</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">618</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Contact details</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">619</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">620</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Acte locale</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">621</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Ругистр местных  документов</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">622</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Local documents</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">623</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">624</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Caută</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">625</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Поиск</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">626</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Search</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">627</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">628</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Caută</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">629</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Поиск</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">630</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Search</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">631</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">632</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Rezultate pe pagină</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">633</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Результаты на странице</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">634</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Results on page</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">635</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">636</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Lunile anului</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">637</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Месяца года</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">638</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Months</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">639</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">640</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Ianuarie</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">641</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Январь</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">642</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">January</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">643</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">644</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Februarie</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">645</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Февраль</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">646</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">February</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">647</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">648</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Martie</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">649</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Март</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">650</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">March</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">651</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">652</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Aprilie</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">653</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Апрель</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">654</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">April</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">655</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">656</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Mai</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">657</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Май</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">658</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">May</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">659</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">660</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Iunie</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">661</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Июнь</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">662</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">June</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">663</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">664</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Iulie</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">665</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Июль</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">666</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">July</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">667</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">668</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">August</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">669</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Август</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">670</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">August</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">671</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">672</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Septembrie</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">673</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Сентябрь</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">674</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">September</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">675</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">676</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Octombrie</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">677</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Октябрь</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">678</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">October</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">679</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">680</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Noiembrie</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">681</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Ноябрь</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">682</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">November</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">683</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">684</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Decembrie</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">685</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Декабрь</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">686</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">December</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">687</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">688</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Pagina</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">689</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Страница</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">690</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Page</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">691</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">692</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Nr.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">693</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">№</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">694</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">No.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">695</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">696</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Titlu </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">697</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Заглавие</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">698</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Title</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">699</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">700</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Tip </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">701</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Тип</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">702</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Type</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">703</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">704</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Emitent</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">705</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Эмитент</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">706</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Issuer</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">707</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">708</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Data</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">709</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Дата</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">710</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Date</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">711</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">712</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Expediază pe mail o copie a discuției. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">713</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Отправить емейл с копией разговора?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">714</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Receive an email with a copy of this discussion?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">715</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">716</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">clik aici</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">717</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">нажмите здесь</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">718</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">clik here</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">719</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">720</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Această discuție chat se înregistrează</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">721</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Этот чат разговор записывается</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">722</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">This chat conversation is recorded</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">723</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">724</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Sigur doriti să expediați mesajele pe </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">725</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Вы действительно хотите отправить эти сообщения на </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">726</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Are you sure you want to send messages to</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">727</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">728</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Mesajul Dvs. a fost trimis cu succes</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">729</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Ваше сообщение было успешно отправлено</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">730</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Thank you! Your message has been successfully sent</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">731</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">732</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">a părăsit  discuția on-line</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">733</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">покинул чат</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">734</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">left the conversation</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">735</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">736</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Cereri</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">737</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Запросы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">738</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Requests</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">739</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Болгарский</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">740</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Română</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Anunț vacant, Numele Prenumele: </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">741</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Руский</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Вакансия, Фамилия Имя:</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <RangeSelection>R1C1:R800C3</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

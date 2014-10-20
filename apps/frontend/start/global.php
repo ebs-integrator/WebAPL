@@ -12,24 +12,24 @@ ClassLoader::addDirectories(array(
 App::error(function(Exception $exception, $code) {
     Log::error($exception);
 
-    /* $page_property = false;
+    $page_property = false;
 
-      if ($code == 404) {
-      $page_property = 'error_404';
-      } elseif ($code >= 500) {
-      //$page_property = 'error_500';
-      } else {
-      //$page_property = 'error_other';
-      }
+    if ($code == 404) {
+        $page_property = 'error_404';
+    } elseif ($code >= 500) {
+        //$page_property = 'error_500';
+    } else {
+        //$page_property = 'error_other';
+    }
 
-      if ($page_property) {
-      $page = PostProperty::postWithProperty('error_404');
-      if ($page) {
-      $uri = Post::getFullURI($page->id, false);
-      $contents = App::make('PageController')->route($uri);
-      return Response::make($contents, $code);
-      }
-      } */
+    if ($page_property) {
+        $page = PostProperty::postWithProperty('error_404');
+        if ($page) {
+            $uri = Post::getFullURI($page->id, false);
+            $contents = App::make('PageController')->route($uri);
+            return Response::make($contents, $code);
+        }
+    }
 
     //return "Undefined error!";
 });
@@ -70,13 +70,13 @@ Event::listen('APL.modules.load', function() {
     Event::fire('APL.website.check');
 
     Event::fire('APL.modules.beforeload');
-    
+
     Module::where('enabled', '1')->get()->each(function($module) {
         ClassLoader::addDirectories(app_path() . '/modules/' . $module->extension . '/');
         ClassLoader::load($module->extension);
         Modules::addInstance($module->extension);
     });
-    
+
     Event::fire('APL.modules.afterload');
 });
 
