@@ -213,7 +213,7 @@ footer .left {
     color:#fff;
 }
 article .sub_list ul li {
-    background: url('../img/article_li_rb.png') no-repeat left 5px;
+    background: url('../img/article_li_rb.png') no-repeat left 4px;
 }
 .lang ul li:first-child {
     background: #f7aeb5;

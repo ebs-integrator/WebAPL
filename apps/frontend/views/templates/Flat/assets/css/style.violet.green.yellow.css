@@ -28,9 +28,6 @@ footer .copy a {
 } 
 
 
-.lang p {
-    background: #9cf1de;
-} 
 
 
 .contact a.contact_us, footer .right p.y_info {
@@ -40,7 +37,7 @@ footer .copy a {
 
 
 
-.sec_span, h1, .attention span, nav p, ul.culture li .right .box p,ul.culture li .right .box p a, .city_box .title, .form .ftb, .compl_list li a .compl_title, .name, .sort_b .selectboxit-container span,.selectboxit-container .selectboxit-options a, .calendar_slider table thead tr:first-child td, .calendar_slider table thead tr td, .com_box .title, .cns_locali thead tr td, .sec_details .sec_name, .secretar span, table.plc > tbody > tr > td > a, .adv, .s_title, .det_news, .search_t span, .search_p span, .cda ul li .left a, ul.vice li .name, .bgr .info > ul > li .left {
+.lang p,.sec_span, h1, .attention span, nav p, ul.culture li .right .box p,ul.culture li .right .box p a, .city_box .title, .form .ftb, .compl_list li a .compl_title, .name, .sort_b .selectboxit-container span,.selectboxit-container .selectboxit-options a, .calendar_slider table thead tr:first-child td, .calendar_slider table thead tr td, .com_box .title, .cns_locali thead tr td, .sec_details .sec_name, .secretar span, table.plc > tbody > tr > td > a, .adv, .s_title, .det_news, .search_t span, .search_p span, .cda ul li .left a, ul.vice li .name, .bgr .info > ul > li .left {
     color: #472347;
 } 
 
@@ -55,7 +52,7 @@ section .search input[type=submit] {
 
 
 
-.lang p, .chat_b, header .cont_form .prp a,.mini_header .m_lang li a, .form.green .ftb, .stat_info span:last-child, .search_li li p span, .contact_l .prp a, .contact_r .prp a {
+.chat_b, header .cont_form .prp a,.mini_header .m_lang li a, .form.green .ftb, .stat_info span:last-child, .search_li li p span, .contact_l .prp a, .contact_r .prp a {
     color: #472347;
 } 
 
@@ -92,7 +89,7 @@ table.taxe thead tr, table.taxe thead tr td {
     background-color: #E16C5A;
 } 
 
-.left_block .chat .green, .home_chat p {
+.left_block .chat .green{
     color: #E16C5A;
 } 
 
@@ -111,12 +108,9 @@ table.taxe thead tr, table.taxe thead tr td {
 } 
 
 
-.left_block .chat .violet, .home_chat p span {
+.left_block .chat .violet{
     color: #389c85;
 } 
-
-
-
 .n_alert .cntn p {
     color: #c76502;
 } 
@@ -130,10 +124,12 @@ footer .newsletter_subscribe_form input[type=submit] {
     border: 2px solid #EEA459;
 } 
 
-footer .newsletter_subscribe_form input[type=submit], .attention p.title, table.taxe thead tr td, .ath p, .subt {
+footer .newsletter_subscribe_form input[type=submit], .attention p.title,  .ath p, .subt {
     color: #EEA459;
 } 
-
+table.taxe thead tr td{
+    color:#AD626F;
+}
 .search_s input[type=submit], .snd_sbm {
     background: #EEA459;
 } 
@@ -162,16 +158,16 @@ article .categ_title a:hover, .form .content input[type=submit], .video_d {
 
 
 .bgr .info > ul > li .right.list:before {
-    content: url('../img/f_li_vgy.png');
+    content: url('../img/f_li_svg.png');
 }
 .a_box .title a,table.atz tr td:nth-child(2) {
-    color: #008d74;/*inchis*/
+    color: #AE626F;
 }
 .pag ul li a, .pag ul li{
     color:#AD626F;
 }
 .av.green p span{
-    color:#dfdfdf;/*Alerta*/
+    color:#E16C5A;
 }
 .calendar_slider table thead tr td {
     border: 1px solid #78583f
@@ -189,4 +185,102 @@ article .categ_title a:hover, .form .content input[type=submit], .video_d {
 footer .search input[type=submit]{
     color:#00bd9c;
     border-color:#00bd9c;
+}
+.f_fb{
+    background:url('../img/fb_vgy.png')no-repeat center #643555;
+}
+.f_odno{
+    background:url('../img/odno_vgy.png')no-repeat center #643555;
+}
+.f_vk{
+    background:url('../img/vk_vgy.png')no-repeat center #643555;
+}
+.f_twitter{
+    background:url('../img/twitter_vgy.png')no-repeat center #643555;
+}
+.f_rss{
+    background:url('../img/rss_vgy.png')no-repeat center #643555;
+}
+.f_gplus{
+    background:url('../img/gplus_vgy.png')no-repeat center #643555;
+}
+.prefooter .row1_l {
+    background: url('../img/foter_an_vgy.png')no-repeat right bottom #EEA459;
+}
+.prefooter .row1_l .data {
+    background: #E16C5A;
+}
+.prefooter .row1_l p.f_title,.prefooter .row1_l p,.home_chat p,.home_chat p span  {
+    color:#fff;
+}
+article .sub_list ul li {
+    background: url('../img/article_li_vgy.png') no-repeat left 4px;
+}
+.top_el .home_chat, .home_chat{
+    border-color:#55B39B;
+    background-color:#55B39B;
+}
+.home_chat .pct {
+    background: url('../img/chat_dots_vgy.png') no-repeat 8px center;
+}
+.lang p{
+    background:#fff;
+}
+.lang ul li:first-child {
+    background: #FFDCC0;
+}
+.lang ul li:nth-child(2) {
+    background: #FAC897;
+}
+.lang ul li:last-child {
+    background: #ECA855;
+}
+.contact_l .prp a {
+    background: url('../img/phone_book_vgy.png')no-repeat left center;
+}
+.contact_r .prp a {
+    background: url('../img/bus_vgy.png')no-repeat left top;
+}
+.left_block .chat .mn {
+    background: url('../img/chat_man_vgy.png') no-repeat center;
+}
+.sitemap > ul > li > a {
+    background: url('../img/f_li_svg.png')no-repeat left 4px;
+}
+.sitemap > ul > li > ul > li > a {
+    background: url('../img/s_li_vgy.png')no-repeat left 4px;
+}
+header .cont_form .prp{
+    border-color: #472347;
+}
+.urg thead tr {
+    background: #E16C5A;
+}
+.urg tbody tr td:first-child {
+    background: url('../img/g_phone_vgy.png') no-repeat left 30px;
+}
+
+.dop .right .status.on {
+    background: url('../img/chat_dots_vgy.png') no-repeat left center;
+}
+.dop .right .buttons button.firechat-hide{
+    background:url('../img/save_vgy.png')no-repeat center #fff;
+}
+.dop .right .buttons button.firechat-close{
+    background:url('../img/close_vgy.png')no-repeat center #fff;
+}
+.dop .right .buttons button.firechat-show{
+    background:url('../img/unsave_vgy.png')no-repeat center #fff;
+}
+.prefooter .row1_r p.f_title{
+    color:#E2695E;
+}
+.prefooter .row1_r .data{
+    background: #55B39B;
+}
+.prefooter .row1_r a.f_artc {
+    color: #55B39B;
+}
+.tda span, .ldmbox p.tda span{
+    color:#c76502;
 }
