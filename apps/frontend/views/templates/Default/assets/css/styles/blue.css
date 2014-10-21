@@ -110,7 +110,7 @@ header .contact .cont .cont_form ul li p span, header .contact .cont .cont_form 
     border-bottom-color: #5a78ad;
 }
 
-ul.prom li .info, .live_comment > p:hover, .live_comment > p.activecomm, .snd_title, .crt p span,p.sub, .com_box .subtitle, ul.culture li .right .box p,ul.culture li .right .box p a, .left .chat input[type="submit"], .form  input[type=submit], header .contact .cont .cont_form ul li p span,header .contact .cont .cont_form ul li p span a{
+ul.prom li .info, .live_comment > p:hover, .live_comment > p.activecomm, .snd_title, .crt p span,p.sub, .com_box .subtitle, ul.culture li .right .box p,ul.culture li .right .box p a, .left .chat input[type="submit"],  header .contact .cont .cont_form ul li p span,header .contact .cont .cont_form ul li p span a{
     color: #5a78ad;
 }
 
@@ -206,10 +206,12 @@ header .contact .cont .cont_form .relative p {
     background: #b7d3d2;
 }
 
-.u_a p.data:after, .a_box.g_g .details p.data:after, .a_box.v_g .details p.data:before, ul.a_n li a span:before, .right > article.atn .data span:before, .right > article.atn .data span:before, .ldmbox .data:after {
+.u_a p.data:after, .a_box.g_g .details p.data:after, .right > article.atn .data span:before, .right > article.atn .data span:before, .ldmbox .data:after {
     content: url('../../img/v_arrow_b.png');
 } 
-
+.a_box.v_g .details p.data:before, ul.a_n li a span:before{
+    content:url('../../img/d_arrow_b.png');
+}
 .ldmbox .data:after, .right article.news li span:before, .a_box.g_g .details p.data:after, .l_a li a span:after {
     content: url('../../img/d_arrow_b.png');
     color: #fff;
@@ -272,19 +274,32 @@ header .contact .cont .cont_form .prp a, .prp a {
 
 
 @media only screen and (max-width: 767px){
-    header .header_mini, .header_menu_content, header .hr {
-        background-color: #79b9b8;
+    header .header_mini, .header_menu_content{
+        background-color:#79b9b8;
+    } 
+    header .hr {
+        background-color: #5a78ad;
     }
-    header.page {
-        border-bottom-color: #79b9b8;
+    header.page ,.menu_list li{
+        border-bottom-color: #5a78ad;
     }
 
     .c_l_u tr td:nth-child(2) .sec_span {
         color:#5a78ad;
     }
+    .header_menu_content .social {
+        background: #5A78AE;
+    }
+    .header_menu_content .social a{
+        color:#abe7e6;
+    }
+    
 }
 
 
 header .contact .currency .lang .relative p {
-    background: url('../img/g_arrow_b.png') no-repeat right #fff;
+    background: url('../../img/g_arrow_db.png') no-repeat right #fff;
+}
+.a_box.v_g .details{
+    background-color:#79b9b8;
 }

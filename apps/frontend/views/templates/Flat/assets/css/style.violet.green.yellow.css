@@ -284,3 +284,6 @@ header .cont_form .prp{
 .tda span, .ldmbox p.tda span{
     color:#c76502;
 }
+.n_alert:before {
+    border-left: 4px solid #AE626F;
+}

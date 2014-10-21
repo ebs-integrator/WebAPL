@@ -1,0 +1,232 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 21, 2014, 4:15:31 PM
+    Author     : AlionaL
+*/
+
+
+.right > article:before,.right article.news:before,.right > article.news .hr {
+    border-color: #165A65;
+} 
+
+
+header .contact .contact_us:hover,header .contact .contact_us.active {
+    background: #98C4C2;
+} 
+header .contact .contact_us:hover,header .contact .contact_us.active{
+    border-color:#7cbfbb;
+}
+
+header .contact .cont .cont_form, header .contact .currency .lang {
+    border-top: 3px solid #98C4C2;
+} 
+
+.error_info p span, header .contact .cont .cont_form .form_title, .com_box .title {
+    color: #98C4C2;
+} 
+
+.home_menu {
+    border-color:  #98C4C2;
+} 
+header .hr{
+    background:#98C4C2;
+}
+
+.anp a {
+    color: #98C4C2;
+} 
+
+header .contact .cont .cont_form .form_title {
+    border-left: 3px solid #98C4C2;
+} 
+
+.home_chat.active .pot {
+    border-bottom: 2px solid #98C4C2;
+} 
+
+.compl_list li a span {
+    background-color: #98C4C2;
+} 
+
+
+.sec_list, .sec_list > li > ul li {
+    color: #7cbfbb;
+} 
+
+.bsa_head {
+    background: #7cbfbb;
+} 
+
+
+.adv {
+    border: 1px solid #b4e1e8;
+} 
+
+
+.dop .right .c_name {
+    color: #95cdd6;
+} 
+
+
+header .left button.chat .green,button.chat_button .green,button.vice_button .green, .left .chat .green {
+    color: #95cdd6;
+} 
+
+ul.culture li .right .box {
+    border-left: 2px solid #95cdd6;
+} 
+
+
+
+
+.u_a .details {
+    background: #c0e6ea;
+} 
+
+
+
+footer .copy a {
+    color: #A0C7C4;
+} 
+
+
+.green_sub, .green input[type=submit], .search input[type=button] {
+    background: #98C5C2;
+} 
+.search input[type=button]{
+    border-color:#155962;
+}
+.right article.news li span, ul.a_n li a span {
+    background-color: #98C5C2;
+} 
+
+.right article.doc table thead tr td, .right article.doc table tbody tr td, .n_title, .pag .p_n a,.pag .n_p a, ul.detail li a, .form.green .ftb, ul.faq li a span, table.taxe thead tr td, table.reg_tb thead tr td, .sort_b .selectboxit-container span,.selectboxit-container .selectboxit-options a, .sort_b .selectboxit-container .selectboxit-options a, .calendar_slider table thead tr:last-child td, .cns_locali thead tr td {
+    color: #98C5C2;
+} 
+
+
+.menu .box .menu_title {
+    color: #393939;
+} 
+
+
+
+ul.prom li .info, .real p {
+    color: #8db1b7;
+} 
+
+
+.prp a {
+    color: #469ca8;
+} 
+
+
+.menu .box .menu_img {
+    border-bottom: 5px solid #155962;
+} 
+
+.menu .box .active .menu_title {
+    background-color: #155962;
+} 
+
+
+.dop .top hr {
+    background: #59b3bf;
+} 
+
+
+
+header .left button.chat .violet,button.chat_button .violet,button.vice_button .violet, .top_menu a.active .left.title, .name, .city_box .title, .left .chat .violet, section p.map_sub, .compl_list li a .compl_title, .av p span, .form .ftb, .emrg ul li .left, .vp_name, ul.vice li .name, ul.vice li .p_name, .ncd p.sctg, .bgr .info > ul > li .left, .ldmbox .ldm_li p strong, section > .wrap > .left > ul > li > span.sec_criteria, .ncd p.atn_viol, .stat_info span:last-child, table.orar thead tr:first-child, .search_li li p span, .video_i {
+    color: #A9BA50;
+} 
+
+ul.social li:first-child {
+    border-bottom: 1px solid #A9BA50;
+} 
+
+#firechat .green input[type=submit], .form input[type=submit], .dop .top, .snd_sbm {
+    background: #A9BA50;
+} 
+
+.left .chat input[type="submit"], .l_a li a span {
+    background-color: #A9BA50;
+} 
+
+
+header .contact .cont .cont_form ul li p span,header .contact .cont .cont_form ul li p span a, ul.culture li .right .box p,ul.culture li .right .box p a, .com_box .subtitle, .snd_title {
+    color: #A8B94A;
+} 
+
+.right > article.atn .data p, .ldmbox .data p.nr {
+    background: #A8B94A;
+} 
+
+.snd_sbm {
+    border-bottom: 2px solid #A8B94A;
+} 
+
+
+.right > article.atn .data, .ldmbox .data,.a_box.g_g .details,.u_a p.data {
+    background: #CEE388;
+} 
+.a_box.g_g .details p.data,.u_a p.data{
+    background:#AAB952;
+}
+.ath p {
+    color: #CEE388;
+} 
+.u_a p.data:after, .a_box.g_g .details p.data:after ,.right > article.atn .data span:before{
+    content: url('../../img/d_arrow_bgb.png');
+}
+
+section .dirs_menu a {
+    color: #A9D3DA;
+} 
+.home_chat.active .pct > p{
+    color:#155962;
+}
+
+header .contact .contact_us{
+    background:#72c8d3;
+    border-color:#52bbc9;
+}
+header .contact .cont .cont_form .relative p{
+    background: url('../../img/g_arrow_bg.png') no-repeat right bottom #fff;
+}
+header .contact .currency .lang .relative p {
+    background: url('../../img/g_arrow_gb.png') no-repeat right #fff;
+}
+.left article .ttl a{
+    color:#A9BB4D;
+}
+.left > article:before,header .contact .cont .cont_form ul li:before,.anp:before,header .contact .cont .cont_form .c_info:before ,ul.prom li:before{
+    border-color:#D0DCDC;
+}
+footer .right > .left.search input[type=submit]{
+    background-color:#98C5C2;
+}
+.right article.news li span:before,.compl_list li a span:before {
+    content: url('../../img/d_arrow_bg.png');
+}
+.cda ul li .left p.green a{
+    color:#a4ca94;
+}
+section .dirs_menu{
+    background:#155962;
+}
+header.page,table.taxe thead tr td,table.taxe thead tr{
+    border-color:#155962;
+}
+.form.green:before,.form:before{
+    border-color:#568c40;
+}
+.form input[type=submit],.green input[type=submit]{
+    border-color:#5f9a47;
+}
+.m_criteria{
+    border-color:#52bbc9;
+}

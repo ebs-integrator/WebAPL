@@ -1203,7 +1203,16 @@ section > .wrap > .left{
 .right article.news li span:before {
     content: url('../img/d_arrow.png');
     position: absolute;
-    right: -9px;
+    right: -8px;
+    top: 0px;
+}
+.compl_list li a span{
+    position:relative;
+}
+.compl_list li a span:before{
+    content: url('../img/p_gr_arrow.png');
+    position: absolute;
+    right: -8px;
     top: 0px;
 }
 .right article.news li a{
@@ -1970,7 +1979,7 @@ section > .wrap >  .left.contact_r{
     display:block;
 }
 .left .chat .mn{
-     float: left;
+    float: left;
     margin-top:6px;
     margin-right:5px;
     background:url('../img/chat_man.png') no-repeat center;
@@ -2343,7 +2352,7 @@ ul.a_n li a span{
 ul.a_n li a span:before{
     content:url('../img/gr_arrow.png');
     position:absolute;
-    right:-9px;
+    right:-8px;
     top:0px;
 }
 ul.a_n li a span img{
@@ -6003,7 +6012,6 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     header .right.contact{
         height:74px;
-        overflow:hidden;
     }
     header{
         position:fixed;
@@ -6468,7 +6476,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         margin-right:8px;
     }
     .header_menu_content{
-        top:77px;
+        top:80px;
     }
     ul.dcr .dcr_box > ul > li, ul.atz > li {
         padding-left: 38px;

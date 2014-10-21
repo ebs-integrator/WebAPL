@@ -277,7 +277,9 @@ header .contact .cont .cont_form ul li p span,header .contact .cont .cont_form u
 ul.a_n li a span {
     background-color: #685641;
 }
-
+.compl_list li a span:before{
+    content: url('../../img/d_arrow_w.png');
+}
 .right article.news li span:before {
     content: url('../../img/d_arrow_m.png');
 }
@@ -316,12 +318,14 @@ footer .right > .left.search input[type=submit] {
     background: #b7c789;
 }
 
-.a_box.g_g .details p.data, .u_a p.data, .header_menu_content, header .header_mini, header .hr, .header_menu_content .social {
+.a_box.g_g .details p.data, .u_a p.data, header .header_mini, header .hr, .header_menu_content .social {
     background-color: #695741;
 }
-
+.header_menu_content{
+    background: #b3a57e;
+}
 .menu_list li {
-    border-bottom-color: #b3a57e;
+    border-bottom-color: #695741;
 }
 
 .header_menu_content .social a {

@@ -1,194 +1,235 @@
 
 .com_box, ul.prom li, .ldmbox {
-     border: 2px solid #f7e2f2;
+    border: 2px solid #f7e2f2;
 } 
 
 .contact_l .subt,.contact_r .subt, ul.a_n li a, .compl_list li a, ul.culture li, ul.mda, .real p, ul.dcr > li > a, .l_a li a, .e_sond {
-     border-bottom: 2px solid #f7e2f2;
+    border-bottom: 2px solid #f7e2f2;
 } 
 
 hr.crt, .ldmbox hr, hr.reg, .ldmbox p.tda,.tda {
-     background: #f7e2f2;
+    background: #f7e2f2;
 } 
 
 ul.mda {
-     border-top: 2px solid #f7e2f2;
+    border-top: 2px solid #f7e2f2;
 } 
 
 
 header .contact .contact_us:hover,header .contact .contact_us.active {
-     background: #5cbfc8;
+    background: #5cbfc8;
 } 
 
 header .contact .cont .cont_form, header .contact .currency .lang {
-     border-top: 3px solid #5cbfc8;
+    border-top: 3px solid #5cbfc8;
 } 
 
 .error_info p span, header .contact .cont .cont_form .form_title, .com_box .title {
-     color: #5cbfc8;
+    color: #5cbfc8;
 } 
 
 .home_menu {
-     border-bottom: 4px solid #5cbfc8;
+    border-bottom: 4px solid #5cbfc8;
 } 
-
+.u_a p.data:after, .a_box.g_g .details p.data:after,ul.a_n li a span:before{
+    content: url('../../img/bl_arrow.png');
+}
 
 .u_a .details {
-     background: #5dbfc8;
+    background: #5dbfc8;
 } 
 
 
 .right article.doc table thead tr td {
-     border: 1px solid #ababab;
+    border: 1px solid #ababab;
 } 
 
 .right article.doc table thead tr td {
-     border-bottom: 2px solid #ababab;
+    border-bottom: 2px solid #ababab;
 } 
 
 
 .right article.news:before {
-     border-left: 3px solid #ababab;
+    border-left: 3px solid #ababab;
 } 
 
 
 .green_sub, .search input[type=button] {
-     border-bottom: 2px solid #3d3d3d;
+    border-bottom: 2px solid #3d3d3d;
 } 
 
 
 footer .copy a {
-     color: #453c3c;
+    color: #453c3c;
 } 
 
 
 section > .wrap.rpt > .left ul > li a:hover ,section > .wrap.rpt > .left > ul > li.active > a,ul.dcr > li a:hover,ul.dcr > li.active a {
-     color: #5c5656;
+    color: #5c5656;
 } 
 
 
 .green_sub, footer .right > .left.search input[type=submit], .green input[type=submit], .search input[type=button] {
-     background: #3d3d3d;
+    background: #3d3d3d;
 } 
 
 .right article.news li span, ul.a_n li a span, .u_a p.data, .a_box.g_g .details p.data {
-     background-color: #3d3d3d;
+    background-color: #3d3d3d;
 } 
 
 .right > article.news .hr {
-     border-color: #3d3d3d;
+    border-color: #3d3d3d;
 } 
 
-.right article.doc table thead tr td, .right article.doc table tbody tr td, .home_chat.active .pct > p, .n_title, .pag .p_n a,.pag .n_p a, .pag ul li a,.pag ul li, ul.detail li a, .av.green p span, .form.green .ftb, ul.faq li.active a, ul.faq li a span, table.taxe thead tr td, table.reg_tb thead tr td, table.plc > tbody > tr > td > a, .sort_b .selectboxit-container span, .selectboxit-container .selectboxit-options a, .sort_b .selectboxit-container .selectboxit-options a, .calendar_slider table thead tr:last-child td, .cns_locali thead tr td, .c_l_u tr td:nth-child(2) .sec_span {
-     color: #3d3d3d;
+.right article.doc table thead tr td, .right article.doc table tbody tr td, .home_chat.active .pct > p, .n_title,  ul.detail li a, .av.green p span, .form.green .ftb, ul.faq li.active a, ul.faq li a span, table.taxe thead tr td, table.reg_tb thead tr td, table.plc > tbody > tr > td > a, .sort_b .selectboxit-container span, .selectboxit-container .selectboxit-options a, .sort_b .selectboxit-container .selectboxit-options a, .calendar_slider table thead tr:last-child td, .cns_locali thead tr td, .c_l_u tr td:nth-child(2) .sec_span {
+    color: #3d3d3d;
 } 
+.pag .p_n a,.pag .n_p a, .pag ul li a,.pag ul li{
+    color:#1D9CA9;
+}
 
 .contact_l .subt:before,.contact_r .subt:before, .contact.left.form:before, .form.green:before, ul.detail li a:before, ul.faq  li.active:before {
-     border-left: 3px solid #3d3d3d;
+    border-left: 3px solid #3d3d3d;
 } 
 
 .pag .p_n a,.pag .n_p a, .cl_pop {
-     border: 1px solid #3d3d3d;
+    border: 1px solid #3d3d3d;
 } 
 
 
 .search_p span {
-     color: #7c7c7c;
+    color: #7c7c7c;
 } 
 
 
 .green input[type=submit] {
-     border-bottom: 2px solid #5c5656;
+    border-bottom: 2px solid #5c5656;
 } 
 
 
 .menu .box .menu_img {
-     border-bottom: 5px solid #98235d;
+    border-bottom: 5px solid #98235d;
 } 
 
 .menu  .box .active .menu_title {
-     background-color: #98235d;
+    background-color: #98235d;
 } 
 
 
 section .dirs_menu a {
-     color: #e8c7e0;
+    color: #e8c7e0;
 } 
 
 
-header .contact .contact_us, .right > article.atn .data, .a_box.v_g .details, .ldmbox .data {
-     background: #be3e7e;
+header .contact .contact_us{
+    background: #be3e7e;
 } 
+.right > article.atn .data{
+    background:#E287C0;
+}
+.a_box.v_g .details,.ldmbox .data {
+    background:#5DBFC8;
+}
 
 .ath p {
-     color: #be3e7e;
+    color: #be3e7e;
 } 
 
 
 .ldmbox .data p.term span {
-     color: #e176ab;
+    color: #e176ab;
 } 
 
 
 .header_menu_content .social a {
-     color: #e586b5;
+    color: #f7d8e7;
 } 
 
 
 .header_menu_content .social {
-     background: #ad2f6e;
+    background: #ad2f6e;
 } 
 
 
 header .left button.chat .violet ,button.chat_button .violet,button.vice_button .violet, .left article .ttl a, .top_menu a.active .left.title, section .wrap .sub_title, section .wrap p.sub_title_s, .name, .city_box .title, .left .chat .violet, section  p.map_sub, .compl_list li a .compl_title, .av p span, .form .ftb, table.atz  tr td a, .emrg ul li .left, .vp_name, ul.vice li .name, ul.vice li .p_name, .ncd p.sctg, .bgr .info > ul > li .left, .ldmbox  .ldm_li p strong, section > .wrap > .left > ul > li > span.sec_criteria, .ncd p.atn_viol, .stat_info span:last-child, .acz_details span, .tda span,.ldmbox p.tda span, table.orar thead tr:first-child, .search_t span, .search_li li p span, .video_i {
-     color: #c02572;
+    color: #c02572;
 } 
 
 ul.social li:first-child {
-     border-bottom: 1px solid #c02572;
+    border-bottom: 1px solid #c02572;
 } 
 
 header .contact .cont .cont_form ul li:before, .anp:before, header .contact .cont .cont_form .c_info:before, .contact_l .date_contact li:before, .form:before {
-     border-left: 3px solid #c02572;
+    border-left: 3px solid #c02572;
 } 
 
-#firechat .green input[type=submit], header .hr, .form  input[type=submit], .dop .top, table.sondaje progress[value]::-webkit-progress-value, .snd_sbm, .header_menu_content {
-     background: #c02572;
+#firechat .green input[type=submit], header .hr, .form  input[type=submit], .dop .top, table.sondaje progress[value]::-webkit-progress-value, .snd_sbm {
+    background: #c02572;
 } 
 
 .left .chat input[type="submit"], .l_a  li a span {
-     background-color: #c02572;
+    background-color: #c02572;
 } 
 
 
 .dop .top .left .photo {
-     border: 1px solid #c8367f;
+    border: 1px solid #c8367f;
 } 
 
 
 .dop .top hr {
-     background: #dc4a93;
+    background: #dc4a93;
 } 
 
 
 .menu_list li {
-     border-bottom: 1px solid #c52775;
+    border-bottom: 1px solid #c52775;
 } 
 
 
 header .contact .cont .cont_form ul li p span,header .contact .cont .cont_form ul li p span a, ul.culture li .right .box p,ul.culture li .right .box p a, .crt p span,p.sub, .com_box .subtitle, .snd_title, .live_comment > p:hover, .live_comment > p.activecomm {
-     color: #d53c88;
+    color: #d53c88;
 } 
 
-.right > article.atn .data p, section .dirs_menu, .ldmbox .data p.nr, .dop .right .buttons button {
-     background: #d53c88;
+.right > article.atn .data p{
+    background:#98235d;
+}
+section .dirs_menu,  .dop .right .buttons button {
+    background: #d53c88;
 } 
 
 .snd_sbm {
-     border-bottom: 2px solid #d53c88;
+    border-bottom: 2px solid #d53c88;
 } 
 
-.a_box.v_g .details p.data {
-     background-color: #d53c88;
+.a_box.v_g .details p.data,.ldmbox .data p.nr {
+    background-color: #209BAA;
 } 
 
+.a_box.g_g .details {
+    background: #60BDCC;
+}
+.right_menu li:hover {
+    background: url('../../img/right_active_p.png')25px center no-repeat #f8f8f8;
+}
+header.page{
+    border-color: #d53c88;
+}
+.a_box.v_g .details p.data:before ,.ldmbox .data:after{
+    content: url('../../img/b_arrow.png');
+}
+.right > article.atn .data span:before{
+    content: url('../../img/v_arrow_p.png');
+}
+header .contact .cont .cont_form .relative p {
+    background: url('../../img/g_arrow_blue.png') no-repeat right bottom #fff;
+}
+header .contact .currency .lang .relative p{
+    background: url('../../img/g_arrow_bb.png') no-repeat right #fff;
+}
+.header_menu_content{
+    background: #e586b5;
+}
+header .header_mini{
+    background: url('../../img/menu_icon.png')no-repeat center #ad2f6e;
+}
