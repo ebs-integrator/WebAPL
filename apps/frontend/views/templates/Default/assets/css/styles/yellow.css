@@ -1,0 +1,337 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 21, 2014, 11:09:09 AM
+    Author     : AlionaL
+*/
+
+
+.firechat-register select, .gal .counter, .content input[type=text],.chat input[type=text], .form .content textarea, .form label,.chat label, ul.crt li, section > .wrap > .left > ul > li > span, table.taxe tbody tr td, .bgr .quote, .bgr .info > ul > li .right, table.reg_tb tbody tr td, table.sondaje td:first-child, table.sondaje td:last-child, .stat_info span:first-child, .acz_details p, table.plcu strong, table.plcu .word,table.plcu .doc,table.plcu .pdf,table.plcu .docx,table.plcu .xls,table.plcu .xlsx, .sort_b p, .c_l_u td, .clu_partid, table.orar thead tr:last-child, .search_p {
+    color: #242424;
+} 
+
+.ldmbox input[type=submit], .dwnl, .video_d {
+    background: #242424;
+} 
+
+
+.n_footer label, footer .copy, footer .right > .left p, .top_menu a, .pda p, .function, .city_box .info,  ul.faq li p, .tel, .email a, p.descr, .search_li li p {
+    color: #4B4B4B;
+} 
+
+header .contact .cont .cont_form input[type=submit] {
+    background: #4B4B4B;
+} 
+
+
+.right > article:before ,.right article.news:before,.right > article.news .hr{
+    border-color: #6D6067;
+} 
+
+
+header .contact .contact_us:hover,header .contact .contact_us.active ,header .hr{
+    background: #E6E1D7;
+    border-color:#d6bd95;
+} 
+
+header .contact .cont .cont_form, header .contact .currency .lang {
+    border-top: 3px solid #E6E1D7;
+} 
+
+.error_info p span, header .contact .cont .cont_form .form_title, .com_box .title {
+    color: #9b9399;
+} 
+
+.home_menu {
+    border-bottom: 4px solid #E6E1D7;
+} 
+
+
+.anp a {
+    color: #dbd1be;
+} 
+
+header .contact .cont .cont_form .form_title {
+    border-left: 3px solid #dbd1be;
+} 
+
+
+.compl_list li a span {
+    background-color: #dbd1be;
+} 
+
+
+.sec_list, .sec_list > li > ul li {
+    color: #ccbda3;
+} 
+
+.bsa_head {
+    background: #ccbda3;
+} 
+
+
+.adv {
+    border: 1px solid #e8d6b7;
+} 
+
+
+.dop .right .c_name {
+    color: #d6bd95;
+} 
+
+
+header .left button.chat .green,button.chat_button .green,button.vice_button .green, .left .chat .green {
+    color: #d6bd95;
+} 
+
+ul.culture li .right .box {
+    border-left: 2px solid #d6bd95;
+} 
+
+
+
+
+.u_a .details {
+    background: #dbcfbe;
+} 
+.a_box.g_g .details{
+    background:#9A939A;
+}
+
+.a_box.g_g .details p.data{
+    background:#6C6165;
+}
+.green_sub, .search input[type=button] {
+    border-bottom: 2px solid #aa8c11;
+} 
+
+
+footer .copy a {
+    color: #A6A6A8;
+} 
+
+
+.green_sub, .green input[type=submit], .search input[type=button] {
+    background: #D5B427;
+} 
+
+.right article.news li span, ul.a_n li a span,footer .right > .left.search input[type=submit] {
+    background-color: #D5B427;
+} 
+
+.right article.doc table thead tr td, .right article.doc table tbody tr td, .home_chat.active .pct > p,.n_title, .pag .p_n a,.pag .n_p a, ul.detail li a, .form.green .ftb, ul.faq li a span, table.taxe thead tr td, table.reg_tb thead tr td, .sort_b .selectboxit-container span,.selectboxit-container .selectboxit-options a, .sort_b .selectboxit-container .selectboxit-options a, .calendar_slider table thead tr:last-child td, .cns_locali thead tr td {
+    color: #D5B427;
+} 
+
+
+
+.m_criteria, table.taxe thead tr, table.taxe thead tr td, table.reg_tb thead tr td {
+    border: 1px solid #ddc56c;
+} 
+
+table.taxe thead tr {
+    border-bottom: 2px solid #ddc56c;
+} 
+
+
+
+.search_p span {
+    color: #dbb83b;
+} 
+
+
+.green input[type=submit] {
+    border-bottom: 2px solid #6E5F66;
+} 
+
+
+table.plc > tbody > tr > td:first-child, table.plcu > thead > tr > th, table.plcu > thead > tr > td {
+    border: 1px solid #e5d3db;
+} 
+
+
+.city_link a {
+    color: #473A4B;
+} 
+
+
+.menu .box .menu_title {
+    color: #393939;
+} 
+
+
+
+ul.prom li .info, .real p {
+    color: #d6cdad;
+} 
+
+
+header .contact .cont .cont_form .prp, .prp {
+    border: 2px solid #dbd6da;
+} 
+
+
+.prp a {
+    color: #9b9399;
+} 
+
+
+.menu .box .menu_img {
+    border-bottom: 5px solid #6E616A;
+} 
+
+.menu .box .active .menu_title {
+    background-color: #6E616A;
+} 
+
+
+.dop .top hr {
+    background: #9b9098;
+} 
+
+
+
+
+.left article .ttl a,header .left button.chat .violet,button.chat_button .violet,button.vice_button .violet,.name, .city_box .title, .left .chat .violet, section p.map_sub, .compl_list li a .compl_title, .av p span,.av.green p span, .form .ftb, .emrg ul li .left, .vp_name, ul.vice li .name, ul.vice li .p_name, .ncd p.sctg, .bgr .info > ul > li .left, .ldmbox .ldm_li p strong, section > .wrap > .left > ul > li > span.sec_criteria, .ncd p.atn_viol, .stat_info span:last-child, table.orar thead tr:first-child, .search_li li p span, .video_i {
+    color: #D9BD3A;
+} 
+
+.top_menu a.active .left.title{
+    color:#675644;
+}
+
+
+#firechat .green input[type=submit], .form input[type=submit], .dop .top, .snd_sbm {
+    background: #D9BD3A;
+} 
+
+.left .chat input[type="submit"], .l_a li a span {
+    background-color: #D9BD3A;
+} 
+
+
+header .contact .cont .cont_form ul li p span,header .contact .cont .cont_form ul li p span a, ul.culture li .right .box p,ul.culture li .right .box p a, .com_box .subtitle, .snd_title {
+    color: #706168;
+} 
+
+.right > article.atn .data p, .ldmbox .data p.nr,section .dirs_menu ,.a_box.v_g .details p.data{
+    background: #706168;
+} 
+header.page{
+    border-color:#706168;
+}
+
+.snd_sbm {
+    border-bottom: 2px solid #706168;
+} 
+
+
+.right > article.atn .data, .ldmbox .data,header .contact .contact_us,.a_box.v_g .details {
+    background: #9B9297;
+} 
+
+.ath p {
+    color: #9B9297;
+} 
+
+.compl_list li a span:before{
+    content: url('../../img/d_arrow_yw.png');
+}
+
+.n_alert .cntn p {
+    color: #473A4B;
+} 
+
+.n_alert .n_info .n_data {
+    background: #473A4B;
+} 
+
+.left > article:before {
+    border-color: #E5E2D7;
+}
+table.plcu > thead > tr > td{
+    color:#706168;
+}
+.right article.news li span:before ,ul.a_n li a span:before{
+    content: url('../../img/d_arrow_y.png');
+}
+.u_a p.data:after, .a_box.g_g .details p.data:after,.ldmbox .data:after,.a_box.v_g .details p.data:before,.right > article.atn .data span:before {
+    content: url('../../img/gr_arrow_y.png');
+}
+.right_menu li.active, .right_menu li.active:hover ,.right_menu li:hover{
+    background: url('../../img/right_active_y.png')25px center no-repeat #f8f8f8;
+}
+.l_a li a span:after{
+    content: url('../../img/v_arrow_y.png');
+}
+header .contact .tel{
+    background: url('../../img/tel_m.png') no-repeat left center;
+}
+.right article ul li {
+    background: url('../../img/li_g_y.png') no-repeat left 11px;
+}
+section .dirs_menu a{
+    color:#D6D7D9;
+}
+header .contact .cont .cont_form ul li:before ,.anp:before,header .contact .cont .cont_form .c_info:before{
+    border-color:#483B4D;
+}
+header .contact .cont .cont_form .relative p {
+    background: url('../../img/g_arrow_y.png') no-repeat right bottom #fff;
+}
+ul.prom li:before {
+    border-color: #F6D647;
+}
+.pag ul li a, .pag ul li{
+    color:#dbb83b;
+}
+.cns_locali thead tr td,.calendar_slider table thead td{
+    border-color:#cea05f;
+}
+section > .wrap.rpt > .left ul > li a:hover, section > .wrap.rpt > .left > ul > li.active > a, ul.dcr > li a:hover, ul.dcr > li.active a{
+    color:#6B5E67;
+}
+.cda ul li .left p.green a ,table.plc > tbody > tr > td > a{
+    color:#d3a717;
+}
+.form.green:before,.form:before,.form input[type=submit] {
+    border-color: #6E5F66;
+}
+ul.faq li.active a{
+    color:#F6D647;
+}
+ul.faq li.active:before{
+    border-color:#F6D647;
+}
+table.plc > tbody > tr > td:first-child{
+    background-color:#f7f5f2;
+}
+header .contact .currency .lang .relative p{
+    background: url('../../img/g_arrow_w.png') no-repeat right #fff;
+}
+@media only screen and (max-width: 767px){
+    .header_menu_content{
+        background-color:#9b9098;
+    }
+    .menu_list li {
+        border-color: #6E616A;
+    }
+    .header_menu_content .social {
+        background: #706168;
+    }
+    ul.social li:first-child{
+        border-color:#9B9297;
+    }
+    header .header_mini{
+        background-color:#706168;
+    }
+    .header_menu_content .social a{
+        color:#dbd6da;
+    }
+}
+
+
+

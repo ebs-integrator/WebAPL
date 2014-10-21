@@ -13,6 +13,14 @@ Core\APL\Template::setColorSchemes(array(
     'pink' => array(
         'name' => 'Pink',
         'css' => res('assets/css/styles/pink.css' ,'frontend')
+    ),
+    'yellow' => array(
+        'name' => 'Yellow',
+        'css' => res('assets/css/styles/yellow.css' ,'frontend')
+    ),
+    'blue-green' => array(
+        'name' => 'Blue Green',
+        'css' => res('assets/css/styles/blue_green.css' ,'frontend')
     )
     
 ));
