@@ -47,8 +47,7 @@ if ($errorSearch === 0 && $searchList) {
                     </form>
                 </td>
                 <td>
-                    <a href='<?= url("var/index/{$item->key}"); ?>'>View sub</a>
-                    <?= $item->num_vars; ?>
+                    <a href='<?= url("var/index/{$item->key}"); ?>'><?= varlang('view-sub'); ?> [<?= $item->num_vars; ?>]</a>
                 </td>
             </tr>
         <?php } ?>
@@ -62,16 +61,15 @@ if ($errorSearch === 0 && $searchList) {
 </table>
 
 
-
-<h4>Create new var</h4>
+<h4><?= varlang('create-new-var'); ?></h4>
 
 <form method="post" action='<?= url("var/create"); ?>'>
     <input type="hidden" name='parent_key' value='<?= $var_key; ?>' />
-    <input type='text' name='key' value='' autocomplete="off" placeholder='Key' class='form-control' />
+    <input type='text' name='key' value='' autocomplete="off" placeholder='<?= varlang('key-1'); ?>' class='form-control' />
     <div class='c10'></div>
     <?php foreach (\Core\APL\Language::getList() as $lang) { ?>
-        <input type='text' autocomplete="off" name='text[<?= $lang->id; ?>]' value='' placeholder='Text in <?= $lang->name; ?>' class='form-control' />
+        <input type='text' autocomplete="off" name='text[<?= $lang->id; ?>]' value='' placeholder='<?= varlang('text-in-'); ?> <?= $lang->name; ?>' class='form-control' />
         <div class='c10'></div>
     <?php } ?>
-    <input type='submit' class='btn btn-success' value='Create' />
+    <input type='submit' class='btn btn-success' value='<?= varlang('create-10'); ?>' />
 </form>
