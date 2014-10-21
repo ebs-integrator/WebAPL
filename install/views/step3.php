@@ -12,7 +12,7 @@
         <tr>
             <td>Host</td>
             <td>
-                <input type="text" required="" name="dbhost" value="<?= Session::get('dbhost'); ?>" class="form-control" />
+                <input type="text" required="" name="dbhost" value="<?= Session::get('dbhost') ? Session::get('dbhost') : 'localhost'; ?>" class="form-control" />
             </td>
         </tr>
         <tr>

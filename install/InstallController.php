@@ -8,7 +8,7 @@ class InstallController extends BaseController {
         if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/install/installed')) {
             return Illuminate\Support\Facades\Redirect::to('install/final');
         }
-        
+
         $this->layout->step = 1;
         $this->layout->content = View::make('install::step1');
         return $this->layout;
@@ -20,11 +20,32 @@ class InstallController extends BaseController {
         $data['req']['php_version'] = PHP_VERSION_ID >= 50400;
         $data['req']['mcrypt'] = extension_loaded('mcrypt');
         $data['req']['pdo'] = extension_loaded('pdo_mysql');
-        $data['req']['rewrite'] = in_array('mod_rewrite', apache_get_modules());
+        if (function_exists('apache_get_modules')) {
+            $data['req']['rewrite'] = in_array('mod_rewrite', apache_get_modules());
+        }
+
+        $dirs = array(
+            $_SERVER['DOCUMENT_ROOT'] . '/apps/frontend/storage/',
+            $_SERVER['DOCUMENT_ROOT'] . '/apps/backend/storage/',
+            $_SERVER['DOCUMENT_ROOT'] . '/upload/',
+            $_SERVER['DOCUMENT_ROOT'] . '/install/',
+            $_SERVER['DOCUMENT_ROOT'] . '/apps/frontend/config/',
+            $_SERVER['DOCUMENT_ROOT'] . '/apps/backend/config/'
+        );
+        foreach ($dirs as $path) {
+            $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path), RecursiveIteratorIterator::SELF_FIRST);
+            foreach ($iterator as $item) {
+                @chmod($item, 0777);
+            }
+        }
+
         $data['req']['wr_fr_storage'] = is_writable($_SERVER['DOCUMENT_ROOT'] . '/apps/frontend/storage/');
         $data['req']['wr_bk_storage'] = is_writable($_SERVER['DOCUMENT_ROOT'] . '/apps/backend/storage/');
         $data['req']['wr_upload'] = is_writable($_SERVER['DOCUMENT_ROOT'] . '/upload/');
         $data['req']['wr_install'] = is_writable($_SERVER['DOCUMENT_ROOT'] . '/install/');
+        $data['req']['wr_fr_db'] = is_writable($_SERVER['DOCUMENT_ROOT'] . '/apps/frontend/config/database.php');
+        $data['req']['wr_bk_db'] = is_writable($_SERVER['DOCUMENT_ROOT'] . '/apps/backend/config/database.php');
+
 
         $data['valid_step'] = true;
         foreach ($data['req'] as $valid) {
@@ -178,7 +199,7 @@ class InstallController extends BaseController {
             $user->password = Hash::make($password);
             $user->save();
 
-            $roles = Role::all();
+            $roles = Role::where('on_install', 1)->get();
             foreach ($roles as $role) {
                 $urole = new UserRole;
                 $urole->user_id = $user->id;
@@ -187,9 +208,9 @@ class InstallController extends BaseController {
             }
 
             Session::put('step5', true);
-            
+
             copy($_SERVER['DOCUMENT_ROOT'] . '/install/uninstalled', $_SERVER['DOCUMENT_ROOT'] . '/install/installed');
-            
+
             return $this->getFinal();
         } else {
             Session::put('step5', false);

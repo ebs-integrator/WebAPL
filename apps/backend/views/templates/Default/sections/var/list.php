@@ -32,14 +32,18 @@ if ($errorSearch === 0 && $searchList) {
 
 <table class='table table-bordered'>
     <tr>
-        <th><?= varlang('key'); ?></th>
+        <?php if (User::has('var-create')) { ?>
+            <th><?= varlang('key'); ?></th>
+        <?php } ?>
         <th><?= varlang('name-9'); ?></th>
         <th><?= varlang('action-2'); ?></th>
     </tr>
     <?php if (count($var_list)) { ?>
         <?php foreach ($var_list as $item) { ?>
             <tr>
-                <td><input type='text' class='form-control' onClick="this.select();" value="&lt;?= varlang('<?= $item->key; ?>'); ?&gt;" /></td>
+                <?php if (User::has('var-create')) { ?>
+                    <td><input type='text' class='form-control' onClick="this.select();" value="&lt;?= varlang('<?= $item->key; ?>'); ?&gt;" /></td>
+                <?php } ?>
                 <td>
                     <form action="<?= url('var/edit'); ?>" method="post" class="ajax-auto-submit">
                         <input type="hidden" name="id" value="<?= $item->id; ?>" />
@@ -60,16 +64,17 @@ if ($errorSearch === 0 && $searchList) {
 <?php } ?>
 </table>
 
+<?php if (User::has('var-create')) { ?>
+    <h4><?= varlang('create-new-var'); ?></h4>
 
-<h4><?= varlang('create-new-var'); ?></h4>
-
-<form method="post" action='<?= url("var/create"); ?>'>
-    <input type="hidden" name='parent_key' value='<?= $var_key; ?>' />
-    <input type='text' name='key' value='' autocomplete="off" placeholder='<?= varlang('key-1'); ?>' class='form-control' />
-    <div class='c10'></div>
-    <?php foreach (\Core\APL\Language::getList() as $lang) { ?>
-        <input type='text' autocomplete="off" name='text[<?= $lang->id; ?>]' value='' placeholder='<?= varlang('text-in-'); ?> <?= $lang->name; ?>' class='form-control' />
+    <form method="post" action='<?= url("var/create"); ?>'>
+        <input type="hidden" name='parent_key' value='<?= $var_key; ?>' />
+        <input type='text' name='key' value='' autocomplete="off" placeholder='<?= varlang('key-1'); ?>' class='form-control' />
         <div class='c10'></div>
-    <?php } ?>
-    <input type='submit' class='btn btn-success' value='<?= varlang('create-10'); ?>' />
-</form>
+        <?php foreach (\Core\APL\Language::getList() as $lang) { ?>
+            <input type='text' autocomplete="off" name='text[<?= $lang->id; ?>]' value='' placeholder='<?= varlang('text-in-'); ?> <?= $lang->name; ?>' class='form-control' />
+            <div class='c10'></div>
+        <?php } ?>
+        <input type='submit' class='btn btn-success' value='<?= varlang('create-10'); ?>' />
+    </form>
+<?php } ?>

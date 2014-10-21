@@ -66,3 +66,5 @@ $uroles = User::extractRoles($user->id);
         <button type="submit" onclick="return confirm('<?= varlang('delete-user'); ?>');" class="btn btn-danger pull-right"><i class="glyphicon glyphicon-remove"></i></button>
     </form>
 <?php } ?>
+
+<div class="c20" style="height: 200px;"></div>

@@ -2,6 +2,7 @@
     <input type='hidden' name='id' value='<?= isset($page['id']) ? $page['id'] : 0; ?>' />
 
     <table class="table table-bordered">
+        <?php if (User::has('page-move')) { ?>
         <tr>
             <th><?= varlang('parent-'); ?></th>
             <td>
@@ -11,6 +12,7 @@
                 </select>
             </td>
         </tr>
+        <?php } ?>
         <tr class="<?= isset($page->clone_id) && $page->clone_id ? 'label-warning' : ''; ?>">
             <th><?= varlang('clone-'); ?></th>
             <td>
