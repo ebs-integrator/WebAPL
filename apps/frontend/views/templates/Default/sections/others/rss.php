@@ -2,9 +2,9 @@
 <rss version="2.0">
 
     <channel>
-        <title>Title</title>
+        <title><?= SettingsModel::one('sitename_' . \Core\APL\Language::ext()); ?></title>
         <link><?= url(); ?></link>
-        <description>Description</description>
+        <description></description>
         <?php foreach ($posts as $item) { ?>
             <item>
                 <title><?= htmlspecialchars($item->title); ?></title>
