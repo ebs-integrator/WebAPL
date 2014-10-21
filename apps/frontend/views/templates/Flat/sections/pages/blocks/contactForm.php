@@ -4,23 +4,23 @@
         <div class="form_error"></div>
         <div class="nmpm">
             <label><?= varlang('name-last-name'); ?>*</label>
-            <input name="name" type="text">
+            <input required="" name="name" type="text">
         </div>
         <div class="nmpm">
             <label><?= varlang('email'); ?>*</label>
-            <input name="email" type="text" >
+            <input required="" name="email" type="text" >
         </div>
         <div class='clearfix'></div>
         <div class='nmpm'>
             <label><?= varlang('adresa-telefon'); ?> </label>
-            <input name="address" type="text" >
+            <input required="" name="address" type="text" >
         </div>
         <label><?= varlang('subiect'); ?>*</label>
-        <input name="subject" type="text"  class="subj">
+        <input required="" name="subject" type="text"  class="subj">
         <label><?= varlang('message'); ?></label>
-        <textarea name="message"></textarea>
+        <textarea required="" name="message"></textarea>
         <label class="code_lbl"><?= varlang('cod-verificare'); ?>*</label>
-        <input class="code" name="capcha" type="text">
+        <input required="" class="code" name="capcha" type="text">
         <img height="31" src="<?= SimpleCapcha::make('contact'); ?>">
         <div class="clearfix"></div>
         <input type="submit" value="<?= varlang('submit'); ?>">

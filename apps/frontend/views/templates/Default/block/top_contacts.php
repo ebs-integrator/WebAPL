@@ -48,10 +48,10 @@
             <div class="contact_top_notif adv" style="display: none;"><?= varlang('success'); ?> </div>
             <form id="contact_top_form" action="<?= url(); ?>" method="post">
                 <div class="form_error"></div>
-                <input type="text" name="name" placeholder="<?= varlang('name-last-name'); ?>">
-                <input type="text" name="email" placeholder="<?= varlang('email'); ?>">
-                <textarea name="message" placeholder="<?= varlang('message'); ?>"></textarea>
-                <input name="capcha" class="code" type="text">
+                <input required="" type="text" name="name" placeholder="<?= varlang('name-last-name'); ?>">
+                <input required="" type="text" name="email" placeholder="<?= varlang('email'); ?>">
+                <textarea required="" name="message" placeholder="<?= varlang('message'); ?>"></textarea>
+                <input required="" name="capcha" class="code" type="text">
                 <img src="<?= SimpleCapcha::make('contact_top'); ?>" height="31">
                 <input type="submit" value="<?= varlang('submit'); ?>">
             </form>

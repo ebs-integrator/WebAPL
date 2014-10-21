@@ -1,8 +1,8 @@
 <h3>Evenimente</h3>
 
 <ul class="nav nav-tabs" role="tablist" id="form-tabs">
-    <li class="active"><a href="#elist" role="tab" data-toggle="tab">Lista evenimente</a></li>
-    <li><a href="#egroups" role="tab" data-toggle="tab">Grupe evenimente</a></li>
+    <li class="active"><a href="#elist" role="tab" data-toggle="tab"><?= varlang('event-list'); ?></a></li>
+    <li><a href="#egroups" role="tab" data-toggle="tab"><?= varlang('event-group'); ?></a></li>
 </ul>
 <div class="tab-content">
     <div class="tab-pane active" id="elist">

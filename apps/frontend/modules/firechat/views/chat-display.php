@@ -93,7 +93,7 @@
 <script type='text/javascript'>
     var to_person = <?= $chat->person_id; ?>;
 
-    var chatRef = new Firebase('https://aplchat.firebaseio.com');
+    var chatRef = new Firebase('<?=SettingsModel::one('firechat_host');?>');
     var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
 
     var chatRun = function(uid) {
@@ -103,7 +103,7 @@
             chat._chat.createRoom('With <?= $chat->user_name; ?>', 'private', function(roomId) {
                 chat._chat.enterRoom(roomId);
 
-                var fredNameRef = new Firebase('https://aplchat.firebaseio.com/room-metadata/' + roomId);
+                var fredNameRef = new Firebase('<?=SettingsModel::one('firechat_host');?>/room-metadata/' + roomId);
                 fredNameRef.child('person_id').set(to_person);
                 fredNameRef.child('closed').set(0);
 

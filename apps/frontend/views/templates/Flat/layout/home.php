@@ -30,9 +30,9 @@
             var base_url = '<?= url(); ?>';
 
             var disqus_url = '<?= url(); ?>';
-            var disqus_shortname = '<?= SettingsModel::one('disqus_shortname');?>';
+            var disqus_shortname = '<?= SettingsModel::one('disqus_shortname'); ?>';
             var disqus_title = '<?= Core\APL\Template::getPageTitle(isset($page) ? $page : null); ?>';
-            var disqus_config = function () {
+            var disqus_config = function() {
                 this.language = "<?= Core\APL\Language::ext(); ?>";
             };
 
@@ -49,7 +49,7 @@
         <header style="background:url('<?= (isset($page->background) && $page->background) ? url($page->background->path) : res("assets/img/backgr1.png"); ?>') center ">
             <div class="row1">
                 <div class="left">
-                    <a href="<?= Language::url('/'); ?>" class="l_box"><span><?=  str_replace(" ", "</span><span>", SettingsModel::one('sitename_' . Language::ext()));?></span></a>
+                    <a href="<?= Language::url('/'); ?>" class="l_box"><span><?= str_replace(" ", "</span><span>", SettingsModel::one('sitename_' . Language::ext())); ?></span></a>
                     <div class="mini_header">
                         <div class="mh_button"></div>
                         <div class="content hidden">
@@ -121,7 +121,9 @@
             </div>
             <div class="clearfix"></div>
         </header>
-
+        
+        <div id="hm_scroll"></div>
+        
         <?= $content; ?> 
 
         <?= View::make('block.footer'); ?>

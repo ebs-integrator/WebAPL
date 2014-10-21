@@ -45,7 +45,8 @@ class SettingsController extends BaseController {
             }
         }
         
-        Log::info('Edit settings');
+        $jsn = @json_encode($settings);
+        Log::info('Edit settings '.  $jsn);
         
         return [];
     }
