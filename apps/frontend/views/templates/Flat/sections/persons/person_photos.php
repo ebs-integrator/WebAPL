@@ -5,7 +5,7 @@ foreach ($groups as $group) {
         <div class='personal'>
             <div class='img'>
                 <?php if (isset($person->path) && $person->path) { ?>
-                    <img src='<?= url($person->path); ?>'>
+                    <img alt="<?= $person->first_name; ?> <?= $person->last_name; ?>" title="<?= $person->first_name; ?> <?= $person->last_name; ?>" src='<?= url($person->path); ?>'>
                 <?php } ?>
             </div>
             <div class="left">

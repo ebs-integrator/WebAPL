@@ -3,7 +3,7 @@
         <div class='city_box'>
             <div class='img'>
                 <?php if (isset($item['cover']->path)) { ?>
-                    <img src="<?= url($item['cover']->path); ?>" />
+                    <img alt="<?= $item->title; ?>" title="<?= $item->title; ?>" src="<?= url($item['cover']->path); ?>" />
                 <?php } ?>
             </div>
             <div class='city_info'>

@@ -6,7 +6,7 @@
             <div class="left">
                 <div class="img">
                     <?php if ($item->cover) { ?>
-                        <img src="<?= url($item->cover['path']); ?>">
+                        <img alt="<?= $item->title; ?>" title="<?= $item->title; ?>" src="<?= url($item->cover['path']); ?>">
                     <?php } ?>
                 </div>
                 <div class="details">

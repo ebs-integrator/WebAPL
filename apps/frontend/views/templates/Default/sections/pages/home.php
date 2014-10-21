@@ -7,7 +7,7 @@
     <div class="menu">
 
         <?php if ($page->background) { ?>
-            <img src="<?= url($page->background->path); ?>" class="backg">
+            <img alt="<?=$page->background->name;?>" title="<?=$page->background->name;?>" src="<?= url($page->background->path); ?>" class="backg">
         <?php } ?>
         <div class="wrap">
             <?php foreach ($general_pages as $item) { ?>
@@ -15,7 +15,7 @@
                     <a href="<?= $item->url; ?>" class="<?= $item->id == $page->id ? 'active' : ''; ?>">
                         <span class="menu_img">
                             <?php if ($item->image_icon_big) { ?>
-                                <img src="<?= url($item->image_icon_big->path); ?>">
+                                <img alt="<?=$item->title;?>" title="<?=$item->title;?>" src="<?= url($item->image_icon_big->path); ?>">
                             <?php } ?>
                         </span>
                         <span class="menu_title"><?= $item->title; ?></span>
