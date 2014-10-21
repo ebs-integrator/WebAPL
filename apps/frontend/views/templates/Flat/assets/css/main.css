@@ -431,13 +431,35 @@ header .row1 > .left{
     border: 4px solid #fff;
     padding: 8px 20px 5px ;
     max-width: 100%;
+    min-width:100px;
     display: inline-block;
     line-height: 1.115;
 }
-.l_box p{    
+.l_box span{    
     color:#fff;
     font: 29px "AvenirNext-Bold";
     line-height: 1.115;
+}
+.prefooter article.doc{
+    float: right;
+    width: 50%;
+    height: 403px;
+    margin:0;
+}
+.prefooter article.doc a{
+    background:none;
+}
+.prefooter article.doc .ttl a{
+    background: none;
+    color: #ff6577;
+    font: 35px 'AvenirNext-Bold';
+}
+.prefooter article.doc{
+    padding:50px 65px;
+}
+
+.prefooter article.doc .ttl img{
+    display:none;
 }
 .contact{
     margin-right:70px;

@@ -293,7 +293,7 @@ header .contact .cont .cont_form .prp a, .prp a {
     .header_menu_content .social a{
         color:#abe7e6;
     }
-    
+
 }
 
 
@@ -302,4 +302,20 @@ header .contact .currency .lang .relative p {
 }
 .a_box.v_g .details{
     background-color:#79b9b8;
+}
+
+.dop .right .status.on {
+    background: url('../../img/vice_on.png') no-repeat left center;
+}
+.dop .right .buttons button.firechat-hide {
+    background: url('../../img/save_b.png')no-repeat center #fff;
+}
+.dop .right .buttons button.firechat-close {
+    background: url('../../img/close_b.png')no-repeat center #fff;
+}
+.dop .right .buttons button.firechat-show {
+    background: url('../../img/unsave_b.png')no-repeat center #fff;
+}
+.dop .top,#firechat .green input[type=submit]{
+    border-color:#99bddf;
 }
