@@ -7,7 +7,7 @@
             <div class="info unic">
                 <div class="img">
                     <?php if ($post->cover) { ?>
-                        <img src="<?= url($post->cover['path']); ?>" width="347">
+                        <img alt="<?= $post->title; ?>" title="<?= $post->title; ?>" src="<?= url($post->cover['path']); ?>" width="347">
                     <?php } ?>
                 </div>
                 
