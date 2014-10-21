@@ -151,11 +151,11 @@ class InstallController extends BaseController {
             $templates = glob($_SERVER['DOCUMENT_ROOT'] . $templatesDir . "*", GLOB_ONLYDIR);
             foreach ($templates as $template) {
                 if ($tempalteDir != $template) {
-                    File::deleteDirectory($template);
+                    //File::deleteDirectory($template);
                 }
             }
 
-            SettingsModel::put('template', $tpl);
+            SettingsModel::put('template_frontend', $tpl);
 
             Session::put('step4', true);
             return Illuminate\Support\Facades\Redirect::to('install/step5');
