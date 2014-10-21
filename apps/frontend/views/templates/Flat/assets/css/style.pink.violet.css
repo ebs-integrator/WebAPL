@@ -15,7 +15,9 @@
     border: 1px solid #efb4cd;
 } 
 
-
+.l_box span{
+    color:#F15295
+}
 .sec_span, h1, .attention span, nav p, .city_box .title, .form .ftb,  .name, .sort_b .selectboxit-container span,.selectboxit-container .selectboxit-options a, .calendar_slider table thead tr:first-child td,  .com_box .title,.sec_details .sec_name, .secretar span, table.plc > tbody > tr > td > a, .adv, .s_title, .det_news, .search_t span, .search_p span, .cda ul li .left a, ul.vice li .name, .bgr .info > ul > li .left {
     color: #f03081;
 } 

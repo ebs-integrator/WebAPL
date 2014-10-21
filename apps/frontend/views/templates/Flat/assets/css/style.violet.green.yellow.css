@@ -28,7 +28,9 @@ footer .copy a {
 } 
 
 
-
+.l_box span{
+    color:#472347
+}
 
 .contact a.contact_us, footer .right p.y_info {
     color: #6DCAB5;

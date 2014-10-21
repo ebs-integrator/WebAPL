@@ -4,7 +4,7 @@
 <div class="cont">
     <div class="contact_us_btn">
         <button class="contact_us"><?= varlang('contact-us'); ?></button>
-        <div class="cont_form hidden">
+        <div class="cont_form">
             <div class="relative">
                 <p></p>
             </div>

@@ -39,10 +39,6 @@ $(document).ready(function() {
         $('.menu_content').toggleClass('hidden');
         $('.overlay3').toggleClass('hidden');
     });
-    $('.cont .contact_us_btn').hover(function() {
-        $('header .contact .contact_us').toggleClass('active');
-        $('.cont .cont_form').toggleClass('hidden');
-    });
     $('.cont .cont_form').hover(function() {
         $('.cont .cont_form').removeClass('hidden');
     });

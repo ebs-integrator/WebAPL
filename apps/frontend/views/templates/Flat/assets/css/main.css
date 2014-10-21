@@ -439,6 +439,7 @@ header .row1 > .left{
     color:#fff;
     font: 29px "AvenirNext-Bold";
     line-height: 1.115;
+    display:block;
 }
 .prefooter article.doc{
     float: right;
@@ -756,7 +757,7 @@ article{
     height:253px;
     background:#fff;
     overflow: hidden;
-    margin-top:88px;
+    margin-top:44px;
     position:relative;
     float:left;
 }
@@ -4311,6 +4312,9 @@ ul.vice li .p_name {
     header .cont:hover .cont_form{
         margin-top:10px;
     }
+    .n_alert{
+        display: none;
+    }
     .left_block nav span,.left_block nav .more{
         display:none;
     }
@@ -4603,6 +4607,9 @@ ul.vice li .p_name {
     .vice .img img,.vice .img{
         max-width:180px;
     }
+    .n_alert{
+        display:none;
+    }
     ul.vice li .left{
         margin-left:20px;
         width:380px;
@@ -4864,6 +4871,11 @@ ul.vice li .p_name {
         max-width: 170px;
         float:left;
         margin-top:8px;
+    }
+    .l_box span{
+        font: 22px 'AvenirNext-Bold';
+        color: #00bd9c;
+        line-height: 1.115;
     }
     .resp_menu{
         display:block;
