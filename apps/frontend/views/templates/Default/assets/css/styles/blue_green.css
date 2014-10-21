@@ -68,7 +68,7 @@ header .contact .cont .cont_form .form_title {
 
 
 .dop .right .c_name {
-    color: #95cdd6;
+    color: #fff;
 } 
 
 
@@ -145,7 +145,7 @@ header .left button.chat .violet,button.chat_button .violet,button.vice_button .
 } 
 
 ul.social li:first-child {
-    border-bottom: 1px solid #A9BA50;
+    border-bottom: 1px solid #A0C7C4;
 } 
 
 #firechat .green input[type=submit], .form input[type=submit], .dop .top, .snd_sbm {
@@ -229,4 +229,38 @@ header.page,table.taxe thead tr td,table.taxe thead tr{
 }
 .m_criteria{
     border-color:#52bbc9;
+}
+
+.right article ul li {
+    background: url('../../img/li_bl.png') no-repeat left 12px;
+}
+.dop .top,#firechat .green input[type=submit], .form input[type=submit]{
+    border-color:#579240;
+}
+.dop .right .buttons button.firechat-hide {
+    background: url('../../img/save_bg.png')no-repeat center #fff;
+}
+.dop .right .buttons button.firechat-close {
+    background: url('../../img/close_bg.png')no-repeat center #fff;
+}
+.dop .right .buttons button.firechat-show {
+    background: url('../../img/unsave_bg.png')no-repeat center #fff;
+}
+.dop .right .status.on {
+    background: url('../../img/vice_on.png') no-repeat left center;
+}
+header .contact .tel{
+    background: url('../../img/g_phone.png') no-repeat left center;
+}
+.header_menu_content .social,header .header_mini{
+    background-color: #155962;
+}
+.header_menu_content .social a{
+    color:#d7f0f2;
+}
+.header_menu_content{
+    background-color: #98C5C2;
+}
+.menu_list li{
+    border-color:#469ca8;
 }

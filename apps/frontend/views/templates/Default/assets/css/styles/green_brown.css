@@ -335,3 +335,19 @@ footer .right > .left.search input[type=submit] {
 .right_menu li:hover {
     background: url('../../img/right_active_m.png') 25px center no-repeat #f8f8f8;
 }
+
+.dop .right .status.on {
+    background: url('../../img/vice_on.png') no-repeat left center;
+}
+.dop .right .buttons button.firechat-hide {
+    background: url('../../img/save_bg.png')no-repeat center #fff;
+}
+.dop .right .buttons button.firechat-close {
+    background: url('../../img/close_bg.png')no-repeat center #fff;
+}
+.dop .right .buttons button.firechat-show {
+    background: url('../../img/unsave_bg.png')no-repeat center #fff;
+}
+.dop .top,#firechat .green input[type=submit]{
+    border-color:#c4d390;
+}

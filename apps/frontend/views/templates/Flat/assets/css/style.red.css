@@ -19,7 +19,9 @@ and open the template in the editor.
 } 
 
 
-
+.l_box span{
+    color:#494043
+}
 
 .adv {
     background: #e8e5e6;

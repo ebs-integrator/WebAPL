@@ -79,7 +79,7 @@ header .contact .cont .cont_form .form_title {
 
 
 .dop .right .c_name {
-    color: #d6bd95;
+    color: #fff;
 } 
 
 
@@ -335,3 +335,18 @@ header .contact .currency .lang .relative p{
 
 
 
+.dop .top,#firechat .green input[type=submit], .form input[type=submit]{
+    border-color:#579240;
+}
+.dop .right .buttons button.firechat-hide {
+    background: url('../../img/save_bg.png')no-repeat center #fff;
+}
+.dop .right .buttons button.firechat-close {
+    background: url('../../img/close_bg.png')no-repeat center #fff;
+}
+.dop .right .buttons button.firechat-show {
+    background: url('../../img/unsave_bg.png')no-repeat center #fff;
+}
+.dop .right .status.on {
+    background: url('../../img/vice_on.png') no-repeat left center;
+}

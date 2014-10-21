@@ -17,6 +17,9 @@ footer .left {
 footer .f_menu {
     background: #361D07;
 } 
+.l_box span{
+    color:#B88323
+}
 
 .f_fb{
     background:url('../img/fb_yellow.png')no-repeat center #814A23;

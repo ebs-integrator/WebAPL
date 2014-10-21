@@ -519,6 +519,7 @@ header .contact .cont .cont_form{
     border-top:3px solid #b6c57e;
     right: 70px;
     top:74px;
+    display:none;
     background: #fff;
     padding:15px 0px 15px 17px;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(174, 174, 174, 0.75);
@@ -761,6 +762,9 @@ header .contact .currency span.s_c{
     font:13px 'open_sanssemibold';
     cursor: pointer;
 }
+.contact_us_btn:hover  .cont_form {
+    display: block !important;
+}
 header .contact .currency span.s_c span{
     padding:0px 15px 0px 10px;
     background: url('../img/currency_arrow.png') no-repeat 90% center;
@@ -774,7 +778,7 @@ header .contact .currency .lang{
     width:140px;
     border-top:3px solid #b6c57e;
     right: 70px;
-    top:74px;
+    top:73px;
     background: #fff;
     padding:20px 0;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(174, 174, 174, 0.75);
@@ -1393,6 +1397,7 @@ footer .copy{
     color:#4b4b4b;
     font:13px 'open_sanssemibold';
     line-height: 27px;
+    margin-bottom:0px;
 }
 footer .copy a{
     color:#60a046;
@@ -1734,7 +1739,7 @@ div.hr_grey{
     display:none;
     background:#fff;
     width: 100%;
-    z-index:999;
+    z-index:990;
     border-bottom:4px solid #b6c57e;
     padding-bottom:2px;
 }
@@ -3601,7 +3606,7 @@ div.fb-like.fb_iframe_widget{
     position:fixed;
     bottom:0px;
     background:#fff;
-    z-index:888;
+    z-index:996;
     right:10px;
 }
 .dop .top{
@@ -5107,7 +5112,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         padding: 0px 10px;
         max-width:680px;
     }
-
+    .n_alert{
+        display: none;
+    }
     table.sondaje progress[value] {
         width: 250px;
     }
@@ -5336,7 +5343,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     header .left .top_menu,header .contact.right p.tel,header .cont .contact_us,.home_menu{
         display:none;
     }
-
+    .n_alert{
+        display: none;
+    }
     section > .wrap,section .dirs_menu .wrap{
         padding:0 20px;
     }
@@ -6476,7 +6485,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         margin-right:8px;
     }
     .header_menu_content{
-        top:80px;
+        top:78px;
     }
     ul.dcr .dcr_box > ul > li, ul.atz > li {
         padding-left: 38px;
