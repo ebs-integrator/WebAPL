@@ -26,6 +26,8 @@ class Firechat extends \Core\APL\ExtensionController {
         Route::post('firechat/audience', array('before' => 'auth', array($this, 'audience')));
         Route::post('firechat/sendmail', array('before' => 'auth', array($this, 'sendmail')));
 
+        Route::get('firechat/settings', array('before' => 'auth', array($this, 'settings')));
+        
         Event::listen('construct_left_menu', array($this, 'left_menu_item'));
 
         $this->layout = Template::mainLayout();
@@ -39,6 +41,16 @@ class Firechat extends \Core\APL\ExtensionController {
         );
 
         $this->layout->content = Template::moduleView($this->module_name, 'views.chat-form', $data);
+
+        return $this->layout;
+    }
+    
+    public function settings() {
+        \User::onlyHas('chat-view');
+
+        $data['setts'] = \SettingsModel::getAll();
+
+        $this->layout->content = Template::moduleView($this->module_name, 'views.chat-settings', $data);
 
         return $this->layout;
     }

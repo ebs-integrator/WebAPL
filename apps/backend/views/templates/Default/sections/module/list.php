@@ -12,7 +12,7 @@
             <td>
                 <?php if ($module->enabled == 1) { ?>
                     <?php if ($module->settings_page) { ?>
-                    [ <?= HTML::link($module->settings_page, 'Edit'); ?> ] 
+                    [ <?= HTML::link($module->settings_page, varlang('module-edit')); ?> ] 
                     <?php } ?>
                     [ <?= HTML::link("module/disable/{$module->id}", varlang('disable')); ?> ]
                 <?php } else { ?>

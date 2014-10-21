@@ -23,7 +23,7 @@
     var person_id = <?= $person->id; ?>;
     var uname = '<?= $person_lang->first_name; ?> <?= $person_lang->last_name; ?>';
 
-        var chatRef = new Firebase('https://aplchat.firebaseio.com');
+        var chatRef = new Firebase('<?=SettingsModel::one('firechat_host');?>');
         var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
 
         chatRef.auth('<?= $token; ?>', function(error, user) {
@@ -47,7 +47,7 @@
         });
 
         chat._chat.on('room-exit', function(roomId) {
-            (new Firebase('https://aplchat.firebaseio.com/room-metadata/' + roomId)).child('closed').set(1);
+            (new Firebase('<?=SettingsModel::one('firechat_host');?>/room-metadata/' + roomId)).child('closed').set(1);
             jQuery.post('<?= url('firechat/closeroom'); ?>', {roomId: roomId, person_id: '<?= $person->id; ?>'});
         });
 

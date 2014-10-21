@@ -10,6 +10,9 @@ Event::fire('APL.modules.load');
 
 Route::get('page', 'HomeController@showPage');
 
+
+Route::get('death', 'HomeController@getEmpty');
+
 Route::controller('auth', 'AuthController');
 Route::controller('module', 'ModuleController');
 
