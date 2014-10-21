@@ -1,8 +1,8 @@
 <h3>Edit post #<?= $general['post']->id; ?>
     <?php if ($general['post']->is_trash) { ?>
-        <a href='<?= url('feed/restore/' . $general['post']->id); ?>' onclick="return confirm('Restore this post?');" class='btn btn-success btn-sm'>RESTORE</a>
+        <a href='<?= url('feed/restore/' . $general['post']->id); ?>' onclick="return confirm('Restore this post?');" class='btn btn-success btn-sm'><?= varlang('restore'); ?></a>
     <?php } else { ?>
-        <a href='<?= url('feed/trash/' . $general['post']->id); ?>' onclick="return confirm('Move this post to trash?');" class='btn btn-danger btn-sm'>TRASH</a>
+        <a href='<?= url('feed/trash/' . $general['post']->id); ?>' onclick="return confirm('Move this post to trash?');" class='btn btn-danger btn-sm'><?= varlang('trash-1'); ?></a>
     <?php } ?>
 </h3>
 
@@ -45,7 +45,7 @@
     <form method="post" action="<?= url('feed/delete'); ?>">
         <input type="hidden" name="id" value="<?= $general['post']->id; ?>" />
 
-        <input type="submit" class="btn btn-danger pull-right" onclick="return confirm('Delete this post?');" value="Delete this post" />
+        <input type="submit" class="btn btn-danger pull-right" onclick="return confirm('<?= varlang('delete-this-post'); ?>');" value="<?= varlang('delete-this-post-1'); ?>" />
     </form>
     <div class='c10'></div>
 <?php } ?>

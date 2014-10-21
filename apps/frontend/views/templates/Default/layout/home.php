@@ -54,7 +54,13 @@
                 <?php Event::fire('logo_contructor'); ?>
             </div>
             <div class="left home_menu">
-                <?= View::make('sections.elements.topmenu'); ?>
+                <div class="left">
+                    <?= View::make('sections.elements.topmenu'); ?>
+                </div>
+                <div class="header_mini ">
+                    <div class="head_list"></div>                
+                </div>
+                <div class="contact right"><?= View::make('block.top_contacts'); ?></div>
             </div>
             <div class="header_mini ">
                 <div class="head_list"></div>

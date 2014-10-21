@@ -49,7 +49,7 @@
         <header style="background:url('<?= (isset($page->background) && $page->background) ? url($page->background->path) : res("assets/img/backgr1.png"); ?>') center ">
             <div class="row1">
                 <div class="left">
-                    <a href="<?= Language::url('/'); ?>" class="l_box"><?=SettingsModel::one('sitename_' . Language::ext());?></a>
+                    <a href="<?= Language::url('/'); ?>" class="l_box"><span><?=  str_replace(" ", "</span><span>", SettingsModel::one('sitename_' . Language::ext()));?></span></a>
                     <div class="mini_header">
                         <div class="mh_button"></div>
                         <div class="content hidden">
