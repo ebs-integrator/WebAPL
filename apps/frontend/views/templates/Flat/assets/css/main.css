@@ -448,11 +448,47 @@ header .row1 > .left{
 }
 .prefooter article.doc a{
     background:none;
+    font: 17px 'AvenirNext-DemiBold';
+}
+.prefooter article.doc table{
+    max-width:640px;
+    max-height:228px;
+    overflow:hidden;
+}
+.prefooter article.doc table td{
+    border:1px solid #E8E8E8;
+}
+.prefooter article.doc table td:last-child{
+    border-right:0px;
+}
+.prefooter article.doc table td:first-child{
+    border-left:0px;
+    padding:20px 10px;
+}
+.prefooter article.doc table tr:last-child td{
+    border-bottom:0px;
+}
+.prefooter article.doc table tr:first-child td{
+    border-top:0px;
+}
+.prefooter article.doc table{
+    margin-top:20px;
 }
 .prefooter article.doc .ttl a{
     background: none;
+    padding-left:0px;
     color: #ff6577;
     font: 35px 'AvenirNext-Bold';
+}
+.prefooter article.doc .more{
+    background: url('../img/black_arrow.png') no-repeat center;
+    bottom: inherit;
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 16px;
+    left: 620px;
+    margin-top: -3px;
 }
 .prefooter article.doc{
     padding:50px 65px;
@@ -4134,7 +4170,7 @@ ul.vice li .p_name {
     .telef {
         font: 30px 'AvenirNext-Regular';
     }
-    footer .left .content,footer .right .content{
+    footer .left .content{
         width:550px;
     }
     section .left_block{
@@ -4170,7 +4206,7 @@ ul.vice li .p_name {
     .left_block ul.menu > li > a{
         font: 18px 'AvenirNext-Medium';
     }
-    footer .left .content, footer .right .content ,.prefooter .row1_l .content, .prefooter .row1_r .content,.fcc{
+    footer .left .content, .prefooter .row1_l .content, .prefooter .row1_r .content,.fcc{
         width: 460px;
     }
     .fcc{
@@ -4400,6 +4436,17 @@ ul.vice li .p_name {
     .prefooter .row1_l, .prefooter .row1_r{
         float:none;
         width:100%;
+        clear:both;
+    }
+    .prefooter article.doc{
+        width: 710px;
+    }
+    .prefooter article.doc .more{
+        left:545px;
+    }
+    .prefooter article.doc:after{
+        clear:both;
+        display:block;
     }
     footer .copy{
         margin-top:40px;
@@ -4859,6 +4906,13 @@ ul.vice li .p_name {
     .prefooter .row1_l, .prefooter .row1_r{
         float:none;
         width:100%;
+        clear:both;
+    }
+    .prefooter article.doc{
+        width: 710px;
+    }
+    .prefooter article.doc .more{
+        left:545px;
     }
     .prefooter .row1_l .content, .prefooter .row1_r .content, .fcc{
         width:100%;
@@ -5495,11 +5549,17 @@ ul.vice li .p_name {
         display: block;
         font-size: 30px;
     }
-    .prefooter .row1_l, .prefooter .row1_r{
+    .prefooter .row1_l, .prefooter .row1_r,.prefooter article.doc{
         height:290px;
+    }
+    .prefooter article.doc{
+        width:100%;
     }
     .prefooter a.f_artc{
         font-size: 18px;
+    }
+    .prefooter article.doc .more {
+        left: 70%;
     }
     .prefooter .data{
         height:25px;
@@ -5507,6 +5567,9 @@ ul.vice li .p_name {
     }
     .m_criteria{
         font-size: 15px;
+    }
+    .prefooter article.doc .ttl a{
+        font-size:30px;
     }
 
 }
