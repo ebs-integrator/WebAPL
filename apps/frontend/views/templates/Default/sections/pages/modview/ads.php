@@ -6,7 +6,7 @@
             <div class="info unic">
                 <div class="img">
                     <?php if ($post->cover) { ?>
-                        <img src="<?= url($post->cover['path']); ?>">
+                        <img alt="<?= $post->title; ?>" title="<?= $post->title; ?>" src="<?= url($post->cover['path']); ?>">
                     <?php } ?>
                     <div class="details">
                         <p class="data"><?= date("d-m-Y, H:i", strtotime($post->created_at)); ?>

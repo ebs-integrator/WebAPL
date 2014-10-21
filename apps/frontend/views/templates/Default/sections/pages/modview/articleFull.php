@@ -2,7 +2,7 @@
 <div class='hr_dbl'></div>
 <div class='u_a'>
     <?php if (isset($post['cover']->path)) { ?>
-        <img src="<?= url($post['cover']->path); ?>" width="870" />
+        <img alt="<?= $post->title; ?>" title="<?= $post->title; ?>" src="<?= url($post['cover']->path); ?>" width="870" />
     <?php } ?>
     <div class="details">
         <p class="data"><?= date("d-m-Y, H:i", strtotime($post->created_at)); ?>

@@ -3,7 +3,7 @@
 <div class="hr_dbl"></div>
 <div class="u_a">
     <?php if ($post->cover) { ?>
-        <img src="<?= url($post->cover['path']); ?>">
+        <img alt="<?= $post->title; ?>" title="<?= $post->title; ?>" src="<?= url($post->cover['path']); ?>">
     <?php } ?>
 </div>
 <div class='conten'>

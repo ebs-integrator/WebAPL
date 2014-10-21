@@ -16,7 +16,7 @@ foreach ($groups as $group) {
                 <td>
                     <div class="clu_img">
                         <?php if (isset($person->path) && $person->path) { ?>
-                            <img src='<?= url($person->path); ?>'>
+                            <img alt="<?= $person->first_name; ?> <?= $person->last_name; ?>" title="<?= $person->first_name; ?> <?= $person->last_name; ?>" src='<?= url($person->path); ?>'>
                         <?php } ?>
                     </div>
                     <div class="clu_cont">

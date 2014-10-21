@@ -6,7 +6,7 @@
             <li>
                 <div class="img">
                     <?php if (isset($person->path) && $person->path) { ?>
-                        <img width="210" src='<?= url($person->path); ?>'>
+                        <img width="210" alt="<?= $person->first_name; ?> <?= $person->last_name; ?>" title="<?= $person->first_name; ?> <?= $person->last_name; ?>" src='<?= url($person->path); ?>'>
                     <?php } ?>
                 </div>
                 <div class="left">
