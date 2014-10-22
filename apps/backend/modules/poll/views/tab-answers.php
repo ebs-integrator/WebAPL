@@ -6,10 +6,11 @@
         mtype: 'POST',
         autoencode: true,
         loadonce: false,
-        colNames: ['ID', '<?= varlang('answer'); ?>'],
+        colNames: ['ID', '<?= varlang('answer'); ?>', '<?= varlang('count'); ?>'],
         colModel: [
             {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}, width: 10},
-            {name: 'answer', index: 'answer', height: 50, resizable: true, align: "left", editable: true, edittype: "text"}
+            {name: 'answer', index: 'answer', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
+            {name: 'count', index: 'count', height: 50, resizable: true, align: "left", editable: false, edittype: "text"}
         ],
         rowNum: 30,
         multiselect: false,
@@ -27,13 +28,13 @@
             $("#pager-poll_we_left table").hide();
         },
         onSelectRow: function(rowid) {
-            window.location.href = '<?= url('poll/answer/edit') ?>/'+rowid;
+            window.location.href = '<?= url('poll/answer/edit') ?>/' + rowid;
         }
     };
 </script>
 
 <div class="c20"></div>
-<a class="btn btn-success" href="<?=url('poll/anwser/create/' . $poll->id);?>">Adauga un raspuns</a>
+<a class="btn btn-success" href="<?= url('poll/anwser/create/' . $poll->id); ?>"><?= varlang('add-answer'); ?></a>
 <div class="c20"></div>
 
 <?= View::make('sections/jqgrid/form')->with('options', 'poll_' . ( isset($poll->id) ? $poll->id : '') . '_options')->with('id', 'poll_we'); ?>

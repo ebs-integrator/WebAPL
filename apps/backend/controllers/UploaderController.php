@@ -53,7 +53,7 @@ class UploaderController extends BaseController {
             $extension = $file->getClientOriginalExtension();
             $name = $file->getClientOriginalName();
 
-            $filename = urigen($name) . '_' . sha1(uniqid() . $name) . "." . $extension;
+            $filename = urigen($name) . '-' . uniqid() . "." . $extension;
 
             $uploadDir = Files::$upload_dir . ($data['path'] ? "/" . $data['path'] : '');
             $uploadFile = $uploadDir . "/" . $filename;

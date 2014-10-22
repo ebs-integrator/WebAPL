@@ -8,7 +8,7 @@
 
         <div class='r_sond'>
             <?php foreach ($poll->answers as $k => $answer) { ?>
-                <div><input type='radio' name='poll_answer' value="<?= $answer->id; ?>" id='answer_<?= $answer->id; ?>' <?=$k==0?'checked':''?>/><label for='answer_<?= $answer->id; ?>'><?= $answer->title; ?></label></div>
+                <div><input type='radio' name='poll_answer' value="<?= $answer->answer_id; ?>" id='answer_<?= $answer->answer_id; ?>' <?=$k==0?'checked':''?>/><label for='answer_<?= $answer->answer_id; ?>'><?= $answer->title; ?></label></div>
             <?php } ?>
         </div>
         <hr class="reg">
@@ -22,7 +22,7 @@
         </div>
         <div class="clearfix"></div>
 
-        <input type="submit" value="trimite" class="snd_sbm">
+        <input type="submit" value="<?= varlang('send-2'); ?>" class="snd_sbm">
     </form>
     
     <?=View::make('sections.elements.socials');?>

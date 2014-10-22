@@ -5,7 +5,7 @@
     <?php foreach (Language::getList() as $lang) { ?>
         <li><a href="#lang<?= $lang->id; ?>" role="tab" data-toggle="tab"><?= $lang->name; ?></a></li>
     <?php } ?>
-    <li><a href="#answers" role="tab" data-toggle="tab">Raspunsuri</a></li>
+    <li><a href="#answers" role="tab" data-toggle="tab"><?= varlang('answers'); ?></a></li>
 </ul>
 
 

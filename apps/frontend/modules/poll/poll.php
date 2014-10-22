@@ -100,15 +100,15 @@ class Poll extends \Core\APL\ExtensionController {
 
             $wdata = array(
                 'poll' => PollModel::getWithVotes($id),
-                'answer' => PollAnswerModel::join(PollQuestionModel::getTableName(), PollQuestionModel::getField('id'), '=', PollAnswerModel::getField('poll_question_id'))
-                        ->where(PollQuestionModel::getField('poll_id'), $id)
+                'answer' => PollAnswerModel::join(PollModel::getTableName(), PollModel::getField('id'), '=', PollAnswerModel::getField('poll_id'))
+                        ->where(PollAnswerModel::getField('poll_id'), $id)
                         ->first(),
                 'total_votes' => \PollVotesModel::where('poll_id', $id)->count()
             );
 
             if ($wdata['poll'] && $wdata['answer']) {
                 if (!PollModel::ivoted($id)) {
-                    SimpleCapcha::destroy('person_subscribe');
+                    SimpleCapcha::destroy('poll');
 
                     $vote = new \PollVotesModel;
                     $vote->poll_id = $wdata['poll']->id;
