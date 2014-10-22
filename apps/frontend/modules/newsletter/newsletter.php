@@ -37,7 +37,7 @@ class Newsletter extends \Core\APL\ExtensionController {
     public function unsubscribe($code) {
 
         \NewsletterModel::where('hash', $code)->update(array(
-            'enabled' => 1
+            'enabled' => 0
         ));
 
         return (new \PageController)->createPageFrom(function () {
