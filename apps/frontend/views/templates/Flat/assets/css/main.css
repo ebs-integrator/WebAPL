@@ -3587,6 +3587,7 @@ table.sondaje td:last-child {
     background:url('../img/phone_book.png')no-repeat left center;
 }
 .left_block .chat {
+    max-width:340px;
     width: 100%;
     margin-top: 30px;
     padding: 13px 0px;
@@ -4531,9 +4532,12 @@ ul.vice li .p_name {
         width:100%;
         float:none;
     }
-    .contact_r .prp{
+    .contact_r .prp,.contact_l .prp a,.contact_r .prp a,.contact_l .prp{
         width:auto;
         display:inline-block;
+    }
+    .contact_l{
+        padding-left:55px;
     }
     .contact_f{
         width:330px;
@@ -4779,7 +4783,7 @@ ul.vice li .p_name {
         display:inline-block;
     }
     .contact_f{
-        width:330px;
+        width:315px;
         margin-top:40px;
     }
     ul.culture li .right .box{
@@ -5619,7 +5623,20 @@ ul.vice li .p_name {
     .prefooter article.doc .ttl a{
         font-size:30px;
     }
-
+    .left_block .chat .mn{
+        width:25px;
+    }
+    .contact_l .prp{
+        padding:0px 10px;
+    }
+    .contact_l .prp a{
+        padding-left:25px;
+        font: 13px 'AvenirNext-Bold';
+        line-height: 42px;
+    }
+    .left_block .chat .green,.left_block .chat .violet{
+        font-size:20px;
+    }
 }
 
 

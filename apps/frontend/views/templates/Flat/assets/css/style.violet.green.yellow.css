@@ -246,6 +246,7 @@ article .sub_list ul li {
 }
 .left_block .chat .mn {
     background: url('../img/chat_man_vgy.png') no-repeat center;
+    background-size: 100%;
 }
 .sitemap > ul > li > a {
     background: url('../img/f_li_svg.png')no-repeat left 4px;

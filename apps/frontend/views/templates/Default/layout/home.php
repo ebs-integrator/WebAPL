@@ -9,10 +9,10 @@
         <title><?= Core\APL\Template::getPageTitle(isset($page) ? $page : null); ?></title>
 
         <?php foreach (\Core\APL\Template::getMetas() as $metaName => $metaContent) { ?>
-            <meta name="<?= $metaName; ?>" content="<?= $metaContent; ?>"/>>
+            <meta name="<?= $metaName; ?>" content="<?= $metaContent; ?>">
         <?php } ?>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
 
         <link href="<?= res('assets/css/jquery.bxslider.css'); ?>" rel="stylesheet" />
         <link rel="stylesheet" href="<?= res('assets/css/normalize.css'); ?>" />
@@ -32,7 +32,7 @@
             var disqus_url = '<?= url(); ?>';
             var disqus_shortname = '<?= SettingsModel::one('disqus_shortname'); ?>';
             var disqus_title = '<?= Core\APL\Template::getPageTitle(isset($page) ? $page : null); ?>';
-            var disqus_config = function() {
+            var disqus_config = function () {
                 this.language = "<?= Core\APL\Language::ext(); ?>";
             };
 
