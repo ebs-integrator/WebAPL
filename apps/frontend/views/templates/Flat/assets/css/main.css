@@ -1980,7 +1980,7 @@ ul.faq li p:last-child{
     color: #4b4b4b;
     margin: 7px 0;
 }
-.av.green p span {
+.av.green p span,.av p span {
     font:15px  'AvenirNext-BoldItalic';
     color: #ff6477;
 }
@@ -2299,6 +2299,7 @@ ul.faq li p:last-child{
     padding-right: 20px;
     margin-bottom: 60px;
     float: left;
+    min-height:225px;
 }
 .personal .img {
     width: 170px;
@@ -2325,7 +2326,7 @@ ul.faq li p:last-child{
     margin-bottom: 10px;
 }
 p.descr {
-    max-width: 228px;
+    max-width: 200px;
     max-height: 110px;
     font: 14px 'AvenirNext-Regular';
     color: #4b4b4b;
@@ -2699,6 +2700,7 @@ table.c_l_u ul.dcr > li {
 
 ul.dcr > li {
     width: 100%;
+    margin-bottom:20px;
 }
 table ul.dcr > li > a{
     background: url('../img/dir.png') no-repeat 10px center transparent;
@@ -2816,7 +2818,7 @@ span.more_dot {
     margin-bottom:40px;
 }
 .sec_details img{
-    max-width:210px;
+    max-width:200px;
     float:left;
 }
 .sec_details .sec_label{
@@ -2895,7 +2897,7 @@ span.more_dot {
     margin-bottom:10px;
 }
 .a_box .right {
-    max-width: 500px;
+    max-width: 455px;
 }
 .a_box .info {
     font: 17px 'AvenirNext-Regular';
@@ -2935,6 +2937,9 @@ table.plc > tbody > tr > td {
     vertical-align: top;
     border-bottom-width: 2px;    
     position:relative;
+}
+table.plc > tbody > tr:nth-child(2n){
+    background:#fbfbfb;
 }
 table.plc > tbody > tr > td .more{
     background: url('../img/more_dot.png')no-repeat center;
@@ -4268,7 +4273,7 @@ ul.vice li .p_name {
         max-width: 220px;
     }
     .a_box .right {
-        max-width: 320px;
+        max-width: 270px;
     }
     .a_box .info {
         font: 15px 'AvenirNext-Regular';
@@ -4591,7 +4596,7 @@ ul.vice li .p_name {
         max-width: 230px;
     }
     .a_box .right {
-        max-width: 360px;
+        max-width: 310px;
     }
     .a_box .info {
         font: 15px 'AvenirNext-Regular';
