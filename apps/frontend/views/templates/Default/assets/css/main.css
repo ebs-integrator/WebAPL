@@ -1429,6 +1429,9 @@ footer .socials a span{
 }
 footer .right > .left{
     margin-right:55px;
+    float: none;
+    display: inline-block;
+    max-width: 335px;
 }
 footer .right > .left p{
     color:#4b4b4b;
