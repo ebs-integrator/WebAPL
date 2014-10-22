@@ -5,22 +5,22 @@
                 <p class="subt"><?= varlang('legatura-directa'); ?></p>
                 <ul class="date_contact">
                     <li>
-                        <img src="<?= res('assets/img/c_phone.png'); ?>">
+                        <img alt=""  src="<?= res('assets/img/c_phone.png'); ?>">
                         <p><?= varlang('phone-anti'); ?></p>
                         <p><?= varlang('nr-anti'); ?></p>
                     </li>
                     <li>
-                        <img src="<?= res('assets/img/c_mail.png'); ?>">
+                        <img  alt="" src="<?= res('assets/img/c_mail.png'); ?>">
                         <p><?= varlang('email'); ?></p>
                         <p><?= varlang('email-address'); ?></p>
                     </li>
                     <li>
-                        <img src="<?= res('assets/img/c_phone.png'); ?>"
+                        <img  alt="" src="<?= res('assets/img/c_phone.png'); ?>"
                              <p><?= varlang('relatii'); ?></p>
                         <p><?= varlang('nr-relatii'); ?></p>                                    
                     </li>
                     <li>
-                        <img src="<?= res('assets/img/c_fx.png'); ?>">
+                        <img alt=""  src="<?= res('assets/img/c_fx.png'); ?>">
                         <p><?= varlang('fax'); ?></p>
                         <p><?= varlang('nr-fax'); ?></p>
                     </li>

@@ -21,7 +21,7 @@
         <textarea required="" name="message"></textarea>
         <label class="code_lbl"><?= varlang('cod-verificare'); ?>*</label>
         <input required="" class="code" name="capcha" type="text">
-        <img height="31" src="<?= SimpleCapcha::make('contact'); ?>">
+        <img height="31" src="<?= SimpleCapcha::make('contact'); ?>"  alt="" >
         <div class="clearfix"></div>
         <input type="submit" value="<?= varlang('submit'); ?>">
         <div class="clearfix"></div>

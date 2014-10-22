@@ -1217,12 +1217,14 @@ footer .right p.w_info span{
 }
 .page_header{
     width:100%;
-    max-width:2580px;   
+    padding-top:1px
+}
+section,.page_header{
     background: -webkit-linear-gradient(left,#f7f7f7,#f7f7f7 35%,white 35%,white);
     background: linear-gradient(to right,#f7f7f7,#f7f7f7 35%,white 35%,white);
-    background: -o-linear-gradient(left, #f7f7f7,#f7f7f7 35,white 35,white); /* Opera 11.10+ */
+    background: -o-linear-gradient(left, #f7f7f7,#f7f7f7 35,white 35,white);  
     background: -ms-linear-gradient(left,#f7f7f7,#f7f7f7 35%,white 35,white);
-    padding-top:1px
+    max-width: 2850px;
 }
 .left_block .left_details .chat{
     margin-top: 0px;
@@ -1293,12 +1295,11 @@ footer .right p.w_info span{
     border:3px solid #fff;
     border-bottom:0px;
 }
-section{
-    background: -webkit-linear-gradient(left,#f7f7f7,#f7f7f7 25%,white 25%,white);
-    background: linear-gradient(to right,#f7f7f7,#f7f7f7 25%,white 25%,white);
-    background: -o-linear-gradient(left, #f7f7f7,#f7f7f7 25,white 25,white);  
-    background: -ms-linear-gradient(left,#f7f7f7,#f7f7f7 25%,white 25,white);
-    max-width: 2850px;
+.pct,.pot{
+    display:block;
+}
+article h2{
+    margin:0px;
 }
 .b_color{
 
@@ -3922,6 +3923,14 @@ ul.vice li .p_name {
     }
 
 }
+@media only screen and (min-width: 2560px){
+    section,.page_header {
+        background: -webkit-linear-gradient(left,#f7f7f7,#f7f7f7 40%,white 40%,white);
+        background: linear-gradient(to right,#f7f7f7,#f7f7f7 40%,white 40%,white);
+        background: -o-linear-gradient(left, #f7f7f7,#f7f7f7 40,white 40,white);
+        background: -ms-linear-gradient(left,#f7f7f7,#f7f7f7 40%,white 40,white);
+    }
+}
 @media only screen and (min-width: 1356px) and (max-width: 1540px){
     section,.page_header {
         background: -webkit-linear-gradient(left,#f7f7f7,#f7f7f7 30%,white 30%,white);
@@ -5158,7 +5167,7 @@ ul.vice li .p_name {
         font: 15px 'AvenirNext-Regular';
     }
     .wrap{
-        width:320px;
+        width:315px;
     }
     .conten h2, .conten strong {
         font: 15px 'AvenirNext-DemiBold';
@@ -5379,7 +5388,7 @@ ul.vice li .p_name {
         display: block;
     }
     article{
-        width:320px;
+        width:315px;
         margin-top:25px;
     }
     article .categ_title a{

@@ -51,7 +51,7 @@
 
         <div class="page_header">
             <div class="page_top_header">
-                <img class="top_back" src="<?= (isset($super_parent['id']) && $bg_parent = Files::extract('page_bg', $super_parent['id'], 'path')) ? url($bg_parent) : res('assets/img/top1.png'); ?>">
+                <img alt="" class="top_back" src="<?= (isset($super_parent['id']) && $bg_parent = Files::extract('page_bg', $super_parent['id'], 'path')) ? url($bg_parent) : res('assets/img/top1.png'); ?>">
                 <div class="page_top_content">
                     <div class="row1">
                         <div class="left">

@@ -2,12 +2,7 @@
     <div class="wrap global">
         <?php foreach ($sub_pages as $item) { ?>
             <article>
-<!--                <div class="acticle_img">
-                    <?php if ($item->image_icon_big) { ?>
-                        <img src="<?= url($item->image_icon_big->path); ?>">
-                    <?php } ?>
-                </div> -->
-                <p class="categ_title"><a href="<?= $item->url; ?>"><?= $item->title; ?></a> </p>
+                <h2 class="categ_title"><a href="<?= $item->url; ?>"><?= $item->title; ?></a> </h2>
 
                 <div class="sub_list">
                     <ul >

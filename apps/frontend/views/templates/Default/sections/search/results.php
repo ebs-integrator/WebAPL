@@ -13,7 +13,6 @@
                     <?php foreach ($results as $item) { ?>
                         <li>
                             <a href="<?= Language::url('topost/' . $item->id); ?>">
-                                <!--<div class="search_img"><img src="<?= res('assets/img/edu2.png'); ?>"></div>-->
                                 <p>
                                     <span><?= $item->title; ?></span>
                                     <?= Str::words(strip_tags(Core\APL\Shortcodes::strip($item->text)), 20); ?>

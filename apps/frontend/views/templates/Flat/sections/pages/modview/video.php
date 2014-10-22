@@ -17,15 +17,15 @@
             <div>
                 <a href="<?= $page_url; ?>?item=<?= $item->uri; ?>">
                     <?php if ($YoutubeCode) { ?>
-                        <img style="max-width: 348px;" src="http://img.youtube.com/vi/<?= $YoutubeCode; ?>/hqdefault.jpg">
+                        <img style="max-width: 348px;" alt=""  src="http://img.youtube.com/vi/<?= $YoutubeCode; ?>/hqdefault.jpg">
                         <?php
                     } else {
                         $cover = Post::coverImage($item->id);
                         if ($cover) {
                             ?>
-                            <img style="max-width: 348px; height: 261px;" src="<?= url($cover['path']); ?>">
+                            <img alt=""  style="max-width: 348px; height: 261px;" src="<?= url($cover['path']); ?>">
                         <?php } else { ?>
-                            <img src="<?= res('assets/img/video_s.png'); ?>">
+                            <img  alt="" src="<?= res('assets/img/video_s.png'); ?>">
                             <?php
                         }
                     }

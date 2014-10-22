@@ -15,7 +15,7 @@
         <div class='left ccc'>
             <div class="ccc_hidden">                             
                 <div class="prp">
-                    <img src="<?= res('assets/img/notebook.png'); ?>">
+                    <img  alt="" src="<?= res('assets/img/notebook.png'); ?>">
                     <a href="<?= varlang('orar-link'); ?>"><?= varlang('orar-autobus'); ?></a>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                     </li>
                 </ul>
                 <div class="prp">
-                    <img src="<?= res('assets/img/phone_book.png'); ?>">
+                    <img  alt="" src="<?= res('assets/img/phone_book.png'); ?>">
                     <a href="<?=PostProperty::postWithProperty('more_contacts', true)->url;?>"><?= varlang('all-nr-phone'); ?></a>
                 </div>
 
@@ -51,7 +51,7 @@
             <p class='subt'><?= varlang('adresa'); ?></p>
             <div id="map-canvas2" style="width:100%; height:300px;"></div>
             <div class="prp">
-                <img src="<?= res('assets/img/notebook.png'); ?>">
+                <img  alt="" src="<?= res('assets/img/notebook.png'); ?>">
                 <a href="<?= varlang('orar-link'); ?>"><?= varlang('orar-autobus'); ?></a>
             </div>
             <div class="map_info"><?= $page->text; ?></div>

@@ -49,7 +49,7 @@
         <header>
             <div class="left">
                 <?php if (Files::extract('website_logo_sm_' . Core\APL\Language::ext(), 1, 'path')) { ?>
-                    <a href="<?= Language::url('/'); ?>"><img src="<?= url(Files::extract('website_logo_sm_' . Core\APL\Language::ext(), 1, 'path')); ?>" title="<?= Files::extract('website_logo_sm_' . Core\APL\Language::ext(), 1, 'name'); ?>" alt="<?= Files::extract('website_logo_sm_' . Core\APL\Language::ext(), 1, 'name'); ?>" class="logo logo_home"></a>
+                    <a href="<?= Language::url('/'); ?>"><img alt=""  src="<?= url(Files::extract('website_logo_sm_' . Core\APL\Language::ext(), 1, 'path')); ?>" title="<?= Files::extract('website_logo_sm_' . Core\APL\Language::ext(), 1, 'name'); ?>" alt="<?= Files::extract('website_logo_sm_' . Core\APL\Language::ext(), 1, 'name'); ?>" class="logo logo_home"></a>
                 <?php } ?>
                 <?php Event::fire('logo_contructor'); ?>
             </div>

@@ -9,13 +9,13 @@
 
     <div class="stats">
         <?php if (time() < strtotime($post->date_point)) { ?> 
-            <img src="<?= res('assets/img/stat_active.png'); ?>" class="stat_active">
+            <img src="<?= res('assets/img/stat_active.png'); ?>" class="stat_active" alt="" >
             <div class="stat_info">
                 <span><?= varlang('statut'); ?></span>
                 <span><?= varlang('oferte'); ?></span>
             </div>
         <?php } else { ?>
-            <img src="<?= res('assets/img/stat_enable.png'); ?>" class="stat_active">
+            <img src="<?= res('assets/img/stat_enable.png'); ?>" class="stat_active" alt="" >
             <div class="stat_info">
                 <span><?= varlang('statut'); ?></span>
                 <span><?= varlang('oferte-expirate'); ?></span>

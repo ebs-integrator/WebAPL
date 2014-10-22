@@ -72,7 +72,7 @@
 
             <?php if (isset($home_posts) && count($home_posts)) { ?>
                 <article class="news">
-                    <p class="ttl"><img src="<?= res('assets/img/stiri.png'); ?>"><a href="<?=Language::url('topage/newsList');?>"><?= varlang('stiri'); ?></a></p>
+                    <p class="ttl"><img src="<?= res('assets/img/stiri.png'); ?>" alt="" ><a href="<?=Language::url('topage/newsList');?>"><?= varlang('stiri'); ?></a></p>
                     <div class="hr"></div>
                     <ul>
                         <?php foreach ($home_posts as $item) { ?>
