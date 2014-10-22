@@ -18,27 +18,36 @@ class PollModel extends Eloquent {
                         ->where(PollModel::getField('enabled'), '=', 1)
                         ->select(PollModel::getField('date_created'), PollQuestionModel::getField('title'), DB::raw(PollQuestionModel::getField('id') . " as poll_question_id"), PollModel::getField('id'), PollModel::getField('active'));
     }
-    
+
     public static function getWithVotes($id) {
         $poll = PollModel::getByID($id);
-        
+
         if ($poll) {
             foreach ($poll->answers as &$answer) {
                 $answer->count = PollVotesModel::where(array(
-                    'poll_id' => $id,
-                    'answer_id' => $answer->id
-                ))->count();
+                            'poll_id' => $id,
+                            'answer_id' => $answer->answer_id
+                        ))->count();
             }
         }
-        
+
         return $poll;
     }
 
+    
+    public static function answers($id) {
+        return PollAnswerLangModel::join(PollAnswerModel::getTableName(), PollAnswerModel::getField('id'), '=', PollAnswerLangModel::getField('answer_id'))
+                    ->select(PollAnswerLangModel::getField('*'))
+                    ->where(PollAnswerLangModel::getField('lang_id'), \Core\APL\Language::getId())
+                    ->where(PollAnswerModel::getField('poll_id'), $id)
+                    ->get();
+    }
+    
     public static function getByID($id) {
         $poll = PollModel::prepare()->where(PollModel::getField('id'), $id)->get()->first();
 
         if ($poll) {
-            $poll->answers = PollAnswerModel::where('poll_question_id', $poll->poll_question_id)->get();
+            $poll->answers = PollModel::answers($poll->id);
         }
 
         return $poll;
@@ -48,7 +57,7 @@ class PollModel extends Eloquent {
         $poll = PollModel::prepare()->orderBy('date_created', 'desc')->get()->first();
 
         if ($poll) {
-            $poll->answers = PollAnswerModel::where('poll_question_id', $poll->poll_question_id)->get();
+            $poll->answers = PollModel::answers($poll->id);
         }
 
         return $poll;
@@ -63,9 +72,9 @@ class PollModel extends Eloquent {
 
         return $polls->paginate(10);
     }
-    
+
     public static function ivoted($poll_id) {
-        $ck_voted = Cookie::get('voted_id_'.$poll_id);
+        $ck_voted = Cookie::get('voted_id_' . $poll_id);
         $ip_voted = PollVotesModel::where('ip', Request::getClientIp())->where('poll_id', $poll_id)->count();
 
         return $ck_voted || ($ip_voted > 20);

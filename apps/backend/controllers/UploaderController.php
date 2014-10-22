@@ -48,24 +48,34 @@ class UploaderController extends BaseController {
             'path' => urigen(Input::get('upath'))
         );
         if (Input::hasFile('upload_file')) {
-            $file = Input::file('upload_file'); 
+            $file = Input::file('upload_file');
 
             $extension = $file->getClientOriginalExtension();
             $name = $file->getClientOriginalName();
 
-            $filename = urigen($name) . '_' . sha1(uniqid() . $name) . "." . $extension;
+            $filename = urigen($name) . '-' . uniqid() . "." . $extension;
 
             $uploadDir = Files::$upload_dir . ($data['path'] ? "/" . $data['path'] : '');
             $uploadFile = $uploadDir . "/" . $filename;
 
+            $fileType = Files::getType($extension);
+            
             if (!file_exists(Files::fullDir($uploadDir))) {
-                mkdir(Files::fullDir($uploadDir));
+                @mkdir(Files::fullDir($uploadDir), 0777);
             }
             
+            if (!file_exists(Files::fullDir($uploadDir))) {
+                $uploadDir = Files::$upload_dir;
+            }
+
             $uploadSuccess = $file->move(Files::fullDir($uploadDir), $filename);
 
             if ($uploadSuccess) {
                 $fid = Files::register($name, $uploadFile, $extension, $data['module_name'], $data['module_id']);
+
+                if ($fileType === 'image') {
+                    Files::resizeImage($uploadFile, $data['module_name']);
+                }
 
                 $data['error'] = '0';
                 $data['succes'] = 'Uploaded!';

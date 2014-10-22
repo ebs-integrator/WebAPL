@@ -10,7 +10,16 @@ class Files extends Eloquent {
         'jpeg'
     );
     public static $upload_dir = 'upload';
-
+    public static $defaultImageLimit = array(900, 1000);
+    public static $imageLimit = array(
+        'page_icon_big' => array(200, 200),
+        'page_icon' => array(200, 200),
+        'page_icon_active' => array(200, 200)
+    );
+    public static $imageLimitDisable = array(
+        'page_bg'
+    );
+    
     public static function widget($module_name, $module_id, $num = 0, $path = '') {
         if (empty($accept)) {
             $accept = Files::$default_accept_extensions;
@@ -91,6 +100,31 @@ class Files extends Eloquent {
         foreach (Files::file_list($module_name, $module_id) as $file) {
             Files::dropFile($file->path, $file->id);
             Files::destroy($file->id);
+        }
+    }
+
+    public static function resizeImage($image, $module_name) {
+        $width = null;
+        $heigth = null;
+
+        if (in_array($module_name, Files::$imageLimitDisable) === FALSE) {
+            $width = isset(Files::$defaultImageLimit[0]) ? Files::$defaultImageLimit[0] : null;
+            $heigth = isset(Files::$defaultImageLimit[1]) ? Files::$defaultImageLimit[1] : null;
+
+            if (!empty(Files::$imageLimit[$module_name]) && !empty(Files::$imageLimit[$module_name])) {
+                $width = isset(Files::$imageLimit[$module_name][0]) ? Files::$imageLimit[$module_name][0] : null;
+                $heigth = isset(Files::$imageLimit[$module_name][1]) ? Files::$imageLimit[$module_name][1] : null;
+            }
+        }
+
+        if ($width === null && $heigth === null) {
+            return null;
+        } else {
+            return Image::make(Files::fullDir($image))
+                            ->resize($width, $heigth, function ($constraint) {
+                                $constraint->aspectRatio();
+                            })
+                            ->save(Files::fullDir($image));
         }
     }
 

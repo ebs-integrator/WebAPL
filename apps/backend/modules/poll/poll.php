@@ -1,7 +1,7 @@
 <?php
 
 /**
- * 
+ *
  *
  * @author     Victor Vlas <victor.vlas@ebs.md>
  * @copyright  2014 Enterprise Business Solutions SRL
@@ -17,6 +17,7 @@ use Core\APL\Actions,
     PollAnswerModel,
     PollQuestionModel,
     PollAnswerLangModel,
+    PollVotesModel,
     Language,
     Redirect,
     User,
@@ -32,7 +33,7 @@ class Poll extends \Core\APL\ExtensionController {
     public function __construct() {
         parent::__construct();
 
-        $this->loadClass(array('PollModel', 'PollAnswerLangModel'));
+        $this->loadClass(array('PollModel', 'PollAnswerLangModel', 'PollVotesModel'));
 
         Route::get('poll/list', array('before' => 'auth', array($this, 'poll_list')));
         Route::post('poll/getlist', array('before' => 'auth', array($this, 'getlist')));
@@ -53,6 +54,7 @@ class Poll extends \Core\APL\ExtensionController {
         Route::get('poll/anwser/create/{id}', array('before' => 'auth', array($this, 'create_answer')));
         Route::get('poll/answer/edit/{id}', array('before' => 'auth', array($this, 'edit_answer')));
         Route::post('poll/answer/save', array('before' => 'auth', array($this, 'save_answer')));
+        Route::get('poll/answer/delete/{id}', array('before' => 'auth', array($this, 'delete_answer')));
 
 
         Event::listen('construct_left_menu', array($this, 'left_menu_item'));
@@ -105,13 +107,25 @@ class Poll extends \Core\APL\ExtensionController {
 
         $jqgrid = new jQgrid('apl_poll_answer');
         return $jqgrid->populate(function($start, $limit) use($poll_lang_id) {
-                    return PollAnswerModel::select(PollAnswerModel::getField('id'), PollAnswerLangModel::getField('text'))
-                                    ->join(\PollAnswerLangModel::getTableName(), PollAnswerModel::getField('id'), '=', \PollAnswerLangModel::getField('answer_id'))
-                                    ->where(array(\PollAnswerLangModel::getField('lang_id') => \Core\APL\Language::getId()))
-                                    ->skip($start)
-                                    ->take($limit)
-                                    ->where(array('poll_id' => $poll_lang_id))
-                                    ->get();
+                    $answers = PollAnswerModel::select(PollAnswerModel::getField('id'), PollAnswerModel::getField('poll_id'), PollAnswerLangModel::getField('title'))
+                            ->join(\PollAnswerLangModel::getTableName(), PollAnswerModel::getField('id'), '=', \PollAnswerLangModel::getField('answer_id'))
+                            ->where(array(\PollAnswerLangModel::getField('lang_id') => \Core\APL\Language::getId()))
+                            ->skip($start)
+                            ->take($limit)
+                            ->where(array('poll_id' => $poll_lang_id))
+                            ->get();
+                    $list = [];
+                    foreach ($answers as $answer) {
+                        $list[] = array(
+                            'id' => $answer->id,
+                            'title' => $answer->title,
+                            'count' => PollVotesModel::where(array(
+                                'poll_id' => $answer->poll_id,
+                                'answer_id' => $answer->id
+                            ))->count()
+                        );
+                    }
+                    return $list;
                 });
     }
 
@@ -151,12 +165,25 @@ class Poll extends \Core\APL\ExtensionController {
         foreach ($answers as $anl_id => $ans) {
             $anw = PollAnswerLangModel::find($anl_id);
             if ($anw->answer_id == $answer_id) {
-                $anw->text = $ans;
+                $anw->title = $ans;
                 $anw->save();
             }
         }
 
         return [];
+    }
+
+    public function delete_answer($id) {
+        $answer = PollAnswerModel::find($id);
+        $answer_id = 0;
+        if ($answer) {
+            $answer_id = $answer->poll_id;
+            $answer->delete();
+            PollAnswerLangModel::where('answer_id', $id)->delete();
+            PollVotesModel::where('answer_id', $id)->delete();
+        }
+
+        return \Illuminate\Support\Facades\Redirect::to('poll/form/' . $answer_id);
     }
 
     /**

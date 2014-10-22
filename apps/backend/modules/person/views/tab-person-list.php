@@ -38,4 +38,4 @@
 )); ?>
 
 <div class="c20"></div>
-<a href="<?=url('person/emptyperson');?>" class="btn btn-success">New person</a>
+<a href="<?=url('person/emptyperson');?>" class="btn btn-success"><?= varlang('new-person'); ?></a>
