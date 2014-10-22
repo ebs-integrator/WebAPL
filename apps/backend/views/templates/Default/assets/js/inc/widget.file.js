@@ -51,8 +51,6 @@ var current_file_instance;
 window.setFilePath = function(file) {
     $(current_file_instance).val(file.fullPath);
 
-    alert(current_file_instance, file.fullPath);
-
     var options = {
         success: function(data) {
             console.log(data);

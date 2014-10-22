@@ -8,11 +8,19 @@
         <div class="alert alert-danger" role="alert"><?= Session::get('tplerror'); ?></div>
     <?php } ?>
 
-    <label>
-        <input type="radio" name="tpl" value="Default" checked /> Default
+    <label class="col-lg-6">
+        <center>
+            <input class="form-control" type="radio" name="tpl" value="Default" checked />
+            <img src="<?= url('install/res/tpl_default.jpg'); ?>" class="col-lg-12"/><br>
+            Default
+        </center>
     </label>
-    <label>
-        <input type="radio" name="tpl" value="Flat" checked /> Flat
+    <label class="col-lg-6">
+        <center>
+            <input class="form-control" type="radio" name="tpl" value="Flat" />
+            <img src="<?= url('install/res/tpl_flat.jpg'); ?>" class="col-lg-12"/><br>
+            Flat
+        </center>
     </label>
 
     <hr/>
