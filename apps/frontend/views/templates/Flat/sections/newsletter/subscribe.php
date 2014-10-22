@@ -1,11 +1,11 @@
 
 <script>
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
 
-        $(".newsletter_subscribe_form").submit(function(e) {
+        $(".newsletter_subscribe_form").submit(function (e) {
             e.preventDefault();
             var form = $(this);
-            $.post('<?= url('newsletter/subscribe'); ?>', $(this).serialize(), function(data) {
+            $.post('<?= url('newsletter/subscribe'); ?>', $(this).serialize(), function (data) {
                 if (data.error == 0) {
                     form.html("<font color='white'>Multumesc pentru abonare!</font>");
                 } else {

@@ -62,6 +62,7 @@ if (APP_FOLDER === 'frontend') {
 
         if (class_exists('Core\APL\Modules\Newsletter')) {
             Core\APL\Modules\Newsletter::$view_widget = 'sections.newsletter.subscribe';
+            Core\APL\Modules\Newsletter::$view_unsub = 'sections.newsletter.unsubscribe';
         }
     });
 
