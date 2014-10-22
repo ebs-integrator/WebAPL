@@ -52,7 +52,7 @@
                 <input required="" type="text" name="email" placeholder="<?= varlang('email'); ?>">
                 <textarea required="" name="message" placeholder="<?= varlang('message'); ?>"></textarea>
                 <input required="" name="capcha" class="code" type="text">
-                <img src="<?= SimpleCapcha::make('contact_top'); ?>" height="31">
+                <img alt=""  src="<?= SimpleCapcha::make('contact_top'); ?>" height="31">
                 <input type="submit" value="<?= varlang('submit'); ?>">
             </form>
         </div>
@@ -61,9 +61,9 @@
 
     <div class="currency">
         <span class="s_c">
-            <img src="<?= res('assets/img/line_dot.png'); ?>">
+            <img alt=""  src="<?= res('assets/img/line_dot.png'); ?>">
             <span><?= Core\APL\Language::ext(); ?></span>
-            <img src="<?= res('assets/img/line_dot.png'); ?>">
+            <img alt=""  src="<?= res('assets/img/line_dot.png'); ?>">
         </span>
         <div class="lang">
             <div class="relative">

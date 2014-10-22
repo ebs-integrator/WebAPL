@@ -1,7 +1,7 @@
 <?php if (isset($alert_post) && $alert_post) { ?>
     <div class="n_alert" id="alertbox" style="display: none;" data-alertid="<?= $alert_post->id; ?>">
         <div class='cntn'>
-            <img src="<?= res('assets/img/alert.png'); ?>">
+            <img src="<?= res('assets/img/alert.png'); ?>" alt="" >
             <p><?= varlang('alerte'); ?></p>
             <a href='javascript:;' class="alertclose"></a>
         </div>
@@ -28,21 +28,21 @@
             </div>
         <?php } ?>
         <div class="left socials">
-            <a target="_blank" href="<?= varlang('facebook_link'); ?>"><span><img src="<?= res('assets/img/fb.png'); ?>"></span><?= varlang('facebook'); ?></a>
-            <a target="_blank" href="<?= varlang('odnoklassniki-link-1'); ?>"><span><img src="<?= res('assets/img/ok.png'); ?>"></span><?= varlang('odnoklassniki'); ?></a>
-            <a target="_blank" href="<?= varlang('vkontakte-link'); ?>"><span><img src="<?= res('assets/img/vk.png'); ?>"></span><?= varlang('vkontakte'); ?></a>
+            <a target="_blank" href="<?= varlang('facebook_link'); ?>"><span><img  alt="" src="<?= res('assets/img/fb.png'); ?>"></span><?= varlang('facebook'); ?></a>
+            <a target="_blank" href="<?= varlang('odnoklassniki-link-1'); ?>"><span><img  alt="" src="<?= res('assets/img/ok.png'); ?>"></span><?= varlang('odnoklassniki'); ?></a>
+            <a target="_blank" href="<?= varlang('vkontakte-link'); ?>"><span><img  alt="" src="<?= res('assets/img/vk.png'); ?>"></span><?= varlang('vkontakte'); ?></a>
         </div>
         <div class="left socials">
-            <a target="_blank" href="<?= varlang('twitter-link'); ?>"><span><img src="<?= res('assets/img/twitter.png'); ?>"></span><?= varlang('twitter'); ?></a>
-            <a target="_blank" href="<?= varlang('gplus-link'); ?>"><span><img src="<?= res('assets/img/gplus.png'); ?>"></span><?= varlang('gplus'); ?></a>
-            <a target="_blank" href="<?= varlang('rss-link'); ?>"><span><img src="<?= res('assets/img/rsss.png'); ?>" class="rsss"></span><?= varlang('rss'); ?></a>
+            <a target="_blank" href="<?= varlang('twitter-link'); ?>"><span><img alt=""  src="<?= res('assets/img/twitter.png'); ?>"></span><?= varlang('twitter'); ?></a>
+            <a target="_blank" href="<?= varlang('gplus-link'); ?>"><span><img alt=""  src="<?= res('assets/img/gplus.png'); ?>"></span><?= varlang('gplus'); ?></a>
+            <a target="_blank" href="<?= varlang('rss-link'); ?>"><span><img alt=""  src="<?= res('assets/img/rsss.png'); ?>" class="rsss"></span><?= varlang('rss'); ?></a>
         </div>
     </div>
     <div class="right">
         <div class="left search">
             <form action="<?= Language::url('search'); ?>" method="get">
                 <p><?= varlang('cautare'); ?></p>
-                <img src="<?= res('assets/img/search.png'); ?>">
+                <img alt=""  src="<?= res('assets/img/search.png'); ?>">
                 <input type="text" name="words">
                 <input type="submit" value="<?= varlang('submit'); ?>">
             </form>

@@ -24,7 +24,7 @@
 
             <div class="bgr">
                 <div class="img">
-                    <img src="http://kopceak1.sga.webhost1.ru/upload/540ae61e505c5_cc364f95febbe696e99ad340103571ca.png">
+                    <img  alt="" src="http://kopceak1.sga.webhost1.ru/upload/540ae61e505c5_cc364f95febbe696e99ad340103571ca.png">
                 </div>
                 <p class="subt">Primar Primarovici</p>
                 <span class="quote">Straseni înseamna copilaria, adolescenta si familia mea. M-am nascut, am copilarit si am crescut pe strazile din acest ora?!</span>

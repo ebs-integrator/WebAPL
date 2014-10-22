@@ -1,7 +1,7 @@
 <?php if (isset($alert_post) && $alert_post) { ?>
     <div class="n_alert" id="alertbox" style="display: none;" data-alertid="<?= $alert_post->id; ?>">
         <div class='cntn'>
-            <img src="<?= res('assets/img/alert.png'); ?>">
+            <img src="<?= res('assets/img/alert.png'); ?>" alt="">
             <p><?= varlang('alerte'); ?></p>
             <a href='javascript:;' class="alertclose"></a>
         </div>

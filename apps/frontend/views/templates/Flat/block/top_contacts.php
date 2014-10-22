@@ -3,23 +3,23 @@
     <a class="contact_us"><?= varlang('contact-us'); ?></a>
     <div class="cont_form">
         <div class="relative">
-            <img src="<?= res('assets/img/c_arrow.png'); ?>">
+            <img src="<?= res('assets/img/c_arrow.png'); ?>" alt="">
         </div>
         <p class="title"><?= varlang('date-contact'); ?></p>
         <div class="d_hr"></div>
         <ul>
             <li>
-                <img src="<?= res('assets/img/c_mail.png'); ?>">
+                <img src="<?= res('assets/img/c_mail.png'); ?>" alt="">
                 <p><?= varlang('email'); ?></p>
                 <p><a href="mailto:<?= varlang('email-address'); ?>"> <?= varlang('email-address'); ?></a></p>
             </li>
             <li>
-                <img src="<?= res('assets/img/c_phone.png'); ?>">
+                <img src="<?= res('assets/img/c_phone.png'); ?>" alt="">
                 <p><?= varlang('relatii'); ?></p>
                 <p><?= varlang('nr-relatii'); ?></p>
             </li>
             <li>
-                <img src="<?= res('assets/img/c_fx.png'); ?>">
+                <img src="<?= res('assets/img/c_fx.png'); ?>" alt="">
                 <p><?= varlang('fax'); ?></p>
                 <p><?= varlang('nr-fax'); ?></p>
             </li>
@@ -50,7 +50,7 @@
             <input required="" type="text" name="email" placeholder="<?= varlang('email'); ?>">
             <textarea name="message" placeholder="<?= varlang('message'); ?>"></textarea>
             <input required="" name="capcha" class="code" type="text">
-            <img src="<?= SimpleCapcha::make('contact_top'); ?>" height="37">
+            <img src="<?= SimpleCapcha::make('contact_top'); ?>" height="37"  alt="">
             <input type="submit" value="<?= varlang('submit'); ?>">
         </form>
     </div>                       
