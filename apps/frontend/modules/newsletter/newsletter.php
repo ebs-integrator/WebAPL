@@ -16,6 +16,7 @@ class Newsletter extends \Core\APL\ExtensionController {
     protected $module_name = 'newsletter';
     protected $layout;
     public static $view_widget = 'newsletter::newsletter-subscribe';
+    public static $view_unsub = 'newsletter::newsletter-unsubscribe';
 
     public function __construct() {
         parent::__construct();
@@ -46,8 +47,7 @@ class Newsletter extends \Core\APL\ExtensionController {
                     Template::clearBreadCrumbs();
                     Template::addBreadCrumb('/', 'Home');
                     Template::addBreadCrumb('#', 'Newsletter');
-
-                    return Template::moduleView($this->module_name, 'views.newsletter-unsubscribe');
+                    return View::make(Newsletter::$view_unsub);
                 });
     }
 
