@@ -19,7 +19,7 @@ if ($message) {
                 <table class="table">
                     <?php foreach (\Core\APL\Template::getTemplates('frontend') as $template) { ?>
                         <tr>
-                            <td class="col-lg-1"><input id="tpl<?= $template; ?>" type="radio" name="set[template_frontend]" value='<?= $template; ?>' <?= isset($setts['template_frontend']) && $setts['template_frontend'] == $template ? 'checked' : ''; ?>></td>
+                            <td class="col-lg-1"><input class="make-switch" id="tpl<?= $template; ?>" type="radio" name="set[template_frontend]" value='<?= $template; ?>' <?= isset($setts['template_frontend']) && $setts['template_frontend'] == $template ? 'checked' : ''; ?>></td>
                             <td><label for="tpl<?= $template; ?>"><?= $template; ?></label></td>
                             <?php if (User::has('template-delete')) { ?>
                                 <td class="col-lg-1"><a href="<?= url('template/delete/frontend/' . $template); ?>" onclick="return confirm('<?= varlang('confirm-tpl'); ?>');" class="btn btn-sm btn-danger">x</a></td>
@@ -36,7 +36,7 @@ if ($message) {
                 <table class="table">
                     <?php foreach (\Core\APL\Template::getTemplates('backend') as $template) { ?>
                         <tr>
-                            <td class="col-lg-1"><input id="tpl<?= $template; ?>" type="radio" name="set[template_backend]" value='<?= $template; ?>' <?= isset($setts['template_backend']) && $setts['template_backend'] == $template ? 'checked' : ''; ?>></td>
+                            <td class="col-lg-1"><input class="make-switch" id="tpl<?= $template; ?>" type="radio" name="set[template_backend]" value='<?= $template; ?>' <?= isset($setts['template_backend']) && $setts['template_backend'] == $template ? 'checked' : ''; ?>></td>
                             <td><label for="tpl<?= $template; ?>"><?= $template; ?></label></td>
                             <?php if (User::has('template-delete')) { ?>
                                 <td class="col-lg-1"><a href="<?= url('template/delete/backend/' . $template); ?>" onclick="return confirm('<?= varlang('confirm-tpl'); ?>');" class="btn btn-sm btn-danger">x</a></td>

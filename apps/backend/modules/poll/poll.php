@@ -16,6 +16,7 @@ use Core\APL\Actions,
     Input,
     PollAnswerModel,
     PollQuestionModel,
+    PollAnswerLangModel,
     Language,
     Redirect,
     User,
@@ -31,7 +32,7 @@ class Poll extends \Core\APL\ExtensionController {
     public function __construct() {
         parent::__construct();
 
-        $this->loadClass(array('PollModel'));
+        $this->loadClass(array('PollModel', 'PollAnswerLangModel'));
 
         Route::get('poll/list', array('before' => 'auth', array($this, 'poll_list')));
         Route::post('poll/getlist', array('before' => 'auth', array($this, 'getlist')));
@@ -48,6 +49,11 @@ class Poll extends \Core\APL\ExtensionController {
 
         Route::post('poll/list/answer', array('before' => 'auth', array($this, 'getlist_answer')));
         Route::post('poll/list/answer/{poll_lang_id}', array('before' => 'auth', array($this, 'getlist_answer')));
+
+        Route::get('poll/anwser/create/{id}', array('before' => 'auth', array($this, 'create_answer')));
+        Route::get('poll/answer/edit/{id}', array('before' => 'auth', array($this, 'edit_answer')));
+        Route::post('poll/answer/save', array('before' => 'auth', array($this, 'save_answer')));
+
 
         Event::listen('construct_left_menu', array($this, 'left_menu_item'));
         Event::listen('language_created', array($this, 'language_created'));
@@ -99,12 +105,58 @@ class Poll extends \Core\APL\ExtensionController {
 
         $jqgrid = new jQgrid('apl_poll_answer');
         return $jqgrid->populate(function($start, $limit) use($poll_lang_id) {
-                    return PollAnswerModel::select('id', 'title')
+                    return PollAnswerModel::select(PollAnswerModel::getField('id'), PollAnswerLangModel::getField('text'))
+                                    ->join(\PollAnswerLangModel::getTableName(), PollAnswerModel::getField('id'), '=', \PollAnswerLangModel::getField('answer_id'))
+                                    ->where(array(\PollAnswerLangModel::getField('lang_id') => \Core\APL\Language::getId()))
                                     ->skip($start)
                                     ->take($limit)
-                                    ->where(array('poll_question_id' => $poll_lang_id))
+                                    ->where(array('poll_id' => $poll_lang_id))
                                     ->get();
                 });
+    }
+
+    public function create_answer($id) {
+
+        $answer = new \PollAnswerModel();
+        $answer->poll_id = $id;
+        $answer->save();
+
+        foreach (\Core\APL\Language::getList() as $lang) {
+            $answerLang = new \PollAnswerLangModel();
+            $answerLang->answer_id = $answer->id;
+            $answerLang->lang_id = $lang->id;
+            $answerLang->save();
+        }
+
+        return \Illuminate\Support\Facades\Redirect::to('poll/answer/edit/' . $answer->id);
+    }
+
+    public function edit_answer($id) {
+        User::onlyHas('poll-edit');
+
+        $data = array(
+            'answer' => PollAnswerModel::find($id),
+            'answer_langs' => PollAnswerLangModel::where('answer_id', $id)->get(),
+            'module' => $this->module_name
+        );
+
+        $this->layout->content = Template::moduleView($this->module_name, 'views.answerform', $data);
+        return $this->layout;
+    }
+
+    public function save_answer() {
+        $answers = Input::get('answer');
+        $answer_id = Input::get('answer_id');
+
+        foreach ($answers as $anl_id => $ans) {
+            $anw = PollAnswerLangModel::find($anl_id);
+            if ($anw->answer_id == $answer_id) {
+                $anw->text = $ans;
+                $anw->save();
+            }
+        }
+
+        return [];
     }
 
     /**
