@@ -867,6 +867,7 @@ header .contact .cont .cont_form  .map{
     border:1px solid #f4f4f3;
     width:160px;
     height: 90px;
+    text-align: center;
 }
 header .contact .cont .cont_form .c_info .city{
     font:15px 'open_sansbold';

@@ -37,9 +37,7 @@
                 </div>
             </div>
             <div class="left map">
-                <center>
                     <a class="mini_contacte1 maplink" href="javascript:window.open('https://www.google.ro/maps/dir//' + loc_lat + ',' + loc_long + '/@' + loc_lat + ',' + loc_long + ',14z');"></a>
-                </center>
             </div>        
             <div class="clearfix10"></div>
 
