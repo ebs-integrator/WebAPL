@@ -22,7 +22,8 @@ class VarController extends BaseController {
     protected $layout = 'layout.main';
 
     public function getIndex($var_key = '') {
-
+        User::onlyHas('var-edit');
+        
         $this->data['var'] = VarModel::prepareQuery()->where('key', $var_key)->first();
         if ($this->data['var'] || $var_key === '') {
             $this->data['var_key'] = $var_key;
@@ -41,6 +42,8 @@ class VarController extends BaseController {
     }
 
     public function postSearch() {
+        User::onlyHas('var-edit');
+        
         $query = Input::get('varname');
 
         $list = VarLangModel::where(VarLangModel::getField('value'), 'like', "%{$query}%")->get();
@@ -58,6 +61,8 @@ class VarController extends BaseController {
     }
 
     public function postCreate() {
+        User::onlyHas('var-create');
+        
         $parent_key = Input::get('parent_key');
         $var_langs = Input::get('text');
         $key = VarModel::uniqKey(Input::get('key'), Input::get('text.' . (\Core\APL\Language::getId())));
@@ -81,6 +86,8 @@ class VarController extends BaseController {
     }
 
     public function postEdit() {
+        User::onlyHas('var-edit');
+        
         $id = Input::get('id');
         $value = Input::get('value');
 
@@ -92,7 +99,7 @@ class VarController extends BaseController {
     }
 
     public function getExport() {
-
+        die;
         $buffer = "";
 
         $vars = VarModel::all();

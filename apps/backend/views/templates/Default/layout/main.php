@@ -160,7 +160,9 @@
                     <?php if (User::has('feed-view')) { ?>
                         <li><a href="<?= url('feed'); ?>"><i class="fa"></i><span class="link-title">&nbsp;<?= varlang('feeds'); ?></span></a></li>
                     <?php } ?>
-                    <li><a href="<?= url('var'); ?>"><i class="fa"></i><span class="link-title">&nbsp;<?= varlang('var'); ?></span></a></li>
+                    <?php if (User::has('var-edit')) { ?>
+                        <li><a href="<?= url('var'); ?>"><i class="fa"></i><span class="link-title">&nbsp;<?= varlang('var'); ?></span></a></li>
+                    <?php } ?>
 
                     <?php Event::fire('construct_left_menu'); ?>
                 </ul><!-- /#menu -->

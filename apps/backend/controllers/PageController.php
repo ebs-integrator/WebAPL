@@ -104,8 +104,10 @@ class PageController extends BaseController {
         if ($post && $page) {
             $post->created_at = $page['created_at'];
             $post->updated_at = date('Y-m-d G:i:s');
-            if ($post->parent != $post->id) {
-                $post->parent = $page['parent'];
+            if (User::has('page-move')) {
+                if ($post->parent != $post->id) {
+                    $post->parent = $page['parent'];
+                }
             }
             $post->clone_id = $page['clone_id'];
             $post->redirect_to = $page['redirect_to'];
@@ -144,7 +146,7 @@ class PageController extends BaseController {
                     if ($prop->is_unique) {
                         PostPropertyRel::where('post_property_id', $prop->id)->delete();
                     }
-                    
+
                     $newproperty = new PostPropertyRel;
                     $newproperty->post_id = $page_id;
                     $newproperty->post_property_id = $property;
