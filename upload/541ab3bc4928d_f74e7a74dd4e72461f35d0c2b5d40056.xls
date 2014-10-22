@@ -1,0 +1,37 @@
+<style>
+    @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,600);
+</style>
+<div style="width:100%;background-color:#f2f3f4;margin:0px;padding:30px 0px">
+    <div style="width:700px;background-color:#fff;
+         box-shadow: 0px 1px 13px 0px rgba(183,183,183,1);margin:0 auto;font-family: 'Open Sans', sans-serif;font-weight: 400">  
+        <div style="width:95%;height:60px;border-bottom:1px solid #efefef;padding:0px 18px;">
+            <img alt="" style="float:left;margin-top:11px;margin-right:12px;"  src="http://globaldatabase.co.uk/img/logo.png" />
+            <p style=" float:left;margin:0px;font-weight:300;color:#33627c;font-size: 17px;margin-top:24px;padding-left: 12px;border-left:1px solid #efefef;" class="MsoNormal">Company Intelligence on Global Markets</p>
+        </div>
+        <div style="width:77%;padding: 55px 80px 85px;">
+            <p style="color:#5a5a5a;font-size:14px;margin:0px;font-weight: 600" class="MsoNormal">Estimado {name}</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;font-weight: 700" class="MsoNormal">Chegou a ter a possibilidade de analisar o email que lhe enviamos na semana passada? </p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">Desculpe se insistimos, mas não gostaríamos que perdesse a possibilidade de utilizar a nossa última versão da Global Database de  <span style="font-weight:700">{country}.</span>As nossas soluções permitem-lhe estabelecer contato direto com os decisores-chave, em inúmeras organizações e empresas em todo o mundo, evitando assim as tradicionais barreiras administrativas, os “gatekeepers” e intermediários habituais. </p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">Ao contrário dos produtos disponibilizados pelos nossos concorrentes, não baseamos a nossa informação em listas pré-existentes, pelo contrário, trabalhamos diariamente na pesquisa de novos contatos utilizando um exclusivo modelo de pesquisa e recursos de networking.</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal"> <a href="http://globaldatabase.co.uk/main/link/29" target="_blank"><u style="font-weight: 700;color:#5a5a5a">Encomende online</u></a> até sexta-feira, dia 15, e poupe 25% utilizando o código promocional:  <u style="font-weight: 700;">25523423</u>. . Em Alternativa, e para assegurar esta oferta, pode simplesmente  <a href="mailto:paul.webster@globaldatabase.co.uk?subject=I%20would%20like%20to%20subscribe,%20please%20send%20me%20the%20invoice"><u style="font-weight: 700;color:#5a5a5a">responder </u></a> a este email e solicitar uma fatura.</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;font-weight: 700" class="MsoNormal">Receberá um acesso online, com atualizações permanentes e ilimitadas durante um ano, mantendo-o permanentemente atualizado quanto às alterações de contacto dis principais decisores.</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">Agradeço a sua melhor atenção, colocando-me desde já à sua inteira disposição para o case de necessitar de alguma informação ou esclarecimento adicional.</p>
+
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">Com os Melhores Cumprimentos,</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">Paul Webster, Head of Research<br>
+                Global Database</p>
+            <p style="margin-top: 22px;font-size: 13px;color:#5a5a5a;" class="MsoNormal">
+                Tel: <a href="tel:%2B44%2020%207993%202581" value="+442079932581" target="_blank"><span style="color:#019ae6;"><u>+44 20 7993 2581</u></span></a> <br>
+                Email: <a href="mailto:paul.webster@globaldatabase.co.uk" target="_blank"><span style="color:#019ae6;"><u>paul.webster@<wbr>globaldatabase.co.uk</u></span></a> <br>
+                Store: <a href="http://www.globaldatabase.co.uk/" target="_blank"><span style="color:#019ae6;"><u>www.globaldatabase.co.<wbr>uk</u></span></a>
+            </p>
+            <p style="margin-top: 22px;font-size: 11px;color:#a7a7a7;" class="MsoNormal">
+                Global Database is part of Global Business Intelligence Limited, registered in England and Wales. <br />
+                Registered office: 179 Gloucester Place, London NW1 6DX, United Kingdom.<br />
+                Registered number: 08555665<br />
+                This email was sent to {email}. To unsubscribe, please click <a href="http://globaldatabase.co.uk/main/link/10" target="_blank" style="text-decoration: none;color:#a7a7a7;font-weight: 700">here</a>.
+
+            </p>
+        </div>
+    </div>
+</div>
