@@ -4,7 +4,7 @@
             <div class="left_site">
                 <p class="s_title"><?= $k + 1; ?>. <?= $item->title; ?>:</p>
             </div>
-            <div class="right_block">
+            <div class="right_site">
                 <?php foreach ($item['list'] as $kl => $sitem) { ?>
                     <div class='sitemap'>
                         <p><a href='<?= Core\APL\Language::url('topost/' . $sitem->id); ?>'><?= $k + 1; ?>.<?= $kl + 1; ?>. <?= $sitem->title; ?></a></p>

@@ -16,7 +16,7 @@
 
         <link href="<?= res('assets/css/jquery.bxslider.css'); ?>" rel="stylesheet" />
         <link rel="stylesheet" href="<?= res('assets/css/normalize.css'); ?>" />
-        <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>"/>>
+        <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>"/>
 
         <?php if (isset($favicon) && $favicon) { ?>
             <link rel="icon" href="<?= url($favicon->path); ?>" type="image/x-icon" />
