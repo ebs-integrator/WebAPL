@@ -1226,6 +1226,12 @@ section,.page_header{
     background: -ms-linear-gradient(left,#f7f7f7,#f7f7f7 35%,white 35,white);
     max-width: 2850px;
 }
+
+section .right_site{
+    width: 70%;
+    padding: 5px 0px 50px 55px;
+    float: right;
+}
 .left_block .left_details .chat{
     margin-top: 0px;
     padding:0px;
@@ -1318,7 +1324,7 @@ section .left_block{
 }
 section .left_site{
     float:left;
-    width:357px;
+    min-width:300px;
     padding-top:45px;
     background: #f7f7f7;
     position:relative;
@@ -4311,6 +4317,11 @@ ul.vice li .p_name {
     .vice .img img {
         max-width: 190px;
     }
+    section .right_site{
+        float:none;
+        width:100%;
+        padding-left:0px;
+    }
     .page_top_header{
         margin-top:0px;
     }
@@ -4624,6 +4635,11 @@ ul.vice li .p_name {
     }
     .n_alert{
         display:none !important;
+    }
+    section .right_site{
+        float:none;
+        width:100%;
+        padding-left:0px;
     }
     ul.vice li .left{
         margin-left:20px;
