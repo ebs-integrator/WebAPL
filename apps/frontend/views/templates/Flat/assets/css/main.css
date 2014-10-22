@@ -5019,8 +5019,13 @@ ul.vice li .p_name {
         max-width: 330px;
 
     }
+    .bgr .img{
+        margin:0px;
+    }
     .bgr .img img{
-        max-width:200px
+        max-width:200px;
+        margin:0px auto;
+        display:block;
     }
     h1 {
         font: 22px 'AvenirNext-Bold';
@@ -5134,7 +5139,14 @@ ul.vice li .p_name {
     }
     .bgr .quote {
         font: 15px 'AvenirNext-DemiBold';
+        max-width: 83%;
+        width: 100%;
+        clear: both;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        float: none;
     }
+
     .det_news {
         font: 18px 'AvenirNext-Bold';
     }
@@ -5159,6 +5171,7 @@ ul.vice li .p_name {
     .subt{
         font-size:20px;
         margin-top:10px;
+        text-align: center;
     }
     .bgr .img{
         float:none;
@@ -5555,12 +5568,6 @@ ul.vice li .p_name {
     }
     .urg thead tr td:last-child{
         display:none;
-    }
-    .bgr .quote{
-        max-width: 100%;
-        width:100%;
-        clear:both;
-        margin-bottom:10px;
     }
     article .sub_list ul li a{
         font-size:15px;
