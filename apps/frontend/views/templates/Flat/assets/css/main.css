@@ -5137,6 +5137,18 @@ ul.vice li .p_name {
     .conten p {
         font: 15px 'AvenirNext-Regular';
     }
+    table.orar tbody  td.empty_cell {
+        display: none;
+    }
+    table.orar tbody tr td{
+        padding: 17px 12px;
+    }
+    table.orar ul li:first-child{
+        margin-top:20px;
+    }
+    table.orar ul li:last-child{
+        margin-bottom:20px;
+    }
     .bgr .quote {
         font: 15px 'AvenirNext-DemiBold';
         max-width: 83%;

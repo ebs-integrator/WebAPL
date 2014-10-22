@@ -1907,6 +1907,10 @@ section > .wrap >  .left.contact_r{
     bottom:-1px;
     border-left: 3px solid #7c4d7c;
 }
+.contact_l .date_contact:after{
+    clear:both;
+    display:block;
+}
 .contact_l .date_contact li p{
     margin:0px;
 }
@@ -6061,6 +6065,16 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     ul.culture li .right,ul.culture li .right .box{
         float:none;
+    }
+
+    table.orar tbody tr td{
+        padding: 17px 12px;
+    }
+    table.orar ul li:first-child{
+        margin-top:20px;
+    }
+    table.orar ul li:last-child{
+        margin-bottom:20px;
     }
     ul.culture li{
         height:auto;

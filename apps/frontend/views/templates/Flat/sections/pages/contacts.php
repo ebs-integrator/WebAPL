@@ -16,7 +16,7 @@
                     </li>
                     <li>
                         <img  alt="" src="<?= res('assets/img/c_phone.png'); ?>"
-                             <p><?= varlang('relatii'); ?></p>
+                              <p><?= varlang('relatii'); ?></p>
                         <p><?= varlang('nr-relatii'); ?></p>                                    
                     </li>
                     <li>
@@ -24,7 +24,6 @@
                         <p><?= varlang('fax'); ?></p>
                         <p><?= varlang('nr-fax'); ?></p>
                     </li>
-                    <div class="clearfix"></div>
                 </ul>
                 <div class="prp">
                     <a href="<?= PostProperty::postWithProperty('more_contacts', true)->url; ?>"><?= varlang('all-nr-phone'); ?></a>
