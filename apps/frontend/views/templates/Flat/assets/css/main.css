@@ -1,23 +1,6 @@
-/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
-
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-
-
 /* ==========================================================================
    Fonts
    ========================================================================== */
-
-
-
-
-
-
-
 @font-face {
     font-family: 'AvenirNext-Bold';
     src: url('../font/AvenirNext-Bold.eot?#iefix') format('embedded-opentype'),  url('../font/AvenirNext-Bold.woff') format('woff'), url('../font/AvenirNext-Bold.ttf')  format('truetype'), url('../font/AvenirNext-Bold.svg#AvenirNext-Bold') format('svg');
@@ -66,11 +49,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
-
-
-
-
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
