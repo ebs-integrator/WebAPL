@@ -28,9 +28,7 @@ footer .copy a {
 } 
 
 
-.l_box span{
-    color:#472347
-}
+
 
 .contact a.contact_us, footer .right p.y_info {
     color: #6DCAB5;
@@ -182,6 +180,9 @@ article .categ_title a:hover, .form .content input[type=submit], .video_d {
     .l_box {
         color: #472347;
         border-color: #472347;
+    }
+    .l_box span{
+        color:#472347;
     }
 }
 footer .search input[type=submit]{

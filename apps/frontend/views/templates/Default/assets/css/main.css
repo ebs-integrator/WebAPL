@@ -953,7 +953,6 @@ header .contact .cont .cont_form input[type=submit]{
 .menu img.backg{
     position:absolute;
     z-index: -1;
-    top:-330px;
     left:0px;
     right:0px;
     bottom:0px;
@@ -983,6 +982,7 @@ table.taxe.aprt tbody tr td{
     max-width:inherit;
     min-width:inherit;
 }
+
 .menu .box .menu_title{
     text-transform: uppercase;
     height: 71px;
@@ -5113,7 +5113,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         max-width:680px;
     }
     .n_alert{
-        display: none;
+        display: none !important;
     }
     table.sondaje progress[value] {
         width: 250px;
@@ -5344,7 +5344,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         display:none;
     }
     .n_alert{
-        display: none;
+        display: none !important;
     }
     section > .wrap,section .dirs_menu .wrap{
         padding:0 20px;

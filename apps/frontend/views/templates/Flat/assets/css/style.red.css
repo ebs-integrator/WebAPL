@@ -19,9 +19,7 @@ and open the template in the editor.
 } 
 
 
-.l_box span{
-    color:#494043
-}
+
 
 .adv {
     background: #e8e5e6;
@@ -60,6 +58,9 @@ footer .search input[type=submit]{
     .l_box{
         color: #494043;
         border-color: #494043;
+    }
+    .l_box span{
+        color:#494043
     }
 }
 table.plc > tbody > tr > td:first-child {
