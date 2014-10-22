@@ -85,7 +85,7 @@ class Newsletter extends \Core\APL\ExtensionController {
     public function sendemails($post) {
         $data['post'] = $post;
 
-        return Template::moduleView($this->module_name, 'views.send_email', $data);
+        echo Template::moduleView($this->module_name, 'views.send_email', $data);
     }
 
     public function sendarticle() {
@@ -101,13 +101,17 @@ class Newsletter extends \Core\APL\ExtensionController {
                 $newsletterUsers = \NewsletterModel::where('enabled', 1)->get();
 
                 foreach ($newsletterUsers as $user) {
-                    $data['user'] = $user;
-                    $data['unsubscribe_link'] = "http://kopceak1.sga.webhost1.ru/newsletter/unsubscribe/{$user->hash}";
-                    Mail::send('views.emails.post', $data, function($message) use ($post, $user) {
-                        $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'Newsletter');
-                        $message->subject($post->title . " :: NEWSLETTER");
-                        $message->to($user->email);
-                    });
+                    var_dump(filter_var($user->email, FILTER_VALIDATE_EMAIL));
+                    if (filter_var($user->email, FILTER_VALIDATE_EMAIL)) {
+                        $data['user'] = $user;
+                        $data['unsubscribe_link'] = url("/../newsletter/unsubscribe/{$user->hash}");
+                        echo $user->email;
+                        var_dump(Mail::send('views.emails.post', $data, function($message) use ($post, $user) {
+                            $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'Newsletter');
+                            $message->subject($post->title . " :: NEWSLETTER");
+                            $message->to($user->email);
+                        }));
+                    }
                 }
             });
         }
