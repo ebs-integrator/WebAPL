@@ -17,9 +17,7 @@ footer .left {
 footer .f_menu {
     background: #361D07;
 } 
-.l_box span{
-    color:#B88323
-}
+
 
 .f_fb{
     background:url('../img/fb_yellow.png')no-repeat center #814A23;
@@ -135,6 +133,9 @@ table.plc > tbody > tr > td:first-child {
     .l_box {
         color: #B88323;
         border-color: #B88323;
+    }
+    .l_box span{
+        color:#B88323
     }
 }
 .menu_block, .cont_form input[type="submit"], .mini_header .content, .page_top_content .row2 .content, .green input[type=submit], .dop .top, .ldmbox input[type=submit] {
