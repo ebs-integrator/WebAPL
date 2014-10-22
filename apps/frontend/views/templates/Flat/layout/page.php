@@ -10,20 +10,20 @@
         <title><?= Core\APL\Template::getPageTitle(isset($page) ? $page : null); ?></title>
 
         <?php foreach (\Core\APL\Template::getMetas() as $metaName => $metaContent) { ?>
-            <meta name="<?= $metaName; ?>" content="<?= $metaContent; ?>">
+            <meta name="<?= $metaName; ?>" content="<?= $metaContent; ?>" />
         <?php } ?>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <?php if (isset($favicon) && $favicon) { ?>
-            <link rel="icon" href="<?= url($favicon->path); ?>" type="image/x-icon">
+            <link rel="icon" href="<?= url($favicon->path); ?>" type="image/x-icon" />
         <?php } ?>
 
         <link href="<?= res('assets/css/jquery.bxslider.css'); ?>" rel="stylesheet" />
-        <link href="<?= res('assets/js/square/red.css'); ?>" rel="stylesheet">
-        <link rel="stylesheet" href="<?= res('assets/css/normalize.css'); ?>">
-        <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>">
-        <link rel="stylesheet" href="<?= res('assets/css/jquery.selectBoxIt.css'); ?>">
+        <link href="<?= res('assets/js/square/red.css'); ?>" rel="stylesheet" />
+        <link rel="stylesheet" href="<?= res('assets/css/normalize.css'); ?>" />
+        <link rel="stylesheet" href="<?= res('assets/css/main.css'); ?>" />
+        <link rel="stylesheet" href="<?= res('assets/css/jquery.selectBoxIt.css'); ?>" />
 
         <?php Template::pullCurrentSchema(); ?>
 
