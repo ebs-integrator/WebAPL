@@ -26,6 +26,7 @@
             <div class="clearfix50"></div>
             <?= $results->appends(array('words' => $words))->links(); ?>
         </div>
+        <div class="resp_menu"></div>
         <div class="right">
             <ul class='detail'>
                 <li class='email'>

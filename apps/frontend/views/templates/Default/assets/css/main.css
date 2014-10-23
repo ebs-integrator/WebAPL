@@ -1496,9 +1496,22 @@ footer .right{
 }
 section > .wrap .right .doc{
     width:383px;
-    /*height:229px;*/
     padding-top: 16px;
     background:#fcfcfc;
+}
+.resp_menu{
+    display:none;
+    margin-top:20px;
+    height:33px;
+    background:url('../img/res_menu.png') no-repeat center;
+    border-bottom: 2px solid #ececec;
+    cursor:pointer;
+    margin-bottom:45px;
+}
+.resp_menu.active{    
+    background:url('../img/res_menu_active.png') no-repeat center;    
+    height:43px;
+    margin-top:0px;
 }
 .bx-wrapper .bx-prev {
     background: url('../img/prev.png') no-repeat;
@@ -5343,10 +5356,16 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         display: block;
         margin-top: 30px;
     }
+    .resp_menu{
+        display:block;
+    }
 }
 @media only screen and (max-width: 767px){
     p{
         font-size:16px;
+    }
+    .resp_menu{
+        display:block;
     }
     header .left .top_menu,header .contact.right p.tel,header .cont .contact_us,.home_menu{
         display:none;
@@ -5888,6 +5907,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     .search_t{
         font-size:18px;
+        height:auto;
     }
     .search_p,.sort_b p,.sort_b .selectboxit-container span, .selectboxit-container .selectboxit-options a,.sort_b .selectboxit-container .selectboxit-options a{
         font-size:15px;
@@ -6022,6 +6042,11 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         width:360px;
         margin-left:0px;
     }
+    
+    section > .wrap > .right{
+        float:none;
+        display:none;
+    }
 }
 @media only screen and (max-width: 639px){
     section > .wrap, section .dirs_menu .wrap {
@@ -6128,7 +6153,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
 
     section > .wrap, section .dirs_menu .wrap{
-        padding:0px;
+        padding:0px 8px;
     }
     .right > article .ttl a{
         font-size: 20px;

@@ -9,6 +9,7 @@
             ));
             ?>
         </div>
+        <div class="resp_menu"></div>
         <div class='left'>
             <?php Event::fire('page_top_container', $page); ?>
 

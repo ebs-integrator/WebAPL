@@ -22,7 +22,7 @@ $(document).ready(function () {
     $('.l_a.m_t_n').css('min-height', ($(window).height() - 413));
     $('.mini_header .content').height($(window).height() - 85);
 
-    $('.resp_menu').click(function(){
+    $('.resp_menu').click(function () {
         $('.resp_menu').toggleClass('active');
         $('.left_block,.dirs_menu a:last-child span').toggle('slow');
     });
@@ -129,8 +129,8 @@ $(document).ready(function () {
 
         return false;
     });
-    
-    
+
+
 
     if (window.location.hash == '#hm') {
         $('html, body').animate({
@@ -138,7 +138,7 @@ $(document).ready(function () {
         }, 1000);
     }
 
-    $(".live_comment > p").each(function() {
+    $(".live_comment > p").each(function () {
         var pID = $(this).closest('.live_comment').data('pid');
         var pNUM = $(".live_comment > p").index(this);
         var hID = pID + "a" + pNUM;
@@ -146,13 +146,13 @@ $(document).ready(function () {
         $(this).attr('data-hID', hID);
 
         $(this).prepend('<a class="live_comment_num" data-disqus-identifier="' + hID + '" href="javascript:;#disqus_thread">0</a>');
-    }).promise().done(function() {
+    }).promise().done(function () {
 
         function checkload() {
             if (typeof DISQUSWIDGETS === 'undefined') {
                 setTimeout(checkload, 1000);
             } else {
-                $(".live_comment_num").each(function() {
+                $(".live_comment_num").each(function () {
                     $(this).text(parseInt($(this).text()));
                 });
             }
@@ -167,7 +167,7 @@ $(document).ready(function () {
         jQuery('head').append(s);
     });
 
-    $(".live_comment > p").click(function() {
+    $(".live_comment > p").click(function () {
         $(".live_comment > p").removeClass("activecomm");
         $(this).addClass("activecomm");
 
@@ -180,7 +180,7 @@ $(document).ready(function () {
             jQuery('#disqus_thread').insertAfter(source);
             DISQUS.reset({
                 reload: true,
-                config: function() {
+                config: function () {
                     this.page.identifier = identifier.toString();
                     this.page.url = url;
                 }
@@ -203,11 +203,11 @@ $(document).ready(function () {
         var alertId = alertbox.data('alertid');
         var alertShow = $.cookie('alert_' + alertId);
         if (parseInt(alertShow) !== 1) {
-            setTimeout(function() {
+            setTimeout(function () {
                 alertbox.fadeIn(150);
             }, 3000);
         }
-        alertbox.find(".alertclose").click(function() {
+        alertbox.find(".alertclose").click(function () {
             alertbox.fadeOut(150);
             if ($("#f_1").is(':checked')) {
                 $.cookie('alert_' + alertId, 1);
@@ -236,7 +236,9 @@ function initialize() {
         map = new google.maps.Map(small_map, {
             zoom: 14,
             center: center,
-            disableDefaultUI: true
+            disableDefaultUI: true,
+            draggable: isDraggable,
+            scrollwheel: false
         });
 
     }
@@ -245,7 +247,9 @@ function initialize() {
         map2 = new google.maps.Map(big_map, {
             zoom: 14,
             disableDefaultUI: true,
-            center: myLatlng
+            center: myLatlng,
+            draggable: isDraggable,
+            scrollwheel: false
         });
 
     }
@@ -253,7 +257,9 @@ function initialize() {
         map3 = new google.maps.Map(hidden_map, {
             zoom: 14,
             disableDefaultUI: true,
-            center: myLatlng
+            center: myLatlng,
+            draggable: isDraggable,
+            scrollwheel: false
         });
 
     }
