@@ -1781,7 +1781,7 @@ section .search input[type=submit]{
     background: url('../img/xlsx.png')no-repeat left 5px;
 }
 table.atz{
-    margin-bottom: 110px;
+    margin-bottom: 50px;
 }
 table.atz, table.atz td {
     border: 1px solid #e3e3e3;

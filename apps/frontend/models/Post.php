@@ -89,18 +89,23 @@ class Post extends Eloquent {
 
         return $list;
     }
-    
+
     public static function findAlertPost() {
         return Post::prepareQuery(2)
-                ->where(Post::getField('is_alert'), 1)
-                ->where(Post::getField('alert_expire'), '>', DB::raw('CURRENT_TIMESTAMP'))
-                ->first();
+                        ->where(Post::getField('is_alert'), 1)
+                        ->where(PostLang::getField('enabled'), 1)
+                        ->where(Post::getField('alert_expire'), '>', DB::raw('CURRENT_TIMESTAMP'))
+                        ->first();
     }
 
     public static function findHomePosts($modView) {
         $current_tax = static::$taxonomy;
         static::$taxonomy = 2;
-        $post = Post::prepareQuery(1)->where('view_mod', $modView)->take(2)->first();
+        $post = Post::prepareQuery(1)
+                ->where(PostLang::getField('enabled'), 1)
+                ->where('view_mod', $modView)
+                ->take(2)
+                ->first();
 
         if ($post) {
             $list = Post::prepareQuery()
@@ -297,11 +302,11 @@ class Post extends Eloquent {
 
     public static function coverImage($id) {
         return Files::where(array(
-                    'module_name' => 'post_cover',
-                    'module_id' => $id
-                ))
-                ->remember(SettingsModel::one('cachelife'))
-                ->first();
+                            'module_name' => 'post_cover',
+                            'module_id' => $id
+                        ))
+                        ->remember(SettingsModel::one('cachelife'))
+                        ->first();
     }
 
     public static function applyDate($post_instance, $year = '', $month = '', $day = '') {
