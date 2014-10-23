@@ -1,18 +1,13 @@
 <?php
 return array(
     'fetch' => PDO::FETCH_CLASS,
-    'default' => 'mysql',
+    'default' => 'sqlite',
     'connections' => array(
-        'mysql' => array(
-            'driver' => 'mysql',
-            'host' => 'lpa.devebs.net',
-            'database' => 'c1lpa',
-            'username' => 'c1lpa',
-            'password' => 'FE27wbyzGi',
-            'charset' => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix' => '',
-        )
+        'sqlite' => array(
+			'driver'   => 'sqlite',
+			'database' => __DIR__.'/../database/production.sqlite',
+			'prefix'   => '',
+		)
     ),
     'migrations' => 'migrations',
     'redis' => array(
@@ -24,4 +19,3 @@ return array(
         ),
     ),
 );
- 
