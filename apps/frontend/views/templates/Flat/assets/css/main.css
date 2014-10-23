@@ -1061,7 +1061,7 @@ footer .copy{
     width:275px;
     right:0px;
     top:84px;
-    min-height:480px;
+    min-height:395px;
 }
 .mini_header .m_menu li{
     height:45px;
@@ -1122,13 +1122,13 @@ footer .copy{
 .mini_header .m_lang li{
     display: inline-block;
     height: 35px;
-    margin-right: 15px;
+    margin-right: 24px;
     width: 35px;
     margin-bottom: 10px;
 }
 .m_lang{
     position: absolute;
-    bottom: 125px;
+    bottom: 100px;
 }
 .mini_header .m_footer{
     padding:15px 25px 20px;
@@ -2058,7 +2058,7 @@ ul.faq li p:last-child{
     margin-bottom: 70px;
     position: relative;
 }
-.green input[type=text],.compl input[type=text]{
+.green input[type=text],.compl input[type=text],.green input[type=email],.compl input[type=email]{
     margin-bottom: 20px;
     font: 13px 'AvenirNext-MediumItalic';
     color: #4c4c4c;
@@ -2388,6 +2388,11 @@ p.descr {
     line-height: 33px;
     margin-top: 0px;
     margin-right: 15px;
+}
+.form_error p{
+    font: 15px 'AvenirNext-DemiBold';
+    color: #D23339;
+    padding:5px 0px;
 }
 .sort_b .selectboxit-container {
     width: auto;
@@ -5738,6 +5743,13 @@ ul.vice li .p_name {
     }
     #firechat{
         display:none !important;
+    }
+    p{
+        padding-left:5px;
+        padding-right:5px;
+    }
+    .mini_header .m_socials li.rss{
+        display:none;
     }
 }
 
