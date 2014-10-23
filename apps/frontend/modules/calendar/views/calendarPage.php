@@ -1,12 +1,12 @@
 <?php
-    $months = array('', 'Ianuarie', 'Februarie', 'Martie', 'Aprilie', 'Mai', 'Iunie', 'Iulie', 'August', 'Septembrie', 'Octombrie', 'Noiembrie', 'Decembrie');
+$months = array('', 'Ianuarie', 'Februarie', 'Martie', 'Aprilie', 'Mai', 'Iunie', 'Iulie', 'August', 'Septembrie', 'Octombrie', 'Noiembrie', 'Decembrie');
 ?>
 
 <div class="orsl">
     <ul class="orar_slider">
-        <?php 
-            $current_month_ord = 0;
-            $month_ord = 0;
+        <?php
+        $current_month_ord = 0;
+        $month_ord = 0;
         ?>
         <?php for ($year = $begin_year; $year <= $end_year; $year++) { ?>
             <?php for ($month = ($year == $begin_year ? $begin_month : 1); ($year == $end_year && $month <= $end_month) || ($year != $end_year && $month <= 12); $month++) {
@@ -54,17 +54,18 @@
 
                             for ($dayOfMonth = 1; $dayOfMonth <= $daysInMonth; $dayOfMonth++) {
                                 $date = sprintf('%4d-%02d-%02d', $year, $month, $dayOfMonth);
+                                $haveEvents = isset($events[$year][$month][$dayOfMonth]) && $events[$year][$month][$dayOfMonth];
                                 ?>
-                            <td class='day'>                            
-                                <div class="cl_data <?=$month == $current_month && $year == $current_year && $dayOfMonth == $current_day ? 'active' : '';?>"><?= $dayOfMonth; ?></div>
+                            <td class='day <?= $haveEvents ? 'haveEvents' : 'nhaveEvents'; ?>'>                            
+                                <div class="cl_data <?= $month == $current_month && $year == $current_year && $dayOfMonth == $current_day ? 'active' : ''; ?>"><?= $dayOfMonth; ?></div>
                                 <div class="cl_time">
                                     <ul>
                                         <?php if (isset($events[$year][$month][$dayOfMonth])) { ?>
                                             <?php foreach ($events[$year][$month][$dayOfMonth] as $event) { ?>
                                                 <li><!-- eveniment -->
-                                                    <p><?=$event->period;?></p>
+                                                    <p><?= $event->period; ?></p>
                                                     <div class="cl_pop">
-                                                        <span><?=$event->title;?></span>
+                                                        <span><?= $event->title; ?></span>
                                                         <!--<p>Ion Vasilica</p>-->
                                                     </div>
                                                 </li>
@@ -88,7 +89,7 @@
 
                         echo 8 - $dayOfWeek > 0 ? str_repeat('<td class="empty_cell">&nbsp;</td>', 8 - $dayOfWeek) : '';
                         echo '</tr></table>';
-                        
+
                         if ($month == $current_month && $year == $current_year) {
                             $current_month_ord = $month_ord;
                         }
@@ -104,5 +105,5 @@
 </div>
 
 <script>
-    start_month = <?=$current_month_ord;?>;
+    start_month = <?= $current_month_ord; ?>;
 </script>
