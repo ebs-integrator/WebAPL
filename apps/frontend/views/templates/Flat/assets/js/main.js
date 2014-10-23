@@ -20,7 +20,7 @@ $(document).ready(function () {
 
     $('section').css('min-height', ($(window).height() - 326));
     $('.l_a.m_t_n').css('min-height', ($(window).height() - 413));
-    $('.menu_content').height($(window).height() - 83);
+    $('.mini_header .content').height($(window).height() - 85);
 
     $('.resp_menu').click(function(){
         $('.resp_menu').toggleClass('active');
