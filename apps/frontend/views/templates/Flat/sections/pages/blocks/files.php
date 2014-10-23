@@ -10,7 +10,7 @@
         <ul class="docs">
             <?php foreach ($page->files as $file) { ?>
             <li class="<?=$file->extension;?>">
-                <a href="<?=url($file->path);?>" target="_block"><?=$file->name;?></a>
+                <a href="<?=url($file->path);?>" target="_block"><?=$file->name;?><span></span></a>
             </li>
             <?php } ?>
         </ul>

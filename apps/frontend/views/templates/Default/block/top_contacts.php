@@ -1,6 +1,8 @@
 <p class="tel"><?= varlang('nr-phone'); ?></p>
-<a class="mini_contacte" href="#"></a>
-<a class="mini_contacte1" href="#"></a>
+<?php if (isset($phone_page)) { ?>
+    <a class="mini_contacte" href="<?= Core\APL\Language::url('topost/' . $phone_page->id); ?>"></a>
+    <a class="mini_contacte1" href="<?= Core\APL\Language::url('topost/' . $phone_page->id); ?>"></a>
+<?php } ?>
 <div class="cont">
     <div class="contact_us_btn">
         <button class="contact_us"><?= varlang('contact-us'); ?></button>
@@ -37,7 +39,9 @@
                 </div>
             </div>
             <div class="left map">
-                    <a class="mini_contacte1 maplink" href="javascript:window.open('https://www.google.ro/maps/dir//' + loc_lat + ',' + loc_long + '/@' + loc_lat + ',' + loc_long + ',14z');"></a>
+                <a href="javascript:window.open('https://www.google.ro/maps/dir//' + loc_lat + ',' + loc_long + '/@' + loc_lat + ',' + loc_long + ',14z');">
+                    <img src="<?= res('assets/img/mapitem.png'); ?>" alt="" />
+                </a>
             </div>        
             <div class="clearfix10"></div>
 

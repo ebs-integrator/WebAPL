@@ -19,6 +19,12 @@ class UploaderController extends BaseController {
         });
     }
 
+    public function filemanager() {
+        return View::make('layout.main', array(
+                    'content' => View::make('sections.file.filemanager')
+        ));
+    }
+
     /**
      * Get filelist
      */
@@ -59,11 +65,11 @@ class UploaderController extends BaseController {
             $uploadFile = $uploadDir . "/" . $filename;
 
             $fileType = Files::getType($extension);
-            
+
             if (!file_exists(Files::fullDir($uploadDir))) {
                 @mkdir(Files::fullDir($uploadDir), 0777);
             }
-            
+
             if (!file_exists(Files::fullDir($uploadDir))) {
                 $uploadDir = Files::$upload_dir;
             }
