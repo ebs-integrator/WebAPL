@@ -21,6 +21,7 @@ Route::post('uploader/add', 'UploaderController@add');
 Route::post('uploader/filelist', 'UploaderController@filelist');
 Route::post('uploader/delete', 'UploaderController@delete');
 Route::post('uploader/editname', 'UploaderController@editname');
+Route::get('filemanager', 'UploaderController@filemanager');
 
 Route::controller('home', 'HomeController');
 Route::controller('menu', 'MenuController');

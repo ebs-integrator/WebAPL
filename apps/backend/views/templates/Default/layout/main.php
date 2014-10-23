@@ -132,6 +132,9 @@
                                 <?php if (User::has('template-edit')) { ?>
                                     <li> <a href="<?= url('template'); ?>"><?= varlang('template-4'); ?></a></li>
                                 <?php } ?>
+                                    <?php if (User::has('file-manage')) { ?>
+                                    <li> <a href="<?= url('filemanager'); ?>"><?= varlang('filemanager'); ?></a></li>
+                                <?php } ?>
                                 <li><img id="loading" style="display: none;margin-top: 14px;" src="<?= res('assets/img/ajax-loader.gif'); ?>" /></li>
                             </ul><!-- /.nav -->
                         </div>
