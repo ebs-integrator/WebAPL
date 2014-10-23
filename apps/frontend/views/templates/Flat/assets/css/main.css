@@ -5226,7 +5226,7 @@ ul.vice li .p_name {
     .conten p {
         font: 15px 'AvenirNext-Regular';
     }
-    table.orar tbody  td.empty_cell {
+    table.orar tbody  td.empty_cell,table.orar tbody  td.nhaveEvents {
         display: none;
     }
     table.orar tbody tr td{
@@ -5512,7 +5512,7 @@ ul.vice li .p_name {
         font: 20px 'AvenirNext-Bold';
         padding: 0px 26px;
         border: solid 10px transparent;
-        width: 100%;
+        width: 315px;
     }
     .contact_r .prp a {
         font: 13px 'AvenirNext-Bold';
@@ -5558,6 +5558,10 @@ ul.vice li .p_name {
     .personal .left {
         margin-left: 0px;
         margin-top:15px;
+        float: none;
+    }
+    .personal .img{
+        float:none;
     }
     .personal{
         padding-bottom: 10px; 
@@ -5682,7 +5686,7 @@ ul.vice li .p_name {
     article a.more{
         bottom:15px;
     }
-    .prefooter .row1_l p{
+    .prefooter .row1_l p,.prefooter .row1_r p{
         display:none;
     }
     .prefooter .row1_l p.f_title, .prefooter .row1_r p.f_title{
