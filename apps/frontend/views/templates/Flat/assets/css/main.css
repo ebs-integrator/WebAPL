@@ -1061,7 +1061,7 @@ footer .copy{
     width:275px;
     right:0px;
     top:84px;
-    min-height:480px;
+    min-height:395px;
 }
 .mini_header .m_menu li{
     height:45px;
@@ -1122,13 +1122,13 @@ footer .copy{
 .mini_header .m_lang li{
     display: inline-block;
     height: 35px;
-    margin-right: 15px;
+    margin-right: 24px;
     width: 35px;
     margin-bottom: 10px;
 }
 .m_lang{
     position: absolute;
-    bottom: 125px;
+    bottom: 100px;
 }
 .mini_header .m_footer{
     padding:15px 25px 20px;
@@ -2058,7 +2058,7 @@ ul.faq li p:last-child{
     margin-bottom: 70px;
     position: relative;
 }
-.green input[type=text],.compl input[type=text]{
+.green input[type=text],.compl input[type=text],.green input[type=email],.compl input[type=email]{
     margin-bottom: 20px;
     font: 13px 'AvenirNext-MediumItalic';
     color: #4c4c4c;
@@ -2388,6 +2388,11 @@ p.descr {
     line-height: 33px;
     margin-top: 0px;
     margin-right: 15px;
+}
+.form_error p{
+    font: 15px 'AvenirNext-DemiBold';
+    color: #D23339;
+    padding:5px 0px;
 }
 .sort_b .selectboxit-container {
     width: auto;
@@ -5226,7 +5231,7 @@ ul.vice li .p_name {
     .conten p {
         font: 15px 'AvenirNext-Regular';
     }
-    table.orar tbody  td.empty_cell {
+    table.orar tbody  td.empty_cell,table.orar tbody  td.nhaveEvents {
         display: none;
     }
     table.orar tbody tr td{
@@ -5512,7 +5517,7 @@ ul.vice li .p_name {
         font: 20px 'AvenirNext-Bold';
         padding: 0px 26px;
         border: solid 10px transparent;
-        width: 100%;
+        width: 315px;
     }
     .contact_r .prp a {
         font: 13px 'AvenirNext-Bold';
@@ -5558,6 +5563,10 @@ ul.vice li .p_name {
     .personal .left {
         margin-left: 0px;
         margin-top:15px;
+        float: none;
+    }
+    .personal .img{
+        float:none;
     }
     .personal{
         padding-bottom: 10px; 
@@ -5682,7 +5691,7 @@ ul.vice li .p_name {
     article a.more{
         bottom:15px;
     }
-    .prefooter .row1_l p{
+    .prefooter .row1_l p,.prefooter .row1_r p{
         display:none;
     }
     .prefooter .row1_l p.f_title, .prefooter .row1_r p.f_title{
@@ -5734,6 +5743,13 @@ ul.vice li .p_name {
     }
     #firechat{
         display:none !important;
+    }
+    p{
+        padding-left:5px;
+        padding-right:5px;
+    }
+    .mini_header .m_socials li.rss{
+        display:none;
     }
 }
 
