@@ -5326,18 +5326,21 @@ ul.vice li .p_name {
         display:block;
     }
     table.atz tr td:last-child{
-        width:100%;
+        width:315px;
     }
     table.atz{        
         padding:0px;
+        width:315px;
     }
     table.atz td{
         border:0px;
     }
     table.atz tr{
         border-bottom:1px solid #e3e3e3;
+        width:315px;
     }
     table.atz tr td:nth-child(2){
+        width:315px;
         padding-bottom:0px;
     }
     table.orar thead tr:last-child,.w_line{
