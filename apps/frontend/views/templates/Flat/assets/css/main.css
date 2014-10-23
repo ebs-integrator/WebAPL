@@ -399,7 +399,7 @@ header .row1 > .left{
     width:16%;
 }
 .page_top_content .row1 > .left{
-    width:16%;
+    width:20%;
 }
 .l_box{
     font: 29px "AvenirNext-Bold";
@@ -484,7 +484,7 @@ header .row1 > .left{
     font:35px 'AvenirNext-Regular';
     margin-top: -5px;
 }
-.contact a.contact_us{
+a.contact_us{
     color:#fffe86;
     background:url("../img/contact)und.png") repeat-x bottom;
     cursor: pointer;
@@ -580,12 +580,12 @@ img{
     position: fixed;
     z-index:997;
 }
-header .cont{
+.cont{
     position:relative;
     height:40px;
     cursor: pointer;
 }
-header .cont:hover .cont_form{
+.cont:hover .cont_form{
     display:block;
 }
 .chat_b{
@@ -600,7 +600,7 @@ header .cont:hover .cont_form{
     line-height: 64px;
     padding-right:20px;
 }
-header .cont_form{
+.cont_form{
     position: absolute;
     width: 503px;
     display:none;
@@ -641,7 +641,7 @@ header .cont_form{
 .cont_form ul{
     margin-bottom:35px;
 }
-header .cont_form .prp {
+.cont_form .prp {
     width: 450px;
     border: 2px solid #00bd9c;
     height: 44px;
@@ -649,22 +649,22 @@ header .cont_form .prp {
     padding: 0px 19px;
     line-height: 39px;
 }
-header .cont_form .prp a {
+.cont_form .prp a {
     font: 15px 'AvenirNext-Bold';
     line-height: 40px;
     color: #00bd9c;
     text-transform: uppercase;
 }
-header .row1 .left.c_info,header .right.map {
+.row1 .left.c_info, .right.map {
     margin-top:24px;
     max-width:260px;
 }
-header .left.c_info .city{
+.left.c_info .city{
     color:#484848;
     margin-bottom:15px;
     font:17px 'AvenirNext-DemiBold';
 }
-header .left.c_info .street{
+.left.c_info .street{
     color:#484848;
     font:17px 'AvenirNext-Medium';
 }
@@ -1061,27 +1061,28 @@ footer .copy{
     width:275px;
     right:0px;
     top:84px;
+    min-height:480px;
 }
 .mini_header .m_menu li{
-    height:72px;
+    height:45px;
     display:block;
     border-bottom:2px solid #fff;
 }
 .mini_header .m_menu li a{
     text-transform: uppercase;
     color:#fff;
-    font:20px 'AvenirNext-Bold';
-    line-height:70px;
+    font:16px 'AvenirNext-Bold';
+    line-height:45px;
 }
 .mini_header .m_socials{
-    margin:35px 0px 90px;
+    margin:20px 0px;
 }
 .mini_header .m_socials li a,.mini_header .m_socials li{
-    width:42px;
-    height:42px;
-    display:inline-block;
-    margin-right:15px;
-    margin-bottom:15px;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 .mini_header .m_socials li.fb{
     background:url('../img/m_fb.png') no-repeat center;
@@ -1106,28 +1107,35 @@ footer .copy{
     background:url('../img/m_gplus.png') no-repeat center;
 }
 .mini_header .m_lang li a{
-    font:16px 'AvenirNext-Bold';
-    color:#00bd9c;
-    height:42px;
-    display:block;
+    font: 15px 'AvenirNext-Bold';
+    color: #00bd9c;
+    height: 35px;
+    display: block;
     text-align: center;
-    width:42px;
-    line-height:42px;
+    width: 35px;
+    line-height: 35px;
 }
 .m_menu,.m_socials,.m_lang{
     padding-left:25px;
 
 }
 .mini_header .m_lang li{
-    display:inline-block;
-    height:42px;
-    margin-right:15px;
-    width:42px;
-    margin-bottom:40px;
+    display: inline-block;
+    height: 35px;
+    margin-right: 15px;
+    width: 35px;
+    margin-bottom: 10px;
+}
+.m_lang{
+    position: absolute;
+    bottom: 125px;
 }
 .mini_header .m_footer{
     padding:15px 25px 20px;
     background:#00a487;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }
 .mini_header .m_lang li:first-child{
     background:#fffead;
@@ -1145,14 +1153,16 @@ footer .copy{
     display:block;
     padding-left:40px;
     color:#fff;
-    font:25px 'AvenirNext-Regular';
+    font:18px 'AvenirNext-Regular';
 }
 .mini_header .m_phone{
-    background:url('../img/m_phone.png')no-repeat left center;
+    background:url('../img/m_phone.png')no-repeat left center;    
+    background-size: auto 100%;
 }
 .mini_header .m_map{
     background:url('../img/m_map.png')no-repeat left center;
     margin-bottom:15px;
+    background-size: auto 100%;
 }
 footer .copy a{
     color:#c5c5c5;
@@ -1204,7 +1214,10 @@ section,.page_header{
     background: -ms-linear-gradient(left,#f7f7f7,#f7f7f7 35%,white 35,white);
     max-width: 2850px;
 }
-
+.page_header .lang {
+    margin-right: 10px;
+    margin-top: 5px;
+}
 section .right_site{
     width: 70%;
     padding: 5px 0px 50px 55px;
@@ -1233,7 +1246,6 @@ section .right_site{
     height:263px;
     margin:0 auto;
     position:relative;
-    overflow:hidden;
     margin-top:25px;
 }
 .page_top_header .top_back{
@@ -1246,14 +1258,20 @@ section .right_site{
     height:100%;
 }
 .page_top_content .row1{
-    margin-top:40px;
+    padding-top:40px;
+}
+.img_back{
+    width:100%;
+    height:100%;
+    position: absolute;
+    overflow: hidden;
 }
 .page_top_content .row1 > .right{
     margin-right:70px;
 }
 .page_top_content .row2{
     float: right;
-    width: 84%;
+    width: 80%;
 }
 .page_top_content .row2 .content{
     height:77px;
@@ -1261,11 +1279,11 @@ section .right_site{
     border-bottom:3px solid #fff;
     margin-right:70px;
 }
-.page_top_content .row2 .content ul li{
+.page_top_content .row2 .content > ul li{
     display:inline-block;
     height:74px;
 }
-.page_top_content .row2 .content ul li a{
+.page_top_content .row2 .content > ul li a{
     display:block;
     height:74px;
     padding:0 32px;
@@ -1275,9 +1293,12 @@ section .right_site{
     line-height: 74px;
 
 }
-.page_top_content .row2 .content ul li.active{
+.page_top_content .row2 .content > ul li.active{
     border:3px solid #fff;
     border-bottom:0px;
+}
+.page_top_content .row2 .content > ul{
+    float: left;
 }
 .pct,.pot{
     display:block;
@@ -2206,7 +2227,7 @@ ul.faq li p:last-child{
 .form .content .radio_b label {
     display: inline-block;
     display: -moz-inline-box;
-    margin: 0 20px 20px -5px;
+    margin: 0 20px 20px 5px;
     color:#5e5e5e;
     font:13px  'AvenirNext-DemiBoldItalic';
 }
@@ -3878,10 +3899,10 @@ ul.vice li .p_name {
         width:100%;
     }
     .page_top_content .row2{
-        width:83%;
+        width:77%;
     }
     .page_top_content .row1 > .left{
-        width:17%;
+        width:23%;
     }
     header{
         height:500px;
@@ -3931,17 +3952,32 @@ ul.vice li .p_name {
     .page_top_header {
         margin-top: 0px;
     }
+    .page_top_content .row2 .content{
+        margin-right:0px;
+    }
+    .page_top_content .row2 .content > ul li a{
+        padding: 0 20px;
+    }
+    .page_top_content .row1 > .right{
+        margin-right:30px;
+    }
 
 }
 @media only screen and (min-width: 1280px) and (max-width: 1365px){
     .page_top_header{
         width:100%;
     }
+    .page_top_content .row2 .content > ul li a{
+        padding: 0 20px;
+    }
     .page_top_content .row2{
-        width:83%;
+        width:77%;
     }
     .page_top_content .row1 > .left{
-        width:17%;
+        width:23%;
+    }
+    .page_top_content .row2 .content {
+        margin-right: 0px;
     }
     .page_top_header{
         margin-top:0px;
@@ -3965,6 +4001,14 @@ ul.vice li .p_name {
     .contact{
         margin-right:20px;
     }
+    footer .left .content{
+        width:100%;
+        padding-left:50px;
+    }
+    footer .right .content{        
+        width:100%;
+        padding-right:50px;
+    }
     header    .home_chat p {
         display: none;
     }
@@ -3986,6 +4030,9 @@ ul.vice li .p_name {
     .top_menu{
         padding-left:50px;
     }
+    .menu_block{
+        padding-right:20px;
+    }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1279px){
     .wrap{
@@ -3999,6 +4046,10 @@ ul.vice li .p_name {
     }
     .u_a img{
         max-height:400px;
+    }
+
+    .page_top_content .row2 .content{
+        margin-right:0px;
     }
     ul.culture li:after{
         clear:both;
@@ -4016,22 +4067,22 @@ ul.vice li .p_name {
         margin-bottom:20px;
     }
     header .row1 > .left{
-        width:240px;
+        width:30%;
     }
-    .contact a.contact_us{
+    a.contact_us{
         text-indent: -9999px;    
         text-decoration: none;
         background:url('../img/m_map.png')no-repeat center;
         display: block;
         height: 41px;
     }
-    header .cont_form{
+    .cont_form{
         top:65px;
     }
     .cont_form .relative img{
         right:40px;
     }
-    header .cont{
+    .cont{
         float:right;
         margin-left:15px;
     }
@@ -4114,8 +4165,11 @@ ul.vice li .p_name {
     header{
         height:400px;
     }
+    .menu_block{
+        padding-right:0px;
+    }
     .top_menu li{
-        padding-left: 25px;
+        padding-left: 20px;
     }
     .contact {
         margin-right: 15px;
@@ -4151,7 +4205,7 @@ ul.vice li .p_name {
         width:100%;
     }
     .page_top_content .row2{
-        width:80%;
+        width:100%;
     }
     .page_top_content .row1 > .right{
         margin-right:15px;
@@ -4161,9 +4215,15 @@ ul.vice li .p_name {
     }
     .page_top_content .row2 .content{
         margin-right:0px;
+        padding-left:30px;
     }
     .page_top_content .row1 > .left{
-        width:20%;
+        width:30%;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+    .l_box span{
+        font-size:26px;
     }
     .l_box{
         font:24px "AvenirNext-Bold";
@@ -4175,7 +4235,8 @@ ul.vice li .p_name {
         width:550px;
     }
     section .left_block{
-        width:31%;
+        width:100%;
+        display:block !important;
     }
     table.orar tbody tr td:nth-child(5) .cl_pop,table.orar tbody tr td:nth-child(4) .cl_pop {
         left: -210px;
@@ -4300,6 +4361,10 @@ ul.vice li .p_name {
     .vice .img img {
         max-width: 190px;
     }
+    .page_header    .lang p,.page_header  .lang ul li {
+        width: 52px;
+        height: 49px;
+    }
     section .right_site{
         float:none;
         width:100%;
@@ -4314,7 +4379,7 @@ ul.vice li .p_name {
     .cont_form .relative img{
         right:7px;
     }
-    header .cont:hover .cont_form{
+    .cont:hover .cont_form{
         margin-top:10px;
     }
     .n_alert{
@@ -4340,12 +4405,12 @@ ul.vice li .p_name {
         right: 10px;
         top: 90px;
     }
-    header .cont {
+    .cont {
         float: right;
         margin-left: 15px;
     }
     header .row1 > .left {
-        width: 240px;
+        width: 37%;
         margin-bottom:20px;
         margin-top:0px;
     }
@@ -4355,9 +4420,12 @@ ul.vice li .p_name {
         padding-left: 25px;
     }
     header{
-        height: 400px;
+        height: 350px;
     }
-    .contact a.contact_us {
+    .menu_block{
+        padding-right:0px;
+    }
+    a.contact_us {
         text-indent: -9999px;
         text-decoration: none;
         background: url('../img/m_map.png')no-repeat center;
@@ -4507,6 +4575,12 @@ ul.vice li .p_name {
         margin-right:0px;
         height: 62px;
     }
+    .page_header .lang{
+        position: absolute;
+        margin-top: -65px;
+        right:10px;
+    }
+
     .l_box span,.l_box{
         font-size:26px;
     }
@@ -4515,12 +4589,12 @@ ul.vice li .p_name {
     }
     .page_top_content .row2 .content ul li a {
         height: 60px;
-        font: 18px "AvenirNext-Bold";
+        font: 17px "AvenirNext-Bold";
         padding: 0 15px;
         line-height: 60px;
     }
     .page_top_content .row1 > .left{
-        width:25%;        
+        width:35%;        
     }
     .contact_r,.contact_f{
         width:100%;
@@ -4560,6 +4634,9 @@ ul.vice li .p_name {
         float:none;
         margin-left:0px;
         display:block;
+    }
+    section .left_block{
+        display:none;
     }
     table.orar tbody tr td:nth-child(5) .cl_pop,table.orar tbody tr td:nth-child(4) .cl_pop {
         left: -210px;
@@ -4606,7 +4683,9 @@ ul.vice li .p_name {
     }
 }
 @media only screen and (max-width: 767px){
-
+    .img_back{
+        display:none;
+    }
     .a_box .title a {
         font: 18px 'AvenirNext-DemiBold';
     }
@@ -4863,9 +4942,9 @@ ul.vice li .p_name {
         font: 15px 'AvenirNext-Medium';
     }
     .page_top_content .row1,header .row1{
-        margin:0px;
         width: 580px;
         margin: 0 auto;
+        padding:0px
     }
     table.orar tbody tr td:nth-child(5) .cl_pop,table.orar tbody tr td:nth-child(4) .cl_pop {
         left: -210px;
@@ -4881,7 +4960,7 @@ ul.vice li .p_name {
         color:#00bd9c;
         border-color:#00bd9c;
         line-height: 1.115;
-        padding: 5px 35px 5px 16px;
+        padding: 5px 10px;
         max-width: 325px;
         float:left;
         margin-top:8px;
@@ -4947,8 +5026,8 @@ ul.vice li .p_name {
         width:100%;
     }
     .row1_l .fcc {
-        padding-left: 65px;
-        padding-right: 55px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
     .row1 .left{
         margin-top:0px;
@@ -4976,7 +5055,10 @@ ul.vice li .p_name {
         width:100%;
         margin-left:0px;
     }
-    section .left_block,section .right_block{
+    section .left_block{
+        display:none;
+    }
+    section .right_block{
         display:block;        
     }
     .left_block ul.menu > li > a{
@@ -5130,6 +5212,10 @@ ul.vice li .p_name {
     }
     .m_criteria{
         font-size: 16px;
+    }
+
+    #firechat{
+        display:none !important;
     }
 }
 
@@ -5607,7 +5693,10 @@ ul.vice li .p_name {
         height:290px;
     }
     .prefooter article.doc{
-        width:100%;
+        width: 300px;
+        padding: 10px;
+        float: none;
+        margin: 0 auto;
     }
     .prefooter a.f_artc{
         font-size: 18px;
@@ -5624,6 +5713,7 @@ ul.vice li .p_name {
     }
     .prefooter article.doc .ttl a{
         font-size:30px;
+        padding: 0 10px;
     }
     .left_block .chat .mn{
         width:25px;
@@ -5638,6 +5728,12 @@ ul.vice li .p_name {
     }
     .left_block .chat .green,.left_block .chat .violet{
         font-size:20px;
+    }
+    .prefooter article.doc table{
+        width:315px;
+    }
+    #firechat{
+        display:none !important;
     }
 }
 
