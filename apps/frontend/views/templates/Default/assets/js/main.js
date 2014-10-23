@@ -36,7 +36,7 @@ $(document).ready(function () {
 
     $('section').css('min-height', ($(window).height() - 326));
     $('.l_a.m_t_n').css('min-height', ($(window).height() - 413));
-    $('.header_menu_content').height($(window).height() - 83).css('min-height', '430px');
+    $('.header_menu_content').height($(window).height() - 83).css('min-height', '410px');
 
     $('.head_list,.overlay3').click(function () {
         $('.menu_content').toggleClass('hidden');
