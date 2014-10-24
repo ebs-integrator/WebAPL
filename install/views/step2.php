@@ -1,4 +1,6 @@
-<h3>Cerinte tehnice</h3>
+<h3>Cerințe tehnice</h3>
+
+<p>Pentru a continua procesul de instalare este necesar să verificați dacă dispuneți de toate cerințele tehnice.</p>
 
 <table class="table table-bordered">
     <tr>
@@ -47,14 +49,17 @@
 
 <h3>Drepturi de scriere</h3>
 
+<p>Ca procesul de instalare să decurgă fără erori trebuie ca următoarele dosare și fisierele din ele să dețină drepturi de scriere.</p>
+<p>Oferirea drepturilor de scriere se face cu ajutorul unui client FTP (ex. Filezilla), drepturile recomandate sunt: 0777</p>
+
 <table class="table table-bordered">
     <tr>
         <td>/apps/frontend/storage/</td>
         <td>
             <?php if ($req['wr_fr_storage']) { ?>
-                <label class="label label-success">writable</label>
+                <label class="label label-success">poate fi scris</label>
             <?php } else { ?>
-                <label class="label label-danger">non-whitable</label>
+                <label class="label label-danger">nu poate fi scris</label>
             <?php } ?>
         </td>
     </tr>
@@ -62,9 +67,9 @@
         <td>/apps/backend/storage/</td>
         <td>
             <?php if ($req['wr_bk_storage']) { ?>
-                <label class="label label-success">writable</label>
+                <label class="label label-success">poate fi scris</label>
             <?php } else { ?>
-                <label class="label label-danger">non-whitable</label>
+                <label class="label label-danger">nu poate fi scris</label>
             <?php } ?>
         </td>
     </tr>
@@ -72,9 +77,9 @@
         <td>/upload/</td>
         <td>
             <?php if ($req['wr_upload']) { ?>
-                <label class="label label-success">writable</label>
+                <label class="label label-success">poate fi scris</label>
             <?php } else { ?>
-                <label class="label label-danger">non-whitable</label>
+                <label class="label label-danger">nu poate fi scris</label>
             <?php } ?>
         </td>
     </tr>
@@ -82,9 +87,9 @@
         <td>/install/</td>
         <td>
             <?php if ($req['wr_install']) { ?>
-                <label class="label label-success">writable</label>
+                <label class="label label-success">poate fi scris</label>
             <?php } else { ?>
-                <label class="label label-danger">non-whitable</label>
+                <label class="label label-danger">nu poate fi scris</label>
             <?php } ?>
         </td>
     </tr>
@@ -92,9 +97,9 @@
         <td>/apps/frontend/config/</td>
         <td>
             <?php if ($req['wr_fr_db']) { ?>
-                <label class="label label-success">writable</label>
+                <label class="label label-success">poate fi scris</label>
             <?php } else { ?>
-                <label class="label label-danger">non-whitable</label>
+                <label class="label label-danger">nu poate fi scris</label>
             <?php } ?>
         </td>
     </tr>
@@ -102,9 +107,9 @@
         <td>/apps/backend/config/</td>
         <td>
             <?php if ($req['wr_bk_db']) { ?>
-                <label class="label label-success">writable</label>
+                <label class="label label-success">poate fi scris</label>
             <?php } else { ?>
-                <label class="label label-danger">non-whitable</label>
+                <label class="label label-danger">nu poate fi scris</label>
             <?php } ?>
         </td>
     </tr>
@@ -112,7 +117,10 @@
 </table>
 
 <?php if ($valid_step) { ?>
-    <a href="<?= url('install/step3'); ?>" class="btn btn-info btn-lg">Urmatorul pas</a>
+    <a href="<?= url('install/step3'); ?>" class="btn btn-info btn-lg">Următorul pas</a>
 <?php } else { ?>
-    <a href="#" class="btn btn-default btn-lg">Urmatorul pas</a>
+    <a href="#" class="btn btn-default btn-lg">Următorul pas</a>
 <?php } ?>
+
+
+<br><br>
