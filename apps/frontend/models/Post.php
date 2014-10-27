@@ -201,7 +201,7 @@ class Post extends Eloquent {
         foreach (array_reverse($parents) as $parent) {
             $uri_segments[] = $parent['uri'];
         }
-
+        
         $furi = implode('/', $uri_segments);
 
         if ($full) {

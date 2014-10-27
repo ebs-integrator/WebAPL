@@ -1,6 +1,6 @@
-<h3>Admin account</h3>
+<h3>Contul de administrator</h3>
 
-<p>Introduceti datele administratorului</p>
+<p>Introduceți datele administratorului care va fi creat</p>
 
 <form action="<?= url('install/checkadmin'); ?>" method="post">
 
@@ -10,7 +10,7 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>Username</th>
+            <th>Nume</th>
             <td>
                 <input type="text" required="" name="username" class="form-control" />
             </td>
@@ -22,13 +22,13 @@
             </td>
         </tr>
         <tr>
-            <th>Password</th>
+            <th>Parolă</th>
             <td>
                 <input type="password" required="" name="password" class="form-control" />
             </td>
         </tr>
         <tr>
-            <th>Confirm password</th>
+            <th>Confirmare parolă</th>
             <td>
                 <input type="password" required="" name="password2" class="form-control" />
             </td>
@@ -37,5 +37,5 @@
 
     <hr/>
 
-    <button class="btn btn-info btn-lg">Urmatorul pas</button>
+    <button class="btn btn-info btn-lg">Următorul pas</button>
 </form>

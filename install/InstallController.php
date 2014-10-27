@@ -118,7 +118,7 @@ class InstallController extends BaseController {
             return Illuminate\Support\Facades\Redirect::to('install/step4');
         } catch (PDOException $ex) {
             Session::put('step3', false);
-            return Illuminate\Support\Facades\Redirect::to('install/step3')->with('conerror', 'Invalid dates!');
+            return Illuminate\Support\Facades\Redirect::to('install/step3')->with('conerror', 'Date invalide');
         }
     }
 
@@ -161,7 +161,7 @@ class InstallController extends BaseController {
             return Illuminate\Support\Facades\Redirect::to('install/step5');
         } else {
             Session::put('step4', false);
-            return Illuminate\Support\Facades\Redirect::to('install/step4')->with('tplerror', 'Invalid template!');
+            return Illuminate\Support\Facades\Redirect::to('install/step4')->with('tplerror', 'Șablon invalid.');
         }
     }
 
@@ -214,7 +214,7 @@ class InstallController extends BaseController {
             return $this->getFinal();
         } else {
             Session::put('step5', false);
-            return Illuminate\Support\Facades\Redirect::to('install/step5')->with('uerror', 'Password confirmation failed');
+            return Illuminate\Support\Facades\Redirect::to('install/step5')->with('uerror', 'Parolele nu coincid');
         }
     }
 

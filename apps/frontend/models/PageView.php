@@ -62,7 +62,7 @@ class PageView {
                     $wdata['post'] = Post::withDinamicFields($post);
                     $data["page"]->text .= View::make("sections.pages.modview.acquisition")->with($wdata);
                 } else {
-                    throw new Exception("Undefined article '{$item}'");
+                    throw new Exception("Undefined article '{$item}'", 404);
                 }
             } else {
                 $wdata["posts"] = Post::postsFeed($data['page']->feed_id, false);
@@ -92,7 +92,7 @@ class PageView {
                     $wdata["post_files"] = Files::file_list('doc_post_lang', $wdata["post"]->post_lang_id);
                     $data["page"]->text .= View::make("sections.pages.modview.project")->with($wdata);
                 } else {
-                    throw new Exception("Undefined article '{$item}'");
+                    throw new Exception("Undefined article '{$item}'", 404);
                 }
             } else {
                 $wdata["posts"] = Post::postsFeed($data['page']->feed_id, false);
@@ -112,7 +112,7 @@ class PageView {
                 if ($wdata['post']) {
                     $data["page"]->text = View::make("sections.pages.modview.promise")->with($wdata);
                 } else {
-                    throw new Exception("Post not found");
+                    throw new Exception("Post not found", 404);
                 }
             } else {
                 $wdata["posts"] = Post::postsFeed($data['page']->feed_id, true);
@@ -194,7 +194,7 @@ class PageView {
                     $wdata['post']['cover'] = Post::coverImage($wdata['post']->id);
                     $data["page"]->text = View::make("sections.pages.modview.articleFull")->with($wdata);
                 } else {
-                    throw new Exception("Post not found");
+                    throw new Exception("Post not found", 404);
                 }
             } else {
                 $wdata["posts"] = Post::postsFeed($data['page']->feed_id, true);
@@ -292,7 +292,7 @@ class PageView {
                     $wdata["post"] = Post::withDinamicFields($wdata["post"]);
                     $data["page"]->text .= View::make("sections.pages.modview.meetingFuture")->with($wdata);
                 } else {
-                    throw new Exception("Undefined post #{$item}");
+                    throw new Exception("Undefined post #{$item}", 404);
                 }
             } else {
                 $posts_instance = Post::postsFeed($data['page']->feed_id, false, true)->where(Post::getField('created_at'), '<', DB::raw('CURRENT_TIMESTAMP'));
@@ -409,7 +409,7 @@ class PageView {
 
                     return static::contactView($data);
                 } else {
-                    throw new Exception("Post not found");
+                    throw new Exception("Post not found", 404);
                 }
             } else {
 
@@ -419,7 +419,7 @@ class PageView {
                         $data['current_year'] = date('Y', strtotime($last->created_at));
                         $data['current_month'] = date('m', strtotime($last->created_at));
                     } else {
-                        throw new Exception("Posts not found");
+                        throw new Exception("Posts not found", 404);
                     }
                 }
 

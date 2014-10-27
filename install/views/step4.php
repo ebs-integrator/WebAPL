@@ -1,6 +1,6 @@
-<h3>Template</h3>
+<h3>Șablon</h3>
 
-<p>Selectati tema site-ului</p>
+<p>Selectați șablonul site-ului</p>
 
 <form action="<?= url('install/checktpl'); ?>" method="post">
 
@@ -25,5 +25,5 @@
 
     <hr/>
 
-    <button class="btn btn-info btn-lg">Urmatorul pas</button>
+    <button class="btn btn-info btn-lg">Următorul pas</button>
 </form>

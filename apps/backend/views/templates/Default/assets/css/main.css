@@ -2625,3 +2625,6 @@ body.error .logo h1 {
 .treeview a{
     white-space: pre-wrap;
 }
+.cke_button__spellchecker {
+    display: none !important;
+}

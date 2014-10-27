@@ -1433,6 +1433,7 @@ footer .right > .left{
     float: none;
     display: inline-block;
     max-width: 335px;
+    width:330px;
 }
 footer .right > .left p{
     color:#4b4b4b;
@@ -2135,7 +2136,7 @@ section > .wrap >  .left.contact_r{
     width:360px;
     margin-right:55px;
 }
-.content input[type=text],.chat input[type=text]{
+.content input[type=text],.chat input[type=text],.content input[type=email],.chat input[type=email]{
     margin-bottom:20px;
     font:13px 'open_sanssemibold_italic';
     color:#4c4c4c;
@@ -2144,7 +2145,7 @@ section > .wrap >  .left.contact_r{
     border:1px solid #d9d9d9;
     border-left:3px solid #d9d9d9;
 }
-.green input[type=text],.chat input[type=text]{
+.green input[type=text],.chat input[type=text],.green input[type=email],.chat input[type=email]{
     width:280px;
 }
 .wrap .form .nmpm{
@@ -4666,8 +4667,8 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         padding-left:20px;
         width:200px;
     }
-    footer .right .left.search{
-        height: 45px;
+    footer .right > .left.search{
+        margin-bottom:0px;
     }
     div > .logo > img{
         max-width:450px;
@@ -6465,7 +6466,6 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     .left article .ttl{
         font:19px 'open_sansbold';
-        height:70px;
         width:100%;
     }
     .left article ul{

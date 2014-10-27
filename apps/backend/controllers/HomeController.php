@@ -89,8 +89,6 @@ class HomeController extends BaseController {
     public function getEmpty() {
 
         // BAD EMPTY FUNCTION
-
-
         // delete posts
         $posts = Post::where('taxonomy_id', 2)->get();
         foreach ($posts as $post) {
@@ -102,6 +100,9 @@ class HomeController extends BaseController {
         }
         DB::table('apl_feed_field_value')->truncate();
         DB::table('apl_feed_post')->truncate();
+        DB::table(PostLang::getTableName())->update(array(
+            'text' => ''
+        ));
 
         // delete acte
         $actes = DB::table('apl_acte')->get();
@@ -134,14 +135,14 @@ class HomeController extends BaseController {
         $reqs = DB::table('apl_job_requests')->get();
         foreach ($reqs as $req) {
             if ($req->cv_path && file_exists($_SERVER['DOCUMENT_ROOT'] . '/' . $req->cv_path)) {
-                unlink($_SERVER['DOCUMENT_ROOT'] . '/' . $req->cv_path);
+                @unlink($_SERVER['DOCUMENT_ROOT'] . '/' . $req->cv_path);
             }
         }
         DB::table('apl_job_requests')->truncate();
 
         // logs
         DB::table('apl_logs')->truncate();
-        
+
         // menu
         DB::table('apl_menu')->truncate();
         DB::table('apl_menu_item')->truncate();
@@ -160,53 +161,54 @@ class HomeController extends BaseController {
         DB::table('apl_person')->truncate();
         DB::table('apl_person_lang')->truncate();
         DB::table('apl_person_rel')->truncate();
-        
-        
+
+
         // polls
         DB::table('apl_poll')->truncate();
         DB::table('apl_poll_answer')->truncate();
+        DB::table('apl_poll_answer_lang')->truncate();
         DB::table('apl_poll_question')->truncate();
         DB::table('apl_poll_votes')->truncate();
-        
+
         // pagefiles
         $pagefiles = DB::table('apl_file')->where('module_name', 'article_cover')->get();
         foreach ($pagefiles as $pf) {
             Files::drop($pf->id);
         }
         DB::table('apl_file')->where('module_name', 'page')->delete();
-        
+
         // othfiles
         $files = DB::table('apl_file')->where('module_name', 'article_cover')->get();
         foreach ($files as $file) {
             Files::drop($file->id);
         }
         DB::table('apl_file')->where('module_name', 'article_cover')->delete();
-        
+
         $files = DB::table('apl_file')->where('module_name', 'doc_post_lang')->get();
         foreach ($files as $file) {
             Files::drop($file->id);
         }
         DB::table('apl_file')->where('module_name', 'doc_post_lang')->delete();
-        
+
         $files = DB::table('apl_file')->where('module_name', 'test')->get();
         foreach ($files as $file) {
             Files::drop($file->id);
         }
         DB::table('apl_file')->where('module_name', 'test')->delete();
-        
+
         $files = DB::table('apl_file')->where('module_name', 'person')->get();
         foreach ($files as $file) {
             Files::drop($file->id);
         }
         DB::table('apl_file')->where('module_name', 'person')->delete();
-        
+
         $files = DB::table('apl_file')->where('module_name', 'rewwe')->get();
         foreach ($files as $file) {
             Files::drop($file->id);
         }
         DB::table('apl_file')->where('module_name', 'rewwe')->delete();
         
-        
+        return ['executed'];
     }
 
 }

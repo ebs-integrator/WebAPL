@@ -16,6 +16,7 @@ class PostProperty extends Eloquent {
 
     public static function postsWithProperty($property, $take = 0) {
         $instance = PostProperty::prepare()
+                ->where(PostLang::getField('enabled'), 1)
                 ->where(PostProperty::getField('key'), $property);
 
         if ($take) {
@@ -27,6 +28,7 @@ class PostProperty extends Eloquent {
 
     public static function postWithProperty($property, $with_url = false) {
         $row = PostProperty::prepare()
+                ->where(PostLang::getField('enabled'), 1)
                 ->where(PostProperty::getField('key'), $property)
                 ->remember(SettingsModel::one('cachelife'))
                 ->first();

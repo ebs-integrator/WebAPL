@@ -120,7 +120,7 @@ class PageController extends BaseController {
         if ($home_page) {
             return $this->route(Post::getFullURI($home_page->id, false));
         } else {
-            throw new Exception("Undefined home page");
+            throw new Exception("Undefined home page", 404);
         }
     }
 

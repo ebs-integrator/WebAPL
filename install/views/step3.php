@@ -1,6 +1,7 @@
-<h3>Baza de date</h3>
+<h3>Pregătire bază de date</h3>
 
-<p>Introduceti datele de conectare la baza de date</p>
+<p>Introduceți datele de conectare la baza de date</p>
+<p>Datele le puteți obține din panelul de administrare a hosting-ului sau de la furnizorul de hosting</p>
 
 <form action="<?= url('install/checkdb'); ?>" method="post">
     
@@ -10,30 +11,30 @@
     
     <table class="table table-bordered">
         <tr>
-            <td>Host</td>
+            <td>Hostul de conectare</td>
             <td>
                 <input type="text" required="" name="dbhost" value="<?= Session::get('dbhost') ? Session::get('dbhost') : 'localhost'; ?>" class="form-control" />
             </td>
         </tr>
         <tr>
-            <td>Nume</td>
+            <td>Numele bazei de date</td>
             <td>
                 <input type="text" required="" name="dbname" value="<?= Session::get('dbname'); ?>" class="form-control" />
             </td>
         </tr>
         <tr>
-            <td>Username</td>
+            <td>Numele de utilizator</td>
             <td>
                 <input type="text" required="" name="dbuser" value="<?= Session::get('dbuser'); ?>" class="form-control" />
             </td>
         </tr>
         <tr>
-            <td>Password</td>
+            <td>Parolă</td>
             <td>
                 <input type="text" name="dbpass" value="<?= Session::get('dbpass'); ?>" class="form-control" />
             </td>
         </tr>
     </table>
 
-    <button class="btn btn-info btn-lg">Urmatorul pas</button>
+    <button class="btn btn-info btn-lg">Următorul pas</button>
 </form>

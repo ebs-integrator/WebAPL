@@ -6,8 +6,6 @@
 <div class="sort_b">
     <p><?= varlang('page-result'); ?> </p>
     <select id="jsperpage">
-        <option value="1">1</option>
-        <option value="2">2</option>
         <option value="10">10</option>
         <option value="25">25</option>
         <option value="50">50</option>
@@ -116,7 +114,7 @@ $months = array(
 
 
     var queryTitle = '';
-    var perPage = 1;
+    var perPage = 10;
     jQuery(document).ready(function($) {
         perPage = parseInt($("#jsperpage").val());
 

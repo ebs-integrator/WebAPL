@@ -19,17 +19,17 @@
                 <nav class="navbar navbar-default" role="navigation">
                     <div class="container-fluid">
                         <div class="navbar-header">
-                            <span class="navbar-brand">INSTALARE PLATFORMA</span>
+                            <span class="navbar-brand">INSTALARE PLATFORMĂ</span>
                         </div>
 
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
                             <ul class="nav navbar-nav">
-                                <li class="<?=isset($step) && $step == 1 ? 'active' : '';?>"><a>Welcome</a></li>
-                                <li class="<?=isset($step) && $step == 2 ? 'active' : '';?>"><a>Step 2</a></li>
-                                <li class="<?=isset($step) && $step == 3 ? 'active' : '';?>"><a>Step 3</a></li>
-                                <li class="<?=isset($step) && $step == 4 ? 'active' : '';?>"><a>Step 4</a></li>
-                                <li class="<?=isset($step) && $step == 5 ? 'active' : '';?>"><a>Step 5</a></li>
-                                <li class="<?=isset($step) && $step == 6 ? 'active' : '';?>"><a>Finish</a></li>
+                                <li class="<?=isset($step) && $step == 1 ? 'active' : '';?>"><a>Start</a></li>
+                                <li class="<?=isset($step) && $step == 2 ? 'active' : '';?>"><a>Verificare</a></li>
+                                <li class="<?=isset($step) && $step == 3 ? 'active' : '';?>"><a>Bază de date</a></li>
+                                <li class="<?=isset($step) && $step == 4 ? 'active' : '';?>"><a>Șablon</a></li>
+                                <li class="<?=isset($step) && $step == 5 ? 'active' : '';?>"><a>Administrator</a></li>
+                                <li class="<?=isset($step) && $step == 6 ? 'active' : '';?>"><a>Finisare</a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.container-fluid -->

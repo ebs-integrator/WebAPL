@@ -14,20 +14,24 @@ App::error(function(Exception $exception, $code) {
 
     $page_property = false;
 
-    if ($code == 404) {
+    $ecode = $exception->getCode();
+    $pageCode = in_array($ecode, [404]) ? $ecode : $code;
+
+    if ($pageCode == 404) {
         $page_property = 'error_404';
-    } elseif ($code >= 500) {
+    } elseif ($pageCode >= 500) {
         //$page_property = 'error_500';
     } else {
         //$page_property = 'error_other';
     }
 
     if ($page_property) {
+        Post::$taxonomy = 1;
         $page = PostProperty::postWithProperty('error_404');
         if ($page) {
             $uri = Post::getFullURI($page->id, false);
             $contents = App::make('PageController')->route($uri);
-            return Response::make($contents, $code);
+            return Response::make($contents, $pageCode);
         }
     }
 
