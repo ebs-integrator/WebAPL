@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 23, 2014 at 10:59 PM
+-- Generation Time: Oct 27, 2014 at 09:21 PM
 -- Server version: 5.5.37
 -- PHP Version: 5.4.4-14+deb7u12
 
@@ -348,7 +348,7 @@ CREATE TABLE IF NOT EXISTS `apl_file` (
   `module_name` varchar(20) NOT NULL,
   `module_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=322 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=312 ;
 
 --
 -- Dumping data for table `apl_file`
@@ -480,7 +480,7 @@ CREATE TABLE IF NOT EXISTS `apl_logs` (
   `ip` varchar(50) NOT NULL,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 -- --------------------------------------------------------
 
@@ -869,7 +869,7 @@ CREATE TABLE IF NOT EXISTS `apl_post` (
   `redirect_to` int(11) NOT NULL DEFAULT '0',
   `to_home` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=281 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=275 ;
 
 --
 -- Dumping data for table `apl_post`
@@ -878,7 +878,7 @@ CREATE TABLE IF NOT EXISTS `apl_post` (
 INSERT INTO `apl_post` (`id`, `created_at`, `updated_at`, `author_id`, `taxonomy_id`, `feed_id`, `clone_id`, `ord_num`, `views`, `view_mod`, `have_socials`, `have_comments`, `show_files`, `show_file_search`, `show_pcomment`, `parent`, `general_node`, `is_home_page`, `is_trash`, `is_alert`, `alert_expire`, `redirect_to`, `to_home`) VALUES
 (95, '2014-09-15 13:37:13', '2014-10-23 13:59:32', 1, 1, 0, 0, 106, 365, 'contactsView', 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, NULL, 0, 0),
 (102, '2014-09-17 08:41:53', '2014-09-25 14:29:45', 1, 1, 0, 0, 102, 1, '', 1, 0, 1, 0, 0, 130, 0, 0, 0, 0, NULL, 0, 0),
-(103, '2014-09-17 08:42:18', '2014-10-23 16:28:47', 1, 1, 0, 0, 101, 3204, '', 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, NULL, 0, 0),
+(103, '2014-09-17 08:42:18', '2014-10-27 17:08:43', 1, 1, 0, 0, 101, 3208, '', 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, NULL, 0, 0),
 (104, '2014-09-17 08:48:41', '2014-10-23 15:47:12', 1, 1, 0, 0, 103, 812, '', 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, NULL, 0, 0),
 (105, '2014-09-17 08:49:21', '2014-10-23 16:25:57', 1, 1, 0, 0, 104, 533, '', 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, NULL, 0, 0),
 (106, '2014-09-17 08:49:37', '2014-10-23 14:28:28', 1, 1, 0, 0, 105, 634, '', 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, NULL, 0, 0),
@@ -906,7 +906,7 @@ INSERT INTO `apl_post` (`id`, `created_at`, `updated_at`, `author_id`, `taxonomy
 (128, '2014-09-17 08:59:51', '2014-10-23 13:59:22', 1, 1, 0, 0, 128, 99, 'mapPage', 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, NULL, 0, 0),
 (129, '2014-09-17 09:00:08', '2014-10-23 04:09:35', 1, 1, 12, 0, 239, 50, 'fileFolders', 1, 0, 1, 0, 0, 123, 0, 0, 0, 0, NULL, 0, 0),
 (130, '2014-09-17 09:00:23', '2014-10-23 16:05:59', 1, 1, 0, 0, 130, 1, '', 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, NULL, 103, 0),
-(131, '2014-09-17 09:00:36', '2014-10-23 16:26:35', 1, 1, 0, 0, 131, 1288, 'error404', 0, 0, 1, 0, 0, 130, 0, 0, 0, 0, NULL, 0, 0),
+(131, '2014-09-17 09:00:36', '2014-10-27 17:15:10', 1, 1, 0, 0, 131, 1294, 'error404', 0, 0, 1, 0, 0, 130, 0, 0, 0, 0, NULL, 0, 0),
 (132, '2014-09-17 09:01:18', '2014-10-23 15:25:48', 1, 1, 18, 0, 132, 236, 'accordion_list', 1, 0, 1, 0, 0, 107, 0, 0, 0, 0, NULL, 0, 0),
 (133, '2014-09-17 09:02:01', '2014-10-23 13:15:33', 1, 1, 0, 0, 133, 92, '', 1, 0, 1, 0, 0, 107, 0, 0, 0, 0, NULL, 0, 0),
 (134, '2014-09-17 09:02:25', '2014-10-23 14:25:47', 1, 1, 0, 0, 134, 52, '', 1, 0, 1, 0, 0, 107, 0, 0, 0, 0, NULL, 0, 0),
@@ -967,7 +967,7 @@ INSERT INTO `apl_post` (`id`, `created_at`, `updated_at`, `author_id`, `taxonomy
 (190, '2014-09-17 09:52:21', '2014-10-23 07:33:07', 1, 1, 0, 0, 190, 38, '', 1, 0, 1, 0, 0, 113, 0, 0, 0, 0, NULL, 0, 0),
 (191, '2014-09-17 09:52:58', '2014-10-23 14:36:31', 1, 1, 0, 0, 191, 104, 'secial_complaints_list', 1, 0, 1, 0, 0, 113, 0, 0, 0, 0, NULL, 0, 0),
 (192, '2014-09-17 09:53:25', '2014-10-23 07:39:05', 1, 1, 2, 0, 192, 21, 'accordion_list', 1, 0, 1, 0, 0, 113, 0, 0, 0, 0, NULL, 0, 0),
-(193, '2014-09-17 09:56:22', '2014-10-23 13:41:10', 1, 1, 0, 0, 193, 52, '', 1, 0, 1, 1, 0, 114, 0, 0, 0, 0, NULL, 0, 0),
+(193, '2014-09-17 09:56:22', '2014-10-27 17:08:41', 1, 1, 0, 0, 193, 53, '', 1, 0, 1, 1, 0, 114, 0, 0, 0, 0, NULL, 0, 0),
 (194, '2014-09-17 09:57:22', '2014-10-23 13:51:22', 1, 1, 0, 0, 194, 36, '', 1, 0, 1, 1, 0, 114, 0, 0, 0, 0, NULL, 0, 0),
 (195, '2014-09-17 09:57:50', '2014-10-21 14:53:24', 1, 1, 0, 0, 195, 23, '', 1, 0, 1, 1, 0, 114, 0, 0, 0, 0, NULL, 0, 0),
 (196, '2014-09-17 09:58:15', '2014-10-19 17:14:15', 1, 1, 0, 0, 196, 23, '', 1, 0, 1, 1, 0, 114, 0, 0, 0, 0, NULL, 0, 0),
@@ -990,7 +990,7 @@ INSERT INTO `apl_post` (`id`, `created_at`, `updated_at`, `author_id`, `taxonomy
 (215, '2014-09-17 10:33:31', '2014-10-23 14:28:09', 1, 1, 0, 0, 215, 82, 'persons_secretar', 1, 0, 1, 0, 0, 118, 0, 0, 0, 0, NULL, 0, 0),
 (216, '2014-09-17 10:33:57', '2014-10-23 06:30:42', 1, 1, 0, 0, 216, 93, 'city_councilors', 1, 0, 1, 0, 0, 118, 0, 0, 0, 0, NULL, 0, 0),
 (217, '2014-09-17 10:34:31', '2014-10-23 04:16:52', 1, 1, 0, 0, 217, 60, 'page_calendar', 1, 0, 1, 0, 0, 118, 0, 0, 0, 0, NULL, 0, 0),
-(218, '2014-09-17 10:35:06', '2014-10-23 16:28:54', 1, 1, 12, 0, 218, 165, 'acteList', 1, 0, 1, 0, 0, 118, 0, 0, 0, 0, NULL, 0, 0),
+(218, '2014-09-17 10:35:06', '2014-10-27 06:46:39', 1, 1, 12, 0, 218, 167, 'acteList', 1, 0, 1, 0, 0, 118, 0, 0, 0, 0, NULL, 0, 0),
 (219, '2014-09-17 10:35:30', '2014-10-23 04:02:39', 1, 1, 16, 0, 219, 52, 'meetingFuture', 1, 0, 1, 0, 0, 214, 0, 0, 0, 0, NULL, 0, 0),
 (220, '2014-09-17 10:36:25', '2014-10-22 13:43:36', 1, 1, 15, 0, 220, 95, 'acticles', 1, 0, 1, 0, 0, 214, 0, 0, 0, 0, NULL, 0, 0),
 (221, '2014-09-17 10:37:05', '2014-10-23 10:19:28', 1, 1, 0, 0, 221, 47, 'page_calendar', 1, 0, 1, 0, 0, 214, 0, 0, 0, 0, NULL, 0, 0),
@@ -1059,7 +1059,7 @@ CREATE TABLE IF NOT EXISTS `apl_post_lang` (
   `lang_id` int(11) NOT NULL,
   `enabled` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1188 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1164 ;
 
 --
 -- Dumping data for table `apl_post_lang`
@@ -1885,26 +1885,15 @@ CREATE TABLE IF NOT EXISTS `apl_user` (
   `register_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `apl_user`
 --
 
 INSERT INTO `apl_user` (`id`, `username`, `password`, `remember_token`, `email`, `register_date`, `updated_at`) VALUES
-(1, 'admin', '$2y$10$8BsK6iFNy96LfNnO0JLl5uCfp2nURYG2Xs/ypdsOdnU.5oELMsB3W', 'ixQ9tbDi6hLqhj7o3ptwYHF9ejHcArrNliFkrBEjXDrCnxJCULKiJHcFnFNN', 'ngodina.ebs@gmail.com', '2014-06-28 18:23:41', '2014-09-25 09:10:00'),
-(4, 'Nicolae Lungu', '$2y$10$C2oSg7w5W12co73.E9An3Ol5a5UyYYXgWRVYQ6Pj/6uItkhhCtJve', '1g55EGYssO0hpXs1cMRyV9cgAtByhWWw4bFwf44HXIixbShgX5ck85nwXiPo', 'nlungu@ebs.md', '2014-09-26 13:41:23', '0000-00-00 00:00:00'),
-(5, 'petru.culeac', '$2y$10$Um0niDnPP4AjL2uBvIeL7uddhz8/M/tHPJ7DslfeFSJQmkYqfnLQC', 'q1p4fbS0N6EgVSdR5Q5oitXQR6etJbvVIFL70XNeli9JQO6MJPDRXKqPiFqJ', 'pculeac@lgsp.md', '2014-09-26 13:49:17', '0000-00-00 00:00:00'),
-(6, 'aliona', '$2y$10$Yk6Zrm5AoACNnVb3NW9N9.qtsUUz7LryfeycjrnYiQw0MNR69Rw2u', 'f9PZh5F1VFqmT8O5FyTZcQU7St1UTCvmzzAHFsZVO1mGPacwpg5UaJW5O2eR', 'elevcenco@gmail.com', '2014-09-26 14:00:15', '0000-00-00 00:00:00');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `apl_user_role`
---
-INSERT INTO `apl_user` (`id`, `username`, `password`, `remember_token`, `email`, `register_date`, `updated_at`) VALUES
-(10, 'manager', '$2y$10$GTbp.vdJsQeVmb3JEn811.zeIqr/bLM/t6haHIEi9c1tLOWb4URFu', 'rRX0Yazea4xRooxKvHwNHW2aaE1F85zpW3p39HPQzYcQD6ZxzQ6FirP4l5MG', 'manager@ebs.md', '2014-10-21 21:33:46', '0000-00-00 00:00:00'),
-(11, 'primar', '$2y$10$jXH33vgH.hEigvCLj6zNl.mqGTyL37lu8SoxPFIKeEtTyDQ.4qQV.', '', 'primar@ebs.md', '2014-10-21 21:40:02', '0000-00-00 00:00:00');
+(10, 'manager', '$2y$10$GTbp.vdJsQeVmb3JEn811.zeIqr/bLM/t6haHIEi9c1tLOWb4URFu', 'rRX0Yazea4xRooxKvHwNHW2aaE1F85zpW3p39HPQzYcQD6ZxzQ6FirP4l5MG', 'manager@ebs.md', '2014-10-21 18:33:46', '0000-00-00 00:00:00'),
+(11, 'primar', '$2y$10$jXH33vgH.hEigvCLj6zNl.mqGTyL37lu8SoxPFIKeEtTyDQ.4qQV.', '', 'primar@ebs.md', '2014-10-21 18:40:02', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1919,7 +1908,7 @@ CREATE TABLE IF NOT EXISTS `apl_user_role` (
   `role_id` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3345 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3180 ;
 
 --
 -- Dumping data for table `apl_user_role`

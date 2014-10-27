@@ -1,4 +1,2 @@
-<h3>Welcome to APL Admin Panel</h3>
+<h3>Welcome to OpenLPA</h3>
 <br><br>
-
-<textarea class="ckeditor-run">Text</textarea>

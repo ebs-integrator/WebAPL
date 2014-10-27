@@ -11,7 +11,7 @@ CKEDITOR.editorConfig = function(config) {
     
     config.uiColor = '#4eb25c';
 
-    config.removePlugins = 'about,save,forms,div,language';
+    config.removePlugins = 'about,save,forms,div,language,scayt';
     config.extraPlugins = 'texttransform,wordcount,oembed,addmap';
     config.height = 400;
 
@@ -24,4 +24,7 @@ CKEDITOR.editorConfig = function(config) {
         charLimit: 'unlimited',
         wordLimit: 'unlimited'
     };
+    
+    config.disableNativeSpellChecker = false;
+    config.scayt_autoStartup = false;
 };
