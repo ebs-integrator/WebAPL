@@ -86,6 +86,18 @@ Event::listen('APL.modules.load', function() {
     });
 });
 
+$clear_cache = FALSE;
+
+Event::listen(['eloquent.sav*', 'eloquent.upd*', 'eloquent.del*', 'eloquent.creat*'], function () use (&$clear_cache) {
+    $clear_cache = TRUE;
+});
+
+App::shutdown(function() use (&$clear_cache) {
+    if ($clear_cache) {
+        File::deleteDirectory($_SERVER['DOCUMENT_ROOT'] . '/apps/frontend/storage/cache/');
+        @unlink($_SERVER['DOCUMENT_ROOT'] . '/apps/frontend/storage/meta/services.json');
+    }
+});
 
 App::before(function() {
     

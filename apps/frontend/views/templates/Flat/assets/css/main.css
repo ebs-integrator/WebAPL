@@ -1224,9 +1224,6 @@ footer .right{
 .gal p span{
     display:inline;
 }
-footer .right .content:active{
-    display:none;
-}
 ul.culture li .right .box p a{
     word-break: break-all;
 }

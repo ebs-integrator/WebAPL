@@ -137,20 +137,22 @@ class PageController extends BaseController {
             }
         }
 
-        $properties = Input::get('properties');
-        PostPropertyRel::where('post_id', $page_id)->delete();
-        if (is_array($properties)) {
-            foreach ($properties as $property) {
-                $prop = PostProperty::find($property);
-                if ($prop) {
-                    if ($prop->is_unique) {
-                        PostPropertyRel::where('post_property_id', $prop->id)->delete();
-                    }
+        if ($page) {
+            $properties = Input::get('properties');
+            PostPropertyRel::where('post_id', $page_id)->delete();
+            if (is_array($properties)) {
+                foreach ($properties as $property) {
+                    $prop = PostProperty::find($property);
+                    if ($prop) {
+                        if ($prop->is_unique) {
+                            PostPropertyRel::where('post_property_id', $prop->id)->delete();
+                        }
 
-                    $newproperty = new PostPropertyRel;
-                    $newproperty->post_id = $page_id;
-                    $newproperty->post_property_id = $property;
-                    $newproperty->save();
+                        $newproperty = new PostPropertyRel;
+                        $newproperty->post_id = $page_id;
+                        $newproperty->post_property_id = $property;
+                        $newproperty->save();
+                    }
                 }
             }
         }
