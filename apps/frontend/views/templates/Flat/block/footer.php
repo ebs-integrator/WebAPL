@@ -23,11 +23,11 @@
         <div class="f_menu">
             <div class="content">
                 <?php if (isset($buttom_pages) && count($buttom_pages)) { ?>
-                <ul>
-                    <?php foreach ($buttom_pages as $item) { ?>
-                    <li><a href="<?= Language::url('topost/' . $item->id); ?>"><?= $item->title; ?></a></li>
-                    <?php } ?>
-                </ul>   
+                    <ul>
+                        <?php foreach ($buttom_pages as $item) { ?>
+                            <li><a href="<?= Language::url('topost/' . $item->id); ?>"><?= $item->title; ?></a></li>
+                        <?php } ?>
+                    </ul>   
                 <?php } ?>
             </div>
         </div>
@@ -66,16 +66,17 @@
 </footer>
 
 <?php Event::fire('bottom_contructor'); ?>
+<?= SettingsModel::one('stats_code'); ?>
 
-<script src="<?=res('assets/js/plugins.js');?>"></script>
-<script src="<?=res('assets/js/icheck.js');?>"></script>
-<script src="<?=res('assets/js/jquery.bxslider.min.js');?>"></script>
-<script src="<?=res('assets/js/jquery.cookie.js');?>"></script>
+<script src="<?= res('assets/js/plugins.js'); ?>"></script>
+<script src="<?= res('assets/js/icheck.js'); ?>"></script>
+<script src="<?= res('assets/js/jquery.bxslider.min.js'); ?>"></script>
+<script src="<?= res('assets/js/jquery.cookie.js'); ?>"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-<script src="<?=res('assets/js/vendor/modernizr-2.6.2.min.js');?>"></script>
+<script src="<?= res('assets/js/vendor/modernizr-2.6.2.min.js'); ?>"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-<script src="<?=res('assets/js/jquery.selectBoxIt.min.js');?>"></script>
-<script src="<?=res('assets/js/main.js');?>"></script>
+<script src="<?= res('assets/js/jquery.selectBoxIt.min.js'); ?>"></script>
+<script src="<?= res('assets/js/main.js'); ?>"></script>
 
 </body>
 </html>

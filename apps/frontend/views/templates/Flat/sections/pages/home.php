@@ -42,12 +42,12 @@
             </div>
         </div>
     <?php } ?>
-    <?php if (isset($home_ads) && $home_ads) { ?>
+    <?php if (isset($home_ads[0]) && $home_ads[0]) { ?>
         <div class="row1_r">
             <div class="content">
                 <div class="fcc">
                     <p class="f_title"><?= varlang('anunturi'); ?></p>
-                    <?php foreach ($home_ads as $item) { ?>
+                    <?php foreach ([$home_ads[0]] as $item) { ?>
                         <div class="data"><?= date('d-m-Y', strtotime($item->created_at)); ?></div>
                         <a href="<?= Language::url('topost/' . $item->id); ?>" class="f_artc"><?= $item->title; ?></a>
                         <p><?= Str::words(strip_tags($item->text), 30); ?></p>

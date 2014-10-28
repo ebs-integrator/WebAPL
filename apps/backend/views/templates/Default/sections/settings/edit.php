@@ -6,6 +6,7 @@
     <li><a href="#location" role="tab" data-toggle="tab"><?= varlang('location-1'); ?></a></li>
     <li><a href="#comments" role="tab" data-toggle="tab"><?= varlang('comments'); ?></a></li>
     <li><a href="#ment" role="tab" data-toggle="tab"><?= varlang('inca'); ?></a></li>
+    <li><a href="#stats" role="tab" data-toggle="tab"><?= varlang('statistica'); ?></a></li>
 </ul>
 
 <div class="tab-content">
@@ -17,12 +18,12 @@
             <table class="table table-bordered">
 
                 <?php foreach (Core\APL\Language::getList() as $lang) { ?>
-                <tr>
-                    <th><?= varlang('sitename'); ?> (<?=$lang->name;?>):</th>
-                    <td>
-                        <input type='text' name='set[sitename_<?=$lang->ext;?>]' class='form-control' value='<?= isset($setts['sitename_' . $lang->ext]) ? $setts['sitename_' . $lang->ext] : ''; ?>'/>
-                    </td>
-                </tr>
+                    <tr>
+                        <th><?= varlang('sitename'); ?> (<?= $lang->name; ?>):</th>
+                        <td>
+                            <input type='text' name='set[sitename_<?= $lang->ext; ?>]' class='form-control' value='<?= isset($setts['sitename_' . $lang->ext]) ? $setts['sitename_' . $lang->ext] : ''; ?>'/>
+                        </td>
+                    </tr>
                 <?php } ?>
 
                 <tr>
@@ -168,6 +169,29 @@
 
 
     </div>
+
+
+    <div class="tab-pane" id="stats">
+
+
+        <form action="<?= url('settings/save'); ?>" method="post" class="ajax-auto-submit">
+
+            <table class="table table-bordered">
+
+                <tr>
+                    <th class="col-lg-3"><?= varlang('inserare-cod-pentru-statistica'); ?></th>
+                    <td>
+                        <textarea name='set[stats_code]' class="form-control" style="min-height: 400px"><?= isset($setts['stats_code']) ? $setts['stats_code'] : ''; ?></textarea>
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+
+    </div>
+
 </div>
 
 
