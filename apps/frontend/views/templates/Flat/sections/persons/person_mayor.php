@@ -6,6 +6,8 @@ foreach ($groups as $group) {
             <div class="img">
                 <?php if (isset($person->path) && $person->path) { ?>
                     <img alt="<?= $person->first_name; ?> <?= $person->last_name; ?>" title="<?= $person->first_name; ?> <?= $person->last_name; ?>" src='<?= url($person->path); ?>'>
+                <?php } else { ?>
+                    <img alt="" src="<?= res('assets/img/nophoto.png'); ?>">
                 <?php } ?>
             </div>
             <p class="subt"><?= $person->first_name; ?> <?= $person->last_name; ?></p>
@@ -29,7 +31,7 @@ foreach ($groups as $group) {
                     <div class='dcr_box'>
                         <ul>
                             <?php foreach ($folder->docs as $doc) { ?>
-                                <li class="<?=$doc->extension;?>">
+                                <li class="<?= $doc->extension; ?>">
                                     <a href="<?= url($doc->path); ?>"><?= $doc->name; ?> <span class="dcr_dwnl"></span></a>
                                 </li>
                             <?php } ?>

@@ -7,6 +7,8 @@
                 <div class="img">
                     <?php if (isset($person->path) && $person->path) { ?>
                         <img width="210" alt="<?= $person->first_name; ?> <?= $person->last_name; ?>" title="<?= $person->first_name; ?> <?= $person->last_name; ?>" src='<?= url($person->path); ?>'>
+                    <?php } else { ?>
+                        <img alt="" src="<?= res('assets/img/nophoto.png'); ?>">
                     <?php } ?>
                 </div>
                 <div class="left">

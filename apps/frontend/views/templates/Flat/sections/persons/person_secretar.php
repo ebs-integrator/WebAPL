@@ -6,6 +6,8 @@ foreach ($groups as $group) {
         <div class="sec_details">
             <?php if (isset($person->path) && $person->path) { ?>
                 <img alt="<?= $person->first_name; ?> <?= $person->last_name; ?>" title="<?= $person->first_name; ?> <?= $person->last_name; ?>" src='<?= url($person->path); ?>'>
+            <?php } else { ?>
+                <img alt="" src="<?= res('assets/img/nophoto.png'); ?>">
             <?php } ?>
             <div class="sec_label">
                 <table>

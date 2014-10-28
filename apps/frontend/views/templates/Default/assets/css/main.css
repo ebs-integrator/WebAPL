@@ -1898,7 +1898,7 @@ section > .wrap >  .left.contact_r{
     line-height: 57px;
     border-left:0;
     border-bottom: 2px solid #f7f7f7;
-    padding:0px 23px;
+    padding:0px 15px;
     width: 360px;
     position: relative;
 }
@@ -2613,7 +2613,7 @@ section  .map_cont .h_list ul li:hover a{
 }
 
 section .wrap > .left .subt,ul.faq  .subt{
-    font: 22px 'open_sansbold';
+    font: 17px 'open_sansbold';
     color: #232323;
     height: 50px;
     line-height: 44px;
