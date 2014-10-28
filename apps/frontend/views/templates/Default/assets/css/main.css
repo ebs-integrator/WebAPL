@@ -633,6 +633,7 @@ header .contact .cont .cont_form ul li p span,header .contact .cont .cont_form u
     color:#db1e46;
     text-transform: uppercase;
     display:inline-block;
+    display: -moz-inline-box;
     margin-left:15px;
 }
 .n_alert .cntn a{
@@ -765,6 +766,7 @@ header .contact .currency span.s_c{
 .contact_us_btn:hover  .cont_form {
     display: block !important;
 }
+
 header .contact .currency span.s_c span{
     padding:0px 15px 0px 10px;
     background: url('../img/currency_arrow.png') no-repeat 90% center;
@@ -996,6 +998,7 @@ table.taxe.aprt tbody tr td{
     font:24px 'open_sansbold';
     text-decoration: none;
     line-height: 25px;
+    padding:0px 5px;
 }
 .menu  .box .active .menu_title {
     background-color:#673268;
@@ -1052,7 +1055,6 @@ section > .wrap {
     display: inline-block;
     display: -moz-inline-box;
     background-color: #fcfcfc;
-
 }
 .right > article.atn .bx-wrapper .bx-viewport{
     height:140px!important;
@@ -1141,6 +1143,8 @@ section > .wrap > .left{
     margin-top:25px;
     background-color:#fcfcfc;
     border-left:0px;
+    position: relative;
+    float:left;
 }
 .right > article.news{
     height:auto;
@@ -1173,7 +1177,7 @@ section > .wrap > .left{
     overflow: hidden;
 }
 .right article{
-    padding:23px 19px 20px 27px;
+    padding:23px 19px 7px 27px;
 }
 .right article.news:before{
     border-left:3px solid #a4ca94;
@@ -1432,6 +1436,7 @@ footer .right > .left{
     margin-right:55px;
     float: none;
     display: inline-block;
+    display: -moz-inline-box;
     max-width: 335px;
     width:330px;
 }
@@ -1533,7 +1538,12 @@ header .logo{
     margin-left:70px;
     float:left;
     margin-top:6px;
+    width: 211px;
 }
+div > .logo > img{
+    width:563px;
+}
+
 header .hr{
     clear:both;
     height: 4px;
@@ -2191,6 +2201,7 @@ section > .wrap >  .left.contact_r{
 }
 .form label.code_lbl{
     display:inline-block;
+    display: -moz-inline-box;
     margin-right:8px;
 }
 .form .content .radio_b label{
@@ -2570,7 +2581,6 @@ section  .map_cont .h_list > li{
     padding-left:25px;
     margin-bottom:35px;
     display: inline-block;
-    display: -moz-inline-box;
     width:100%;
 }
 
@@ -6043,7 +6053,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         width:360px;
         margin-left:0px;
     }
-    
+
     section > .wrap > .right{
         float:none;
         display:none;
@@ -6556,7 +6566,8 @@ iframe, object, embed {
 }
 
 .maplink {
-    display: inline-block;   
+    display: inline-block;  
+    display: -moz-inline-box; 
     margin: 25px auto;
     float: none;
 }

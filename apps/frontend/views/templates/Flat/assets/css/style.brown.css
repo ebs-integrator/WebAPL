@@ -56,7 +56,7 @@ footer .copy a {
 
 
 .contact a.contact_us {
-    color: #B9BEC4;
+    color: #fff;
 } 
 footer .right p.y_info{
     color:#FEE7A1;
@@ -108,7 +108,7 @@ section .search input[type=submit] {
     color:#fff;
 }
 
-.lang p, .chat_b, header .cont_form .prp a, footer .search input[type=submit], .mini_header .m_lang li a, .form.green .ftb, .stat_info span:last-child, .search_li li p span, .contact_l .prp a, .contact_r .prp a {
+.lang p, .chat_b, .cont_form .prp a, footer .search input[type=submit], .mini_header .m_lang li a, .form.green .ftb, .stat_info span:last-child, .search_li li p span, .contact_l .prp a, .contact_r .prp a {
     color: #B88323;
 } 
 header .cont_form .prp{

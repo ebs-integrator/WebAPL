@@ -486,7 +486,7 @@ header .row1 > .left{
 }
 a.contact_us{
     color:#fffe86;
-    background:url("../img/contact)und.png") repeat-x bottom;
+    border-bottom:1px solid #fff;
     cursor: pointer;
     font:16px "AvenirNext-Medium";
 }
@@ -513,9 +513,8 @@ img{
 
 .top_menu li{
     display:inline-block;
-    padding-left: 40px;
-    height: 65px;
-    line-height: 65px;
+    height: 100%;
+    line-height: 75px;
 }
 .row1 .left{
     margin-top: 10px;
@@ -525,13 +524,23 @@ img{
     text-transform: uppercase;
     font: 20px "AvenirNext-Bold";
     margin-right:12px;
+    display:block;
+    padding:0px 20px;
+    height:100%;
+    line-height:73px;
+}
+.top_menu li.active a{
+    border: 2px solid #fff;
+    border-bottom: 0px;
 }
 .top_el{
     float:right;
+    height:100%;
 }
 .lang{
     position:relative;
     float:right;
+    margin-top: 4px;
 }
 .lang ul{
     position:absolute;
@@ -625,9 +634,16 @@ img{
 .cont_form ul li{
     font:17px 'AvenirNext-Medium';
     color:#484848;
-    width: 50%;
-    float: left;
-    margin-top:30px;
+    margin-top:8px;
+    display:block;
+    clear:both;
+}
+.cont_form ul li p{
+    float:left;
+    margin-right:5px;
+}
+.d_hr{
+    margin-top:20px;
 }
 .cont_form ul li a{
     font:17px 'AvenirNext-Medium';
@@ -639,18 +655,23 @@ img{
     margin-top:4px;
 }
 .cont_form ul{
-    margin-bottom:35px;
+    margin-bottom:25px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #ececec;
 }
 .cont_form .prp {
-    width: 450px;
+    width: 220px;
     border: 2px solid #00bd9c;
     height: 44px;
     margin-top: 6px;
-    padding: 0px 19px;
+    padding: 0px 5px;
     line-height: 39px;
+    float:left;
+    margin-right:4px;
+    text-align: center;
 }
 .cont_form .prp a {
-    font: 15px 'AvenirNext-Bold';
+    font: 12px 'AvenirNext-Bold';
     line-height: 40px;
     color: #00bd9c;
     text-transform: uppercase;
@@ -658,6 +679,21 @@ img{
 .row1 .left.c_info, .right.map {
     margin-top:24px;
     max-width:260px;
+}
+.right.map {
+    text-align: center;
+    border: 1px solid #f4f4f3;
+    height: 107px;
+    width: 180px;
+}
+.right.map a{
+    height:100%;
+    width:100%;
+    display:block;
+}
+
+.right.map img{
+    margin-top:12px;
 }
 .left.c_info .city{
     color:#484848;
@@ -680,6 +716,11 @@ p.form_title{
     height:33px;
     background: #f3f3f3;
     margin-bottom: 13px;
+    float:left;
+    width:48%;
+}
+.cont_form input[type="text"]:nth-child(2){
+    float:right;
 }
 .cont_form textarea ,.cont_form input[type="text"]{
     padding:0px 13px;
@@ -699,6 +740,7 @@ p.form_title{
     margin-right:8px;
     padding-left:13px;
     margin-top:17px;
+    float:none;
 }
 .cont_form input[type="submit"]{
     width: 57%;
@@ -871,6 +913,7 @@ footer {
     border-color:#fff;
     margin-right:15px;
     height:64px;
+    margin-top:4px;
 }
 .fcc{
     overflow:hidden;
@@ -1003,10 +1046,16 @@ footer .f_social li a{
     text-align: center;
 }
 footer label{
-    color:#767676;
+    color:#d8d6d6;
     font:14px 'AvenirNext-Medium';
     display:block;
     margin-bottom:3px;
+}
+section .left_block.left_contacts{
+    display:block;
+}
+.menu_block> ul{
+    height:100%;
 }
 footer input[type=text]{
     height:34px;
@@ -1174,6 +1223,9 @@ footer .right{
 }
 .gal p span{
     display:inline;
+}
+footer .right .content:active{
+    display:none;
 }
 ul.culture li .right .box p a{
     word-break: break-all;
@@ -4080,6 +4132,7 @@ ul.vice li .p_name {
         background:url('../img/m_map.png')no-repeat center;
         display: block;
         height: 41px;
+        border-bottom:0px;
     }
     .cont_form{
         top:65px;
@@ -4172,9 +4225,6 @@ ul.vice li .p_name {
     }
     .menu_block{
         padding-right:0px;
-    }
-    .top_menu li{
-        padding-left: 20px;
     }
     .contact {
         margin-right: 15px;
@@ -4422,7 +4472,6 @@ ul.vice li .p_name {
     .top_menu li{
         line-height: normal;
         float: left;
-        padding-left: 25px;
     }
     header{
         height: 350px;
@@ -4439,6 +4488,7 @@ ul.vice li .p_name {
         margin-top: 0px;
         font: 30px 'AvenirNext-Regular';        
         width: 30px;
+        border-bottom:0px;
     }
     .contact{
         margin-right:30px;
