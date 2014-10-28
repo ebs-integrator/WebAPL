@@ -5,6 +5,8 @@ foreach ($groups as $group) {
         <div class="sec_img">
             <?php if (isset($person->path) && $person->path) { ?>
                 <img src='<?= url($person->path); ?>'>
+            <?php } else { ?>
+                <img alt="" src="<?= res('assets/img/nophoto.png'); ?>">
             <?php } ?>
         </div>
         <ul class="sec_details">
@@ -51,10 +53,10 @@ foreach ($groups as $group) {
                     <div class='dcr_box'>
                         <ul>
                             <?php foreach ($folder->docs as $doc) { ?>
-                            <li class="<?=$doc->extension;?>">
-                                <span><a href="<?=url($doc->path);?>"><?= $doc->name; ?></a></span>
-                                <a href="<?=url($doc->path);?>" class="dcr_dwnl"></a>
-                            </li>
+                                <li class="<?= $doc->extension; ?>">
+                                    <span><a href="<?= url($doc->path); ?>"><?= $doc->name; ?></a></span>
+                                    <a href="<?= url($doc->path); ?>" class="dcr_dwnl"></a>
+                                </li>
                             <?php } ?>
                         </ul>
                     </div>

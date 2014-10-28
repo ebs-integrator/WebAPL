@@ -17,6 +17,8 @@ foreach ($groups as $group) {
                     <div class="clu_img">
                         <?php if (isset($person->path) && $person->path) { ?>
                             <img alt="<?= $person->first_name; ?> <?= $person->last_name; ?>" title="<?= $person->first_name; ?> <?= $person->last_name; ?>" src='<?= url($person->path); ?>'>
+                        <?php } else { ?>
+                            <img alt="" src="<?= res('assets/img/nophoto.png'); ?>">
                         <?php } ?>
                     </div>
                     <div class="clu_cont">
