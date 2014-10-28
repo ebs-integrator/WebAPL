@@ -203,11 +203,11 @@ class FeedController extends BaseController {
             $post->have_socials = isset($general['have_socials']) ? 1 : 0;
             $post->is_alert = isset($general['is_alert']) ? 1 : 0;
             $post->alert_expire = $general['alert_expire'];
-            
+
             if ($post->is_alert) {
                 Post::where('is_alert', 1)->update(['is_alert' => 1]);
             }
-            
+
             $post->save();
 
             Log::info("Edit Post (article) #{$id}");
@@ -281,18 +281,20 @@ class FeedController extends BaseController {
         // update dinamic lang fields
         $dinamic_lang_fields = Input::get("dinamic_lang.{$lang_id}");
         FeedFieldValue::where('post_id', $id)->where('lang_id', $lang_id)->delete();
-        foreach ($dinamic_lang_fields as $field_id => $field_value) {
-            $field = FeedField::find($field_id);
-            $fieldValue = new FeedFieldValue;
-            $fieldValue->feed_field_id = $field_id;
-            $fieldValue->post_id = $id;
-            $fieldValue->lang_id = $lang_id;
-            if ($field->check_filter && method_exists('DinamicFields', $field->check_filter)) {
-                $fieldValue->value = call_user_func(array('DinamicFields', $field->check_filter), $field_value);
-            } else {
-                $fieldValue->value = $field_value;
+        if (is_array($dinamic_lang_fields) && $dinamic_lang_fields) {
+            foreach ($dinamic_lang_fields as $field_id => $field_value) {
+                $field = FeedField::find($field_id);
+                $fieldValue = new FeedFieldValue;
+                $fieldValue->feed_field_id = $field_id;
+                $fieldValue->post_id = $id;
+                $fieldValue->lang_id = $lang_id;
+                if ($field->check_filter && method_exists('DinamicFields', $field->check_filter)) {
+                    $fieldValue->value = call_user_func(array('DinamicFields', $field->check_filter), $field_value);
+                } else {
+                    $fieldValue->value = $field_value;
+                }
+                $fieldValue->save();
             }
-            $fieldValue->save();
         }
 
         return $response;

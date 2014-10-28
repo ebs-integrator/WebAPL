@@ -10,7 +10,9 @@ $(document).ready(function () {
         controls: true,
         adaptiveHeight: true
     });
-
+    $('footer .right .content').click(function(){
+        $(this).hide();
+    });
     $('.orar_slider').bxSlider({
         pager: false,
         controls: true,
@@ -210,7 +212,7 @@ $(document).ready(function () {
         alertbox.find(".alertclose").click(function () {
             alertbox.fadeOut(150);
             if ($("#f_1").is(':checked')) {
-                $.cookie('alert_' + alertId, 1);
+                $.cookie('alert_' + alertId, 1, { path: '/' });
             }
         });
     }

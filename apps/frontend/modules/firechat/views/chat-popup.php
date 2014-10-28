@@ -53,7 +53,7 @@
         var tickChat = function(times, nr) {
             intick = true;
             $("#firechat .top").animate({'backgroundColor': nr ? '#7c4d7c' : '#AA79AA'}, 200);
-                    if (times > 0) {
+            if (times > 0) {
                 setTimeout(function() {
                     tickChat(times - 1, nr ? 0 : 1);
                 }, 600);
@@ -64,7 +64,7 @@
 
         $("body").on('click', '.firechat-start-with', function(e) {
             e.preventDefault();
-            
+
             if (current_person > 0)
                 return intick ? false : tickChat(7, 0);
 
@@ -72,18 +72,18 @@
             if (current_person != person) {
                 startChat(person);
             }
-            
+
             return false;
         });
 
         $("body").on("click", ".firechat-start", function(e) {
             e.preventDefault();
-            
+
             if (current_person > 0)
                 return intick ? false : tickChat(7, 0);
 
             startChat(0);
-            
+
             return false;
         });
 
@@ -98,16 +98,25 @@
             });
         });
 
-        $("body").on("click", ".firechat-hide", function() {
-            $("#firechat .content").slideToggle(500);
-            $("#firechat").animate({height: 40}, 500);
+        var firechat_hide = function(speed) {
+            $("#firechat .content").slideToggle(speed);
+            $("#firechat").animate({height: 40}, speed);
             $(".firechat-hide").hide();
             $(".firechat-show").show();
-            $("#firechat .top").animate({height: 40}, 500);
+            $("#firechat .top").animate({height: 40}, speed);
             if (current_person) {
                 $("#firechat .top .firechat-photo, #firechat .top .firechat-name").hide();
             }
+            $.cookie('firechat_hidded', 1, { path: '/' });
+        };
+
+        $("body").on("click", ".firechat-hide", function () {
+            firechat_hide(500);
         });
+        
+        if ($.cookie('firechat_hidded') == 1) {
+            firechat_hide(0);
+        }
 
         $("body").on("click", ".firechat-show", function() {
             $("#firechat .content").slideToggle(500);
@@ -118,6 +127,7 @@
             if (current_person) {
                 $("#firechat .top .firechat-photo, #firechat .top .firechat-name").show();
             }
+            $.cookie('firechat_hidded', 0, { path: '/' });
         });
 
         $("body").on("submit", ".firechat-register", function(e) {
