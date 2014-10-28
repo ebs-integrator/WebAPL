@@ -4,7 +4,10 @@
 } 
 
 
-.contact a.contact_us, footer .right p.y_info {
+.contact a.contact_us{
+    color:#fff;
+}
+footer .right p.y_info {
     color: #EAD3A4;
 } 
 
@@ -36,7 +39,7 @@ section .search input[type=submit] {
 
 
 
-.lang p, .chat_b, header .cont_form .prp a,.mini_header .m_lang li a, .form.green .ftb, .stat_info span:last-child, .search_li li p span, .contact_l .prp a, .contact_r .prp a {
+.lang p, .chat_b,.cont_form .prp a,.mini_header .m_lang li a, .form.green .ftb, .stat_info span:last-child, .search_li li p span, .contact_l .prp a, .contact_r .prp a {
     color: #494043;
 } 
 footer .search input[type=submit]{

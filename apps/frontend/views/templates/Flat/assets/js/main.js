@@ -225,9 +225,8 @@ function initialize() {
     var big_map = document.getElementById("map-canvas2");
     var small_map = document.getElementById("map-canvas");
 
-//    var iconBase = "/img/marker.png";
     var myLatlng = new google.maps.LatLng(loc_lat, loc_long);
-
+    var isDraggable = $(document).width() > 480 ? true : false;
     var center = new google.maps.LatLng(47.151994, 28.610020);
 
 
@@ -238,7 +237,11 @@ function initialize() {
             center: center,
             disableDefaultUI: true,
             draggable: isDraggable,
-            scrollwheel: false
+            scrollwheel: isDraggable
+        });
+        var marker = new google.maps.Marker({
+            map: map1,
+            position: center
         });
 
     }
@@ -249,7 +252,11 @@ function initialize() {
             disableDefaultUI: true,
             center: myLatlng,
             draggable: isDraggable,
-            scrollwheel: false
+            scrollwheel: isDraggable
+        });
+        var marker = new google.maps.Marker({
+            map: map2,
+            position: center
         });
 
     }
@@ -259,7 +266,11 @@ function initialize() {
             disableDefaultUI: true,
             center: myLatlng,
             draggable: isDraggable,
-            scrollwheel: false
+            scrollwheel: isDraggable
+        });
+        var marker = new google.maps.Marker({
+            map: map3,
+            position: center
         });
 
     }

@@ -1,6 +1,6 @@
 <section>
     <div class="wrap">
-        <div class="left_block">
+        <div class="left_block left_contacts">
             <div class="contact_l">
                 <p class="subt"><?= varlang('legatura-directa'); ?></p>
                 <ul class="date_contact">

@@ -9,17 +9,14 @@
         <div class="d_hr"></div>
         <ul>
             <li>
-                <img src="<?= res('assets/img/c_mail.png'); ?>" alt="">
                 <p><?= varlang('email'); ?></p>
                 <p><a href="mailto:<?= varlang('email-address'); ?>"> <?= varlang('email-address'); ?></a></p>
             </li>
             <li>
-                <img src="<?= res('assets/img/c_phone.png'); ?>" alt="">
                 <p><?= varlang('relatii'); ?></p>
                 <p><?= varlang('nr-relatii'); ?></p>
             </li>
             <li>
-                <img src="<?= res('assets/img/c_fx.png'); ?>" alt="">
                 <p><?= varlang('fax'); ?></p>
                 <p><?= varlang('nr-fax'); ?></p>
             </li>
@@ -39,7 +36,9 @@
             <p class="street"><?= varlang('city'); ?></p>
         </div>
         <div class="right map">
-            <div id="map-canvas" style="width: 158px; height: 119px;"></div>
+            <a href="javascript:window.open('https://www.google.ro/maps/dir//' + loc_lat + ',' + loc_long + '/@' + loc_lat + ',' + loc_long + ',14z');">
+                <img src="<?= res('assets/img/mapitem.png'); ?>" alt="" />
+            </a>
         </div>
         <div class="clearfix"></div>
         <p class="form_title"><?= varlang('scrieti-direct'); ?></p>
