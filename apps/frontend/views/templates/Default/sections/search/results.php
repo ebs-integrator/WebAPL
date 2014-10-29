@@ -30,10 +30,10 @@
         <div class="right">
             <ul class='detail'>
                 <li class='email'>
-                    <a href='<?= varlang('email-address'); ?>'><?= varlang('email-address'); ?></a>
+                    <a href='mailto:<?= varlang('email-address'); ?>'><?= varlang('email-address'); ?></a>
                 </li>
                 <li class='fax'>
-                    <a href='<?= varlang('nr-fax'); ?>'><?= varlang('nr-fax'); ?></a>
+                    <a href='fax:<?= varlang('nr-fax'); ?>'><?= varlang('nr-fax'); ?></a>
                 </li>
                 <li class='chat'>
                     <a href='javascript:;'><?= varlang('chat-online'); ?></a>

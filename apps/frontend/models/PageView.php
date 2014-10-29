@@ -241,6 +241,11 @@ class PageView {
     }
 
     public static function contactsView($data) {
+        if ($data['page']->feed_id) {
+            Post::$taxonomy = 2;
+            $data["feedPosts"] = Post::postsFeed($data['page']->feed_id, false);
+        }
+
         $data['page']->text = \Core\APL\Shortcodes::execute($data['page']->text);
 
         return View::make('sections.pages.contacts')->with($data);
@@ -404,7 +409,7 @@ class PageView {
                         'og:image' => $wdata["post"]->cover->path ? url($wdata["post"]->cover->path) : ''
                             ), true);
 
-                    
+
                     $data["page"]->text .= View::make("sections.pages.modview.newsFull")->with($wdata);
 
                     return static::contactView($data);
