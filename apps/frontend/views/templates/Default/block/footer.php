@@ -55,6 +55,8 @@
 
 <?php Event::fire('bottom_contructor'); ?>
 
+<?= SettingsModel::one('stats_code'); ?>
+
 <script src="<?= res('assets/js/plugins.js'); ?>"></script>
 <script src="<?= res('assets/js/icheck.js'); ?>"></script>
 <script src="<?= res('assets/js/jquery.bxslider.min.js'); ?>"></script>

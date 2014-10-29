@@ -3,23 +3,23 @@
 Core\APL\Template::setColorSchemes(array(
     
     'blue' => array(
-        'name' => 'Blue',
+        'name' => 'Albastru',
         'css' => res('assets/css/styles/blue.css' ,'frontend')
     ),
     'greenbrown' => array(
-        'name' => 'Green brown',
+        'name' => 'Maro',
         'css' => res('assets/css/styles/green_brown.css' ,'frontend')
     ),
     'pink' => array(
-        'name' => 'Pink',
+        'name' => 'Roz',
         'css' => res('assets/css/styles/pink.css' ,'frontend')
     ),
     'yellow' => array(
-        'name' => 'Yellow',
+        'name' => 'Cenusiu',
         'css' => res('assets/css/styles/yellow.css' ,'frontend')
     ),
     'blue-green' => array(
-        'name' => 'Blue Green',
+        'name' => 'Albastru - verde',
         'css' => res('assets/css/styles/blue_green.css' ,'frontend')
     )
     

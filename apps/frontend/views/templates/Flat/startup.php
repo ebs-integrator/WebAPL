@@ -3,23 +3,23 @@
 // Set template color schemes
 Core\APL\Template::setColorSchemes(array(
     'pink-violet' => array(
-        'name' => 'Pink-Violet',
+        'name' => 'Roz - Violet',
         'css' => res('assets/css/style.pink.violet.css', 'frontend')
     ),
     'brown' => array(
-        'name' => 'Brown',
+        'name' => 'Maro',
         'css' => res('assets/css/style.brown.css', 'frontend')
     ),
     'red' => array(
-        'name' => 'Red',
+        'name' => 'Cafeniu',
         'css' => res('assets/css/style.red.css', 'frontend')
     ),
     'red_brown' => array(
-        'name' => 'Red-brown',
+        'name' => 'Roșu - Maro',
         'css' => res('assets/css/style.red.brown.css', 'frontend')
     ),
     'violet_green_yellow' => array(
-        'name' => 'Violet-green-yellow',
+        'name' => 'Violet',
         'css' => res('assets/css/style.violet.green.yellow.css', 'frontend')
     )
 ));

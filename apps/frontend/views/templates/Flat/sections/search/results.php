@@ -2,8 +2,8 @@
     <div class="wrap">
         <div class="left_block">
             <div class="left_details">
-                <a href="<?= varlang('email-address'); ?>" class="l_email"><?= varlang('email-address'); ?></a>
-                <a href="<?= varlang('nr-fax'); ?>" class="l_fax"><?= varlang('nr-fax'); ?></a>
+                <a href="mailto:<?= varlang('email-address'); ?>" class="l_email"><?= varlang('email-address'); ?></a>
+                <a href="fax:<?= varlang('nr-fax'); ?>" class="l_fax"><?= varlang('nr-fax'); ?></a>
                 <a href="<?= Language::url('topage/contactsView'); ?>" class="l_map"><?= varlang('cum-ne-gasiti'); ?></a>
                 <?php Event::fire('contact_right_list'); ?>
             </div>
