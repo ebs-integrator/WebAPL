@@ -968,7 +968,7 @@ header .contact .cont .cont_form input[type=submit]{
     margin-top:62px;
     margin-right:75px;
     display: inline-block;
-    display: -moz-inline-box;
+    display: -moz-deck;
 }
 .menu .box:last-child{
     margin-right:0px;
@@ -1003,6 +1003,7 @@ table.taxe.aprt tbody tr td{
 .menu  .box .active .menu_title {
     background-color:#673268;
     color:#fff;
+    padding-bottom: 3px;
 }
 .green_sub{
     background:#74b45a;
@@ -1434,7 +1435,6 @@ footer .socials a span{
 }
 footer .right > .left{
     margin-right:55px;
-    float: none;
     display: inline-block;
     display: -moz-inline-box;
     max-width: 335px;
@@ -1445,10 +1445,17 @@ footer .right > .left p{
     font:13px 'open_sanssemibold';
     margin-bottom: 3px;
     padding-left: 35px;
+    height: 36px;
+    vertical-align: bottom;
+    display: table-cell;
 }
 footer .right > .left img{
     float:left;
     margin-right:7px;
+}
+footer .socials a:last-child span{
+    width:16px;
+    height:15px;
 }
 footer .right> .left input[type=text]{
     width:200px;
