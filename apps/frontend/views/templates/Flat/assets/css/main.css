@@ -485,7 +485,7 @@ header .row1 > .left{
     margin-top: -5px;
 }
 a.contact_us{
-    color:#fffe86;
+    color:#fff;
     border-bottom:1px solid #fff;
     cursor: pointer;
     font:16px "AvenirNext-Medium";
@@ -616,7 +616,7 @@ img{
     right: 0px;
     top: 40px;
     background: #fff;
-    padding: 0px 27px 30px;
+    padding: 0px 27px 7px;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(174, 174, 174, 0.75);
     -moz-box-shadow: 0px 0px 8px 0px rgba(174, 174, 174, 0.75);
     box-shadow: 0px 0px 8px 0px rgba(174, 174, 174, 0.75);
@@ -646,7 +646,7 @@ img{
     margin-top:20px;
 }
 .cont_form ul li a{
-    font:17px 'AvenirNext-Medium';
+    font:16px 'AvenirNext-Medium';
     color:#484848;
 }
 .cont_form ul li img{
@@ -655,35 +655,37 @@ img{
     margin-top:4px;
 }
 .cont_form ul{
-    margin-bottom:25px;
+    margin-bottom:5px;
     padding-bottom: 7px;
     border-bottom: 1px solid #ececec;
+}
+.cont_form ul p{
+    font-size:16px;
 }
 .cont_form .prp {
     width: 220px;
     border: 2px solid #00bd9c;
-    height: 44px;
     margin-top: 6px;
-    padding: 0px 5px;
-    line-height: 39px;
+    line-height: 33px;
     float:left;
     margin-right:4px;
     text-align: center;
 }
 .cont_form .prp a {
     font: 12px 'AvenirNext-Bold';
-    line-height: 40px;
+    line-height: 33px;
     color: #00bd9c;
     text-transform: uppercase;
 }
 .row1 .left.c_info, .right.map {
-    margin-top:24px;
+    margin-top:10px;
     max-width:260px;
+    margin-bottom:0px;
 }
 .right.map {
     text-align: center;
     border: 1px solid #f4f4f3;
-    height: 107px;
+    height: 100px;
     width: 180px;
 }
 .right.map a{
@@ -693,7 +695,7 @@ img{
 }
 
 .right.map img{
-    margin-top:12px;
+    margin-top:10px;
 }
 .left.c_info .city{
     color:#484848;
@@ -702,7 +704,7 @@ img{
 }
 .left.c_info .street{
     color:#484848;
-    font:17px 'AvenirNext-Medium';
+    font:16px 'AvenirNext-Medium';
 }
 p.form_title{
     color:#ff6476;

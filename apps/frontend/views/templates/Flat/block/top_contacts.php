@@ -6,7 +6,6 @@
             <img src="<?= res('assets/img/c_arrow.png'); ?>" alt="">
         </div>
         <p class="title"><?= varlang('date-contact'); ?></p>
-        <div class="d_hr"></div>
         <ul>
             <li>
                 <p><?= varlang('email'); ?></p>

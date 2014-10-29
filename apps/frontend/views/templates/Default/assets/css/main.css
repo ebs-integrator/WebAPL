@@ -498,7 +498,7 @@ header .contact .contact_us{
     float:left;
     height:83px;
 }
-header .contact .contact_us:hover,header .contact .contact_us.active{
+header .contact .contact_us:hover,header .contact .contact_us.active, .contact .contact_us_btn:hover .contact_us {
     background:#b6c57e;
     border-bottom:2px solid #8fa24e;
 }
@@ -521,7 +521,7 @@ header .contact .cont .cont_form{
     top:74px;
     display:none;
     background: #fff;
-    padding:15px 0px 15px 17px;
+    padding:5px 0px 15px 17px;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(174, 174, 174, 0.75);
     -moz-box-shadow:    0px 0px 8px 0px rgba(174, 174, 174, 0.75);
     box-shadow:         0px 0px 8px 0px rgba(174, 174, 174, 0.75);
@@ -554,7 +554,7 @@ header .contact .cont .cont_form p.title{
 header .contact .cont .cont_form .d_hr{
     width:483px;
     height:3px;
-    margin:10px 0px 12px -16px;
+    margin:7px 0px 7px -16px;
     border-top:1px solid #f3f3f3;
     border-bottom:1px solid #f3f3f3;
 }
@@ -564,7 +564,7 @@ header .contact .cont .cont_form ul li{
     border-bottom: 1px solid #f3f3f3;
     line-height: 1.533;
     padding-left:18px;
-    margin-bottom:15px;
+    margin-bottom:10px;
     border-left:0px;
     position:relative;
 }
@@ -578,20 +578,20 @@ header .contact .cont .cont_form ul li:before{
     border-left:3px solid #7c4d7c;
 }
 header .contact .cont .cont_form ul{
-    margin-bottom:9px;
+    margin-top:12px;
 }
 header .contact .cont .cont_form ul li:nth-child(2n){
     margin-left:12px;
 }
 header .contact .cont .cont_form ul li p{
-    font:15px 'open_sanssemibold';
+    font:14px 'open_sanssemibold';
     color:#484848;
     margin-top:-2px;
     margin-bottom:5px;
 }
 header .contact .cont .cont_form ul li p span,header .contact .cont .cont_form ul li p span a{
     color: #673167;
-    font: 15px 'open_sansbold';
+    font: 14px 'open_sansbold';
 }
 .n_alert{
     width:618px;
@@ -728,8 +728,13 @@ header .contact .cont .cont_form ul li p span,header .contact .cont .cont_form u
     line-height: 44px;
     position: relative;
     padding-left: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     margin-right: 10px;
+}
+header .contact .cont .cont_form ul:after{
+    clear:both;
+    display:block;
+    content:'';
 }
 .anp:before{
     content: '';
@@ -753,7 +758,7 @@ header .contact .cont .cont_form .relative p{
     background: url('../img/g_arrow_b.png') no-repeat right bottom #fff;
     width: 490px;
     height: 7px;
-    top: -25px;
+    top: -15px;
     left: -20px;
 }
 
