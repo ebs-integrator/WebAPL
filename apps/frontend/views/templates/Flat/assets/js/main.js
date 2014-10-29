@@ -240,7 +240,7 @@ function initialize() {
             scrollwheel: isDraggable
         });
         var marker = new google.maps.Marker({
-            map: map1,
+            map: map,
             position: center
         });
 
