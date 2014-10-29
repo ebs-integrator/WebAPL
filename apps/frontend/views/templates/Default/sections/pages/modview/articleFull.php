@@ -12,6 +12,8 @@
 </div>                
 <div class="clearfix"></div>
 
+<?php Event::fire('post_top_container', $post); ?>
+
 <?php if ($post->show_pcomment) { ?>
     <div class='cont live_comment' data-pid="news<?= $post->id; ?>"><?= Core\APL\Shortcodes::execute($post->text); ?></div>
 <?php } else { ?>
@@ -22,7 +24,9 @@
     <?= View::make('sections.elements.socials'); ?>
     <div class='c20'></div>
 <?php } ?>
-    
+
+<?php Event::fire('post_bottom_container', $post); ?>
+
 <div class="hr_grey"></div>
 
 <?php if ($post->have_comments) { ?>

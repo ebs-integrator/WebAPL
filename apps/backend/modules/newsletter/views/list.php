@@ -12,10 +12,10 @@
             {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
             {name: 'email', index: 'email', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
             {name: 'subscribe_date', index: 'subscribe_date', resizable: true, align: "left", sorttype: "text", editable: false, edittype: "text"},
-            {name: 'enabled', index: 'enabled', resizable: true, align: "left", sorttype: "text", editable: true, edittype: "select", editoptions: {value: '0:Disabled;1:Enabled'}, formatter: function(value) {
-                    return "<center data-value='" + value + "'>" + (value == 1 ? '<span class="label label-success">Enabled</span>' : '<span class="label label-danger">Disabled</span>') + "</center>";
+            {name: 'enabled', index: 'enabled', resizable: true, align: "left", sorttype: "text", editable: true, edittype: "select", editoptions: {value: '0:<?= varlang('dezabonat'); ?>;1:<?= varlang('abonat'); ?>'}, formatter: function(value) {
+                    return "<center data-value='" + value + "'>" + (value == 1 ? '<span class="label label-success"><?= varlang('abonat'); ?></span>' : '<span class="label label-danger"><?= varlang('dezabonat'); ?></span>') + "</center>";
                 }, unformat: function(value) {
-                    return value === 'Enabled' ? 1 : 0;
+                    return value === '<?= varlang('abonat'); ?>' ? 1 : 0;
                 }}
         ],
         rowNum: 30,

@@ -34,7 +34,7 @@
             var disqus_url = '<?= url(); ?>';
             var disqus_shortname = '<?= SettingsModel::one('disqus_shortname'); ?>';
             var disqus_title = '<?= Core\APL\Template::getPageTitle(isset($page) ? $page : null); ?>';
-            var disqus_config = function () {
+            var disqus_config = function() {
                 this.language = "<?= Core\APL\Language::ext(); ?>";
             };
 
@@ -51,7 +51,17 @@
 
         <div class="page_header">
             <div class="page_top_header">
-                <div class="img_back"><img alt="" class="top_back" src="<?= (isset($super_parent['id']) && $bg_parent = Files::extract('page_bg', $super_parent['id'], 'path')) ? url($bg_parent) : res('assets/img/top1.png'); ?>"></div>
+                <div class="img_back">
+                    <?php
+                    $bg_final = res('assets/img/top1.png');
+                    if (isset($page['id']) && $bg_page = Files::extract('page_bg', $page['id'], 'path')) {
+                        $bg_final = url($bg_page);
+                    } elseif (isset($super_parent['id']) && $bg_parent = Files::extract('page_bg', $super_parent['id'], 'path')) {
+                        $bg_final = url($bg_parent);
+                    }
+                    ?>
+                    <img alt="" class="top_back" src="<?= $bg_final; ?>">
+                </div>
                 <div class="page_top_content">
                     <div class="row1">
                         <div class="left">

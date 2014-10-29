@@ -7,6 +7,9 @@
     <?php } ?>
 </div>
 <div class='conten'>
+
+    <?php Event::fire('post_top_container', $post); ?>
+
     <?php if ($post->show_pcomment) { ?>
         <div class='cont live_comment' data-pid="news<?= $post->id; ?>">
             <?= Core\APL\Shortcodes::execute($post->text); ?>
@@ -14,6 +17,8 @@
     <?php } else { ?>
         <div class='cont'><?= Core\APL\Shortcodes::execute($post->text); ?></div>
     <?php } ?>
+
+    <?php Event::fire('post_bottom_container', $post); ?>
 
     <?php if ($post->have_socials) { ?>
         <?= View::make('sections.elements.socials'); ?>

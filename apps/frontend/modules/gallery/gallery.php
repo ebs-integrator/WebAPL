@@ -30,6 +30,7 @@ class Gallery extends \Core\APL\ExtensionController {
         $this->loadClass(array('GalleryModel', 'GalleryPost'));
         // Register actions
         Event::listen('page_bottom_container', array($this, 'page_bottom_gallery'));
+        Event::listen('post_bottom_container', array($this, 'page_bottom_gallery'));
     }
 
     public function page_bottom_gallery($page) {
