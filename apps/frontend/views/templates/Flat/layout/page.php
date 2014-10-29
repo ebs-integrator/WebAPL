@@ -120,11 +120,17 @@
                                 ?>
                             </ul>
                             <div class="lang">
-                                <p>ro</p>
+                                <p><?= Core\APL\Language::ext(); ?></p>
                                 <ul>
-                                    <li><a href="http://lpa.devebs.net/language/ru/103">ru</a></li>
-                                    <li><a href="http://lpa.devebs.net/language/en/103">en</a></li>
-                                    <li><a href="http://lpa.devebs.net/language/bg/103">bg</a></li>
+                                    <?php
+                                    foreach (Core\APL\Language::getList() as $lang) {
+                                        if (Core\APL\Language::ext() != $lang->ext && $lang->enabled == 1) {
+                                            ?>
+                                            <li><a href="<?= url('language/' . $lang->ext . '/' . (isset($active_page_id) ? $active_page_id : '')); ?>"><?= $lang->ext; ?></a></li>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
                                 </ul>
                             </div>
                         </div>

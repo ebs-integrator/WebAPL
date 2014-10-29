@@ -589,12 +589,12 @@ img{
     position: fixed;
     z-index:997;
 }
-.cont{
+.page_top_content .cont,header .cont{
     position:relative;
     height:40px;
     cursor: pointer;
 }
-.cont:hover .cont_form{
+.page_top_content .cont:hover .cont_form,header .cont:hover .cont_form{
     display:block;
 }
 .chat_b{
@@ -774,9 +774,6 @@ section.global{
     margin:0 auto;
     padding-top:1px;
     display:table;
-}
-div#map-canvas2 {
-    min-height: 300px;
 }
 article{
     width:370px;
@@ -1053,8 +1050,18 @@ footer label{
     display:block;
     margin-bottom:3px;
 }
-section .left_block.left_contacts{
+section .left_contacts{
     display:block;
+    float:left;
+    width: 357px;
+    padding-top: 45px;
+    background: #f7f7f7;
+    position: relative;
+    padding-bottom: 50px;
+}
+.right_contacts{
+    float:right;
+    width:330px;
 }
 .menu_block> ul{
     height:100%;
@@ -1265,6 +1272,10 @@ section,.page_header{
     background: -ms-linear-gradient(left,#f7f7f7,#f7f7f7 35%,white 35,white);
     max-width: 2850px;
 }
+.contact_left{
+    width:915px;
+    float:left;
+}
 .page_header .lang {
     margin-right: 10px;
     margin-top: 5px;
@@ -1277,6 +1288,7 @@ section .right_site{
 .left_block .left_details .chat{
     margin-top: 0px;
     padding:0px;
+    max-width:100%;
 }
 .sec_span{
     display:none;
@@ -3652,13 +3664,13 @@ table.sondaje td:last-child {
     height:100%;
     background:url('../img/phone_book.png')no-repeat left center;
 }
-.left_block .chat {
+.contact_left .chat {
     max-width:340px;
     width: 100%;
     margin-top: 30px;
     padding: 13px 0px;
 }
-.left_block .chat .mn {
+.contact_left .chat .mn {
     float: left;
     margin-top:6px;
     margin-right:15px;
@@ -3666,35 +3678,35 @@ table.sondaje td:last-child {
     width:44px;
     height:44px;
 }
-.left_block .chat .chat_dot.active {
+.contact_left .chat .chat_dot.active {
     background: url('../img/chat_dot_active.png') no-repeat center;
 }
-.left_block .chat .chat_dot.active {
+.contact_left .chat .chat_dot.active {
     display: block;
     width:18px;
     height: 61px;
     float: left;
     margin-left: 4px;
 }
-.left_block .chat .green {
+.contact_left .chat .green {
     font: 30px 'AvenirNext-Bold';
     color: #00d4d4;
     line-height: 61px;
     margin-left: 10px;
 }
-.left_block .chat .violet {
+.contact_left .chat .violet {
     font: 30px 'AvenirNext-Bold';
     color: #0381a0;
     line-height: 61px;
 }
-.left_block .chat hr {
+.contact_left .chat hr {
     background: #e6e6e6;
     height: 3px;
     width: 100%;
     border-top: 0px;
     margin: 8px 0 10px 0;
 }
-.left_block .chat .center {
+.contact_left .chat .center {
     color: #7a7a7a;
     padding-bottom:10px;
     border-bottom:1px solid #e6e6e6;
@@ -3702,16 +3714,15 @@ table.sondaje td:last-child {
     margin-bottom: 0px;
 }
 .contact_r {
-    width: 53%;
-    margin-right: 55px;
-    float:left;
+    margin-right: 20px;
 }
+
 .contact_r .prp {
     width: 100%;
     border: 2px solid #00bd9c;
     height: 44px;
     margin-top: 6px;
-    padding: 0px 19px;
+    padding: 0px 7px;
     text-transform: uppercase;
     margin:40px 0px;
 }
@@ -3747,7 +3758,15 @@ table.sondaje td:last-child {
     margin-top: 0;
     padding-bottom:35px;
     float:right;
-    width: 38%;
+    padding-top:45px;
+}
+.urg_block{
+    float:right;
+    padding-top:20px;
+    width:510px;
+}
+.dirs_block{
+    margin-left:375px;
 }
 .contact_f label{
     font: 13px 'AvenirNext-Medium';
@@ -4139,7 +4158,7 @@ ul.vice li .p_name {
     .cont_form .relative img{
         right:40px;
     }
-    .cont{
+    .page_top_content .cont,header .cont {
         float:right;
         margin-left:15px;
     }
@@ -4261,11 +4280,18 @@ ul.vice li .p_name {
     .page_top_content .row2{
         width:100%;
     }
+    .urg_block{
+        width:550px;
+    }
     .page_top_content .row1 > .right{
         margin-right:15px;
     }
     .telef{
         margin-top: 0px;
+    }
+    section .left_contacts {
+        width: 330px;
+        padding-bottom:20px;
     }
     .page_top_content .row2 .content{
         margin-right:0px;
@@ -4348,25 +4374,29 @@ ul.vice li .p_name {
     .prefooter .row1_l .content, .prefooter .row1_r .content{
         max-height: 324px;
     }
-    .contact_r{
+    .contact_r,.right_contacts{
         float:none;
-        width:100%;
     }
     .contact_f{
         width:330px;
-        float:none;
-        margin-top:40px;
-
+        float:left;
+        clear:both;
+        padding-top:0px;
+        background-color:#f7f7f7;
+        padding-right: 20px;
     }
-    .left_block .chat .mn {
+    .contact_f input[type=text], .contact_f textarea{
+        background: #fff;
+    }
+    .left_contacts .chat .mn {
         width: 28px;
         margin-right: 8px;
         background-size: 100%;
     }
-    .left_block .chat .green,.left_block .chat .violet{
+    .left_contacts .chat .green,.left_contacts .chat .violet{
         font-size:25px;
     }
-    .left_block .chat .chat_dot{
+    .left_contacts .chat .chat_dot{
         width: 15px;
         height: 61px;
         background-size: 100%;        
@@ -4380,10 +4410,6 @@ ul.vice li .p_name {
         font: 13px 'AvenirNext-Bold';
         line-height: 42px;
     }
-    div#map-canvas2 {
-        height: 350px !important;
-    }
-
     .a_box .left .img img {
         max-width: 220px;
     }
@@ -4433,7 +4459,7 @@ ul.vice li .p_name {
     .cont_form .relative img{
         right:7px;
     }
-    .cont:hover .cont_form{
+    .page_top_content .cont:hover .cont_form,header .cont:hover .cont_form{
         margin-top:10px;
     }
     .n_alert{
@@ -4459,7 +4485,7 @@ ul.vice li .p_name {
         right: 10px;
         top: 90px;
     }
-    .cont {
+    .page_top_content .cont,header .cont{
         float: right;
         margin-left: 15px;
     }
@@ -4510,9 +4536,6 @@ ul.vice li .p_name {
         height: 100%;
         width:100%;
         max-width: none;
-    }
-    div#map-canvas2 {
-        height: 350px !important;
     }
     footer .f_menu ul li a{
         line-height:64px;
@@ -4618,6 +4641,35 @@ ul.vice li .p_name {
     .wrap{
         width:670px;
     }
+    .urg_block{
+        width:100%;
+        float:left;
+    }
+    .date_contact li{
+        width:50%;
+        float:left;
+    }
+    .contact_left,.contact_f,right_contacts,section .left_contacts{
+        width:100%;
+        clear:both;
+        background:#fff;
+        padding-top:0px;
+    }
+    .urg{
+        margin-bottom:30px;
+    }
+    .date_contact:after{
+        clear:both;
+        display:block;
+        content: '';
+    }
+    .contact_f .nmpm{
+        width:60%;
+    }
+    .contact_f{
+        width:550px;
+        margin-top:40px;
+    }
     .page_header{
         background:#f7f7f7;
     }
@@ -4658,13 +4710,6 @@ ul.vice li .p_name {
         width:auto;
         display:inline-block;
     }
-    .contact_l{
-        padding-left:55px;
-    }
-    .contact_f{
-        width:330px;
-        margin-top:40px;
-    }
     .l_box {
         padding: 8px 35px 5px 23px;
         font: 20px "AvenirNext-Bold";
@@ -4683,7 +4728,7 @@ ul.vice li .p_name {
     section,section .left_block{
         background:#fff;
     }
-    section .left_block,section .right_block{
+    section .left_block,section .right_block,section .right_contacts{
         width:100%;
         float:none;
         margin-left:0px;
@@ -4735,6 +4780,9 @@ ul.vice li .p_name {
     .a_box .title a {
         font: 20px 'AvenirNext-DemiBold';
     }
+    .contact_left{
+        width:100%;
+    }
 }
 @media only screen and (max-width: 767px){
     .img_back{
@@ -4742,6 +4790,41 @@ ul.vice li .p_name {
     }
     .a_box .title a {
         font: 18px 'AvenirNext-DemiBold';
+    }
+    .urg_block{
+        width:100%;
+        float:left;
+    }
+    .date_contact li{
+        width:100%;
+    }
+    .contact_left,.contact_f,right_contacts,section .left_contacts,.contact_l{
+        width:100%;
+        clear:both;
+        background:#fff;
+        padding-top:0px;
+    }
+    .urg{
+        margin-bottom:30px;
+    }
+    .date_contact:after{
+        clear:both;
+        display:block;
+        content: '';
+    }
+    .contact_f .nmpm{
+        width:60%;
+    }
+    .contact_f{
+        width:550px;
+        margin-top:40px;
+    }
+    .contact_left .chat{
+        display:none;
+    }
+    .right_contacts{
+        float:none;
+        width:100%;
     }
     .apt input[type=text]{
         width:100%;
@@ -5024,7 +5107,7 @@ ul.vice li .p_name {
         color: #00bd9c;
         line-height: 1.115;
     }
-    section .right_block{
+    section .right_block,section .right_contacts{
         padding-left:0px;
     }
     .resp_menu{
@@ -5085,9 +5168,6 @@ ul.vice li .p_name {
     }
     .row1 .left{
         margin-top:0px;
-    }
-    .prefooter .row1_l a.more {
-        margin-top: 10px;
     }
     footer{
         height:78px;
@@ -5270,6 +5350,20 @@ ul.vice li .p_name {
 
     #firechat{
         display:none !important;
+    }
+
+    .urg_block{
+        width:100%;
+        float:left;
+    }
+    .contact_left,.contact_f{
+        width:100%;
+    }
+    .contact_l .prp{
+        margin-bottom:30px;
+    }
+    .contact_r .map_info{
+        margin-top:0px;
     }
 }
 
@@ -5773,7 +5867,7 @@ ul.vice li .p_name {
         font-size:30px;
         padding: 0 10px;
     }
-    .left_block .chat .mn{
+    .left_contacts .chat .mn{
         width:25px;
     }
     .contact_l .prp{
@@ -5784,7 +5878,7 @@ ul.vice li .p_name {
         font: 13px 'AvenirNext-Bold';
         line-height: 42px;
     }
-    .left_block .chat .green,.left_block .chat .violet{
+    .left_contacts .chat .green,.left_contacts .chat .violet{
         font-size:20px;
     }
     .prefooter article.doc table{
