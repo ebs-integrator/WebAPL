@@ -117,7 +117,7 @@ class Newsletter extends \Core\APL\ExtensionController {
         }
     }
 
-    public function getExport() {
+    public function getExportCSV() {
         \User::onlyHas('newsletter-view');
 
         $buffer = "";
@@ -133,6 +133,21 @@ class Newsletter extends \Core\APL\ExtensionController {
         header('Content-Disposition: attachment; filename=NewsLetterExport.csv');
         echo "\xEF\xBB\xBF" . $buffer;
         die;
+    }
+    
+    public function getExport() {
+        \User::onlyHas('newsletter-view');
+
+        $emails = NewsletterModel::all();
+
+        $matrix = [['Email', 'Status', 'Date']];
+        
+        foreach ($emails as $email) {
+            $matrix[] = [$email->email, ($email->enabled ? 'activ' : 'inactiv'), $email->subscribe_date];
+        }
+
+        $excel = new \ExcelFile('NewsLetterExport.xls');
+        $excel->convert($matrix);
     }
 
 }

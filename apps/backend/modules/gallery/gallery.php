@@ -44,6 +44,7 @@ class Gallery extends \Core\APL\ExtensionController {
         // Register actions
         Event::listen('construct_left_menu', array($this, 'left_menu_item'));
         Event::listen('page_attachment', array($this, 'page_attachment'));
+        Event::listen('feed_post_bottom', array($this, 'page_attachment'));
 
         $this->layout = Template::mainLayout();
     }
@@ -78,8 +79,20 @@ class Gallery extends \Core\APL\ExtensionController {
     public function gallery_create() {
         \User::onlyHas('gallery-view');
 
+        $folder = urigen(Input::get('name'));
+
+        $uploadDir = Files::fullDir(Files::$upload_dir . '/' . $folder);
+        if (!file_exists($uploadDir)) {
+            $folderCreated = @mkdir($uploadDir, 0777, true);
+        } else {
+            $folderCreated = true;
+        }
+
         $gallery = new GalleryModel;
         $gallery->name = Input::get('name');
+        if ($folderCreated) {
+            $gallery->folder = $folder;
+        }
         $gallery->save();
 
         return Redirect::to('gallery/edit/' . $gallery->id);

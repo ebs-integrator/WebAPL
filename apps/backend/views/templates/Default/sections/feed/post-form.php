@@ -1,4 +1,4 @@
-<h3>Edit post #<?= $general['post']->id; ?>
+<h3><?= varlang('edit-post'); ?> #<?= $general['post']->id; ?>
     <?php if ($general['post']->is_trash) { ?>
         <a href='<?= url('feed/restore/' . $general['post']->id); ?>' onclick="return confirm('Restore this post?');" class='btn btn-success btn-sm'><?= varlang('restore'); ?></a>
     <?php } else { ?>
@@ -36,7 +36,6 @@
             </div>
         <?php } ?>
     <div class="tab-pane" id="media">
-        <h4>Cover:</h4>
         <?= Files::widget('post_cover', $general['post']->id, 1); ?>
     </div>
 </div>

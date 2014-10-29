@@ -143,7 +143,9 @@ class VarController extends BaseController {
     }
 
     public function getImport() {
-        $xsdstring = $_SERVER['DOCUMENT_ROOT'] . "/vars.xml";
+        return;
+        
+        $xsdstring = $_SERVER['DOCUMENT_ROOT'] . "/vars_bg.xml";
 
         $excel = new XML2003Parser($xsdstring);
 
@@ -156,12 +158,19 @@ class VarController extends BaseController {
                     $value = $row["row_contents"][2]['value'];
                     $varlang = VarLangModel::find($id);
                     if ($varlang) {
-                        if ($varlang->value !== $value) {
-                            echo "DIFF {$varlang->value} {$value}<br>\n";
-                        }
-                        //$varlang->value = $value;
+                        if ($varlang->lang_id == 7) {
+
+                            echo "BG: {$varlang->value} -> {$value}<br>\n";
+                            
+                            $varlang->value = $value;
+                            
+//                        if ($varlang->value !== $value) {
+//                            echo "DIFF {$varlang->value} {$value}<br>\n";
+//                        }
+//                        //$varlang->value = $value;
                         $varlang->save();
-                        $ids[] = $id;
+//                        $ids[] = $id;
+                        }
                     } else {
                         echo "undefined {$id} <br>\n";
                     }

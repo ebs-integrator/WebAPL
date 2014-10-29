@@ -28,6 +28,13 @@ Config::set('template.logo', false);
 Config::set('template.logo_multilang', false);
 Config::set('template.logo_small', false);
 
+Config::set('template.page_icon_big', false);
+Config::set('template.page_icon', false);
+Config::set('template.page_icon_active', false);
+Config::set('template.page_bg', true);
+Config::set('template.page_bg_all', true);
+
+
 if (APP_FOLDER === 'frontend') {
 
     class TemplateViews {

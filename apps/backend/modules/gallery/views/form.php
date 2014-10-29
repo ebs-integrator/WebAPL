@@ -25,6 +25,6 @@
     </div>
     <div class="tab-pane" id="gfiles">
         <div class="c10"></div>
-        <?= Files::widget('gallery', $gallery->id, 0, isset($gallery->name) && $gallery->name ? urigen($gallery->name . " " . $gallery->id) : ''); ?>
+        <?= Files::widget('gallery', $gallery->id, 0, isset($gallery->folder) && $gallery->folder ? $gallery->folder : ''); ?>
     </div>
 </div>

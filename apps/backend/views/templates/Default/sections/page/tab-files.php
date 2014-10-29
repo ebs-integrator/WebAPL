@@ -23,13 +23,22 @@
 
 <br><br>
 
+<?php if ($page->general_node && Config::get('template.page_icon_big')) { ?>
+    <h3><?= varlang('icon-big'); ?></h3>
+    <?= Files::widget('page_icon_big', $page->id, 1); ?>
+<?php } ?>
 
-<h3>Icon big</h3>
-<?= Files::widget('page_icon_big', $page->id, 1); ?>
-<h3>Icon</h3>
-<?= Files::widget('page_icon', $page->id, 1); ?>
-<h3>Icon activ</h3>
-<?= Files::widget('page_icon_active', $page->id, 1); ?>
-<h3>Background</h3>
-<?= Files::widget('page_bg', $page->id, 1); ?>
+<?php if ($page->general_node && Config::get('template.page_icon')) { ?>
+    <h3><?= varlang('icon-2'); ?></h3>
+    <?= Files::widget('page_icon', $page->id, 1); ?>
+<?php } ?>
 
+<?php if ($page->general_node && Config::get('template.page_icon_active')) { ?>
+    <h3><?= varlang('icon-activ'); ?></h3>
+    <?= Files::widget('page_icon_active', $page->id, 1); ?>
+<?php } ?> 
+
+<?php if (($page->general_node && Config::get('template.page_bg')) || Config::get('template.page_bg_all')) { ?>
+    <h3><?= varlang('background'); ?></h3>
+    <?= Files::widget('page_bg', $page->id, 1); ?>
+<?php } ?>

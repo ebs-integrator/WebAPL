@@ -14,7 +14,7 @@
     </div>
     <div class="tab-pane" id="feeds">
         <div class="c20"></div>
-        <a href="<?= url('feed/create'); ?>" class="btn btn-success"><?= varlang('create-new-post'); ?></a>
+        <a href="<?= url('feed/create'); ?>" class="btn btn-success"><?= varlang('create-new-feed'); ?></a>
         <div class="c20"></div>
         <table class="table table-bordered">
             <tr>
@@ -33,7 +33,7 @@
                         <?php } ?>
                     </td>
                     <td>
-                        <a href="<?= url('feed/edit/' . $item->id); ?>" class="btn btn-success">Manage</a>
+                        <a href="<?= url('feed/edit/' . $item->id); ?>" class="btn btn-success"><?= varlang('manage'); ?></a>
                     </td>
                 </tr>
             <?php } ?>

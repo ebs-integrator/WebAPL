@@ -27,6 +27,8 @@ class PageView {
             }
 
             if ($post) {
+                Post::oneView($post->id);
+                
                 $wdata["post"] = Post::withDinamicFields($post);
 
                 Core\APL\Template::setMetaMultiple(array(
@@ -52,7 +54,8 @@ class PageView {
             if ($item) {
                 $post = Post::findURI($item, 1);
                 if ($post) {
-
+                    Post::oneView($post->id);
+                    
                     Core\APL\Template::setMetaMultiple(array(
                         'description' => $post->text,
                         'og:description' => $post->text,
@@ -81,7 +84,8 @@ class PageView {
             if ($item) {
                 $post = Post::findURI($item, 1);
                 if ($post) {
-
+                    Post::oneView($post->id);
+                    
                     Core\APL\Template::setMetaMultiple(array(
                         'description' => $post->text,
                         'og:description' => $post->text,
@@ -110,6 +114,8 @@ class PageView {
             if ($item) {
                 $wdata['post'] = Post::findURI($item, 1);
                 if ($wdata['post']) {
+                    Post::oneView($wdata['post']['id']);
+                    
                     $data["page"]->text = View::make("sections.pages.modview.promise")->with($wdata);
                 } else {
                     throw new Exception("Post not found", 404);
@@ -289,6 +295,8 @@ class PageView {
             if ($item) {
                 $wdata["post"] = Post::findURI($item, 1);
                 if ($wdata["post"]) {
+                    Post::oneView($wdata['post']['id']);
+                    
                     $wdata["post"] = Post::withDinamicFields($wdata["post"]);
                     $data["page"]->text .= View::make("sections.pages.modview.meetingFuture")->with($wdata);
                 } else {
@@ -308,6 +316,8 @@ class PageView {
             Post::$taxonomy = 2;
             $wdata['post'] = Post::postsFeed($data['page']->feed_id, false, true)->where(Post::getField('created_at'), '>', DB::raw('CURRENT_TIMESTAMP'))->first();
             if ($wdata['post']) {
+                Post::oneView($wdata['post']['id']);
+                
                 $data["page"]->text = View::make("sections.pages.modview.meetingFuture")->with($wdata);
             } else {
                 $data["page"]->text = "Nui";
@@ -356,7 +366,8 @@ class PageView {
             $data['years_list'] = Feed::getYears($data['page']->feed_id);
 
             if ($wdata["post"]) {
-
+                Post::oneView($wdata['post']['id']);
+                
                 Core\APL\Template::setMetaMultiple(array(
                     'description' => $wdata['post']->text,
                     'og:description' => $wdata['post']->text,
@@ -392,6 +403,8 @@ class PageView {
                 $wdata["post"] = Post::findURI($item, 1);
 
                 if ($wdata["post"]) {
+                    Post::oneView($wdata['post']['id']);
+                    
                     $data['current_year'] = date('Y', strtotime($wdata["post"]->created_at));
                     $data['current_month'] = date('m', strtotime($wdata["post"]->created_at));
 
@@ -401,7 +414,7 @@ class PageView {
                         'description' => $wdata['post']->text,
                         'og:description' => $wdata['post']->text,
                         'og:title' => $wdata['post']->title,
-                        'og:image' => $wdata["post"]->cover->path ? url($wdata["post"]->cover->path) : ''
+                        'og:image' => isset($wdata["post"]->cover->path) ? url($wdata["post"]->cover->path) : ''
                             ), true);
 
                     
