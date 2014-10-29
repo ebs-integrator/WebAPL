@@ -129,6 +129,10 @@ class Language {
     public static function setLanguage($ext) {
         $language = DB::table('apl_lang')->where('ext', $ext)->first();
         if (!$language) {
+            $language = DB::table('apl_lang')->where('id', '=', \SettingsModel::one('default_language'))->first();
+        }
+        
+        if (!$language) {
             $language = DB::table('apl_lang')->first();
         }
 
