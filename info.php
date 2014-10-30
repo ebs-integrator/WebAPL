@@ -1,3 +1,3 @@
 <?php
 
-echo "commit 4";
+var_dump(exec('sh test.sh'));
