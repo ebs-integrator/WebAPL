@@ -1,3 +1,3 @@
 <?php
 
-var_dump(exec('sh test.sh'));
+echo "mod 8.45";
