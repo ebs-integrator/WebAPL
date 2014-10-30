@@ -77,4 +77,9 @@ com_crashlytics_export_strings.xml
 !/vendor/maximebf/debugbar/src/DebugBar/Resources/vendor/jquery/dist/
 
 
+
+apps/frontend/config/database.php
+
 cli/
+
+/upload/*
