@@ -7,16 +7,22 @@
     </div>
     <div class='wrap'>
         <p class="c_title"><?= varlang('contacts'); ?></p>
-        <div class='left contact_r contact_hidden'>
-            <p class='subt'><?= varlang('adresa'); ?></p>
-            <div class="map_info"><?= $page->text; ?></div>
-            <div id="map-canvas3" style="width:100%; height:300px;"></div>            
-        </div>
         <div class='left ccc'>
-            <div class="ccc_hidden">                             
-                <div class="prp">
-                    <img  alt="" src="<?= res('assets/img/notebook.png'); ?>">
-                    <a href="<?= varlang('orar-link'); ?>"><?= varlang('orar-autobus'); ?></a>
+            <div class="emrg_block">
+                <p class='subt'><?= varlang('aprt-primariei'); ?></p>
+                <div class="emrg">
+                    <p class="ul_title">
+                        <span class="left"><?= varlang('telefon'); ?>	</span>
+                        <span class="right"><?= varlang('serviciu'); ?></span>
+                    </p>
+                    <ul>
+                        <?php foreach ($feedPosts as $item) { ?>
+                            <li>
+                                <div class="left"><?= isset($item->phone_one) ? $item->phone_one : ''; ?></div>
+                                <div class="right"><?= $item['title']; ?></div>
+                            </li>
+                        <?php } ?>
+                    </ul>
                 </div>
             </div>
             <div class='contact_l'>
@@ -41,27 +47,28 @@
                 </ul>
                 <div class="prp">
                     <img  alt="" src="<?= res('assets/img/phone_book.png'); ?>">
-                    <a href="<?=PostProperty::postWithProperty('more_contacts', true)->url;?>"><?= varlang('all-nr-phone'); ?></a>
+                    <a href="<?= PostProperty::postWithProperty('more_contacts', true)->url; ?>"><?= varlang('all-nr-phone'); ?></a>
                 </div>
+                <?php Event::fire('contact_col1_contructor'); ?>
+                <div class="clearfix25"></div>
+                <div class='left contact_r'>
+                    <p class='subt'><?= varlang('adresa'); ?></p>
+                    <div id="map-canvas2" style="width:100%; height:300px;"></div>
+                    <div class="prp">
+                        <img  alt="" src="<?= res('assets/img/notebook.png'); ?>">
+                        <a href="<?= varlang('orar-link'); ?>"><?= varlang('orar-autobus'); ?></a>
+                    </div>
+                    <div class="map_info"><?= $page->text; ?></div>
+                    <?php Event::fire('contact_col2_contructor'); ?>
+                </div>
+            </div>
 
-            </div>
-            <?php Event::fire('contact_col1_contructor'); ?>
         </div>
-        <div class='left contact_r'>
-            <p class='subt'><?= varlang('adresa'); ?></p>
-            <div id="map-canvas2" style="width:100%; height:300px;"></div>
-            <div class="prp">
-                <img  alt="" src="<?= res('assets/img/notebook.png'); ?>">
-                <a href="<?= varlang('orar-link'); ?>"><?= varlang('orar-autobus'); ?></a>
-            </div>
-            <div class="map_info"><?= $page->text; ?></div>
-            <?php Event::fire('contact_col2_contructor'); ?>
-        </div>
+
         <div class='left form contact'>
             <?= View::make('sections.pages.blocks.contactForm'); ?>
             <?php Event::fire('contact_col3_contructor'); ?>
         </div>
-        <div class='clearfix140'></div>
         <?php if ($page->have_socials) { ?>
             <?= View::make('sections.elements.socials', array('url' => $page_url)); ?>
         <?php } ?>

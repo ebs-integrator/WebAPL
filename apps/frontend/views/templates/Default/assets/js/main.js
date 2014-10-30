@@ -13,7 +13,7 @@ $(document).ready(function () {
     });
     $('.resp_menu').click(function () {
         $('.resp_menu').toggleClass('active');
-        $('section > .wrap > .right,.dirs_menu a:last-child span').toggle('slow');
+        $('section > .wrap > .right').slideToggle('slow');
     });
 
     $('.orar_slider').bxSlider({

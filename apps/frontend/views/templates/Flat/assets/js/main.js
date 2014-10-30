@@ -26,7 +26,7 @@ $(document).ready(function () {
 
     $('.resp_menu').click(function () {
         $('.resp_menu').toggleClass('active');
-        $('.left_block,.dirs_menu a:last-child span').toggle('slow');
+        $('.left_block,.dirs_menu a:last-child span').slideToggle('slow');
     });
 
     $('.mh_button,.overlay3').click(function () {

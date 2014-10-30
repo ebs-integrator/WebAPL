@@ -1903,7 +1903,7 @@ section > .wrap >  .left.contact_r{
     width:30%;
     margin-right:55px;
 }
-.contact_l .subt,.contact_r .subt{
+.contact_l .subt,.contact_r .subt,.emrg_block .subt{
     font:24px 'open_sansbold';
     color:#232323;
     height:57px;
@@ -1915,7 +1915,7 @@ section > .wrap >  .left.contact_r{
     position: relative;
 }
 
-.contact_l .subt:before,.contact_r .subt:before{
+.contact_l .subt:before,.contact_r .subt:before,.emrg_block .subt:before{
     content:'';
     position:absolute;
     display:block;
@@ -1995,9 +1995,6 @@ section > .wrap >  .left.contact_r{
     padding:0px 10px 0px 19px;
     width: 100%;
     margin:25px 0;
-}
-.ccc_hidden .map_info p span{
-    display:block;
 }
 .contact_r .map_info p{
     margin-bottom:14px;
@@ -2097,6 +2094,7 @@ section > .wrap >  .left.contact_r{
     border-bottom:1px solid #e6e6e6;
     position: relative;
     margin-top: 0;
+    float:right;
     width: 360px;
 }
 .contact.left.form .ftb{
@@ -2154,9 +2152,13 @@ section > .wrap >  .left.contact_r{
     padding:0px 90px 40px 60px;
     position: relative;
 }
-.wrap .left.ccc{
+.contact_l{
     width:360px;
-    margin-right:55px;
+    margin-right:25px;
+    float:left;
+}
+.wrap .left.ccc{
+    width:915px;
 }
 .content input[type=text],.chat input[type=text],.content input[type=email],.chat input[type=email]{
     margin-bottom:20px;
@@ -2633,14 +2635,7 @@ section .wrap > .left .subt,ul.faq  .subt{
     text-transform: uppercase;
     margin-bottom: 25px;
 }
-.contact_hidden,.ccc .ccc_hidden{
-    display:none;
-    margin-bottom: 50px;
-}
-section > .wrap > .left.contact_r.contact_hidden{
-    width:100%;
-    margin-bottom: 30px;
-}
+
 ul.faq .subt{
     margin-bottom:18px;
 }
@@ -2995,11 +2990,20 @@ ul.mda > li > a,ul.atz  > li a,.dcr_dwnl{
 .a_box .right{
     max-width:500px;
 }
-.emrg .ul_title .left,.cda .ul_title .left {
+.emrg{
+    width:500px;
+}
+.emrg .ul_title .left{
+    width:30%;
+    padding-left: 12px;
+}
+.cda .ul_title .left {
     width:300px;
 }
 .emrg .ul_title .right{
-    width:550px;
+    width:70%;
+    margin-right:0px;
+    padding-left: 12px;
 }
 .cda .ul_title .right{
     width:120px;
@@ -3008,7 +3012,7 @@ ul.mda > li > a,ul.atz  > li a,.dcr_dwnl{
     margin-bottom: 80px;
 }
 .emrg ul li .left{
-    width: 34%;
+    width: 30%;
     font:17px 'open_sansbold';
     color:#7c4d7c;
     display:table-cell;
@@ -3033,7 +3037,7 @@ cda  ul li .left p{
     color:#4c4c4c;
 }
 .emrg ul li .right{
-    width:550px;
+    width:70%;
 }
 .dop .right.firechat-name{
     width:235px;
@@ -3294,7 +3298,13 @@ ul.dcr > li > a{
     width:100%;
     display:block;
     padding-bottom:10px;
-
+}
+.contact_r{
+    width:100%;
+}
+.emrg_block{
+    float:right;
+    margin-right:25px;
 }
 section > .wrap.rpt > .left ul > li a:hover ,section > .wrap.rpt > .left > ul > li.active > a,ul.dcr > li a:hover,ul.dcr > li.active a{
     color:#68a84e;
@@ -4673,11 +4683,8 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     section > .wrap .left article:nth-child(2n){
         margin-left:25px;
     }
-    .emrg .ul_title .left, .cda .ul_title .left{
+    .cda .ul_title .left{
         width: 200px;
-    }
-    .emrg ul li .left{
-        width:auto;
     }
     section > .wrap .right{
         margin-right:25px;
@@ -4737,10 +4744,35 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     section > .wrap,section .dirs_menu .wrap{
         max-width:1235px;
     }
+    section .wrap > .left .subt{
+        font-size:16px;
+    }
+    .contact_l .subt{
+        padding:0px 10px;
+    }
+    .wrap .left .chat,.contact_l{
+        width:320px;
+    }
+    .emrg ul li .right{
+        margin-right:0px;
+    }
+    .left .chat .mn{
+        width:35px;
+        margin-right:0px;
+    }
+    .left .chat .green,.left .chat .violet{
+        font-size:25px;
+    }
+    .wrap .left.ccc{
+        width:890px;
+    }
+    .contact.left.form{
+        width:330px;
+    }
     section > .wrap > .left,.c_title{
         width:65%;
     }
-    .wrap .left.ccc,section > .wrap > .left.contact_r{
+    section > .wrap > .left.contact_r{
         margin-right:30px;
     }
     ul.culture li .right{
@@ -4816,12 +4848,6 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .personal{
         width: 425px;
     }
-    .emrg .ul_title .left{
-        max-width: 220px;
-    }
-    .emrg .ul_title .right,.emrg ul li .right{
-        width: 539px;
-    }
     .emrg ul li .left{
         max-width:220px;
     }
@@ -4861,6 +4887,10 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     section > .wrap{
         max-width:950px;
         padding: 0px 10px;
+    }
+    .contact.left.form{
+        float:none;
+        clear:both;
     }
     section .dirs_menu .wrap{
         padding: 0px 10px;
@@ -4991,31 +5021,15 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         float: none;
         clear: both;
     }
-    .left.contact_r{
-        display:none;
-    }
-    section > .wrap > .left.contact_r.contact_hidden{
-        display: block;
-    }
-    .ccc_hidden .map_info p span{
-        display:block;
-    }
     section > .wrap .right.global{
         float:left;
-    }
-    .ccc_hidden .map_info{
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ececec;
-        margin-bottom:20px;
     }
     .map_info p:last-child{
         margin-bottom:0px;
     }
-    .ccc .ccc_hidden{
-        display:block;
-    }
     .wrap .left.ccc{
-        margin-right:50px;
+        float:none;
+        width:100%;
     }
     ul.culture li .right{
         width:100%;
@@ -5026,6 +5040,15 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     ul.faq li a,ul.faq li a span{
         font: 17px 'open_sanssemibold';
+    }
+    .contact_l,.wrap .left .chat{
+        width:360px;
+    }
+    .emrg_block .emrg{
+        width:540px;
+    }
+    .emrg_block{
+        margin:0px;
     }
     ul.faq li p{
         font: 13px 'open_sanssemibold';
@@ -5088,9 +5111,6 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .det_news{
         font-size:22px;
     }
-    .emrg .ul_title .right, .emrg ul li .right{
-        width: 340px;
-    }
     .a_box.g_g .left .img img, .a_box.v_g .left .img img {
         max-width: 270px;
     }
@@ -5147,10 +5167,25 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         width:510px;
         margin-bottom:45px;
         float:none;
+        display:none;
     }
     section .dirs_menu .wrap{
         padding:0px 10px;
         max-width: 768px;
+    }
+    .emrg_block,.wrap .left.ccc,.emrg,.contact_l{
+        float:none;
+        width:100%;
+    }
+    .contact_l .date_contact li{
+        width: 46%;
+        float: left;
+        margin-right: 25px;
+    }
+    .contact_l .prp{
+        clear:both;
+        width:auto;
+        display:inline-block;
     }
     section > .wrap{
         padding: 0px 10px;
@@ -5307,9 +5342,6 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     ul.culture li .left.img{
         display:none;
     }
-    .wrap .left .chat,.contact_r .prp{
-        display:none;
-    }
     .contact_r .map_info{
         margin-top:25px;
     }
@@ -5364,20 +5396,18 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .a_box .right{
         max-width: 310px;
     }
-    section > .wrap > .left.contact_r.contact_hidden,.ccc .ccc_hidden{
-        display: block;
-    }
-    .left.contact_r{
-        display:none;
-    }
     .contact.left.form{
         margin-top:50px;
         width:360px;
     }
-
+    .contact_r{
+        float:none;
+    }
     .contact.left.form{
         display: block;
         margin-top: 30px;
+        float:none;
+        clear:both;
     }
     .resp_menu{
         display:block;
@@ -5412,6 +5442,12 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         background: url('../img/menu_icon.png')no-repeat center #7c4d7c;
         cursor:pointer;
         position:relative;
+    }
+    .emrg_block,.emrg,.contact_l,.contact.left.form,.contact_r{
+        display:block;
+        float:none;
+        width:100%;
+        clear:both;
     }
     header.page{
         height:80px;
@@ -5582,17 +5618,17 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .ath p{
         padding-right:20px;
     }
-    section .wrap > .left .subt,.wrap .left .chat,.contact_r .prp,.a_box.v_g.m_an{
+    .wrap .left .chat,.contact_r .prp,.a_box.v_g.m_an{
         display:none;
     }
     .wrap .left.ccc{
-        margin-bottom:55px;
+        width:100%;
+        float:none;
     }
     .contact_r .map_info{
         margin-top:22px;
     }
     .contact.left.form{
-        display: block;
         margin-top: 30px;
     }
     .n_title{
@@ -5867,9 +5903,6 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .emrg .ul_title .right:before{
         content:"/ ";
     }
-    .emrg ul li .right{
-        padding-left:5px;
-    }
     .emrg ul li .left{
         padding-bottom: 0px;
     }
@@ -6091,6 +6124,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     section p.map_sub{
         margin-left: 0px;
     }
+    .wrap .left.ccc .subt{
+        font-size:15px;
+    }
     section .map_cont .h_list > li{
         display:block;
     }
@@ -6105,8 +6141,17 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     section > .wrap > .right article, section > .wrap .right .doc, .right > article.news{
         max-width:300px;
     }
+    .emrg ul li{
+        margin-top:15px;
+    }
     section > .wrap > .left,.c_title{
         width:100%;
+    }
+    .emrg ul li .left{
+        font-size:15px;
+    }
+    .emrg ul li .right{
+        font-size:14px;
     }
     .right article{
         margin-left:25px;
@@ -6314,7 +6359,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         margin-top:30px;
     }
     .form .ftb{
-        font-size: 20px;
+        font-size: 17px;
         width:100%;
     }
     .compl_list li a .compl_title{
