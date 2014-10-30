@@ -32,7 +32,7 @@
             var disqus_url = '<?= url(); ?>';
             var disqus_shortname = '<?= SettingsModel::one('disqus_shortname'); ?>';
             var disqus_title = '<?= Core\APL\Template::getPageTitle(isset($page) ? $page : null); ?>';
-            var disqus_config = function() {
+            var disqus_config = function () {
                 this.language = "<?= Core\APL\Language::ext(); ?>";
             };
 
@@ -121,9 +121,15 @@
             </div>
             <div class="clearfix"></div>
         </header>
-        
+        <div class="top_search">
+            <form method="get" action="<?= Language::url('search'); ?>">
+                <div><input type="text" name="words" placeholder="<?= varlang('cautare'); ?>"></div>
+                <input type="submit" value="<?= varlang('submit'); ?>">
+            </form>
+        </div>
+
         <div id="hm_scroll"></div>
-        
+
         <?= $content; ?> 
 
         <?= View::make('block.footer'); ?>

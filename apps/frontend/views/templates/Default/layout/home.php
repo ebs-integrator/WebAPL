@@ -91,7 +91,12 @@
                 <li><a href='<?= varlang('rss-link'); ?>' class="rsss"><?= varlang('rss'); ?></a></li>
             </ul>
         </div>
-
+        <div class="top_search">
+            <form action="<?= Language::url('search'); ?>" method="get">                
+                <div><input type="text" name="words" placeholder="<?= varlang('cautare'); ?>"></div>
+                <input type="submit" value="<?= varlang('submit'); ?>">
+            </form>
+        </div>
         <?= $content; ?> 
 
 

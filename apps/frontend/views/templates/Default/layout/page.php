@@ -32,9 +32,9 @@
             var base_url = '<?= url(); ?>';
 
             var disqus_url = '<?= url(); ?>';
-            var disqus_shortname = '<?= SettingsModel::one('disqus_shortname');?>';
+            var disqus_shortname = '<?= SettingsModel::one('disqus_shortname'); ?>';
             var disqus_title = '<?= Core\APL\Template::getPageTitle(isset($page) ? $page : null); ?>';
-            var disqus_config = function() {
+            var disqus_config = function () {
                 this.language = "<?= Core\APL\Language::ext(); ?>";
             };
 
@@ -79,7 +79,12 @@
                 <li><a href='<?= varlang('rss-link'); ?>' class="rsss"><?= varlang('rss'); ?></a></li>
             </ul>
         </div>
-
+        <div class="top_search">
+            <form action="<?= Language::url('search'); ?>" method="get">                
+                <div><input type="text" name="words" placeholder="<?= varlang('cautare'); ?>"></div>
+                <input type="submit" value="<?= varlang('submit'); ?>">
+            </form>
+        </div>
 
 
         <?= $content; ?> 
