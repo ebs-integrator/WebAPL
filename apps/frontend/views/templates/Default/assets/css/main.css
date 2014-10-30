@@ -1231,10 +1231,9 @@ section > .wrap > .left{
     top: 0px;
 }
 .right article.news li a{
-    float: left;
+    display:inline-block;
     width: 245px;
     font:14px 'open_sanssemibold';
-    padding-bottom: 15px;
     line-height: 16px;
 }
 
@@ -1245,6 +1244,11 @@ section > .wrap > .left{
 }
 .right > article.news ul li{
     padding:0px;
+}
+.right > article.news ul li:after{
+    clear:both;
+    display: block;
+    content: '';
 }
 .right > article.news .hr{
     border-color:#74b45a;
@@ -1432,7 +1436,6 @@ footer .socials a{
 }
 footer .socials a span{
     width:20px;
-    height:19px;
     display:inline-block;
     display: -moz-inline-box;
     text-align: center;

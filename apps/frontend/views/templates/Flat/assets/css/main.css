@@ -854,6 +854,9 @@ article .sub_list ul li a{
     display:block;
     max-height: 50px;
     overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
 }
 article .sub_list ul li{
     padding-left:23px;
