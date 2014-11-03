@@ -9,7 +9,7 @@
             'ID',
             '<?= varlang('gname'); ?>',
         ],
-        colModel: [ 
+        colModel: [
             {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
             {name: 'name', index: 'name', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
         ],
@@ -34,6 +34,29 @@
     };
 </script>
 
+
+<form action="<?= url('person/savegroup'); ?>" method="post">
+    <h3><?= varlang('create-new-group'); ?></h3>
+    <div class="col-lg-6">
+        <?php
+        $num = 0;
+        foreach (\Core\APL\Language::getList() as $lang) {
+            $num++;
+            ?>
+            <?= varlang('name-in'); ?><?= $lang->name; ?>:<br>
+            <input type="text" class="form-control" name="lang[<?= $lang->id; ?>][name]" />
+            <div class="c10"></div>
+            <?php if ($num % 2 == 0) { ?>
+            </div><div class="col-lg-6">
+            <?php } ?>
+        <?php } ?>
+    </div>
+    <div class="clearfix"></div>
+    <button class="btn btn-success"><?= varlang('create-group'); ?></button>
+</form>
+
+<div class="c20"></div>
+
 <?=
 View::make('sections/jqgrid/form')->with(array(
     'options' => 'person_group_options',
@@ -41,14 +64,3 @@ View::make('sections/jqgrid/form')->with(array(
 ));
 ?>
 
-<div class="c20"></div>
-<form action="<?=url('person/savegroup');?>" method="post">
-    <h3><?= varlang('create-new-group'); ?></h3>
-    <?php foreach (\Core\APL\Language::getList() as $lang) { ?>
-        <?= varlang('name-in'); ?><?= $lang->name; ?>:<br>
-        <input type="text" class="form-control" name="lang[<?= $lang->id; ?>][name]" />
-        <div class="c10"></div>
-    <?php } ?>
-
-    <button class="btn btn-success"><?= varlang('create-group'); ?></button>
-</form>

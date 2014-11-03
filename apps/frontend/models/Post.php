@@ -104,7 +104,6 @@ class Post extends Eloquent {
         $post = Post::prepareQuery(1)
                 ->where(PostLang::getField('enabled'), 1)
                 ->where('view_mod', $modView)
-                ->take(2)
                 ->first();
 
         if ($post) {
@@ -113,6 +112,7 @@ class Post extends Eloquent {
                     ->where(Post::getField('to_home'), 1)
                     ->where(FeedPost::getField('feed_id'), $post->feed_id)
                     ->orderBy('created_at', 'desc')
+                    ->take(2)
                     ->get();
         } else {
             $list = array();
