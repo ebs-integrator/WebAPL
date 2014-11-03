@@ -125,11 +125,28 @@ class Person extends \Core\APL\ExtensionController {
 
         $jqgrid = new jQgrid('apl_person', 'person_id');
         echo $jqgrid->populate(function ($start, $limit) {
-            return PersonLangModel::select('person_id', 'first_name', 'last_name')
-                            ->where('lang_id', Language::getId())
-                            ->skip($start)
-                            ->take($limit)
-                            ->get();
+            $persons = PersonLangModel::select('person_id', 'first_name', 'last_name')
+                    ->where('lang_id', Language::getId())
+                    ->skip($start)
+                    ->take($limit)
+                    ->orderBy(DB::raw(\PersonLangModel::getField('first_name') . ', ' . \PersonLangModel::getField('last_name')), 'asc')
+                    ->get();
+
+            foreach ($persons as &$person) {
+                $groups = \PersonRelModel::join(\PersonGroupLang::getTableName(), \PersonRelModel::getField('group_id'), '=', \PersonGroupLang::getField('group_id'))
+                        ->select(\PersonGroupLang::getField('name'))
+                        ->where(\PersonRelModel::getField('person_id'), $person->person_id)
+                        ->where(\PersonGroupLang::getField('lang_id'), '=', \Core\APL\Language::getId())
+                        ->get();
+
+                $array_groups = [];
+                foreach ($groups as $group) {
+                    $array_groups[] = $group->name;
+                }
+                $person['group'] = $array_groups ? implode(', ', $array_groups) : '---';
+            }
+
+            return $persons;
         });
     }
 
