@@ -1,4 +1,4 @@
-<button class="home_chat <?= $online ? 'firechat-start active' : ''; ?>">
+<button class="home_chat <?= $online ? 'firechat-start active' : 'firechat-inactive'; ?>">
     <span class="pot"></span>
     <span class="pct">
         <p><?= varlang('discuta'); ?> <span><?= varlang('online'); ?></span></p>

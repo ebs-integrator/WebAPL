@@ -1,3 +1,20 @@
+<?php
+$months = array(
+    1 => varlang('ianuarie'),
+    2 => varlang('februarie'),
+    3 => varlang('martie'),
+    4 => varlang('aprilie'),
+    5 => varlang('mai'),
+    6 => varlang('iunie'),
+    7 => varlang('iulie'),
+    8 => varlang('august'),
+    9 => varlang('septembrie'),
+    10 => varlang('octombrie'),
+    11 => varlang('noiembrie'),
+    12 => varlang('decembrie')
+);
+?>
+
 <section>
     <?= View::make('sections.elements.breadcrumbs'); ?>
     <div class="wrap">        
@@ -13,22 +30,6 @@
             </div>
         <?php } ?>
         <div class="left">
-            <?php
-            $months = array(
-                1 => 'Ianuarie',
-                2 => 'Februarie',
-                3 => 'Martie',
-                4 => 'Aprilie',
-                5 => 'Mai',
-                6 => 'Iunie',
-                7 => 'Iulie',
-                8 => 'August',
-                9 => 'Septembrie',
-                10 => 'Octombrie',
-                11 => 'Noiembrie',
-                12 => 'Decembrie'
-            );
-            ?>
             <?php if (isset($current_month) && $current_month) { ?>
                 <div class="m_criteria">
                     <?php if (isset($months[intval($current_month) - 1])) { ?>
