@@ -10,7 +10,7 @@
                         foreach ($item['childrens'] as $k => $chitem) {
                             if ($k < 4) {
                                 ?>
-                                <li><a href="<?= $chitem->url; ?>"><?= $chitem->title; ?></a> </li>
+                                <li><a href="<?= $chitem->url; ?>"><?= character_limiter($chitem->title, 35); ?></a> </li>
                                 <?php
                             }
                         }
