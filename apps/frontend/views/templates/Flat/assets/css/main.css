@@ -307,96 +307,14 @@ textarea {
     content: " ";
     height: 50px;
 }
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-(-o-min-device-pixel-ratio: 5/4),
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 120dpi) {
+@media print{
     /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
-
-@media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
+    .page_top_content .row2 .content > ul li{
+        float:left;
+        display:block;
     }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
-
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
     @page {
         margin: 0.5cm;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-    .relative{
-        position:relative;
     }
 }
 
@@ -915,6 +833,7 @@ img.img_error{
 }
 footer {
     height:500px;
+    width:100%;
 }
 .prefooter  .row1_l,.prefooter  .row1_r{
     width:50%;    
@@ -1128,7 +1047,7 @@ footer .newsletter_subscribe_form input[type=submit]{
 footer .copy{
     color:#7b7b7b;
     font:14px 'AvenirNext-Medium';
-    margin-top:85px;
+    margin-top:40px;
     padding-right:30px;
 }
 .mini_header{
@@ -4034,7 +3953,7 @@ ul.vice li .p_name {
 .right_block .conten{
     padding-right:20px;
 }
-@media only screen and (min-width: 1366px) and (max-width: 1680px){
+@media only screen and  (min-width: 1366px) and (max-width: 1680px){
     .page_top_header{
         width:100%;
     }
@@ -4074,7 +3993,7 @@ ul.vice li .p_name {
     }
 
 }
-@media only screen and (min-width: 2560px){
+@media only screen and  (min-width: 2560px){
     section,.page_header {
         background: -webkit-linear-gradient(left,#f7f7f7,#f7f7f7 40%,white 40%,white);
         background: linear-gradient(to right,#f7f7f7,#f7f7f7 40%,white 40%,white);
@@ -4082,7 +4001,7 @@ ul.vice li .p_name {
         background: -ms-linear-gradient(left,#f7f7f7,#f7f7f7 40%,white 40,white);
     }
 }
-@media only screen and (min-width: 1356px) and (max-width: 1540px){
+@media only screen and  (min-width: 1356px) and (max-width: 1540px){
     section,.page_header {
         background: -webkit-linear-gradient(left,#f7f7f7,#f7f7f7 30%,white 30%,white);
         background: linear-gradient(to right,#f7f7f7,#f7f7f7 30%,white 30%,white);
@@ -4174,7 +4093,7 @@ ul.vice li .p_name {
         padding-right:20px;
     }
 }
-@media only screen and (min-width: 1024px) and (max-width: 1279px){
+@media print,(min-width: 1024px) and (max-width: 1279px){
     .wrap{
         width:980px;
     }
@@ -4492,7 +4411,7 @@ ul.vice li .p_name {
         max-width: 190px;
     }
 }
-@media only screen and (min-width: 768px) and (max-width: 1023px){
+@media only screen and  (min-width: 768px) and (max-width: 1023px){
     footer .left{
         float:none;
         width:100%;
@@ -4849,7 +4768,7 @@ ul.vice li .p_name {
         width:100%;
     }
 }
-@media only screen and (max-width: 767px){
+@media only screen and  (max-width: 767px){
     .img_back{
         display:none;
     }
