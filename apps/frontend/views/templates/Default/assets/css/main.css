@@ -6688,7 +6688,7 @@ iframe, object, embed {
     .dop{
         right:0px;
     }
-    .sec_img:before,.clu_img:before,footer {
+    .sec_img:before,.clu_img:before,footer{
         box-shadow: 0 0 0 0;
         -webkit-box-shadow: 0 0 0 0;
     }
