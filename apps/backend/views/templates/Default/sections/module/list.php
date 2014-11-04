@@ -1,7 +1,7 @@
 
 <h2><?= varlang('module-1'); ?></h2>
 
-<table class="table table-bordered">
+<table class="table table-bordered table-hover">
     <tr>
         <th><?= varlang('name-4'); ?></th>
         <th class="col-sm-2"><?= varlang('state-1'); ?></th>

@@ -10,7 +10,12 @@
 </h3>
 
 <form action="<?= url('var/search'); ?>" method="post">
-    <input type="search" name="varname" placeholder="" class="form-control" />
+        <div class="input-group">
+            <input type="search" name="varname" placeholder="<?= varlang('search-vars'); ?>" class="form-control" />
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-filter"></i></button>
+            </span>
+        </div><!-- /input-group -->
 </form>
 
 

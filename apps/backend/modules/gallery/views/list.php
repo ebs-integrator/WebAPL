@@ -2,7 +2,7 @@
     <?= varlang('gallery'); ?>
 </h3>
 
-<table class="table table-bordered">
+<table class="table table-bordered table-hover">
     <?php foreach ($list as $item) { ?>
     <tr>
         <td><?=$item->id;?></td>

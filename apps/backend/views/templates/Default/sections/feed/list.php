@@ -16,14 +16,17 @@
         <div class="c20"></div>
         <a href="<?= url('feed/create'); ?>" class="btn btn-success"><?= varlang('create-new-feed'); ?></a>
         <div class="c20"></div>
-        <table class="table table-bordered">
+        <table class="table table-bordered table-hover">
             <tr>
+                <th><?= varlang('action'); ?></th>
                 <th><?= varlang('name-3'); ?></th>
                 <th><?= varlang('state'); ?></th>
-                <th><?= varlang('action'); ?></th>
             </tr>
             <?php foreach ($list as $item) { ?>
                 <tr>
+                    <td>
+                        <a href="<?= url('feed/edit/' . $item->id); ?>" class="btn btn-success"><?= varlang('manage'); ?></a>
+                    </td>
                     <td><?= $item->name; ?></td>
                     <td>
                         <?php if ($item->enabled) { ?>
@@ -31,9 +34,6 @@
                         <?php } else { ?>
                             <span class="label label-danger"><?= varlang('inactive'); ?></span>
                         <?php } ?>
-                    </td>
-                    <td>
-                        <a href="<?= url('feed/edit/' . $item->id); ?>" class="btn btn-success"><?= varlang('manage'); ?></a>
                     </td>
                 </tr>
             <?php } ?>

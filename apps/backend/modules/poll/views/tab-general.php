@@ -1,7 +1,7 @@
 <form class="ajax-auto-submit" action='<?= url('poll/save'); ?>' method='post'>
     <input type='hidden' name='id' value='<?= isset($poll->id) ? $poll->id : 0; ?>' />
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
         <?php if (isset($poll->date_created)) { ?>
         <tr>
             <th><?= varlang('date-created'); ?></th>

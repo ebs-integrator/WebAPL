@@ -2,7 +2,7 @@
 
 <p>Pentru a continua procesul de instalare este necesar să verificați dacă dispuneți de toate cerințele tehnice.</p>
 
-<table class="table table-bordered">
+<table class="table table-bordered table-hover">
     <tr>
         <td>PHP 5.4+</td>
         <td>
@@ -52,7 +52,7 @@
 <p>Ca procesul de instalare să decurgă fără erori trebuie ca următoarele dosare și fisierele din ele să dețină drepturi de scriere.</p>
 <p>Oferirea drepturilor de scriere se face cu ajutorul unui client FTP (ex. Filezilla), drepturile recomandate sunt: 0777</p>
 
-<table class="table table-bordered">
+<table class="table table-bordered table-hover">
     <tr>
         <td>/apps/frontend/storage/</td>
         <td>

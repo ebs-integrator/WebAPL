@@ -5,7 +5,7 @@ $list = isset($person->dynamic_fields) ? @unserialize($person->dynamic_fields) :
 <form class="ajax-auto-submit" action='<?= url('person/save_dynamic_fields'); ?>' method='post'>
     <input type='hidden' name='person_id' value='<?= isset($person->id) ? $person->id : 0; ?>' />
 
-    <table id="fields_list" class="table table-bordered">
+    <table id="fields_list" class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th><?= varlang('drag'); ?></th>

@@ -30,7 +30,7 @@
                 <div class='dcr_box'>
                     <ul class="mda n_t">
                         <?php foreach ($post->docs as $file) { ?>
-                            <li class="<?= $file->extension; ?>"><span><a href="<?= $file->path; ?>"><?= $file->name; ?></a></span></li>  
+                            <li class="<?= $file->extension; ?>"><span><a href="<?= url($file->path); ?>"><?= $file->name; ?></a></span></li>  
                         <?php } ?>
                     </ul>
                 </div>

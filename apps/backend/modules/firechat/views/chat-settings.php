@@ -2,7 +2,7 @@
 
 <form action="<?= url('settings/save'); ?>" method="post" class="ajax-auto-submit">
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
 
         <tr>
             <th><?= varlang('firechat-host'); ?></th>

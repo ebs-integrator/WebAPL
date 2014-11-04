@@ -1,7 +1,7 @@
 <form action='<?= url('menu/save'); ?>' method='post'>
     <input type='hidden' name='id' value='<?= isset($menu['id']) ? $menu['id'] : 0; ?>' />
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
         <tr>
             <th>Name: </th>
             <td>

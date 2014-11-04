@@ -4,7 +4,7 @@
 
     <input type="hidden" name="id" value="<?= $act->id; ?>" />
     
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
         <tr>
             <th><?= varlang('nr-5'); ?></th>
             <td>

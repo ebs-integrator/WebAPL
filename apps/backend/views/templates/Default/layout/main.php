@@ -37,30 +37,6 @@
           <script src="<?= res('assets/lib/respond/respond.min.js'); ?>"></script>
         <![endif]-->
 
-        <style>
-            body.boxed {
-                background: url("../img/pattern/arches.png") repeat;
-            }
-            #top > .navbar {
-                border-top: 3px solid #4eb25c;
-            }
-            #top > .navbar .dropdown-menu > li > a:hover,
-            #top > .navbar .dropdown-menu > li > a:focus {
-                background-color: #222;
-                color: #ffffff;
-            }
-            #menu {
-                background-color: #303030 !important;
-            }
-            #menu > li > a {
-                color: #ffffff;
-                text-shadow: none !important;
-            }
-            .sidebar-left-mini #menu > li > a > .link-title {
-                background-color: #303030 !important;
-            }
-        </style>
-
         <!--Modernizr 2.8.2-->
         <script src="<?= res('assets/lib/modernizr/modernizr.min.js'); ?>"></script>
 
@@ -181,7 +157,7 @@
             </div><!-- /#content -->
         </div><!-- /#wrap -->
         <footer class="Footer bg-dark dker">
-            <p>2014 &copy; APL by <a href="http://ebs.md/?apl" target="_black">EBS</a></p>
+            <p><?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?></p>
         </footer><!-- /#footer -->
 
         <!-- Modal -->

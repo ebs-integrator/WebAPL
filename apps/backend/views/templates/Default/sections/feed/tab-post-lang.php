@@ -2,7 +2,7 @@
     <input type='hidden' name='id' value='<?= isset($post->id) ? $post->id : 0; ?>' />
     <input type='hidden' name='lang_id' value='<?= isset($post_lang->lang_id) ? $post_lang->lang_id : 0; ?>' />
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
         <tr>
             <th><?= varlang('frontend-link'); ?>: </th>
             <td>
@@ -25,15 +25,15 @@
             </td>
         </tr>
         <tr>
-            <th><?= varlang('text'); ?>: </th>
-            <td>
-                <textarea name="postlang[<?= $post_lang->id; ?>][text]" class='ckeditor-run'><?= isset($post_lang->text) ? $post_lang->text : ''; ?></textarea>
-            </td>
-        </tr>
-        <tr>
             <th><?= varlang('enabled-1'); ?>: </th>
             <td>
                 <input type="checkbox" name="postlang[<?= $post_lang->id; ?>][enabled]" class='make-switch' <?= isset($post_lang->enabled) && $post_lang->enabled ? 'checked' : ''; ?> />
+            </td>
+        </tr>
+        <tr>
+            <th><?= varlang('text'); ?>: </th>
+            <td>
+                <textarea name="postlang[<?= $post_lang->id; ?>][text]" class='ckeditor-run'><?= isset($post_lang->text) ? $post_lang->text : ''; ?></textarea>
             </td>
         </tr>
         <?php foreach ($post_lang['fields'] as $field) { ?>
@@ -48,7 +48,7 @@
 
 </form>
 
-<table class="table table-bordered">
+<table class="table table-bordered table-hover">
     <?php foreach ($post_lang['fields_out'] as $field) { ?>
         <tr>
             <th><?= $field->title; ?>: </th>

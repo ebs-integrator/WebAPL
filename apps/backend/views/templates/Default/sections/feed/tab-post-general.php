@@ -1,7 +1,7 @@
 <form class="ajax-auto-submit" action='<?= url('feed/postsave'); ?>' method='post'>
     <input type='hidden' name='id' value='<?= isset($post->id) ? $post->id : 0; ?>' />
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
         <tr>
             <th><?= varlang('date-3'); ?>: </th>
             <td>
@@ -75,7 +75,7 @@
     </table>
 </form>
 
-<table class="table table-bordered">
+<table class="table table-bordered table-hover">
     <?php foreach ($fields_out as $field) { ?>
         <tr>
             <th><?= $field->title; ?>: </th>

@@ -4,7 +4,7 @@
 
         <input type="hidden" name="id" value="<?= $user->id; ?>" />
 
-        <table class="table table-bordered">
+        <table class="table table-bordered table-hover">
             <tr>
                 <th><?= varlang('username-1'); ?></th>
                 <td>
@@ -31,7 +31,7 @@ $uroles = User::extractRoles($user->id);
 
         <input type="hidden" name="id" value="<?= $user->id; ?>" />
 
-        <table class="table table-bordered">
+        <table class="table table-bordered table-hover">
             <tr>
                 <th><?= varlang('new-password'); ?></th>
                 <td>

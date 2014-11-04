@@ -1,4 +1,4 @@
-<table class="table table-bordered">
+<table class="table table-bordered table-hover">
         <tr>
             <th><?= varlang('newsletter-2'); ?>: </th>
             <td>

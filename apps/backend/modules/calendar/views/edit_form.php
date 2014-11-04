@@ -12,7 +12,7 @@
         <form class="ajax-auto-submit" action='<?= url('calendar/save'); ?>' method='post'>
             <input type='hidden' name='id' value='<?= isset($calendar->id) ? $calendar->id : 0; ?>' />
 
-            <table class="table table-bordered">
+            <table class="table table-bordered table-hover">
                 <tr>
                     <th><?= varlang('period-'); ?></th>
                     <td>
@@ -51,7 +51,7 @@
                 <form class="ajax-auto-submit" action='<?= url('calendar/save_lang'); ?>' method='post'>
                     <input type='hidden' name='id' value='<?= isset($langs[$lang->id]['id']) ? $langs[$lang->id]['id'] : 0; ?>' />
 
-                    <table class="table table-bordered">
+                    <table class="table table-bordered table-hover">
                         <tr>
                             <th><?= varlang('title--5'); ?></th>
                             <td>

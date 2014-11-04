@@ -11,7 +11,7 @@ if ($message) {
 
 <form action="<?= url('settings/save'); ?>" method="post" class="ajax-auto-submit">
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
 
         <tr>
             <th><?= varlang('template-2'); ?></th>

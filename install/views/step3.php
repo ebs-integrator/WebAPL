@@ -9,7 +9,7 @@
     <div class="alert alert-danger" role="alert"><?=Session::get('conerror');?></div>
     <?php } ?>
     
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
         <tr>
             <td>Hostul de conectare</td>
             <td>

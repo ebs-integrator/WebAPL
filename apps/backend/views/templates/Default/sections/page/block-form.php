@@ -23,7 +23,7 @@
         <?= View::make('sections.page.tab-actelocale'); ?>
     </div>
     <div class="tab-pane" id="attachment">
-        <table class="table table-bordered">
+        <table class="table table-bordered table-hover">
             <?php Event::fire('page_attachment', $page); ?>
         </table>
     </div>
