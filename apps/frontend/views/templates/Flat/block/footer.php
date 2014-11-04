@@ -40,14 +40,14 @@
                 <li><a target="_blank" class="f_gplus" href="<?= varlang('gplus-link'); ?>"></a></li>
                 <li><a target="_blank" class="f_rss" href="<?= varlang('rss-link'); ?>"></a></li>
             </ul>
-            <div class="clearfix50"></div>
+            <div class="clearfix20"></div>
             <form method="get" action="<?= Language::url('search'); ?>" class="search">
                 <label><?= varlang('cautare'); ?></label>
                 <input type="text" name="words">
                 <input type="submit" value="<?= varlang('submit'); ?>">
             </form>
             <?php Event::fire('bottom_widgets'); ?>
-            <p class="copy"><a href="javascript:;"><?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?></p>
+            <p class="copy"><img src="<?= res('assets/img/copy.png'); ?>"><span><a href="javascript:;"><?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?></span></p>
 
         </div>
 

@@ -972,7 +972,7 @@ footer .left .content{
     float:right
 }
 footer .left > .content{
-    padding-top:30px;
+    padding-top:20px;
 }
 footer .right .content{
     width:640px;
@@ -1032,6 +1032,10 @@ footer .search input[type=submit]{
     font:14px 'AvenirNext-Bold';
     text-transform: uppercase;
 }
+.copy img{
+    display:block;
+    margin:10px 0px;
+}
 footer .newsletter_subscribe_form{
     margin-top:25px;
 }
@@ -1046,9 +1050,15 @@ footer .newsletter_subscribe_form input[type=submit]{
 }
 footer .copy{
     color:#7b7b7b;
-    font:14px 'AvenirNext-Medium';
+    font:11px 'AvenirNext-Medium';
     margin-top:40px;
     padding-right:30px;
+    height:160px;
+    background:#2d2d2d;
+}
+footer .copy span{
+    padding-left:20px;
+    display:block;
 }
 .mini_header{
     display:none;
@@ -4588,7 +4598,7 @@ ul.vice li .p_name {
         margin-top:40px;
     }
     footer{
-        height:430px;
+        height:490px;
     }
 
     .personal {
