@@ -37,6 +37,8 @@
     </div>
 </div>
 
+
+
 <script>
     $(document).ready(function($) {
         var current_person = <?= isset($chat) && $chat->active ? $chat->person_id : 0; ?>;
@@ -107,13 +109,13 @@
             if (current_person) {
                 $("#firechat .top .firechat-photo, #firechat .top .firechat-name").hide();
             }
-            $.cookie('firechat_hidded', 1, { path: '/' });
+            $.cookie('firechat_hidded', 1, {path: '/'});
         };
 
-        $("body").on("click", ".firechat-hide", function () {
+        $("body").on("click", ".firechat-hide", function() {
             firechat_hide(500);
         });
-        
+
         if ($.cookie('firechat_hidded') == 1) {
             firechat_hide(0);
         }
@@ -127,7 +129,7 @@
             if (current_person) {
                 $("#firechat .top .firechat-photo, #firechat .top .firechat-name").show();
             }
-            $.cookie('firechat_hidded', 0, { path: '/' });
+            $.cookie('firechat_hidded', 0, {path: '/'});
         });
 
         $("body").on("submit", ".firechat-register", function(e) {
@@ -149,6 +151,12 @@
             }, 'json');
 
             return false;
+        });
+
+        $("body").on('click', '.firechat-inactive', function() {
+            $(".firechat-photo, .firechat-name").hide();
+            $("#firechat .content").html('<center><br><br><br><?= varlang('chat-erro'); ?> <a href="<?=Core\APL\Language::url('topage/page_calendar');?>" style="color:#673167"><?= varlang('chat-erro-no'); ?></a></center>').show();
+            $("#firechat").stop().slideToggle(500).animate({height: 535}, 500);
         });
     });
 </script>
