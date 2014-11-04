@@ -50,7 +50,7 @@
         <?php Event::fire('bottom_widgets'); ?>
     </div>
     <div class="clearfix"> </div>
-    <p class="copy"><a href="javascript:;"><?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?></p>
+    <p class="copy"><img src="<?= res('assets/img/copu.png'); ?>" class="img_copy"><span><a href="javascript:;"><?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?></span></p>
 </footer>
 
 <?php Event::fire('bottom_contructor'); ?>

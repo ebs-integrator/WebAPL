@@ -363,7 +363,6 @@ button.chat_button{
 }
 header button.chat span.g_dot,button.chat_button span.g_dot,button.vice_button span.g_dot{
     display:inline-block;
-    display: -moz-inline-box;
     width:18px;
     height:18px;
     border-radius: 50%;
@@ -562,7 +561,6 @@ header .contact .cont .cont_form ul li p span,header .contact .cont .cont_form u
     color:#db1e46;
     text-transform: uppercase;
     display:inline-block;
-    display: -moz-inline-box;
     margin-left:15px;
 }
 .n_alert .cntn a{
@@ -753,8 +751,19 @@ header .contact .currency .lang .relative p{
     position:absolute;
     background: url('../img/g_arrow.png') no-repeat right #fff;
     width:100%;
-    height:10px;
+    height:9px;
     top:-32px;
+}
+.copy img{
+    display: table-cell;
+    margin-right:20px;
+}
+.copy span{
+    display: table-cell;
+    margin-left: 20px;
+    padding-left: 15px;
+    border-left: 1px solid #e3e3e3;
+    vertical-align: middle;
 }
 header .header_mini{
     display:none;
@@ -988,7 +997,6 @@ section > .wrap {
     border: 2px solid #f7f7f7;
     border-left: 3px solid #cfd7a6;
     display: inline-block;
-    display: -moz-inline-box;
     background-color: #fcfcfc;
 }
 .right > article.atn .bx-wrapper .bx-viewport{
@@ -1010,8 +1018,7 @@ article.atn .more{
     margin-top:15px;
     margin-bottom: 20px;
 }
-.right > article.atn .data p{
-    display: -moz-inline-box;
+.right > article.atn .data p{    
     display: inline-block;
     background: #673167;
     color:#fff;
@@ -1074,7 +1081,6 @@ section > .wrap > .left{
     height:auto;
     border:2px solid #f7f7f7;
     display: inline-block;
-    display: -moz-inline-box;
     margin-top:25px;
     background-color:#fcfcfc;
     border-left:0px;
@@ -1269,6 +1275,9 @@ article .more,.a_box .more,section > .wrap .prom > .left ul li a{
     bottom: 8px;
     right: 20px;
 }
+article.doc .more{
+    bottom:0px;
+}
 span.more,div.more{
     width: 30px;
     height: 30px;
@@ -1334,13 +1343,12 @@ footer > .left,footer > .right{
     height:86px;
 }
 footer .copy{
-    border-top:1px solid #e3e3e3;
-    text-align:center;
-    margin-top:24px;
-    color:#4b4b4b;
-    font:13px 'open_sanssemibold';
-    line-height: 27px;
-    margin-bottom:0px;
+    border-top: 1px solid #e3e3e3;
+    margin-top: 24px;
+    color: #4b4b4b;
+    font: 13px 'open_sanssemibold';
+    display: table;
+    padding: 10px 70px;
 }
 footer .copy a{
     color:#60a046;
@@ -1364,15 +1372,13 @@ footer .socials a{
 }
 footer .socials a span{
     width:20px;
-    display:inline-block;
-    display: -moz-inline-box;
+    display:inline-block;    
     text-align: center;
     margin-right:10px;
 }
 footer .right > .left{
     margin-right:55px;
     display: inline-block;
-    display: -moz-inline-box;
     max-width: 335px;
     width:330px;
 }
@@ -1957,7 +1963,6 @@ section > .wrap >  .left.contact_r{
 .contact_r .prp{
     width:auto;
     display:inline-block;
-    display: -moz-inline-box;
     padding:0px 10px 0px 19px;
     width: 100%;
     margin:25px 0;
@@ -2181,12 +2186,10 @@ section > .wrap >  .left.contact_r{
 }
 .form label.code_lbl{
     display:inline-block;
-    display: -moz-inline-box;
     margin-right:8px;
 }
 .form .content .radio_b label{
     display:inline-block;
-    display: -moz-inline-box;
     margin:0 20px 20px -5px;
 }
 .contact.right.form .right{
@@ -2421,8 +2424,7 @@ ul.a_n li a p{
 .pag ul li a,.pag ul li{
     width:20px;
     border-right:1px solid #d0d0d0;
-    display: inline-block;
-    display: -moz-inline-box;
+    display: inline-block;    
     font:12px 'open_sanssemibold';
     text-align: center;
     color:#74b45a;
@@ -2620,7 +2622,6 @@ ul.faq .subt{
 .compl_list li a .compl_title{
     font: 18px 'open_sansbold';
     display:inline-block;
-    display: -moz-inline-box;
     color:#7c4d7c;
     margin-left:15px;
     margin-bottom:0px;
@@ -2900,7 +2901,6 @@ table.atz tr td ol{
 }
 section > .wrap > .left > ul > li > span{
     display:inline-block;
-    display: -moz-inline-box;
     padding-right:40px;
     font:16px 'open_sansbold';
     color:#4c4c4c;
@@ -2948,7 +2948,6 @@ ul.mda > li > a,ul.atz  > li a,.dcr_dwnl{
     width:19px;
     height:19px;
     display:inline-block;
-    display: -moz-inline-box;
     float:right;
     margin-top:10px;
 }
@@ -3342,12 +3341,10 @@ ul.dcr  > li .dcr_box ul li{
 ul.dcr  > li .dcr_box .ul_title span{
     width:61%;
     display:inline-block;
-    display: -moz-inline-box;
 }
 ul.dcr  > li .dcr_box ul li span:first-child{
     width:59%;
     display: inline-block;
-    display: -moz-inline-box;
 }
 .city_dt{
     margin-bottom:25px;
@@ -3405,7 +3402,6 @@ ul.dcr  > li .dcr_box:after{
     font:20px 'open_sanssemibold_italic';
     color:#4c4c4c;
     display: inline-block;
-    display: -moz-inline-box;
     width:310px;
     margin-bottom:65px;
 }
@@ -3713,7 +3709,6 @@ div.fb-like.fb_iframe_widget{
 }
 .bl_fr{
     display:inline-block;
-    display: -moz-inline-box;
 }
 table.reg_tb tbody tr td:first-child{
     min-width:240px;
@@ -4177,7 +4172,6 @@ table.plcu .pdf{
     color:#4c4c4c;
     font:17px 'open_sanssemibold';
     display:inline-block;
-    display: -moz-inline-box;
     height:33px;
     line-height:33px;
     margin-top:0px;
@@ -4620,7 +4614,6 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
 }
 .video_d span{
     display:inline-block;
-    display: -moz-inline-box;
     padding:0 7px;
     height:21px;
     line-height:21px;
@@ -4661,6 +4654,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     footer .links{
         padding-left:20px;
         width:200px;
+    }
+    footer .copy{
+        padding:10px 20px;
     }
     footer .right > .left.search{
         margin-bottom:0px;
@@ -4844,7 +4840,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     table.c_l_u tbody tr td:last-child{
         word-break: break-all;
     }
-    
+
     section > .wrap > .right{
         width: 30%;
     }
@@ -5155,6 +5151,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         float: left;
         margin-right: 25px;
     }
+    .copy img {
+        width: 200px;
+    }
     .contact_l .prp{
         clear:both;
         width:auto;
@@ -5401,6 +5400,17 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     section > .wrap,section .dirs_menu .wrap{
         padding:0 20px;
+    }
+    .copy img{
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    .copy span{
+        display: block;
+        border: 0;
+        text-align: center;
     }
     .emrg ul li .right{
         width:100%;
@@ -5903,7 +5913,6 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         margin-left: -21px;
         width: 17px;
         display: inline-block;
-        display: -moz-inline-box;
     }
     .bgr .info > ul > li .left,.bgr .info > ul > li .right{
         float:none;
@@ -5919,7 +5928,6 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .bgr .info > ul > li .left{
         min-width:60px;
         display: inline-block;
-        display: -moz-inline-box;
         padding-bottom: 0;
     }
     ul.dcr.smpl > li a.dcr_dwnl{
@@ -6602,7 +6610,6 @@ iframe, object, embed {
 
 .maplink {
     display: inline-block;  
-    display: -moz-inline-box; 
     margin: 25px auto;
     float: none;
 }
@@ -6692,5 +6699,5 @@ iframe, object, embed {
         box-shadow: 0 0 0 0;
         -webkit-box-shadow: 0 0 0 0;
     }
-    
+
 }
