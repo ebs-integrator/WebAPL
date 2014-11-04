@@ -1,6 +1,6 @@
 <h3><?= varlang('log-1'); ?></h3>
 
-<table class="table table-bordered">
+<table class="table table-bordered table-hover">
 
     <tr>
         <th><?= varlang('date-4'); ?></th>

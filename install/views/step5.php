@@ -8,7 +8,7 @@
         <div class="alert alert-danger" role="alert"><?= Session::get('uerror'); ?></div>
     <?php } ?>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
         <tr>
             <th>Nume</th>
             <td>

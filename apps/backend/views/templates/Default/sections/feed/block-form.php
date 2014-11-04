@@ -1,4 +1,4 @@
-<table class="table table-bordered">
+<table class="table table-bordered table-hover">
     <tr>
         <th><?= varlang('name'); ?></th>
         <td><input type="text" class="form-control" name="general[name]" value="<?= isset($feed->name) ? $feed->name : ''; ?>" /></td>

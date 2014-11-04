@@ -3,7 +3,7 @@
     <input type='hidden' name='poll_question_id' value='<?= isset($poll_question->id) ? $poll_question->id : 0; ?>' />
     <input type='hidden' name='lang_id' value='<?= isset($lang->id) ? $lang->id : 0; ?>' />
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
         <tr>
             <th><?= varlang('question-'); ?></th>
             <td>

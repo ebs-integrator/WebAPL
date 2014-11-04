@@ -1,7 +1,7 @@
 <form class="ajax-auto-submit" action='<?= url('person/save'); ?>' method='post'>
     <input type='hidden' name='id' value='<?= isset($person->id) ? $person->id : 0; ?>' />
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
         <tr>
             <th><?= varlang('phone--1'); ?></th>
             <td>
@@ -54,7 +54,7 @@
 <form class="ajax-auto-submit" action='<?= url('person/save_person_groups'); ?>' method='post'>
     <input type='hidden' name='id' value='<?= isset($person->id) ? $person->id : 0; ?>' />
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
         <tr>
             <th><?= varlang('groups-'); ?></th>
             <td>
@@ -69,7 +69,7 @@
     </table>
 </form>
 
-<table class="table table-bordered">
+<table class="table table-bordered table-hover">
     <?php if (isset($person->id)) { ?>
         <tr>
             <th><?= varlang('photo'); ?></th>

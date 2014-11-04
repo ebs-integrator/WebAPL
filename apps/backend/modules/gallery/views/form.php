@@ -12,7 +12,7 @@
         <form class="ajax-auto-submit" action='<?= url('gallery/save'); ?>' method='post'>
             <input type='hidden' name='id' value='<?= isset($gallery->id) ? $gallery->id : 0; ?>' />
 
-            <table class="table table-bordered">
+            <table class="table table-bordered table-hover">
                 <tr>
                     <th><?= varlang('name--3'); ?></th>
                     <td>

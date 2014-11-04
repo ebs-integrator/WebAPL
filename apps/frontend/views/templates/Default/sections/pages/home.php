@@ -51,6 +51,19 @@
 
             <?php Event::fire('home_right_top', $page);?>
 
+            <?php if (isset($home_page) && $home_page) { ?>
+                <article style='height: auto;/** trebuie mutat in main.css **/'>
+                    <p class="ttl"><a href="<?= Language::url('topost/' . $home_page->id); ?>"><?= $home_page->title; ?></a></p>
+                    <div class="hr"></div>
+                    <ul>
+                        <?php foreach ($home_page->childrens as $item) { ?>
+                            <li><a href="<?= $item->url; ?>"><?= $item->title; ?></a></li>
+                        <?php } ?>
+                    </ul>
+                    <a href="<?= Language::url('topost/' . $home_page->id); ?>" class="more"></a>
+                </article>
+            <?php } ?>
+            
             <?php if (isset($home_ads) && $home_ads) { ?>
                 <article class="atn">
                     <p class="ttl"><a href="<?=Language::url('topage/adsList');?>"><?= varlang('anunturi'); ?></a></p>
@@ -83,19 +96,6 @@
                             </li>
                         <?php } ?>
                     </ul>
-                </article>
-            <?php } ?>
-
-            <?php if (isset($home_page) && $home_page) { ?>
-                <article style='height: auto;/** trebuie mutat in main.css **/'>
-                    <p class="ttl"><a href="<?= Language::url('topost/' . $home_page->id); ?>"><?= $home_page->title; ?></a></p>
-                    <div class="hr"></div>
-                    <ul>
-                        <?php foreach ($home_page->childrens as $item) { ?>
-                            <li><a href="<?= $item->url; ?>"><?= $item->title; ?></a></li>
-                        <?php } ?>
-                    </ul>
-                    <a href="<?= Language::url('topost/' . $home_page->id); ?>" class="more"></a>
                 </article>
             <?php } ?>
             

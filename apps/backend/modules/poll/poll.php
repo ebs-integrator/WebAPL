@@ -113,6 +113,7 @@ class Poll extends \Core\APL\ExtensionController {
                             ->skip($start)
                             ->take($limit)
                             ->where(array('poll_id' => $poll_lang_id))
+                            ->orderBy('ord', 'desc')
                             ->get();
                     $list = [];
                     foreach ($answers as $answer) {
@@ -161,7 +162,16 @@ class Poll extends \Core\APL\ExtensionController {
     public function save_answer() {
         $answers = Input::get('answer');
         $answer_id = Input::get('answer_id');
-
+        $general = Input::get('general');
+        
+        if ($general) {
+            $answ = PollAnswerModel::find($answer_id);
+            if ($answ) {
+                $answ->ord = $general['ord'];
+                $answ->save();
+            }
+        }
+        
         foreach ($answers as $anl_id => $ans) {
             $anw = PollAnswerLangModel::find($anl_id);
             if ($anw->answer_id == $answer_id) {

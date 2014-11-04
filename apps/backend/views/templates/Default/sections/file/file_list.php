@@ -4,7 +4,7 @@
 <?php } ?>
 <br><br>
 
-<table class="table table-bordered">
+<table class="table table-bordered table-hover">
     <tr>
         <th><?= varlang('icon'); ?></th>
         <th><?= varlang('name1'); ?></th>
@@ -18,6 +18,8 @@
                 <td>
                     <?php if ($file->type == 'image') { ?>
                         <img src="/<?= $file->path; ?>" width="35" />
+                    <?php } else { ?>
+                        <i class="glyphicon glyphicon-paperclip btn-lg"></i>
                     <?php } ?>
                 </td>
                 <td><input type="text" value="<?= $file->name; ?>" data-id="<?= $file->id; ?>" class="file_name_edit form-control" /></td>

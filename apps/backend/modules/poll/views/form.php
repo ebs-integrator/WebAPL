@@ -5,7 +5,6 @@
     <?php foreach (Language::getList() as $lang) { ?>
         <li><a href="#lang<?= $lang->id; ?>" role="tab" data-toggle="tab"><?= $lang->name; ?></a></li>
     <?php } ?>
-    <li><a href="#answers" role="tab" data-toggle="tab"><?= varlang('answers'); ?></a></li>
 </ul>
 
 
@@ -13,6 +12,14 @@
     <div class="tab-pane active" id="general">
         <?php
         echo Template::moduleView($module, 'views.tab-general', array(
+            'poll' => $poll
+        ));
+        ?>
+
+        <br>
+        <h3><?= varlang('answers'); ?></h3>
+        <?php
+        echo Template::moduleView($module, 'views.tab-answers', array(
             'poll' => $poll
         ));
         ?>
@@ -28,12 +35,4 @@
             ?>
         </div>
     <?php } ?>
-    <div class="tab-pane" id="answers">
-        <?php
-        echo Template::moduleView($module, 'views.tab-answers', array(
-            'poll' => $poll
-        ));
-        ?>
-    </div>
-    
 </div>

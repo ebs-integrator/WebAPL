@@ -1,7 +1,7 @@
 <form class="ajax-auto-submit" action='<?= url('page/save'); ?>' method='post'>
     <input type='hidden' name='id' value='<?= isset($page['id']) ? $page['id'] : 0; ?>' />
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
         <?php if (User::has('page-move')) { ?>
         <tr>
             <th><?= varlang('parent-'); ?></th>
@@ -121,7 +121,7 @@
                 <h4 class="modal-title" id="myModalLabel"><?= varlang('view-mod-help'); ?></h4>
             </div>
             <div class="modal-body">
-                <table class="table table-bordered">
+                <table class="table table-bordered table-hover">
                     <tr>
                         <th><?= varlang('nume-2'); ?></th>
                         <th><?= varlang('screen'); ?></th>

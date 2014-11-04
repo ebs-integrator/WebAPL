@@ -3,7 +3,7 @@
     <input type='hidden' name='person_lang_id' value='<?= isset($person_lang->id) ? $person_lang->id : 0; ?>' />
     <input type='hidden' name='lang_id' value='<?= isset($lang->id) ? $lang->id : 0; ?>' />
     
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
         <tr>
             <th><?= varlang('first-name-'); ?></th>
             <td>

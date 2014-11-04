@@ -1,4 +1,4 @@
 <?php
 
 
-echo "cantemir wesdsfad gsdf ---";
+echo "ver 14.11.04";

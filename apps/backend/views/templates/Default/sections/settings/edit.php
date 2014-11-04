@@ -15,7 +15,7 @@
 
         <form action="<?= url('settings/save'); ?>" method="post" class="ajax-auto-submit">
 
-            <table class="table table-bordered">
+            <table class="table table-bordered table-hover">
 
                 <?php foreach (Core\APL\Language::getList() as $lang) { ?>
                     <tr>
@@ -46,7 +46,7 @@
 
         <form action="<?= url('settings/save'); ?>" method="post" class="ajax-auto-submit">
 
-            <table class="table table-bordered">
+            <table class="table table-bordered table-hover">
 
                 <?php
                 $colorSchemes = \Core\APL\Template::getColorSchemes();
@@ -100,7 +100,7 @@
 
         <form action="<?= url('settings/save'); ?>" method="post" class="ajax-auto-submit">
 
-            <table class="table table-bordered">
+            <table class="table table-bordered table-hover">
 
                 <tr>
                     <th>
@@ -126,7 +126,7 @@
 
         <form action="<?= url('settings/save'); ?>" method="post" class="ajax-auto-submit">
 
-            <table class="table table-bordered">
+            <table class="table table-bordered table-hover">
 
                 <tr>
                     <th><?= varlang('disqus-shortname'); ?></th>
@@ -145,7 +145,7 @@
 
         <form action="<?= url('settings/save'); ?>" method="post" class="ajax-auto-submit">
 
-            <table class="table table-bordered">
+            <table class="table table-bordered table-hover">
 
                 <tr>
                     <th><?= varlang('website-activ'); ?></th>
@@ -176,7 +176,7 @@
 
         <form action="<?= url('settings/save'); ?>" method="post" class="ajax-auto-submit">
 
-            <table class="table table-bordered">
+            <table class="table table-bordered table-hover">
 
                 <tr>
                     <th class="col-lg-3"><?= varlang('inserare-cod-pentru-statistica'); ?></th>

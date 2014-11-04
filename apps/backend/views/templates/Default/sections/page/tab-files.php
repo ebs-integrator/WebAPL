@@ -3,7 +3,7 @@
 <form class="ajax-auto-submit" action='<?= url('page/savefilesdata'); ?>' method='post'>
     <input type='hidden' name='id' value='<?= isset($page['id']) ? $page['id'] : 0; ?>' />
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
         <tr>
             <th><?= varlang('afisare-fisiere-'); ?></th>
             <td>

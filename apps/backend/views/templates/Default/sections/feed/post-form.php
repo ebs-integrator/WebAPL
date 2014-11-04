@@ -1,4 +1,9 @@
-<h3><?= varlang('edit-post'); ?> #<?= $general['post']->id; ?>
+<h3><?= varlang('edit-post'); ?>:
+    <?php if (isset($post_langs[Core\APL\Language::getId()])) { ?>
+        <?= $post_langs[Core\APL\Language::getId()]->title; ?>
+    <?php } else { ?>
+        #<?= $general['post']->id; ?>
+    <?php } ?>
     <?php if ($general['post']->is_trash) { ?>
         <a href='<?= url('feed/restore/' . $general['post']->id); ?>' onclick="return confirm('Restore this post?');" class='btn btn-success btn-sm'><?= varlang('restore'); ?></a>
     <?php } else { ?>
@@ -7,7 +12,9 @@
 </h3>
 
 <a href='<?= url('feed'); ?>'><?= varlang('feeds-1'); ?></a> / <?= varlang('edit-post'); ?>
-
+<?php if (isset($post_langs[Core\APL\Language::getId()])) { ?>
+    / <?= $post_langs[Core\APL\Language::getId()]->title; ?>
+<?php } ?>
 
 
 <div class='c10'></div>

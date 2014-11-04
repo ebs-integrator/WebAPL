@@ -3,7 +3,13 @@
 <form class="ajax-auto-submit" action='<?= url('poll/answer/save'); ?>' method='post'>
     <input type='hidden' name='answer_id' value='<?= isset($answer->id) ? $answer->id : 0; ?>' />
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th><?= varlang('ord-2'); ?></th>
+            <td>
+                <input type="text" name="general[ord]" class='form-control' value='<?= isset($answer->ord) ? $answer->ord : ''; ?>' />
+            </td>
+        </tr>
         <?php foreach ($answer_langs as $answer_lang) { ?>
         <tr>
             <th><?= varlang('answer-in-'); ?> <?=\Core\APL\Language::getItem($answer_lang->lang_id)->name;?></th>

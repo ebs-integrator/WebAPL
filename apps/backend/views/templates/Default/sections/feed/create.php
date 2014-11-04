@@ -20,7 +20,7 @@
         <label class="col-lg-3"><input class="feedField" type="checkbox" data-groups="<?= $field->gkeys; ?>" name="fields[]" value="<?= $field->id; ?>" /> <?= $field->title; ?></label>
     <?php } ?>
 
-    <input type="submit" class="btn btn-success pull-right"/>
+    <input type="submit" class="btn btn-success pull-right" value="<?= varlang('create-group');?>"/>
 
     <div class="clearfix"></div>
 </form>
