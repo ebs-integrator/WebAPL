@@ -1685,6 +1685,13 @@ div.hr_grey{
     cursor:pointer;
     background: url('../img/right.png')25px center no-repeat;
 }
+.m_a .right_menu  li{
+    background: url('../img/right.png')25px 20px no-repeat;
+}
+ul.months{
+    display:none;
+    padding-bottom:10px;
+}
 .right_menu li.li_b{
     height:90px;
 }
@@ -1726,10 +1733,19 @@ div.hr_grey{
 .right_menu li:hover {
     background:url('../img/right_active.png')25px center no-repeat #f8f8f8;
 }
+.m_a .right_menu li:hover {
+    background:url('../img/right_active.png')25px 20px no-repeat #f8f8f8;
+}
+.right.m_a li.active,.right_menu.m_a li.active:hover {
+    background:url('../img/right_active.png')25px 20px no-repeat #f8f8f8;
+}
 .right_menu li.active a,.cda .right_menu li.active a{
     font:18px 'open_sansbold';
     color:#000000;
     line-height: 20px;
+}
+.right_menu .months li,.right_menu .months li:hover{
+    background:none;
 }
 .pda p{
     color:#4b4b4b;
@@ -3511,6 +3527,13 @@ table.taxe tbody tr td:first-child{
     background: url('../img/h_li.png')no-repeat left 7px;
     padding-left: 30px;
     max-width: 560px;
+}
+
+.right_menu .months li a,.right_menu .months li.active a{
+    display:block;
+    font:15px 'open_sansregular';
+    height:auto;
+    padding:2px 70px;
 }
 .ldmbox hr{
     background:#f7f7f7;
@@ -6086,6 +6109,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     section > .wrap > .right{
         float:none;
         display:none;
+    }
+    label{
+        font-size:12px;
     }
 }
 @media only screen and (max-width: 639px){

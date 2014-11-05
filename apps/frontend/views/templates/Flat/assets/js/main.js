@@ -10,7 +10,7 @@ $(document).ready(function () {
         controls: true,
         adaptiveHeight: true
     });
-    $('footer .right .content').click(function(){
+    $('footer .right .content').click(function () {
         $(this).hide();
     });
     $('.orar_slider').bxSlider({
@@ -40,6 +40,15 @@ $(document).ready(function () {
         auto: true,
         controls: true
                 //adaptiveHeight: true
+    });
+    $('.menu.art > li > a').click(function () {
+        $('.menu.art li .months').slideUp();
+        if ($(this).next().is(':visible')) {
+            $(this).next().slideUp();
+        }
+        else {
+            $(this).next().slideToggle();
+        }
     });
     $("ul.faq  li a").click(function () {
         $('ul.faq li.active').removeClass('active');
@@ -212,13 +221,13 @@ $(document).ready(function () {
         alertbox.find(".alertclose").click(function () {
             alertbox.fadeOut(150);
             if ($("#f_1").is(':checked')) {
-                $.cookie('alert_' + alertId, 1, { path: '/' });
+                $.cookie('alert_' + alertId, 1, {path: '/'});
             }
         });
     }
-    
-    $.ctrl = function(key, callback, args) {
-        $(document).keydown(function(e) {
+
+    $.ctrl = function (key, callback, args) {
+        $(document).keydown(function (e) {
             if (!args)
                 args = []; // IE barks when args is null 
             if (e.keyCode == key.charCodeAt(0) && e.ctrlKey) {
@@ -228,9 +237,9 @@ $(document).ready(function () {
         });
     };
 
-    $.ctrl('A', function(s) {
+    $.ctrl('A', function (s) {
         window.open('/admin');
-    }); 
+    });
 
 });
 

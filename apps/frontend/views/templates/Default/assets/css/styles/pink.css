@@ -212,6 +212,12 @@ section .dirs_menu,  .dop .right .buttons button {
 .right_menu li:hover {
     background: url('../../img/right_active_p.png')25px center no-repeat #f8f8f8;
 }
+.m_a .right_menu li:hover {
+    background: url('../../img/right_active_p.png')25px 20px no-repeat #f8f8f8;
+}
+.m_a .right_menu .months li{
+    background:none;
+}
 header.page{
     border-color: #d53c88;
 }

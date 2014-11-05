@@ -264,6 +264,12 @@ table.plcu > thead > tr > td{
 .right_menu li.active, .right_menu li.active:hover ,.right_menu li:hover{
     background: url('../../img/right_active_y.png')25px center no-repeat #f8f8f8;
 }
+.m_a .right_menu li.active,.m_a .right_menu li.active:hover ,.m_a .right_menu li:hover{
+    background: url('../../img/right_active_y.png')25px 20px no-repeat #f8f8f8;
+}
+.m_a .right_menu .months li{
+    background:none;
+}
 .l_a li a span:after{
     content: url('../../img/v_arrow_y.png');
 }

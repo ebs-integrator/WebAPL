@@ -3,9 +3,23 @@
         <div class="left_block">
             <?php if (isset($years_list) && count($years_list)) { ?>
                 <p class='title'><?= varlang('arhiva'); ?></p>
-                <ul class="menu">
+                <ul class="menu art">
                     <?php foreach ($years_list as $year) { ?>
-                        <li class='<?= isset($current_year) && $current_year == $year->year ? 'active' : ''; ?>'><a href="<?= url($page_url . "?year=" . $year->year . "&month=1"); ?>"><?= $year->year; ?></a></li>
+                        <li class='<?= isset($current_year) && $current_year == $year->year ? 'active' : ''; ?>'>
+                            <a href="javascript:;//<?= url($page_url . "?year=" . $year->year . "&month=1"); ?>"><?= $year->year; ?></a>
+                            <ul class="months">
+                                <li><a href="javascript:;">Ianuarie</a></li>
+                                <li><a href="javascript:;">Februarie</a></li>
+                                <li><a href="javascript:;">Martie</a></li>
+                                <li><a href="javascript:;">Aprilie</a></li>
+                                <li><a href="javascript:;">Mai</a></li>
+                                <li><a href="javascript:;">Iunie</a></li>
+                                <li><a href="javascript:;">Iulie</a></li>
+                                <li><a href="javascript:;">August</a></li>
+                                <li><a href="javascript:;">Septembrie</a></li>
+                                <li><a href="javascript:;">Octombrie</a></li>
+                            </ul>
+                        </li>
                     <?php } ?>
                 </ul>
             <?php } ?>

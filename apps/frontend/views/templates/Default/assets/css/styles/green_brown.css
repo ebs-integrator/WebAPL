@@ -335,7 +335,12 @@ footer .right > .left.search input[type=submit] {
 .right_menu li:hover {
     background: url('../../img/right_active_m.png') 25px center no-repeat #f8f8f8;
 }
-
+.m_a .right_menu li:hover {
+    background: url('../../img/right_active_m.png') 25px 20px no-repeat #f8f8f8;
+}
+.m_a .right_menu .months li,.m_a .right_menu .months li:hover{
+    background: none !important;
+}
 .dop .right .status.on {
     background: url('../../img/vice_on.png') no-repeat left center;
 }
