@@ -39,7 +39,7 @@ class PollModel extends Eloquent {
                         ->select(PollAnswerLangModel::getField('*'))
                         ->where(PollAnswerLangModel::getField('lang_id'), \Core\APL\Language::getId())
                         ->where(PollAnswerModel::getField('poll_id'), $id)
-                        ->orderBy(PollAnswerModel::getField('ord'), 'desc')
+                        ->orderBy(PollAnswerModel::getField('ord'), 'asc')
                         ->get();
     }
 

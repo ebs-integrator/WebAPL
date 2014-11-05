@@ -328,6 +328,22 @@ class FeedController extends BaseController {
         $this->layout = null;
     }
 
+    public function postAllfeeds() {
+        User::onlyHas('feed-view');
+
+        $jqgrid = new jQgrid(Feed::getTableName());
+        $jqgrid->use_populate_count = true;
+        return $jqgrid->populate(function ($start, $limit) {
+                    $list = Feed::select('id', 'name', 'enabled')->orderBy('name', 'asc');
+                    
+                    if ($limit) {
+                        $list = $list->skip($start)->take($limit);
+                    }
+
+                    return $list->get($list);
+                });
+    }
+
     public function postAllposts() {
         User::onlyHas('feedpost-view');
 
@@ -404,7 +420,7 @@ class FeedController extends BaseController {
         $id = Input::get('id');
 
         $post = Post::find($id);
-        if ($post->is_trash === 1) {
+        if ($post->is_trash == 1) {
             PostLang::where('post_id', $id)->delete();
             FeedFieldValue::where('post_id', $id)->delete();
 

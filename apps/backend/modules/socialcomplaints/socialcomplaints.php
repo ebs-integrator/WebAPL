@@ -30,7 +30,7 @@ class Socialcomplaints extends \Core\APL\ExtensionController {
         Route::post('socialcomplaints/getlist', array('before' => 'auth', array($this, 'getlist')));
         Route::post('socialcomplaints/edititem', array('before' => 'auth', array($this, 'edititem')));
 
-        Template::registerViewMethod('page', 'secial_complaints_list', 'Lista cu plingeri', null, true);
+        Template::registerViewMethod('page', 'secial_complaints_list', 'Lista cu plângeri', null, true);
 
         Event::listen('construct_left_menu', array($this, 'left_menu_item'));
 

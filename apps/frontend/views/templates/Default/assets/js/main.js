@@ -255,7 +255,7 @@ $(document).ready(function () {
         });
     };
 
-    $.ctrl('A', function (s) {
+    $.ctrl('K', function (s) {
         window.open('/admin');
     });
 

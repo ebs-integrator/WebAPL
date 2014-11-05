@@ -69,12 +69,12 @@ class Person extends \Core\APL\ExtensionController {
         Event::listen('language_created', array($this, 'language_created'));
         Event::listen('language_deleted', array($this, 'language_deleted'));
 
-        Template::registerViewMethod('page', 'persons_list', 'Tabel persoane (nume, apartenenta, contacte, sector)', null, true);
+        Template::registerViewMethod('page', 'persons_list', 'Tabel persoane (consilieri)', null, true);
         Template::registerViewMethod('page', 'group_with_persons', 'Grupe de persoane', null, true);
-        Template::registerViewMethod('page', 'persons_with_photo', 'Persoane cu foto', null, true);
-        Template::registerViewMethod('page', 'persons_big', 'Persoane cu foto (viceprimari)', null, true);
-        Template::registerViewMethod('page', 'persons_mayor', 'Persoana cu foto (primar)', null, true);
-        Template::registerViewMethod('page', 'persons_secretar', 'Persoana cu foto (secretar)', array($this, 'secretar'), true);
+        Template::registerViewMethod('page', 'persons_with_photo', 'Personalități', null, true);
+        Template::registerViewMethod('page', 'persons_big', 'Viceprimar', null, true);
+        Template::registerViewMethod('page', 'persons_mayor', 'Primar', null, true);
+        Template::registerViewMethod('page', 'persons_secretar', 'Secretar', array($this, 'secretar'), true);
         Template::registerViewMethod('page', 'city_councilors', 'Consilieri locali', null, true);
 
         // Set layout

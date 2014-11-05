@@ -22,7 +22,7 @@
     <img src="<?= res('assets/img/email.png'); ?>">
     <form class="newsletter_subscribe_form" action="<?= url('newsletter/subscribe'); ?>">
         <input required="" name="email" type="text" placeholder="<?= varlang('email-dvs'); ?>">
-        <input type="submit" value="<?= varlang('submit'); ?>">
+        <input type="submit" value="<?= varlang('submit-1'); ?>">
     </form>
 </div>
 

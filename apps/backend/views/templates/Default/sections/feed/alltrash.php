@@ -23,7 +23,7 @@
         width: $('#content').width() - 70,
         caption: "",
         loadComplete: function() {
-            $("#pager-allposts_left table").hide();
+            $("#pager-alltrash_left table").hide();
         },
         onSelectRow: function(rowid) {
             window.location.href = '<?= url('feed/editpost') ?>/' + rowid;

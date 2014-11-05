@@ -16,7 +16,7 @@
         </div>
         <div class="right firechat-name" style="display:<?= $session_exist ? 'block' : 'none'; ?>;">
             <p class="c_name">
-                <?= varlang('discuta-cu-primar'); ?> <span class="firechat-person"><?= isset($person) ? $person->first_name . " " . $person->last_name : ''; ?></span>
+                <?= varlang('discuta-cu-primar'); ?> <span class="firechat-person"><?= isset($person) ? $person->first_name . " " . $person->last_name . " " . $person->function : ''; ?></span>
             </p>
             <p class="status on">
                 <?= varlang('online'); ?>
@@ -138,7 +138,7 @@
             $.post('<?= url('firechat/register'); ?>', $(this).serialize(), function(data) {
                 if (data.error === 0) {
                     $("#firechat .content").html(data.html);
-                    $(".firechat-person").text(data.person.first_name + " " + data.person.last_name);
+                    $(".firechat-person").text(data.person.first_name + " " + data.person.last_name + " " + data.person.function);
                     $(".firechat-photo img").attr('src', data.person.photo);
 
                     $(".firechat-photo, .firechat-name").show();

@@ -47,7 +47,7 @@ class Calendar extends \Core\APL\ExtensionController {
         Event::listen('language_created', array($this, 'language_created'));
         Event::listen('language_deleted', array($this, 'language_deleted'));
 
-        Template::registerViewMethod('page', $this->page_view_mod, 'Pagina calendar', null, true);
+        Template::registerViewMethod('page', $this->page_view_mod, 'Calendar', null, true);
 
         $this->layout = Template::mainLayout();
     }
