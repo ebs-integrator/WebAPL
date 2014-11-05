@@ -3,77 +3,73 @@
    ========================================================================== */
 @font-face {
     font-family: 'AvenirNext-Bold';
-    src: url('../font/sourcesanspro-bold-webfont.eot');
-    src: url('../font/sourcesanspro-bold-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../font/sourcesanspro-bold-webfont.woff2') format('woff2'),
-        url('../font/sourcesanspro-bold-webfont.woff') format('woff'),
-        url('../font/sourcesanspro-bold-webfont.ttf') format('truetype');
+    src: url('../font/MyriadPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font/MyriadPro-Bold.otf')  format('opentype'),
+        url('../font/MyriadPro-Bold.woff') format('woff'), 
+        url('../font/MyriadPro-Bold.ttf')  format('truetype'),
+        url('../font/MyriadPro-Bold.svg#MyriadPro-Bold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'AvenirNext-Regular';
-    src: url('../font/sourcesanspro-regular-webfont.eot');
-    src: url('../font/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../font/sourcesanspro-regular-webfont.woff2') format('woff2'),
-        url('../font/sourcesanspro-regular-webfont.woff') format('woff'),
-        url('../font/sourcesanspro-regular-webfont.ttf') format('truetype');
+    src: url('../font/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/MyriadPro-Regular.woff') format('woff'), 
+        url('../font/MyriadPro-Regular.ttf')  format('truetype'),
+        url('../font/MyriadPro-Regular.svg#MyriadPro-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'AvenirNext-Medium';
-    src: url('../font/sourcesanspro-regular-webfont.eot');
-    src: url('../font/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../font/sourcesanspro-regular-webfont.woff2') format('woff2'),
-        url('../font/sourcesanspro-regular-webfont.woff') format('woff'),
-        url('../font/sourcesanspro-regular-webfont.ttf') format('truetype');
+    src: url('../font/MyriadPro-Semibold.eot?#iefix') format('embedded-opentype'),  
+        url('../font/MyriadPro-Semibold.woff') format('woff'), 
+        url('../font/MyriadPro-Semibold.ttf')  format('truetype'), 
+        url('../font/MyriadPro-Semibold.svg#MyriadPro-Semibold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'AvenirNext-DemiBold';
-    src: url('../font/sourcesanspro-semibold-webfont.eot');
-    src: url('../font/sourcesanspro-semibold-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../font/sourcesanspro-semibold-webfont.woff2') format('woff2'),
-        url('../font/sourcesanspro-semibold-webfont.woff') format('woff'),
-        url('../font/sourcesanspro-semibold-webfont.ttf') format('truetype');
+    src: url('../font/MyriadPro-Semibold.eot?#iefix') format('embedded-opentype'),  
+        url('../font/MyriadPro-Semibold.woff') format('woff'), 
+        url('../font/MyriadPro-Semibold.ttf')  format('truetype'), 
+        url('../font/MyriadPro-Semibold.svg#MyriadPro-Semibold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'AvenirNext-MediumItalic';
-    src: url('../font/sourcesanspro-semiboldit-webfont.eot');
-    src: url('../font/sourcesanspro-semiboldit-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../font/sourcesanspro-semiboldit-webfont.woff2') format('woff2'),
-        url('../font/sourcesanspro-semiboldit-webfont.woff') format('woff'),
-        url('../font/sourcesanspro-semiboldit-webfont.ttf') format('truetype');
+    src: url('../font/MyriadPro-SemiboldIt.eot?#iefix') format('embedded-opentype'),  
+        url('../font/MyriadPro-SemiboldIt.otf')  format('opentype'),
+        url('../font/MyriadPro-SemiboldIt.woff') format('woff'),
+        url('../font/MyriadPro-SemiboldIt.ttf')  format('truetype'),
+        url('../font/MyriadPro-SemiboldIt.svg#MyriadPro-SemiboldIt') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'AvenirNext-BoldItalic';
-    src: url('../font/sourcesanspro-boldit-webfont.eot');
-    src: url('../font/sourcesanspro-boldit-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../font/sourcesanspro-boldit-webfont.woff2') format('woff2'),
-        url('../font/sourcesanspro-boldit-webfont.woff') format('woff'),
-        url('../font/sourcesanspro-boldit-webfont.ttf') format('truetype');
+    src: url('../font/MyriadPro-BoldIt.eot?#iefix') format('embedded-opentype'), 
+        url('../font/MyriadPro-BoldIt.otf')  format('opentype'),
+        url('../font/MyriadPro-BoldIt.woff') format('woff'), 
+        url('../font/MyriadPro-BoldIt.ttf')  format('truetype'),
+        url('../font/MyriadPro-BoldIt.svg#MyriadPro-BoldIt') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'AvenirNext-DemiBoldItalic';
-    src: url('../font/sourcesanspro-semiboldit-webfont.eot');
-    src: url('../font/sourcesanspro-semiboldit-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../font/sourcesanspro-semiboldit-webfont.woff2') format('woff2'),
-        url('../font/sourcesanspro-semiboldit-webfont.woff') format('woff'),
-        url('../font/sourcesanspro-semiboldit-webfont.ttf') format('truetype');
+    src: url('../font/MyriadPro-BoldIt.eot?#iefix') format('embedded-opentype'), 
+        url('../font/MyriadPro-BoldIt.otf')  format('opentype'),
+        url('../font/MyriadPro-BoldIt.woff') format('woff'), 
+        url('../font/MyriadPro-BoldIt.ttf')  format('truetype'),
+        url('../font/MyriadPro-BoldIt.svg#MyriadPro-BoldIt') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -447,7 +443,7 @@ img{
     height:77px;
     width:70%;
     background:#00bd9c;
-    border-bottom:2px solid #fff;
+    border-bottom:3px solid #fff;
     padding-right: 70px;
     display:table-cell;
     vertical-align: middle;
@@ -480,7 +476,7 @@ img{
     line-height:73px;
 }
 .top_menu li.active a{
-    border: 2px solid #fff;
+    border: 3px solid #fff;
     border-bottom: 0px;
 }
 .top_el{
@@ -1057,7 +1053,7 @@ footer .newsletter_subscribe_form input[type=submit]{
 footer .copy{
     color:#7b7b7b;
     font:12px 'AvenirNext-Medium';
-    margin-top:40px;
+    margin-top:35px;
     padding-right:30px;
     height:160px;
     background:#2d2d2d;
