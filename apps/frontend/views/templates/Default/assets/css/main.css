@@ -1349,6 +1349,11 @@ footer .copy{
     font: 13px 'open_sanssemibold';
     display: table;
     padding: 10px 70px;
+    margin-bottom:0px;
+}
+.t_right{
+    text-align: right;
+    display:block;
 }
 footer .copy a{
     color:#60a046;
@@ -3901,6 +3906,7 @@ table.sondaje tr td:nth-child(2) {
 table.sondaje td:last-child{
     color:#4c4c4c;
     font:17px 'open_sansregular';
+    text-align:right;
 }
 table.sondaje tr{
     height:40px;
@@ -6034,6 +6040,10 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     }
     .city_box .info,table.plcu p,table.plcu > tbody > tr > td,.r_sond,table.sondaje td:first-child,table.sondaje td:last-child{
         font-size:15px;
+    }
+    table.sondaje td:last-child,table.sondaje td:nth-child(2) span.t_right{
+        padding-left:0px;
+        text-align: left;
     }
     .city_link{
         margin-top: 40px;

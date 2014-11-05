@@ -462,6 +462,10 @@ img{
     height: 100%;
     line-height: 75px;
 }
+.t_right{
+    text-align: right;
+    display:block;
+}
 .row1 .left{
     margin-top: 10px;
 }
@@ -1035,6 +1039,8 @@ footer .search input[type=submit]{
 .copy img{
     display:block;
     margin:10px 0px;
+    max-width:100%;
+    width:320px;
 }
 footer .newsletter_subscribe_form{
     margin-top:25px;
@@ -1050,7 +1056,7 @@ footer .newsletter_subscribe_form input[type=submit]{
 }
 footer .copy{
     color:#7b7b7b;
-    font:11px 'AvenirNext-Medium';
+    font:12px 'AvenirNext-Medium';
     margin-top:40px;
     padding-right:30px;
     height:160px;
@@ -3315,7 +3321,7 @@ table.sondaje tr td{
     vertical-align: bottom;
 }
 table.sondaje tr td:last-child{
-    text-align: center;
+    text-align: right;
 }
 table.sondaje tr td:nth-child(2){
     min-width: 354px;
@@ -4887,6 +4893,10 @@ ul.vice li .p_name {
     table.sondaje td:nth-child(2) span {
         padding-left: 12px;
         font: 15px 'AvenirNext-DemiBold';
+    }
+    table.sondaje td:nth-child(2) span.t_right{
+        text-align: left;
+        padding-left:0px;
     }
     table.sondaje tr{
         padding:10px 0px;
