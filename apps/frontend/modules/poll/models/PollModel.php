@@ -34,15 +34,15 @@ class PollModel extends Eloquent {
         return $poll;
     }
 
-    
     public static function answers($id) {
         return PollAnswerLangModel::join(PollAnswerModel::getTableName(), PollAnswerModel::getField('id'), '=', PollAnswerLangModel::getField('answer_id'))
-                    ->select(PollAnswerLangModel::getField('*'))
-                    ->where(PollAnswerLangModel::getField('lang_id'), \Core\APL\Language::getId())
-                    ->where(PollAnswerModel::getField('poll_id'), $id)
-                    ->get();
+                        ->select(PollAnswerLangModel::getField('*'))
+                        ->where(PollAnswerLangModel::getField('lang_id'), \Core\APL\Language::getId())
+                        ->where(PollAnswerModel::getField('poll_id'), $id)
+                        ->orderBy(PollAnswerModel::getField('ord'), 'desc')
+                        ->get();
     }
-    
+
     public static function getByID($id) {
         $poll = PollModel::prepare()->where(PollModel::getField('id'), $id)->get()->first();
 
