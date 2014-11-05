@@ -94,7 +94,7 @@
                         if (isset($general_pages)) {
                             foreach ($general_pages as $item) {
                                 ?>
-                                <li><a href='<?= $item->url; ?>'><?= $item->title; ?></a></li>
+                                <li class="<?= isset($parrents_ids) && in_array($item->id, $parrents_ids) ? 'active' : ''; ?>"><a href='<?= $item->url; ?>'><?= $item->title; ?></a></li>
                                 <?php
                             }
                         }

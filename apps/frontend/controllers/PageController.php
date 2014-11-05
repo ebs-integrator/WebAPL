@@ -40,7 +40,7 @@ class PageController extends BaseController {
                 
                 // get real page URI
                 $segments = array();
-                $parrents_ids = array();
+                $parrents_ids = array($this->data['page']->id);
                 foreach (array_reverse($this->data['parents']) as $parrent) {
                     $segments[] = $parrent['uri'];
                     $parrents_ids[] = $parrent['id'];

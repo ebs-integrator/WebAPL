@@ -1,4 +1,9 @@
-
+<script>
+    window.firechat_lang = {
+        your_message : '<?= varlang('your-message'); ?>',
+        type_your_message : '<?= varlang('type-your-message'); ?>'
+    };
+</script>
 <script src="https://cdn.firebase.com/v0/firebase.js"></script>
 <script src="https://cdn.firebase.com/v0/firebase-simple-login.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
