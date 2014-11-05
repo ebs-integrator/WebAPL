@@ -243,7 +243,12 @@ ul.prom li:before {
     background: url('../../img/right_active_b.png')25px center no-repeat #f8f8f8;
 } 
 
-
+.m_a .right_menu li.active,.m_a .right_menu li.active:hover,.m_a .right_menu li:hover {
+    background: url('../../img/right_active_b.png')25px 20px no-repeat #f8f8f8;
+} 
+.m_a .right_menu .months li{
+    background:none;
+}
 .home_chat.active .pot {
     background: url('../../img/btn-chat-active.png')no-repeat left #e5e9d8;
 } 

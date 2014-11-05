@@ -24,10 +24,26 @@ $months = array(
                 <p class='n_title'><?= varlang('arhiva'); ?></p>
                 <ul class="right_menu">
                     <?php foreach ($years_list as $year) { ?>
-                        <li class='<?= isset($current_year) && $current_year == $year->year ? 'active' : ''; ?>'><a href="<?= url($page_url . "?year=" . $year->year . "&month=1"); ?>"><?= $year->year; ?></a></li>
+                        <li class='<?= isset($current_year) && $current_year == $year->year ? 'active' : ''; ?>'>
+                            <a href="javascript:;//<?= url($page_url . "?year=" . $year->year . "&month=1"); ?>"><?= $year->year; ?></a>
+                            <ul class="months">
+                                <li>
+                                    <a href="javascript:;">Ianuarie</a>
+                                    <a href="javascript:;">Februarie</a>
+                                    <a href="javascript:;">Martie</a>
+                                    <a href="javascript:;">Aprilie</a>
+                                    <a href="javascript:;">Mai</a>
+                                    <a href="javascript:;">Iunie</a>
+                                    <a href="javascript:;">August</a>
+                                    <a href="javascript:;">Septembrie</a>
+                                    <a href="javascript:;">Octombrie</a>
+                                </li>
+                            </ul>
+                        </li>
                     <?php } ?>
                 </ul>
             </div>
+            <div class="resp_menu"></div>
         <?php } ?>
         <div class="left">
             <?php if (isset($current_month) && $current_month) { ?>
