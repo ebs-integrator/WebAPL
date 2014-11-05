@@ -20,63 +20,56 @@ class Template {
     protected static $view_mods = array(
         'page' => array(
             'posturi_vacante' => array(
-                'name' => 'Lista de posturi vacante',
+                'name' => 'Listă de posturi vacante',
                 'function' => array('PageView', 'posturiVacante'),
                 'support_item' => true,
                 'screen' => '/upload/help/posturi_vacante.png',
                 'info' => 'Necesita feed cu cimpurile: Data'
             ),
-            'promisiuni_primar' => array(
-                'name' => 'Lista de promisiuni a primarului (feed based)',
-                'function' => array('PageView', 'promisesMod'),
-                'support_item' => false,
-                'screen' => '',
-                'info' => ''
-            ),
             'promisiuni_primar_page' => array(
-                'name' => 'Lista de promisiuni a primarului (pages based)',
+                'name' => 'Pagina bloc',
                 'function' => array('PageView', 'promisesPageMod'),
                 'support_item' => false,
                 'screen' => '',
                 'info' => ''
             ),
             'locations_list' => array(
-                'name' => 'Lista cu locatii (cultura)',
+                'name' => 'Listă cu locații (cultură)',
                 'function' => array('PageView', 'locationsList'),
                 'support_item' => true,
                 'screen' => '',
                 'info' => ''
             ),
             'accordion_list' => array(
-                'name' => 'Lista acordion (faq)',
+                'name' => 'Listă cu întrebări/răspunsuri (FAQ)',
                 'function' => array('PageView', 'accordionList'),
                 'support_item' => false,
                 'screen' => '',
                 'info' => ''
             ),
             'town_list' => array(
-                'name' => 'Lista primarii (orase)',
+                'name' => 'Listă primării (orașe)',
                 'function' => array('PageView', 'townList'),
                 'support_item' => false,
                 'screen' => '',
                 'info' => ''
             ),
             'tablePosts' => array(
-                'name' => 'Posturi ca tabel (autorizatii)',
+                'name' => 'Postări ca tabel (autorizații)',
                 'function' => array('PageView', 'tablePosts'),
                 'support_item' => false,
                 'screen' => '',
                 'info' => ''
             ),
             'urgentNumbers' => array(
-                'name' => 'Numere de urgenta (urgenta)',
+                'name' => 'Numere de urgență (numere utile)',
                 'function' => array('PageView', 'urgentNumbers'),
                 'support_item' => false,
                 'screen' => '',
                 'info' => ''
             ),
             'acticles' => array(
-                'name' => 'Lista articole',
+                'name' => 'Listă articole',
                 'function' => array('PageView', 'articleList'),
                 'support_item' => true,
                 'screen' => '',
@@ -90,42 +83,42 @@ class Template {
                 'info' => ''
             ),
             'fileFolders' => array(
-                'name' => 'Dosare cu fisiere',
+                'name' => 'Mape cu fișiere',
                 'function' => array('PageView', 'fileFolders'),
                 'support_item' => false,
                 'screen' => '',
                 'info' => ''
             ),
             'acquisitionsList' => array(
-                'name' => 'Lista de achizitii',
+                'name' => 'Listă de achiziții',
                 'function' => array('PageView', 'acquisitionsList'),
                 'support_item' => true,
                 'screen' => '',
                 'info' => ''
             ),
             'projectsList' => array(
-                'name' => 'Lista de proiecte',
+                'name' => 'Listă de proiecte',
                 'function' => array('PageView', 'projectsList'),
                 'support_item' => true,
                 'screen' => '',
                 'info' => ''
             ),
             'videoList' => array(
-                'name' => 'Lista cu video',
+                'name' => 'Listă cu video',
                 'function' => array('PageView', 'videoList'),
                 'support_item' => true,
                 'screen' => '',
                 'info' => ''
             ),
             'adsList' => array(
-                'name' => 'Anunturi',
+                'name' => 'Anunțuri',
                 'function' => array('PageView', 'adsList'),
                 'support_item' => true,
                 'screen' => '',
                 'info' => ''
             ),
             'newsList' => array(
-                'name' => 'Stiri',
+                'name' => 'Știri (Noutățile Primăriei)',
                 'function' => array('PageView', 'newsList'),
                 'support_item' => true,
                 'screen' => '',
@@ -139,14 +132,14 @@ class Template {
                 'info' => ''
             ),
             'meetingPast' => array(
-                'name' => 'Sedinte trecute',
+                'name' => 'Ședinte anterioare',
                 'function' => array('PageView', 'meetingPast'),
                 'support_item' => true,
                 'screen' => '',
                 'info' => ''
             ),
             'meetingFuture' => array(
-                'name' => 'Sedinta viitoare',
+                'name' => 'Ordinea de zi',
                 'function' => array('PageView', 'meetingFuture'),
                 'support_item' => false,
                 'screen' => '',
@@ -160,7 +153,7 @@ class Template {
                 'info' => ''
             ),
             'error404' => array(
-                'name' => 'Error 404',
+                'name' => 'Eroare 404',
                 'function' => array('PageView', 'notFound'),
                 'support_item' => false,
                 'screen' => '',

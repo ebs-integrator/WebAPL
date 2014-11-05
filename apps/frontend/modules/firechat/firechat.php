@@ -86,7 +86,7 @@ class Firechat extends \Core\APL\ExtensionController {
 
         $data = array(
             'persons' => PersonModel::join(PersonLangModel::getTableName(), PersonLangModel::getField('person_id'), '=', PersonModel::getField('id'))
-                    ->select(PersonModel::getField('id'), PersonLangModel::getField('first_name'), PersonLangModel::getField('last_name'))
+                    ->select(PersonModel::getField('id'), PersonLangModel::getField('first_name'), PersonLangModel::getField('function'), PersonLangModel::getField('last_name'))
                     ->orderBy(PersonLangModel::getField('first_name'))
                     ->where(PersonModel::getField('for_audience'), 1)
                     ->where(PersonLangModel::getField('lang_id'), \Core\APL\Language::getId())
@@ -100,7 +100,7 @@ class Firechat extends \Core\APL\ExtensionController {
                 if ($data['chat']->active) {
                     $data['session_exist'] = true;
                     $data['person'] = PersonModel::join(PersonLangModel::getTableName(), PersonLangModel::getField('person_id'), '=', PersonModel::getField('id'))
-                            ->select(PersonModel::getField('id'), PersonLangModel::getField('first_name'), PersonLangModel::getField('last_name'))
+                            ->select(PersonModel::getField('id'), PersonLangModel::getField('first_name'), PersonLangModel::getField('function'), PersonLangModel::getField('last_name'))
                             ->orderBy(PersonLangModel::getField('first_name'))
                             ->where(PersonModel::getField('for_audience'), 1)
                             ->where(\PersonModel::getField('id'), $data['chat']->person_id)
@@ -140,7 +140,7 @@ class Firechat extends \Core\APL\ExtensionController {
 
 
         $person = PersonModel::join(PersonLangModel::getTableName(), PersonLangModel::getField('person_id'), '=', PersonModel::getField('id'))
-                ->select(PersonModel::getField('id'), PersonLangModel::getField('first_name'), PersonLangModel::getField('last_name'))
+                ->select(PersonModel::getField('id'), PersonLangModel::getField('first_name'), PersonLangModel::getField('function'), PersonLangModel::getField('last_name'))
                 ->where(PersonModel::getField('for_audience'), 1)
                 ->where(PersonModel::getField('id'), $person_id)
                 ->where(PersonLangModel::getField('lang_id'), \Core\APL\Language::getId())
@@ -198,7 +198,7 @@ class Firechat extends \Core\APL\ExtensionController {
 
         $data = array(
             'persons' => PersonModel::join(PersonLangModel::getTableName(), PersonLangModel::getField('person_id'), '=', PersonModel::getField('id'))
-                    ->select(PersonModel::getField('id'), PersonLangModel::getField('first_name'), PersonLangModel::getField('last_name'))
+                    ->select(PersonModel::getField('id'), PersonLangModel::getField('first_name'), PersonLangModel::getField('function'), PersonLangModel::getField('last_name'))
                     ->orderBy(PersonLangModel::getField('first_name'))
                     ->where(PersonModel::getField('for_audience'), 1)
                     ->where(PersonLangModel::getField('lang_id'), \Core\APL\Language::getId())

@@ -1,5 +1,5 @@
 <article class="doc">
-    <p class="ttl"><img src="<?= res('assets/img/doc.png'); ?>"><a href="<?= Language::url('topage/acteList'); ?>">Toate actele locale</a></p>
+    <p class="ttl"><img src="<?= res('assets/img/doc.png'); ?>"><a href="<?= Language::url('topage/acteList'); ?>"><?= varlang('all-acts'); ?></a></p>
     <div class="hr"></div>
     <table>
         <tbody>
@@ -11,6 +11,6 @@
         </tbody>
     </table>
 
-    <a href="javascript:;" class="more"></a>
+    <a href="<?= Language::url('topage/acteList'); ?>" class="more"></a>
     <div class="clearfix10"></div>
 </article>

@@ -49,7 +49,7 @@ $uroles = User::extractRoles($user->id);
 
         <input type="hidden" name="id" value="<?= $user->id; ?>" />
 
-        <select name="roles[]" class="chzn-select" multiple>
+        <select name="roles[]" class="chzn-select" data-placeholder=" " multiple>
             <?php foreach ($roles as $role) { ?>
                 <option value="<?= $role->id; ?>" <?= User::has($role->key, $uroles) ? 'selected' : ''; ?>><?= $role->name; ?></option>
             <?php } ?>

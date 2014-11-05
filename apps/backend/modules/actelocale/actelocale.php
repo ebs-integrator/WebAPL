@@ -35,7 +35,7 @@ class Actelocale extends \Core\APL\ExtensionController {
 
         Event::listen('construct_left_menu', array($this, 'left_menu_item'));
 
-        Template::registerViewMethod('page', 'acteList', 'Lista de actelocale', null, true);
+        Template::registerViewMethod('page', 'acteList', 'Lista de acte locale', null, true);
 
         $this->layout = Template::mainLayout();
     }

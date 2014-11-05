@@ -113,7 +113,7 @@ class Poll extends \Core\APL\ExtensionController {
                             ->skip($start)
                             ->take($limit)
                             ->where(array('poll_id' => $poll_lang_id))
-                            ->orderBy('ord', 'desc')
+                            ->orderBy('ord', 'asc')
                             ->get();
                     $list = [];
                     foreach ($answers as $answer) {
