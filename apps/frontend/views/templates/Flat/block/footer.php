@@ -47,7 +47,7 @@
                 <input type="submit" value="<?= varlang('submit'); ?>">
             </form>
             <?php Event::fire('bottom_widgets'); ?>
-            <p class="copy"><img src="<?= res('assets/img/copy.png'); ?>"><span><a href="javascript:;"><?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?></span></p>
+            <p class="copy"><img src="<?= res('assets/img/usaid/lgsp_' . Core\APL\Language::ext() . '.png'); ?>"><span><a href="javascript:;"><?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?></span></p>
 
         </div>
 

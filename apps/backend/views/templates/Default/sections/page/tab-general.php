@@ -3,15 +3,15 @@
 
     <table class="table table-bordered table-hover">
         <?php if (User::has('page-move')) { ?>
-        <tr>
-            <th><?= varlang('parent-'); ?></th>
-            <td>
-                <select name="page[parent]" class='form-control'>
-                    <option value='0'>----</option>
-                    <?= View::make('sections.page.element-tree-option', array('level' => 1, 'items' => $tree_pages, 'selected' => isset($page->parent) ? $page->parent : 0)); ?>
-                </select>
-            </td>
-        </tr>
+            <tr>
+                <th><?= varlang('parent-'); ?></th>
+                <td>
+                    <select name="page[parent]" class='form-control'>
+                        <option value='0'>----</option>
+                        <?= View::make('sections.page.element-tree-option', array('level' => 1, 'items' => $tree_pages, 'selected' => isset($page->parent) ? $page->parent : 0)); ?>
+                    </select>
+                </td>
+            </tr>
         <?php } ?>
         <tr class="<?= isset($page->clone_id) && $page->clone_id ? 'label-warning' : ''; ?>">
             <th><?= varlang('clone-'); ?></th>
@@ -41,7 +41,7 @@
             <th><?= varlang('view-mod'); ?></th>
             <td>
                 <div style="width: 90%; display: inline-block;">
-                    <select name="page[view_mod]" class='chzn-select'>
+                    <select name="page[view_mod]" id="viewModComutator" class='chzn-select'>
                         <option value="">Default</option>
                         <?php $finded = false; ?>
                         <?php
@@ -125,6 +125,7 @@
                     <tr>
                         <th><?= varlang('nume-2'); ?></th>
                         <th><?= varlang('screen'); ?></th>
+                        <th></th>
                     </tr>
                     <?php
                     foreach ($view_mods as $view_key => $view_mod) {
@@ -138,9 +139,17 @@
                                 <?php } ?>
                             </td>
                             <td>
+                                <?php
+                                $helpFile = '/apps/frontend/views/templates/Default/help/' . $view_key . '.png';
+                                ?>
                                 <?php if ($view_mod['screen']) { ?>
-                                    <img src="<?= $view_mod['screen']; ?>" style="max-width: 100px; max-height: 70px;" />
+                                    <a href="<?= $view_mod['screen']; ?>" target="_blank"><img src="<?= $view_mod['screen']; ?>" style="max-width: 100px; max-height: 70px;" /></a>
+                                <?php } else { ?>
+                                    <a href="<?= $helpFile; ?>" target="_blank"><img src="<?= $helpFile; ?>" style="max-width: 100px; max-height: 70px;" /></a>
                                 <?php } ?>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-info btnWcom" data-com="<?=$view_key;?>"><i class="glyphicon glyphicon-ok"></i></button>
                             </td>
                         </tr>
                         <?php
@@ -150,8 +159,18 @@
                 </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><?= varlang('close-2'); ?></button>
+                <button type="button" class="wmClose" class="btn btn-default" data-dismiss="modal"><?= varlang('close-2'); ?></button>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    jQuery(document).ready(function() {
+        $(".btnWcom").click(function () {
+            $("#viewModComutator").val($(this).attr('data-com')).trigger('chosen:updated');
+            $("#viewModComutator").change();
+            $(".wmClose").click();
+        });
+    });
+</script>
