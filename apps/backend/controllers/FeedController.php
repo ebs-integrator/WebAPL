@@ -335,7 +335,7 @@ class FeedController extends BaseController {
         $jqgrid->use_populate_count = true;
         return $jqgrid->populate(function ($start, $limit) {
                     $list = Feed::select('id', 'name', 'enabled')->orderBy('name', 'asc');
-                    
+
                     if ($limit) {
                         $list = $list->skip($start)->take($limit);
                     }
@@ -359,7 +359,25 @@ class FeedController extends BaseController {
                         $list = $list->skip($start)->take($limit);
                     }
 
-                    return $list->get($list);
+                    $list = $list->get();
+
+                    $newList = [];
+                    foreach ($list as $item) {
+                        $feeds = Feed::getPostFeeds($item->id);
+                        $feeds_ar = [];
+                        foreach ($feeds as $feed) {
+                            $feeds_ar[] = $feed['name'];
+                        }
+
+                        $newList[] = [
+                            'id' => $item->id,
+                            'title' => $item->title,
+                            'created_at' => $item->created_at,
+                            'feeds' => implode(', ', $feeds_ar)
+                        ];
+                    }
+
+                    return $newList;
                 });
     }
 

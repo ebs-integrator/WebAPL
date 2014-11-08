@@ -71,7 +71,13 @@ class UserController extends BaseController {
     }
 
     public function postSaveroles() {
-        User::onlyHas('user-roles');
+        $uid = Input::get('id');
+
+        $uroles = User::extractRoles($uid);
+
+        if ((User::has('user-roles') && (!User::has('user-ptroles', $uroles) || $uid == Auth::user()->id)) == FALSE) {
+            throw new Exception("Access denied;");
+        }
 
         $id = Input::get('id');
         $roles = Input::get('roles');
@@ -95,7 +101,7 @@ class UserController extends BaseController {
         User::onlyHas('user-edit');
 
         Log::info('Change user ' . Input::get('username'));
-        
+
         $user = User::find(Input::get('id'));
         $user->username = Input::get('username');
         $user->email = Input::get('email');
@@ -104,31 +110,39 @@ class UserController extends BaseController {
     }
 
     public function postChangepassword() {
-        User::onlyHas('user-chpwd');
+        $uid = Input::get('id');
+
+        $uroles = User::extractRoles($uid);
+
+        if (((User::has('user-chpwd') && (!User::has('user-ptpsw', $uroles))) || $uid == Auth::user()->id) == FALSE) {
+            throw new Exception("Access denied;");
+        }
 
         $password = trim(Input::get('password'));
         if ($password) {
 
-            $user = User::find(Input::get('id'));
+            $user = User::find($uid);
             $user->password = Hash::make($password);
             $user->save();
         }
-        
+
         Log::info('Change password #' . Input::get('id'));
 
         return [];
     }
 
     public function postDelete() {
+        User::onlyHas('user-delete');
+
         $id = Input::get('id');
 
         $user = User::find($id);
         if ($user) {
             $user->delete();
             UserRole::where('user_id', $id)->delete();
-            
+
             Log::info('Delete user #' . $id);
-            
+
             return \Illuminate\Support\Facades\Redirect::to('user');
         } else {
             throw new Exception("Undefined user #{$id}");

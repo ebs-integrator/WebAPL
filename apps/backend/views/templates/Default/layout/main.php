@@ -108,7 +108,7 @@
                                 <?php if (User::has('template-edit')) { ?>
                                     <li> <a href="<?= url('template'); ?>"><?= varlang('template-4'); ?></a></li>
                                 <?php } ?>
-                                    <?php if (User::has('file-manage')) { ?>
+                                <?php if (User::has('file-manage')) { ?>
                                     <li> <a href="<?= url('filemanager'); ?>"><?= varlang('filemanager'); ?></a></li>
                                 <?php } ?>
                                 <li><img id="loading" style="display: none;margin-top: 14px;" src="<?= res('assets/img/ajax-loader.gif'); ?>" /></li>
@@ -157,7 +157,16 @@
             </div><!-- /#content -->
         </div><!-- /#wrap -->
         <footer class="Footer bg-dark dker">
-            <p><?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?></p>
+            <div class="col-lg-12" style="padding-bottom: 20px;">
+                <div class="c20"></div>
+                <div class="col-lg-3">
+                    <img src="<?= res('assets/img/usaid/lgsp_' . Language::ext() . '.png'); ?>" />
+                </div>
+                <div class="col-lg-9">
+                        <?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?>
+                </div>
+                <div class="clearfix"></div>
+            </div>
         </footer><!-- /#footer -->
 
         <!-- Modal -->

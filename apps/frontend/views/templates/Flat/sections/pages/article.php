@@ -25,16 +25,12 @@ $months = array(
                         <li class='<?= isset($current_year) && $current_year == $year->year ? 'active' : ''; ?>'>
                             <a href="javascript:;//<?= url($page_url . "?year=" . $year->year . "&month=1"); ?>"><?= $year->year; ?></a>
                             <ul class="months">
-                                <li><a href="javascript:;">Ianuarie</a></li>
-                                <li><a href="javascript:;">Februarie</a></li>
-                                <li><a href="javascript:;">Martie</a></li>
-                                <li><a href="javascript:;">Aprilie</a></li>
-                                <li><a href="javascript:;">Mai</a></li>
-                                <li><a href="javascript:;">Iunie</a></li>
-                                <li><a href="javascript:;">Iulie</a></li>
-                                <li><a href="javascript:;">August</a></li>
-                                <li><a href="javascript:;">Septembrie</a></li>
-                                <li><a href="javascript:;">Octombrie</a></li>
+                                <?php foreach ($months as $mnth_n => $mnth) { ?>
+                                    <?php if (isset($month_exists['months'][$year->year][$mnth_n])) {
+                                        ?>
+                                        <li><a href="<?= url($page_url . "?year=" . $year->year . "&month=" . $mnth_n); ?>" style="<?= $mnth_n == $current_month ? 'text-decoration: underline;' : ''; ?>"><?= $mnth; ?> (<?= $month_exists['months'][$year->year][$mnth_n]; ?>)</a></li>
+                                    <?php } ?>
+                                <?php } ?>
                             </ul>
                         </li>
                     <?php } ?>

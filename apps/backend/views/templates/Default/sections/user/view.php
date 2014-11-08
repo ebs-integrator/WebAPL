@@ -25,7 +25,7 @@
 $uroles = User::extractRoles($user->id);
 ?>
 
-<?php if (User::has('user-chpwd') && (!User::has('user-ptpsw', $uroles))) { ?>
+<?php if ((User::has('user-chpwd') && (!User::has('user-ptpsw', $uroles))) || $user->id == Auth::user()->id) { ?>
     <form action="<?= url('user/changepassword'); ?>" method="post" class="ajax-auto-submit">
         <h4><?= varlang('change-password'); ?></h4>
 
@@ -42,7 +42,7 @@ $uroles = User::extractRoles($user->id);
     </form>
 <?php } ?>
 
-<?php if (User::has('user-roles') && !User::has('user-ptroles', $uroles)) { ?>
+<?php if (User::has('user-roles') && (!User::has('user-ptroles', $uroles) || $user->id == Auth::user()->id)) { ?>
     <form action="<?= url('user/saveroles'); ?>" method="post" class="ajax-auto-submit">
 
         <h4><?= varlang('this-user-can'); ?></h4>

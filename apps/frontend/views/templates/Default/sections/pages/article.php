@@ -28,15 +28,12 @@ $months = array(
                             <a href="javascript:;//<?= url($page_url . "?year=" . $year->year . "&month=1"); ?>"><?= $year->year; ?></a>
                             <ul class="months">
                                 <li>
-                                    <a href="javascript:;">Ianuarie</a>
-                                    <a href="javascript:;">Februarie</a>
-                                    <a href="javascript:;">Martie</a>
-                                    <a href="javascript:;">Aprilie</a>
-                                    <a href="javascript:;">Mai</a>
-                                    <a href="javascript:;">Iunie</a>
-                                    <a href="javascript:;">August</a>
-                                    <a href="javascript:;">Septembrie</a>
-                                    <a href="javascript:;">Octombrie</a>
+                                    <?php foreach ($months as $mnth_n => $mnth) { ?>
+                                        <?php if (isset($month_exists['months'][$year->year][$mnth_n])) {
+                                            ?>
+                                            <a href="<?= url($page_url . "?year=" . $year->year . "&month=" . $mnth_n); ?>" style="<?= $mnth_n == $current_month ? 'font-weight: bold;' : ''; ?>"><?= $mnth; ?> (<?=$month_exists['months'][$year->year][$mnth_n];?>)</a>
+                                        <?php } ?>
+                                    <?php } ?>
                                 </li>
                             </ul>
                         </li>

@@ -128,7 +128,6 @@ class PageController extends BaseController {
         $data = array(
             'general_pages' => Post::findGeneral(),
             'buttom_pages' => PostProperty::postsWithProperty('button_site', 3),
-            'phone_page' => PostProperty::postWithProperty('phone-page'),
             'favicon' => Files::getfile('website_favicon', 1),
             'alert_post' => Post::findAlertPost()
         );

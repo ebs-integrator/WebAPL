@@ -1,7 +1,9 @@
 <?php if (isset($post) && $post) { ?>
     <div class="a_box v_g">
         <p class="title"><a href="javascript:;"><?= $post->title; ?></a></p>
-        <p class="data"><?= date("d-m-Y, H:i", strtotime($post->created_at)); ?></p>
+        <?php if (strtotime($post->created_at)) { ?>
+            <p class="data"><?= date("d-m-Y, H:i", strtotime($post->created_at)); ?></p>
+        <?php } ?>
         <div class="hr_dbl"></div>
         <div class="left">
             <div class="info unic">
@@ -10,9 +12,9 @@
                         <img alt="<?= $post->title; ?>" title="<?= $post->title; ?>" src="<?= url($post->cover['path']); ?>" width="347">
                     <?php } ?>
                 </div>
-                
+
                 <?= Core\APL\Shortcodes::execute($post->text); ?>
-                
+
                 <?php if ($post->have_socials) { ?>
                     <?= View::make('sections.elements.socials'); ?>
                 <?php } ?>

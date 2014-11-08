@@ -4,11 +4,12 @@
     <?php if ($post->cover) { ?>
         <img alt="<?= $post->title; ?>" title="<?= $post->title; ?>" src="<?= url($post->cover['path']); ?>">
     <?php } ?>
-    <div class="details">
-        <p class="data"><?= date("d-m-Y, H:i", strtotime($post->created_at)); ?>            
-        </p>
-        <p class="cont"></p>
-    </div>
+    <?php if (strtotime($post->created_at)) { ?>
+        <div class="details">
+            <p class="data"><?= date("d-m-Y, H:i", strtotime($post->created_at)); ?></p>
+            <p class="cont"></p>
+        </div>
+    <?php } ?>
 </div>
 <div class="clearfix"></div>
 

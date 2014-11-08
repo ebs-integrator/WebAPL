@@ -3,9 +3,11 @@
         <p><?= $post->title; ?></p>
     </div>
 
-    <div class='data'>
-        <p class="nr"><?= date('d-m-Y, H:i', strtotime($post->created_at)); ?></p>                    
-    </div>
+    <?php if (strtotime($post->created_at)) { ?>
+        <div class='data'>
+            <p class="nr"><?= date('d-m-Y, H:i', strtotime($post->created_at)); ?></p>                    
+        </div>
+    <?php } ?>
 
     <div class="stats">
         <?php if (time() < strtotime($post->date_point)) { ?> 

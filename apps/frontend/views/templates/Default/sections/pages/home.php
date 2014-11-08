@@ -7,7 +7,7 @@
     <div class="menu">
 
         <?php if ($page->background) { ?>
-            <img alt="<?=$page->background->name;?>" title="<?=$page->background->name;?>" src="<?= url($page->background->path); ?>" class="backg">
+            <img alt="<?= $page->background->name; ?>" title="<?= $page->background->name; ?>" src="<?= url($page->background->path); ?>" class="backg">
         <?php } ?>
         <div class="wrap">
             <?php foreach ($general_pages as $item) { ?>
@@ -15,7 +15,7 @@
                     <a href="<?= $item->url; ?>" class="<?= $item->id == $page->id ? 'active' : ''; ?>">
                         <span class="menu_img">
                             <?php if ($item->image_icon_big) { ?>
-                                <img alt="<?=$item->title;?>" title="<?=$item->title;?>" src="<?= url($item->image_icon_big->path); ?>">
+                                <img alt="<?= $item->title; ?>" title="<?= $item->title; ?>" src="<?= url($item->image_icon_big->path); ?>">
                             <?php } ?>
                         </span>
                         <span class="menu_title"><?= $item->title; ?></span>
@@ -37,7 +37,7 @@
                         foreach ($item['childrens'] as $k => $chitem) {
                             if ($k < 4) {
                                 ?>
-                        <li><h3><a href="<?= $chitem->url; ?>"><?= $chitem->title; ?></a></h3></li>
+                                <li><h3><a href="<?= $chitem->url; ?>"><?= $chitem->title; ?></a></h3></li>
                                 <?php
                             }
                         }
@@ -49,7 +49,7 @@
         </div>
         <div class="right global">  
 
-            <?php Event::fire('home_right_top', $page);?>
+            <?php Event::fire('home_right_top', $page); ?>
 
             <?php if (isset($home_page) && $home_page) { ?>
                 <article style='height: auto;/** trebuie mutat in main.css **/'>
@@ -63,16 +63,18 @@
                     <a href="<?= Language::url('topost/' . $home_page->id); ?>" class="more"></a>
                 </article>
             <?php } ?>
-            
+
             <?php if (isset($home_ads) && $home_ads) { ?>
                 <article class="atn">
-                    <p class="ttl"><a href="<?=Language::url('topage/adsList');?>"><?= varlang('anunturi'); ?></a></p>
+                    <p class="ttl"><a href="<?= Language::url('topage/adsList'); ?>"><?= varlang('anunturi'); ?></a></p>
                     <div class="hr"></div>
                     <ul class="bxslider2">
                         <?php foreach ($home_ads as $item) { ?>
                             <li><a href='<?= Language::url('topost/' . $item->id); ?>'>
                                     <div class="data">
-                                        <p><?= date('d-m-Y', strtotime($item->created_at)); ?></p>
+                                        <?php if (strtotime($item->created_at)) { ?>
+                                            <p><?= date('d-m-Y', strtotime($item->created_at)); ?></p>
+                                        <?php } ?>
                                         <span><?= $item->title; ?></span>
                                     </div>
                                     <div class="clearfix"></div>
@@ -85,21 +87,22 @@
 
             <?php if (isset($home_posts) && count($home_posts)) { ?>
                 <article class="news">
-                    <p class="ttl"><img src="<?= res('assets/img/stiri.png'); ?>" alt="" ><a href="<?=Language::url('topage/newsList');?>"><?= varlang('stiri'); ?></a></p>
+                    <p class="ttl"><img src="<?= res('assets/img/stiri.png'); ?>" alt="" ><a href="<?= Language::url('topage/newsList'); ?>"><?= varlang('stiri'); ?></a></p>
                     <div class="hr"></div>
                     <ul>
                         <?php foreach ($home_posts as $item) { ?>
                             <li>
-                                <span><?= date("d-m-Y", strtotime($item->created_at)); ?>
-                                </span>
+                                <?php if (strtotime($item->created_at)) { ?>
+                                    <span><?= date("d-m-Y", strtotime($item->created_at)); ?></span>
+                                <?php } ?>
                                 <a href="<?= Language::url('topost/' . $item->id); ?>"><?= $item->title; ?></a>
                             </li>
                         <?php } ?>
                     </ul>
                 </article>
             <?php } ?>
-            
-            <?php Event::fire('home_right_bottom', $page);?>
+
+            <?php Event::fire('home_right_bottom', $page); ?>
         </div>
     </div>
     <div class="clearfix"></div>

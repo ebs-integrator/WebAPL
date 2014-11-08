@@ -319,7 +319,7 @@ class PageView {
     public static function meetingFuture($data) {
         if ($data['page']->feed_id) {
             Post::$taxonomy = 2;
-            $wdata['post'] = Post::postsFeed($data['page']->feed_id, false, true)->where(Post::getField('created_at'), '>', DB::raw('CURRENT_TIMESTAMP'))->first();
+            $wdata['post'] = Post::postsFeed($data['page']->feed_id, false, true)->where(Post::getField('created_at'), '>=', DB::raw('CURRENT_TIMESTAMP'))->first();
             if ($wdata['post']) {
                 Post::oneView($wdata['post']['id']);
                 
@@ -403,6 +403,8 @@ class PageView {
 
             $data['current_year'] = intval(Input::get('year'));
             $data['current_month'] = intval(Input::get('month'));
+
+            $data['month_exists'] = Post::findExistsDates($data['page']->feed_id);
 
             if ($item) {
                 $wdata["post"] = Post::findURI($item, 1);

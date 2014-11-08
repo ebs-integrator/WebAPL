@@ -30,7 +30,9 @@
                         }
                     }
                     ?>
-                    <p class="video_d"><span><?= date("d-m-Y, H:i", strtotime($item->created_at)); ?></span></p>
+                    <?php if (strtotime($item->created_at)) { ?>
+                        <p class="video_d"><span><?= date("d-m-Y, H:i", strtotime($item->created_at)); ?></span></p>
+                    <?php } ?>
                     <p class="video_i"><?= $item->title; ?></p>
                 </a>
             </div>

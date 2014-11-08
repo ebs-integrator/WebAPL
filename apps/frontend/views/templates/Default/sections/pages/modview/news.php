@@ -9,11 +9,12 @@
                         <img alt="<?= $item->title; ?>" title="<?= $item->title; ?>" src="<?= url($item->cover['path']); ?>">
                     <?php } ?>
                 </div>
-                <div class="details">
-                    <p class="data"><?= date("d-m-Y, H:i", strtotime($item->created_at)); ?>
-                    </p>
-                    <p class='cont'></p>
-                </div>
+                <?php if (strtotime($item->created_at)) { ?>
+                    <div class="details">
+                        <p class="data"><?= date("d-m-Y, H:i", strtotime($item->created_at)); ?></p>
+                        <p class='cont'></p>
+                    </div>
+                <?php } ?>
             </div>
             <div class="right">
                 <p class="info"><?= Str::words(strip_tags($item->text), 55); ?></p>

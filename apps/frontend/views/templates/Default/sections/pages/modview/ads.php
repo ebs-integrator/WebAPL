@@ -8,11 +8,12 @@
                     <?php if ($post->cover) { ?>
                         <img alt="<?= $post->title; ?>" title="<?= $post->title; ?>" src="<?= url($post->cover['path']); ?>">
                     <?php } ?>
-                    <div class="details">
-                        <p class="data"><?= date("d-m-Y, H:i", strtotime($post->created_at)); ?>
-                        </p>
-                        <p class='cont'></p>
-                    </div>
+                    <?php if (strtotime($post->created_at)) { ?>
+                        <div class="details">
+                            <p class="data"><?= date("d-m-Y, H:i", strtotime($post->created_at)); ?></p>
+                            <p class='cont'></p>
+                        </div>
+                    <?php } ?>
                 </div>
                 <?= Core\APL\Shortcodes::execute($post->text); ?>
                 <?php if ($post->have_socials) { ?>
@@ -28,8 +29,11 @@
     <div class='list'>
         <ul class='a_n'>
             <?php foreach ($posts as $item) { ?>
-                <li><a href='<?= $page_url; ?>?item=<?= $item->uri; ?>'>
-                        <span><?= date('d-m-Y', strtotime($item->created_at)); ?> </span>
+                <li>
+                    <a href='<?= $page_url; ?>?item=<?= $item->uri; ?>'>
+                        <?php if (strtotime($item->created_at)) { ?>
+                            <span><?= date('d-m-Y', strtotime($item->created_at)); ?> </span>
+                        <?php } ?>
                         <p><?= $item->title; ?></p>
                     </a>
                 </li>

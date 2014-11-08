@@ -1,5 +1,7 @@
 <p class="det_news"><?= $post->title; ?></p>
-<p class="p_data"><?= date("d-m-Y, H:i", strtotime($post->created_at)); ?>    </p>
+<?php if (strtotime($post->created_at)) { ?>
+    <p class="p_data"><?= date("d-m-Y, H:i", strtotime($post->created_at)); ?>    </p>
+<?php } ?>
 <div class="hr_dbl"></div>
 <div class="u_a">
     <?php if ($post->cover) { ?>

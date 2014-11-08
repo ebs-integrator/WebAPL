@@ -3540,6 +3540,9 @@ table.taxe tbody tr td:first-child{
     height:auto;
     padding:2px 70px;
 }
+.right_menu .months li a:hover {
+    text-decoration: underline;
+}
 .ldmbox hr{
     background:#f7f7f7;
     height: 2px;

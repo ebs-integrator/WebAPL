@@ -1,8 +1,10 @@
 <ul class="sec_details left">
-    <li>
-        <span class="sec_criteria"><?= varlang('data'); ?>: </span>
-        <span class="crt_details"><?= date("d-m-Y", strtotime($post->created_at)); ?></span>
-    </li>
+    <?php if (strtotime($post->created_at)) { ?>
+        <li>
+            <span class="sec_criteria"><?= varlang('data'); ?>: </span>
+            <span class="crt_details"><?= date("d-m-Y", strtotime($post->created_at)); ?></span>
+        </li>
+    <?php } ?>
     <li>
 
         <span class="sec_criteria"><?= varlang('ora'); ?>: </span>
