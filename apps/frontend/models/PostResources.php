@@ -4,8 +4,13 @@ class PostResources {
 
     public static function init() {
         \Core\APL\Shortcodes::register('contact', array('PostResources', 'blockContact'));
+        \Core\APL\Shortcodes::register('harta', ['PostResources', 'insertMap']);
     }
 
+    public static function insertMap() {
+        return "<div id=\"map-canvas2\" style='width:100%;height:400px;'>&nbsp;</div>";
+    }
+    
     public static function blockContact($params) {
         return View::make('sections.pages.blocks.contactDiv', $params);
     }

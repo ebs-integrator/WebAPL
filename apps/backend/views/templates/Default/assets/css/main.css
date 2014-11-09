@@ -2690,6 +2690,21 @@ body.boxed {
 #top > .navbar {
     border-top: 3px solid #C8DE00;
 }
+
+.treeview a {
+    display: block;
+}
+
+.move-btn {
+    width: 15px;
+    float: left;
+    margin-left: 3px;
+}
+
+.treeview a:not(.move-btn), .treeview li a.active {
+    padding-left: 40px;
+}
+
 /*
 .btn-success {
     color: #fff;

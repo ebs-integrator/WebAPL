@@ -78,6 +78,12 @@ class FeedController extends BaseController {
         User::onlyHas('feed-edit');
 
         $this->data['feed'] = Feed::find($id);
+        $this->data['fields'] = FeedField::orderBy(FeedField::getField('title'), 'asc')->get();
+        $this->data['fields_selected'] = FeedField::get_($id);
+        $this->data['fields_selected_arr'] = [];
+        foreach ($this->data['fields_selected'] as $field) {
+            $this->data['fields_selected_arr'][] = $field->id;
+        }
 
         if ($this->data['feed']) {
             $this->layout->content = View::make('sections.feed.edit', $this->data);

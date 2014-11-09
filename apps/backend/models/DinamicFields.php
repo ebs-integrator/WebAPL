@@ -26,11 +26,43 @@ class DinamicFields {
                 'value' => 0
             );
         }
-        
+
         FeedFieldValue::where($data)->delete();
         FeedFieldValue::insert($data);
 
         return Files::widget($lang_dependent ? 'doc_post_lang' : 'doc_post', $entry->id);
+    }
+
+    public static function addFieldsValue($value, $entry, $lang_dependent, $field) {
+        $data = ['field' => $field, 'fvalue' => $value];
+
+        return View::make('sections.feed.fields.dinamic', $data);
+    }
+
+    public static function addFieldsPrepare() {
+        $fields = Input::get('field');
+
+        $pattern = array('name', 'lang_id', 'value');
+        $rows = array();
+
+        $i = 0;
+        $ri = 0;
+        $fcount = count($fields);
+        while ($i < $fcount) {
+            foreach ($pattern as $point) {
+                $rows[$ri][$point] = $fields[$i][$point];
+                $i++;
+            }
+            $ri++;
+        }
+
+        // unset last rows
+        if ($rows)
+            unset($rows[count($rows) - 1]);
+
+        $result = serialize($rows);
+
+        return $result;
     }
 
 }

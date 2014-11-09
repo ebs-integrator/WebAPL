@@ -52,7 +52,7 @@
         </tr>
         
         <tr>
-            <th><?= varlang('feeds-1'); ?>: </th>
+            <th><?= varlang('grupa-de-postari'); ?></th>
             <td>
                 <input name='feed_post[]' value='0' type='hidden' />
                 <select name='feed_post[]' multiple='multiple' class='col-sm-12 chzn-select'>

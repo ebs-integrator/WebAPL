@@ -40,5 +40,12 @@ class ActeLocaleModel extends Eloquent {
 
         return $groups;
     }
-
+    
+    public static function last($year) {
+        return ActeLocaleModel::prepare()
+                ->where(ActeLocaleModel::getField('date_upload'), '<=', DB::raw("CURRENT_TIMESTAMP"))
+                ->orderBy(ActeLocaleModel::getField('date_upload'), 'desc')
+                ->first();
+    }
+    
 }

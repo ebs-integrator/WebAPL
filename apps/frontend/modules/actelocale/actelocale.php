@@ -36,6 +36,12 @@ class Actelocale extends \Core\APL\ExtensionController {
 
         $wdata['current_year'] = $data['current_year'];
         $wdata['current_month'] = $month && $month >= 1 && $month <= 12 ? $month : intval(date("m"));
+
+        $wdata['last'] = \ActeLocaleModel::last($data['current_year']);
+
+        if ($wdata['last']) {
+            $wdata['current_month'] = (int) date('m', strtotime($wdata['last']['date_upload']));
+        }
         $wdata['list'] = \ActeLocaleModel::extract($data['current_year']);
 
         $data['page']->text .= Template::moduleView($this->module_name, 'views.actelist', $wdata);

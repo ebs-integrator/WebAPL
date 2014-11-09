@@ -146,7 +146,7 @@ class Template {
                 'info' => ''
             ),
             'mapPage' => array(
-                'name' => 'Harta',
+                'name' => 'Harta site-ului',
                 'function' => array('PageView', 'mapPage'),
                 'support_item' => false,
                 'screen' => '',

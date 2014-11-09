@@ -181,10 +181,10 @@ class Post extends Eloquent {
         );
     }
 
-    public static function getParents($parent_id) {
+    public static function getParents($parent_id, $enabled = 0) {
         $list = array();
         while ($parent_id) {
-            $item = Post::findID($parent_id);
+            $item = Post::findID($parent_id, $enabled);
             if ($item) {
                 $list[] = $item->toArray();
                 $parent_id = $item->parent;

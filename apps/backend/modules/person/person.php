@@ -69,7 +69,7 @@ class Person extends \Core\APL\ExtensionController {
         Event::listen('language_created', array($this, 'language_created'));
         Event::listen('language_deleted', array($this, 'language_deleted'));
 
-        Template::registerViewMethod('page', 'persons_list', 'Tabel persoane (consilieri)', null, true);
+        //Template::registerViewMethod('page', 'persons_list', 'Tabel persoane (consilieri)', null, true);
         Template::registerViewMethod('page', 'group_with_persons', 'Grupe de persoane', null, true);
         Template::registerViewMethod('page', 'persons_with_photo', 'Personalități', null, true);
         Template::registerViewMethod('page', 'persons_big', 'Viceprimar', null, true);
