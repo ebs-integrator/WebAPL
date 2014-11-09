@@ -18,19 +18,19 @@ class PostResources {
     public static function contactSubmit() {
 
         $data = array(
-            'name' => Input::get('name'),
-            'email' => Input::get('email'),
-            'address' => Input::get('address'),
-            'subject' => Input::get('subject'),
-            'messages' => Input::get('message'),
-            'capcha' => SimpleCapcha::valid('contact', Input::get('capcha')) ? 1 : null
+            varlang('name-last-name') => Input::get('name'),
+            varlang('email') => Input::get('email'),
+            varlang('adresa-telefon') => Input::get('address'),
+            varlang('subiect') => Input::get('subject'),
+            varlang('message') => Input::get('message'),
+            varlang('cod-verificare') => SimpleCapcha::valid('contact', Input::get('capcha')) ? 1 : null
         );
 
         $validator = Validator::make($data, array(
-                    'name' => 'required',
-                    'email' => 'email|required',
-                    'messages' => 'required',
-                    'capcha' => 'required'
+                    varlang('name-last-name') => 'required',
+                    varlang('email') => 'email|required',
+                    varlang('message') => 'required',
+                    varlang('cod-verificare') => 'required'
         ));
 
         $return = array(
@@ -53,17 +53,17 @@ class PostResources {
     public static function contactTopSubmit() {
 
         $data = array(
-            'name' => Input::get('name'),
-            'email' => Input::get('email'),
-            'messages' => Input::get('message'),
-            'capcha' => SimpleCapcha::valid('contact_top', Input::get('capcha')) ? 1 : null
+            varlang('name-last-name') => Input::get('name'),
+            varlang('email') => Input::get('email'),
+            varlang('message') => Input::get('message'),
+            varlang('cod-verificare') => SimpleCapcha::valid('contact_top', Input::get('capcha')) ? 1 : null
         );
 
         $validator = Validator::make($data, array(
-                    'name' => 'required',
-                    'email' => 'email|required',
-                    'messages' => 'required',
-                    'capcha' => 'required'
+                    varlang('name-last-name') => 'required',
+                    varlang('email') => 'email|required',
+                    varlang('message') => 'required',
+                    varlang('cod-verificare') => 'required'
         ));
 
         $return = array(

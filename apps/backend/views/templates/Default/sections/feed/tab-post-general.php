@@ -3,7 +3,7 @@
 
     <table class="table table-bordered table-hover">
         <tr>
-            <th><?= varlang('date-3'); ?>: </th>
+            <th class="col-lg-4"><?= varlang('date-3'); ?>: </th>
             <td>
                 <input type="text" name="post[created_at]" class='form-control datetimepicker' data-date-format="YYYY-MM-DD hh:mm:ss" value='<?= isset($post->created_at) ? $post->created_at : ''; ?>' />
             </td>

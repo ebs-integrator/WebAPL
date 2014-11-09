@@ -8,11 +8,13 @@
         </div>
     <?php } ?>
     <div class='p_i ldm_li'><?= Core\APL\Shortcodes::execute($post->text, array('post' => $post)); ?></div>
+    <?php if (strtotime($post->date_point)) { ?>
     <div class="ldm_middle">
         <p class="tda">
             <?= varlang('termen-limita'); ?> : <span><?= date('d-m-Y, H:i', strtotime($post->date_point)); ?></span>
         </p>
     </div>
+    <?php } ?>
     <hr>
     <?= Event::fire('cv_form', array('post' => $post), true); ?>
     <div class='clearfix'></div>

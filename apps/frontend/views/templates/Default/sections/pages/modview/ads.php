@@ -11,7 +11,7 @@
                     <?php if (strtotime($post->created_at)) { ?>
                         <div class="details">
                             <p class="data"><?= date("d-m-Y, H:i", strtotime($post->created_at)); ?></p>
-                            <p class='cont'></p>
+                            <p></p>
                         </div>
                     <?php } ?>
                 </div>

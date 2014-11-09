@@ -21,26 +21,28 @@ class PollModel extends Eloquent {
 
     public static function getWithVotes($id) {
         $poll = PollModel::getByID($id);
-
-        if ($poll) {
-            foreach ($poll->answers as &$answer) {
-                $answer->count = PollVotesModel::where(array(
-                            'poll_id' => $id,
-                            'answer_id' => $answer->answer_id
-                        ))->count();
-            }
-        }
-
+        
+        // trunc function
+        
         return $poll;
     }
 
     public static function answers($id) {
-        return PollAnswerLangModel::join(PollAnswerModel::getTableName(), PollAnswerModel::getField('id'), '=', PollAnswerLangModel::getField('answer_id'))
-                        ->select(PollAnswerLangModel::getField('*'))
-                        ->where(PollAnswerLangModel::getField('lang_id'), \Core\APL\Language::getId())
-                        ->where(PollAnswerModel::getField('poll_id'), $id)
-                        ->orderBy(PollAnswerModel::getField('ord'), 'asc')
-                        ->get();
+        $answers = PollAnswerLangModel::join(PollAnswerModel::getTableName(), PollAnswerModel::getField('id'), '=', PollAnswerLangModel::getField('answer_id'))
+                ->select(PollAnswerLangModel::getField('*'))
+                ->where(PollAnswerLangModel::getField('lang_id'), \Core\APL\Language::getId())
+                ->where(PollAnswerModel::getField('poll_id'), $id)
+                ->orderBy(PollAnswerModel::getField('ord'), 'asc')
+                ->get();
+        
+        foreach ($answers as &$answer) {
+            $answer['count'] = PollVotesModel::where(array(
+                        'poll_id' => $id,
+                        'answer_id' => $answer->answer_id
+                    ))->count();
+        }
+
+        return $answers;
     }
 
     public static function getByID($id) {

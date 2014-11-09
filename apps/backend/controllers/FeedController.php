@@ -78,12 +78,18 @@ class FeedController extends BaseController {
         User::onlyHas('feed-edit');
 
         $this->data['feed'] = Feed::find($id);
+        if (!$this->data['feed']) {
+            throw new Exception('Feed not found #' . $id);
+        }
+
         $this->data['fields'] = FeedField::orderBy(FeedField::getField('title'), 'asc')->get();
         $this->data['fields_selected'] = FeedField::get_($id);
         $this->data['fields_selected_arr'] = [];
         foreach ($this->data['fields_selected'] as $field) {
             $this->data['fields_selected_arr'][] = $field->id;
         }
+
+        $this->data['post_count'] = Feed::getPostCount($id);
 
         if ($this->data['feed']) {
             $this->layout->content = View::make('sections.feed.edit', $this->data);
@@ -161,7 +167,7 @@ class FeedController extends BaseController {
      * @return array
      */
     public function postSave() {
-        User::onlyHas('feedpost-edit');
+        User::onlyHas('feed-edit');
 
         $id = Input::get('id');
         $general = Input::get('general');
@@ -183,6 +189,47 @@ class FeedController extends BaseController {
 
 
         return array();
+    }
+
+    public function postChangefeed() {
+        User::onlyHas('feed-edit');
+
+        $id = Input::get('id');
+        $fields = Input::get('addfields');
+
+        $exists = [];
+        foreach (FeedField::get_($id) as $field) {
+            $exists[$field->id] = $field;
+        }
+
+        // Insert inexistent fields
+        foreach ($fields as $fieldId) {
+            if (isset($exists[$fieldId]) == FALSE) {
+                $newField = new FeedRel;
+                $newField->feed_id = $id;
+                $newField->feed_field_id = $fieldId;
+                $newField->save();
+            }
+        }
+
+        // Delete Existent fields
+        foreach ($exists as $field) {
+            if (in_array($field->id, $fields) == FALSE) {
+
+                FeedRel::where('feed_field_id', $field->id)
+                        ->where('feed_id', $id)
+                        ->delete();
+
+                FeedFieldValue::where('feed_field_id', $field->id)
+                        ->whereIn('post_id', function($query) use ($id) {
+                            $query->select(FeedPost::getField('post_id'))
+                            ->from(FeedPost::getTableName())
+                            ->where('feed_id', $id);
+                        })->delete();
+            }
+        }
+
+        return Illuminate\Support\Facades\Redirect::back();
     }
 
     /**
@@ -456,6 +503,16 @@ class FeedController extends BaseController {
 
             Log::warning("Drop post #{$id}");
         }
+
+        return Redirect::to('feed');
+    }
+
+    public function postDeletefeed() {
+        $id = Input::get('id');
+
+        Feed::where('id', $id)->delete();
+        FeedPost::where('feed_id', $id)->delete();
+        FeedRel::where('feed_id', $id)->delete();
 
         return Redirect::to('feed');
     }

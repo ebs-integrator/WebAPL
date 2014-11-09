@@ -8,7 +8,7 @@ class EmailModel {
         foreach ($sendToUsers as $user) {
             $data['user'] = $user;
             Mail::send($view, $data, function($message) use ($title, $user, $attachFile) {
-                $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'SendMail');
+                $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'WebLPA');
                 $message->subject($title);
                 $message->to($user->email);
                 if ($attachFile) {

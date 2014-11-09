@@ -8,8 +8,8 @@
         colNames: ['ID', '<?= varlang('username-1'); ?>', '<?= varlang('email-4'); ?>'],
         colModel: [
             {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
-            {name: 'username', index: 'username', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
-            {name: 'email', index: 'email', resizable: true, align: "left", sorttype: "text", editable: true, edittype: "text"}
+            {name: 'username', index: 'username', height: 50, resizable: true, sortable:false, align: "left", editable: true, edittype: "text"},
+            {name: 'email', index: 'email', resizable: true, sortable:false, align: "left", sorttype: "text", editable: true, edittype: "text"}
         ],
         rowNum: 30,
         multiselect: false,

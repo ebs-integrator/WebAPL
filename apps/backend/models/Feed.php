@@ -18,4 +18,10 @@ class Feed extends Eloquent {
                 ->get();
     }
     
+    public static function getPostCount($feed_id) {
+        return Feed::join(FeedPost::getTableName(), FeedPost::getField('feed_id'), '=', Feed::getField('id'))
+                ->where(FeedPost::getField('feed_id'), '=', $feed_id)
+                ->count();
+    }
+    
 }

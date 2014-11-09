@@ -42,7 +42,13 @@
     <?php } ?>
 
     <div class="acz_details">
-        <?= $post->text; ?>
+        <?php if ($post->show_pcomment) { ?>
+            <div class='live_comment' data-pid="news<?= $post->id; ?>">
+                <?= Core\APL\Shortcodes::execute($post->text, [$post, ['post' => $post]]); ?>
+            </div>
+        <?php } else { ?>
+            <div><?= Core\APL\Shortcodes::execute($post->text, ['post' => $post]); ?></div>
+        <?php } ?>
 
         <?= View::make('sections.elements.socials'); ?>
         <div class="hr_grey"></div>

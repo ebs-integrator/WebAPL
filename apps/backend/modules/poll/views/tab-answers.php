@@ -9,8 +9,8 @@
         colNames: ['ID', '<?= varlang('answer'); ?>', '<?= varlang('count'); ?>'],
         colModel: [
             {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}, width: 10},
-            {name: 'answer', index: 'answer', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
-            {name: 'count', index: 'count', height: 50, resizable: true, align: "left", editable: false, edittype: "text"}
+            {name: 'answer', index: 'answer', height: 50, resizable: true, sortable:false, align: "left", editable: true, edittype: "text"},
+            {name: 'count', index: 'count', height: 50, resizable: true, sortable:false, align: "left", editable: false, edittype: "text"}
         ],
         rowNum: 30,
         multiselect: false,

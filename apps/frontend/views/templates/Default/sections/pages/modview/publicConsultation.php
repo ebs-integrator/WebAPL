@@ -14,13 +14,13 @@
             <img src="<?= res('assets/img/stat_active.png'); ?>" class="stat_active" alt="" >
             <div class="stat_info">
                 <span><?= varlang('statut'); ?></span>
-                <span><?= varlang('oferte'); ?></span>
+                <span><?= varlang('consultare-activa'); ?></span>
             </div>
         <?php } else { ?>
             <img src="<?= res('assets/img/stat_enable.png'); ?>" class="stat_active" alt="" >
             <div class="stat_info">
                 <span><?= varlang('statut'); ?></span>
-                <span><?= varlang('oferte-expirate'); ?></span>
+                <span><?= varlang('consultare-inchisa'); ?></span>
             </div>
         <?php } ?>
         <div class="clearfix"></div>

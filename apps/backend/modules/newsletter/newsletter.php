@@ -107,7 +107,7 @@ class Newsletter extends \Core\APL\ExtensionController {
                         $data['unsubscribe_link'] = url("/../newsletter/unsubscribe/{$user->hash}");
                         echo $user->email;
                         var_dump(Mail::send('views.emails.post', $data, function($message) use ($post, $user) {
-                            $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'Newsletter');
+                            $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'WebLPA');
                             $message->subject($post->title . " :: NEWSLETTER");
                             $message->to($user->email);
                         }));

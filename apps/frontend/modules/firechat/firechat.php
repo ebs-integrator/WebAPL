@@ -222,10 +222,11 @@ class Firechat extends \Core\APL\ExtensionController {
             $chat = \FireChatSession::find($session_id);
             if ($chat) {
                 $data['html'] = $html;
-                Template::viewModule($this->module_name, function () use ($data, $chat) {
-                    \Mail::send('views.email-mess', $data, function($message) use ($chat) {
-                        $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'Firechat');
-                        $message->subject("Recent chat messages");
+                $person = \PersonLangModel::where('person_id', $chat->person_id)->where('lang_id', \Core\APL\Language::getId())->first();
+                Template::viewModule($this->module_name, function () use ($data, $chat, $person) {
+                    \Mail::send('views.email-mess', $data, function($message) use ($chat, $person) {
+                        $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'WebLPA');
+                        $message->subject("Discutie on-line cu " . $person->first_name . " " . $person->last_name . " din " . date("Y-m-d H:i"));
                         $message->to($chat->user_email);
                     });
                 });

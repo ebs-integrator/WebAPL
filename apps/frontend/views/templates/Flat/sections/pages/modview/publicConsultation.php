@@ -11,20 +11,21 @@
 
     <div class="stats">
         <?php if (time() < strtotime($post->date_point)) { ?> 
-            <img src="<?= res('assets/img/stat_active.png'); ?>" class="stat_active" alt="" >
+            <img alt=""  src="<?= res('assets/img/stat_on.png'); ?>" class="stat_active">
             <div class="stat_info">
                 <span><?= varlang('statut'); ?></span>
-                <span><?= varlang('oferte'); ?></span>
+                <span><?= varlang('consultare-activa'); ?></span>
             </div>
         <?php } else { ?>
-            <img src="<?= res('assets/img/stat_enable.png'); ?>" class="stat_active" alt="" >
+            <img alt=""  src="<?= res('assets/img/stat_off.png'); ?>" class="stat_active">
             <div class="stat_info">
                 <span><?= varlang('statut'); ?></span>
-                <span><?= varlang('oferte-expirate'); ?></span>
+                <span><?= varlang('consultare-inchisa'); ?></span>
             </div>
         <?php } ?>
-        <div class="clearfix"></div>
     </div>
+
+    <div class="clearfix"></div>
 
     <?php if ($post->docs) { ?>
         <ul class="dcr">
@@ -32,7 +33,7 @@
                 <div class='dcr_box'>
                     <ul class="mda n_t">
                         <?php foreach ($post->docs as $file) { ?>
-                            <li class="<?= $file->extension; ?>"><span><a href="<?= url($file->path); ?>"><?= $file->name; ?></a></span></li>  
+                            <li class="<?= $file->extension; ?>"><a href="<?= url($file->path); ?>"><?= $file->name; ?><span></span></a></li>  
                         <?php } ?>
                     </ul>
                 </div>

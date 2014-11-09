@@ -9,7 +9,7 @@
                 <td>
                     <progress value="<?= (int) ($total_votes ? $answer->count / $total_votes * 100 : 0); ?>" max="100"></progress>
                     <span><?= (int) ($total_votes ? $answer->count / $total_votes * 100 : 0); ?>%</span>
-                </td><td><?= $answer->count; ?> <?= varlang('poll-raspunsuri'); ?></td>
+                </td><td><?= $answer->count ? $answer->count : 0; ?> <?= varlang('poll-raspunsuri'); ?></td>
             </tr>
         <?php } ?>
     </tbody>

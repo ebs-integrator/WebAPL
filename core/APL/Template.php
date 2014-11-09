@@ -96,6 +96,13 @@ class Template {
                 'screen' => '',
                 'info' => ''
             ),
+            'publicConsultations' => array(
+                'name' => 'Consultări publice',
+                'function' => array('PageView', 'publicConsultations'),
+                'support_item' => true,
+                'screen' => '',
+                'info' => ''
+            ),
             'projectsList' => array(
                 'name' => 'Listă de proiecte',
                 'function' => array('PageView', 'projectsList'),

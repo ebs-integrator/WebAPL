@@ -61,7 +61,7 @@
             if (save_messages) {
                 var html = $(".tab-content > .tab-pane.active .chat").html();
                 jQuery.post('<?= url('firechat/sendmail'); ?>', {messages: html, id:'<?= $person->id; ?>'}, function() {
-                    alert('Email-ul a fost trimis');
+                    alert('<?= varlang('fire-email'); ?>');
                 });
             }
 

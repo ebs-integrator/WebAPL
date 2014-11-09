@@ -8,9 +8,9 @@
         colNames: ['ID', '<?= varlang('title-7'); ?>', '<?= varlang('date-created'); ?>', '<?= varlang('enabled-7'); ?>'],
         colModel: [ 
             {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
-            {name: 'title', index: 'title', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
-            {name: 'date_created', index: 'date_created', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
-            {name: 'enabled', index: 'enabled', resizable: true, align: "left", sorttype: "text", editable: true, edittype: "select", editoptions: {value: '0:Disabled;1:Enabled'}, formatter: function(value) {
+            {name: 'title', index: 'title', height: 50, resizable: true, sortable:false, align: "left", editable: true, edittype: "text"},
+            {name: 'date_created', index: 'date_created', height: 50, resizable: true, sortable:false, align: "left", editable: true, edittype: "text"},
+            {name: 'enabled', index: 'enabled', resizable: true, sortable:false, align: "left", sorttype: "text", editable: true, edittype: "select", editoptions: {value: '0:Disabled;1:Enabled'}, formatter: function(value) {
                     return "<center data-value='" + value + "'>" + (value ? '<span class="label label-success">Enabled</span>' : '<span class="label label-danger">Disabled</span>') + "</center>";
                 }, unformat: function(value) {
                     return value === 'Enabled' ? 1 : 0;

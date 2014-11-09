@@ -16,11 +16,11 @@
 <?php Event::fire('post_top_container', $post); ?>
 
 <?php if ($post->show_pcomment) { ?>
-    <div class='cont live_comment' data-pid="news<?= $post->id; ?>">
-        <?= Core\APL\Shortcodes::execute($post->text); ?>
+    <div class='live_comment' data-pid="news<?= $post->id; ?>">
+        <?= Core\APL\Shortcodes::execute($post->text, [$post, ['post' => $post]]); ?>
     </div>
 <?php } else { ?>
-    <div class='cont'><?= Core\APL\Shortcodes::execute($post->text); ?></div>
+    <div><?= Core\APL\Shortcodes::execute($post->text, ['post' => $post]); ?></div>
 <?php } ?>
 
 <?php Event::fire('post_bottom_container', $post); ?>

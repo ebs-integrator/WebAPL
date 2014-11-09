@@ -72,7 +72,7 @@ class Socialcomplaints extends \Core\APL\ExtensionController {
 
         $jqgrid = new jQgrid('apl_complaint');
         echo $jqgrid->populate(function ($start, $limit) {
-            return \SComplaintsModel::select('id', 'post_id', 'username', 'email', 'address', 'title', 'text', 'response', 'date_created', 'is_private', 'enabled')->skip($start)->take($limit)->get();
+            return \SComplaintsModel::select('id', 'post_id', 'username', 'email', 'address', 'title', 'text', 'response', 'date_created', 'is_private', 'enabled')->skip($start)->take($limit)->orderBy('date_created', 'desc')->get();
         });
     }
 

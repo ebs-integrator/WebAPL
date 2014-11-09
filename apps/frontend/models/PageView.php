@@ -74,6 +74,36 @@ class PageView {
         }
         return static::defaultView($data);
     }
+    
+    public static function publicConsultations($data) {
+        if ($data['page']->feed_id) {
+            Post::$taxonomy = 2;
+            $item = Input::get('item');
+            $wdata['page_url'] = $data['page_url'];
+
+            if ($item) {
+                $post = Post::findURI($item, 1);
+                if ($post) {
+                    Post::oneView($post->id);
+                    
+                    Core\APL\Template::setMetaMultiple(array(
+                        'description' => $post->text,
+                        'og:description' => $post->text,
+                        'og:title' => $post->title
+                            ), true);
+
+                    $wdata['post'] = Post::withDinamicFields($post);
+                    $data["page"]->text .= View::make("sections.pages.modview.publicConsultation")->with($wdata);
+                } else {
+                    throw new Exception("Undefined article '{$item}'", 404);
+                }
+            } else {
+                $wdata["posts"] = Post::postsFeed($data['page']->feed_id, false);
+                $data["page"]->text .= View::make("sections.pages.modview.acquisitionsList")->with($wdata);
+            }
+        }
+        return static::defaultView($data);
+    }
 
     public static function projectsList($data) {
         if ($data['page']->feed_id) {
