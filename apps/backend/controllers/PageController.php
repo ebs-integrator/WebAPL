@@ -237,6 +237,7 @@ class PageController extends BaseController {
         $trash_folder = 270;
 
         if ($id != $trash_folder) {
+            PostLang::where('post_id', $id)->update(['enabled' => 0]);
             $page = Post::find($id);
             $page->parent = $trash_folder;
             $page->save();

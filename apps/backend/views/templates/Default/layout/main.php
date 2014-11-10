@@ -90,23 +90,23 @@
 
                             <!-- .nav -->
                             <ul class="nav navbar-nav">
-                                <?php if (User::has("modules-view")) { ?>
-                                    <li> <a href="<?= url('module'); ?>"><?= varlang('extensions'); ?></a></li>
+                                <?php if (User::has('settings-view')) { ?>
+                                    <li> <a href="<?= url('settings'); ?>"><?= varlang('settings'); ?></a></li>
                                 <?php } ?>
                                 <?php if (User::has("user-view")) { ?>
                                     <li> <a href="<?= url('user'); ?>"><?= varlang('users'); ?></a></li>
                                 <?php } ?>
+                                <?php if (User::has('template-edit')) { ?>
+                                    <li> <a href="<?= url('template'); ?>"><?= varlang('template-4'); ?></a></li>
+                                <?php } ?>
                                 <?php if (User::has('lang-view')) { ?>
                                     <li> <a href="<?= url('home/languages'); ?>"><?= varlang('languages'); ?></a></li>
                                 <?php } ?>
-                                <?php if (User::has('settings-view')) { ?>
-                                    <li> <a href="<?= url('settings'); ?>"><?= varlang('settings'); ?></a></li>
+                                <?php if (User::has("modules-view")) { ?>
+                                    <li> <a href="<?= url('module'); ?>"><?= varlang('extensions'); ?></a></li>
                                 <?php } ?>
                                 <?php if (User::has('log-view')) { ?>
                                     <li> <a href="<?= url('log'); ?>"><?= varlang('log'); ?></a></li>
-                                <?php } ?>
-                                <?php if (User::has('template-edit')) { ?>
-                                    <li> <a href="<?= url('template'); ?>"><?= varlang('template-4'); ?></a></li>
                                 <?php } ?>
                                 <?php if (User::has('file-manage')) { ?>
                                     <li> <a href="<?= url('filemanager'); ?>"><?= varlang('filemanager'); ?></a></li>

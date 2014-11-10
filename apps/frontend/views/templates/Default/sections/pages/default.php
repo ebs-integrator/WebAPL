@@ -10,7 +10,7 @@
             ?>
         </div>
         <div class="resp_menu"></div>
-        <div class='left'>
+        <div class='left t_block'>
             <?php Event::fire('page_top_container', $page); ?>
 
             <?= $page->text; ?>

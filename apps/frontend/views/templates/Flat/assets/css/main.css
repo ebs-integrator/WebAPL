@@ -1491,7 +1491,7 @@ h2.colored{
 .attention ul,ul.crt{
     margin:35px 0px;
 }
-.attention ul li,ul.crt li{
+.attention ul li,ul.crt > li, .t_block > ul > li {
     padding-left:20px;
     font:17px 'AvenirNext-Regular';    
     color:#4c4c4c;

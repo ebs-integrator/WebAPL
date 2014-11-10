@@ -2,7 +2,7 @@
     <nav>
         <a href="<?= $item['url']; ?>">
             <p><?= $item->title; ?></p>
-            <span><?= Str::words(strip_tags($item->text), 40); ?></span>
+            <span><?= Str::words(strip_tags(WebAPL\Shortcodes::strip($item->text)), 40); ?></span>
             <div class="more"></div>
         </a>
     </nav>

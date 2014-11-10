@@ -2,7 +2,7 @@
     <?php foreach ($posts as $item) { ?>
     <li>
         <p class="ttl"><?=$item->title;?></p>
-        <p class="info"><?=  strip_tags($item->text);?></p>
+        <p class="info"><?= Str::words(strip_tags(WebAPL\Shortcodes::strip($item->text)), 40);?></p>
         <a href="<?=$page_url;?>?item=<?=$item['uri'];?>"></a>
     </li>
     <?php } ?>
