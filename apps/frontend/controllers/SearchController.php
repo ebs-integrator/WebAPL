@@ -10,6 +10,10 @@ class SearchController extends BaseController {
         $this->data['words'] = strip_tags($keywords);
         $this->data['results'] = Post::search($keywords);
 
+        if (count($this->data['results']) === 1) {
+            return Illuminate\Support\Facades\Redirect::to(WebAPL\Language::url('topost/' . $this->data['results'][0]->id));
+        }
+        
         WebAPL\Template::setPageTitle("Search: {$this->data['words']}", true);
 
         PageController::loadGeneralResources();

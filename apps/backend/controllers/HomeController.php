@@ -88,6 +88,14 @@ class HomeController extends BaseController {
 
     public function getEmpty() {
 
+        $posts = Post::where('taxonomy_id', 2)->get();
+        foreach ($posts as $post) {
+            PostLang::where('post_id', $post->id)->delete();
+            $post->delete();
+        }
+
+        return ['no no no'];
+
         // BAD EMPTY FUNCTION
         // delete posts
         $posts = Post::where('taxonomy_id', 2)->get();
@@ -207,7 +215,7 @@ class HomeController extends BaseController {
             Files::drop($file->id);
         }
         DB::table('apl_file')->where('module_name', 'rewwe')->delete();
-        
+
         return ['executed'];
     }
 

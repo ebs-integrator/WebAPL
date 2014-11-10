@@ -7,7 +7,7 @@
                 <label><?= varlang('functionar'); ?> *</label>
                 <select required="" name="person_id">
                     <?php foreach ($persons as $person) { ?>
-                        <option value="<?= $person->id; ?>"><?= $person->first_name; ?> <?= $person->last_name; ?></option>
+                        <option value="<?= $person->id; ?>"><?= $person->first_name; ?> <?= $person->last_name; ?>, <?= $person->function; ?></option>
                     <?php } ?>
                 </select>
             <?php } ?>
