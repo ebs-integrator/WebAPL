@@ -430,7 +430,7 @@ header .contact .contact_us:hover,header .contact .contact_us.active, .contact .
     background:#b6c57e;
     border-bottom:2px solid #8fa24e;
 }
-.c_l_u tr td:nth-child(2) sec_span{
+.c_l_u tr td:nth-child(2) .sec_span{
     display: none;
 }
 header .contact .currency{
