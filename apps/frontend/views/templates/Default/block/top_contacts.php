@@ -50,8 +50,8 @@
                 <input required="" type="text" name="email" placeholder="<?= varlang('email'); ?>">
                 <textarea required="" name="message" placeholder="<?= varlang('message'); ?>"></textarea>
                 <input required="" name="capcha" class="code" type="text">
-                <img alt=""  src="<?= SimpleCapcha::make('contact_top'); ?>" height="31">
-                <input type="submit" value="<?= varlang('submit'); ?>">
+                <img alt="" src="<?= SimpleCapcha::make('contact_top'); ?>" height="31">
+                <input type="submit" value="<?= varlang('send-3'); ?>">
             </form>
         </div>
     </div>

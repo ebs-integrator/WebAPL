@@ -21,7 +21,7 @@
             <label><?= varlang('cod-verificare'); ?> *</label>
             <input class="code" name="capcha" type="text">
             <img src="<?= SimpleCapcha::make('person_subscribe'); ?>" height="31">
-            <input type="submit" value="<?= varlang('submit'); ?>">
+            <input type="submit" value="<?= varlang('subscribe-1'); ?>">
             <div class="clearfix"></div>
         </div>
     </form>

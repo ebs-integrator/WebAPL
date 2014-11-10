@@ -18,7 +18,7 @@ class VarModel extends Eloquent {
                 ->where(VarModel::getField('parent_key'), $var_key)
                 ->get();
         foreach ($list as &$item) {
-            $item['num_vars'] = VarModel::withParent($item->key)->count();
+            $item['num_vars'] = VarModel::prepareQuery()->where(VarModel::getField('parent_key'), $item->key)->count();
         }
         return $list;
     }

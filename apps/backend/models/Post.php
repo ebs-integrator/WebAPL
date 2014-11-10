@@ -13,10 +13,10 @@ class Post extends Eloquent {
     }
 
     public static function tree($taxonomy_id, $parent = 0) {
-        $list = Post::where('parent', $parent)->where('taxonomy_id', $taxonomy_id)->orderBy('ord_num', 'asc')->get();
+        $list = Post::where('parent', $parent)->where('taxonomy_id', $taxonomy_id)->orderBy('ord_num', 'asc')->remember(60)->get();
 
         foreach ($list as &$item) {
-            $item['lang'] = $item->langs()->where('lang_id', Language::getId())->first();
+            $item['lang'] = $item->langs()->where('lang_id', Language::getId())->remember(60)->first();
             $item['list'] = Post::tree($taxonomy_id, $item->id);
         }
 

@@ -47,7 +47,7 @@
             <textarea name="message" placeholder="<?= varlang('message'); ?>"></textarea>
             <input required="" name="capcha" class="code" type="text">
             <img src="<?= SimpleCapcha::make('contact_top'); ?>" height="37"  alt="">
-            <input type="submit" value="<?= varlang('submit'); ?>">
+            <input type="submit" value="<?= varlang('send-3'); ?>">
         </form>
     </div>                       
 </div>

@@ -23,7 +23,7 @@
         <input required="" class="code" name="capcha" type="text">
         <img height="31" src="<?= SimpleCapcha::make('contact'); ?>"  alt="" >
         <div class="clearfix"></div>
-        <input type="submit" value="<?= varlang('submit'); ?>">
+        <input type="submit" value="<?= varlang('send-3'); ?>">
         <div class="clearfix"></div>
     </div>
 </form>

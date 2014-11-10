@@ -4,7 +4,7 @@
     <input type='text' name="name" placeholder="<?= varlang('name-last-name'); ?>"/>
     <div class="upload"><?= varlang('cv'); ?></div>
     <input type="file" name="upload" id='upload'/>
-    <input type='submit' value='<?= varlang('submit'); ?>'/>
+    <input type='submit' value='<?= varlang('apply'); ?>'/>
     <div class="clearfix"></div>
     <div class="form_error"></div>
 </form>

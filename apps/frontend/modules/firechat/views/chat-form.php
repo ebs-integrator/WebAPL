@@ -15,7 +15,7 @@
             <input required="" name="name" type="text" >
             <label><?= varlang('email'); ?>*</label>
             <input required="" name="email" type="email" >    
-            <input type="submit" value="<?= varlang('submit'); ?>">
+            <input type="submit" value="<?= varlang('stat-chat'); ?>">
             <div class="clearfix"></div>
         </div>
     </form>

@@ -96,6 +96,7 @@ App::shutdown(function() use (&$clear_cache) {
     if ($clear_cache) {
         File::deleteDirectory($_SERVER['DOCUMENT_ROOT'] . '/apps/frontend/storage/cache/');
         @unlink($_SERVER['DOCUMENT_ROOT'] . '/apps/frontend/storage/meta/services.json');
+        Cache::flush();
     }
 });
 
