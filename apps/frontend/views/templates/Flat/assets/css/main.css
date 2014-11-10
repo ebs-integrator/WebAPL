@@ -3187,7 +3187,7 @@ table.plcu .pdf{
     border: 2px solid #f7f7f7;
     padding: 30px 40px;
 }
-.ath p {
+.ath p,.ldmbox .ath p {
     font: 17px 'AvenirNext-Bold';
     color: #ff6477;
     max-width: 100%;
