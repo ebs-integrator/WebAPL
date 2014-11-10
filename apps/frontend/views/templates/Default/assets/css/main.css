@@ -430,7 +430,7 @@ header .contact .contact_us:hover,header .contact .contact_us.active, .contact .
     background:#b6c57e;
     border-bottom:2px solid #8fa24e;
 }
-.c_l_u tr td:nth-child(2) sec_span{
+.c_l_u tr td:nth-child(2) .sec_span{
     display: none;
 }
 header .contact .currency{
@@ -2803,11 +2803,15 @@ ul.culture li .right .box p,ul.culture li .right .box p a{
 ul.crt li{
     font:17px 'open_sanssemibold';
     color:#4c4c4c;
-}
-ul.crt li{
     background: url('../img/li_g.png') no-repeat left 8px;
     padding-left:30px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
+}
+.plcu ul li{
+    font:17px 'open_sansregular';
+    color:#4c4c4c;
+    background: url('../img/li_g.png') no-repeat left 8px;
+    padding-left:30px;
 }
 ul.crt.nbtn li{
     margin-bottom:0px;
@@ -4138,7 +4142,7 @@ table.plcu strong{
 }
 table.plcu p{
     font:17px 'open_sansregular';
-    padding-bottom:30px;
+    margin-bottom:10px;
 }
 ptable.plcu ol{
     padding:0px;
@@ -4407,7 +4411,7 @@ ul.dcr.smpl > li .dcr_box {
     z-index: 99;
     background:#fff;
     padding:7px 17px;
-    min-height: 60px;
+    height: 60px;
     border:1px solid #74b45a;
 }
 .cl_pop span{
@@ -4506,7 +4510,7 @@ table.orar tbody tr td:last-child, table.orar tbody tr td:nth-child(6){
     cursor:pointer;
 }
 .cl_time li:hover .cl_pop{
-    display:block;
+    display:table-cell;
 }
 .bsa_block{
     margin-top:30px;
@@ -4567,9 +4571,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
 .search_t{
     color:#040404;
     font:20px 'open_sanssemibold';
-    height:45px;
-    line-height:45px;
-    padding:0px 15px;
+    padding:8px 15px;
     background:#fbfbfb;
     border:1px solid #e3e3e3;
 }
@@ -6123,6 +6125,9 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     label{
         font-size:12px;
     }
+    table.orar tbody  td.empty_cell,table.orar tbody  td.day.nhaveEvents {
+        display: none;
+    }
 }
 @media only screen and (max-width: 639px){
     section > .wrap, section .dirs_menu .wrap {
@@ -6520,8 +6525,8 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
         top: 17px;
         content: url('../img/cln_arrow.png');
     }
-    table.orar tbody tr td.empty_cell{
-        display:none;
+    table.orar tbody  td.empty_cell,table.orar tbody  td.day.nhaveEvents {
+        display: none;
     }
     .com_list .ul_title{
         display:none;
