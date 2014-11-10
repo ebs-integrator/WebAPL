@@ -8,9 +8,9 @@
         colNames: ['ID', '<?= varlang('first-name-'); ?>', '<?= varlang('last-name-'); ?>', '<?= varlang('groups-'); ?>'],
         colModel: [
             {name: 'person_id', index: 'person_id', editable: false, editoptions: {readonly: true, size: 10}, hidden: true},
-            {name: 'first_name', index: 'first_name', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
-            {name: 'last_name', index: 'last_name', resizable: true, align: "left", sorttype: "text", editable: false, edittype: "text"},
-            {name: 'grupe', index: 'grupe', resizable: true, align: "left", sorttype: "text", editable: false, edittype: "text"},
+            {name: 'first_name', index: 'first_name', height: 50, resizable: true, sortable:false, align: "left", editable: true, edittype: "text"},
+            {name: 'last_name', index: 'last_name', resizable: true, sortable:false, align: "left", sorttype: "text", editable: false, edittype: "text"},
+            {name: 'grupe', index: 'grupe', resizable: true, sortable:false, align: "left", sorttype: "text", editable: false, edittype: "text"},
         ],
         rowNum: 30,
         multiselect: false,

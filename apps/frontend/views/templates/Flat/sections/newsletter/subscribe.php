@@ -21,7 +21,7 @@
 <form class="newsletter_subscribe_form" action="<?= url('newsletter/subscribe'); ?>">
     <label><?= varlang('aboneazatate-la-buletin'); ?></label>
     <input name="email" type="text" placeholder="<?= varlang('email-dvs'); ?>">
-    <input type="submit" value="<?= varlang('submit'); ?>">
+    <input type="submit" value="<?= varlang('submit-1'); ?>">
 </form>
 
 

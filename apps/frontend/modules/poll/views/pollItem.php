@@ -6,9 +6,14 @@
 
         <div class="form_error"></div>
 
+
         <div class='r_sond'>
-            <?php foreach ($poll->answers as $k => $answer) { ?>
-                <div><input type='radio' name='poll_answer' value="<?= $answer->answer_id; ?>" id='answer_<?= $answer->answer_id; ?>' <?=$k==0?'checked':''?>/><label for='answer_<?= $answer->answer_id; ?>'><?= $answer->title; ?></label></div>
+            <?php if (count($poll->answers) > 1) { ?>
+                <?php foreach ($poll->answers as $k => $answer) { ?>
+                    <div><input type='radio' name='poll_answer' value="<?= $answer->answer_id; ?>" id='answer_<?= $answer->answer_id; ?>' <?= $k == 0 ? 'checked' : '' ?>/><label for='answer_<?= $answer->answer_id; ?>'><?= $answer->title; ?></label></div>
+                <?php } ?>
+            <?php } else { ?>
+                    <i><?= varlang('invalid-sondaj'); ?></i>
             <?php } ?>
         </div>
         <hr class="reg">
@@ -24,8 +29,8 @@
 
         <input type="submit" value="<?= varlang('send-2'); ?>" class="snd_sbm">
     </form>
-    
-    <?=View::make('sections.elements.socials');?>
+
+    <?= View::make('sections.elements.socials'); ?>
 
 
     <script>

@@ -8,7 +8,7 @@ class PageController extends BaseController {
         $parts = explode('/', $query);
         if ($parts) {
             $uri = end($parts);
-            $this->data['page'] = Post::findURI($uri);
+            $this->data['page'] = Post::findURI($uri, 1);
             if ($this->data['page']) {
                 PostResources::init();
 
@@ -31,7 +31,7 @@ class PageController extends BaseController {
                 Template::addBreadCrumb("/", varlang('acasa'));
 
                 // Get pages resources
-                $this->data['parents'] = Post::getParents($this->data['page']['parent']);
+                $this->data['parents'] = Post::getParents($this->data['page']['parent'], 1);
                 $this->data['parent'] = Post::findID($this->data['page']['parent'], 1);
                 $this->data['colevels'] = Post::findWithParent($this->data['page']['parent']);
                 $this->data['super_parent'] = array_first($this->data['parents'], function ($key, $item) {
@@ -128,7 +128,6 @@ class PageController extends BaseController {
         $data = array(
             'general_pages' => Post::findGeneral(),
             'buttom_pages' => PostProperty::postsWithProperty('button_site', 3),
-            'phone_page' => PostProperty::postWithProperty('phone-page'),
             'favicon' => Files::getfile('website_favicon', 1),
             'alert_post' => Post::findAlertPost()
         );

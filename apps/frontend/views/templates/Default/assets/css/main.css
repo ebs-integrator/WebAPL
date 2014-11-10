@@ -2631,7 +2631,7 @@ ul.faq .subt{
 
 .compl_list li a{
     border-bottom:2px solid #f7f7f7;
-    height:110px;
+    /*height:110px;*/
     display:block;
     margin-bottom: 25px;
 }
@@ -2650,7 +2650,7 @@ ul.faq .subt{
 }
 .compl_list li a .compl_info{
     font:17px 'open_sanssemibold';
-    max-height:46px;
+    /*max-height:46px;*/
     overflow: hidden;
     color:#000;
 }
@@ -3543,6 +3543,9 @@ table.taxe tbody tr td:first-child{
     font:15px 'open_sansregular';
     height:auto;
     padding:2px 70px;
+}
+.right_menu .months li a:hover {
+    text-decoration: underline;
 }
 .ldmbox hr{
     background:#f7f7f7;

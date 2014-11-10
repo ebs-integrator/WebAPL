@@ -6,7 +6,9 @@
             <a href='javascript:;' class="alertclose"></a>
         </div>
         <div class='n_info'>
-            <div class='n_data'><?= date('d-m-Y, H:i', strtotime($alert_post->created_at)); ?></div>
+            <?php if (strtotime($alert_post->created_at)) { ?>
+                <div class='n_data'><?= date('d-m-Y, H:i', strtotime($alert_post->created_at)); ?></div>
+            <?php } ?>
             <div class='clearfix'></div>
             <p><a href="<?= Language::url('topost/' . $alert_post->id); ?>"><?= $alert_post->title; ?></a></p>
             <a href="<?= Language::url('topost/' . $alert_post->id); ?>" class="more"></a>
@@ -47,7 +49,7 @@
                 <input type="submit" value="<?= varlang('submit'); ?>">
             </form>
             <?php Event::fire('bottom_widgets'); ?>
-            <p class="copy"><img src="<?= res('assets/img/copy.png'); ?>"><span><a href="javascript:;"><?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?></span></p>
+            <p class="copy"><img src="<?= res('assets/img/usaid/lgsp_' . Core\APL\Language::ext() . '.png'); ?>"><span><a href="javascript:;"><?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?></span></p>
 
         </div>
 

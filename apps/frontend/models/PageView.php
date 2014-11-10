@@ -74,6 +74,36 @@ class PageView {
         }
         return static::defaultView($data);
     }
+    
+    public static function publicConsultations($data) {
+        if ($data['page']->feed_id) {
+            Post::$taxonomy = 2;
+            $item = Input::get('item');
+            $wdata['page_url'] = $data['page_url'];
+
+            if ($item) {
+                $post = Post::findURI($item, 1);
+                if ($post) {
+                    Post::oneView($post->id);
+                    
+                    Core\APL\Template::setMetaMultiple(array(
+                        'description' => $post->text,
+                        'og:description' => $post->text,
+                        'og:title' => $post->title
+                            ), true);
+
+                    $wdata['post'] = Post::withDinamicFields($post);
+                    $data["page"]->text .= View::make("sections.pages.modview.publicConsultation")->with($wdata);
+                } else {
+                    throw new Exception("Undefined article '{$item}'", 404);
+                }
+            } else {
+                $wdata["posts"] = Post::postsFeed($data['page']->feed_id, false);
+                $data["page"]->text .= View::make("sections.pages.modview.acquisitionsList")->with($wdata);
+            }
+        }
+        return static::defaultView($data);
+    }
 
     public static function projectsList($data) {
         if ($data['page']->feed_id) {
@@ -319,7 +349,7 @@ class PageView {
     public static function meetingFuture($data) {
         if ($data['page']->feed_id) {
             Post::$taxonomy = 2;
-            $wdata['post'] = Post::postsFeed($data['page']->feed_id, false, true)->where(Post::getField('created_at'), '>', DB::raw('CURRENT_TIMESTAMP'))->first();
+            $wdata['post'] = Post::postsFeed($data['page']->feed_id, false, true)->where(Post::getField('created_at'), '>=', DB::raw('CURRENT_TIMESTAMP'))->first();
             if ($wdata['post']) {
                 Post::oneView($wdata['post']['id']);
                 
@@ -403,6 +433,8 @@ class PageView {
 
             $data['current_year'] = intval(Input::get('year'));
             $data['current_month'] = intval(Input::get('month'));
+
+            $data['month_exists'] = Post::findExistsDates($data['page']->feed_id);
 
             if ($item) {
                 $wdata["post"] = Post::findURI($item, 1);

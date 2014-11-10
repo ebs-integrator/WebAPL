@@ -56,6 +56,7 @@ class Person extends \Core\APL\ExtensionController {
         Route::post('person/save', array('before' => 'auth', array($this, 'save')));
         Route::post('person/save_lang', array('before' => 'auth', array($this, 'save_lang')));
         Route::post('person/save_dynamic_fields', array('before' => 'auth', array($this, 'save_dynamic_fields')));
+        Route::post('person/delete', array('before' => 'auth', array($this, 'deleteperson')));
 
         Route::post('person/save_post_attach', array('before' => 'auth', array($this, 'save_post_attach')));
         Route::post('person/save_person_groups', array('before' => 'auth', array($this, 'save_person_groups')));
@@ -69,7 +70,7 @@ class Person extends \Core\APL\ExtensionController {
         Event::listen('language_created', array($this, 'language_created'));
         Event::listen('language_deleted', array($this, 'language_deleted'));
 
-        Template::registerViewMethod('page', 'persons_list', 'Tabel persoane (consilieri)', null, true);
+        //Template::registerViewMethod('page', 'persons_list', 'Tabel persoane (consilieri)', null, true);
         Template::registerViewMethod('page', 'group_with_persons', 'Grupe de persoane', null, true);
         Template::registerViewMethod('page', 'persons_with_photo', 'Personalități', null, true);
         Template::registerViewMethod('page', 'persons_big', 'Viceprimar', null, true);
@@ -355,7 +356,7 @@ class Person extends \Core\APL\ExtensionController {
         $person->phone = Input::get('phone');
         $person->email = Input::get('email');
         $person->date_birth = Input::get('date_birth');
-        $person->for_audience = Input::get('for_audience') ? 1 : 0;
+//        $person->for_audience = Input::get('for_audience') ? 1 : 0;
         $person->save();
 
         if ($id) {
@@ -512,6 +513,18 @@ class Person extends \Core\APL\ExtensionController {
     public function language_deleted($lang_id) {
         PersonLangModel::where('lang_id', $lang_id)->delete();
         PersonGroupLang::where('lang_id', $lang_id)->delete();
+    }
+    
+    public function deleteperson() {
+        $id = Input::get('id');
+        
+        \PersonModel::where('id', $id)->delete();
+        \PersonLangModel::where('person_id', $id)->delete();
+        \Files::dropMultiple('person', $id);
+        \Files::dropMultiple('person_chat', $id);
+        \PersonRelModel::where('person_id', $id)->delete();
+        
+        return \Illuminate\Support\Facades\Redirect::to('person/list');
     }
 
 }

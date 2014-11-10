@@ -1,8 +1,6 @@
 <p class="tel"><?= varlang('nr-phone'); ?></p>
-<?php if (isset($phone_page)) { ?>
-    <a class="mini_contacte" href="<?= Core\APL\Language::url('topost/' . $phone_page->id); ?>"></a>
-    <a class="mini_contacte1" href="<?= Core\APL\Language::url('topost/' . $phone_page->id); ?>"></a>
-<?php } ?>
+    <a class="mini_contacte" href="<?= Core\APL\Language::url('topage/contactsView'); ?>"></a>
+    <a class="mini_contacte1" href="<?= Core\APL\Language::url('topage/contactsView'); ?>"></a>
 <div class="cont">
     <div class="contact_us_btn">
         <button class="contact_us"><?= varlang('contact-us'); ?></button>
@@ -20,11 +18,9 @@
                 </li>
             </ul>
             <div class="clearfix"></div>
-            <?php if (isset($phone_page) && $phone_page) { ?>
-                <div class="anp">
-                    <a href="<?= Core\APL\Language::url('topost/' . $phone_page->id); ?>"><?= varlang('all-nr-phone'); ?></a>
-                </div>  
-            <?php } ?>
+            <div class="anp">
+                <a href="<?= Core\APL\Language::url('topropr/more_contacts'); ?>"><?= varlang('all-nr-phone'); ?></a>
+            </div>
             <div class="anp">
                 <a href="<?= varlang('orar-link'); ?>"><?= varlang('orar-autobus'); ?></a>
             </div>

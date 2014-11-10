@@ -8,8 +8,8 @@
         colNames: ['ID', '<?= varlang('name-3'); ?>', '<?= varlang('state'); ?>'],
         colModel: [
             {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
-            {name: 'name', index: 'name', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
-            {name: 'enabled', index: 'enabled', resizable: true, align: "left", sorttype: "text", editable: true, edittype: "select", editoptions: {value: '0:<?= varlang('inactive'); ?>;1:<?= varlang('active'); ?>'}, formatter: function(value) {
+            {name: 'name', index: 'name', height: 50, resizable: true, sortable:false, align: "left", editable: true, edittype: "text"},
+            {name: 'enabled', index: 'enabled', resizable: true, sortable:false, align: "left", sorttype: "text", editable: true, edittype: "select", editoptions: {value: '0:<?= varlang('inactive'); ?>;1:<?= varlang('active'); ?>'}, formatter: function(value) {
                     return "<center data-value='" + value + "'>" + (value == 1 ? '<span class="label label-success"><?= varlang('active'); ?></span>' : '<span class="label label-danger"><?= varlang('inactive'); ?></span>') + "</center>";
                 }, unformat: function(value) {
                     return value === '<?= varlang('active'); ?>' ? 1 : 0;

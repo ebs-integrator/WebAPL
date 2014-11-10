@@ -3,21 +3,21 @@
 class FeedField extends Eloquent {
 
     use EloquentTrait;
-    
+
     protected $table = 'apl_feed_field';
     public $timestamps = false;
 
     public static function get($feed_id, $post_id, $lang_id = 0, $in_form = 1) {
-        
-        
+
+
         $stmt = FeedField::join('apl_feed_rel', 'apl_feed_field.id', '=', 'apl_feed_rel.feed_field_id')
                 ->leftJoin('apl_feed_field_value', function($join) use ($post_id, $lang_id) {
-                            $join->on('apl_feed_field_value.feed_field_id', '=', 'apl_feed_field.id');
-                            $join->where('apl_feed_field_value.post_id', '=', (int)$post_id);
-                            if ($lang_id) {
-                                $join->where('apl_feed_field_value.lang_id', '=', (int)$lang_id);
-                            }
-                        })
+                    $join->on('apl_feed_field_value.feed_field_id', '=', 'apl_feed_field.id');
+                    $join->where('apl_feed_field_value.post_id', '=', (int) $post_id);
+                    if ($lang_id) {
+                        $join->where('apl_feed_field_value.lang_id', '=', (int) $lang_id);
+                    }
+                })
                 ->select('apl_feed_field.*', 'apl_feed_field_value.value');
 
         if (is_array($feed_id)) {
@@ -25,7 +25,7 @@ class FeedField extends Eloquent {
         } else {
             $stmt = $stmt->where('apl_feed_rel.feed_id', $feed_id);
         }
-        
+
         if ($lang_id) {
             $stmt = $stmt->where('apl_feed_field.lang_dependent', 1);
         } else {
@@ -35,6 +35,14 @@ class FeedField extends Eloquent {
         $stmt = $stmt->where('apl_feed_field.in_form', $in_form);
 
         return $stmt->distinct()->get();
+    }
+
+    public static function get_($feed_id) {
+        return FeedField::join(FeedRel::getTableName(), FeedRel::getField('feed_field_id'), '=', FeedField::getField('id'))
+                        ->where(FeedRel::getField('feed_id'), $feed_id)
+                        ->select(FeedField::getField('*'))
+                        ->distinct()
+                        ->get();
     }
 
 }

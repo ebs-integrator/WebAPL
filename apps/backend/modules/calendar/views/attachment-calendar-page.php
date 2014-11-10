@@ -1,5 +1,5 @@
 <tr>
-    <th><?= varlang('calendar-1'); ?></th>
+    <th><?= varlang('event-group'); ?></th>
     <td>
         <form id="attach_page_calendar">
             <input type="hidden" name="page_id" value="<?=$post['id'];?>" />

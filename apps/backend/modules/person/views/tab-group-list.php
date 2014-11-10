@@ -11,7 +11,7 @@
         ],
         colModel: [
             {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
-            {name: 'name', index: 'name', height: 50, resizable: true, align: "left", editable: true, edittype: "text"},
+            {name: 'name', index: 'name', height: 50, resizable: true, sortable:false, align: "left", editable: true, edittype: "text"},
         ],
         rowNum: 30,
         multiselect: false,

@@ -37,7 +37,7 @@ class Socialcomplaints extends \Core\APL\ExtensionController {
     public function secial_complaints_list($data) {
 
         $wdata = array(
-            'complaints' => SComplaintsModel::where('enabled', 1)->where('post_id', $data['page']->id)->orderBy('date_created', 'desc')->get()
+            'complaints' => SComplaintsModel::where('enabled', 1)->where('is_private', 0)->where('post_id', $data['page']->id)->orderBy('date_created', 'desc')->paginate(5)
         );
 
         $data['page']->text = Template::moduleView($this->module_name, 'views.complaints_list', $wdata) . $data['page']->text;
@@ -48,15 +48,15 @@ class Socialcomplaints extends \Core\APL\ExtensionController {
     public function create_complaint() {
 
         $validator = Validator::make(array(
-                    'name' => Input::get('name'),
-                    'email' => Input::get('email'),
-                    'subject' => Input::get('subject'),
-                    'capcha' => \SimpleCapcha::valid('complaint', Input::get('capcha')) ? 1 : null
+                    varlang('numele-prenume') => Input::get('name'),
+                    varlang('email') => Input::get('email'),
+                    varlang('subiect-1') => Input::get('subject'),
+                    varlang('cod-de-verificare') => \SimpleCapcha::valid('complaint', Input::get('capcha')) ? 1 : null
                         ), array(
-                    'name' => 'required',
-                    'email' => 'email|required',
-                    'subject' => 'required',
-                    'capcha' => 'required'
+                    varlang('numele-prenume') => 'required',
+                    varlang('email') => 'email|required',
+                    varlang('subiect-1') => 'required',
+                    varlang('cod-de-verificare') => 'required'
         ));
 
         $return = array(
@@ -84,7 +84,7 @@ class Socialcomplaints extends \Core\APL\ExtensionController {
                 foreach ($sendToUsers as $user) {
                     $data['user'] = $user;
                     \Mail::send('views.complaint_email', $data, function($message) use ($user) {
-                        $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'SendMail');
+                        $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'WebLPA');
                         $message->subject("New message");
                         $message->to($user->email);
                     });

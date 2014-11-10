@@ -96,6 +96,13 @@ class Template {
                 'screen' => '',
                 'info' => ''
             ),
+            'publicConsultations' => array(
+                'name' => 'Consultări publice',
+                'function' => array('PageView', 'publicConsultations'),
+                'support_item' => true,
+                'screen' => '',
+                'info' => ''
+            ),
             'projectsList' => array(
                 'name' => 'Listă de proiecte',
                 'function' => array('PageView', 'projectsList'),
@@ -146,7 +153,7 @@ class Template {
                 'info' => ''
             ),
             'mapPage' => array(
-                'name' => 'Harta',
+                'name' => 'Harta site-ului',
                 'function' => array('PageView', 'mapPage'),
                 'support_item' => false,
                 'screen' => '',

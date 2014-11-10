@@ -5,13 +5,15 @@
     </p>
     <ul>
         <?php foreach ($posts as $item) { ?>
-        <li>
-            <div class="left">
-                <p><?=$item->title;?></p>
-                <p class="green"><a href="<?=$item->website;?>" target="_blank"><?=$item->website;?></a> </p>
-            </div>
-            <div class="right"><?=date("d/m/Y", strtotime($item->created_at));?></div>
-        </li>
+            <li>
+                <div class="left">
+                    <p><?= $item->title; ?></p>
+                    <p class="green"><a href="<?= $item->website; ?>" target="_blank"><?= $item->website; ?></a> </p>
+                </div>
+                <?php if (strtotime($item->created_at)) { ?>
+                    <div class="right"><?= date("d/m/Y", strtotime($item->created_at)); ?></div>
+                <?php } ?>
+            </li>
         <?php } ?>
     </ul>
 </div>

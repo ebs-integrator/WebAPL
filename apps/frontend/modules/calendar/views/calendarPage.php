@@ -86,8 +86,8 @@ $months = array('', 'Ianuarie', 'Februarie', 'Martie', 'Aprilie', 'Mai', 'Iunie'
                                 $dayOfWeek++;
                             }
                         }
-
-                        echo 8 - $dayOfWeek > 0 ? str_repeat('<td class="empty_cell">&nbsp;</td>', 8 - $dayOfWeek) : '';
+                        
+                        echo $dayOfWeek > 1 ? str_repeat('<td class="empty_cell">&nbsp;</td>', 8 - $dayOfWeek) : '';
                         echo '</tr></table>';
 
                         if ($month == $current_month && $year == $current_year) {

@@ -68,5 +68,16 @@ class SearchController extends BaseController {
             throw new Exception("Post not found #{$modview}");
         }
     }
+    
+    public function topropr($property) {
+        $post = PostProperty::postWithProperty($property);
+
+        if ($post) {
+            $uri = Post::getFullURI($post->id, true);
+            return Redirect::to($uri);
+        } else {
+            throw new Exception("Post not found #{$property}");
+        }
+    }
 
 }

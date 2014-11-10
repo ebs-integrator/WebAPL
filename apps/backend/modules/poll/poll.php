@@ -55,7 +55,7 @@ class Poll extends \Core\APL\ExtensionController {
         Route::get('poll/answer/edit/{id}', array('before' => 'auth', array($this, 'edit_answer')));
         Route::post('poll/answer/save', array('before' => 'auth', array($this, 'save_answer')));
         Route::get('poll/answer/delete/{id}', array('before' => 'auth', array($this, 'delete_answer')));
-
+        Route::post('poll/answer/jqsave', array('before' => 'auth', array($this, 'jqsave_answer')));
 
         Event::listen('construct_left_menu', array($this, 'left_menu_item'));
         Event::listen('language_created', array($this, 'language_created'));
@@ -107,7 +107,7 @@ class Poll extends \Core\APL\ExtensionController {
 
         $jqgrid = new jQgrid('apl_poll_answer');
         return $jqgrid->populate(function($start, $limit) use($poll_lang_id) {
-                    $answers = PollAnswerModel::select(PollAnswerModel::getField('id'), PollAnswerModel::getField('poll_id'), PollAnswerLangModel::getField('title'))
+                    $answers = PollAnswerModel::select(PollAnswerModel::getField('id'), PollAnswerModel::getField('poll_id'), PollAnswerModel::getField('ord'), PollAnswerLangModel::getField('title'))
                             ->join(\PollAnswerLangModel::getTableName(), PollAnswerModel::getField('id'), '=', \PollAnswerLangModel::getField('answer_id'))
                             ->where(array(\PollAnswerLangModel::getField('lang_id') => \Core\APL\Language::getId()))
                             ->skip($start)
@@ -117,17 +117,27 @@ class Poll extends \Core\APL\ExtensionController {
                             ->get();
                     $list = [];
                     foreach ($answers as $answer) {
-                        $list[] = array(
+                        $list[] = array( 
                             'id' => $answer->id,
                             'title' => $answer->title,
                             'count' => PollVotesModel::where(array(
                                 'poll_id' => $answer->poll_id,
                                 'answer_id' => $answer->id
-                            ))->count()
+                            ))->count(),
+                            'ord' => $answer->ord
                         );
                     }
                     return $list;
                 });
+    }
+
+    public function jqsave_answer() {
+        \User::onlyHas('poll-edit');
+
+        $jqgrid = new jQgrid(\PollAnswerModel::getTableName());
+        $jqgrid->operation(array(
+            'ord' => Input::get('ord')
+        ));
     }
 
     public function create_answer($id) {
@@ -163,7 +173,7 @@ class Poll extends \Core\APL\ExtensionController {
         $answers = Input::get('answer');
         $answer_id = Input::get('answer_id');
         $general = Input::get('general');
-        
+
         if ($general) {
             $answ = PollAnswerModel::find($answer_id);
             if ($answ) {
@@ -171,7 +181,7 @@ class Poll extends \Core\APL\ExtensionController {
                 $answ->save();
             }
         }
-        
+
         foreach ($answers as $anl_id => $ans) {
             $anw = PollAnswerLangModel::find($anl_id);
             if ($anw->answer_id == $answer_id) {
@@ -203,6 +213,21 @@ class Poll extends \Core\APL\ExtensionController {
      */
     public function form($id = 0) {
         User::onlyHas('poll-edit');
+
+        if ($id === 0) {
+            $poll = new PollModel;
+            $poll->save();
+            $id = $poll->id;
+
+            foreach (\Core\APL\Language::getList() as $lang) {
+                $pollLang = new PollQuestionModel;
+                $pollLang->poll_id = $id;
+                $pollLang->lang_id = $lang->id;
+                $pollLang->save();
+            }
+
+            return \Illuminate\Support\Facades\Redirect::to('poll/form/' . $id);
+        }
 
         $data = array(
             'poll' => PollModel::find($id),
@@ -325,14 +350,9 @@ class Poll extends \Core\APL\ExtensionController {
     public function poll_del($id = 0) {
         User::onlyHas('poll-edit');
 
-        $questions = PollQuestionModel::where(array('poll_id' => $id))->get();
-
         PollModel::where(array('id' => $id))->delete();
         PollQuestionModel::where(array('poll_id' => $id))->delete();
-
-        foreach ($questions as $question) {
-            PollAnswerModel::where(array('poll_question_id' => $question->id))->delete();
-        }
+        PollAnswerModel::where(array('poll_id' => $id))->delete();
 
         return Redirect::to('poll/list');
     }

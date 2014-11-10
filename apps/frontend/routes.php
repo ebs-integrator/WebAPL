@@ -24,6 +24,7 @@ Route::group(array('prefix' => Core\APL\Language::ext()), function() {
     
     Route::get('topost/{id}', 'SearchController@topost');
     Route::get('topage/{uri}', 'SearchController@topage')->where(array('uri' => '[A-Za-z0-9_-]+'));
+    Route::get('topropr/{uri}', 'SearchController@topropr')->where(array('uri' => '[A-Za-z0-9_-]+'));
 
     Route::any('rss', array('PostResources', 'rssPage'));
 });

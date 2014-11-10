@@ -3,9 +3,11 @@
         <p><?= $post->title; ?></p>
     </div>
 
-    <div class='data'>
-        <p class="nr"><?= date('d-m-Y, H:i', strtotime($post->created_at)); ?></p>                    
-    </div>
+    <?php if (strtotime($post->created_at)) { ?>
+        <div class='data'>
+            <p class="nr"><?= date('d-m-Y, H:i', strtotime($post->created_at)); ?></p>                    
+        </div>
+    <?php } ?>
 
     <div class="stats">
         <?php if (time() < strtotime($post->date_point)) { ?> 
@@ -23,7 +25,7 @@
         <?php } ?>
         <div class="clearfix"></div>
     </div>
-    
+
     <?php if ($post->docs) { ?>
         <ul class="dcr">
             <li><a href='javascript:;'><?= varlang('documente'); ?></a>
@@ -39,7 +41,13 @@
     <?php } ?>
 
     <div class="acz_details">
-        <?= $post->text; ?>
+        <?php if ($post->show_pcomment) { ?>
+            <div class='live_comment' data-pid="news<?= $post->id; ?>">
+                <?= Core\APL\Shortcodes::execute($post->text, [$post, ['post' => $post]]); ?>
+            </div>
+        <?php } else { ?>
+            <div><?= Core\APL\Shortcodes::execute($post->text, ['post' => $post]); ?></div>
+        <?php } ?>
 
         <?= View::make('sections.elements.socials'); ?>
         <div class="hr_grey"></div>

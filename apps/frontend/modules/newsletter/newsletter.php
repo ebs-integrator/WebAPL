@@ -54,9 +54,9 @@ class Newsletter extends \Core\APL\ExtensionController {
     public function subscribe() {
 
         $validator = Validator::make(array(
-                    'email' => Input::get('email')
+                    varlang('email') => Input::get('email')
                         ), array(
-                    'email' => 'email|required'
+                    varlang('email') => 'email|required'
         ));
 
         $return = array(

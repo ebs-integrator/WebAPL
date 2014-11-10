@@ -2,6 +2,14 @@
     <?= varlang('gallery'); ?>
 </h3>
 
+<form action="<?=url('gallery/create');?>" method="post">
+    <input type="text" class="form-control col-xs-push-4" placeholder="<?= varlang('name--3'); ?>" name="name" />
+    <div class="c10"></div>
+    <input type="submit" class="btn btn-success" value="<?= varlang('create-gallery'); ?>" />
+</form>
+  
+<div class="c20"></div>
+
 <table class="table table-bordered table-hover">
     <?php foreach ($list as $item) { ?>
     <tr>
@@ -14,9 +22,3 @@
     </tr>
     <?php } ?>
 </table>
-
-<form action="<?=url('gallery/create');?>" method="post">
-    <input type="text" class="form-control col-xs-push-4" placeholder="<?= varlang('name--3'); ?>" name="name" />
-    <div class="c10"></div>
-    <input type="submit" class="btn btn-success" value="<?= varlang('create-gallery'); ?>" />
-</form>

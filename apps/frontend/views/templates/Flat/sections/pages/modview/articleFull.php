@@ -1,5 +1,7 @@
 <p class="det_news"><?= $post->title; ?></p>
-<p class="p_data"><?= date("d-m-Y, H:i", strtotime($post->created_at)); ?>    </p>
+<?php if (strtotime($post->created_at)) { ?>
+    <p class="p_data"><?= date("d-m-Y, H:i", strtotime($post->created_at)); ?>    </p>
+<?php } ?>
 <div class="hr_dbl"></div>
 <div class="u_a">
     <?php if ($post->cover) { ?>
@@ -11,11 +13,11 @@
     <?php Event::fire('post_top_container', $post); ?>
 
     <?php if ($post->show_pcomment) { ?>
-        <div class='cont live_comment' data-pid="news<?= $post->id; ?>">
+        <div class='live_comment' data-pid="news<?= $post->id; ?>">
             <?= Core\APL\Shortcodes::execute($post->text); ?>
         </div>
     <?php } else { ?>
-        <div class='cont'><?= Core\APL\Shortcodes::execute($post->text); ?></div>
+        <div><?= Core\APL\Shortcodes::execute($post->text); ?></div>
     <?php } ?>
 
     <?php Event::fire('post_bottom_container', $post); ?>

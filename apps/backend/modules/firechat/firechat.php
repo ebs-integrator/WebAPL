@@ -27,7 +27,7 @@ class Firechat extends \Core\APL\ExtensionController {
         Route::post('firechat/sendmail', array('before' => 'auth', array($this, 'sendmail')));
 
         Route::get('firechat/settings', array('before' => 'auth', array($this, 'settings')));
-        
+
         Event::listen('construct_left_menu', array($this, 'left_menu_item'));
 
         $this->layout = Template::mainLayout();
@@ -44,7 +44,7 @@ class Firechat extends \Core\APL\ExtensionController {
 
         return $this->layout;
     }
-    
+
     public function settings() {
         \User::onlyHas('chat-view');
 
@@ -64,7 +64,7 @@ class Firechat extends \Core\APL\ExtensionController {
 
         if ($data['person']) {
 
-            $tokenGen = new FireBaseAuth("CNxpPpOaK5Bz7kofs7LaJtibgi7hqQALICdu96H5");
+            $tokenGen = new FireBaseAuth(\SettingsModel::one('firechat_key'));
             $data['token'] = $tokenGen->createToken(array("uid" => "person-{$data['person']->id}"), array("admin" => True));
 
             $data['person_lang'] = $data['person']->langs()->where('lang_id', \Core\APL\Language::getId())->first();
@@ -122,8 +122,8 @@ class Firechat extends \Core\APL\ExtensionController {
             $data['html'] = $html;
             Template::viewModule($this->module_name, function () use ($data, $person) {
                 \Mail::send('views.email-mess', $data, function($message) use ($person) {
-                    $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'Firechat');
-                    $message->subject("Recent chat messages");
+                    $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'WebLPA');
+                    $message->subject("Discutie on-line din " . date("Y-m-d H:i"));
                     $message->to($person->email);
                 });
             });

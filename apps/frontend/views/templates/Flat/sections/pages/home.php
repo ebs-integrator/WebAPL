@@ -33,7 +33,9 @@
                 <div class="fcc">
                     <p class="f_title"><?= varlang('stiri'); ?></p>
                     <?php foreach ([$home_posts[0]] as $item) { ?>
-                        <div class="data"><?= date('d-m-Y', strtotime($item->created_at)); ?></div>
+                        <?php if (strtotime($item->created_at)) { ?>
+                            <div class="data"><?= date('d-m-Y', strtotime($item->created_at)); ?></div>
+                        <?php } ?>
                         <a href="<?= Language::url('topost/' . $item->id); ?>" class="f_artc"><?= $item->title; ?></a>
                         <p><?= Str::words(strip_tags($item->text), 30); ?></p>
                     <?php } ?>
@@ -48,7 +50,9 @@
                 <div class="fcc">
                     <p class="f_title"><?= varlang('anunturi'); ?></p>
                     <?php foreach ([$home_ads[0]] as $item) { ?>
-                        <div class="data"><?= date('d-m-Y', strtotime($item->created_at)); ?></div>
+                        <?php if (strtotime($item->created_at)) { ?>
+                            <div class="data"><?= date('d-m-Y', strtotime($item->created_at)); ?></div>
+                        <?php } ?>
                         <a href="<?= Language::url('topost/' . $item->id); ?>" class="f_artc"><?= $item->title; ?></a>
                         <p><?= Str::words(strip_tags($item->text), 30); ?></p>
                     <?php } ?>

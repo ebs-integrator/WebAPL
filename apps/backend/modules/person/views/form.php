@@ -43,3 +43,9 @@
         </div>
     <?php } ?>
 </div>
+
+<form action="<?=url('person/delete');?>" method="post">
+    <input type="hidden" name="id" value="<?=$person->id;?>" />
+    
+    <button type="submit" class="btn btn-danger pull-right" onclick="return confirm('<?= varlang('confirm-person-delete'); ?>');"><?= varlang('delete-person'); ?></button>
+</form>

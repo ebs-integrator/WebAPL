@@ -19,7 +19,7 @@
                 <nav class="navbar navbar-default" role="navigation">
                     <div class="container-fluid">
                         <div class="navbar-header">
-                            <span class="navbar-brand">INSTALARE PLATFORMĂ</span>
+                            <span class="navbar-brand">WebAPL</span>
                         </div>
 
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">

@@ -66,6 +66,7 @@ jQuery(document).ready(function($) {
         var form = $(this).closest('form');
         // ad new task to list
         auto_save_tasks.push(function() {
+
             form.ajaxForm({
                 success: function(data) {
                     if (typeof data.redirect_to != 'undefined') {

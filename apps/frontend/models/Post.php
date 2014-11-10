@@ -181,10 +181,10 @@ class Post extends Eloquent {
         );
     }
 
-    public static function getParents($parent_id) {
+    public static function getParents($parent_id, $enabled = 0) {
         $list = array();
         while ($parent_id) {
-            $item = Post::findID($parent_id);
+            $item = Post::findID($parent_id, $enabled);
             if ($item) {
                 $list[] = $item->toArray();
                 $parent_id = $item->parent;
@@ -201,7 +201,7 @@ class Post extends Eloquent {
         foreach (array_reverse($parents) as $parent) {
             $uri_segments[] = $parent['uri'];
         }
-        
+
         $furi = implode('/', $uri_segments);
 
         if ($full) {
@@ -333,8 +333,8 @@ class Post extends Eloquent {
                 foreach ($words as $word) {
                     $word = trim($word);
                     if ($word) {
-                        $query = $query->orWhere(PostLang::getField('title'), 'like', "%{$word}%");
-                        $query = $query->orWhere(PostLang::getField('text'), 'like', "%{$word}%");
+                        $query = $query->orWhere(DB::raw("cast(" . PostLang::getField('title') . " as char)"), 'like', DB::raw("concat('%', cast('" . $word . "' as char) ,'%')"));
+                        $query = $query->orWhere(DB::raw("cast(" . PostLang::getField('text') . " as char)"), 'like', DB::raw("concat('%', cast('" . $word . "' as char) ,'%')"));
                     }
                 }
             });
@@ -352,6 +352,44 @@ class Post extends Eloquent {
     public static function rssPosts() {
         static::$taxonomy = 2;
         return Post::prepareQuery()->where(PostLang::getField('enabled'), 1)->orderBy(Post::getField('created_at'), 'desc')->take(50)->get();
+    }
+
+    public static function findExistsDates($feed_id) {
+        $posts = Post::prepareQuery(2)
+                ->join(FeedPost::getTableName(), Post::getField("id"), '=', FeedPost::getField("post_id"))
+                ->where(FeedPost::getField("feed_id"), $feed_id)
+                ->where(PostLang::getField('enabled'), 1)
+                ->where(Post::getField('is_trash'), 0)
+                ->orderBy(DB::raw("DATE(" . Post::getField('created_at') . ")"), 'asc')
+                ->select(
+                        DB::raw("DATE(" . Post::getField('created_at') . ") as data")
+                )
+                ->remember(SettingsModel::one('cachelife'))
+                ->get();
+
+
+        $dates = [
+            'years' => [],
+            'months' => []
+        ];
+        foreach ($posts as $post) {
+            $tmst = strtotime($post->data);
+            $y = (int) date("Y", $tmst);
+            $m = (int) date("m", $tmst);
+            $d = (int) date("d", $tmst);
+            $dates['years'][$y] = $y;
+            if (isset($dates['months'][$y])) {
+                if (isset($dates['months'][$y][$m])) {
+                    $dates['months'][$y][$m] ++;
+                } else {
+                    $dates['months'][$y][$m] = 1;
+                }
+            } else {
+                $dates['months'][$y] = [$m => 1];
+            }
+        }
+
+        return $dates;
     }
 
 }

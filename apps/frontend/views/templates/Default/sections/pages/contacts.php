@@ -1,7 +1,7 @@
 <section>
     <div class="dirs_menu">
         <div class="wrap">
-            <a href="javascript:;"><?= varlang('acasa'); ?> »</a>
+            <a href="/"><?= varlang('acasa'); ?> »</a>
             <a href="javascript:;"><?= varlang('contacts'); ?></a>
         </div>
     </div>
@@ -47,7 +47,7 @@
                 </ul>
                 <div class="prp">
                     <img  alt="" src="<?= res('assets/img/phone_book.png'); ?>">
-                    <a href="<?= PostProperty::postWithProperty('more_contacts', true)->url; ?>"><?= varlang('all-nr-phone'); ?></a>
+                    <a href="<?= Core\APL\Language::url('topropr/more_contacts');?>"><?= varlang('all-nr-phone'); ?></a>
                 </div>
                 <?php Event::fire('contact_col1_contructor'); ?>
                 <div class="clearfix25"></div>

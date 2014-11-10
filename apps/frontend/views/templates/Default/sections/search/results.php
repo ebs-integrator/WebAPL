@@ -39,7 +39,7 @@
                     <a href='javascript:;'><?= varlang('chat-online'); ?></a>
                 </li>
                 <li class='location'>
-                    <a href='contacte.php'><?= varlang('cum-ne-gasiti'); ?></a>
+                    <a href='<?= Language::url('topage/contactsView'); ?>'><?= varlang('cum-ne-gasiti'); ?></a>
                 </li>
             </ul>
         </div>

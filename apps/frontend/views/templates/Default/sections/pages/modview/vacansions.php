@@ -2,17 +2,21 @@
     <p class='title'>
         <?= $post->title; ?>
     </p>
-    <div class='data'>
-        <p class="nr"><?= date('d-m-Y, H:i', strtotime($post->created_at)); ?></p>
-    </div>
+    <?php if (strtotime($post->created_at)) { ?>
+        <div class='data'>
+            <p class="nr"><?= date('d-m-Y, H:i', strtotime($post->created_at)); ?></p>
+        </div>
+    <?php } ?>
     <div class='p_i ldm_li'><?= Core\APL\Shortcodes::execute($post->text, array('post' => $post)); ?></div>
+    <?php if (strtotime($post->date_point)) { ?>
     <div class="ldm_middle">
         <p class="tda">
             <?= varlang('termen-limita'); ?> : <span><?= date('d-m-Y, H:i', strtotime($post->date_point)); ?></span>
         </p>
     </div>
+    <?php } ?>
     <hr>
-    <?= Event::fire('cv_form', array('post'=>$post), true);?>
+    <?= Event::fire('cv_form', array('post' => $post), true); ?>
     <div class='clearfix'></div>
     <?= View::make('sections.elements.socials'); ?>
     <div class="hr_grey"></div>
@@ -22,7 +26,9 @@
     <?php foreach ($posts as $item) { ?>
         <li>
             <a href="<?= $page_url; ?>?item=<?= $item->uri; ?>">
-                <span><?= date("d-m-Y", strtotime($item->created_at)); ?> </span>
+                <?php if (strtotime($item->created_at)) { ?>
+                    <span><?= date("d-m-Y", strtotime($item->created_at)); ?> </span>
+                <?php } ?>
                 <p><?= $item->title; ?></p>
             </a>
         </li>

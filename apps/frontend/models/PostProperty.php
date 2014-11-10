@@ -37,7 +37,7 @@ class PostProperty extends Eloquent {
             $row['url'] = Post::getFullURI($row->id);
         }
 
-        return $row;
+        return $row ? $row : new stdClass();
     }
 
     public static $properties = array();

@@ -131,16 +131,16 @@ class Person extends \Core\APL\ExtensionController {
     public function subscribe_to_audience() {
         $validator = Validator::make(array(
                     'person_id' => Input::get('person_id'),
-                    'email' => Input::get('email'),
-                    'name' => Input::get('name'),
-                    'phone' => Input::get('phone'),
-                    'capcha' => SimpleCapcha::valid('person_subscribe', Input::get('capcha')) ? 1 : null
+                    varlang('email') => Input::get('email'),
+                    varlang('name-last-name') => Input::get('name'),
+                    varlang('telefon') => Input::get('phone'),
+                    varlang('cod-verificare') => SimpleCapcha::valid('person_subscribe', Input::get('capcha')) ? 1 : null
                         ), array(
                     'person_id' => 'required',
-                    'name' => 'required',
-                    'email' => 'email|required',
-                    'phone' => 'required',
-                    'capcha' => 'required'
+                    varlang('name-last-name') => 'required',
+                    varlang('email') => 'email|required',
+                    varlang('telefon') => 'required',
+                    varlang('cod-verificare') => 'required'
         ));
 
         $return = array(

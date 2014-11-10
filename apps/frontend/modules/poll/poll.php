@@ -79,11 +79,11 @@ class Poll extends \Core\APL\ExtensionController {
 
         $validator = Validator::make(array(
                     'id' => $id,
-                    'poll_answer' => $answer_id,
+                    varlang('poll-raspunsuri') => $answer_id,
                     'capcha' => SimpleCapcha::valid('poll', $capcha) ? 1 : null
                         ), array(
                     'id' => 'required',
-                    'poll_answer' => 'required',
+                    varlang('poll-raspunsuri') => 'required',
                     'capcha' => 'required'
         ));
 

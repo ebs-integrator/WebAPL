@@ -1,6 +1,12 @@
 <h2><?= $post->title; ?></h2>
 <div> 
-    <?= $post->text; ?>
+    <?php if ($post->show_pcomment) { ?>
+        <div class='live_comment' data-pid="news<?= $post->id; ?>">
+            <?= Core\APL\Shortcodes::execute($post->text, [$post, ['post' => $post]]); ?>
+        </div>
+    <?php } else { ?>
+        <div><?= Core\APL\Shortcodes::execute($post->text, ['post' => $post]); ?></div>
+    <?php } ?>
 </div>
 <?php if (count($posts)) { ?>
     <div class="m_video">
@@ -30,7 +36,9 @@
                         }
                     }
                     ?>
-                    <p class="video_d"><span><?= date("d-m-Y, H:i", strtotime($item->created_at)); ?></span></p>
+                    <?php if (strtotime($item->created_at)) { ?>
+                        <p class="video_d"><span><?= date("d-m-Y, H:i", strtotime($item->created_at)); ?></span></p>
+                    <?php } ?>
                     <p class="video_i"><?= $item->title; ?></p>
                 </a>
             </div>
