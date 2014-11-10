@@ -36,6 +36,22 @@
         <?php if ($post->pr_price) { ?>
             <tr><th><?= varlang('valoarea-totala'); ?></th><td><?= $post->pr_price; ?></td></tr>
         <?php } ?>
+            
+        <?php if ($post->pr_aditional_fields) { ?>
+            <?php
+            $fields = @unserialize($post->pr_aditional_fields);
+            if (is_array($fields)) {
+                foreach ($fields as $field) {
+                    if ($field['lang_id'] == 0 || $field['lang_id'] == WebAPL\Language::getId()) {
+                        ?>
+                        <tr><th><?= $field['name']; ?></th><td><?= $field['value']; ?></td></tr>
+                        <?php
+                    }
+                }
+            }
+            ?>
+        <?php } ?>
+            
         <?php if ($post->docs) { ?>
             <tr>
                 <th><?= varlang('fisiere'); ?></th>

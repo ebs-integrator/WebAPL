@@ -130,19 +130,37 @@ jQuery(document).ready(function($) {
         obj.editor.updateElement();
         $(obj.editor.element.$).trigger('change');
     }
-    ;
 
+    function setUpdateEvents(i) {
+        CKEDITOR.instances[i].on('blur', updateCkeditorElement);
+        CKEDITOR.instances[i].on('focus', lock_window);
+        CKEDITOR.instances[i].on('change', function(obj) {
+            obj.editor.updateElement();
+        });
+    }
 
     setTimeout(function() {
         for (var i in CKEDITOR.instances) {
-            CKEDITOR.instances[i].on('blur', updateCkeditorElement);
-            CKEDITOR.instances[i].on('focus', lock_window);
-            CKEDITOR.instances[i].on('change', function(obj) {
-                obj.editor.updateElement();
-            });
+            setUpdateEvents(i);
         }
     }, 1000);
 
+
+    window.init_ckeditor = function(elem) {
+        var i = $(elem).attr('name');
+        console.log(i, CKEDITOR.instances[i]);
+        if (typeof CKEDITOR.instances[i] != 'undefined') {
+            CKEDITOR.instances[i].destroy(true);
+        }
+        $(elem).ckeditor({
+            filebrowserBrowseUrl: roxyFileman,
+            filebrowserImageBrowseUrl: roxyFileman + '?type=image',
+            removeDialogTabs: 'link:upload;image:upload'
+        });
+        setTimeout(function() {
+            setUpdateEvents(i)
+        }, 1000);
+    }
 
 
     $('.datetimepicker').datetimepicker({

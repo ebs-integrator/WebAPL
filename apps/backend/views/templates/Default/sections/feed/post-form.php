@@ -43,6 +43,7 @@
             </div>
         <?php } ?>
     <div class="tab-pane" id="media">
+        <div class="c20"></div>
         <?= Files::widget('post_cover', $general['post']->id, 1); ?>
     </div>
 </div>

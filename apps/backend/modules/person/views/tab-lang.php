@@ -41,12 +41,6 @@
             </td>
         </tr>
         <tr>
-            <th><?= varlang('sector-'); ?></th>
-            <td>
-                <input type="text" name="sector" class='form-control' value='<?= isset($person_lang->sector) ? $person_lang->sector : ''; ?>' />
-            </td>
-        </tr>
-        <tr>
             <th><?= varlang('motto-'); ?></th>
             <td>
                 <input type="text" name="motto" class='form-control' value='<?= isset($person_lang->motto) ? $person_lang->motto : ''; ?>' />

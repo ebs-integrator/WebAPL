@@ -409,7 +409,6 @@ class Person extends \WebAPL\ExtensionController {
         $person_lang->civil_state = Input::get('civil_state');
         $person_lang->studies = Input::get('studies');
         $person_lang->activity = Input::get('activity');
-        $person_lang->sector = Input::get('sector');
         $person_lang->motto = Input::get('motto');
         $person_lang->text = Input::get("text.{$person_lang_id}");
         $person_lang->save();

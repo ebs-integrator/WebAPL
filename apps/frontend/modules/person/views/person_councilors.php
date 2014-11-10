@@ -1,7 +1,10 @@
 <table class="cns_locali">
     <thead>
-        <tr><td><?= varlang('name-last-name'); ?>,
-                <span><?= varlang('aparteneta'); ?></span></td>
+        <tr>
+            <td>
+                <?= varlang('name-last-name'); ?>,
+                <span><?= varlang('aparteneta'); ?></span>
+            </td>
             <td><?= varlang('sectorul'); ?></td>
         </tr>
         <tr><td colspan="2"></td></tr>
@@ -24,8 +27,12 @@ foreach ($groups as $group) {
                     <div class="clu_cont">
                         <p class="clu_nume"><?= $person->first_name; ?><span> <?= $person->last_name; ?></span></p>
                         <p class="clu_partid"><?= $person->activity; ?></p>
-                        <p class="tel"><?= $person->phone; ?></p>
-                        <p class="email"><a href="mailto:<?= $person->email; ?>" target="_blank"><?= $person->email; ?></a></p>
+                        <?php if ($person->phone) { ?>
+                            <p class="tel"><?= $person->phone; ?></p>
+                        <?php } ?>
+                        <?php if ($person->email) { ?>
+                            <p class="email"><a href="mailto:<?= $person->email; ?>" target="_blank"><?= $person->email; ?></a></p>
+                        <?php } ?>
                     </div>
                 </td>
                 <td>
