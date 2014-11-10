@@ -44,8 +44,10 @@
     };
 </script>
 
-<?= View::make('sections/jqgrid/form')->with('options', 'poll_options'); ?>
+<h2><?= varlang('polls'); ?></h2>
+
+<a href="<?= url('poll/form'); ?>" class="btn btn-success" type="submit"><?= varlang('create-new-poll'); ?></a>
 
 <div class="c20"></div>
 
-<a href="<?= url('poll/form'); ?>" class="btn btn-success" type="submit"><?= varlang('create-new-poll'); ?></a>
+<?= View::make('sections/jqgrid/form')->with('options', 'poll_options'); ?>

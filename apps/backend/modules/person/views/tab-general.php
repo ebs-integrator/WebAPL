@@ -20,12 +20,12 @@
                 <input type="text" name="date_birth" class='form-control datetimepicker' data-date-format="YYYY-MM-DD" value='<?= isset($person->date_birth) ? $person->date_birth : date("Y-m-d"); ?>' />
             </td>
         </tr>
-        <tr>
+<!--        <tr>
             <th><?= varlang('accesibil-pentru-audienta-'); ?></th>
             <td>
                 <input type="checkbox" class="make-switch" name="for_audience" class='form-control' <?= isset($person->for_audience) && $person->for_audience ? 'checked' : ''; ?> />
             </td>
-        </tr>
+        </tr>-->
         <tr>
             <th><?= varlang('feed-'); ?></th>
             <td>

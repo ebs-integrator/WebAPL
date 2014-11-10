@@ -333,8 +333,8 @@ class Post extends Eloquent {
                 foreach ($words as $word) {
                     $word = trim($word);
                     if ($word) {
-                        $query = $query->orWhere(PostLang::getField('title'), 'like', "%{$word}%");
-                        $query = $query->orWhere(PostLang::getField('text'), 'like', "%{$word}%");
+                        $query = $query->orWhere(DB::raw("cast(" . PostLang::getField('title') . " as char)"), 'like', DB::raw("concat('%', cast('" . $word . "' as char) ,'%')"));
+                        $query = $query->orWhere(DB::raw("cast(" . PostLang::getField('text') . " as char)"), 'like', DB::raw("concat('%', cast('" . $word . "' as char) ,'%')"));
                     }
                 }
             });
@@ -380,7 +380,7 @@ class Post extends Eloquent {
             $dates['years'][$y] = $y;
             if (isset($dates['months'][$y])) {
                 if (isset($dates['months'][$y][$m])) {
-                    $dates['months'][$y][$m]++;
+                    $dates['months'][$y][$m] ++;
                 } else {
                     $dates['months'][$y][$m] = 1;
                 }

@@ -356,7 +356,7 @@ class Person extends \Core\APL\ExtensionController {
         $person->phone = Input::get('phone');
         $person->email = Input::get('email');
         $person->date_birth = Input::get('date_birth');
-        $person->for_audience = Input::get('for_audience') ? 1 : 0;
+//        $person->for_audience = Input::get('for_audience') ? 1 : 0;
         $person->save();
 
         if ($id) {

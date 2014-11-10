@@ -160,7 +160,7 @@
             <div class="col-lg-12" style="padding-bottom: 20px;">
                 <div class="c20"></div>
                 <div class="col-lg-3">
-                    <img src="<?= res('assets/img/usaid/lgsp_' . Language::ext() . '.png'); ?>" />
+                    <img class="col-lg-12" src="<?= res('assets/img/usaid/lgsp_' . Language::ext() . '.png'); ?>" />
                 </div>
                 <div class="col-lg-9">
                         <?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?>
