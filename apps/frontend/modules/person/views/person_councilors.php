@@ -29,7 +29,7 @@ foreach ($groups as $group) {
                     </div>
                 </td>
                 <td>
-                    <div class="sec_span"><?= varlang('secretarul'); ?></div>
+                    <div class="sec_span"><?= varlang('sectorul'); ?></div>
                     <?= $person->text; ?>
                 </td>
             </tr>
