@@ -2800,7 +2800,7 @@ ul.culture li .right .box p,ul.culture li .right .box p a{
     color:#673167;
     margin-bottom: 0px;
 }
-ul.crt li, .t_block > ul > li{
+ul.crt li, .t_block > ul:not([class]) > li{
     font:17px 'open_sanssemibold';
     color:#4c4c4c;
     background: url('../img/li_g.png') no-repeat left 8px;
