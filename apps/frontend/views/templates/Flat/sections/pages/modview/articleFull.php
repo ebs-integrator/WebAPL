@@ -14,10 +14,10 @@
 
     <?php if ($post->show_pcomment) { ?>
         <div class='live_comment' data-pid="news<?= $post->id; ?>">
-            <?= Core\APL\Shortcodes::execute($post->text); ?>
+            <?= WebAPL\Shortcodes::execute($post->text); ?>
         </div>
     <?php } else { ?>
-        <div><?= Core\APL\Shortcodes::execute($post->text); ?></div>
+        <div><?= WebAPL\Shortcodes::execute($post->text); ?></div>
     <?php } ?>
 
     <?php Event::fire('post_bottom_container', $post); ?>

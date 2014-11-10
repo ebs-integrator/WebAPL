@@ -1,9 +1,9 @@
 <?php
 
-namespace Core\APL\Modules;
+namespace WebAPL\Modules;
 
-use Core\APL\Actions,
-    Core\APL\Template,
+use WebAPL\Actions,
+    WebAPL\Template,
     Input,
     jQgrid,
     Language,
@@ -21,7 +21,7 @@ use Core\APL\Actions,
     Event,
     Exception;
 
-class Person extends \Core\APL\ExtensionController {
+class Person extends \WebAPL\ExtensionController {
 
     protected $module_name = 'person';
     protected $layout;
@@ -137,7 +137,7 @@ class Person extends \Core\APL\ExtensionController {
                 $groups = \PersonRelModel::join(\PersonGroupLang::getTableName(), \PersonRelModel::getField('group_id'), '=', \PersonGroupLang::getField('group_id'))
                         ->select(\PersonGroupLang::getField('name'))
                         ->where(\PersonRelModel::getField('person_id'), $person->person_id)
-                        ->where(\PersonGroupLang::getField('lang_id'), '=', \Core\APL\Language::getId())
+                        ->where(\PersonGroupLang::getField('lang_id'), '=', \WebAPL\Language::getId())
                         ->get();
 
                 $array_groups = [];
@@ -278,7 +278,7 @@ class Person extends \Core\APL\ExtensionController {
             'module' => $this->module_name,
             'person_groups' => PersonGroup::join(PersonGroupLang::getTableName(), PersonGroupLang::getField("group_id"), '=', PersonGroup::getField('id'))
                     ->select(PersonGroup::getField("id"), PersonGroupLang::getField("name"))
-                    ->where(PersonGroupLang::getField("lang_id"), \Core\APL\Language::getId())
+                    ->where(PersonGroupLang::getField("lang_id"), \WebAPL\Language::getId())
                     ->get(),
             'selected_groups' => array()
         );
@@ -321,7 +321,7 @@ class Person extends \Core\APL\ExtensionController {
         $person = new PersonModel;
         $person->save();
 
-        foreach (\Core\APL\Language::getList() as $lang) {
+        foreach (\WebAPL\Language::getList() as $lang) {
             $person_lang = new PersonLangModel;
             $person_lang->person_id = $person->id;
             $person_lang->lang_id = $lang->id;
@@ -465,7 +465,7 @@ class Person extends \Core\APL\ExtensionController {
                 'post' => $post->toArray(),
                 'person_groups' => PersonGroup::join(PersonGroupLang::getTableName(), PersonGroupLang::getField("group_id"), '=', PersonGroup::getField('id'))
                         ->select(PersonGroup::getField("id"), PersonGroupLang::getField("name"))
-                        ->where(PersonGroupLang::getField("lang_id"), \Core\APL\Language::getId())
+                        ->where(PersonGroupLang::getField("lang_id"), \WebAPL\Language::getId())
                         ->get()->toArray(),
                 'selected_groups' => array()
             );

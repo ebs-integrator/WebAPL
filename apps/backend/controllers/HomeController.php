@@ -81,7 +81,7 @@ class HomeController extends BaseController {
     }
 
     public function getChangelang($ext) {
-        Core\APL\Language::setLanguage($ext);
+        WebAPL\Language::setLanguage($ext);
 
         return Redirect::back();
     }

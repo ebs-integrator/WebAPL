@@ -12,7 +12,7 @@
         </tr>
         <?php foreach ($answer_langs as $answer_lang) { ?>
         <tr>
-            <th><?= varlang('answer-in-'); ?> <?=\Core\APL\Language::getItem($answer_lang->lang_id)->name;?></th>
+            <th><?= varlang('answer-in-'); ?> <?=\WebAPL\Language::getItem($answer_lang->lang_id)->name;?></th>
             <td>
                 <input type="text" name="answer[<?=$answer_lang->id;?>]" class='form-control' value='<?= isset($answer_lang->title) ? $answer_lang->title : ''; ?>' />
             </td>

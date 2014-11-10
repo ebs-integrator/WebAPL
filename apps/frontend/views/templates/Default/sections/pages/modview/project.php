@@ -42,7 +42,7 @@
             $fields = @unserialize($post->pr_aditional_fields);
             if (is_array($fields)) {
                 foreach ($fields as $field) {
-                    if ($field['lang_id'] == 0 || $field['lang_id'] == Core\APL\Language::getId()) {
+                    if ($field['lang_id'] == 0 || $field['lang_id'] == WebAPL\Language::getId()) {
                         ?>
                         <tr><th><?= $field['name']; ?></th><td><?= $field['value']; ?></td></tr>
                         <?php

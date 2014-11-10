@@ -47,7 +47,7 @@
                 </ul>
                 <div class="prp">
                     <img  alt="" src="<?= res('assets/img/phone_book.png'); ?>">
-                    <a href="<?= Core\APL\Language::url('topropr/more_contacts');?>"><?= varlang('all-nr-phone'); ?></a>
+                    <a href="<?= WebAPL\Language::url('topropr/more_contacts');?>"><?= varlang('all-nr-phone'); ?></a>
                 </div>
                 <?php Event::fire('contact_col1_contructor'); ?>
                 <div class="clearfix25"></div>

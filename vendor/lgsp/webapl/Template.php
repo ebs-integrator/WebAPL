@@ -8,7 +8,7 @@
  * @link       http://ebs.md/
  */
 
-namespace Core\APL;
+namespace WebAPL;
 
 use View;
 
@@ -481,7 +481,7 @@ class Template {
      * Get html for current schema
      */
     public static function pullCurrentSchema() {
-        $currentSchema = \Core\APL\Template::getCurrentSchema();
+        $currentSchema = \WebAPL\Template::getCurrentSchema();
         if (isset($currentSchema['css']) && $currentSchema['css']) {
             echo '<link rel="stylesheet" href="' . $currentSchema['css'] . '">';
         }

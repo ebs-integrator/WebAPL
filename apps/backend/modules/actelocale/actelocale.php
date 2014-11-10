@@ -1,16 +1,16 @@
 <?php
 
-namespace Core\APL\Modules;
+namespace WebAPL\Modules;
 
-use Core\APL\Actions,
-    Core\APL\Template,
+use WebAPL\Actions,
+    WebAPL\Template,
     ActeLocaleModel,
     Input,
     Route,
     Event,
     jQgrid;
 
-class Actelocale extends \Core\APL\ExtensionController {
+class Actelocale extends \WebAPL\ExtensionController {
 
     protected $module_name = 'actelocale';
     protected $layout;

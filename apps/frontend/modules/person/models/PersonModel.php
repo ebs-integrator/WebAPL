@@ -19,13 +19,13 @@ class PersonModel extends Eloquent {
                             $join->on(Files::getField("module_id"), '=', PersonModel::getField("id"));
                             $join->on(Files::getField("module_name"), '=', DB::raw("'person'"));
                         })
-                        ->where(PersonLangModel::getField("lang_id"), \Core\APL\Language::getId());
+                        ->where(PersonLangModel::getField("lang_id"), \WebAPL\Language::getId());
     }
 
     public static function getPostPersonGroups($post_id) {
         $groups = PersonGroup::join(PersonGroupPostModel::getTableName(), PersonGroupPostModel::getField("group_id"), '=', PersonGroup::getField("id"))
                 ->join(PersonGroupLang::getTableName(), PersonGroupLang::getField("group_id"), '=', PersonGroup::getField('id'))
-                ->where(PersonGroupLang::getField("lang_id"), \Core\APL\Language::getId())
+                ->where(PersonGroupLang::getField("lang_id"), \WebAPL\Language::getId())
                 ->where(PersonGroupPostModel::getField("post_id"), $post_id)
                 ->select(PersonGroupLang::getField('name'), PersonGroupLang::getField('description'), PersonGroup::getField("id"))
                 ->get();

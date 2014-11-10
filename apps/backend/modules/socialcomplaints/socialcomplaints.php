@@ -1,17 +1,17 @@
 <?php
 
-namespace Core\APL\Modules;
+namespace WebAPL\Modules;
 
-use Core\APL\Actions,
-    Core\APL\Shortcodes,
+use WebAPL\Actions,
+    WebAPL\Shortcodes,
     jQgrid,
     SComplaintsModel,
     Input,
     Route,
     Event,
-    Core\APL\Template;
+    WebAPL\Template;
 
-class Socialcomplaints extends \Core\APL\ExtensionController {
+class Socialcomplaints extends \WebAPL\ExtensionController {
 
     protected $module_name = 'socialcomplaints';
     protected $layout;
@@ -48,7 +48,7 @@ class Socialcomplaints extends \Core\APL\ExtensionController {
         \User::onlyHas('socialc-view');
 
         $pages = \Post::join(\PostLang::getTableName(), \PostLang::getField('post_id'), '=', \Post::getField('id'))
-                ->where(\PostLang::getField('lang_id'), \Core\APL\Language::getId())
+                ->where(\PostLang::getField('lang_id'), \WebAPL\Language::getId())
                 ->where(\Post::getField('taxonomy_id'), 1)
                 ->orderBy(\PostLang::getField('title'), 'desc')
                 ->get();

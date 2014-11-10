@@ -14,7 +14,7 @@ class PollModel extends Eloquent {
 
     public static function prepare() {
         return PollModel::join(PollQuestionModel::getTableName(), PollModel::getField('id'), '=', PollQuestionModel::getField('poll_id'))
-                        ->where(PollQuestionModel::getField('lang_id'), '=', \Core\APL\Language::getId())
+                        ->where(PollQuestionModel::getField('lang_id'), '=', \WebAPL\Language::getId())
                         ->where(PollModel::getField('enabled'), '=', 1)
                         ->select(PollModel::getField('date_created'), PollQuestionModel::getField('title'), DB::raw(PollQuestionModel::getField('id') . " as poll_question_id"), PollModel::getField('id'), PollModel::getField('active'));
     }
@@ -30,7 +30,7 @@ class PollModel extends Eloquent {
     public static function answers($id) {
         $answers = PollAnswerLangModel::join(PollAnswerModel::getTableName(), PollAnswerModel::getField('id'), '=', PollAnswerLangModel::getField('answer_id'))
                 ->select(PollAnswerLangModel::getField('*'))
-                ->where(PollAnswerLangModel::getField('lang_id'), \Core\APL\Language::getId())
+                ->where(PollAnswerLangModel::getField('lang_id'), \WebAPL\Language::getId())
                 ->where(PollAnswerModel::getField('poll_id'), $id)
                 ->orderBy(PollAnswerModel::getField('ord'), 'asc')
                 ->get();

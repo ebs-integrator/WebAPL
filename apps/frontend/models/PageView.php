@@ -4,8 +4,8 @@ class PageView {
 
     // INIT
     public static function run($data, $defaultView = 'defaultView') {
-        if (isset($data['page']['view_mod']) && Core\APL\Template::checkViewMethod('page', $data['page']['view_mod'])) {
-            return Core\APL\Template::callViewMethod('page', $data['page']['view_mod'], array($data));
+        if (isset($data['page']['view_mod']) && WebAPL\Template::checkViewMethod('page', $data['page']['view_mod'])) {
+            return WebAPL\Template::callViewMethod('page', $data['page']['view_mod'], array($data));
         } else {
             return call_user_func(array('PageView', $defaultView), $data);
         }
@@ -31,7 +31,7 @@ class PageView {
                 
                 $wdata["post"] = Post::withDinamicFields($post);
 
-                Core\APL\Template::setMetaMultiple(array(
+                WebAPL\Template::setMetaMultiple(array(
                     'description' => $post->text,
                     'og:description' => $post->text,
                     'og:title' => $post->title
@@ -56,7 +56,7 @@ class PageView {
                 if ($post) {
                     Post::oneView($post->id);
                     
-                    Core\APL\Template::setMetaMultiple(array(
+                    WebAPL\Template::setMetaMultiple(array(
                         'description' => $post->text,
                         'og:description' => $post->text,
                         'og:title' => $post->title
@@ -86,7 +86,7 @@ class PageView {
                 if ($post) {
                     Post::oneView($post->id);
                     
-                    Core\APL\Template::setMetaMultiple(array(
+                    WebAPL\Template::setMetaMultiple(array(
                         'description' => $post->text,
                         'og:description' => $post->text,
                         'og:title' => $post->title
@@ -116,7 +116,7 @@ class PageView {
                 if ($post) {
                     Post::oneView($post->id);
                     
-                    Core\APL\Template::setMetaMultiple(array(
+                    WebAPL\Template::setMetaMultiple(array(
                         'description' => $post->text,
                         'og:description' => $post->text,
                         'og:title' => $post->title
@@ -221,7 +221,7 @@ class PageView {
                 $wdata['post'] = Post::findURI($item, 1);
                 if ($wdata['post']) {
 
-                    Core\APL\Template::setMetaMultiple(array(
+                    WebAPL\Template::setMetaMultiple(array(
                         'description' => $wdata['post']->text,
                         'og:description' => $wdata['post']->text,
                         'og:title' => $wdata['post']->title
@@ -259,19 +259,19 @@ class PageView {
     }
 
     public static function defaultView($data) {
-        $data['page']->text = \Core\APL\Shortcodes::execute($data['page']->text);
+        $data['page']->text = \WebAPL\Shortcodes::execute($data['page']->text);
 
         return View::make('sections.pages.default')->with($data);
     }
 
     public static function contactView($data) {
-        $data['page']->text = \Core\APL\Shortcodes::execute($data['page']->text);
+        $data['page']->text = \WebAPL\Shortcodes::execute($data['page']->text);
 
         return View::make('sections.pages.contact')->with($data);
     }
 
     public static function articleView($data) {
-        $data['page']->text = \Core\APL\Shortcodes::execute($data['page']->text);
+        $data['page']->text = \WebAPL\Shortcodes::execute($data['page']->text);
 
         return View::make('sections.pages.article')->with($data);
     }
@@ -282,13 +282,13 @@ class PageView {
             $data["feedPosts"] = Post::postsFeed($data['page']->feed_id, false);
         }
 
-        $data['page']->text = \Core\APL\Shortcodes::execute($data['page']->text);
+        $data['page']->text = \WebAPL\Shortcodes::execute($data['page']->text);
 
         return View::make('sections.pages.contacts')->with($data);
     }
 
     public static function homeView($data) {
-        $data['page']->text = \Core\APL\Shortcodes::execute($data['page']->text);
+        $data['page']->text = \WebAPL\Shortcodes::execute($data['page']->text);
 
         $data['page']['background'] = Files::getfile('page_bg', $data['page']->id);
 
@@ -316,7 +316,7 @@ class PageView {
     }
 
     public static function fullView($data) {
-        $data['page']->text = \Core\APL\Shortcodes::execute($data['page']->text);
+        $data['page']->text = \WebAPL\Shortcodes::execute($data['page']->text);
 
         return View::make('sections.pages.fullw')->with($data);
     }
@@ -403,7 +403,7 @@ class PageView {
             if ($wdata["post"]) {
                 Post::oneView($wdata['post']['id']);
                 
-                Core\APL\Template::setMetaMultiple(array(
+                WebAPL\Template::setMetaMultiple(array(
                     'description' => $wdata['post']->text,
                     'og:description' => $wdata['post']->text,
                     'og:title' => $wdata['post']->title
@@ -447,7 +447,7 @@ class PageView {
 
                     $wdata["post"]->cover = Post::coverImage($wdata["post"]->id);
 
-                    Core\APL\Template::setMetaMultiple(array(
+                    WebAPL\Template::setMetaMultiple(array(
                         'description' => $wdata['post']->text,
                         'og:description' => $wdata['post']->text,
                         'og:title' => $wdata['post']->title,

@@ -212,7 +212,7 @@ class Post extends Eloquent {
     }
 
     public static function getURL($uri) {
-        return Core\APL\Language::url("page/" . $uri);
+        return WebAPL\Language::url("page/" . $uri);
     }
 
     public static function oneView($id) {
@@ -234,7 +234,7 @@ class Post extends Eloquent {
     }
 
     public static function withDinamicFields($post) {
-        $values_SQL = "(SELECT * FROM " . FeedFieldValue::getTableName() . " WHERE " . FeedFieldValue::getField("lang_id") . " IN (0," . Core\APL\Language::getId() . ") AND " . FeedFieldValue::getField("post_id") . " = {$post->id}) as sb";
+        $values_SQL = "(SELECT * FROM " . FeedFieldValue::getTableName() . " WHERE " . FeedFieldValue::getField("lang_id") . " IN (0," . WebAPL\Language::getId() . ") AND " . FeedFieldValue::getField("post_id") . " = {$post->id}) as sb";
 
         $fields = FeedField::leftJoin(DB::raw($values_SQL), "sb.feed_field_id", "=", FeedField::getField("id"))
                 ->select(FeedField::getField("fkey"), "sb.value", FeedField::getField("get_filter"))

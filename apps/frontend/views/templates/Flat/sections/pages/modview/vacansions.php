@@ -7,7 +7,7 @@
             <p class="nr"><?= date('d-m-Y, H:i', strtotime($post->created_at)); ?></p>
         </div>
     <?php } ?>
-    <div class='p_i ldm_li'><?= Core\APL\Shortcodes::execute($post->text, array('post' => $post)); ?></div>
+    <div class='p_i ldm_li'><?= WebAPL\Shortcodes::execute($post->text, array('post' => $post)); ?></div>
     <div class="ldm_middle">
         <p class="tda">
             <?= varlang('termen-limita'); ?> : <span><?= date('d-m-Y, H:i', strtotime($post->date_point)); ?></span>

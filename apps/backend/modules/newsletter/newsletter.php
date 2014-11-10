@@ -1,9 +1,9 @@
 <?php
 
-namespace Core\APL\Modules;
+namespace WebAPL\Modules;
 
-use Core\APL\Actions,
-    Core\APL\Template,
+use WebAPL\Actions,
+    WebAPL\Template,
     Input,
     NewsletterModel,
     jQgrid,
@@ -11,7 +11,7 @@ use Core\APL\Actions,
     Event,
     Mail;
 
-class Newsletter extends \Core\APL\ExtensionController {
+class Newsletter extends \WebAPL\ExtensionController {
 
     protected $module_name = 'newsletter';
     protected $layout;
@@ -95,7 +95,7 @@ class Newsletter extends \Core\APL\ExtensionController {
         if ($post) {
 
             $data['post'] = $post;
-            $data['post_url'] = "http://kopceak1.sga.webhost1.ru/" . \Core\APL\Language::ext() . "/topost/" . $post_id;
+            $data['post_url'] = "http://kopceak1.sga.webhost1.ru/" . \WebAPL\Language::ext() . "/topost/" . $post_id;
 
             Template::viewModule($this->module_name, function () use ($data, $post) {
                 $newsletterUsers = \NewsletterModel::where('enabled', 1)->get();

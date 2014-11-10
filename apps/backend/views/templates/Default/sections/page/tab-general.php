@@ -132,7 +132,7 @@
                         ?>
                         <tr>
                             <td>
-                                <a target="_blank" href="<?= url('/../' . \Core\APL\Language::ext() . "/topage/" . $view_key); ?>"><i class="glyphicon glyphicon-zoom-in"></i></a>
+                                <a target="_blank" href="<?= url('/../' . \WebAPL\Language::ext() . "/topage/" . $view_key); ?>"><i class="glyphicon glyphicon-zoom-in"></i></a>
                                 <b><?= $view_mod['name']; ?></b>
                                 <?php if ($view_mod['info']) { ?>
                                     <br>

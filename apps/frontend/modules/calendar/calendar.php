@@ -1,9 +1,9 @@
 <?php
 
-namespace Core\APL\Modules;
+namespace WebAPL\Modules;
 
-use Core\APL\Actions,
-    Core\APL\Template,
+use WebAPL\Actions,
+    WebAPL\Template,
     CalendarModel,
     CalendarLangModel,
     Input,
@@ -11,7 +11,7 @@ use Core\APL\Actions,
     PageView,
     Language;
 
-class Calendar extends \Core\APL\ExtensionController {
+class Calendar extends \WebAPL\ExtensionController {
 
     protected $module_name = 'calendar';
     protected $layout;
@@ -40,7 +40,7 @@ class Calendar extends \Core\APL\ExtensionController {
         $events = \CalendarModel::join(CalendarLangModel::getTableName(), \CalendarModel::getField('id'), '=', CalendarLangModel::getField('calendar_item_id'))
                 ->join(\CalendarGroup::getTableName(), \CalendarGroup::getField('id'), '=', \CalendarModel::getField('calendar_group_id'))
                 ->join(\CalendarPostModel::getTableName(), \CalendarPostModel::getField('calendar_group_id'), '=', \CalendarGroup::getField('id'))
-                ->where(CalendarLangModel::getField('lang_id'), \Core\APL\Language::getId())
+                ->where(CalendarLangModel::getField('lang_id'), \WebAPL\Language::getId())
                 ->where(\CalendarPostModel::getField('post_id'), $data['page']->id)
                 ->where(\CalendarModel::getField('enabled'), 1)
                 ->select(CalendarLangModel::getField("*"), \CalendarModel::getField('event_date'), \CalendarModel::getField('period'))

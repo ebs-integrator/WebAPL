@@ -3,8 +3,8 @@
 class PostResources {
 
     public static function init() {
-        \Core\APL\Shortcodes::register('contact', array('PostResources', 'blockContact'));
-        \Core\APL\Shortcodes::register('harta', ['PostResources', 'insertMap']);
+        \WebAPL\Shortcodes::register('contact', array('PostResources', 'blockContact'));
+        \WebAPL\Shortcodes::register('harta', ['PostResources', 'insertMap']);
     }
 
     public static function insertMap() {

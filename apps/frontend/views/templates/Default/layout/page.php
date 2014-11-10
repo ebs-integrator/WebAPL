@@ -7,9 +7,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title><?= Core\APL\Template::getPageTitle(isset($page) ? $page : null); ?></title>
+        <title><?= WebAPL\Template::getPageTitle(isset($page) ? $page : null); ?></title>
 
-        <?php foreach (\Core\APL\Template::getMetas() as $metaName => $metaContent) { ?>
+        <?php foreach (\WebAPL\Template::getMetas() as $metaName => $metaContent) { ?>
             <meta name="<?= $metaName; ?>" content="<?= $metaContent; ?>" >
         <?php } ?>
 
@@ -33,9 +33,9 @@
 
             var disqus_url = '<?= url(); ?>';
             var disqus_shortname = '<?= SettingsModel::one('disqus_shortname'); ?>';
-            var disqus_title = '<?= Core\APL\Template::getPageTitle(isset($page) ? $page : null); ?>';
+            var disqus_title = '<?= WebAPL\Template::getPageTitle(isset($page) ? $page : null); ?>';
             var disqus_config = function () {
-                this.language = "<?= Core\APL\Language::ext(); ?>";
+                this.language = "<?= WebAPL\Language::ext(); ?>";
             };
 
             var loc_lat = <?= SettingsModel::one('pos_lat') ? SettingsModel::one('pos_lat') : 0; ?>;

@@ -8,7 +8,7 @@
  * @link       http://ebs.md/
  */
 
-namespace Core\APL;
+namespace WebAPL;
 
 class Shortcodes {
 

@@ -8,10 +8,10 @@
  * @link       http://ebs.md/
  */
 
-namespace Core\APL\Modules;
+namespace WebAPL\Modules;
 
-use Core\APL\Actions,
-    Core\APL\Template,
+use WebAPL\Actions,
+    WebAPL\Template,
     PollModel,
     Input,
     PollAnswerModel,
@@ -23,7 +23,7 @@ use Core\APL\Actions,
     Route,
     Redirect;
 
-class Poll extends \Core\APL\ExtensionController {
+class Poll extends \WebAPL\ExtensionController {
 
     protected $module_name = 'poll';
     protected $layout;
@@ -36,7 +36,7 @@ class Poll extends \Core\APL\ExtensionController {
         Template::registerViewMethod('page', 'pollList', 'Lista de sondaje', array($this, 'pollList'), true);
         Route::post('poll/register', array($this, 'pollRegister'));
 
-        \Core\APL\Shortcodes::register('poll', array($this, 'pollShortcode'));
+        \WebAPL\Shortcodes::register('poll', array($this, 'pollShortcode'));
     }
 
     public function pollList($data) {

@@ -76,7 +76,7 @@ if ($errorSearch === 0 && $searchList) {
         <input type="hidden" name='parent_key' value='<?= $var_key; ?>' />
         <input type='text' name='key' value='' autocomplete="off" placeholder='<?= varlang('key-1'); ?>' class='form-control' />
         <div class='c10'></div>
-        <?php foreach (\Core\APL\Language::getList() as $lang) { ?>
+        <?php foreach (\WebAPL\Language::getList() as $lang) { ?>
             <input type='text' autocomplete="off" name='text[<?= $lang->id; ?>]' value='' placeholder='<?= varlang('text-in-'); ?> <?= $lang->name; ?>' class='form-control' />
             <div class='c10'></div>
         <?php } ?>

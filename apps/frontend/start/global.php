@@ -20,9 +20,9 @@ App::error(function(Exception $exception, $code) {
     if ($pageCode == 404) {
         $page_property = 'error_404';
     } elseif ($pageCode >= 500) {
-        //$page_property = 'error_500';
+        $page_property = 'error_404';
     } else {
-        //$page_property = 'error_other';
+        $page_property = 'error_404';
     }
 
     if ($page_property) {
@@ -43,7 +43,7 @@ $APLExtensions = array(
 );
 
 Event::listen('APL.core.load', function() use ($APLExtensions) {
-    ClassLoader::addDirectories(base_path() . '/core/APL/');
+    ClassLoader::addDirectories(base_path() . '/vendor/lgsp/webapl/');
 
     foreach ($APLExtensions as $Extension) {
         if (!ClassLoader::load($Extension)) {
@@ -54,7 +54,7 @@ Event::listen('APL.core.load', function() use ($APLExtensions) {
 
 Event::listen('APL.core.prepare', function () use ($APLExtensions) {
     foreach ($APLExtensions as $Extension) {
-        $full_class = "Core\APL\\" . $Extension;
+        $full_class = "WebAPL\\" . $Extension;
         $full_class::__init();
         class_alias($full_class, $Extension);
     }

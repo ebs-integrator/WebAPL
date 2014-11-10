@@ -71,9 +71,9 @@ class PageController extends BaseController {
                     // Set page title
                     $this->data['top_title'] = $this->data['page']['title'];
 
-                    Core\APL\Template::setPageTitle($this->data['page']['title']);
+                    WebAPL\Template::setPageTitle($this->data['page']['title']);
 
-                    $this->data['page_url'] = Core\APL\Language::url("page/" . $realURI);
+                    $this->data['page_url'] = WebAPL\Language::url("page/" . $realURI);
 
                     // Get page files
                     if ($this->data['page']->show_files) {
@@ -134,7 +134,7 @@ class PageController extends BaseController {
 
         Template::setMetaMultiple(array(
             'og:type' => 'page',
-            'og:image' => Files::extract('website_logo_' . Core\APL\Language::ext(), 1, 'path'),
+            'og:image' => Files::extract('website_logo_' . WebAPL\Language::ext(), 1, 'path'),
             'og:site_name' => SettingsModel::one('sitename')
         ));
 
@@ -171,9 +171,9 @@ class PageController extends BaseController {
     }
 
     public function changeLanguage($ext, $id = 0) {
-        Core\APL\Language::setLanguage($ext);
+        WebAPL\Language::setLanguage($ext);
 
-        $redirectTo = Core\APL\Language::ext();
+        $redirectTo = WebAPL\Language::ext();
         if ($id) {
             $url = Post::getFullURI($id);
             if ($url) {

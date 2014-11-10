@@ -15,7 +15,7 @@
                         </div>
                     <?php } ?>
                 </div>
-                <?= Core\APL\Shortcodes::execute($post->text); ?>
+                <?= WebAPL\Shortcodes::execute($post->text); ?>
                 <?php if ($post->have_socials) { ?>
                     <?= View::make('sections.elements.socials'); ?>
                 <?php } ?>

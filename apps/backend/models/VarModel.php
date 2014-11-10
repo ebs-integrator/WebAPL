@@ -9,7 +9,7 @@ class VarModel extends Eloquent {
 
     public static function prepareQuery() {
         return VarModel::join(VarLangModel::getTableName(), VarLangModel::getField('var_key'), '=', VarModel::getField('key'))
-                        ->where(VarLangModel::getField('lang_id'), \Core\APL\Language::getId());
+                        ->where(VarLangModel::getField('lang_id'), \WebAPL\Language::getId());
     }
 
     public static function withParent($var_key) {

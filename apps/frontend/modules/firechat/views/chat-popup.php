@@ -26,10 +26,10 @@
     </div>
     <div class="content">
         <?php if ($session_exist) { ?>
-            <?= Core\APL\Template::moduleView('firechat', 'views.chat-iframe'); ?>
+            <?= WebAPL\Template::moduleView('firechat', 'views.chat-iframe'); ?>
         <?php } else { ?>
             <?=
-            Core\APL\Template::moduleView('firechat', 'views.chat-form', array(
+            WebAPL\Template::moduleView('firechat', 'views.chat-form', array(
                 'persons' => $persons
             ));
             ?>
@@ -155,7 +155,7 @@
 
         $("body").on('click', '.firechat-inactive', function() {
             $(".firechat-photo, .firechat-name").hide();
-            $("#firechat .content").html('<center><br><br><br><?= varlang('chat-erro'); ?> <a href="<?=Core\APL\Language::url('topage/page_calendar');?>" style="color:#673167"><?= varlang('chat-erro-no'); ?></a></center>').show();
+            $("#firechat .content").html('<center><br><br><br><?= varlang('chat-erro'); ?> <a href="<?=WebAPL\Language::url('topage/page_calendar');?>" style="color:#673167"><?= varlang('chat-erro-no'); ?></a></center>').show();
             $("#firechat").stop().slideToggle(500).animate({height: 535}, 500);
         });
     });

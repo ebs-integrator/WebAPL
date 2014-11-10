@@ -22,7 +22,7 @@
             <div class="clearfix"></div>
         </ul>
         <div class="prp">
-            <a href="<?= Core\APL\Language::url('topropr/more_contacts'); ?>"><?= varlang('all-nr-phone'); ?></a>
+            <a href="<?= WebAPL\Language::url('topropr/more_contacts'); ?>"><?= varlang('all-nr-phone'); ?></a>
         </div>
         <div class="prp">
             <a href="<?= varlang('orar-link'); ?>"><?= varlang('orar-autobus'); ?></a>

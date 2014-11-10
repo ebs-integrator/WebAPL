@@ -1,9 +1,9 @@
 <?php
 
-namespace Core\APL\Modules;
+namespace WebAPL\Modules;
 
-use Core\APL\Actions,
-    Core\APL\Template,
+use WebAPL\Actions,
+    WebAPL\Template,
     Input,
     JobRequestModel,
     PostLang,
@@ -11,7 +11,7 @@ use Core\APL\Actions,
     Event,
     jQgrid;
 
-class Jobrequest extends \Core\APL\ExtensionController {
+class Jobrequest extends \WebAPL\ExtensionController {
 
     protected $module_name = 'jobrequest';
     protected $layout;
@@ -50,7 +50,7 @@ class Jobrequest extends \Core\APL\ExtensionController {
         $jqgrid = new jQgrid(\JobRequestModel::getTableName());
         echo $jqgrid->populate(function ($start, $limit) {
             return \JobRequestModel::join(PostLang::getTableName(), \PostLang::getField('post_id'), '=', \JobRequestModel::getField('post_id'))
-                            ->where(\PostLang::getField('lang_id'), \Core\APL\Language::getId())
+                            ->where(\PostLang::getField('lang_id'), \WebAPL\Language::getId())
                             ->select(\JobRequestModel::getField('id'), \PostLang::getField('title'), \JobRequestModel::getField('name'), \JobRequestModel::getField('cv_path'), \JobRequestModel::getField('date_created'))
                             ->skip($start)
                             ->take($limit)

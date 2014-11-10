@@ -1,6 +1,6 @@
 <?php
 
-Core\APL\Template::setColorSchemes(array(
+WebAPL\Template::setColorSchemes(array(
     
     'blue' => array(
         'name' => 'Albastru',

@@ -7,10 +7,10 @@
 <div class="t_block">
     <?php if ($post->show_pcomment) { ?>
         <div class='live_comment' data-pid="news<?= $post->id; ?>">
-            <?= Core\APL\Shortcodes::execute($post->text, [$post, ['post' => $post]]); ?>
+            <?= WebAPL\Shortcodes::execute($post->text, [$post, ['post' => $post]]); ?>
         </div>
     <?php } else { ?>
-        <div><?= Core\APL\Shortcodes::execute($post->text, ['post' => $post]); ?></div>
+        <div><?= WebAPL\Shortcodes::execute($post->text, ['post' => $post]); ?></div>
     <?php } ?>
 </div>
 <div class="clearfix50"></div>

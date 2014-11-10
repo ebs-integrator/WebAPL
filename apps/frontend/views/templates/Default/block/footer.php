@@ -52,7 +52,7 @@
         <?php Event::fire('bottom_widgets'); ?>
     </div>
     <div class="clearfix"> </div>
-    <p class="copy"><img src="<?= res('assets/img/usaid/lgsp_' . Core\APL\Language::ext() . '.png'); ?>" class="img_copy"><span><a href="javascript:;"><?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?></span></p>
+    <p class="copy"><img src="<?= res('assets/img/usaid/lgsp_' . WebAPL\Language::ext() . '.png'); ?>" class="img_copy"><span><a href="javascript:;"><?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?></span></p>
 </footer>
 
 <?php Event::fire('bottom_contructor'); ?>

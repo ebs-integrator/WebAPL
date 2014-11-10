@@ -183,7 +183,7 @@ class PageController extends BaseController {
 
     private function clonePageLangData($source_id, $target_id) {
         //echo 'run cloning';
-        foreach (Core\APL\Language::getList() as $lang) {
+        foreach (WebAPL\Language::getList() as $lang) {
 
             $source = PostLang::where(array(
                         'lang_id' => $lang->id,
@@ -277,7 +277,7 @@ class PageController extends BaseController {
         foreach ($pages as $page) {
             $langs = PostLang::where('post_id', $page->id)->get();
             foreach ($langs as $plang) {
-                $langname = Core\APL\Language::getItem($plang->lang_id)->name;
+                $langname = WebAPL\Language::getItem($plang->lang_id)->name;
                 $buffer .= "{$plang->id},{$langname},\"{$plang->title}\"\n";
             }
             $buffer .= "\n";

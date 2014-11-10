@@ -1,9 +1,9 @@
 <?php
 
-namespace Core\APL\Modules;
+namespace WebAPL\Modules;
 
-use Core\APL\Actions,
-    Core\APL\Template,
+use WebAPL\Actions,
+    WebAPL\Template,
     Input,
     Validator,
     Route,
@@ -11,7 +11,7 @@ use Core\APL\Actions,
     View,
     NewsletterModel;
 
-class Newsletter extends \Core\APL\ExtensionController {
+class Newsletter extends \WebAPL\ExtensionController {
 
     protected $module_name = 'newsletter';
     protected $layout;

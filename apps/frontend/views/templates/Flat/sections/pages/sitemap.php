@@ -7,21 +7,21 @@
             <div class="right_site">
                 <?php foreach ($item['list'] as $kl => $sitem) { ?>
                     <div class='sitemap'>
-                        <p><a href='<?= Core\APL\Language::url('topost/' . $sitem->id); ?>'><?= $k + 1; ?>.<?= $kl + 1; ?>. <?= $sitem->title; ?></a></p>
+                        <p><a href='<?= WebAPL\Language::url('topost/' . $sitem->id); ?>'><?= $k + 1; ?>.<?= $kl + 1; ?>. <?= $sitem->title; ?></a></p>
                         <ul>
                             <?php foreach ($sitem['list'] as $titem) { ?>
                                 <li>
-                                    <a href='<?= Core\APL\Language::url('topost/' . $titem->id); ?>'><?= $titem->title; ?></a>
+                                    <a href='<?= WebAPL\Language::url('topost/' . $titem->id); ?>'><?= $titem->title; ?></a>
 
                                     <?php if ($titem['list']) { ?>
                                         <ul>
                                             <?php foreach ($titem['list'] as $qitem) { ?>
                                                 <li>
-                                                    <a href='<?= Core\APL\Language::url('topost/' . $qitem->id); ?>'><?= $qitem->title; ?></a>
+                                                    <a href='<?= WebAPL\Language::url('topost/' . $qitem->id); ?>'><?= $qitem->title; ?></a>
                                                     <?php if ($qitem['list']) { ?>
                                                         <ul>
                                                             <?php foreach ($qitem['list'] as $witem) { ?>
-                                                                <a href='<?= Core\APL\Language::url('topost/' . $witem->id); ?>'><?= $witem->title; ?></a>
+                                                                <a href='<?= WebAPL\Language::url('topost/' . $witem->id); ?>'><?= $witem->title; ?></a>
                                                             <?php } ?>
                                                         </ul>
                                                     <?php } ?>

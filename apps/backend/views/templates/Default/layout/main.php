@@ -74,8 +74,8 @@
                                 </a>
                             </div>
                             <div class="btn-group">
-                                <?php foreach (Core\APL\Language::getList() as $lang) { ?>
-                                    <a data-placement="bottom" data-original-title="E-mail" data-toggle="tooltip" href="<?= url("home/changelang/" . $lang->ext); ?>" class="btn btn-default btn-sm <?= $lang->id == Core\APL\Language::getId() ? 'active' : '' ?>">
+                                <?php foreach (WebAPL\Language::getList() as $lang) { ?>
+                                    <a data-placement="bottom" data-original-title="E-mail" data-toggle="tooltip" href="<?= url("home/changelang/" . $lang->ext); ?>" class="btn btn-default btn-sm <?= $lang->id == WebAPL\Language::getId() ? 'active' : '' ?>">
                                         <?= strtoupper($lang->ext); ?>
                                     </a>
                                 <?php } ?>

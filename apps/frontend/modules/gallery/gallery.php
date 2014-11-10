@@ -8,16 +8,16 @@
  * @link       http://ebs.md/
  */
 
-namespace Core\APL\Modules;
+namespace WebAPL\Modules;
 
-use Core\APL\Actions,
-    Core\APL\Template,
+use WebAPL\Actions,
+    WebAPL\Template,
     GalleryModel,
     Files,
         Event,
     GalleryPost;
 
-class Gallery extends \Core\APL\ExtensionController {
+class Gallery extends \WebAPL\ExtensionController {
 
     protected $module_name = 'gallery';
 

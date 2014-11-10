@@ -44,7 +44,7 @@
                         </li>
                     </ul>
                     <div class="prp">
-                        <a href="<?= Core\APL\Language::url('topropr/more_contacts');?>"><?= varlang('all-nr-phone'); ?></a>
+                        <a href="<?= WebAPL\Language::url('topropr/more_contacts');?>"><?= varlang('all-nr-phone'); ?></a>
                     </div>
                     <?php Event::fire('contact_col1_contructor'); ?>
                 </div>

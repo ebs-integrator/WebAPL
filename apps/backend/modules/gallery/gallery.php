@@ -8,10 +8,10 @@
  * @link       http://ebs.md/
  */
 
-namespace Core\APL\Modules;
+namespace WebAPL\Modules;
 
-use Core\APL\Actions,
-    Core\APL\Template,
+use WebAPL\Actions,
+    WebAPL\Template,
     Input,
     GalleryPost,
     Files,
@@ -20,7 +20,7 @@ use Core\APL\Actions,
     Event,
     GalleryModel;
 
-class Gallery extends \Core\APL\ExtensionController {
+class Gallery extends \WebAPL\ExtensionController {
 
     protected $module_name = 'gallery';
     protected $layout;

@@ -64,7 +64,7 @@
                 <?php } ?>
             </select>
             <br><br>
-            <?php foreach (\Core\APL\Language::getList() as $lang) { ?>
+            <?php foreach (\WebAPL\Language::getList() as $lang) { ?>
                 <input class="form-control" name="lang[<?= $lang->id; ?>][name]" placeholder="<?= varlang('event-name-in-'); ?><?= $lang->name; ?>"/>
                 <div class='c10'></div>
             <?php } ?>

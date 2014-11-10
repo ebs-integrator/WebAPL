@@ -17,7 +17,7 @@ if ($message) {
             <th><?= varlang('template-2'); ?></th>
             <td>
                 <table class="table">
-                    <?php foreach (\Core\APL\Template::getTemplates('frontend') as $template) { ?>
+                    <?php foreach (\WebAPL\Template::getTemplates('frontend') as $template) { ?>
                         <tr>
                             <td class="col-lg-1"><input class="make-switch" id="tpl<?= $template; ?>" type="radio" name="set[template_frontend]" value='<?= $template; ?>' <?= isset($setts['template_frontend']) && $setts['template_frontend'] == $template ? 'checked' : ''; ?>></td>
                             <td><label for="tpl<?= $template; ?>"><?= $template; ?></label></td>
@@ -34,7 +34,7 @@ if ($message) {
             <th><?= varlang('template-b'); ?></th>
             <td>
                 <table class="table">
-                    <?php foreach (\Core\APL\Template::getTemplates('backend') as $template) { ?>
+                    <?php foreach (\WebAPL\Template::getTemplates('backend') as $template) { ?>
                         <tr>
                             <td class="col-lg-1"><input class="make-switch" id="tpl<?= $template; ?>" type="radio" name="set[template_backend]" value='<?= $template; ?>' <?= isset($setts['template_backend']) && $setts['template_backend'] == $template ? 'checked' : ''; ?>></td>
                             <td><label for="tpl<?= $template; ?>"><?= $template; ?></label></td>

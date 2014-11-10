@@ -54,7 +54,7 @@
 <h3><?= varlang('limba-implicita'); ?></h3>
 <form action="<?= url('settings/save'); ?>" method="post" class="ajax-auto-submit">
     <select name="set[default_language]" class="form-control">
-        <?php foreach (Core\APL\Language::getList() as $language) { ?>
+        <?php foreach (WebAPL\Language::getList() as $language) { ?>
             <option value="<?= $language->id; ?>" <?= SettingsModel::one('default_language') == $language->id ? 'selected' : ''; ?>><?= $language->name; ?></option>
         <?php } ?>
     </select>

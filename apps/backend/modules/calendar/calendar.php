@@ -1,9 +1,9 @@
 <?php
 
-namespace Core\APL\Modules;
+namespace WebAPL\Modules;
 
-use Core\APL\Actions,
-    Core\APL\Template,
+use WebAPL\Actions,
+    WebAPL\Template,
     CalendarModel,
     CalendarLangModel,
     CalendarGroup,
@@ -18,7 +18,7 @@ use Core\APL\Actions,
     CalendarPostModel,
     jQgrid;
 
-class Calendar extends \Core\APL\ExtensionController {
+class Calendar extends \WebAPL\ExtensionController {
 
     protected $module_name = 'calendar';
     protected $layout;
@@ -109,7 +109,7 @@ class Calendar extends \Core\APL\ExtensionController {
         echo $jqgrid->populate(function ($start, $limit) {
             return CalendarModel::select(CalendarModel::$ftable . '.id', CalendarModel::$ftable . '.event_date', CalendarLangModel::$ftable . '.title', CalendarModel::$ftable . '.period', CalendarModel::$ftable . '.enabled')
                             ->leftJoin(CalendarLangModel::$ftable, CalendarLangModel::$ftable . '.calendar_item_id', '=', CalendarModel::$ftable . '.id')
-                            ->where(CalendarLangModel::$ftable . '.lang_id', \Core\APL\Language::getId())
+                            ->where(CalendarLangModel::$ftable . '.lang_id', \WebAPL\Language::getId())
                             ->skip($start)
                             ->take($limit)
                             ->get();

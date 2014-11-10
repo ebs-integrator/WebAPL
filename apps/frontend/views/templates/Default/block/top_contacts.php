@@ -1,6 +1,6 @@
 <p class="tel"><?= varlang('nr-phone'); ?></p>
-    <a class="mini_contacte" href="<?= Core\APL\Language::url('topage/contactsView'); ?>"></a>
-    <a class="mini_contacte1" href="<?= Core\APL\Language::url('topage/contactsView'); ?>"></a>
+    <a class="mini_contacte" href="<?= WebAPL\Language::url('topage/contactsView'); ?>"></a>
+    <a class="mini_contacte1" href="<?= WebAPL\Language::url('topage/contactsView'); ?>"></a>
 <div class="cont">
     <div class="contact_us_btn">
         <button class="contact_us"><?= varlang('contact-us'); ?></button>
@@ -19,7 +19,7 @@
             </ul>
             <div class="clearfix"></div>
             <div class="anp">
-                <a href="<?= Core\APL\Language::url('topropr/more_contacts'); ?>"><?= varlang('all-nr-phone'); ?></a>
+                <a href="<?= WebAPL\Language::url('topropr/more_contacts'); ?>"><?= varlang('all-nr-phone'); ?></a>
             </div>
             <div class="anp">
                 <a href="<?= varlang('orar-link'); ?>"><?= varlang('orar-autobus'); ?></a>
@@ -60,7 +60,7 @@
     <div class="currency">
         <span class="s_c">
             <img alt=""  src="<?= res('assets/img/line_dot.png'); ?>">
-            <span><?= Core\APL\Language::ext(); ?></span>
+            <span><?= WebAPL\Language::ext(); ?></span>
             <img alt=""  src="<?= res('assets/img/line_dot.png'); ?>">
         </span>
         <div class="lang">
@@ -68,8 +68,8 @@
                 <p></p>
             </div>
             <?php
-            foreach (Core\APL\Language::getList() as $lang) {
-                if (Core\APL\Language::ext() != $lang->ext && $lang->enabled == 1) {
+            foreach (WebAPL\Language::getList() as $lang) {
+                if (WebAPL\Language::ext() != $lang->ext && $lang->enabled == 1) {
                     ?>
                     <p><a href="<?= url('language/' . $lang->ext . '/' . (isset($active_page_id) ? $active_page_id : '')); ?>"><?= $lang->name; ?></a></p>
                     <?php

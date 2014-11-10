@@ -1,9 +1,9 @@
 <?php
 
-namespace Core\APL\Modules;
+namespace WebAPL\Modules;
 
-use Core\APL\Actions,
-    Core\APL\Template,
+use WebAPL\Actions,
+    WebAPL\Template,
     PersonGroup,
     PersonGroupLang,
     PersonGroupPostModel,
@@ -19,7 +19,7 @@ use Core\APL\Actions,
     View,
     PageView;
 
-class Person extends \Core\APL\ExtensionController {
+class Person extends \WebAPL\ExtensionController {
 
     protected $module_name = 'person';
     protected $layout;
@@ -122,7 +122,7 @@ class Person extends \Core\APL\ExtensionController {
                     ->select(PersonModel::getField('id'), PersonLangModel::getField('first_name'), PersonLangModel::getField('last_name'))
                     ->orderBy(PersonLangModel::getField('first_name'))
                     ->where(PersonModel::getField('for_audience'), 1)
-                    ->where(PersonLangModel::getField('lang_id'), \Core\APL\Language::getId())
+                    ->where(PersonLangModel::getField('lang_id'), \WebAPL\Language::getId())
                     ->get()
         );
         return View::make('person::block_subscribe', $data);

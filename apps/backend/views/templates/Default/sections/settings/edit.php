@@ -17,7 +17,7 @@
 
             <table class="table table-bordered table-hover">
 
-                <?php foreach (Core\APL\Language::getList() as $lang) { ?>
+                <?php foreach (WebAPL\Language::getList() as $lang) { ?>
                     <tr>
                         <th><?= varlang('sitename'); ?> (<?= $lang->name; ?>):</th>
                         <td>
@@ -49,7 +49,7 @@
             <table class="table table-bordered table-hover">
 
                 <?php
-                $colorSchemes = \Core\APL\Template::getColorSchemes();
+                $colorSchemes = \WebAPL\Template::getColorSchemes();
                 ?>
                 <?php if ($colorSchemes) { ?>
                     <tr>
@@ -71,7 +71,7 @@
 
         <?php if (Config::get('template.logo')) { ?>
             <?php if (Config::get('template.logo_multilang')) { ?>
-                <?php foreach (Core\APL\Language::getList() as $lang) { ?>
+                <?php foreach (WebAPL\Language::getList() as $lang) { ?>
                     <h4><?= varlang('home-logo-in-'); ?> <?= $lang->name; ?></h4>
                     <?= Files::widget('website_logo_' . $lang->ext, 1, 1); ?>
                     <?php if (Config::get('template.logo_small')) { ?>

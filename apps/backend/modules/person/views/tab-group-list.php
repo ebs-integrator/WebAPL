@@ -40,7 +40,7 @@
     <div class="col-lg-6">
         <?php
         $num = 0;
-        foreach (\Core\APL\Language::getList() as $lang) {
+        foreach (\WebAPL\Language::getList() as $lang) {
             $num++;
             ?>
             <?= varlang('name-in'); ?><?= $lang->name; ?>:<br>

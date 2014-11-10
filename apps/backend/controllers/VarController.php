@@ -65,7 +65,7 @@ class VarController extends BaseController {
 
         $parent_key = Input::get('parent_key');
         $var_langs = Input::get('text');
-        $key = VarModel::uniqKey(Input::get('key'), Input::get('text.' . (\Core\APL\Language::getId())));
+        $key = VarModel::uniqKey(Input::get('key'), Input::get('text.' . (\WebAPL\Language::getId())));
 
         $var = new VarModel;
         $var->key = $key;
@@ -118,7 +118,7 @@ class VarController extends BaseController {
 //                if (in_array($vlang->id, $exist)) {
 //                    continue;
 //                }
-                $langname = Core\APL\Language::getItem($vlang->lang_id)->name;
+                $langname = WebAPL\Language::getItem($vlang->lang_id)->name;
                 $buffer .= "{$vlang->id},{$langname},\"{$vlang->value}\"\n";
 
                 $vlang_ids[] = $vlang->id;

@@ -1,17 +1,17 @@
 <?php
 
-namespace Core\APL\Modules;
+namespace WebAPL\Modules;
 
-use Core\APL\Actions,
-    Core\APL\Template,
-    Core\APL\Shortcodes,
+use WebAPL\Actions,
+    WebAPL\Template,
+    WebAPL\Shortcodes,
     Input,
     Validator,
     Route,
     Event,
     JobRequestModel;
 
-class Jobrequest extends \Core\APL\ExtensionController {
+class Jobrequest extends \WebAPL\ExtensionController {
 
     protected $module_name = 'jobrequest';
     protected $layout;

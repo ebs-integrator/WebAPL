@@ -3,7 +3,7 @@
         <li>
             <a href="<?= $item['url']; ?>">
                 <p class="ttl"><?= $item->title; ?></p>
-                <p class="info"><?= Str::words(strip_tags(Core\APL\Shortcodes::strip($item->text)), 40); ?></p>
+                <p class="info"><?= Str::words(strip_tags(WebAPL\Shortcodes::strip($item->text)), 40); ?></p>
             </a>
         </li>
     <?php } ?>

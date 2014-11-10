@@ -132,7 +132,7 @@ class FileViewFinder implements ViewFinderInterface {
 	 */
 	protected function findInPaths($name, $paths)
 	{
-        $paths = \Core\APL\Template::preparePaths($paths);
+        $paths = \WebAPL\Template::preparePaths($paths);
 		foreach ($paths as $path)
 		{
 			foreach ($this->getPossibleViewFiles($name) as $file)

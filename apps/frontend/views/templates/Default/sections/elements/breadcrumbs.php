@@ -1,7 +1,7 @@
 <div class="dirs_menu">
     <div class="wrap">
         <?php
-        $breadcrumbs = Core\APL\Template::getBreadCrumbs();
+        $breadcrumbs = WebAPL\Template::getBreadCrumbs();
         ?>
         <?php foreach ($breadcrumbs as $k => $item) { ?>
             <?php

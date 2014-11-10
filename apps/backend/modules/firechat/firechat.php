@@ -1,16 +1,16 @@
 <?php
 
-namespace Core\APL\Modules;
+namespace WebAPL\Modules;
 
-use Core\APL\Actions,
-    Core\APL\Template,
+use WebAPL\Actions,
+    WebAPL\Template,
     FireBaseAuth,
     JWT,
     Route,
     Event,
     FireChatSession;
 
-class Firechat extends \Core\APL\ExtensionController {
+class Firechat extends \WebAPL\ExtensionController {
 
     protected $module_name = 'firechat';
     protected $layout;
@@ -67,7 +67,7 @@ class Firechat extends \Core\APL\ExtensionController {
             $tokenGen = new FireBaseAuth(\SettingsModel::one('firechat_key'));
             $data['token'] = $tokenGen->createToken(array("uid" => "person-{$data['person']->id}"), array("admin" => True));
 
-            $data['person_lang'] = $data['person']->langs()->where('lang_id', \Core\APL\Language::getId())->first();
+            $data['person_lang'] = $data['person']->langs()->where('lang_id', \WebAPL\Language::getId())->first();
 
             return Template::moduleView($this->module_name, 'views.chat-display', $data);
         } else {

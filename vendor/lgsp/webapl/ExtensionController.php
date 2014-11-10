@@ -3,11 +3,11 @@
  * 
  *
  * @author     Godina Nicolae <ngodina@ebs.md>
- * @copyright  2014 Enterprise Business Solutions SRL
+ * @copyright  2014 Enterprise Business Solutions SRL and LGSP USAID
  * @link       http://ebs.md/
  */
 
-namespace Core\APL;
+namespace WebAPL;
 
 use Log,
     DB,

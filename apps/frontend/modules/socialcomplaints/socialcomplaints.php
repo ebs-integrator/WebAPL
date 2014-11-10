@@ -1,17 +1,17 @@
 <?php
 
-namespace Core\APL\Modules;
+namespace WebAPL\Modules;
 
-use Core\APL\Actions,
-    Core\APL\Shortcodes,
-    Core\APL\Template,
+use WebAPL\Actions,
+    WebAPL\Shortcodes,
+    WebAPL\Template,
     PageView,
     Input,
     Validator,
     Route,
     SComplaintsModel;
 
-class Socialcomplaints extends \Core\APL\ExtensionController {
+class Socialcomplaints extends \WebAPL\ExtensionController {
 
     protected $module_name = 'socialcomplaints';
     protected $layout;

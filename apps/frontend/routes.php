@@ -16,7 +16,7 @@ if (Session::get('in_maintenance')) {
 
 Route::get('/', 'PageController@home');
 
-Route::group(array('prefix' => Core\APL\Language::ext()), function() {
+Route::group(array('prefix' => WebAPL\Language::ext()), function() {
     Route::get('/', 'PageController@home');
     Route::get('page/{furi}', 'PageController@route')->where(array('furi' => '[A-Za-z0-9-\/]+'));
 

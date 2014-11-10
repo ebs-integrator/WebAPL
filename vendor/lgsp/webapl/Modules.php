@@ -8,7 +8,7 @@
  * @link       http://ebs.md/
  */
 
-namespace Core\APL;
+namespace WebAPL;
 
 use Exception;
 
@@ -67,7 +67,7 @@ class Modules {
      * @return string
      */
     protected static function getRealModuleName($tag) {
-        return "Core\APL\Modules\\{$tag}";
+        return "WebAPL\Modules\\{$tag}";
     }
     
     

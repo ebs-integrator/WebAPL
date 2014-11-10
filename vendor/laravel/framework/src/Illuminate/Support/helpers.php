@@ -1013,7 +1013,7 @@ if (!function_exists('res')) {
      */
     function res($path) {
 
-        return (\Core\APL\Template::path($path));
+        return (\WebAPL\Template::path($path));
     }
 
 }
@@ -1074,7 +1074,7 @@ if (!function_exists('dinamic_field')) {
 if (!function_exists('varlang')) {
 
     function varlang($key) {
-        return Core\APL\Language::getVar($key);
+        return WebAPL\Language::getVar($key);
     }
 
 }

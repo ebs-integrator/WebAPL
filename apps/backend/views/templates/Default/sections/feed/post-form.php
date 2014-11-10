@@ -1,6 +1,6 @@
 <h3><?= varlang('edit-post'); ?>:
-    <?php if (isset($post_langs[Core\APL\Language::getId()])) { ?>
-        <?= $post_langs[Core\APL\Language::getId()]->title; ?>
+    <?php if (isset($post_langs[WebAPL\Language::getId()])) { ?>
+        <?= $post_langs[WebAPL\Language::getId()]->title; ?>
     <?php } else { ?>
         #<?= $general['post']->id; ?>
     <?php } ?>
@@ -12,8 +12,8 @@
 </h3>
 
 <a href='<?= url('feed'); ?>'><?= varlang('feeds-1'); ?></a> / <?= varlang('edit-post'); ?>
-<?php if (isset($post_langs[Core\APL\Language::getId()])) { ?>
-    / <?= $post_langs[Core\APL\Language::getId()]->title; ?>
+<?php if (isset($post_langs[WebAPL\Language::getId()])) { ?>
+    / <?= $post_langs[WebAPL\Language::getId()]->title; ?>
 <?php } ?>
 
 

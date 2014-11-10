@@ -8,10 +8,10 @@
  * @link       http://ebs.md/
  */
 
-namespace Core\APL\Modules;
+namespace WebAPL\Modules;
 
-use Core\APL\Actions,
-    Core\APL\Template,
+use WebAPL\Actions,
+    WebAPL\Template,
     PollModel,
     Input,
     PollAnswerModel,
@@ -25,7 +25,7 @@ use Core\APL\Actions,
     Event,
     jQgrid;
 
-class Poll extends \Core\APL\ExtensionController {
+class Poll extends \WebAPL\ExtensionController {
 
     protected $module_name = 'poll';
     protected $layout;
@@ -109,7 +109,7 @@ class Poll extends \Core\APL\ExtensionController {
         return $jqgrid->populate(function($start, $limit) use($poll_lang_id) {
                     $answers = PollAnswerModel::select(PollAnswerModel::getField('id'), PollAnswerModel::getField('poll_id'), PollAnswerModel::getField('ord'), PollAnswerLangModel::getField('title'))
                             ->join(\PollAnswerLangModel::getTableName(), PollAnswerModel::getField('id'), '=', \PollAnswerLangModel::getField('answer_id'))
-                            ->where(array(\PollAnswerLangModel::getField('lang_id') => \Core\APL\Language::getId()))
+                            ->where(array(\PollAnswerLangModel::getField('lang_id') => \WebAPL\Language::getId()))
                             ->skip($start)
                             ->take($limit)
                             ->where(array('poll_id' => $poll_lang_id))
@@ -146,7 +146,7 @@ class Poll extends \Core\APL\ExtensionController {
         $answer->poll_id = $id;
         $answer->save();
 
-        foreach (\Core\APL\Language::getList() as $lang) {
+        foreach (\WebAPL\Language::getList() as $lang) {
             $answerLang = new \PollAnswerLangModel();
             $answerLang->answer_id = $answer->id;
             $answerLang->lang_id = $lang->id;
@@ -219,7 +219,7 @@ class Poll extends \Core\APL\ExtensionController {
             $poll->save();
             $id = $poll->id;
 
-            foreach (\Core\APL\Language::getList() as $lang) {
+            foreach (\WebAPL\Language::getList() as $lang) {
                 $pollLang = new PollQuestionModel;
                 $pollLang->poll_id = $id;
                 $pollLang->lang_id = $lang->id;

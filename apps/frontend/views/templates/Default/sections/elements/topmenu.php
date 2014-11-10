@@ -1,6 +1,6 @@
-<?php if (Files::extract('website_logo_sm_' . Core\APL\Language::ext(), 1, 'path')) { ?>
+<?php if (Files::extract('website_logo_sm_' . WebAPL\Language::ext(), 1, 'path')) { ?>
 <a href="<?= Language::url('/'); ?>">
-    <img src="<?= url(Files::extract('website_logo_sm_' . Core\APL\Language::ext(), 1, 'path')); ?>" title="<?= Files::extract('website_logo_sm_' . Core\APL\Language::ext(), 1, 'name'); ?>" alt="<?= Files::extract('website_logo_sm_' . Core\APL\Language::ext(), 1, 'name'); ?>" class="logo">
+    <img src="<?= url(Files::extract('website_logo_sm_' . WebAPL\Language::ext(), 1, 'path')); ?>" title="<?= Files::extract('website_logo_sm_' . WebAPL\Language::ext(), 1, 'name'); ?>" alt="<?= Files::extract('website_logo_sm_' . WebAPL\Language::ext(), 1, 'name'); ?>" class="logo">
 </a>
 <?php } ?>
 <?php

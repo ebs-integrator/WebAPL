@@ -15,7 +15,7 @@
                             <a href="<?= Language::url('topost/' . $item->id); ?>">
                                 <p>
                                     <span><?= $item->title; ?></span>
-                                    <?= Str::words(strip_tags(Core\APL\Shortcodes::strip($item->text)), 20); ?>
+                                    <?= Str::words(strip_tags(WebAPL\Shortcodes::strip($item->text)), 20); ?>
                                 </p>
                                 <div class="more"></div>
                             </a>

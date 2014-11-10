@@ -32,7 +32,7 @@ foreach ($groups as $group) {
             $fields = @unserialize($person->dynamic_fields);
             if (is_array($fields)) {
                 foreach ($fields as $field) {
-                    if ($field['lang_id'] == 0 || $field['lang_id'] == Core\APL\Language::getId()) {
+                    if ($field['lang_id'] == 0 || $field['lang_id'] == WebAPL\Language::getId()) {
                         ?>
                         <li>
                             <span class="sec_criteria"><?= $field['name']; ?></span>

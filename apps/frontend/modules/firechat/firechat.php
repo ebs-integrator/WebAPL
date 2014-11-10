@@ -1,16 +1,16 @@
 <?php
 
-namespace Core\APL\Modules;
+namespace WebAPL\Modules;
 
-use Core\APL\Actions,
-    Core\APL\Template,
+use WebAPL\Actions,
+    WebAPL\Template,
     PersonModel,
     PersonLangModel,
         Route,
         Event,
     FireChatSession;
 
-class Firechat extends \Core\APL\ExtensionController {
+class Firechat extends \WebAPL\ExtensionController {
 
     protected $module_name = 'firechat';
     protected $layout;
@@ -89,7 +89,7 @@ class Firechat extends \Core\APL\ExtensionController {
                     ->select(PersonModel::getField('id'), PersonLangModel::getField('first_name'), PersonLangModel::getField('function'), PersonLangModel::getField('last_name'))
                     ->orderBy(PersonLangModel::getField('first_name'))
                     ->where(PersonModel::getField('for_audience'), 1)
-                    ->where(PersonLangModel::getField('lang_id'), \Core\APL\Language::getId())
+                    ->where(PersonLangModel::getField('lang_id'), \WebAPL\Language::getId())
                     ->get(),
             'session_exist' => false
         );
@@ -104,7 +104,7 @@ class Firechat extends \Core\APL\ExtensionController {
                             ->orderBy(PersonLangModel::getField('first_name'))
                             ->where(PersonModel::getField('for_audience'), 1)
                             ->where(\PersonModel::getField('id'), $data['chat']->person_id)
-                            ->where(PersonLangModel::getField('lang_id'), \Core\APL\Language::getId())
+                            ->where(PersonLangModel::getField('lang_id'), \WebAPL\Language::getId())
                             ->first();
                     $data['person_icon'] = \Files::getfile('person_chat', $data['chat']->person_id);
                 }
@@ -143,7 +143,7 @@ class Firechat extends \Core\APL\ExtensionController {
                 ->select(PersonModel::getField('id'), PersonLangModel::getField('first_name'), PersonLangModel::getField('function'), PersonLangModel::getField('last_name'))
                 ->where(PersonModel::getField('for_audience'), 1)
                 ->where(PersonModel::getField('id'), $person_id)
-                ->where(PersonLangModel::getField('lang_id'), \Core\APL\Language::getId())
+                ->where(PersonLangModel::getField('lang_id'), \WebAPL\Language::getId())
                 ->first();
         if ($person) {
 
@@ -201,7 +201,7 @@ class Firechat extends \Core\APL\ExtensionController {
                     ->select(PersonModel::getField('id'), PersonLangModel::getField('first_name'), PersonLangModel::getField('function'), PersonLangModel::getField('last_name'))
                     ->orderBy(PersonLangModel::getField('first_name'))
                     ->where(PersonModel::getField('for_audience'), 1)
-                    ->where(PersonLangModel::getField('lang_id'), \Core\APL\Language::getId())
+                    ->where(PersonLangModel::getField('lang_id'), \WebAPL\Language::getId())
                     ->get()
         );
 
@@ -222,7 +222,7 @@ class Firechat extends \Core\APL\ExtensionController {
             $chat = \FireChatSession::find($session_id);
             if ($chat) {
                 $data['html'] = $html;
-                $person = \PersonLangModel::where('person_id', $chat->person_id)->where('lang_id', \Core\APL\Language::getId())->first();
+                $person = \PersonLangModel::where('person_id', $chat->person_id)->where('lang_id', \WebAPL\Language::getId())->first();
                 Template::viewModule($this->module_name, function () use ($data, $chat, $person) {
                     \Mail::send('views.email-mess', $data, function($message) use ($chat, $person) {
                         $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'WebLPA');
