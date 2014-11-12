@@ -35,7 +35,7 @@
         </div>
         <div class="content">
             <ul class="f_social">
-                <li><a target="_blank" class="f_fb" href="<?= varlang('facebook_link'); ?>"></a></li>
+                <li><a target="_blank" class="f_fb" href="<?= varlang('facebook-link'); ?>"></a></li>
                 <li><a target="_blank" class="f_odno" href="<?= varlang('odnoklassniki-link-1'); ?>"></a></li>
                 <li><a target="_blank" class="f_vk" href="<?= varlang('vkontakte-link'); ?>"></a></li>
                 <li><a target="_blank" class="f_twitter" href="<?= varlang('twitter-link'); ?>"></a></li>

@@ -30,7 +30,7 @@
             </div>
         <?php } ?>
         <div class="left socials">
-            <a target="_blank" href="<?= varlang('facebook_link'); ?>"><span><img  alt="" src="<?= res('assets/img/fb.png'); ?>"></span><?= varlang('facebook'); ?></a>
+            <a target="_blank" href="<?= varlang('facebook-link'); ?>"><span><img  alt="" src="<?= res('assets/img/fb.png'); ?>"></span><?= varlang('facebook'); ?></a>
             <a target="_blank" href="<?= varlang('odnoklassniki-link-1'); ?>"><span><img  alt="" src="<?= res('assets/img/ok.png'); ?>"></span><?= varlang('odnoklassniki'); ?></a>
             <a target="_blank" href="<?= varlang('vkontakte-link'); ?>"><span><img  alt="" src="<?= res('assets/img/vk.png'); ?>"></span><?= varlang('vkontakte'); ?></a>
         </div>

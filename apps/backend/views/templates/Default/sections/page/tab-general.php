@@ -8,7 +8,7 @@
                 <td>
                     <select name="page[parent]" class='form-control'>
                         <option value='0'>----</option>
-                        <?= View::make('sections.page.element-tree-option', array('level' => 1, 'items' => $tree_pages, 'selected' => isset($page->parent) ? $page->parent : 0)); ?>
+                        <?= View::make('sections.page.element-tree-option', array('level' => 1, 'items' => $tree_pages, 'selected' => isset($page->parent) ? $page->parent : 0, 'exclude' => (isset($page->id) ? $page->id : null))); ?>
                     </select>
                 </td>
             </tr>

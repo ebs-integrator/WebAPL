@@ -6,7 +6,7 @@
         <li>
             <span>
                 <?php if (User::has("page-order")) { ?>
-                    <a class="label-default move-btn" href="<?= url('page/move/' . $item->id . '/1'); ?>">&#65514;</a> <a class="label-default move-btn" href="<?= url('page/move/' . $item->id . '/0'); ?>">&#65516;</a> 
+                    <a class="label-default move-btn" href="<?= url('page/move/' . $item->id . '/1'); ?>">&#65514;</a> <a class="label-default move-btn" href="<?= url('page/move/' . $item->id . '/0'); ?>">&#65516;</a>
                 <?php } ?>
                 <a class='<?= isset($page->id) && $page->id == $item->id ? 'active' : ''; ?>' href='<?= url('page/index/' . $item->id); ?>'><?= $nodeName; ?></a>
             </span>
@@ -17,7 +17,7 @@
     <?php } else { ?>
         <li>
             <?php if (User::has("page-order")) { ?>
-                <a class="label-default move-btn" href="<?= url('page/move/' . $item->id . '/1'); ?>">&#65514;</a> <a class="label-default move-btn" href="<?= url('page/move/' . $item->id . '/0'); ?>">&#65516;</a> 
+                <a class="label-default move-btn" href="<?= url('page/move/' . $item->id . '/1'); ?>">&#65514;</a> <a class="label-default move-btn" href="<?= url('page/move/' . $item->id . '/0'); ?>">&#65516;</a>
             <?php } ?>
             <a class='<?= isset($page->id) && $page->id == $item->id ? 'active' : ''; ?>' href='<?= url('page/index/' . $item->id); ?>'><?= $nodeName; ?></a>
         </li>

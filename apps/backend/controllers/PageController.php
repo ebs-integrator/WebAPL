@@ -105,7 +105,7 @@ class PageController extends BaseController {
             $post->created_at = $page['created_at'];
             $post->updated_at = date('Y-m-d G:i:s');
             if (User::has('page-move')) {
-                if ($post->parent != $post->id) {
+                if ($page['parent'] != $page_id) {
                     $post->parent = $page['parent'];
                 }
             }
