@@ -12,6 +12,10 @@ ClassLoader::addDirectories(array(
 App::error(function(Exception $exception, $code) {
     Log::error($exception);
 
+    if (Config::get('app.debug') === true) {
+        return null;
+    }
+    
     $page_property = false;
 
     $ecode = $exception->getCode();
