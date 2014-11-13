@@ -14,3 +14,5 @@ versions by modifying and improving the code of the WebAPL platform and to
 distribute them, only with the same GPL3 license
 (http://opensource.org/licenses/GPL-3.0) thus preserving the open nature of this
 open source product.
+
+Docs repository: https://github.com/EnterpriseBusinessSolutions/WebAPL-doc
