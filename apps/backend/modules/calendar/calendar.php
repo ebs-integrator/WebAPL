@@ -1,5 +1,28 @@
 <?php
 
+/**
+ * 
+ * CMS WebAPL 1.0. Platform is a free open source software for creating an managing
+ * their full with CMS integrated CMS system
+ * 
+ * Copyright (C) 2014 Enterprise Business Solutions SRL
+ * 
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ * PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License along with
+ * this program.  If not, see <http://www.gnu.org/licenses/>.
+ * You can read the copy of GNU General Public License in english here 
+ * 
+ * For more details about CMS WebAPL 1.0 please contact Enterprise Business
+ * Solutions SRL, Republic of Moldova, MD 2001, Ion Inculet 33 Street or send an
+ * email to office@ebs.md 
+ * 
+ */
+
 namespace WebAPL\Modules;
 
 use WebAPL\Actions,
@@ -50,6 +73,76 @@ class Calendar extends \WebAPL\ExtensionController {
         Template::registerViewMethod('page', $this->page_view_mod, 'Calendar', null, true);
 
         $this->layout = Template::mainLayout();
+
+        Event::listen('feed_post_bottom', [$this, 'post_event']);
+        Route::post('calendar/save_post_cal_attach', array('before' => 'auth', array($this, 'save_post_cal_attach')));
+
+
+        Route::post('calendar/get_person_list/{id}', array('before' => 'auth', array($this, 'get_person_list')));
+    }
+
+    public function get_person_list($id) {
+        \User::onlyHas('calendar-view');
+
+        $jqgrid = new jQgrid(\CalendarModel::getTableName());
+
+        echo $jqgrid->populate(function ($start, $limit) use ($id) {
+            return CalendarModel::select(CalendarModel::getField('id'), CalendarLangModel::getField('title'))
+                            ->join(CalendarLangModel::getTableName(), CalendarLangModel::getField('calendar_item_id'), '=', CalendarModel::getField('id'))
+                            ->where(CalendarLangModel::getField('lang_id'), '=', Language::getId())
+                            ->where(CalendarModel::getField('person_id'), '=', $id)
+                            ->skip($start)
+                            ->take($limit)
+                            ->get();
+        });
+    }
+
+    public function post_event($post) {
+        if (\User::has('calendar-view')) {
+            $count = \CalendarModel::where('post_id', $post['id'])->count();
+
+            echo Template::moduleView($this->module_name, 'views.post-attachment', ['post' => $post, 'activated' => ($count > 0 ? true : false)]);
+        }
+    }
+
+    public function save_post_cal_attach() {
+
+        $id = Input::get('post_id');
+
+        $count = \CalendarModel::where('post_id', $id)->count();
+
+        if ($count == 0) {
+            $post = Post::find($id);
+            $calendar = new \CalendarModel;
+            $calendar->post_id = $id;
+            $calendar->event_date = $post->created_at;
+
+            $field = \FeedFieldValue::join(\FeedField::getTableName(), \FeedField::getField('id'), '=', \FeedFieldValue::getField('feed_field_id'))->where([
+                        'post_id' => $id,
+                        \FeedField::getField('fkey') => 'hours'
+                    ])->first();
+
+            if ($field) {
+                $calendar->period = $field->value;
+            }
+
+            $calendar->save();
+
+            $postLangs = \PostLang::where('post_id', $id)->get();
+            foreach ($postLangs as $postLang) {
+                $calendarLang = new CalendarLangModel;
+                $calendarLang->calendar_item_id = $calendar->id;
+                $calendarLang->title = $postLang->title;
+                $calendarLang->lang_id = $postLang->lang_id;
+                $calendarLang->save();
+            }
+        } else {
+            $calendar = CalendarModel::where('post_id', $id)->get();
+            foreach ($calendar as $item) {
+                CalendarLangModel::where('calendar_item_id', $item->id)->delete();
+            }
+            CalendarModel::where('post_id', $id)->delete();
+        }
     }
 
     public function left_menu_item() {
@@ -80,6 +173,13 @@ class Calendar extends \WebAPL\ExtensionController {
             $data['langs'] = array();
             foreach ($langs as $lang) {
                 $data['langs'][$lang->lang_id] = $lang;
+            }
+
+            if (\WebAPL\Modules::checkInstance('person')) {
+                $this->loadClass(['PersonLangModel'], 'person');
+                $data['persons'] = \PersonLangModel::where('lang_id', Language::getId())
+                        ->orderBy(\DB::raw(\PersonLangModel::getField('first_name') . ', ' . \PersonLangModel::getField('last_name')), 'asc')
+                        ->get();
             }
 
             $data['groups'] = \CalendarGroup::orderBy('name', 'asc')->get();
@@ -167,6 +267,12 @@ class Calendar extends \WebAPL\ExtensionController {
             $item->event_date = Input::get("event_date");
             $item->calendar_group_id = Input::get("group_id");
             $item->enabled = Input::get("enabled") ? 1 : 0;
+
+            $item->repeat_frequency = Input::get("repeat_frequency");
+            $item->repeat_to_date = Input::get("repeat_to_date");
+
+            $item->person_id = Input::get("person_id") ? Input::get("person_id") : 0;
+
             $item->save();
         } else {
             throw new Exception("Calendar item #{$id} not found");
@@ -182,6 +288,7 @@ class Calendar extends \WebAPL\ExtensionController {
             $item = CalendarLangModel::find($id);
             if ($item) {
                 $item->title = $lang['title'];
+                $item->location = $lang['location'];
                 $item->save();
             }
         }

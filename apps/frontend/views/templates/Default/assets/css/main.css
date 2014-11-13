@@ -4414,7 +4414,7 @@ ul.dcr.smpl > li .dcr_box {
     z-index: 99;
     background:#fff;
     padding:7px 17px;
-    height: 60px;
+    /*height: 60px;*/
     border:1px solid #74b45a;
 }
 .cl_pop span{

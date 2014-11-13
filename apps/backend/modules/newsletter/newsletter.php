@@ -1,5 +1,28 @@
 <?php
 
+/**
+ * 
+ * CMS WebAPL 1.0. Platform is a free open source software for creating an managing
+ * their full with CMS integrated CMS system
+ * 
+ * Copyright (C) 2014 Enterprise Business Solutions SRL
+ * 
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ * PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License along with
+ * this program.  If not, see <http://www.gnu.org/licenses/>.
+ * You can read the copy of GNU General Public License in english here 
+ * 
+ * For more details about CMS WebAPL 1.0 please contact Enterprise Business
+ * Solutions SRL, Republic of Moldova, MD 2001, Ion Inculet 33 Street or send an
+ * email to office@ebs.md 
+ * 
+ */
+
 namespace WebAPL\Modules;
 
 use WebAPL\Actions,
@@ -107,10 +130,10 @@ class Newsletter extends \WebAPL\ExtensionController {
                         $data['unsubscribe_link'] = url("/../newsletter/unsubscribe/{$user->hash}");
                         echo $user->email;
                         var_dump(Mail::send('views.emails.post', $data, function($message) use ($post, $user) {
-                            $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'WebLPA');
-                            $message->subject($post->title . " :: NEWSLETTER");
-                            $message->to($user->email);
-                        }));
+                                    $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'WebLPA');
+                                    $message->subject($post->title . " :: NEWSLETTER");
+                                    $message->to($user->email);
+                                }));
                     }
                 }
             });
@@ -134,14 +157,14 @@ class Newsletter extends \WebAPL\ExtensionController {
         echo "\xEF\xBB\xBF" . $buffer;
         die;
     }
-    
+
     public function getExport() {
         \User::onlyHas('newsletter-view');
 
         $emails = NewsletterModel::all();
 
         $matrix = [['Email', 'Status', 'Date']];
-        
+
         foreach ($emails as $email) {
             $matrix[] = [$email->email, ($email->enabled ? 'activ' : 'inactiv'), $email->subscribe_date];
         }

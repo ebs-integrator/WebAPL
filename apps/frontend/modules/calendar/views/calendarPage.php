@@ -65,8 +65,17 @@ $months = array('', 'Ianuarie', 'Februarie', 'Martie', 'Aprilie', 'Mai', 'Iunie'
                                                 <li><!-- eveniment -->
                                                     <p><?= $event->period; ?></p>
                                                     <div class="cl_pop">
-                                                        <span><?= $event->title; ?></span>
-                                                        <!--<p>Ion Vasilica</p>-->
+                                                        <?php if (isset($online_persons) && in_array($event->person_id, $online_persons)) { ?>
+                                                            <a href="javascript:;" data-personid="<?= $event->person_id; ?>" class="firechat-start-with"><img src="<?= res('assets/img/startchat.png'); ?>" style="display: inline;" /> <?= varlang('incepe-discutia'); ?></a>
+                                                        <?php } ?>
+                                                        <?php if ($event->post_id) { ?>
+                                                            <a href="<?= Language::url('topost/' . $event->post_id); ?>"><?= $event->title; ?></a>
+                                                        <?php } else { ?>
+                                                            <span><?= $event->title; ?></span>
+                                                        <?php } ?>
+                                                        <?php if ($event->location) { ?>
+                                                            <p><?= $event->location; ?></p>
+                                                        <?php } ?>
                                                     </div>
                                                 </li>
                                             <?php } ?>
@@ -86,7 +95,7 @@ $months = array('', 'Ianuarie', 'Februarie', 'Martie', 'Aprilie', 'Mai', 'Iunie'
                                 $dayOfWeek++;
                             }
                         }
-                        
+
                         echo $dayOfWeek > 1 ? str_repeat('<td class="empty_cell">&nbsp;</td>', 8 - $dayOfWeek) : '';
                         echo '</tr></table>';
 

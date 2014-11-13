@@ -1,5 +1,27 @@
 <?php
 
+/**
+ * 
+ * CMS WebAPL 1.0. Platform is a free open source software for creating an managing
+ * their full with CMS integrated CMS system
+ * 
+ * Copyright (C) 2014 Enterprise Business Solutions SRL
+ * 
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ * PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License along with
+ * this program.  If not, see <http://www.gnu.org/licenses/>.
+ * You can read the copy of GNU General Public License in english here 
+ * 
+ * For more details about CMS WebAPL 1.0 please contact Enterprise Business
+ * Solutions SRL, Republic of Moldova, MD 2001, Ion Inculet 33 Street or send an
+ * email to office@ebs.md 
+ * 
+ */
 namespace WebAPL\Modules;
 
 use WebAPL\Actions,
@@ -47,8 +69,15 @@ class Person extends \WebAPL\ExtensionController {
         Route::post('person/subscribe_to_audience', array($this, 'subscribe_to_audience'));
 
         View::addNamespace('person', app_path('/modules/person/views'));
+        
+        $online_persons = \PersonModel::where('for_audience', 1)->get();
+        $online_persons_arr = [];
+        foreach ($online_persons as $person) {
+            $online_persons_arr[] = $person->id;
+        }
+        View::share('online_persons', $online_persons_arr);
     }
-
+    
     public function group_list($data) {
         $groups = PersonModel::getPostPersonGroups($data['page']->id);
         if ($groups) {
