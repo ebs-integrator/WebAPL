@@ -40,4 +40,12 @@ class EmailModel {
         }
     }
 
+    public static function sendToAddress($email, $subject, $view, $data = []) {
+        Mail::send($view, $data, function($message) use ($subject, $email) {
+            $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'WebLPA');
+            $message->subject($subject);
+            $message->to($email);
+        });
+    }
+
 }

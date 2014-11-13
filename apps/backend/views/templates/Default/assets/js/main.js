@@ -164,7 +164,9 @@ jQuery(document).ready(function($) {
 
 
     $('.datetimepicker').datetimepicker({
-        language: 'en'
+        language: 'en',
+        pickSeconds: true,
+        pick12HourFormat: false
     });
 
     $("#ccache").click(function() {

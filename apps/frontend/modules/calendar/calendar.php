@@ -22,6 +22,7 @@
  * email to office@ebs.md 
  * 
  */
+
 namespace WebAPL\Modules;
 
 use WebAPL\Actions,
@@ -31,6 +32,8 @@ use WebAPL\Actions,
     Input,
     Redirect,
     PageView,
+    Route,
+    DB,
     Language;
 
 class Calendar extends \WebAPL\ExtensionController {
@@ -43,6 +46,14 @@ class Calendar extends \WebAPL\ExtensionController {
         parent::__construct();
 
         $this->loadClass(array('CalendarModel', 'CalendarLangModel'));
+
+        Route::get('calendar/cron', [$this, 'email_notifications']);
+
+        $cron_date = \SettingsModel::one('calendar_cron_time');
+        if (date("Y-m-d", intval($cron_date)) !== date('Y-m-d')) {
+            \SettingsModel::put('calendar_cron_time', time());
+            $this->email_notifications();
+        }
 
         Template::registerViewMethod('page', $this->page_view_mod, 'Pagina calendar', array($this, 'calendarViewMod'), true);
     }
@@ -73,82 +84,18 @@ class Calendar extends \WebAPL\ExtensionController {
         $max_time = mktime(0, 0, 0, $wdata['end_month'], 1, $wdata['end_year']);
 
 
-        $event_list = [];
-
-        function add_event(&$event_list, $time, $event) {
-            $year = intval(date("Y", $time));
-            $month = intval(date("m", $time));
-            $day = intval(date("d", $time));
-
-            if (isset($event_list[$year][$month][$day])) {
-                $event_list[$year][$month][$day][] = $event;
-            } else {
-                $event_list[$year][$month][$day] = [$event];
-            }
-        }
-
-        foreach ($events as $event) {
+        $event_list = \CalendarModel::generateEvents($events);
+        foreach ($event_list as $event) {
             $time = strtotime($event->event_date);
+
             if ($min_time > $time) {
                 $min_time = $time;
             }
             if ($max_time < $time) {
                 $max_time = $time;
             }
-
-            add_event($event_list, $time, $event);
-            $to_time = strtotime($event->repeat_to_date);
-
-            if ($time < $to_time && $event->repeat_frequency !== 'none') {
-                switch ($event->repeat_frequency) {
-                    case 'zilnic':
-                        $add_time = 86400;
-                        while ($time + $add_time <= $to_time) {
-                            $time += $add_time;
-                            add_event($event_list, $time, $event);
-                        }
-                        break;
-                    case 'saptaminal':
-                        $add_time = 86400 * 7;
-                        while ($time + $add_time <= $to_time) {
-                            $time += $add_time;
-                            add_event($event_list, $time, $event);
-                        }
-                        break;
-                    case 'lunar':
-                        $day = date("d", $time);
-                        while ($time <= $to_time) {
-                            $calc_time = strtotime(date("Y-m-{$day} H:i:s", strtotime("+1 months", $time)));
-                            if ($calc_time) {
-                                $time = $calc_time;
-                                if ($time > $to_time) {
-                                    break;
-                                }
-                                add_event($event_list, $time, $event);
-                            } else {
-                                $time = strtotime("+1 months", $time);
-                            }
-                        }
-                        break;
-                    case 'anual':
-                        $day = date("d", $time);
-                        $month = date("m", $time);
-                        while ($time <= $to_time) {
-                            $calc_time = strtotime(date("Y-{$month}-{$day} H:i:s", strtotime("+1 years", $time)));
-                            if ($calc_time) {
-                                $time = $calc_time;
-                                if ($time > $to_time) {
-                                    break;
-                                }
-                                add_event($event_list, $time, $event);
-                            } else {
-                                $time = strtotime("+1 years", $time);
-                            }
-                        }
-                        break;
-                }
-            }
         }
+
 
         $wdata['events'] = $event_list;
 
@@ -161,6 +108,47 @@ class Calendar extends \WebAPL\ExtensionController {
         $data['page']->text .= Template::moduleView($this->module_name, "views.calendarPage", $wdata);
 
         return PageView::defaultView($data);
+    }
+
+    public function email_notifications() {
+        if (\WebAPL\Modules::checkInstance('person')) {
+
+            $events = \CalendarModel::join(CalendarLangModel::getTableName(), \CalendarModel::getField('id'), '=', CalendarLangModel::getField('calendar_item_id'))
+                    ->join(\CalendarGroup::getTableName(), \CalendarGroup::getField('id'), '=', \CalendarModel::getField('calendar_group_id'))
+                    ->join(\CalendarPostModel::getTableName(), \CalendarPostModel::getField('calendar_group_id'), '=', \CalendarGroup::getField('id'))
+                    ->where(CalendarLangModel::getField('lang_id'), \WebAPL\Language::getId())
+                    ->where(\CalendarModel::getField('enabled'), 1)
+                    ->where(\CalendarModel::getField('person_id'), '<>', 0)
+                    ->select(CalendarLangModel::getField("*"), \CalendarModel::getField('event_date'), \CalendarModel::getField('repeat_frequency'), \CalendarModel::getField('repeat_to_date'), \CalendarModel::getField('person_id'), \CalendarModel::getField('post_id'), \CalendarModel::getField('period'))
+                    ->orderBy(\CalendarModel::getField('event_date'), 'asc')
+                    ->where(function ($query) {
+                        $query->where(function ($query) {
+                            $query->where(DB::raw("DATE(" . CalendarModel::getField('event_date') . ")"), '=', DB::raw('DATE(CURRENT_TIMESTAMP)'));
+                        })->orWhere(function ($query) {
+                            $query->where(\CalendarModel::getField('event_date'), '<=', DB::raw('CURRENT_TIMESTAMP'))
+                            ->where(\CalendarModel::getField('repeat_to_date'), '>=', DB::raw('CURRENT_TIMESTAMP'))
+                            ->where(\CalendarModel::getField('repeat_frequency'), '<>', 'none');
+                        });
+                    })
+                    ->get();
+
+            $event_list = \CalendarModel::generateEvents($events, false);
+
+            $today_events = [];
+            foreach ($event_list as $event) {
+                if (date("Y-m-d", strtotime($event['event_date'])) === date("Y-m-d") && (strtotime($event['event_date']) >= time())) {
+                    echo " sendone ";
+                    $today_events[] = $event;
+                    $this->loadClass(['PersonModel'], 'person');
+                    $person = \PersonModel::getPerson($event['person_id']);
+                    if (isset($person->email) && $person->email) {
+                        Template::viewModule($this->module_name, function () use ($person, $event) {
+                            \EmailModel::sendToAddress($person->email, "Do you have an event today", 'views.calendarEmail', ['person' => $person, 'event' => $event]);
+                        });
+                    }
+                }
+            }
+        }
     }
 
 }

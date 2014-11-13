@@ -21,7 +21,7 @@
             <th><?= varlang('date-6'); ?></th>
             <td>
                 <div class="input-group date datetimepicker">        
-                    <input type="text" class="form-control" value="<?= $act->date_upload; ?>" name="date_upload" data-date-format="YYYY-MM-DD hh:mm:ss" />		
+                    <input type="text" class="form-control" value="<?= $act->date_upload; ?>" name="date_upload" data-date-format="YYYY-MM-DD HH:mm:ss" />		
                     <span class="input-group-addon"><span class="glyphicon-calendar glyphicon"></span></span>    
                 </div> 
             </td>

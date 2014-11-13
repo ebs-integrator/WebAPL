@@ -22,7 +22,7 @@
                 <tr>
                     <th><?= varlang('event-date-'); ?></th>
                     <td>
-                        <input type="text" name="event_date" class='form-control datetimepicker' data-date-format="YYYY-MM-DD hh:mm:ss" value='<?= isset($calendar->event_date) ? $calendar->event_date : date("Y-m-d H:i:s"); ?>' />
+                        <input type="text" name="event_date" class='form-control datetimepicker' data-date-format="YYYY-MM-DD HH:mm" value='<?= isset($calendar->event_date) ? date("Y-m-d H:i", strtotime($calendar->event_date)) : date("Y-m-d H:i"); ?>' />
                     </td>
                 </tr>
                 <tr>
@@ -54,7 +54,7 @@
                             <option value="anual" <?= isset($calendar->repeat_frequency) && $calendar->repeat_frequency == 'anual' ? 'selected' : ''; ?>>Anual</option>
                         </select>
                         <br>
-                        <input type="text" name="repeat_to_date" class='form-control datetimepicker' data-date-format="YYYY-MM-DD hh:mm:ss" value='<?= isset($calendar->repeat_to_date) && strtotime($calendar->repeat_to_date) ? $calendar->repeat_to_date : date("Y-m-d H:i:s"); ?>' />
+                        <input type="text" name="repeat_to_date" class='form-control datetimepicker' data-date-format="YYYY-MM-DD HH:mm" value='<?= isset($calendar->repeat_to_date) && strtotime($calendar->repeat_to_date) ? $calendar->repeat_to_date : date("Y-m-d H:i:s"); ?>' />
                     </td>
                 </tr>
 

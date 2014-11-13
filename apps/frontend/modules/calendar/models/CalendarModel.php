@@ -25,9 +25,95 @@
 class CalendarModel extends Eloquent {
 
     use EloquentTrait;
-    
+
     protected $table = 'apl_calendar_item';
     public static $ftable = 'apl_calendar_item';
     public $timestamps = false;
+
+    public static function generateEvents($events, $sorted = true) {
+        $event_list = [];
+
+        function add_event(&$event_list, $time, $event) {
+            global $sorted;
+            
+            $event = clone $event;
+            
+            $event['event_date'] = date('Y-m-d H:i:s', $time);
+
+            if ($sorted === TRUE) {
+                $year = intval(date("Y", $time));
+                $month = intval(date("m", $time));
+                $day = intval(date("d", $time));
+
+                if (isset($event_list[$year][$month][$day])) {
+                    $event_list[$year][$month][$day][] = $event;
+                } else {
+                    $event_list[$year][$month][$day] = [$event];
+                }
+            } else {
+                $event_list[] = $event;
+            }
+        }
+
+        foreach ($events as $event) {
+            $time = strtotime($event->event_date);
+
+            add_event($event_list, $time, $event);
+            $to_time = strtotime($event->repeat_to_date);
+
+            if ($time < $to_time && $event->repeat_frequency !== 'none') {
+                switch ($event->repeat_frequency) {
+                    case 'zilnic':
+                        $add_time = 86400;
+                        while ($time + $add_time <= $to_time) {
+                            $time += $add_time;
+                            add_event($event_list, $time, $event);
+                        }
+                        break;
+                    case 'saptaminal':
+                        $add_time = 86400 * 7;
+                        while ($time + $add_time <= $to_time) {
+                            $time += $add_time;
+                            add_event($event_list, $time, $event);
+                        }
+                        break;
+                    case 'lunar':
+                        $day = date("d", $time);
+                        while ($time <= $to_time) {
+                            $calc_time = strtotime(date("Y-m-{$day} H:i:s", strtotime("+1 months", $time)));
+                            if ($calc_time) {
+                                $time = $calc_time;
+                                if ($time > $to_time) {
+                                    break;
+                                }
+                                add_event($event_list, $time, $event);
+                            } else {
+                                $time = strtotime("+1 months", $time);
+                            }
+                        }
+                        break;
+                    case 'anual':
+                        $day = date("d", $time);
+                        $month = date("m", $time);
+                        while ($time <= $to_time) {
+                            $calc_time = strtotime(date("Y-{$month}-{$day} H:i:s", strtotime("+1 years", $time)));
+                            if ($calc_time) {
+                                $time = $calc_time;
+                                if ($time > $to_time) {
+                                    break;
+                                }
+                                add_event($event_list, $time, $event);
+                            } else {
+                                $time = strtotime("+1 years", $time);
+                            }
+                        }
+                        break;
+                }
+            }
+        }
+
+
+        return $event_list;
+    }
 
 }

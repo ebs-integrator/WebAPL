@@ -77,7 +77,7 @@
         <tr>
             <th><?= varlang('date--4'); ?></th>
             <td>
-                <input type="text" name="page[created_at]" class='form-control datetimepicker' data-date-format="YYYY-MM-DD hh:mm:ss" value='<?= isset($page->created_at) ? $page->created_at : ''; ?>' />
+                <input type="text" name="page[created_at]" class='form-control datetimepicker' data-date-format="YYYY-MM-DD HH:mm:ss" value='<?= isset($page->created_at) ? $page->created_at : ''; ?>' />
             </td>
         </tr>
         <tr>

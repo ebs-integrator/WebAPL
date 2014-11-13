@@ -71,7 +71,7 @@
             <div class='c20'></div>
             <input class='form-control' type="text" name="general[period]" placeholder="<?= varlang('period-'); ?>" />
             <div class='c10'></div>
-            <input class='form-control datetimepicker' data-date-format="YYYY-MM-DD hh:mm:ss" type='text' name='general[date]' placeholder="<?= varlang('event-date-'); ?>" value='<?= date("Y-m-d H:i:s"); ?>' />
+            <input class='form-control datetimepicker' data-date-format="YYYY-MM-DD HH:mm:ss" type='text' name='general[date]' placeholder="<?= varlang('event-date-'); ?>" value='<?= date("Y-m-d H:i:s"); ?>' />
             <br>
             <button class="btn btn-success"><?= varlang('creaza-eveniment'); ?></button>
             <div class='c20'></div>

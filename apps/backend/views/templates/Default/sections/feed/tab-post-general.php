@@ -5,7 +5,7 @@
         <tr>
             <th class="col-lg-4"><?= varlang('date-3'); ?>: </th>
             <td>
-                <input type="text" name="post[created_at]" class='form-control datetimepicker' data-date-format="YYYY-MM-DD hh:mm:ss" value='<?= isset($post->created_at) ? $post->created_at : ''; ?>' />
+                <input type="text" name="post[created_at]" class='form-control datetimepicker' data-date-format="YYYY-MM-DD HH:mm:ss" value='<?= isset($post->created_at) ? $post->created_at : ''; ?>' />
             </td>
         </tr>
 
@@ -47,7 +47,7 @@
         <tr>
             <th><?= varlang('data-expirarii-alertei'); ?>: </th>
             <td>
-                <input type="text" name="post[alert_expire]" class='form-control datetimepicker' data-date-format="YYYY-MM-DD hh:mm:ss" value='<?= isset($post->alert_expire) ? $post->alert_expire : ''; ?>' />
+                <input type="text" name="post[alert_expire]" class='form-control datetimepicker' data-date-format="YYYY-MM-DD HH:mm:ss" value='<?= isset($post->alert_expire) ? $post->alert_expire : ''; ?>' />
             </td>
         </tr>
         
