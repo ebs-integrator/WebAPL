@@ -111,6 +111,7 @@
                                 <?php if (User::has('file-manage')) { ?>
                                     <li> <a href="<?= url('filemanager'); ?>"><?= varlang('filemanager'); ?></a></li>
                                 <?php } ?>
+                                <li> <a href="<?= url('help'); ?>">Help</a></li>
                                 <li><img id="loading" style="display: none;margin-top: 14px;" src="<?= res('assets/img/ajax-loader.gif'); ?>" /></li>
                             </ul><!-- /.nav -->
                         </div>
@@ -163,7 +164,7 @@
                     <img class="col-lg-12" src="<?= res('assets/img/usaid/lgsp_' . Language::ext() . '.png'); ?>" />
                 </div>
                 <div class="col-lg-9">
-                        <?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?>
+                    <?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?>
                 </div>
                 <div class="clearfix"></div>
             </div>

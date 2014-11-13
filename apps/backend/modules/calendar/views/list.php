@@ -16,10 +16,10 @@
                 colNames: ['ID', '<?= varlang('event-date-'); ?>', '<?= varlang('title--5'); ?>', '<?= varlang('period-'); ?>', '<?= varlang('enabled--3'); ?>'],
                 colModel: [
                     {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
-                    {name: 'event_date', index: 'event_date', height: 50, resizable: true, sortable:false, align: "left", editable: true, edittype: "text"},
-                    {name: 'title', index: 'title', resizable: true, sortable:false, align: "left", sorttype: "text", editable: false, edittype: "text"},
-                    {name: 'period', index: 'period', resizable: true, sortable:false, align: "left", sorttype: "text", editable: false, edittype: "text"},
-                    {name: 'enabled', index: 'enabled', resizable: true, sortable:false, align: "left", sorttype: "text", editable: true, edittype: "select", editoptions: {value: '0:Disabled;1:Enabled'}, formatter: function(value) {
+                    {name: 'event_date', index: 'event_date', height: 50, resizable: true, sortable: false, align: "left", editable: true, edittype: "text"},
+                    {name: 'title', index: 'title', resizable: true, sortable: false, align: "left", sorttype: "text", editable: false, edittype: "text"},
+                    {name: 'period', index: 'period', resizable: true, sortable: false, align: "left", sorttype: "text", editable: false, edittype: "text"},
+                    {name: 'enabled', index: 'enabled', resizable: true, sortable: false, align: "left", sorttype: "text", editable: true, edittype: "select", editoptions: {value: '0:Disabled;1:Enabled'}, formatter: function(value) {
                             return "<center data-value='" + value + "'>" + (value ? '<span class="label label-success">Enabled</span>' : '<span class="label label-danger">Disabled</span>') + "</center>";
                         }, unformat: function(value) {
                             return value === 'Enabled' ? 1 : 0;
@@ -90,7 +90,7 @@
                 colNames: ['ID', 'Name'],
                 colModel: [
                     {name: 'id', index: 'id', hidden: true, editable: false, editoptions: {readonly: true, size: 10}},
-                    {name: 'name', index: 'name', height: 50, resizable: true, sortable:false, align: "left", editable: true, edittype: "text"}
+                    {name: 'name', index: 'name', height: 50, resizable: true, sortable: false, align: "left", editable: true, edittype: "text"}
                 ],
                 rowNum: 30,
                 multiselect: false,
@@ -107,7 +107,15 @@
                 loadComplete: function() {
                 }, ight: $(window).height() * 0.7,
                 onSelectRow: function(rowid) {
-                }
+                },
+                ondblClickRow: function(rowid) {
+                    jQuery(this).jqGrid('editGridRow', rowid, {
+                        recreateForm: true,
+                        closeAfterEdit: true,
+                        closeOnEscape: true,
+                        reloadAfterSubmit: false
+                    });
+                },
             };
         </script>
 

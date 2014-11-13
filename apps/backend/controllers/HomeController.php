@@ -240,5 +240,12 @@ class HomeController extends BaseController {
 
         return ['executed'];
     }
+    
+    public function help() {
+        
+        
+        $this->layout->content = View::make('sections.help.page');
+        
+    }
 
 }
