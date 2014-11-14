@@ -78,18 +78,12 @@ class HomeController extends BaseController {
     }
 
     public function showDashboard() {
-//        
-//        PostLang::where('title', '<>', '')->update(array(
-//            'uri' => ''
-//        ));
-//        
-//        $postlangs = PostLang::all();
-//        foreach ($postlangs as $pl) {
-//            $pl->uri = PostLang::uniqURI($pl->id, $pl->title);
-//            $pl->save();
-//        }
-
-        $this->layout->content = View::make('hello');
+        $page = Post::find(285);
+        if ($page) {
+            $data['page'] = PostLang::where('post_id', $page->id)->where('lang_id', WebAPL\Language::getId())->first();
+        }
+        
+        $this->layout->content = View::make('hello', $data);
     }
 
     public function getLanguages() {
@@ -109,15 +103,7 @@ class HomeController extends BaseController {
     }
 
     public function getEmpty() {
-
-        $posts = Post::where('taxonomy_id', 2)->get();
-        foreach ($posts as $post) {
-            PostLang::where('post_id', $post->id)->delete();
-            $post->delete();
-        }
-
         return ['no no no'];
-
         // BAD EMPTY FUNCTION
         // delete posts
         $posts = Post::where('taxonomy_id', 2)->get();
@@ -172,11 +158,6 @@ class HomeController extends BaseController {
 
         // logs
         DB::table('apl_logs')->truncate();
-
-        // menu
-        DB::table('apl_menu')->truncate();
-        DB::table('apl_menu_item')->truncate();
-        DB::table('apl_menu_item_lang')->truncate();
 
         // newsletter
         DB::table('apl_newsletter')->truncate();
@@ -240,12 +221,4 @@ class HomeController extends BaseController {
 
         return ['executed'];
     }
-    
-    public function help() {
-        
-        
-        $this->layout->content = View::make('sections.help.page');
-        
-    }
-
 }

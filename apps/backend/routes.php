@@ -58,6 +58,5 @@ Route::controller('settings', 'SettingsController');
 Route::controller('template', 'TemplateController');
 
 Route::get('/', 'HomeController@showDashboard');
-Route::get('help', 'HomeController@help');
 
 

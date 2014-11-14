@@ -84,4 +84,6 @@ com_crashlytics_export_strings.xml
 database.php
 
 cli/
-upload/
+upload/Editor
+upload/help
+upload/tmp

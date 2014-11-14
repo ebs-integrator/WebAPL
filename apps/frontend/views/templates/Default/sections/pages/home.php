@@ -64,7 +64,7 @@
                 </article>
             <?php } ?>
 
-            <?php if (isset($home_ads) && $home_ads) { ?>
+            <?php if (isset($home_ads) && count($home_ads)) { ?>
                 <article class="atn">
                     <p class="ttl"><a href="<?= Language::url('topage/adsList'); ?>"><?= varlang('anunturi'); ?></a></p>
                     <div class="hr"></div>

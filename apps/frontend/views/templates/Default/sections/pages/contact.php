@@ -8,7 +8,7 @@
                     <a href='mailto:<?= varlang('email-address'); ?>'><?= varlang('email-address'); ?></a>
                 </li>
                 <li class='fax'>
-                    <a href='fax:<?= varlang('nr-fax'); ?>'><?= varlang('nr-fax'); ?></a>
+                    <a href='javascript:;'><?= varlang('nr-fax'); ?></a>
                 </li>
                 <li class='location'>
                     <a href='<?= Language::url('topage/contactsView'); ?>'><?= varlang('cum-ne-gasiti'); ?></a>
