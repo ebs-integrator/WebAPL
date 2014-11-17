@@ -15,7 +15,7 @@ $list = isset($fvalue) ? @unserialize($fvalue) : array();
         </tr>
     </thead>
     <tbody>
-        <?php if ($list) { ?>
+        <?php if (is_array($list)) { ?> 
             <?php
             foreach ($list as $item) {
                 $rowID = uniqid();
