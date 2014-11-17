@@ -1,5 +1,9 @@
 <?php
-$list = isset($fvalue) ? @unserialize($fvalue) : array();
+if (isset($fvalue) && $fvalue) {
+    $list = @unserialize($fvalue);
+} else {
+    $list = array();
+}
 ?>
 
 <input type="hidden" name="dinamic_post[<?= $field->id; ?>]" value="1" />
@@ -57,6 +61,9 @@ $list = isset($fvalue) ? @unserialize($fvalue) : array();
                 </tr>
             <?php } ?>
         <?php } ?>
+        <?php
+        $rowID = uniqid();
+        ?>
         <tr class="multiplier">
             <td>
                 <div type="button" class="dragbut btn btn-sm btn-info"><i class="glyphicon glyphicon-resize-vertical"></i> <?= varlang('drag-1'); ?></div>
@@ -105,7 +112,7 @@ $list = isset($fvalue) ? @unserialize($fvalue) : array();
         $("body").on('click', '.edit-din-value', function() {
             init_ckeditor($($(this).attr('data-target')).find(".text-din"));
         });
-        
+
         $('body').on('hidden.bs.modal', '.modal-din', function() {
             var i = $(this).find(".text-din").attr('name');
             if (typeof CKEDITOR.instances[i] != 'undefined') {

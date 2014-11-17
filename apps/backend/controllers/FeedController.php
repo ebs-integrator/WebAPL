@@ -164,6 +164,10 @@ class FeedController extends BaseController {
 
         $post = Post::find($post_id);
 
+        if (empty($post->id) === TRUE) {
+            throw new Exception("Post not found!");
+        }
+        
         $feedsID = Post::feedsID($post_id);
 
         $this->data['general'] = array(
