@@ -58,7 +58,7 @@ class DinamicFields {
     public static function addFieldsValue($value, $entry, $lang_dependent, $field) {
         $data = ['field' => $field, 'fvalue' => $value];
 
-        return View::make('sections.feed.fields.dinamic', $data);
+        return View::make('sections.feed.fields.dinamic', $data)->render();
     }
 
     public static function addFieldsPrepare() {

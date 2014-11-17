@@ -184,7 +184,7 @@ class FeedController extends BaseController {
             $this->data['post_langs'][$pl->lang_id]['fields'] = $feedsID ? FeedField::get($feedsID, $post_id, $pl->lang_id) : array();
             $this->data['post_langs'][$pl->lang_id]['fields_out'] = $feedsID ? FeedField::get($feedsID, $post_id, $pl->lang_id, 0) : array();
         }
-
+        
         $this->layout->content = View::make('sections.feed.post-form')->with($this->data);
     }
 

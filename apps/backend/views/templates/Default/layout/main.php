@@ -133,7 +133,7 @@
                                 <?php if (User::has('file-manage')) { ?>
                                     <li> <a href="<?= url('filemanager'); ?>"><?= varlang('filemanager'); ?></a></li>
                                 <?php } ?>
-                                <li> <a href="<?= url('../help/index.html'); ?>" target="_blank">Help</a></li>
+                                <li><a href="http://lpa.devebs.net/help/index.html" target="_blank">Help</a></li>
                                 <li><img id="loading" style="display: none;margin-top: 14px;" src="<?= res('assets/img/ajax-loader.gif'); ?>" /></li>
                             </ul><!-- /.nav -->
                         </div>

@@ -32,16 +32,18 @@
 
 <div class="tab-content">
     <div class="tab-pane active" id="general">
-        <?= View::make('sections.feed.tab-post-general')->with($general); ?>
+        <?= View::make('sections.feed.tab-post-general')->with($general)->render(); ?>
     </div>
     <?php
-    foreach (Language::getList() as $lang)
+    foreach (Language::getList() as $lang) {
         if (isset($post_langs[$lang->id])) {
             ?>
             <div class="tab-pane" id="lang<?= $lang->id; ?>">
                 <?= View::make('sections.feed.tab-post-lang')->with('post_lang', $post_langs[$lang->id])->with('post', $general['post']); ?>
             </div>
-        <?php } ?>
+        <?php }
+    }
+    ?>
     <div class="tab-pane" id="media">
         <div class="c20"></div>
         <?= Files::widget('post_cover', $general['post']->id, 1); ?>
