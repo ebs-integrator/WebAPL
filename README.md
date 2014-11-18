@@ -1,5 +1,4 @@
 INFORMAȚII GENERALE
-=========================================================================
 
 CMS platforma WebAPL 1.0 a fost elaborată la inițiativa și în baza conceptului Proiectului USAID de Susținere a Autorităților Locale din Moldova în parteneriat cu compania EBSIntegrator SRL. 
 
@@ -14,9 +13,8 @@ Acest produs se distribuie gratuit cu licența liberă GPL3 (http://opensource.o
 În același timp se permite crearea de versiuni noi și/sau derivate prin modificarea și îmbunătățirea codului platformei WebAPL precum și distribuirea acestora, cu condiția că vor avea aceeași licență GPL3 (http://opensource.org/licenses/GPL-3.0), fiind astfel păstrat caracterul deschis (open source) al acestui produs.
 
 
-
 CERINȚE MINIME DE SISTEM SOLICITATE
-=========================================================================
+
 1. PHP >= 5.4
 2. MCrypt PHP Extension
 3. MySQL Database
@@ -24,9 +22,8 @@ CERINȚE MINIME DE SISTEM SOLICITATE
 5. SpatȚiu de stocare pe server de minim 200Mb
 
 
-
 INFORMAȚIILE DE MAI JOS REFLECTĂ IN MIC GHID DE INSTALARE A PLATFORMEI DESTINAT INCLUSIV PERSOANELOR CU CUNOȘTINȚE MINME ÎN UTILIZAREA UNOR ASEMENEA INSTRUMENTE
-=========================================================================
+
 Pasul 1. Se verifică disponibilitatea datelor de acces
 
 	Pentru a instala platforma WebApl 1.0 pe un hosting si a demara actiunea de instalare a site-ului lansat în baza platformei e necesar sa dispuneți de câteva date:
@@ -44,7 +41,6 @@ Pasul 1. Se verifică disponibilitatea datelor de acces
 		6. E necesar sa creati un nume de utilizator cu parola pentru baza de date
 		
 		7. E necesar sa aveti o baza de date MySQL creata pe hosting si sa o atribuiti la utilizatorul bazei de date creat.
----------------------------------------------------------------------------------------------------------
 
 Pasul 2. Încarcarea fisierelor platformei WebAPL 1.0. pe hosting
 
@@ -76,7 +72,6 @@ Pasul 2. Încarcarea fisierelor platformei WebAPL 1.0. pe hosting
 
 
 DISCLAIMER
-===================================================================================================
 
 CMS Platform WebAPL 1.0 is a free open source software for creating and managing a web site for Local Public Administration institutions. 
 The platform was developed at the initiative and on a concept of USAID Local Government Support Project in Moldova (LGSP) by the Enterprise Business Solutions SRL (www.ebs.md). 
