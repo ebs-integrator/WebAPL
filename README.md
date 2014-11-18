@@ -1,9 +1,12 @@
-WebAPL
+About platform WebAPL
 -------
 
-WebAPL 1.0 CMS platform was developed at the initiative of USAID Local
-Government Support Project in Moldova in partnership with Enterprise Business
-Solutions LLC.
+WebAPL 1.0 CMS platform was developed at the initiative and on a concept of
+USAID Local Government Support Project in Moldova in partnership with Enterprise
+Business Solutions LLC. The opinions expressed on the website belong to their
+authors and do not necessarily reflect the views of the United States Agency for
+International Development (USAID) or the US Government.
+
 WebAPL CMS platform was conceived to create and manage sites of Local Public
 Administration institutions. WebAPL platform is open source software. This
 product is distributed for free with a GPL3 license
