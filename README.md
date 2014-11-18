@@ -1,5 +1,4 @@
 INFORMAȚII GENERALE
-=========================================================================
 
 CMS platforma WebAPL 1.0 a fost elaborată la inițiativa și în baza conceptului Proiectului USAID de Susținere a Autorităților Locale din Moldova în parteneriat cu compania EBSIntegrator SRL. 
 
@@ -14,9 +13,8 @@ Acest produs se distribuie gratuit cu licența liberă GPL3 (http://opensource.o
 În același timp se permite crearea de versiuni noi și/sau derivate prin modificarea și îmbunătățirea codului platformei WebAPL precum și distribuirea acestora, cu condiția că vor avea aceeași licență GPL3 (http://opensource.org/licenses/GPL-3.0), fiind astfel păstrat caracterul deschis (open source) al acestui produs.
 
 
-
 CERINȚE MINIME DE SISTEM SOLICITATE
-=========================================================================
+
 1. PHP >= 5.4
 2. MCrypt PHP Extension
 3. MySQL Database
@@ -24,71 +22,35 @@ CERINȚE MINIME DE SISTEM SOLICITATE
 5. SpatȚiu de stocare pe server de minim 200Mb
 
 
-
 INFORMAȚIILE DE MAI JOS REFLECTĂ IN MIC GHID DE INSTALARE A PLATFORMEI DESTINAT INCLUSIV PERSOANELOR CU CUNOȘTINȚE MINME ÎN UTILIZAREA UNOR ASEMENEA INSTRUMENTE
-=========================================================================
+
 Pasul 1. Se verifică disponibilitatea datelor de acces
 
-	Pentru a instala platforma WebApl 1.0 pe un hosting si a demara actiunea de instalare a site-ului lansat în baza platformei e necesar sa dispuneți de câteva date:
+Pentru a instala platforma WebApl 1.0 pe un hosting si a demara actiunea de instalare a site-ului lansat în baza platformei e necesar sa dispuneți de câteva date:
 	
-		1. sa aveti un nume de domen ex. www.domenulmeu.md
-		
-		2. sa aveti un server pe care se plaseaza site-ul, de obice un hosting al unei companii ce presteaza servicii de hosting
-		
-		3. compania care va ofera servicii de hosting va trebui sa va dea dreptul de acces la panoul de adminisrare al hostingului dat.
-		
-		4. In cazul in care numele de domen nu e conextat de hosting, e necesar sa il conectati, adica sa modificati DNS-urile la site conform setarilor comunicate de compania de hosting.
-		
-		5. E necesar sa creati un FTP account cu nume si parola pe hostingul de care dispuneti, conectat la numele de domen
-
-		6. E necesar sa creati un nume de utilizator cu parola pentru baza de date
-		
-		7. E necesar sa aveti o baza de date MySQL creata pe hosting si sa o atribuiti la utilizatorul bazei de date creat.
----------------------------------------------------------------------------------------------------------
+1. sa aveti un nume de domen ex. www.domenulmeu.md
+2. sa aveti un server pe care se plaseaza site-ul, de obice un hosting al unei companii ce presteaza servicii de hosting
+3. compania care va ofera servicii de hosting va trebui sa va dea dreptul de acces la panoul de adminisrare al hostingului dat.
+4. In cazul in care numele de domen nu e conextat de hosting, e necesar sa il conectati, adica sa modificati DNS-urile la site conform setarilor comunicate de compania de hosting.
+5. E necesar sa creati un FTP account cu nume si parola pe hostingul de care dispuneti, conectat la numele de domen
+6. E necesar sa creati un nume de utilizator cu parola pentru baza de date
+7. E necesar sa aveti o baza de date MySQL creata pe hosting si sa o atribuiti la utilizatorul bazei de date creat.
 
 Pasul 2. Încarcarea fisierelor platformei WebAPL 1.0. pe hosting
 
-	1. Lansati programul FileZilla sau un alt program similar de transfer a datelor de pe calculator pe server
-	
-	2. Completati datele de acces in Quickconnect bar, inclusiv 
-	
-	   --- Host(de obicei numele de domen sau IP-ul indicat de compania furnizoare de hosting). 
-	   --- Username (numele utilizatorului FTP), 
-	   --- Password (parola la contul FTP) 
-	   
-	3. Se vor incarca fisierele din Mapa WebAPL 1.0. pe hosting.
-	
-	4. Pentru lasarea aplicatiei instal se vor cauta urmatoarele dosare incarcate pe hosting
-	
-	   --- /apps/frontend/storage/
-	   --- /apps/backend/storage/
-	   --- /upload/
-	   --- /install/
-	   --- /apps/frontend/config/
-	   --- /apps/backend/config/
-	   
-		si li se va da permisiunea de Citire, scriere si exectie (numeric value 777)
-		
-	5. se va lansa o pagina noua si se va initia instalarea platformei pe domenul creat (ex. www.domenulmeu.md)
-	
-	6. Pasii de instalare a platformei se vor urma urma conform indicațiilor ce apar și recomandărilor din Manualul de Utilizare al WebAPL 1.0.
-
-
-
-DISCLAIMER
-===================================================================================================
-
-CMS Platform WebAPL 1.0 is a free open source software for creating and managing a web site for Local Public Administration institutions. 
-The platform was developed at the initiative and on a concept of USAID Local Government Support Project in Moldova (LGSP) by the Enterprise Business Solutions SRL (www.ebs.md). 
-
-The opinions expressed on the website belong to their authors and do not necessarily reflect the views of the United States Agency for International Development (USAID) or the US Government.
-
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with this program. 
-
-If not, you can read the copy of GNU General Public License in English here: <http://www.gnu.org/licenses/>.
-
-For more details about CMS WebAPL 1.0 please contact EBSIntegrator SRL, Republic of Moldova, MD 2001, Ion Inculet 33 Street or send an email to office@ebs.md
+1. Lansati programul FileZilla sau un alt program similar de transfer a datelor de pe calculator pe server
+2. Completati datele de acces in Quickconnect bar, inclusiv 
+--- Host(de obicei numele de domen sau IP-ul indicat de compania furnizoare de hosting). 
+--- Username (numele utilizatorului FTP), 
+--- Password (parola la contul FTP) 
+3. Se vor incarca fisierele din Mapa WebAPL 1.0. pe hosting.
+4. Pentru lasarea aplicatiei instal se vor cauta urmatoarele dosare incarcate pe hosting
+--- /apps/frontend/storage/
+--- /apps/backend/storage/
+--- /upload/
+--- /install/
+--- /apps/frontend/config/
+--- /apps/backend/config/
+si li se va da permisiunea de Citire, scriere si exectie (numeric value 777)
+5. se va lansa o pagina noua si se va initia instalarea platformei pe domenul creat (ex. www.domenulmeu.md)
+6. Pasii de instalare a platformei se vor urma urma conform indicațiilor ce apar și recomandărilor din Manualul de Utilizare al WebAPL 1.0.
