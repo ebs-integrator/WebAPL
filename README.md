@@ -26,7 +26,7 @@ INFORMAȚIILE DE MAI JOS REFLECTĂ IN MIC GHID DE INSTALARE A PLATFORMEI DESTINA
 
 Pasul 1. Se verifică disponibilitatea datelor de acces
 
-	Pentru a instala platforma WebApl 1.0 pe un hosting si a demara actiunea de instalare a site-ului lansat în baza platformei e necesar sa dispuneți de câteva date:
+Pentru a instala platforma WebApl 1.0 pe un hosting si a demara actiunea de instalare a site-ului lansat în baza platformei e necesar sa dispuneți de câteva date:
 	
 1. sa aveti un nume de domen ex. www.domenulmeu.md
 2. sa aveti un server pe care se plaseaza site-ul, de obice un hosting al unei companii ce presteaza servicii de hosting
