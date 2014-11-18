@@ -2,10 +2,13 @@
 
 /**
  * 
- * CMS WebAPL 1.0. Platform is a free open source software for creating an managing
- * their full with CMS integrated CMS system
- * 
- * Copyright (C) 2014 Enterprise Business Solutions SRL
+ * CMS Platform WebAPL 1.0 is a free open source software for creating and managing
+ * a web site for Local Public Administration institutions. The platform was
+ * developed at the initiative and on a concept of USAID Local Government Support
+ * Project in Moldova (LGSP) by the Enterprise Business Solutions Srl (www.ebs.md).
+ * The opinions expressed on the website belong to their authors and do not
+ * necessarily reflect the views of the United States Agency for International
+ * Development (USAID) or the US Government.
  * 
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
@@ -13,15 +16,16 @@
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY
  * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
  * PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * 
  * You should have received a copy of the GNU General Public License along with
- * this program.  If not, see <http://www.gnu.org/licenses/>.
- * You can read the copy of GNU General Public License in english here 
+ * this program. If not, you can read the copy of GNU General Public License in
+ * English here: <http://www.gnu.org/licenses/>.
  * 
  * For more details about CMS WebAPL 1.0 please contact Enterprise Business
  * Solutions SRL, Republic of Moldova, MD 2001, Ion Inculet 33 Street or send an
  * email to office@ebs.md 
  * 
- */
+ * */
 class VarController extends BaseController {
 
     function __construct() {
@@ -156,9 +160,39 @@ class VarController extends BaseController {
         return $buffer;
     }
 
+    public function getExportjson() {
+
+        $buffer = [];
+
+        $vars = VarModel::all();
+
+        $except = [9,12,14,16,18,20,23,38,36,40,42,53];
+
+        foreach ($vars as $var) {
+            if (in_array($var->id, $except) == FALSE) {
+                $langs = VarLangModel::where('var_key', $var->key)->get();
+                foreach ($langs as $vlang) {
+                    $buffer[] = [
+                        'id' => $vlang->id,
+                        'value' => $vlang->value,
+                        'vid' => $var->id,
+                        'key' => $var->key,
+                        'parent_key' => $var->parent_key,
+                        'lang_id' => $vlang->lang_id
+                    ];
+                }
+            }
+        }
+
+        header('Content-Encoding: UTF-8');
+        header('Content-type: application/json; charset=UTF-8');
+
+        return ($buffer);
+    }
+
     public function getImport() {
-        return [];
-        
+        //return [];
+
         $xsdstring = $_SERVER['DOCUMENT_ROOT'] . "/vars.xml";
         $excel = new XML2003Parser($xsdstring);
         $table = $excel->getTableData();
@@ -174,16 +208,13 @@ class VarController extends BaseController {
 
                         if ($varlang->value !== $value && strlen(trim($varlang->value)) > 0) {
                             echo "DIFF [{$varlang->lang_id}] [{$varlang->id}] [[{$varlang->value}]] [[{$value}]]<br>\n";
-
-                            $varlang->save();
                         }
 
                         if ($varlang->value !== $value && strlen(trim($varlang->value)) == 0) {
                             echo "CLEAR [{$varlang->lang_id}] [{$varlang->id}] [[{$varlang->value}]] [[{$value}]]<br>\n";
-
-                            $varlang->save();
                         }
 
+                        $varlang->save();
                     } else {
                         echo "interzis [{$varlang->lang_id}] {$id} {$varlang} <br>\n";
                     }
