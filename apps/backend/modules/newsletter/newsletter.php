@@ -1,32 +1,31 @@
-<?php 
- 
- /**
-  * 
-  * CMS Platform WebAPL 1.0 is a free open source software for creating and managing
-  * a web site for Local Public Administration institutions. The platform was
-  * developed at the initiative and on a concept of USAID Local Government Support
-  * Project in Moldova (LGSP) by the Enterprise Business Solutions Srl (www.ebs.md).
-  * The opinions expressed on the website belong to their authors and do not
-  * necessarily reflect the views of the United States Agency for International
-  * Development (USAID) or the US Government.
-  * 
-  * This program is free software: you can redistribute it and/or modify it under
-  * the terms of the GNU General Public License as published by the Free Software
-  * Foundation, either version 3 of the License, or any later version.
-  * This program is distributed in the hope that it will be useful, but WITHOUT ANY
-  * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-  * PARTICULAR PURPOSE. See the GNU General Public License for more details.
-  * 
-  * You should have received a copy of the GNU General Public License along with
-  * this program. If not, you can read the copy of GNU General Public License in
-  * English here: <http://www.gnu.org/licenses/>.
-  * 
-  * For more details about CMS WebAPL 1.0 please contact Enterprise Business
-  * Solutions SRL, Republic of Moldova, MD 2001, Ion Inculet 33 Street or send an
-  * email to office@ebs.md 
-  * 
-  **/
- 
+<?php
+
+/**
+ * 
+ * CMS Platform WebAPL 1.0 is a free open source software for creating and managing
+ * a web site for Local Public Administration institutions. The platform was
+ * developed at the initiative and on a concept of USAID Local Government Support
+ * Project in Moldova (LGSP) by the Enterprise Business Solutions Srl (www.ebs.md).
+ * The opinions expressed on the website belong to their authors and do not
+ * necessarily reflect the views of the United States Agency for International
+ * Development (USAID) or the US Government.
+ * 
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ * PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, you can read the copy of GNU General Public License in
+ * English here: <http://www.gnu.org/licenses/>.
+ * 
+ * For more details about CMS WebAPL 1.0 please contact Enterprise Business
+ * Solutions SRL, Republic of Moldova, MD 2001, Ion Inculet 33 Street or send an
+ * email to office@ebs.md 
+ * 
+ * */
 
 namespace WebAPL\Modules;
 
@@ -123,22 +122,20 @@ class Newsletter extends \WebAPL\ExtensionController {
         if ($post) {
 
             $data['post'] = $post;
-            $data['post_url'] = "http://kopceak1.sga.webhost1.ru/" . \WebAPL\Language::ext() . "/topost/" . $post_id;
+            $data['post_url'] = url("/../" . \WebAPL\Language::ext() . "/topost/" . $post_id);
 
             Template::viewModule($this->module_name, function () use ($data, $post) {
                 $newsletterUsers = \NewsletterModel::where('enabled', 1)->get();
 
                 foreach ($newsletterUsers as $user) {
-                    var_dump(filter_var($user->email, FILTER_VALIDATE_EMAIL));
                     if (filter_var($user->email, FILTER_VALIDATE_EMAIL)) {
                         $data['user'] = $user;
                         $data['unsubscribe_link'] = url("/../newsletter/unsubscribe/{$user->hash}");
-                        echo $user->email;
-                        var_dump(Mail::send('views.emails.post', $data, function($message) use ($post, $user) {
-                                    $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'WebLPA');
-                                    $message->subject($post->title . " :: NEWSLETTER");
-                                    $message->to($user->email);
-                                }));
+                        Mail::send('views.emails.post', $data, function($message) use ($post, $user) {
+                            $message->from("noreply@{$_SERVER['SERVER_NAME']}", 'WebLPA');
+                            $message->subject($post->title . " :: NEWSLETTER");
+                            $message->to($user->email);
+                        });
                     }
                 }
             });

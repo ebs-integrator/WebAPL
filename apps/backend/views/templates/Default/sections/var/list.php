@@ -53,7 +53,7 @@ if ($errorSearch === 0 && $searchList) {
                     <form action="<?= url('var/edit'); ?>" method="post" class="ajax-auto-submit">
                         <input type="hidden" name="id" value="<?= $item->id; ?>" />
                         <textarea rows="1" style="border: 0;" name="value"><?= $item->value; ?></textarea>
-                    </form> <?=$item->vid;?>
+                    </form>
                 </td>
                 <td>
                     <a href='<?= url("var/index/{$item->key}"); ?>'><?= varlang('view-sub'); ?> [<?= $item->num_vars; ?>]</a>

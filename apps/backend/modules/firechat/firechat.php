@@ -144,7 +144,7 @@ class Firechat extends \WebAPL\ExtensionController {
         $html = \Input::get('messages');
 
         $person = \PersonModel::find($id);
-        var_dump($person->email);
+
         if ($person) {
             $data['html'] = $html;
             Template::viewModule($this->module_name, function () use ($data, $person) {

@@ -18,7 +18,7 @@
             </div>
 
             <p style="margin-top: 22px;font-size: 11px;color:#a7a7a7;" class="MsoNormal">
-                To unsubscribe, please click <a href="<?=$unsubscribe_link;?>" target="_blank" style="text-decoration: none;color:#a7a7a7;font-weight: 700">here</a>.
+                Pentru dezabonare, click <a href="<?=$unsubscribe_link;?>" target="_blank" style="text-decoration: none;color:#a7a7a7;font-weight: 700">aici</a>.
             </p>
         </div>
     </div>
