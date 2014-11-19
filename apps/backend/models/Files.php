@@ -71,7 +71,7 @@ class Files extends Eloquent {
         );
 
         foreach ($types as $type => $extensions) {
-            if (in_array($extension, $extensions)) {
+            if (in_array(strtolower($extension), $extensions)) {
                 return $type;
             }
         }

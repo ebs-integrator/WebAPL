@@ -377,7 +377,23 @@ INSERT INTO `apl_file` (`id`, `name`, `path`, `type`, `extension`, `size`, `date
 (459, 'h3.jpg', 'upload/icons/h3.jpg', 'image', 'jpg', 2287.00, '2014-11-14 18:32:22', 'page_icon_active', 105),
 (460, 'b4.png', 'upload/icons/b4.png', 'image', 'png', 1386.00, '2014-11-14 18:32:42', 'page_icon_big', 106),
 (461, 's4.jpg', 'upload/icons/s4.jpg', 'image', 'jpg', 1978.00, '2014-11-14 18:32:51', 'page_icon', 106),
-(462, 'h4.jpg', 'upload/icons/h4.jpg', 'image', 'jpg', 2150.00, '2014-11-14 18:33:22', 'page_icon_active', 106);
+(462, 'h4.jpg', 'upload/icons/h4.jpg', 'image', 'jpg', 2150.00, '2014-11-14 18:33:22', 'page_icon_active', 106),
+(481, 'defaultLogo.JPG', 'upload/defaultLogo.JPG', 'image', 'JPG', 42061.00, '2014-11-19 15:46:41', 'website_logo_ro', 1),
+(482, 'defaultLogo.JPG', 'upload/defaultLogo.JPG', 'image', 'JPG', 42061.00, '2014-11-19 15:46:51', 'website_logo_sm_ro', 1),
+(483, 'defaultLogo.JPG', 'upload/defaultLogo.JPG', 'image', 'JPG', 42061.00, '2014-11-19 15:47:15', 'website_logo_ru', 1),
+(484, 'defaultLogo.JPG', 'upload/defaultLogo.JPG', 'image', 'JPG', 42061.00, '2014-11-19 15:47:20', 'website_logo_sm_ru', 1),
+(485, 'defaultLogo.JPG', 'upload/defaultLogo.JPG', 'image', 'JPG', 42061.00, '2014-11-19 15:47:26', 'website_logo_en', 1),
+(486, 'defaultLogo.JPG', 'upload/defaultLogo.JPG', 'image', 'JPG', 42061.00, '2014-11-19 15:47:31', 'website_logo_sm_en', 1),
+(487, 'defaultLogo.JPG', 'upload/defaultLogo.JPG', 'image', 'JPG', 42061.00, '2014-11-19 15:47:36', 'website_logo_bg', 1),
+(488, 'defaultLogo.JPG', 'upload/defaultLogo.JPG', 'image', 'JPG', 42061.00, '2014-11-19 15:47:40', 'website_logo_sm_bg', 1),
+(492, 'Theme1-33.jpg', 'upload/Background/Theme1-33.jpg', 'image', 'jpg', 782012.00, '2014-11-19 15:49:13', 'page_bg', 106),
+(493, 'Theme1-31.jpg', 'upload/Background/Theme1-31.jpg', 'image', 'jpg', 303963.00, '2014-11-19 15:49:34', 'page_bg', 105),
+(494, 'Theme1-13.JPG', 'upload/Background/Theme1-13.JPG', 'image', 'JPG', 767435.00, '2014-11-19 15:49:50', 'page_bg', 104),
+(495, 'Theme1-07.JPG', 'upload/Background/Theme1-07.JPG', 'image', 'JPG', 1017852.00, '2014-11-19 15:50:36', 'page_bg', 103),
+(496, 'Theme2-Interior-12.JPG', 'upload/Background/Theme2-Interior-12.JPG', 'image', 'JPG', 640001.00, '2014-11-19 15:57:23', 'page_bg', 107),
+(497, 'Theme2-Interior-35.JPG', 'upload/Background/Theme2-Interior-35.JPG', 'image', 'JPG', 325721.00, '2014-11-19 15:57:54', 'page_bg', 116),
+(498, 'Theme2-Interior-48.JPG', 'upload/Background/Theme2-Interior-48.JPG', 'image', 'JPG', 280672.00, '2014-11-19 15:58:17', 'page_bg', 119),
+(499, 'Theme2-Interior-50.JPG', 'upload/Background/Theme2-Interior-50.JPG', 'image', 'JPG', 722232.00, '2014-11-19 16:00:59', 'page_bg', 122);
 
 -- --------------------------------------------------------
 
