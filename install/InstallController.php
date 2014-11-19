@@ -43,8 +43,8 @@ class InstallController extends BaseController {
         $data['req']['wr_bk_storage'] = is_writable($_SERVER['DOCUMENT_ROOT'] . '/apps/backend/storage/');
         $data['req']['wr_upload'] = is_writable($_SERVER['DOCUMENT_ROOT'] . '/upload/');
         $data['req']['wr_install'] = is_writable($_SERVER['DOCUMENT_ROOT'] . '/install/');
-        $data['req']['wr_fr_db'] = is_writable($_SERVER['DOCUMENT_ROOT'] . '/apps/frontend/config/database.php');
-        $data['req']['wr_bk_db'] = is_writable($_SERVER['DOCUMENT_ROOT'] . '/apps/backend/config/database.php');
+        $data['req']['wr_fr_db'] = is_writable($_SERVER['DOCUMENT_ROOT'] . '/apps/frontend/config/');
+        $data['req']['wr_bk_db'] = is_writable($_SERVER['DOCUMENT_ROOT'] . '/apps/backend/config/');
 
 
         $data['valid_step'] = true;
