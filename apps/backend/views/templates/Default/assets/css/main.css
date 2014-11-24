@@ -2718,3 +2718,10 @@ body.boxed {
     background-color: #B8CB0D;
     border-color: #91A006;
 }*/
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+    color: #fff;
+    background-color: #0C3349;
+}
+
+.ui-priority-secondary, .ui-widget-content .ui-priority-secondary,  .ui-widget-header .ui-priority-secondary { opacity: 1 !important; filter:Alpha(Opacity=100) !important; font-weight: normal; }

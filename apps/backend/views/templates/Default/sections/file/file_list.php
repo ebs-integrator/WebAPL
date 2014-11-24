@@ -1,6 +1,6 @@
 <?php if ((count($files) < $num || $num == 0) && User::has('file-upload')) { ?>
-    <button type="button" class="click-trigger btn btn-success" data-for=".button_<?= $module_name; ?>_<?= $module_id; ?>"><i class="fa fa-upload"></i><?= varlang('-select-file-from-computer'); ?></button>
-    <button type="button" class="click-trigger-sv btn btn-success" data-for=".path_<?= $module_name; ?>_<?= $module_id; ?>"><i class="fa fa-upload"></i><?= varlang('-select-file-from-server'); ?></button>
+    <button type="button" class="click-trigger btn btn-success" data-for=".button_<?= $module_name; ?>_<?= $module_id; ?>"><i class="glyphicon glyphicon-upload"></i> <?= varlang('-select-file-from-computer'); ?></button>
+    <button type="button" class="click-trigger-sv btn btn-success" data-for=".path_<?= $module_name; ?>_<?= $module_id; ?>"><i class="glyphicon glyphicon-upload"></i> <?= varlang('-select-file-from-server'); ?></button>
 <?php } ?>
 <br><br>
 
@@ -27,7 +27,7 @@
                 <td><?= humanFileSize($file->size); ?></td>
                 <td>
                     <?php if (User::has('file-delete')) { ?>
-                    <a class="btn btn-danger delete_file" data-id="<?= $file->id; ?>" data-module_name="<?= $file->module_name; ?>" data-module_id="<?= $file->module_id; ?>" data-update=".files-<?= $module_name; ?>-<?= $module_id; ?>"><i class="fa fa-trash-o"></i></a>
+                    <a class="btn btn-danger delete_file" data-id="<?= $file->id; ?>" data-module_name="<?= $file->module_name; ?>" data-module_id="<?= $file->module_id; ?>" data-update=".files-<?= $module_name; ?>-<?= $module_id; ?>"><i class="glyphicon glyphicon-trash"></i></a>
                     <?php } ?>
                 </td>
             </tr>

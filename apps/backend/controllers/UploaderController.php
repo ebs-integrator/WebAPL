@@ -40,6 +40,8 @@ class UploaderController extends BaseController {
     }
 
     public function filemanager() {
+        User::onlyHas('file-manage');
+        
         return View::make('layout.main', array(
                     'content' => View::make('sections.file.filemanager')
         ));

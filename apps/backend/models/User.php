@@ -45,6 +45,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
      */
     protected $table = 'apl_user';
     public $timestamps = false;
+    public static $zones = [];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -84,9 +85,17 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         return in_array($role, $roles);
     }
     
+    public static function getZone($role) {
+        $parts = explode('-', $role);
+        return isset($parts[0]) ? $parts[0] : $role;
+    }
+    
     public static function onlyHas($role) {
-        if (!User::has($role))
+        if (User::has($role)) {
+            User::$zones[] = User::getZone($role);
+        } else {
             throw new Exception("Access denied!");
+        }
     }
     
     public static function withRole($role) {

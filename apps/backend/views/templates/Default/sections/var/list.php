@@ -52,7 +52,7 @@ if ($errorSearch === 0 && $searchList) {
                 <td>
                     <form action="<?= url('var/edit'); ?>" method="post" class="ajax-auto-submit">
                         <input type="hidden" name="id" value="<?= $item->id; ?>" />
-                        <textarea rows="1" style="border: 0;" name="value"><?= $item->value; ?></textarea>
+                        <textarea rows="2" cols="50" style="border: 1px solid #EAEAEA;" name="value"><?= $item->value; ?></textarea>
                     </form>
                 </td>
                 <td>

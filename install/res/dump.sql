@@ -1951,7 +1951,7 @@ CREATE TABLE IF NOT EXISTS `apl_var` (
   `parent_key` varchar(250) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `key` (`key`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=576 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=577 ;
 
 --
 -- Dumping data for table `apl_var`
@@ -2520,7 +2520,8 @@ INSERT INTO `apl_var` (`id`, `key`, `parent_key`) VALUES
 (572, 'nu-5', 'calendar-1'),
 (573, 'da-15', 'calendar-1'),
 (574, 'evenimente', 'calendar-1'),
-(575, 'incepe-discutia', 'calendar-1');
+(575, 'incepe-discutia', 'calendar-1'),
+(576, 'help', 'menu');
 
 -- --------------------------------------------------------
 
@@ -2535,7 +2536,7 @@ CREATE TABLE IF NOT EXISTS `apl_var_lang` (
   `value` text NOT NULL,
   `lang_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2372 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2376 ;
 
 --
 -- Dumping data for table `apl_var_lang`
@@ -3242,7 +3243,7 @@ INSERT INTO `apl_var_lang` (`id`, `var_key`, `value`, `lang_id`) VALUES
 (801, 'atentie-', 'ВНИМАНИЕ!', 2),
 (802, 'atentie-', 'WARNING!', 6),
 (803, 'atentie-', 'ВНИМАНИЕ!', 7),
-(804, 'atent-msg', 'Petițiile anonime sau cele care nu conțin toate datele de identificare a persoanei nu vor fi luate în considerare.', 1),
+(804, 'atent-msg', 'Petițiile anonime sau cele care nu conțin toate datele de identificare a persoanei nu vor fi luate în considerare.\n\nNu vor fi examinate petițiile anonime sau cele care nu conţin informaţii privind numele, prenumele, domiciliul şi adresa electronică a petiţionarului. La fel, se rezervă dreptul de a nu examina petiţiile care conţin un limbaj necenzurat, ofensator, ameninţări de orice fel. <a href="http://lex.justice.md/index.php?action=view&view=doc&id=313313" target="_blank">(vezi Art. 10 din Legea cu privire la petiționare)</a>', 1),
 (805, 'atent-msg', 'Анонимные заявления или те, в которых не указаны персональные данные пользователя, не принимаются во внимание.', 2),
 (806, 'atent-msg', 'Anonymous petitions or those with no identification data of the author will not be considered.', 6),
 (807, 'atent-msg', 'Анонимните петиции или петиции, в които не са въведени идентификационни данни на лицето, не се вземат под внимание.', 7),
@@ -3512,7 +3513,8 @@ INSERT INTO `apl_var_lang` (`id`, `var_key`, `value`, `lang_id`) VALUES
 (1071, 'list-1', 'Групи', 7),
 (1072, 'name-3', 'Nume', 1),
 (1073, 'name-3', 'Названия', 2),
-(1074, 'name-3', 'Name', 6),
+(1074, 'name-3', 'Name', 6);
+INSERT INTO `apl_var_lang` (`id`, `var_key`, `value`, `lang_id`) VALUES
 (1075, 'name-3', 'Име', 7),
 (1076, 'state', 'Stare', 1),
 (1077, 'state', 'Статус', 2),
@@ -3525,8 +3527,7 @@ INSERT INTO `apl_var_lang` (`id`, `var_key`, `value`, `lang_id`) VALUES
 (1084, 'active', 'Activ', 1),
 (1085, 'active', 'Активный', 2),
 (1086, 'active', 'Active', 6),
-(1087, 'active', 'Активно', 7);
-INSERT INTO `apl_var_lang` (`id`, `var_key`, `value`, `lang_id`) VALUES
+(1087, 'active', 'Активно', 7),
 (1088, 'inactive', 'Inactiv', 1),
 (1089, 'inactive', 'Неактивный', 2),
 (1090, 'inactive', 'Inactive', 6),
@@ -4630,7 +4631,8 @@ INSERT INTO `apl_var_lang` (`id`, `var_key`, `value`, `lang_id`) VALUES
 (2188, 'aprt-primariei', 'Contacte utile', 1),
 (2189, 'aprt-primariei', 'Сотрудники примэрии', 2),
 (2190, 'aprt-primariei', 'Town hall staff', 6),
-(2191, 'aprt-primariei', 'Администрация на кметството', 7),
+(2191, 'aprt-primariei', 'Администрация на кметството', 7);
+INSERT INTO `apl_var_lang` (`id`, `var_key`, `value`, `lang_id`) VALUES
 (2192, 'icon-big', 'Iconiță mare meniu pagina principală', 1),
 (2193, 'icon-big', 'Главый значок для  домашней страницы', 2),
 (2194, 'icon-big', 'Big icon for home page menu', 6),
@@ -4638,8 +4640,7 @@ INSERT INTO `apl_var_lang` (`id`, `var_key`, `value`, `lang_id`) VALUES
 (2196, 'icon-2', 'Inconiță meniu', 1),
 (2197, 'icon-2', 'Иконка', 2),
 (2198, 'icon-2', 'Menu icon', 6),
-(2199, 'icon-2', 'Меню на иконата', 7);
-INSERT INTO `apl_var_lang` (`id`, `var_key`, `value`, `lang_id`) VALUES
+(2199, 'icon-2', 'Меню на иконата', 7),
 (2200, 'icon-activ', 'Iconiță meniu activă', 1),
 (2201, 'icon-activ', 'Активная иконка меню', 2),
 (2202, 'icon-activ', 'Active menu icon', 6),
@@ -4795,7 +4796,11 @@ INSERT INTO `apl_var_lang` (`id`, `var_key`, `value`, `lang_id`) VALUES
 (2368, 'incepe-discutia', 'Începe discuția', 1),
 (2369, 'incepe-discutia', 'Начять дискуссию', 2),
 (2370, 'incepe-discutia', 'Start Chat', 6),
-(2371, 'incepe-discutia', 'Започнете дискусия', 7);
+(2371, 'incepe-discutia', 'Започнете дискусия', 7),
+(2372, 'help', 'Ajutor', 1),
+(2373, 'help', 'Помощь', 2),
+(2374, 'help', 'Help', 6),
+(2375, 'help', 'Помощ', 7);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

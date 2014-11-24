@@ -26,8 +26,8 @@
             Solutions SRL, Republic of Moldova, MD 2001, Ion Inculet 33 Street or send an
             email to office@ebs.md 
         -->
-        
-        
+
+
         <meta charset="UTF-8">
         <title><?= varlang('title'); ?></title>
 
@@ -91,7 +91,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <a href="<?= url('/'); ?>" class="navbar-brand">
-                                <img src="<?= res('assets/img/logo.png'); ?>" alt="">
+                                <img src="<?= res('assets/img/logo.png'); ?>" style="margin-right: 128px;" alt="">
                             </a>
                         </header>
                         <div class="topnav">
@@ -109,7 +109,7 @@
                             </div>
                             <div class="btn-group">
                                 <a href="<?= url('auth/logout'); ?>" data-toggle="tooltip" data-original-title="Logout" data-placement="bottom" class="btn btn-metis-1 btn-sm">
-                                    <i class="fa fa-power-off"></i>
+                                    <i class="glyphicon glyphicon-off"></i>
                                 </a>
                             </div>
                         </div>
@@ -118,27 +118,27 @@
                             <!-- .nav -->
                             <ul class="nav navbar-nav">
                                 <?php if (User::has('settings-view')) { ?>
-                                    <li> <a href="<?= url('settings'); ?>"><?= varlang('settings'); ?></a></li>
+                                    <li class="<?= in_array(User::getZone('settings'), User::$zones) ? 'active' : ''; ?>"> <a href="<?= url('settings'); ?>"><?= varlang('settings'); ?></a></li>
                                 <?php } ?>
                                 <?php if (User::has("user-view")) { ?>
-                                    <li> <a href="<?= url('user'); ?>"><?= varlang('users'); ?></a></li>
+                                    <li class="<?= in_array(User::getZone('user'), User::$zones) ? 'active' : ''; ?>"> <a href="<?= url('user'); ?>"><?= varlang('users'); ?></a></li>
                                 <?php } ?>
                                 <?php if (User::has('template-edit')) { ?>
-                                    <li> <a href="<?= url('template'); ?>"><?= varlang('template-4'); ?></a></li>
+                                    <li class="<?= in_array(User::getZone('template'), User::$zones) ? 'active' : ''; ?>"> <a href="<?= url('template'); ?>"><?= varlang('template-4'); ?></a></li>
                                 <?php } ?>
                                 <?php if (User::has('lang-view')) { ?>
-                                    <li> <a href="<?= url('home/languages'); ?>"><?= varlang('languages'); ?></a></li>
+                                    <li class="<?= in_array(User::getZone('lang'), User::$zones) ? 'active' : ''; ?>"> <a href="<?= url('home/languages'); ?>"><?= varlang('languages'); ?></a></li>
                                 <?php } ?>
                                 <?php if (User::has("modules-view")) { ?>
-                                    <li> <a href="<?= url('module'); ?>"><?= varlang('extensions'); ?></a></li>
+                                    <li class="<?= in_array(User::getZone('modules'), User::$zones) ? 'active' : ''; ?>"> <a href="<?= url('module'); ?>"><?= varlang('extensions'); ?></a></li>
                                 <?php } ?>
-                                <?php if (User::has('log-view')) { ?>
-                                    <li> <a href="<?= url('log'); ?>"><?= varlang('log'); ?></a></li>
+                                <?php if (User::has('file-view')) { ?>
+                                    <li class="<?= in_array(User::getZone('file'), User::$zones) ? 'active' : ''; ?>"> <a href="<?= url('log'); ?>"><?= varlang('log'); ?></a></li>
                                 <?php } ?>
                                 <?php if (User::has('file-manage')) { ?>
-                                    <li> <a href="<?= url('filemanager'); ?>"><?= varlang('filemanager'); ?></a></li>
+                                    <li class="<?= in_array(User::getZone('file'), User::$zones) ? 'active' : ''; ?>"> <a href="<?= url('filemanager'); ?>"><?= varlang('filemanager'); ?></a></li>
                                 <?php } ?>
-                                <li><a href="http://lpa.devebs.net/help/index.html" target="_blank">Help</a></li>
+                                <li><a href="http://lpa.devebs.net/help/index.html" target="_blank"><?= varlang('help'); ?></a></li>
                                 <li><img id="loading" style="display: none;margin-top: 14px;" src="<?= res('assets/img/ajax-loader.gif'); ?>" /></li>
                             </ul><!-- /.nav -->
                         </div>
@@ -162,13 +162,13 @@
                     <li class="nav-header"><?= varlang('menu'); ?></li>
                     <li class="nav-divider"></li>
                     <?php if (User::has("page-view")) { ?>
-                        <li><a href="<?= url('page'); ?>"><i class="fa"></i><span class="link-title">&nbsp;<?= varlang('pages'); ?></span></a></li>
+                        <li class="<?= in_array(User::getZone('page-view'), User::$zones) ? 'active' : ''; ?>"><a href="<?= url('page'); ?>"><i class="fa"></i><span class="link-title">&nbsp;<?= varlang('pages'); ?></span></a></li>
                     <?php } ?>
                     <?php if (User::has('feed-view')) { ?>
-                        <li><a href="<?= url('feed'); ?>"><i class="fa"></i><span class="link-title">&nbsp;<?= varlang('feeds'); ?></span></a></li>
+                        <li class="<?= in_array(User::getZone('feed-view'), User::$zones) ? 'active' : ''; ?>"><a href="<?= url('feed'); ?>"><i class="fa"></i><span class="link-title">&nbsp;<?= varlang('feeds'); ?></span></a></li>
                     <?php } ?>
                     <?php if (User::has('var-edit')) { ?>
-                        <li><a href="<?= url('var'); ?>"><i class="fa"></i><span class="link-title">&nbsp;<?= varlang('var'); ?></span></a></li>
+                        <li class="<?= in_array(User::getZone('var-edit'), User::$zones) ? 'active' : ''; ?>"><a href="<?= url('var'); ?>"><i class="fa"></i><span class="link-title">&nbsp;<?= varlang('var'); ?></span></a></li>
                     <?php } ?>
 
                     <?php Event::fire('construct_left_menu'); ?>
@@ -188,7 +188,7 @@
             <div class="col-lg-12" style="padding-bottom: 20px;">
                 <div class="c20"></div>
                 <div class="col-lg-3">
-                    <img class="col-lg-12" src="<?= res('assets/img/usaid/lgsp_' . Language::ext() . '.png'); ?>" />
+                    <img src="<?= res('assets/img/usaid/lgsp_' . Language::ext() . '.png'); ?>" />
                 </div>
                 <div class="col-lg-9">
                     <?= varlang('cititi'); ?></a> <?= varlang('licentiere-cc'); ?> <a href="<?= varlang('licenta-link'); ?>"><?= varlang('licenta'); ?></a> <?= varlang('material'); ?>
