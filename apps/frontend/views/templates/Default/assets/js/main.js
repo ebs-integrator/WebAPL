@@ -60,16 +60,15 @@ $(document).ready(function () {
         controls: true
                 //adaptiveHeight: true
     });
-    $("ul.faq  li a").click(function () {
-        $('ul.faq li.active').removeClass('active');
-        if ($(this).parent().find('p').hasClass('active')) {
-            $("ul.faq  li p.active").slideToggle();
-            $("ul.faq li p.active").removeClass('active');
-        }
-        else {
-            $("ul.faq li p.active").slideToggle();
-            $("ul.faq  p.active").removeClass('active');
-            $(this).parent().find('p').addClass('active').slideToggle();
+    $("ul.faq > li > a").click(function () {
+        $('ul.faq > li.active').removeClass('active');
+        if ($(this).parent().find('p, ul, ol').hasClass('active')) {
+            $("ul.faq li p.active, ul.faq li ul.active, ul.faq li ol.active").slideToggle();
+            $("ul.faq li p.active, ul.faq li ul.active, ul.faq li ol.active").removeClass('active');
+        } else {
+            $("ul.faq li p.active, ul.faq li ul.active, ul.faq li ol.active").slideToggle();
+            $("ul.faq p.active, ul.faq ul.active, ul.faq ol.active").removeClass('active');
+            $(this).parent().find('p, ul, ol').addClass('active').slideToggle();
             $(this).parent().addClass('active');
         }
     });

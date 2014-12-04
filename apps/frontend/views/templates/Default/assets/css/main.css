@@ -2700,14 +2700,14 @@ ul.faq .subt{
     color:#74b45a;
     width:320px;
 }
-ul.faq  li{
+ul.faq > li{
     margin-bottom:8px;
     border: 1px solid #efefef;
     border-left:0;
     padding: 10px 25px;
     position: relative;
 }
-ul.faq li:before{
+ul.faq > li:before{
     content:'';
     position:absolute;
     display:block;
@@ -2718,24 +2718,24 @@ ul.faq li:before{
     -webkit-transition: border-left 2s; /* For Safari 3.1 to 6.0 */
     transition: border-left 1s;
 }
-ul.faq  li.active:before{
+ul.faq > li.active:before{
     border-left: 3px solid #74b45a;
 }
-ul.faq li a{
+ul.faq > li > a{
     font:20px 'open_sanssemibold';
     color:#232323;
     display:block;
     line-height: 25px;
 }
-ul.faq li.active a{
+ul.faq > li.active > a{
     color:#74b45a;
 }
-ul.faq li a span{
+ul.faq > li > a span{
     font:20px 'open_sanssemibold';
     color:#74b45a;
     padding:0px;
 }
-ul.faq li p{
+ul.faq > li p, ul.faq > li ol, ul.faq > li ul{
     font:14px 'open_sanssemibold';
     color:#4b4b4b;
     display:none;
