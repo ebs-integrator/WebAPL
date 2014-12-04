@@ -107,7 +107,7 @@ ul{
     padding:0px;
     margin:0px;
 }
-ul li{
+ul > li{
     list-style: none;
 }
 a{
