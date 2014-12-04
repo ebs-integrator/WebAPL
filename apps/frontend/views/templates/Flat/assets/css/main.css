@@ -2018,7 +2018,7 @@ ul.culture li .right >p {
     color: #9c9c9c;
     font: 16px 'AvenirNext-MediumItalic';
 }
-ul.faq li {
+ul.faq > li {
     margin-bottom: 8px;
     border: 1px solid #efefef;
     padding: 10px 25px;
@@ -2038,7 +2038,7 @@ ul.faq li a span {
 ul.faq li.active a {
     color:#ff6476;
 }
-ul.faq li p {
+ul.faq > li p, ul.faq > li ol, ul.faq > li ul {
     font: 14px 'AvenirNext-Regular';
     color: #4b4b4b;
     display: none;
