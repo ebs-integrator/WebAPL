@@ -180,6 +180,11 @@ class PageController extends BaseController {
         if (isset($post->clone_id) && $post->clone_id) {
             $this->clonePageLangData($post->clone_id, $post->id);
         }
+        
+        $clones = Post::where('clone_id', $post->id)->get();
+        foreach ($clones as $clone) {
+            $this->clonePageLangData($post->id, $clone->id);
+        }
 
         Log::info("Edit page #{$page_id}");
 

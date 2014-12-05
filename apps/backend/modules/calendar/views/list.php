@@ -1,4 +1,4 @@
-<h3>Evenimente</h3>
+<h3><?= varlang('calendar-1'); ?></h3>
 
 <ul class="nav nav-tabs" role="tablist" id="form-tabs">
     <li class="active"><a href="#elist" role="tab" data-toggle="tab"><?= varlang('event-list'); ?></a></li>

@@ -138,6 +138,7 @@ class Post extends Eloquent {
                     ->join(FeedPost::getTableName(), FeedPost::getField('post_id'), '=', Post::getField('id'))
                     ->where(Post::getField('to_home'), 1)
                     ->where(FeedPost::getField('feed_id'), $post->feed_id)
+                    ->where(PostLang::getField('enabled'), 1)
                     ->orderBy('created_at', 'desc')
                     ->take(2)
                     ->get();
@@ -177,6 +178,7 @@ class Post extends Eloquent {
         $list = $query->where(array(
                     'parent' => $parent_id
                 ))->orderBy('ord_num', 'asc')
+                ->where(PostLang::getField('enabled'), 1)
                 ->get();
 
         foreach ($list as &$item) {

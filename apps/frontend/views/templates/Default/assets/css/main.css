@@ -1923,7 +1923,7 @@ section > .wrap >  .left.contact_r{
     line-height: 1.533;
     padding-left: 18px;
     margin-bottom: 21px;
-    width:205px;
+    width:320px;
     height:40px;
     position: relative;
 }
@@ -2504,6 +2504,7 @@ ul.detail li a:before{
 }
 ul.detail li.email a{
     background:url('../img/email.png') no-repeat 25px center;
+    font-size: 16px;
 }
 ul.detail li.fax a{
     background:url('../img/fax.png') no-repeat 23px center;

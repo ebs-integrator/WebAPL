@@ -16,8 +16,8 @@
         <td><?=$item->id;?></td>
         <td><?=$item->name;?></td>
         <td>
-            <a class="btn btn-success" href="<?=url('gallery/edit/'.$item->id);?>">Edit</a> 
-            <a class="btn btn-danger" href="<?=url('gallery/delete/'.$item->id);?>">Delete</a>
+            <a class="btn btn-success" href="<?=url('gallery/edit/'.$item->id);?>"><?= varlang('module-edit'); ?></a> 
+            <a class="btn btn-danger" href="<?=url('gallery/delete/'.$item->id);?>"><?= varlang('delete'); ?></a>
         </td>
     </tr>
     <?php } ?>

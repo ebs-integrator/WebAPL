@@ -2725,3 +2725,12 @@ body.boxed {
 }
 
 .ui-priority-secondary, .ui-widget-content .ui-priority-secondary,  .ui-widget-header .ui-priority-secondary { opacity: 1 !important; filter:Alpha(Opacity=100) !important; font-weight: normal; }
+
+
+@media screen and (max-width: 1350px) and (min-width: 1190px) {
+    
+    .Footer img {
+        width: 280px;
+    }
+    
+}

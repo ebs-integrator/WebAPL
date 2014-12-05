@@ -52,8 +52,9 @@ if ($message) {
 </form>
 
 <?php if (User::has('template-install')) { ?>
-    <h3><?= varlang('upload-new-template'); ?></h3>
     <form action="<?= url('template/install'); ?>" method="post" enctype="multipart/form-data">
-        <input type="file" name="template" onchange="this.form.submit()" class="pull-left btn-success btn" />
+        <h3><?= varlang('upload-new-template'); ?></h3>
+        <label for="template_file" class="pull-left btn-success btn"><i class="glyphicon glyphicon-folder-open"></i></label>
+        <input style="display: none;" type="file" id="template_file" name="template" onchange="this.form.submit()" />
     </form>
 <?php } ?>
