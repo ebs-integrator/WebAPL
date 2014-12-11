@@ -132,8 +132,8 @@
                                 <?php if (User::has("modules-view")) { ?>
                                     <li class="<?= in_array(User::getZone('modules'), User::$zones) ? 'active' : ''; ?>"> <a href="<?= url('module'); ?>"><?= varlang('extensions'); ?></a></li>
                                 <?php } ?>
-                                <?php if (User::has('file-view')) { ?>
-                                    <li class="<?= in_array(User::getZone('file'), User::$zones) ? 'active' : ''; ?>"> <a href="<?= url('log'); ?>"><?= varlang('log'); ?></a></li>
+                                <?php if (User::has('log-view')) { ?>
+                                    <li class="<?= in_array(User::getZone('log'), User::$zones) ? 'active' : ''; ?>"> <a href="<?= url('log'); ?>"><?= varlang('log'); ?></a></li>
                                 <?php } ?>
                                 <?php if (User::has('file-manage')) { ?>
                                     <li class="<?= in_array(User::getZone('file'), User::$zones) ? 'active' : ''; ?>"> <a href="<?= url('filemanager'); ?>"><?= varlang('filemanager'); ?></a></li>

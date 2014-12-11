@@ -28,7 +28,7 @@ foreach ($groups as $group) {
                 <ul>
                     <li>
                         <div class="left"><?= varlang('data-nasterii'); ?>:</div>
-                        <div class="right"><?= $person->date_birth; ?></div>
+                        <div class="right"><?= date("d-m-Y", strtotime($person->date_birth)); ?></div>
                     </li>
                     <li>
                         <div class="left"><?= varlang('starea-civila'); ?>:</div>
