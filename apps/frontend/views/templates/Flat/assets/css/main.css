@@ -1491,7 +1491,7 @@ h2.colored{
 .attention ul,ul.crt{
     margin:35px 0px;
 }
-.attention ul li,ul.crt > li, .t_block > ul:not([class]) > li {
+.attention ul li,ul.crt > li, .t_block > ul:not([class]) > li,table.atz tr td:last-child ul li,ul.faq > li li,.a_box .right ul li,table.plc table tr td:last-child ul li,.t_block > div > ul:not([class]) > li {
     padding-left:20px;
     font:17px 'AvenirNext-Regular';    
     color:#4c4c4c;

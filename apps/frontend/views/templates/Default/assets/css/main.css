@@ -1766,7 +1766,9 @@ div[data-cont]{
 div[data-cont].curr{
     display:block;
 }
-
+.personal:nth-child(2n){
+    clear:both;
+}
 .personal .img{
     width:170px;
     height:213px;
@@ -1796,6 +1798,9 @@ div[data-cont].curr{
 }
 .city .left,.personal .left{
     margin-left:15px;
+}
+.personal .left{
+    max-width: 230px;
 }
 .name{
     font:20px 'open_sanssemibold';
@@ -4766,8 +4771,24 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details{
     .contact.left.form{
         width:330px;
     }
+    .personal{
+        width: 400px;
+        padding-right:10px;
+    }
     section > .wrap > .left,.c_title{
         width:65%;
+    }
+    .personal .img{
+        width: 140px;
+        height: 180px;
+
+    }
+    .function{
+        font-size:16px;
+        margin-top: 18px;
+    }
+    .name{
+        font-size:18px;
     }
     section > .wrap > .left.contact_r{
         margin-right:30px;
