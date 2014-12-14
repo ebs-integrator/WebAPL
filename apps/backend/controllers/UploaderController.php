@@ -81,10 +81,9 @@ class UploaderController extends BaseController {
             $extension = $file->getClientOriginalExtension();
             $name = $file->getClientOriginalName();
 
-            $filename = urigen($name) . '-' . uniqid() . "." . $extension;
+            $filename = $name;
 
             $uploadDir = Files::$upload_dir . ($data['path'] ? "/" . $data['path'] : '');
-            $uploadFile = $uploadDir . "/" . $filename;
 
             $fileType = Files::getType($extension);
 
@@ -96,8 +95,14 @@ class UploaderController extends BaseController {
                 $uploadDir = Files::$upload_dir;
             }
 
+            if (file_exists(Files::fullDir($uploadDir) . "/" . $filename)) {
+                $filename = urigen($name) . '-' . uniqid() . "." . $extension;
+            }
+            
             $uploadSuccess = $file->move(Files::fullDir($uploadDir), $filename);
 
+            $uploadFile = $uploadDir . "/" . $filename;
+            
             if ($uploadSuccess) {
                 $fid = Files::register($name, $uploadFile, $extension, $data['module_name'], $data['module_id']);
 

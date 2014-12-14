@@ -57,6 +57,11 @@ class HomeController extends BaseController {
         $oper = Input::get('oper');
         $id = Input::get('id');
 
+        if ($id == 1) {
+            Log::error("Editing lang #{$id} disabled");
+            return [];
+        }
+        
         $jqgrid = new jQgrid('apl_lang');
         $result = $jqgrid->operation(array(
             'name' => Input::get('name'),

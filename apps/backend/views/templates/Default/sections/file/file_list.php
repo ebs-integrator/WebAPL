@@ -16,11 +16,13 @@
         <?php foreach ($files as $file) { ?>
             <tr>
                 <td>
-                    <?php if ($file->type == 'image') { ?>
-                        <img src="/<?= $file->path; ?>" width="35" />
-                    <?php } else { ?>
-                        <i class="glyphicon glyphicon-paperclip btn-lg"></i>
-                    <?php } ?>
+                    <a href="/<?= $file->path; ?>" target="_blank">
+                        <?php if ($file->type == 'image') { ?>
+                            <img src="/<?= $file->path; ?>" width="35" />
+                        <?php } else { ?>
+                            <i class="glyphicon glyphicon-paperclip btn-lg"></i>
+                        <?php } ?>
+                    </a>
                 </td>
                 <td><input type="text" value="<?= $file->name; ?>" data-id="<?= $file->id; ?>" class="file_name_edit form-control" /></td>
                 <td><?= $file->type; ?></td>

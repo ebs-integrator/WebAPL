@@ -46,7 +46,9 @@ class PersonModel extends Eloquent {
                             $join->on(Files::getField("module_id"), '=', PersonModel::getField("id"));
                             $join->on(Files::getField("module_name"), '=', DB::raw("'person'"));
                         })
-                        ->where(PersonLangModel::getField("lang_id"), \WebAPL\Language::getId());
+                        ->where(PersonLangModel::getField("lang_id"), \WebAPL\Language::getId())
+                        ->orderBy('first_name', 'asc')
+                        ->orderBy('last_name', 'asc');
     }
 
     public static function getPostPersonGroups($post_id) {
