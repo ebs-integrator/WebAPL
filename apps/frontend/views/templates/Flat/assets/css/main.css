@@ -1812,6 +1812,8 @@ section .search input[type=submit]{
     font: 14px 'AvenirNext-Bold';
     text-align: center;
     color: #00bd9c;
+    background: none !important;
+    padding-left: 0px !important;
 }
 .doc,.xls,.xlsx,.pdf,.docx{
     display: table;
@@ -2269,8 +2271,8 @@ ul.faq li p:last-child{
 }
 .compl_list li a .compl_info {
     font: 17px 'AvenirNext-Regular';
-/*    max-height: 46px;
-    overflow: hidden;*/
+    /*    max-height: 46px;
+        overflow: hidden;*/
     color: #000;
 }
 .form .nmpm {
