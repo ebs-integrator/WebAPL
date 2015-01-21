@@ -177,7 +177,7 @@ class FeedController extends BaseController {
 
         $this->data['general'] = array(
             'post' => $post,
-            'feeds' => Feed::all(),
+            'feeds' => Feed::orderBy('name', 'asc')->get(),
             'post_feeds' => $feedsID,
             'fields' => $feedsID ? FeedField::get($feedsID, $post_id, 0, 1) : array(),
             'fields_out' => $feedsID ? FeedField::get($feedsID, $post_id, 0, 0) : array()

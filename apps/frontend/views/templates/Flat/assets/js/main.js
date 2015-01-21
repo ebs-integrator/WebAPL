@@ -254,7 +254,7 @@ function initialize() {
 
     var myLatlng = new google.maps.LatLng(loc_lat, loc_long);
     var isDraggable = $(document).width() > 480 ? true : false;
-    var center = new google.maps.LatLng(47.151994, 28.610020);
+    var center = new google.maps.LatLng(loc_lat, loc_long);
 
 
 
