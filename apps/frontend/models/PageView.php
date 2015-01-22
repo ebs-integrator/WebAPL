@@ -286,7 +286,7 @@ class PageView {
     }
 
     public static function defaultView($data) {
-        $data['page']->text = \WebAPL\Shortcodes::execute($data['page']->text);
+        $data['page']->text = \WebAPL\Shortcodes::execute($data['page']->text, array('post' => $data['page']));
 
         return View::make('sections.pages.default')->with($data);
     }

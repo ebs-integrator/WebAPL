@@ -57,8 +57,8 @@ class Socialcomplaints extends \WebAPL\ExtensionController {
         Template::registerViewMethod('page', 'secial_complaints_list', 'Lista cu plingeri', array($this, 'secial_complaints_list'), true);
     }
 
-    public function complaint_form() {
-        return Template::moduleView($this->module_name, 'views.complaint_form');
+    public function complaint_form($data) {
+        return Template::moduleView($this->module_name, 'views.complaint_form', $data);
     }
 
     public function secial_complaints_list($data) {
@@ -73,7 +73,7 @@ class Socialcomplaints extends \WebAPL\ExtensionController {
     }
 
     public function create_complaint() {
-
+        
         $validator = Validator::make(array(
                     varlang('numele-prenume') => Input::get('name'),
                     varlang('email') => Input::get('email'),
@@ -96,6 +96,7 @@ class Socialcomplaints extends \WebAPL\ExtensionController {
             $return['error'] = 1;
         } else {
             $complaint = new SComplaintsModel;
+            $complaint->post_id = Input::get('post_id');
             $complaint->username = Input::get('name');
             $complaint->email = Input::get('email');
             $complaint->address = Input::get('address');

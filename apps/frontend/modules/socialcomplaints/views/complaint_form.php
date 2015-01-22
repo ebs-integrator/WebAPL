@@ -6,7 +6,7 @@
         <p class="ftb"><?= varlang('formular-de-completare'); ?></p>
         <div class="form_error"></div>
         <div class="content">
-            <input type="hidden" name="post_id" value="" />
+            <input type="hidden" name="post_id" value="<?=isset($post->id) ? $post->id : '';?>" />
             <div class="nmpm">
                 <label><?= varlang('numele-prenume'); ?></label>
                 <input name="name" type="text">
