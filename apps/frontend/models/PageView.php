@@ -380,6 +380,8 @@ class PageView {
             if ($wdata['post']) {
                 Post::oneView($wdata['post']['id']);
                 
+                $wdata['post'] = Post::withDinamicFields($wdata['post']);
+                
                 $data["page"]->text = View::make("sections.pages.modview.meetingFuture")->with($wdata);
             } else {
                 $data["page"]->text = "Nui";
