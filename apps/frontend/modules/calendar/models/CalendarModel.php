@@ -38,9 +38,7 @@ class CalendarModel extends Eloquent {
     public static function generateEvents($events, $sorted = true) {
         $event_list = [];
 
-        function add_event(&$event_list, $time, $event) {
-            global $sorted;
-            
+        function add_event(&$event_list, $time, $event, $sorted) {
             $event = clone $event;
             
             $event['event_date'] = date('Y-m-d H:i:s', $time);
@@ -63,7 +61,7 @@ class CalendarModel extends Eloquent {
         foreach ($events as $event) {
             $time = strtotime($event->event_date);
 
-            add_event($event_list, $time, $event);
+            add_event($event_list, $time, $event, $sorted);
             $to_time = strtotime($event->repeat_to_date);
 
             if ($time < $to_time && $event->repeat_frequency !== 'none') {
@@ -72,14 +70,14 @@ class CalendarModel extends Eloquent {
                         $add_time = 86400;
                         while ($time + $add_time <= $to_time) {
                             $time += $add_time;
-                            add_event($event_list, $time, $event);
+                            add_event($event_list, $time, $event, $sorted);
                         }
                         break;
                     case 'saptaminal':
                         $add_time = 86400 * 7;
                         while ($time + $add_time <= $to_time) {
                             $time += $add_time;
-                            add_event($event_list, $time, $event);
+                            add_event($event_list, $time, $event, $sorted);
                         }
                         break;
                     case 'lunar':
@@ -91,7 +89,7 @@ class CalendarModel extends Eloquent {
                                 if ($time > $to_time) {
                                     break;
                                 }
-                                add_event($event_list, $time, $event);
+                                add_event($event_list, $time, $event, $sorted);
                             } else {
                                 $time = strtotime("+1 months", $time);
                             }
@@ -107,7 +105,7 @@ class CalendarModel extends Eloquent {
                                 if ($time > $to_time) {
                                     break;
                                 }
-                                add_event($event_list, $time, $event);
+                                add_event($event_list, $time, $event, $sorted);
                             } else {
                                 $time = strtotime("+1 years", $time);
                             }
