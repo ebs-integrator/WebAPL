@@ -25,7 +25,7 @@ $months = array(
                 <ul class="right_menu">
                     <?php foreach ($years_list as $year) { ?>
                         <li class='<?= isset($current_year) && $current_year == $year->year ? 'active' : ''; ?>'>
-                            <a href="javascript:;//<?= url($page_url . "?year=" . $year->year . "&month=1"); ?>"><?= $year->year; ?></a>
+                            <a href="<?= url($page_url . "?year=" . $year->year . "&month=1"); ?>"><?= $year->year; ?></a>
                             <ul class="months">
                                 <li>
                                     <?php foreach ($months as $mnth_n => $mnth) { ?>

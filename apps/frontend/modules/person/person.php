@@ -155,7 +155,6 @@ class Person extends \WebAPL\ExtensionController {
             'persons' => PersonModel::join(PersonLangModel::getTableName(), PersonLangModel::getField('person_id'), '=', PersonModel::getField('id'))
                     ->select(PersonModel::getField('id'), PersonLangModel::getField('first_name'), PersonLangModel::getField('last_name'))
                     ->orderBy(PersonLangModel::getField('first_name'))
-                    ->where(PersonModel::getField('for_audience'), 1)
                     ->where(PersonLangModel::getField('lang_id'), \WebAPL\Language::getId())
                     ->get()
         );

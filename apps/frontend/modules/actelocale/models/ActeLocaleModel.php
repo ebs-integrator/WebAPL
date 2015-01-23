@@ -72,6 +72,7 @@ class ActeLocaleModel extends Eloquent {
         return ActeLocaleModel::prepare()
                 ->where(ActeLocaleModel::getField('date_upload'), '<=', DB::raw("CURRENT_TIMESTAMP"))
                 ->orderBy(ActeLocaleModel::getField('date_upload'), 'desc')
+                ->where(DB::raw("YEAR(" . ActeLocaleModel::getField('date_upload') . ")"), intval($year))
                 ->first();
     }
     

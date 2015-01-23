@@ -23,6 +23,14 @@
             </td>
         </tr>
         <?php if (isset($poll->id)) { ?>
+        <tr>
+            <th></th>
+            <td>
+                <input type="text" class="form-control" value="[poll id=<?= $poll->id;?>]" />
+            </td>
+        </tr>
+        <?php } ?>
+        <?php if (isset($poll->id)) { ?>
             <tr>
                 <th><?= varlang('delete--1'); ?></th>
                 <td>
