@@ -1,4 +1,8 @@
+WebAPL 1.0
+===============
+
 INFORMAȚII GENERALE
+-------------------
 
 CMS platforma WebAPL 1.0 a fost elaborată la inițiativa și în baza conceptului Proiectului USAID de Susținere a Autorităților Locale din Moldova în parteneriat cu compania EBSIntegrator SRL. 
 
@@ -14,6 +18,7 @@ Acest produs se distribuie gratuit cu licența liberă GPL3 (http://opensource.o
 
 
 CERINȚE MINIME DE SISTEM SOLICITATE
+-------------------
 
 1. PHP >= 5.4
 2. MCrypt PHP Extension
@@ -23,8 +28,9 @@ CERINȚE MINIME DE SISTEM SOLICITATE
 
 
 INFORMAȚIILE DE MAI JOS REFLECTĂ UN MIC GHID DE INSTALARE A PLATFORMEI DESTINAT INCLUSIV PERSOANELOR CU CUNOȘTINȚE MINME ÎN UTILIZAREA UNOR ASEMENEA INSTRUMENTE
+--------------
 
-Pasul 1. Se verifică disponibilitatea datelor de acces
+**Pasul 1. Se verifică disponibilitatea datelor de acces**
 
 Pentru a instala platforma WebApl 1.0 pe un hosting si a demara actiunea de instalare a site-ului lansat în baza platformei e necesar sa dispuneți de câteva date:
 	
@@ -36,7 +42,7 @@ Pentru a instala platforma WebApl 1.0 pe un hosting si a demara actiunea de inst
 6. E necesar sa creati un nume de utilizator cu parola pentru baza de date
 7. E necesar sa aveti o baza de date MySQL creata pe hosting si sa o atribuiti la utilizatorul bazei de date creat.
 
-Pasul 2. Încarcarea fisierelor platformei WebAPL 1.0. pe hosting
+**Pasul 2. Încarcarea fisierelor platformei WebAPL 1.0. pe hosting**
 
 1. Lansati programul FileZilla sau un alt program similar de transfer a datelor de pe calculator pe server
 2. Completati datele de acces in Quickconnect bar, inclusiv 
