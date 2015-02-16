@@ -112,6 +112,7 @@ ul > li{
 }
 a{
     text-decoration: none;
+    color: #909090;
 }
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i

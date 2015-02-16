@@ -81,6 +81,7 @@ class Jobrequest extends \WebAPL\ExtensionController {
                             ->select(\JobRequestModel::getField('id'), \PostLang::getField('title'), \JobRequestModel::getField('name'), \JobRequestModel::getField('cv_path'), \JobRequestModel::getField('date_created'))
                             ->skip($start)
                             ->take($limit)
+                            ->orderBy(\JobRequestModel::getField('date_created'), 'desc')
                             ->get();
         });
     }

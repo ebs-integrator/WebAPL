@@ -66,7 +66,7 @@ class Files extends Eloquent {
     public static function getType($extension) {
         $types = array(
             'image' => array('jpg', 'png', 'jpeg', 'gif'),
-            'document' => array('doc', 'docx', 'xls', 'xlsx', 'pdf'),
+            'document' => array('doc', 'docx', 'xls', 'xlsx', 'pdf', 'odt', 'txt'),
             'favicon' => array('ico')
         );
 

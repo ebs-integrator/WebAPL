@@ -52,7 +52,7 @@ class Post extends Eloquent {
     }
 
     public static function treePosts($parent = 0, $begin_where = array()) {
-        $list = Post::prepareQuery()->where(Post::getField('parent'), $parent)->where($begin_where)->orderBy('ord_num', 'asc')->get();
+        $list = Post::prepareQuery()->where(PostLang::getField('enabled'), 1)->where(Post::getField('parent'), $parent)->where($begin_where)->orderBy('ord_num', 'asc')->get();
 
         foreach ($list as &$item) {
             $item['list'] = Post::treePosts($item->id);

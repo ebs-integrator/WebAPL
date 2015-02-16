@@ -51,6 +51,7 @@
     }
 </script>
 
+<!--- Promote RO Language
 <h3><?= varlang('limba-implicita'); ?></h3>
 <form action="<?= url('settings/save'); ?>" method="post" class="ajax-auto-submit">
     <select name="set[default_language]" class="form-control">
@@ -59,6 +60,7 @@
         <?php } ?>
     </select>
 </form>
+--->
 
 <h3><?= varlang('limbi-disponibile'); ?></h3>
 <?= View::make('sections/jqgrid/form')->with('options', 'languages_options'); ?>

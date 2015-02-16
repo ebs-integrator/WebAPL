@@ -8,6 +8,8 @@
 <script src="https://cdn.firebase.com/v0/firebase-simple-login.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+
 <!-- Download from https://github.com/firebase/Firechat -->
 <link rel="stylesheet" href="/apps/backend/modules/firechat/assets/firechat-default.css" />
 <script src="/apps/backend/modules/firechat/assets/firechat-default.js"></script>
@@ -31,12 +33,14 @@
         border:0px;
     }
     #firechat .message .name{
-        font:15px 'open_sansbold';
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
         color:#713871;
     }
     #firechat em, .sendmail{
         color:#b9b9b9;
-        font:13px 'open_sansregular';
+        font-family: 'Open Sans', sans-serif;
+        font-size:13px;
         float:right;
     }
     .sendmail a {
@@ -63,14 +67,17 @@
         margin-bottom:17px;
     }   
     #firechat .message-content{
-        font:15px 'open_sanssemibold';
+        font-family: 'Open Sans', sans-serif;
+        font-size:15px;
+        font-weight: 600;
         color:#4c4c4c;
     }
     #firechat textarea{
         height:55px;
         border: 1px solid #d9d9d9;
         padding: 10px;
-        font: 13px 'open_sanssemibold_italic';
+        font-family: 'Open Sans', sans-serif;
+        font-size:13px;
         color: #959595;
         width: 380px;
         margin: 0 auto;
@@ -82,7 +89,9 @@
     }
     #firechat .clearfix > label{
         margin-left:10px;
-        font: 15px 'open_sansbold';
+        font-family: 'Open Sans', sans-serif;
+        font-size:15px;
+        font-weight: 600;
         color: #b6c57e;
     }
 

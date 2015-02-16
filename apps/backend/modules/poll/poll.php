@@ -111,6 +111,7 @@ class Poll extends \WebAPL\ExtensionController {
                                     ->take($limit)
                                     ->leftjoin('apl_poll_question', 'apl_poll.id', '=', 'apl_poll_question.poll_id')
                                     ->where('lang_id', Language::getId())
+                                    ->orderBy('date_created', 'desc')
                                     ->get();
                 });
     }

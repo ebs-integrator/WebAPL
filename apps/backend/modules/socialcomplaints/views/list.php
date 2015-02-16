@@ -22,7 +22,7 @@
             {name: 'response', index: 'response', height: 50, resizable: true, sortable:false, align: "left", editable: true, hidden: true, editrules: {edithidden: true}, edittype: "textarea"},
             {name: 'date_created', index: 'date_created', height: 50, resizable: true, sortable:false, align: "left", editable: true, edittype: "text"},
                 {name: 'is_private', index: 'is_private', resizable: true, sortable:false, align: "left", sorttype: "text", editable: true, edittype: "select", editoptions: {value: '0:Public;1:Privat'}, formatter: function(value) {
-                    return "<center data-value='" + value + "'>" + (value == 1 ? '<span class="label label-success">Privat</span>' : '<span class="label label-danger">Public</span>') + "</center>";
+                    return "<center data-value='" + value + "'>" + (value == 1 ? '<span class="label label-danger">Privat</span>' : '<span class="label label-success">Public</span>') + "</center>";
                 }, unformat: function(value) {
                     return value === 'Privat' ? 1 : 0;
                 }},

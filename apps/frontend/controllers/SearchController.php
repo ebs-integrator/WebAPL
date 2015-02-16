@@ -79,7 +79,11 @@ class SearchController extends BaseController {
                             }
 
                             return Redirect::to($url);
+                        } else {
+                            throw new Exception("Not found page, post #{$id}");
                         }
+                    } else {
+                        throw new Exception("Not found feed, post #{$id}");
                     }
                     break;
                 default:

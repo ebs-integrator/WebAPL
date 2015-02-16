@@ -42,7 +42,7 @@
             <td>
                 <select name="user_id" class="form-control">
                     <option value="0">---</option>
-                    <?php foreach (User::all() as $user) { ?>
+                    <?php foreach (User::orderBy('username', 'asc')->get() as $user) { ?>
                         <option value="<?= $user->id; ?>" <?= isset($person['user_id']) && $person['user_id'] == $user->id ? 'selected' : '' ?>><?= $user->username; ?></option>
                     <?php } ?>
                 </select>

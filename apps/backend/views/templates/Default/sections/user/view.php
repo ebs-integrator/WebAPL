@@ -1,31 +1,32 @@
-<?php if (User::has('user-edit')) { ?>
-    <form action="<?= url('user/save'); ?>" method="post" class="ajax-auto-submit">
-        <h4><?= varlang('edit-details'); ?></h4>
-
-        <input type="hidden" name="id" value="<?= $user->id; ?>" />
-
-        <table class="table table-bordered table-hover">
-            <tr>
-                <th><?= varlang('username-1'); ?></th>
-                <td>
-                    <input class="form-control" type="text" value="<?= $user->username; ?>" name="username" placeholder="<?= varlang('username-1'); ?>"/>
-                </td>
-            </tr>
-            <tr>
-                <th><?= varlang('email-4'); ?></th>
-                <td>
-                    <input class="form-control" type="email" value="<?= $user->email; ?>" name="email" placeholder="<?= varlang('email-4'); ?>"/>
-                </td>
-            </tr>
-        </table>
-    </form>
-<?php } ?>
-
 <?php
 $uroles = User::extractRoles($user->id);
 ?>
 
 <?php if ((User::has('user-chpwd') && (!User::has('user-ptpsw', $uroles))) || $user->id == Auth::user()->id) { ?>
+
+    <?php if (User::has('user-edit')) { ?>
+        <form action="<?= url('user/save'); ?>" method="post" class="ajax-auto-submit">
+            <h4><?= varlang('edit-details'); ?></h4>
+
+            <input type="hidden" name="id" value="<?= $user->id; ?>" />
+
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th><?= varlang('username-1'); ?></th>
+                    <td>
+                        <input class="form-control" type="text" value="<?= $user->username; ?>" name="username" placeholder="<?= varlang('username-1'); ?>"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th><?= varlang('email-4'); ?></th>
+                    <td>
+                        <input class="form-control" type="email" value="<?= $user->email; ?>" name="email" placeholder="<?= varlang('email-4'); ?>"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    <?php } ?>
+
     <form action="<?= url('user/changepassword'); ?>" method="post" class="ajax-auto-submit">
         <h4><?= varlang('change-password'); ?></h4>
 

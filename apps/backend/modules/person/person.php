@@ -307,6 +307,7 @@ class Person extends \WebAPL\ExtensionController {
             'person_groups' => PersonGroup::join(PersonGroupLang::getTableName(), PersonGroupLang::getField("group_id"), '=', PersonGroup::getField('id'))
                     ->select(PersonGroup::getField("id"), PersonGroupLang::getField("name"))
                     ->where(PersonGroupLang::getField("lang_id"), \WebAPL\Language::getId())
+                    ->orderBy(\PersonGroupLang::getField('name'), 'asc')
                     ->get(),
             'selected_groups' => array()
         );
@@ -323,7 +324,7 @@ class Person extends \WebAPL\ExtensionController {
             }
         }
 
-        $data['feeds'] = \Feed::all();
+        $data['feeds'] = \Feed::orderBy('name', 'asc')->get();
 
         $this->layout->content = Template::moduleView($this->module_name, 'views.form', $data);
         return $this->layout;
@@ -493,6 +494,7 @@ class Person extends \WebAPL\ExtensionController {
                 'person_groups' => PersonGroup::join(PersonGroupLang::getTableName(), PersonGroupLang::getField("group_id"), '=', PersonGroup::getField('id'))
                         ->select(PersonGroup::getField("id"), PersonGroupLang::getField("name"))
                         ->where(PersonGroupLang::getField("lang_id"), \WebAPL\Language::getId())
+                        ->orderBy(\PersonGroupLang::getField('name'), 'asc')
                         ->get()->toArray(),
                 'selected_groups' => array()
             );

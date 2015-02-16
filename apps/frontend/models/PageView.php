@@ -384,7 +384,7 @@ class PageView {
                 
                 $data["page"]->text = View::make("sections.pages.modview.meetingFuture")->with($wdata);
             } else {
-                $data["page"]->text = "Nui";
+                $data["page"]->text = varlang('articole-null');
             }
         }
         return static::defaultView($data);

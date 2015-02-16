@@ -36,7 +36,10 @@ class HomeController extends BaseController {
     public function clearcache() {
         Cache::flush();
 
-        $this->layout->content = 'Access denied';
+        var_dump(DB::select(DB::raw('SELECT CURRENT_TIMESTAMP as test from apl_file')));
+        
+        
+        $this->layout->content = date("Y-m-d H:i:s");
 
         return $this->layout;
     }

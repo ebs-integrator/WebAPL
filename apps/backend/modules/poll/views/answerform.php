@@ -1,4 +1,8 @@
-<h2><?= varlang('edit-answer'); ?></h2>
+<h3>
+    <a href="<?= url('poll/list'); ?>"><?= varlang('polls'); ?></a> / 
+    <a href="<?= url('poll/form/' . $answer->poll_id); ?>"><?= varlang('poll-form'); ?></a> /
+    <?= varlang('edit-answer'); ?>
+</h3>
 
 <form class="ajax-auto-submit" action='<?= url('poll/answer/save'); ?>' method='post'>
     <input type='hidden' name='answer_id' value='<?= isset($answer->id) ? $answer->id : 0; ?>' />

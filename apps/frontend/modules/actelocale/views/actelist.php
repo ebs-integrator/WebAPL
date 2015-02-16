@@ -135,7 +135,10 @@ $months = array(
             queryTitle = $("#actetitle").val();
             if (queryTitle.length > 0) {
                 $(".calendar_slider tbody tr").hide();
-                $('.calendar_slider tbody .searchin:contains("' + queryTitle + '")').closest("tr").show();
+                $('.calendar_slider tbody .searchin a').filter(function( index ) {
+                    console.log($(this));
+                    return $(this).text().indexOf(queryTitle) > -1;
+                }).closest("tr").show(); 
             } else {
                 $(".calendar_slider tbody tr").show();
             }

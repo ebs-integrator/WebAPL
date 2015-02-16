@@ -139,6 +139,7 @@ ul > li{
 }
 a{
     text-decoration: none;
+    color: #909090;
 }
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -474,7 +475,7 @@ header .contact .cont .cont_form{
 }
 header .contact .cont .cont_form p.title{
     text-transform: uppercase;
-    font:17px 'open_sansbold';
+    font:16px 'open_sansbold';
     color:#000;
     margin-bottom: 0px;
 }
@@ -1213,7 +1214,7 @@ section > .wrap > .left{
     max-height:134px;
 }
 .m_criteria{
-    font: 17px 'open_sansbold';
+    font: 16px 'open_sansbold';
     background: #fbfbfb;
     text-align: center;
     border: 1px solid #a5d293;
@@ -2622,7 +2623,7 @@ section  .map_cont .h_list ul li:hover a{
 }
 
 section .wrap > .left .subt,ul.faq  .subt{
-    font: 17px 'open_sansbold';
+    font: 16px 'open_sansbold';
     color: #232323;
     height: 50px;
     line-height: 44px;
@@ -2824,7 +2825,7 @@ ul.crt.nbtn li{
 }
 .b_weight,.ncd .b_weight{
     color:#000;
-    font:17px 'open_sansbold';
+    font:16px 'open_sansbold';
     margin-top:35px;
 }
 .crt p span,p.sub{
@@ -3009,7 +3010,7 @@ ul.mda > li > a,ul.atz  > li a,.dcr_dwnl{
 }
 .emrg ul li .left{
     width: 30%;
-    font:17px 'open_sansbold';
+    font:16px 'open_sansbold';
     color:#7c4d7c;
     display:table-cell;
     vertical-align: middle;
@@ -3984,7 +3985,7 @@ table.plc{
     margin-top:30px;
 }
 .ath p{
-    font:17px 'open_sansbold';
+    font:16px 'open_sansbold';
     color:#8e588e;
     max-width:100%;
 }
@@ -4075,7 +4076,7 @@ table.plc > tbody > tr > td:last-child{
     position:relative;
 }
 table.plc > tbody > tr > td > a{
-    font:17px 'open_sansbold';
+    font:16px 'open_sansbold';
     color:#74b45a;
 }
 table.plc table td{
@@ -4127,7 +4128,7 @@ table.plcu > tbody > tr > td,table.plcu > tbody > tr > th{
 
 }
 table.plcu > tbody > tr > th,table.plcu > thead > tr > th{
-    font:17px 'open_sansbold';
+    font:16px 'open_sansbold';
     vertical-align: top;
     color:#000;
 }
@@ -4193,7 +4194,7 @@ table.plcu > tbody > tr:last-child td,table.plcu > tbody > tr:last-child th{
 table.plcu .word,table.plcu .doc,table.plcu .pdf,table.plcu .docx,table.plcu .xls,table.plcu .xlsx{
     padding-left:40px;
     color:#4c4c4c;
-    font:17px 'open_sansbold';
+    font:16px 'open_sansbold';
     height:30px;
     display:block;
     line-height:30px;
@@ -4267,13 +4268,13 @@ table.plcu .pdf{
     border:1px solid #e3e3e3;
 }
 .calendar_slider table thead tr:first-child td{
-    font:17px 'open_sansbold';
+    font:16px 'open_sansbold';
     background:#fbfbfb;
     text-align:center;
 }
 .calendar_slider table thead tr:last-child td{
     color:#74b45a;
-    font:17px 'open_sansbold';
+    font:16px 'open_sansbold';
     text-transform:uppercase;
 }
 .clndr .bx-wrapper .bx-prev,.orsl .bx-wrapper .bx-prev{
@@ -4297,7 +4298,7 @@ table.plcu .pdf{
 }
 .cns_locali thead tr td{
     color:#74b45a;
-    font:17px 'open_sansbold';
+    font:16px 'open_sansbold';
     text-transform:uppercase;
     border:1px solid #a5d293;
 }
@@ -4452,7 +4453,7 @@ table.orar tbody tr td:last-child .cl_pop:after, table.orar tbody tr td:nth-chil
 table.orar thead tr:first-child{
     background:#fbfbfb;
     text-align:center;
-    font:17px 'open_sansbold';
+    font:16px 'open_sansbold';
     color:#7c4d7c;
     height:46px;
 }
@@ -4491,7 +4492,7 @@ table.orar tbody tr td{
     top:-1px;
     right:-1px;
     color:#fff;
-    font:17px 'open_sansbold';
+    font:16px 'open_sansbold';
     text-align:center;
     padding-top: 5px;
 }
