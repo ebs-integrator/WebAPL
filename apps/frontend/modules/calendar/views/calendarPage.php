@@ -22,7 +22,7 @@ $months = array('', 'Ianuarie', 'Februarie', 'Martie', 'Aprilie', 'Mai', 'Iunie'
                         </thead>
                         <tbody>
                             <?php
-                            $firstDayOfMonth = date('w', mktime(0, 0, 0, $month, 1, $year)); // a zero based day number
+                            $firstDayOfMonth = date('w', mktime(0, 0, 0, $month, 1, $year))==0?7:date('w', mktime(0, 0, 0, $month, 1, $year)); // a zero based day number
 
 
                             /* IMPORTANT STATEMENT
