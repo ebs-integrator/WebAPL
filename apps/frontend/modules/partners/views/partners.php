@@ -1,7 +1,7 @@
 <article class="atn partners-img">
     <?php if ($list) { ?>
 
-    <p class="ttl"><a>Parteners</a></p>
+    <p class="ttl"><a><?= varlang('parteneri'); ?></a></p>
 
     <div class="hr"></div>
     <?php foreach ($list as $item) {
