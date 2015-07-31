@@ -1,13 +1,12 @@
 <article class="atn partners-img">
     <?php if ($list) { ?>
 
-    <p class="ttl"><a><?= varlang('parteneri-1'); ?></a></p>
+    <p class="ttl"><a>Parteners</a></p>
 
     <div class="hr"></div>
     <?php foreach ($list as $item) {
     $url = $item->name;
-    $handle = @fopen($url, 'r');
-    if ($handle !== false) {
+    if (!filter_var($url, FILTER_VALIDATE_URL) === false) {
         $url3 = $url;
     } else {
         $url3 = "";
@@ -21,5 +20,4 @@
         <?php } ?>
 
         <?php } ?>
-
 </article>
