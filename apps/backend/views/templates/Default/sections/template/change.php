@@ -1,4 +1,4 @@
-<h3><?= varlang('template-set'); ?></h3>
+    <h3><?= varlang('template-set'); ?></h3>
 
 <?php
 $message = Session::get('message');

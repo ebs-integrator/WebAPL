@@ -583,7 +583,8 @@ INSERT INTO `apl_module` (`id`, `name`, `extension`, `settings_page`, `enabled`)
 (7, 'Job REquests', 'jobrequest', '', 1),
 (8, 'Poll', 'poll', '', 1),
 (9, 'Chat', 'firechat', 'firechat/settings', 1),
-(10, 'Acte locale', 'actelocale', '', 1);
+(10, 'Acte locale', 'actelocale', '', 1),
+(11, 'Parteneri','partners','',1);
 
 -- --------------------------------------------------------
 
@@ -4800,6 +4801,9 @@ INSERT INTO `apl_var_lang` (`id`, `var_key`, `value`, `lang_id`) VALUES
 (2373, 'help', 'Помощь', 2),
 (2374, 'help', 'Help', 6),
 (2375, 'help', 'Помощ', 7);
+
+
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
