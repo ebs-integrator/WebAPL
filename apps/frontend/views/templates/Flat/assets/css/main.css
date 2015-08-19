@@ -47,11 +47,9 @@
     margin-left: 65px;
 
 }
-
-.atn {
+.atn{
     height: 360px;
 }
-
 .partners-img p {
     font: 35px 'AvenirNext-Bold';
     text-transform: uppercase;
@@ -2927,38 +2925,37 @@ p.descr {
     height: 17px;
 }
 
-.calendar_slider table thead tr:first-child td, .acte_slider table thead tr:first-child td {
+.calendar_slider table thead tr:first-child td {
     font: 17px 'AvenirNext-Bold';
     background: #fbfbfb;
     text-transform: initial;
     text-align: center;
 }
 
-.calendar_slider table, .calendar_slider table a, .acte_slider table, .acte_slider table a {
+.calendar_slider table, .calendar_slider table a {
     width: 100%;
     font: 15px 'AvenirNext-DemiBold';
     color: #4c4c4c;
 }
 
-.calendar_slider table thead tr td, .acte_slider table thead tr td {
+.calendar_slider table thead tr td {
     color: #008d74;
     font: 17px 'AvenirNext-Bold';
     text-transform: uppercase;
 }
 
-.calendar_slider table tbody tr:nth-child(2n-1), .calendar_slider table tbody tr td:first-child,
-.acte_slider table tbody tr:nth-child(2n-1), .acte_slider table tbody tr td:first-child {
+.calendar_slider table tbody tr:nth-child(2n-1), .calendar_slider table tbody tr td:first-child {
     background: #fbfbfb;
 }
 
-.calendar_slider td, .acte_slider td {
+.calendar_slider td {
     padding: 15px;
     border: 1px solid #e3e3e3;
     color: #4c4c4c;
     font: 17px 'AvenirNext-Medium';
 }
 
-.calendar_slider tbody td:nth-child(2), .acte_slider tbody td:nth-child(2) {
+.calendar_slider tbody td:nth-child(2) {
     font: 15px 'AvenirNext-DemiBold';
 }
 
@@ -2987,7 +2984,7 @@ p.descr {
     left: 20px;
 }
 
-.calendar_slider table thead tr:first-child td, .acte_slider table thead tr:first-child td {
+.calendar_slider table thead tr:first-child td {
     font: 17px 'AvenirNext-Bold';
     color: #008d74;
     background: #fbfbfb;
@@ -2995,12 +2992,11 @@ p.descr {
     text-align: center;
 }
 
-.calendar_slider table thead tr td, .acte_slider table thead tr td {
+.calendar_slider table thead tr td {
     border: 1px solid #008d74;
 }
 
-.calendar_slider table thead tr:last-child td:last-child,
-.acte_slider table thead tr:last-child td:last-child {
+.calendar_slider table thead tr:last-child td:last-child {
     padding: 1px;
 }
 
@@ -4882,14 +4878,14 @@ ul.vice li .p_name {
     .menu_block {
         padding-right: 20px;
     }
+
 }
 
 @media print,(min-width: 1024px) and (max-width: 1279px) {
 
-    .partners-img {
+    .partners-img{
         margin-top: 44px !important;
     }
-
     .wrap {
         width: 980px;
     }
@@ -5735,10 +5731,10 @@ ul.vice li .p_name {
     .contact_left {
         width: 100%;
     }
-
     .partners-img {
         float: left !important;
         padding-left: 65px;
+
 
     }
 
@@ -5750,7 +5746,6 @@ ul.vice li .p_name {
         float: left !important;
         padding-left: 30px;
     }
-
     .img_back {
         display: none;
     }
@@ -6300,8 +6295,7 @@ ul.vice li .p_name {
         width: 180px;
     }
 
-    .calendar_slider table thead tr:nth-child(2) td:first-child, .calendar_slider table thead tr:nth-child(2) td:nth-child(3), .calendar_slider table tbody tr td:first-child, .calendar_slider table tbody tr td:nth-child(3),
-    .acte_slider table thead tr:nth-child(2) td:first-child, .acte_slider table thead tr:nth-child(2) td:nth-child(3), .acte_slider table tbody tr td:first-child, .acte_slider table tbody tr td:nth-child(3) {
+    .calendar_slider table thead tr:nth-child(2) td:first-child, .calendar_slider table thead tr:nth-child(2) td:nth-child(3), .calendar_slider table tbody tr td:first-child, .calendar_slider table tbody tr td:nth-child(3) {
         display: none;
     }
 
@@ -6704,7 +6698,7 @@ ul.vice li .p_name {
         line-height: 33px;
     }
 
-    .calendar_slider table thead tr td:nth-child(2), .calendar_slider table tbody tr td:nth-child(2), .acte_slider table thead tr td:nth-child(2), .acte_slider table tbody tr td:nth-child(2), .cda .ul_title .right, .cda ul li .right {
+    .calendar_slider table thead tr td:nth-child(2), .calendar_slider table tbody tr td:nth-child(2), .cda .ul_title .right, .cda ul li .right {
         display: none;
     }
 
