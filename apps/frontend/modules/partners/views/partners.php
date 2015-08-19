@@ -1,25 +1,24 @@
-<article class="atn partners-img">
-    <?php if ($list) { ?>
 
-    <p class="ttl"><a><?= varlang('parteneri-1'); ?></a></p>
+<?php if ($list) { ?>
+<?php foreach ($list as $item) {
+        if ($item->status == 1) {?>
+    <div class="partners-img">
 
-    <div class="hr"></div>
-    <?php foreach ($list as $item) {
-    $url = $item->name;
-    $handle = @fopen($url, 'r');
-    if ($handle !== false) {
-        $url3 = $url;
-    } else {
-        $url3 = "";
-    }
-    if ($url3) {
-    ?>
-    <a target="_blank" href="<?= url($url3) ?>">
-        <?php } else { ?><a><?php } ?>
+        <?php
+
+            $url = $item->name;
+            if (!filter_var($url, FILTER_VALIDATE_URL) === false) {
+                $url3 = $url;
+            } else {
+                $url3 = "";
+            }
+            if ($url3) {
+                ?>
+                <a target="_blank" href="<?= url($url3) ?>">
+            <?php } else { ?><a><?php } ?>
             <img src="<?= url($item->path); ?>">
-        </a>
+            </a>
+        </div>
         <?php } ?>
-
-        <?php } ?>
-
-</article>
+    <?php } ?>
+<?php } ?>

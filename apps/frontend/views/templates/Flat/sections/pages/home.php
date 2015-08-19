@@ -18,9 +18,12 @@
                     </ul>
                 </div>
                 <a href="<?= $item->url; ?>" class="more"></a>
+
             </article>
         <?php } ?>
+        <?php Event::fire('home_right_partners', $page); ?>
         <div class="clearfix100"></div>
+
     </div>
 </section>
 

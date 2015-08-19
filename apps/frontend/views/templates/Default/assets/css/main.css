@@ -10,9 +10,6 @@
    Fonts
    ========================================================================== */
 
-.partners-img a img {
-    max-height: 140px;
-}
 
 @font-face {
     font-family: 'open_sansbold_italic';
@@ -90,6 +87,7 @@
     font-style: normal;
 
 }
+
 
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -1189,6 +1187,7 @@ section > .wrap > .left {
 
 .right > article {
     width: 383px;
+    max-width:100%;
     height: auto;
     border: 2px solid #f7f7f7;
     display: inline-block;
@@ -2676,6 +2675,7 @@ ul.social li:first-child {
     margin-bottom: 0px;
     max-height: 235px;
     overflow: hidden;
+    text-align: justify;
 }
 
 .a_box .info.unic {
@@ -3909,7 +3909,7 @@ ul.dcr > li .dcr_box .ul_title span {
 }
 
 ul.dcr > li .dcr_box ul li span:first-child {
-    width: 59%;
+    width: 90%;
     display: inline-block;
 }
 
@@ -4957,28 +4957,28 @@ table.plcu .pdf {
     width: auto;
 }
 
-.calendar_slider table, .calendar_slider table a {
+.calendar_slider table, .calendar_slider table a, .acte_slider table, .acte_slider table a {
     width: 100%;
     font: 15px 'open_sanssemibold';
     color: #4c4c4c;
 }
 
-.calendar_slider table thead td {
+.calendar_slider table thead td, .acte_slider table thead td {
     border: 1px solid #a5d293;
 }
 
-.calendar_slider td {
+.calendar_slider td, .acte_slider td {
     padding: 15px;
     border: 1px solid #e3e3e3;
 }
 
-.calendar_slider table thead tr:first-child td {
+.calendar_slider table thead tr:first-child td, .acte_slider table thead tr:first-child td {
     font: 16px 'open_sansbold';
     background: #fbfbfb;
     text-align: center;
 }
 
-.calendar_slider table thead tr:last-child td {
+.calendar_slider table thead tr:last-child td, .acte_slider table thead tr:last-child td {
     color: #74b45a;
     font: 16px 'open_sansbold';
     text-transform: uppercase;
@@ -5004,7 +5004,7 @@ table.plcu .pdf {
     margin-top: 2px;
 }
 
-.calendar_slider table tbody tr:nth-child(2n-1), .calendar_slider table tbody tr td:first-child {
+.calendar_slider table tbody tr:nth-child(2n-1), .calendar_slider table tbody tr td:first-child, .acte_slider table tbody tr:nth-child(2n-1), .acte_slider table tbody tr td:first-child {
     background: #fbfbfb;
 }
 
@@ -5428,10 +5428,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details {
     width: 348px;
     min-height: 340px;
     float: left;
-}
-
-.m_video > div:nth-child(2n) {
-    margin-right: 85px;
+    margin-right: 50px;
 }
 
 .video_d {
@@ -5471,6 +5468,20 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details {
 
 .a_box.g_g .left .img img, .a_box.v_g .left .img img {
     max-width: 270px;
+}
+.partners-img a img {
+    max-height: 125px;
+    max-width: 100%;
+
+}
+.partners-img{
+    clear: both;
+    position: relative;
+    margin-top: 25px;
+    overflow: hidden;
+    width: 100%;
+    max-width:383px;
+    float: left;
 }
 
 @media only screen and (max-width: 1525px) {
@@ -5658,16 +5669,28 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details {
         max-width: 400px;
     }
 
-    section > .wrap .left article:nth-child(2n), .left > article, .global.right, .right > article, .right > article.atn {
+    section > .wrap .left article:nth-child(2n), .left > article, .global.right, .right > article,.partners-img {
         width: 360px;
         padding-right: 10px;
         margin-left: 0px;
     }
+    .right > *:nth-child(2n+1){
+        clear: both;
+    }
+    .right > article.atn,section > .wrap .right .doc{
+        width: 360px;
 
+    }
     .right article.news li span {
         margin-right: 12px;
     }
-
+    section > .wrap .right.global >div{
+        float: left;
+        clear: none;
+    }
+    section > .wrap .right.global >div:nth-child(2n+1){
+        clear:both;
+    }
     section > .wrap .left article:nth-child(2n) {
         margin-left: 25px;
     }
@@ -5939,6 +5962,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details {
         margin: 0 auto;
         width: 780px;
         float: none;
+        clear:both;
     }
 
     section > .wrap .left.global {
@@ -6105,7 +6129,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details {
         margin-top: 20px;
     }
 
-    section > .wrap .left article:nth-child(2n), .right > article:nth-child(2n) {
+    section > .wrap .left article:nth-child(2n), .right > *:nth-child(2n) {
         margin-left: 50px;
     }
 
@@ -7169,11 +7193,13 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details {
         display: none;
     }
 
-    .calendar_slider table thead tr:last-child td:nth-child(3), .calendar_slider table thead tr:last-child td:nth-child(4), .calendar_slider table thead tr:last-child td:first-child {
+    .calendar_slider table thead tr:last-child td:nth-child(3), .calendar_slider table thead tr:last-child td:nth-child(4), .calendar_slider table thead tr:last-child td:first-child,
+    .acte_slider table thead tr:last-child td:nth-child(3), .acte_slider table thead tr:last-child td:nth-child(4), .acte_slider table thead tr:last-child td:first-child {
         display: none;
     }
 
-    .calendar_slider table tbody tr td:nth-child(3), .calendar_slider table tbody tr td:nth-child(4), .calendar_slider table tbody tr td:first-child {
+    .calendar_slider table tbody tr td:nth-child(3), .calendar_slider table tbody tr td:nth-child(4), .calendar_slider table tbody tr td:first-child,
+    .acte_slider table tbody tr td:nth-child(3), .acte_slider table tbody tr td:nth-child(4), .acte_slider table tbody tr td:first-child {
         display: none;
     }
 
@@ -7349,21 +7375,14 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details {
         float: none;
     }
 
-    section > .wrap > .right article, section > .wrap .right .doc, .right > article.news {
+    section > .wrap > .right article, section > .wrap .right .doc, .right > article.news ,.partners-img{
         width: 360px;
         margin-left: 0px;
     }
 
-    section > .wrap > .right article {
-        display: none;
-    }
-
     section > .wrap > .right {
         float: none;
-    }
-
-    section > .wrap > .right .partners-img {
-        display: block;
+        display: none;
     }
 
     label {
@@ -7378,11 +7397,6 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details {
 @media only screen and (max-width: 639px) {
     section > .wrap, section .dirs_menu .wrap {
         max-width: 320px;
-    }
-
-    .partners-img a img {
-        max-height: 115px;
-
     }
 
     header .right.contact {
@@ -7423,7 +7437,7 @@ section > .wrap > .left > ul.sec_details.left > li > span.crt_details {
         width: 100%;
     }
 
-    section > .wrap > .right article, section > .wrap .right .doc, .right > article.news {
+    section > .wrap > .right article, section > .wrap .right .doc, .right > article.news,.partners-img {
         max-width: 300px;
     }
 

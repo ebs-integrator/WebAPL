@@ -1,38 +1,39 @@
-<?php 
- 
- /**
-  * 
-  * CMS Platform WebAPL 1.0 is a free open source software for creating and managing
-  * a web site for Local Public Administration institutions. The platform was
-  * developed at the initiative and on a concept of USAID Local Government Support
-  * Project in Moldova (LGSP) by the Enterprise Business Solutions Srl (www.ebs.md).
-  * The opinions expressed on the website belong to their authors and do not
-  * necessarily reflect the views of the United States Agency for International
-  * Development (USAID) or the US Government.
-  * 
-  * This program is free software: you can redistribute it and/or modify it under
-  * the terms of the GNU General Public License as published by the Free Software
-  * Foundation, either version 3 of the License, or any later version.
-  * This program is distributed in the hope that it will be useful, but WITHOUT ANY
-  * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-  * PARTICULAR PURPOSE. See the GNU General Public License for more details.
-  * 
-  * You should have received a copy of the GNU General Public License along with
-  * this program. If not, you can read the copy of GNU General Public License in
-  * English here: <http://www.gnu.org/licenses/>.
-  * 
-  * For more details about CMS WebAPL 1.0 please contact Enterprise Business
-  * Solutions SRL, Republic of Moldova, MD 2001, Ion Inculet 33 Street or send an
-  * email to office@ebs.md 
-  * 
-  **/
- 
-class HomeController extends BaseController {
+<?php
 
-    function __construct() {
+/**
+ *
+ * CMS Platform WebAPL 1.0 is a free open source software for creating and managing
+ * a web site for Local Public Administration institutions. The platform was
+ * developed at the initiative and on a concept of USAID Local Government Support
+ * Project in Moldova (LGSP) by the Enterprise Business Solutions Srl (www.ebs.md).
+ * The opinions expressed on the website belong to their authors and do not
+ * necessarily reflect the views of the United States Agency for International
+ * Development (USAID) or the US Government.
+ *
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ * PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, you can read the copy of GNU General Public License in
+ * English here: <http://www.gnu.org/licenses/>.
+ *
+ * For more details about CMS WebAPL 1.0 please contact Enterprise Business
+ * Solutions SRL, Republic of Moldova, MD 2001, Ion Inculet 33 Street or send an
+ * email to office@ebs.md
+ *
+ **/
+class HomeController extends BaseController
+{
+
+    function __construct()
+    {
         parent::__construct();
 
-        $this->beforeFilter(function() {
+        $this->beforeFilter(function () {
             if (!Auth::check()) {
                 return Redirect::to('auth');
             }
@@ -41,7 +42,8 @@ class HomeController extends BaseController {
 
     protected $layout = 'layout.main';
 
-    public function postLangs() {
+    public function postLangs()
+    {
         User::onlyHas('lang-view');
 
         $jqgrid = new jQgrid('apl_lang');
@@ -51,7 +53,8 @@ class HomeController extends BaseController {
         $this->layout = null;
     }
 
-    public function postEditlang() {
+    public function postEditlang()
+    {
         User::onlyHas('lang-view');
 
         $oper = Input::get('oper');
@@ -61,7 +64,7 @@ class HomeController extends BaseController {
             Log::error("Editing lang #{$id} disabled");
             return [];
         }
-        
+
         $jqgrid = new jQgrid('apl_lang');
         $result = $jqgrid->operation(array(
             'name' => Input::get('name'),
@@ -87,32 +90,37 @@ class HomeController extends BaseController {
         Log::info("Lang operation {$oper} #{$id}");
     }
 
-    public function showDashboard() {
+    public function showDashboard()
+    {
         $page = Post::find(285);
         if ($page) {
             $data['page'] = PostLang::where('post_id', $page->id)->where('lang_id', WebAPL\Language::getId())->first();
         }
-        
+
         $this->layout->content = View::make('hello', $data);
     }
 
-    public function getLanguages() {
+    public function getLanguages()
+    {
         User::onlyHas('lang-view');
 
         $this->layout->content = View::make('sections.language.list');
     }
 
-    public function showPage() {
+    public function showPage()
+    {
         echo 'test backend';
     }
 
-    public function getChangelang($ext) {
+    public function getChangelang($ext)
+    {
         WebAPL\Language::setLanguage($ext);
 
         return Redirect::back();
     }
 
-    public function getEmpty() {
+    public function getEmpty()
+    {
         return ['no no no'];
         // BAD EMPTY FUNCTION
         // delete posts
@@ -230,5 +238,28 @@ class HomeController extends BaseController {
         DB::table('apl_file')->where('module_name', 'rewwe')->delete();
 
         return ['executed'];
+    }
+
+    public function postPostsavepart()
+    {
+        $switch = Input::get('switch');
+        $kappa = Files::where('id', $switch)->first();
+        if ($kappa->status==0) {
+            $kappa->status = 1;
+        } else {
+            $kappa->status = 0;
+        }
+        $kappa->save();
+        return [];
+    }
+    public function postPostsaveord(){
+        $order = Input::get('order');
+        $id = Input::get('id');
+
+        $kappa = Files::where('id', $id)->first();
+        $kappa->ord = $order;
+
+        $kappa->save();
+        return[];
     }
 }

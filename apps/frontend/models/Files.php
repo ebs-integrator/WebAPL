@@ -50,6 +50,10 @@ class Files extends Eloquent {
         }
     }
 
+    public static function file_lister($module_name, $module_id) {
+        return Files::where('module_name', $module_name)->where('module_id', intval($module_id))->orderBy('ord')->get();
+    }
+
     public static function getfile($module_name, $module_id) {
         $file_key = sha1($module_name . $module_id . 'o');
         if (isset(static::$cache[$file_key])) {

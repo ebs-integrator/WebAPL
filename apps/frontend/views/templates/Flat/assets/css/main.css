@@ -42,24 +42,11 @@
     font-style: normal;
 }
 
-.partners-img {
-    float: left;
-    margin-left: 65px;
 
-}
-.atn{
+.atn {
     height: 360px;
 }
-.partners-img p {
-    font: 35px 'AvenirNext-Bold';
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    margin-top: 6px;
-}
 
-.partners-img p a {
-    color: #ff6577;
-}
 
 @font-face {
     font-family: 'AvenirNext-MediumItalic';
@@ -913,7 +900,9 @@ article:nth-child(3n-1) {
     margin-left: 85px;
     margin-right: 85px;
 }
-
+section.global .wrap.global > *:nth-child(3n+1){
+    clear: both;
+}
 .resp_menu {
     display: none;
     margin-top: 20px;
@@ -2925,37 +2914,38 @@ p.descr {
     height: 17px;
 }
 
-.calendar_slider table thead tr:first-child td {
+.calendar_slider table thead tr:first-child td, .acte_slider table thead tr:first-child td {
     font: 17px 'AvenirNext-Bold';
     background: #fbfbfb;
     text-transform: initial;
     text-align: center;
 }
 
-.calendar_slider table, .calendar_slider table a {
+.calendar_slider table, .calendar_slider table a, .acte_slider table, .acte_slider table a {
     width: 100%;
     font: 15px 'AvenirNext-DemiBold';
     color: #4c4c4c;
 }
 
-.calendar_slider table thead tr td {
+.calendar_slider table thead tr td, .acte_slider table thead tr td {
     color: #008d74;
     font: 17px 'AvenirNext-Bold';
     text-transform: uppercase;
 }
 
-.calendar_slider table tbody tr:nth-child(2n-1), .calendar_slider table tbody tr td:first-child {
+.calendar_slider table tbody tr:nth-child(2n-1), .calendar_slider table tbody tr td:first-child,
+.acte_slider table tbody tr:nth-child(2n-1), .acte_slider table tbody tr td:first-child {
     background: #fbfbfb;
 }
 
-.calendar_slider td {
+.calendar_slider td, .acte_slider td {
     padding: 15px;
     border: 1px solid #e3e3e3;
     color: #4c4c4c;
     font: 17px 'AvenirNext-Medium';
 }
 
-.calendar_slider tbody td:nth-child(2) {
+.calendar_slider tbody td:nth-child(2), .acte_slider tbody td:nth-child(2) {
     font: 15px 'AvenirNext-DemiBold';
 }
 
@@ -2984,7 +2974,7 @@ p.descr {
     left: 20px;
 }
 
-.calendar_slider table thead tr:first-child td {
+.calendar_slider table thead tr:first-child td, .acte_slider table thead tr:first-child td {
     font: 17px 'AvenirNext-Bold';
     color: #008d74;
     background: #fbfbfb;
@@ -2992,11 +2982,12 @@ p.descr {
     text-align: center;
 }
 
-.calendar_slider table thead tr td {
+.calendar_slider table thead tr td, .acte_slider table thead tr td {
     border: 1px solid #008d74;
 }
 
-.calendar_slider table thead tr:last-child td:last-child {
+.calendar_slider table thead tr:last-child td:last-child,
+.acte_slider table thead tr:last-child td:last-child {
     padding: 1px;
 }
 
@@ -4704,6 +4695,25 @@ ul.vice li .p_name {
     margin-top: 10px;
 }
 
+.partners-img a img {
+
+    max-height: 125px;
+}
+.partners-img{
+
+    position: relative;
+    margin-top: 43px;
+    overflow: hidden;
+    float: right;
+    width: 100%;
+    max-width:370px;
+
+
+
+}
+.partners-img + .partners-img {
+    clear:both;
+}
 @media only screen and  (min-width: 1366px) and (max-width: 1680px) {
     .page_top_header {
         width: 100%;
@@ -4878,14 +4888,10 @@ ul.vice li .p_name {
     .menu_block {
         padding-right: 20px;
     }
-
 }
 
 @media print,(min-width: 1024px) and (max-width: 1279px) {
 
-    .partners-img{
-        margin-top: 44px !important;
-    }
     .wrap {
         width: 980px;
     }
@@ -5035,11 +5041,16 @@ ul.vice li .p_name {
         margin-left: 0px;
     }
 
-    article:nth-child(3n-1), .wrap.global article {
-        margin: 88px 55px 0px;
+    section.global .wrap.global > *:not([class^='clearfix']):not([class*='clearfix'] ) {
+        margin: 88px 50px 0px !important;
     }
-
-    article:nth-child(2n) {
+    section.global .wrap.global > *:nth-child(2n+1) {
+        clear: both;
+    }
+    section.global .wrap.global > *:not([class^='clearfix']):not([class*='clearfix'] ):nth-child(3n+1) {
+        clear: none;
+    }
+    section.global .wrap.global > *:not([class^='clearfix']):not([class*='clearfix'] ):nth-child(2n) {
         float: right;
     }
 
@@ -5476,7 +5487,7 @@ ul.vice li .p_name {
         width: 10%;
     }
 
-    article, article:nth-child(3n-1) {
+    article, article:nth-child(3n-1),section.global .wrap.global > *:not([class^='clearfix']):not([class*='clearfix'] ):nth-child(3n-1) ,section.global .wrap.global > *:not([class^='clearfix']):not([class*='clearfix'] ){
         float: none;
         margin-left: auto;
         margin-right: auto;
@@ -5731,21 +5742,12 @@ ul.vice li .p_name {
     .contact_left {
         width: 100%;
     }
-    .partners-img {
-        float: left !important;
-        padding-left: 65px;
 
-
-    }
 
 }
 
 @media only screen and  (max-width: 767px) {
 
-    .partners-img {
-        float: left !important;
-        padding-left: 30px;
-    }
     .img_back {
         display: none;
     }
@@ -6196,7 +6198,7 @@ ul.vice li .p_name {
         box-shadow: 0px 1px 1px 0px rgba(238, 239, 244, 1);
     }
 
-    article, article:nth-child(3n-1) {
+    article, article:nth-child(3n-1),section.global .wrap.global > *:not([class^='clearfix']):not([class*='clearfix'] ):nth-child(3n-1) ,section.global .wrap.global > *:not([class^='clearfix']):not([class*='clearfix'] ){
         float: none;
         margin-left: auto;
         margin-right: auto;
@@ -6295,7 +6297,8 @@ ul.vice li .p_name {
         width: 180px;
     }
 
-    .calendar_slider table thead tr:nth-child(2) td:first-child, .calendar_slider table thead tr:nth-child(2) td:nth-child(3), .calendar_slider table tbody tr td:first-child, .calendar_slider table tbody tr td:nth-child(3) {
+    .calendar_slider table thead tr:nth-child(2) td:first-child, .calendar_slider table thead tr:nth-child(2) td:nth-child(3), .calendar_slider table tbody tr td:first-child, .calendar_slider table tbody tr td:nth-child(3),
+    .acte_slider table thead tr:nth-child(2) td:first-child, .acte_slider table thead tr:nth-child(2) td:nth-child(3), .acte_slider table tbody tr td:first-child, .acte_slider table tbody tr td:nth-child(3) {
         display: none;
     }
 
@@ -6487,11 +6490,6 @@ ul.vice li .p_name {
 }
 
 @media only screen and (max-width: 639px) {
-
-    .partners-img {
-        float: left !important;
-        padding-left: 30px;
-    }
 
     .city_box .title {
         font: 20px 'AvenirNext-Medium';
@@ -6698,7 +6696,7 @@ ul.vice li .p_name {
         line-height: 33px;
     }
 
-    .calendar_slider table thead tr td:nth-child(2), .calendar_slider table tbody tr td:nth-child(2), .cda .ul_title .right, .cda ul li .right {
+    .calendar_slider table thead tr td:nth-child(2), .calendar_slider table tbody tr td:nth-child(2), .acte_slider table thead tr td:nth-child(2), .acte_slider table tbody tr td:nth-child(2), .cda .ul_title .right, .cda ul li .right {
         display: none;
     }
 
