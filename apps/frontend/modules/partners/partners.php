@@ -20,16 +20,17 @@ class Partners extends \WebAPL\ExtensionController
     {
         parent::__construct();
 
-        Event::listen('home_right_bottom', array($this, 'page_bottom_partners'));
+        Event::listen('home_right_partners', array($this, 'page_bottom_partners'));
 
     }
 
     public function page_bottom_partners()
     {
-
-        if (count($file = Files::file_list('partners_logo', 1))) {
+        $file = Files::file_lister('partners_logo', 1);
+        if (count($file)) {
             echo Template::moduleView($this->module_name, 'views.partners', [
                 'list' => $file
+
             ]);
         }
     }

@@ -156,6 +156,6 @@
 
         <div id="hm_scroll"></div>
 
-        <?= $content; ?> 
+        <?= $content; ?>
 
         <?= View::make('block.footer'); ?>

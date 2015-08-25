@@ -103,6 +103,7 @@
             <?php } ?>
 
             <?php Event::fire('home_right_bottom', $page); ?>
+            <?php Event::fire('home_right_partners', $page); ?>
         </div>
     </div>
     <div class="clearfix"></div>

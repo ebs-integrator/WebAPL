@@ -4,6 +4,8 @@ namespace WebAPL\Modules;
 
 
 use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\Input;
+use WebAPL\Modules;
 use WebAPL\Template;
 
 use WebAPL\Actions,
@@ -34,5 +36,6 @@ class Partners extends \WebAPL\ExtensionController
         $this->layout->content = Template::moduleView($this->module_name, 'views.partners');
         return $this->layout;
     }
+
 
 }

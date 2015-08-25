@@ -357,6 +357,8 @@ CREATE TABLE IF NOT EXISTS `apl_file` (
   `date_uploaded` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `module_name` varchar(20) NOT NULL,
   `module_id` int(11) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '1',
+  `ord` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=463 ;
 
@@ -2521,7 +2523,10 @@ INSERT INTO `apl_var` (`id`, `key`, `parent_key`) VALUES
 (573, 'da-15', 'calendar-1'),
 (574, 'evenimente', 'calendar-1'),
 (575, 'incepe-discutia', 'calendar-1'),
-(576, 'help', 'menu');
+(576, 'help', 'menu'),
+(577, 'access-link', 'parteneri'),
+(578, 'order-2', 'parteneri'),
+(579, 'status', 'parteneri');
 
 -- --------------------------------------------------------
 
@@ -4800,7 +4805,19 @@ INSERT INTO `apl_var_lang` (`id`, `var_key`, `value`, `lang_id`) VALUES
 (2372, 'help', 'Ajutor', 1),
 (2373, 'help', 'Помощь', 2),
 (2374, 'help', 'Help', 6),
-(2375, 'help', 'Помощ', 7);
+(2375, 'help', 'Помощ', 7),
+(2376, 'access-link', 'Link de acces', 1),
+(2377, 'access-link', 'ссылка', 2),
+(2378, 'access-link', 'Access link', 6),
+(2379, 'access-link', 'връзка', 7),
+(2380, 'order-2', 'Aranjare', 1),
+(2381, 'order-2', 'Порядок', 2),
+(2382, 'order-2', 'Order', 6),
+(2383, 'order-2', 'Процедурата', 7),
+(2384, 'status', 'Status', 1),
+(2385, 'status', 'Cтатус', 2),
+(2386, 'status', 'Status', 6),
+(2387, 'status', 'Status', 7);
 
 
 
