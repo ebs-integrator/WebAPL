@@ -16,6 +16,11 @@ Acest produs se distribuie gratuit cu licența liberă GPL3 (http://opensource.o
 
 În același timp se permite crearea de versiuni noi și/sau derivate prin modificarea și îmbunătățirea codului platformei WebAPL precum și distribuirea acestora, cu condiția că vor avea aceeași licență GPL3 (http://opensource.org/licenses/GPL-3.0), fiind astfel păstrat caracterul deschis (open source) al acestui produs.
 
+GHID DE UTILIZARE:
+-------------------
+
+Online: http://lpa.devebs.net/help/
+
 
 CERINȚE MINIME DE SISTEM SOLICITATE
 -------------------
